@@ -1,0 +1,45 @@
+name: Update NHL Tracker and deploy
+
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: "20 7,12,18,23 * * *"
+      timezone: "Europe/London"
+  push:
+    branches: [main]
+
+permissions:
+  contents: write
+  pages: write
+  id-token: write
+
+concurrency:
+  group: nhl-tracker
+  cancel-in-progress: false
+
+jobs:
+  update:
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Update NHL data
+        run: python scripts/update_tracker.py
+      - name: Save generated data
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add site/data data/cache
+          git diff --cached --quiet || git commit -m "Update NHL data"
+          git push
+      - uses: actions/configure-pages@v5
+      - uses: actions/upload-pages-artifact@v3
+        with:
+          path: site
+      - id: deployment
+        uses: actions/deploy-pages@v4

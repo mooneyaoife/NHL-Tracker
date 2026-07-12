@@ -1,0 +1,26 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>NHL Tracker</title>
+  <link rel="stylesheet" href="styles.css">
+  <script src="https://cdn.plot.ly/plotly-2.35.2.min.js"></script>
+</head>
+<body>
+  <header><div><p class="eyebrow">2025–26 season</p><h1>NHL Tracker</h1></div><div id="updated" class="status">Loading data…</div></header>
+  <nav id="nav">
+    <button data-page="dashboard" class="active">Dashboard</button><button data-page="teams">Team Centres</button>
+    <button data-page="players">Player Centres</button><button data-page="league">League</button>
+    <button data-page="playoffs">Playoff Race</button><button data-page="status">Status</button>
+  </nav>
+  <main>
+    <section id="dashboard" class="page active"><div class="hero"><p class="eyebrow">Command centre</p><h2>Your four-team season at a glance</h2><p>Live standings, form, scoring and playoff position—updated automatically from the NHL.</p></div><div id="team-cards" class="grid four"></div><div class="grid two"><article class="panel"><h3>Points comparison</h3><div id="dashboard-points" class="chart"></div></article><article class="panel"><h3>Recent form</h3><div id="recent-form"></div></article></div></section>
+    <section id="teams" class="page"><div class="section-head"><div><p class="eyebrow">Team centre</p><h2 id="team-title">Team</h2></div><select id="team-select"></select></div><div id="team-metrics" class="grid four"></div><div class="grid two"><article class="panel"><h3>Cumulative points</h3><div id="team-points" class="chart"></div></article><article class="panel"><h3>Goal differential by game</h3><div id="team-gd" class="chart"></div></article></div><article class="panel"><h3>Game log</h3><div id="team-log" class="table-wrap"></div></article></section>
+    <section id="players" class="page"><div class="section-head"><div><p class="eyebrow">Player centre</p><h2 id="player-title">Player</h2></div><div class="selectors"><select id="player-team-select"></select><select id="player-select"></select></div></div><div id="player-metrics" class="grid four"></div><div class="grid two"><article class="panel"><h3>Points progression</h3><div id="player-points" class="chart"></div></article><article class="panel"><h3>Production by game</h3><div id="player-production" class="chart"></div></article></div><article class="panel"><h3>Recent games</h3><div id="player-log" class="table-wrap"></div></article></section>
+    <section id="league" class="page"><div class="hero compact"><p class="eyebrow">League centre</p><h2>Official NHL standings</h2></div><div class="grid two"><article class="panel"><h3>League leaders</h3><div id="league-chart" class="chart"></div></article><article class="panel"><h3>Tracked teams</h3><div id="tracked-ranks"></div></article></div><article class="panel"><h3>Full standings</h3><div id="standings-table" class="table-wrap"></div></article></section>
+    <section id="playoffs" class="page"><div class="hero compact"><p class="eyebrow">Playoff race</p><h2>Points pace and position</h2></div><div id="playoff-cards" class="grid four"></div><article class="panel"><h3>Projected 82-game pace</h3><div id="pace-chart" class="chart"></div></article></section>
+    <section id="status" class="page"><div class="hero compact"><p class="eyebrow">System health</p><h2>Tracker status</h2></div><div id="status-cards" class="grid four"></div><article class="panel"><h3>How updates work</h3><p>GitHub Actions downloads NHL schedules, completed boxscores and standings. The existing successful dataset remains online if a later update fails.</p></article></section>
+  </main>
+  <footer>NHL Tracker · Unofficial fan project using public NHL data</footer>
+  <script src="app.js"></script>
+</body></html>
