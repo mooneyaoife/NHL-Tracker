@@ -91,3 +91,8 @@ html[data-theme="dark"] .refresh-links a{background:var(--soft);color:var(--ink)
 /* 5.11 dedicated Game Centre */
 .game-centre-page{background:var(--card);border:1px solid var(--line);padding:18px 0 1px}.game-centre-page>.game-centre-controls{margin:0 18px 18px}.game-preview-label{margin-left:18px;margin-right:18px}.game-preview-grid{margin-left:18px!important;margin-right:18px!important}.game-preview-grid .metric{min-height:112px}.game-preview-grid .metric .value{font-size:24px}.game-preview-grid .metric .detail{font-size:11px}.game-centre-page>.mp-credit{margin-right:18px}
 @media(max-width:760px){.game-centre-page{padding-top:12px}.game-centre-page>.game-centre-controls{margin:0 10px 12px}.game-preview-label{margin-left:10px;margin-right:10px}.game-preview-grid{margin-left:10px!important;margin-right:10px!important;grid-template-columns:repeat(2,minmax(0,1fr))}.game-preview-grid .metric{min-height:100px}}
+
+/* 5.12 responsive navigation and chart breathing room */
+nav,.subnav,.table-wrap,.game-team-stats{scrollbar-width:thin;overscroll-behavior-inline:contain;-webkit-overflow-scrolling:touch}
+nav button:focus-visible,.subnav button:focus-visible{outline:2px solid var(--blue);outline-offset:-3px}
+@media(max-width:560px){.expandable>*:not(summary){margin-left:10px;margin-right:10px}.expandable>.grid{margin-left:8px;margin-right:8px}.expandable>.panel{padding:14px 10px}.expandable .expandable>*:not(summary){margin-left:8px;margin-right:8px}.expandable .expandable>.panel{padding-left:8px;padding-right:8px}.data-lab-chart,.goalie-chart{min-width:0}.chart-key-item{min-width:0}.chart-key-item span:last-child{overflow-wrap:anywhere}}
