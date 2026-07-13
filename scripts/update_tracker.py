@@ -19,7 +19,7 @@ from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
 CONFIG = json.loads((ROOT / "config.json").read_text())
-VERSION = "5.6.0"
+VERSION = "5.7.0"
 SEASON = str(CONFIG["season"])
 TRACKED = [str(t).upper() for t in CONFIG["teams"]]
 API = "https://api-web.nhle.com/v1"
@@ -375,6 +375,32 @@ def boxscore(game_id: int) -> dict:
     return payload
 
 
+def load_game_centres(games: list[dict], previous: dict | None = None) -> dict:
+    """Capture rich NHL Game Centre data for the most useful recent and upcoming tracked games."""
+    tracked = [g for g in games if localised(g.get("homeTeam", {}).get("abbrev")).upper() in TRACKED
+        or localised(g.get("awayTeam", {}).get("abbrev")).upper() in TRACKED]
+    finished = [g for g in tracked if str(g.get("gameState", "")).upper() in {"OFF", "FINAL"}][-6:]
+    upcoming = [g for g in tracked if str(g.get("gameState", "")).upper() not in {"OFF", "FINAL"}][:4]
+    selected = {str(g["id"]): g for g in [*finished, *upcoming] if g.get("id") is not None}
+    prior = (previous or {}).get("gameCentre", {})
+    output = {}
+    def one(game_id: str) -> tuple[str, dict]:
+        base = f"{API}/gamecenter/{game_id}"
+        return game_id, {"landing": fetch_json(f"{base}/landing"),
+            "pbp": fetch_json(f"{base}/play-by-play"), "box": fetch_json(f"{base}/boxscore")}
+    with ThreadPoolExecutor(max_workers=5) as pool:
+        futures = {pool.submit(one, game_id): game_id for game_id in selected}
+        for future in as_completed(futures):
+            game_id = futures[future]
+            try:
+                key, detail = future.result(); output[key] = detail
+            except Exception as exc:
+                print(f"warning: game centre {game_id}: {exc}", file=sys.stderr)
+                if game_id in prior:
+                    output[game_id] = prior[game_id]
+    return output
+
+
 def build_players(games: list[dict]) -> dict:
     completed = [g for g in games if int(g.get("gameType", 0)) == 2 and str(g.get("gameState", "")).upper() in {"OFF", "FINAL"}]
     relevant = [g for g in completed if localised(g.get("homeTeam", {}).get("abbrev")).upper() in TRACKED or localised(g.get("awayTeam", {}).get("abbrev")).upper() in TRACKED]
@@ -522,6 +548,7 @@ def main() -> None:
     schedules = load_schedules([r["team"] for r in standings])
     rows = tracked_game_rows(schedules)
     players = build_players(schedules)
+    game_centres = load_game_centres(schedules, previous)
     daily = load_daily()
     rosters = load_rosters([r["team"] for r in standings])
     players = enrich_players(players, rosters)
@@ -534,7 +561,7 @@ def main() -> None:
     previous_same_season = previous if previous.get("meta", {}).get("season") == SEASON else {}
     payload = {
         "meta": {"version": VERSION, "season": SEASON, "seasonMode": CONFIG.get("seasonMode", "manual"), "seasonDecision": rollover_reason, "trackedTeams": TRACKED, "updatedAt": datetime.now(timezone.utc).isoformat(), "elapsedSeconds": round(time.time()-started, 1), "scheduleGames": len(schedules)},
-        "standings": standings, "games": rows, "teams": team_summaries(rows), "players": players,
+        "standings": standings, "games": rows, "teams": team_summaries(rows), "players": players, "gameCentre": game_centres,
         "daily": daily, "rosters": rosters, "rosterChanges": roster_changes(previous_same_season, rosters),
         "divisionHistory": division_histories(schedules, standings), "moneypuck": moneypuck,
         "naturalStatTrick": natural_stat_trick,
