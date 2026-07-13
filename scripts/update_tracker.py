@@ -77,6 +77,50 @@ def load_standings() -> list[dict]:
     return sorted(result, key=lambda r: (-r["points"], -r["rw"], -r["gd"]))
 
 
+def load_daily() -> dict:
+    """Current league-wide scoreboard/schedule, including broadcasters when supplied."""
+    score = fetch_json(f"{API}/score/now")
+    schedule = fetch_json(f"{API}/schedule/now")
+    games = []
+    for game in schedule.get("gameWeek", []):
+        for g in game.get("games", []):
+            games.append({
+                "id": g.get("id"), "date": g.get("gameDate"), "startTimeUTC": g.get("startTimeUTC", ""),
+                "state": g.get("gameState", ""), "type": g.get("gameType", 0),
+                "venue": localised(g.get("venue")),
+                "home": localised(g.get("homeTeam", {}).get("abbrev")).upper(),
+                "away": localised(g.get("awayTeam", {}).get("abbrev")).upper(),
+                "homeScore": g.get("homeTeam", {}).get("score"), "awayScore": g.get("awayTeam", {}).get("score"),
+                "period": g.get("periodDescriptor", {}).get("number"),
+                "broadcasts": [b.get("network") for b in g.get("tvBroadcasts", []) if b.get("network")]
+            })
+    return {"currentDate": score.get("currentDate"), "games": games}
+
+
+def load_rosters(team_codes: list[str]) -> dict:
+    def one(team):
+        data = fetch_json(f"{API}/roster/{team}/current")
+        rows = []
+        for group in ("forwards", "defensemen", "goalies"):
+            for p in data.get(group, []):
+                rows.append({"id": str(p.get("id")), "team": team,
+                    "name": f"{localised(p.get('firstName'))} {localised(p.get('lastName'))}".strip(),
+                    "position": p.get("positionCode", ""), "number": p.get("sweaterNumber"),
+                    "shoots": p.get("shootsCatches", ""), "birthDate": p.get("birthDate", ""),
+                    "country": p.get("birthCountry", ""), "heightCm": p.get("heightInCentimeters"),
+                    "weightKg": p.get("weightInKilograms"), "headshot": p.get("headshot", "")})
+        return team, rows
+    output = {}
+    with ThreadPoolExecutor(max_workers=8) as pool:
+        futures = [pool.submit(one, t) for t in team_codes]
+        for future in as_completed(futures):
+            try:
+                team, rows = future.result(); output[team] = rows
+            except Exception as exc:
+                print(f"warning: roster: {exc}", file=sys.stderr)
+    return output
+
+
 def tracked_game_rows(games: list[dict]) -> list[dict]:
     rows = []
     for game in games:
@@ -187,9 +231,12 @@ def main() -> None:
     rows = tracked_game_rows(schedules)
     standings = load_standings()
     players = build_players(schedules)
+    daily = load_daily()
+    rosters = load_rosters([r["team"] for r in standings])
     payload = {
-        "meta": {"version": "2.0.0", "season": SEASON, "trackedTeams": TRACKED, "updatedAt": datetime.now(timezone.utc).isoformat(), "elapsedSeconds": round(time.time()-started, 1), "scheduleGames": len(schedules)},
-        "standings": standings, "games": rows, "teams": team_summaries(rows), "players": players
+        "meta": {"version": "3.0.0", "season": SEASON, "trackedTeams": TRACKED, "updatedAt": datetime.now(timezone.utc).isoformat(), "elapsedSeconds": round(time.time()-started, 1), "scheduleGames": len(schedules)},
+        "standings": standings, "games": rows, "teams": team_summaries(rows), "players": players,
+        "daily": daily, "rosters": rosters
     }
     OUTPUT.parent.mkdir(parents=True, exist_ok=True)
     temporary = OUTPUT.with_suffix(".tmp")
