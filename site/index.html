@@ -4,7 +4,7 @@
   <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
   <title>NHL Tracker</title>
   <script>document.documentElement.dataset.theme=localStorage.getItem("nhl-theme")||"light"</script>
-  <link rel="stylesheet" href="styles.css?v=5.7.0">
+  <link rel="stylesheet" href="styles.css?v=5.8.0">
   <script src="https://cdn.plot.ly/plotly-2.35.2.min.js"></script>
 </head>
 <body>
@@ -33,7 +33,7 @@
   <section id="schedule" class="page">
     <div class="title-bar"><h2>Schedule and Calendar</h2></div>
     <div class="control-row calendar-controls"><label for="calendar-team">Show games for</label><select id="calendar-team"></select><label for="calendar-month">Month</label><select id="calendar-month" aria-label="Calendar month"></select><p>All times shown automatically in the UK.</p></div>
-    <details id="game-centre" class="expandable game-centre" open><summary>Game Night Centre</summary><div class="control-row game-centre-controls"><label for="game-select">Select game</label><select id="game-select"></select><button id="game-refresh" type="button">Refresh view</button><p>Official NHL details are captured automatically for recent and upcoming games.</p></div><div id="game-detail"></div></details>
+    <details id="game-centre" class="expandable game-centre" open><summary>Game Night Centre</summary><div class="control-row game-centre-controls"><label for="game-select">Select game</label><select id="game-select"></select><button id="game-refresh" type="button">Refresh view</button><p>During tracked games, a fresh official NHL snapshot is deployed approximately every 15 minutes.</p></div><div id="game-detail"></div></details>
     <div class="calendar-weekdays" aria-hidden="true"><span>Mon</span><span>Tue</span><span>Wed</span><span>Thu</span><span>Fri</span><span>Sat</span><span>Sun</span></div>
     <div id="calendar-list" class="calendar-grid"></div>
   </section>
@@ -89,5 +89,5 @@
   <section id="status" class="page utility-page"><div class="title-bar"><h2>System Status</h2></div><div id="status-cards" class="grid four"></div><article class="panel source-status-panel"><h3>Data sources</h3><div id="status-sources" class="source-status-grid"></div></article><div class="grid two"><article class="panel"><h3>Data coverage</h3><div id="status-coverage"></div></article><article class="panel"><h3>Automatic season rollover</h3><p>The tracker checks for the NHL's next regular-season schedule on every update. It switches only after a substantial schedule is published, keeps every completed season in the Season menu, and clearly marks analytics that are still awaiting a new-season release.</p><p id="season-decision" class="detail-note"></p></article></div></section>
 </main>
 <footer><div class="footer-links"><button data-page="guide">Stat Guide</button><button data-page="watchlist">Settings</button><a href="https://moneypuck.com/data.htm" target="_blank" rel="noopener">Data sources</a><button data-page="status">Status</button></div><p>NHL Tracker · Unofficial, non-commercial fan project using public NHL data</p></footer>
-<script src="app.js?v=5.7.0"></script>
+<script src="app.js?v=5.8.0"></script>
 </body></html>

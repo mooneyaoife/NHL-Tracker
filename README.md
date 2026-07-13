@@ -16,6 +16,7 @@ An automatically updated, interactive NHL dashboard for the Buffalo Sabres, San 
 - Automatic season rollover with selectable per-season archives
 - Cached boxscores for fast incremental updates
 - Scheduled updates through GitHub Actions
+- Game-night snapshots approximately every 15 minutes while a tracked team is active
 - Free hosting through GitHub Pages
 
 ## First deployment

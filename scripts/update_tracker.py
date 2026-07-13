@@ -14,12 +14,12 @@ import urllib.error
 import urllib.request
 from collections import defaultdict
 from concurrent.futures import ThreadPoolExecutor, as_completed
-from datetime import datetime, timezone
+from datetime import datetime, timedelta, timezone
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
 CONFIG = json.loads((ROOT / "config.json").read_text())
-VERSION = "5.7.0"
+VERSION = "5.8.0"
 SEASON = str(CONFIG["season"])
 TRACKED = [str(t).upper() for t in CONFIG["teams"]]
 API = "https://api-web.nhle.com/v1"
@@ -375,6 +375,12 @@ def boxscore(game_id: int) -> dict:
     return payload
 
 
+def fetch_game_centre(game_id: str) -> tuple[str, dict]:
+    base = f"{API}/gamecenter/{game_id}"
+    return str(game_id), {"landing": fetch_json(f"{base}/landing"),
+        "pbp": fetch_json(f"{base}/play-by-play"), "box": fetch_json(f"{base}/boxscore")}
+
+
 def load_game_centres(games: list[dict], previous: dict | None = None) -> dict:
     """Capture rich NHL Game Centre data for the most useful recent and upcoming tracked games."""
     tracked = [g for g in games if localised(g.get("homeTeam", {}).get("abbrev")).upper() in TRACKED
@@ -384,12 +390,8 @@ def load_game_centres(games: list[dict], previous: dict | None = None) -> dict:
     selected = {str(g["id"]): g for g in [*finished, *upcoming] if g.get("id") is not None}
     prior = (previous or {}).get("gameCentre", {})
     output = {}
-    def one(game_id: str) -> tuple[str, dict]:
-        base = f"{API}/gamecenter/{game_id}"
-        return game_id, {"landing": fetch_json(f"{base}/landing"),
-            "pbp": fetch_json(f"{base}/play-by-play"), "box": fetch_json(f"{base}/boxscore")}
     with ThreadPoolExecutor(max_workers=5) as pool:
-        futures = {pool.submit(one, game_id): game_id for game_id in selected}
+        futures = {pool.submit(fetch_game_centre, game_id): game_id for game_id in selected}
         for future in as_completed(futures):
             game_id = futures[future]
             try:
@@ -399,6 +401,65 @@ def load_game_centres(games: list[dict], previous: dict | None = None) -> dict:
                 if game_id in prior:
                     output[game_id] = prior[game_id]
     return output
+
+
+def active_game_ids(daily: dict, now: datetime | None = None) -> list[str]:
+    """Return tracked games inside the pregame-to-postgame refresh window."""
+    now = now or datetime.now(timezone.utc)
+    active = []
+    for game in daily.get("games", []):
+        if game.get("home") not in TRACKED and game.get("away") not in TRACKED:
+            continue
+        state = str(game.get("state", "")).upper()
+        try:
+            start = datetime.fromisoformat(str(game.get("startTimeUTC", "")).replace("Z", "+00:00"))
+        except ValueError:
+            start = None
+        if state in {"LIVE", "CRIT"} or start and start - timedelta(minutes=90) <= now <= start + timedelta(hours=6):
+            active.append(str(game["id"]))
+    return active
+
+
+def action_output(name: str, value: str) -> None:
+    path = os.environ.get("GITHUB_OUTPUT")
+    if path:
+        with open(path, "a", encoding="utf-8") as handle:
+            handle.write(f"{name}={value}\n")
+
+
+def refresh_live_games_only() -> None:
+    """Refresh current tracked games without rebuilding or committing the full archive."""
+    started = time.time()
+    if not OUTPUT.exists():
+        raise RuntimeError("Run the full tracker update before using the live-game updater")
+    payload = json.loads(OUTPUT.read_text())
+    set_active_season(str(payload.get("meta", {}).get("season") or CONFIG["season"]))
+    daily = load_daily()
+    game_ids = active_game_ids(daily)
+    action_output("active", "true" if game_ids else "false")
+    action_output("games", ",".join(game_ids))
+    if not game_ids:
+        print("No tracked game is inside the live refresh window")
+        return
+    details = dict(payload.get("gameCentre", {}))
+    with ThreadPoolExecutor(max_workers=4) as pool:
+        futures = {pool.submit(fetch_game_centre, game_id): game_id for game_id in game_ids}
+        for future in as_completed(futures):
+            game_id = futures[future]
+            try:
+                key, detail = future.result(); details[key] = detail
+            except Exception as exc:
+                print(f"warning: live game centre {game_id}: {exc}", file=sys.stderr)
+    now = datetime.now(timezone.utc).isoformat()
+    payload["daily"] = daily
+    payload["gameCentre"] = details
+    payload.setdefault("meta", {}).update({"version": VERSION, "updatedAt": now,
+        "liveGameUpdateAt": now, "elapsedSeconds": round(time.time() - started, 1)})
+    temporary = OUTPUT.with_suffix(".tmp")
+    temporary.write_text(json.dumps(payload, separators=(",", ":"), ensure_ascii=False))
+    json.loads(temporary.read_text())
+    temporary.replace(OUTPUT)
+    print(f"Refreshed {len(game_ids)} active tracked game(s)")
 
 
 def build_players(games: list[dict]) -> dict:
@@ -605,7 +666,9 @@ def refresh_natural_stat_trick_only() -> None:
 
 
 if __name__ == "__main__":
-    if "--refresh-nst-only" in sys.argv:
+    if "--live-only" in sys.argv:
+        refresh_live_games_only()
+    elif "--refresh-nst-only" in sys.argv:
         refresh_natural_stat_trick_only()
     else:
         main()
