@@ -1,5 +1,6 @@
 {
   "season": "20252026",
+  "seasonMode": "auto",
   "teams": ["BUF", "SJS", "MIN", "CAR"],
   "timezone": "Europe/London"
 }

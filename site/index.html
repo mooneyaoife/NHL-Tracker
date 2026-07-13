@@ -4,13 +4,13 @@
   <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
   <title>NHL Tracker</title>
   <script>document.documentElement.dataset.theme=localStorage.getItem("nhl-theme")||"light"</script>
-  <link rel="stylesheet" href="styles.css?v=5.5.0">
+  <link rel="stylesheet" href="styles.css?v=5.6.0">
   <script src="https://cdn.plot.ly/plotly-2.35.2.min.js"></script>
 </head>
 <body>
 <header>
   <div class="brand"><h1>NHL Tracker</h1></div>
-  <div class="header-tools"><div id="updated" class="status">Loading data…</div><button id="theme-button" class="icon-button" aria-label="Switch colour theme">☾</button></div>
+  <div class="header-tools"><label class="season-switcher">Season <select id="season-select" aria-label="Choose season"></select></label><div id="updated" class="status">Loading data…</div><button id="theme-button" class="icon-button" aria-label="Switch colour theme">☾</button></div>
 </header>
 <nav id="nav" aria-label="Primary navigation">
   <button data-page="dashboard" class="active">Dashboard</button><button data-page="power">Power Rankings</button><button data-page="schedule">Schedule</button><button data-page="teams">Teams</button><button data-page="players">Players</button><button data-page="news">Updates</button><button data-page="league">League</button><button data-page="playoffs">Playoffs</button>
@@ -20,6 +20,7 @@
 
   <section id="dashboard" class="page active">
     <div class="hero dashboard-hero"><h2>Tracked Teams Overview</h2><div id="dashboard-hero-logos" class="hero-logos"></div></div>
+    <div id="data-source-notice" class="source-notice" hidden></div>
     <div class="today-strip"><div><span class="section-kicker">Hockey now</span><strong id="today-date">Latest NHL update</strong></div><div id="today-games" class="today-games"></div></div>
     <div id="team-cards" class="grid four team-card-grid"></div>
     <div class="grid two dashboard-summary"><article class="panel"><h3>Points comparison</h3><div id="dashboard-points" class="chart"></div></article><article class="panel"><h3>Recent form</h3><div id="recent-form"></div><h3 class="subheading">Team leaders</h3><div id="dashboard-leaders"></div></article></div>
@@ -85,8 +86,8 @@
 
   <section id="watchlist" class="page utility-page"><div class="title-bar"><h2>Settings</h2></div><div class="grid two"><article class="panel"><h3>Tracked teams</h3><div id="watch-teams"></div></article><article class="panel"><h3>Saved players</h3><div class="selectors"><input id="watch-player-search" placeholder="Search a current NHL player"><button id="watch-add-player">Add</button></div><div id="watch-players"></div></article></div><article class="panel"><h3>Display preferences</h3><div class="preference-list"><label class="toggle"><input type="checkbox" id="dark-toggle"> Dark mode</label><label class="toggle"><input type="checkbox" id="compact-toggle"> Compact tables</label></div></article></section>
   <section id="guide" class="page utility-page"><div class="title-bar"><h2>Statistics Guide</h2></div><div class="guide-tools"><input id="guide-search" placeholder="Search a statistic, such as expected goals or Corsi"><select id="guide-source"><option value="ALL">All sources</option><option value="NHL">NHL / NHL EDGE</option><option value="MoneyPuck">MoneyPuck</option><option value="Natural Stat Trick">Natural Stat Trick</option><option value="Tracker">NHL Tracker</option></select></div><div id="guide-results" class="guide-grid"></div><div class="notice"><strong>Important:</strong> Providers can define similarly named statistics differently.</div></section>
-  <section id="status" class="page utility-page"><div class="title-bar"><h2>System Status</h2></div><div id="status-cards" class="grid four"></div><div class="grid two"><article class="panel"><h3>Data coverage</h3><div id="status-coverage"></div></article><article class="panel"><h3>Update process</h3><p>GitHub Actions refreshes schedules, scores, standings, rosters and approved analytics automatically. Previous season files remain available for historical comparison.</p></article></div></section>
+  <section id="status" class="page utility-page"><div class="title-bar"><h2>System Status</h2></div><div id="status-cards" class="grid four"></div><article class="panel source-status-panel"><h3>Data sources</h3><div id="status-sources" class="source-status-grid"></div></article><div class="grid two"><article class="panel"><h3>Data coverage</h3><div id="status-coverage"></div></article><article class="panel"><h3>Automatic season rollover</h3><p>The tracker checks for the NHL's next regular-season schedule on every update. It switches only after a substantial schedule is published, keeps every completed season in the Season menu, and clearly marks analytics that are still awaiting a new-season release.</p><p id="season-decision" class="detail-note"></p></article></div></section>
 </main>
 <footer><div class="footer-links"><button data-page="guide">Stat Guide</button><button data-page="watchlist">Settings</button><a href="https://moneypuck.com/data.htm" target="_blank" rel="noopener">Data sources</a><button data-page="status">Status</button></div><p>NHL Tracker · Unofficial, non-commercial fan project using public NHL data</p></footer>
-<script src="app.js?v=5.5.0"></script>
+<script src="app.js?v=5.6.0"></script>
 </body></html>

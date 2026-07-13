@@ -19,7 +19,7 @@ from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
 CONFIG = json.loads((ROOT / "config.json").read_text())
-VERSION = "5.5.0"
+VERSION = "5.6.0"
 SEASON = str(CONFIG["season"])
 TRACKED = [str(t).upper() for t in CONFIG["teams"]]
 API = "https://api-web.nhle.com/v1"
@@ -30,6 +30,47 @@ MP_BASE = f"https://moneypuck.com/moneypuck/playerData/seasonSummary/{MP_SEASON}
 NST_FILE = ROOT / "data" / "naturalstattrick" / f"team_{SEASON}_regular_5v5_sva.csv"
 NST_PLAYER_FILE = ROOT / "data" / "naturalstattrick" / f"player_{SEASON}_regular_5v5.csv"
 NST_GOALIE_FILE = ROOT / "data" / "naturalstattrick" / f"goalie_{SEASON}_regular_5v5.csv"
+
+
+def set_active_season(season: str) -> None:
+    """Point every season-specific source at the selected NHL season."""
+    global SEASON, MP_SEASON, MP_BASE, NST_FILE, NST_PLAYER_FILE, NST_GOALIE_FILE
+    SEASON = str(season)
+    MP_SEASON = SEASON[:4]
+    MP_BASE = f"https://moneypuck.com/moneypuck/playerData/seasonSummary/{MP_SEASON}/regular"
+    NST_FILE = ROOT / "data" / "naturalstattrick" / f"team_{SEASON}_regular_5v5_sva.csv"
+    NST_PLAYER_FILE = ROOT / "data" / "naturalstattrick" / f"player_{SEASON}_regular_5v5.csv"
+    NST_GOALIE_FILE = ROOT / "data" / "naturalstattrick" / f"goalie_{SEASON}_regular_5v5.csv"
+
+
+def calendar_season(now: datetime | None = None) -> str:
+    now = now or datetime.now(timezone.utc)
+    start = now.year if now.month >= 7 else now.year - 1
+    return f"{start}{start + 1}"
+
+
+def schedule_is_published(season: str) -> tuple[bool, int]:
+    """Require a substantial regular-season schedule before rolling forward."""
+    games = fetch_json(f"{API}/club-schedule-season/{TRACKED[0]}/{season}").get("games", [])
+    regular = [g for g in games if int(g.get("gameType") or 0) == 2 and g.get("gameDate")]
+    return len(regular) >= 40, len(regular)
+
+
+def resolve_active_season() -> tuple[str, str]:
+    configured = str(CONFIG["season"])
+    if str(CONFIG.get("seasonMode", "manual")).lower() != "auto":
+        return configured, "Season is manually pinned"
+    candidate = calendar_season()
+    if candidate <= configured:
+        return configured, "Configured season remains current"
+    try:
+        ready, games = schedule_is_published(candidate)
+    except Exception as exc:
+        print(f"warning: new-season schedule check failed: {exc}", file=sys.stderr)
+        return configured, "New-season schedule could not be verified"
+    if ready:
+        return candidate, f"NHL published {games} regular-season games for a tracked team"
+    return configured, f"Waiting for the NHL schedule ({games} regular-season games found)"
 
 
 def fetch_json(url: str, attempts: int = 4) -> dict:
@@ -100,13 +141,13 @@ def load_moneypuck() -> dict:
         "gf":mp_value(r,"goalsFor"),"ga":mp_value(r,"goalsAgainst")}
         for r in lines_raw if str(r.get("situation", "5on5")).lower() in {"all", "all situations", "5on5", "5 on 5"}
         and float(mp_value(r,"icetime",default=0) or 0)>=300]
-    return {"credit":"Data: MoneyPuck.com","updatedAt":datetime.now(timezone.utc).isoformat(),"teams":teams,"skaters":skaters,"goalies":goalies,"lines":lines,"simulations":simulations}
+    return {"credit":"Data: MoneyPuck.com","updatedAt":datetime.now(timezone.utc).isoformat(),"season":SEASON,"status":"Ready","teams":teams,"skaters":skaters,"goalies":goalies,"lines":lines,"simulations":simulations}
 
 
 def load_natural_stat_trick(standings: list[dict]) -> dict:
     """Load the user's permitted Natural Stat Trick CSV export without scraping the site."""
     if not NST_FILE.exists():
-        return {"credit": "Data: NaturalStatTrick.com", "teams": [], "status": "Awaiting CSV export"}
+        return {"credit": "Data: NaturalStatTrick.com", "season": SEASON, "updatedAt": None, "teams": [], "players": [], "goalies": [], "status": "Awaiting CSV export"}
     code_by_name = {row["name"]: row["team"] for row in standings}
     code_by_name.update({"Montreal Canadiens": "MTL", "St Louis Blues": "STL"})
     def value(row, name):
@@ -211,8 +252,17 @@ def load_schedules(team_codes: list[str]) -> list[dict]:
     return sorted(games.values(), key=lambda g: (g.get("gameDate") or str(g.get("startTimeUTC", ""))[:10], g.get("id", 0)))
 
 
-def load_standings() -> list[dict]:
+def load_standings(previous: dict | None = None) -> list[dict]:
     rows = fetch_json(f"{API}/standings/now").get("standings", [])
+    season_rows = [row for row in rows if str(row.get("seasonId", "")) == SEASON]
+    if any(row.get("seasonId") for row in rows):
+        rows = season_rows
+    if not rows and previous and previous.get("standings"):
+        # During the summer the NHL may still return last season's final table.
+        # Keep team identities/divisions, but never present those totals as new-season results.
+        return [{**row, "gp": 0, "w": 0, "l": 0, "otl": 0, "points": 0,
+            "rw": 0, "gf": 0, "ga": 0, "gd": 0, "divisionRank": 0,
+            "wildcardRank": 0, "streak": ""} for row in previous["standings"]]
     result = []
     for row in rows:
         team = localised(row.get("teamAbbrev")).upper()
@@ -446,13 +496,29 @@ def team_summaries(rows: list[dict]) -> dict:
     return output
 
 
+def write_season_index(current_season: str) -> None:
+    season_dir = OUTPUT.parent / "seasons"
+    entries = []
+    for path in sorted(season_dir.glob("[0-9]" * 8 + ".json"), reverse=True):
+        try:
+            data = json.loads(path.read_text())
+            season = str(data.get("meta", {}).get("season") or path.stem)
+            entries.append({"season": season, "label": f"{season[:4]}–{season[6:]}",
+                "updatedAt": data.get("meta", {}).get("updatedAt"), "current": season == current_season})
+        except (json.JSONDecodeError, OSError):
+            continue
+    (season_dir / "index.json").write_text(json.dumps({"current": current_season, "seasons": entries}, separators=(",", ":")))
+
+
 def main() -> None:
     started = time.time()
+    active_season, rollover_reason = resolve_active_season()
+    set_active_season(active_season)
     previous = {}
     if OUTPUT.exists():
         try: previous = json.loads(OUTPUT.read_text())
         except json.JSONDecodeError: pass
-    standings = load_standings()
+    standings = load_standings(previous)
     schedules = load_schedules([r["team"] for r in standings])
     rows = tracked_game_rows(schedules)
     players = build_players(schedules)
@@ -463,14 +529,20 @@ def main() -> None:
         moneypuck = load_moneypuck()
     except Exception as exc:
         print(f"warning: MoneyPuck data unavailable: {exc}", file=sys.stderr)
-        moneypuck = {"credit":"Data: MoneyPuck.com","teams":[],"skaters":[],"goalies":[],"lines":[],"simulations":[]}
+        moneypuck = {"credit":"Data: MoneyPuck.com","season":SEASON,"updatedAt":None,"status":"Awaiting new-season data","teams":[],"skaters":[],"goalies":[],"lines":[],"simulations":[]}
     natural_stat_trick = load_natural_stat_trick(standings)
+    previous_same_season = previous if previous.get("meta", {}).get("season") == SEASON else {}
     payload = {
-        "meta": {"version": VERSION, "season": SEASON, "trackedTeams": TRACKED, "updatedAt": datetime.now(timezone.utc).isoformat(), "elapsedSeconds": round(time.time()-started, 1), "scheduleGames": len(schedules)},
+        "meta": {"version": VERSION, "season": SEASON, "seasonMode": CONFIG.get("seasonMode", "manual"), "seasonDecision": rollover_reason, "trackedTeams": TRACKED, "updatedAt": datetime.now(timezone.utc).isoformat(), "elapsedSeconds": round(time.time()-started, 1), "scheduleGames": len(schedules)},
         "standings": standings, "games": rows, "teams": team_summaries(rows), "players": players,
-        "daily": daily, "rosters": rosters, "rosterChanges": roster_changes(previous, rosters),
+        "daily": daily, "rosters": rosters, "rosterChanges": roster_changes(previous_same_season, rosters),
         "divisionHistory": division_histories(schedules, standings), "moneypuck": moneypuck,
-        "naturalStatTrick": natural_stat_trick
+        "naturalStatTrick": natural_stat_trick,
+        "sources": {
+            "nhl": {"status": "Ready", "season": SEASON, "updatedAt": datetime.now(timezone.utc).isoformat()},
+            "moneypuck": {"status": moneypuck.get("status", "Ready"), "season": moneypuck.get("season", SEASON), "updatedAt": moneypuck.get("updatedAt")},
+            "naturalStatTrick": {"status": natural_stat_trick.get("status", "Ready"), "season": natural_stat_trick.get("season", SEASON), "updatedAt": natural_stat_trick.get("updatedAt")}
+        }
     }
     OUTPUT.parent.mkdir(parents=True, exist_ok=True)
     temporary = OUTPUT.with_suffix(".tmp")
@@ -480,6 +552,7 @@ def main() -> None:
     archive = OUTPUT.parent / "seasons" / f"{SEASON}.json"
     archive.parent.mkdir(parents=True, exist_ok=True)
     archive.write_text(json.dumps(payload, separators=(",", ":"), ensure_ascii=False))
+    write_season_index(SEASON)
     print(f"Updated {OUTPUT}: {len(rows)} team-game rows, {len(standings)} standings teams")
 
 
@@ -488,12 +561,19 @@ def refresh_natural_stat_trick_only() -> None:
     if not OUTPUT.exists():
         raise RuntimeError("Run the full tracker update before importing Natural Stat Trick data")
     payload = json.loads(OUTPUT.read_text())
+    set_active_season(str(payload.get("meta", {}).get("season") or CONFIG["season"]))
     payload.setdefault("meta", {})["version"] = VERSION
     payload["naturalStatTrick"] = load_natural_stat_trick(payload.get("standings", []))
+    nst = payload["naturalStatTrick"]
+    payload.setdefault("sources", {})["naturalStatTrick"] = {
+        "status": nst.get("status", "Ready"), "season": nst.get("season", SEASON),
+        "updatedAt": nst.get("updatedAt")
+    }
     OUTPUT.write_text(json.dumps(payload, separators=(",", ":"), ensure_ascii=False))
     archive = OUTPUT.parent / "seasons" / f"{SEASON}.json"
     archive.parent.mkdir(parents=True, exist_ok=True)
     archive.write_text(json.dumps(payload, separators=(",", ":"), ensure_ascii=False))
+    write_season_index(SEASON)
     print(f"Imported {len(payload['naturalStatTrick']['teams'])} Natural Stat Trick teams")
 
 
