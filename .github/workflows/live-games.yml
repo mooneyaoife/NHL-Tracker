@@ -1,0 +1,40 @@
+name: Refresh active NHL games
+
+on:
+  workflow_dispatch:
+  schedule:
+    # Every 15 minutes during likely NHL game hours, September through June.
+    - cron: "*/15 0-10,16-23 * 1-6,9-12 *"
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: nhl-tracker
+  cancel-in-progress: false
+
+jobs:
+  refresh:
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - id: live
+        name: Check for and refresh active tracked games
+        run: python scripts/update_tracker.py --live-only
+      - if: steps.live.outputs.active == 'true'
+        uses: actions/configure-pages@v5
+      - if: steps.live.outputs.active == 'true'
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: site
+      - if: steps.live.outputs.active == 'true'
+        id: deployment
+        uses: actions/deploy-pages@v4
