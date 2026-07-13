@@ -301,7 +301,7 @@ def main() -> None:
         print(f"warning: MoneyPuck data unavailable: {exc}", file=sys.stderr)
         moneypuck = {"credit":"Data: MoneyPuck.com","teams":[],"skaters":[],"goalies":[],"lines":[],"simulations":[]}
     payload = {
-        "meta": {"version": "4.0.0", "season": SEASON, "trackedTeams": TRACKED, "updatedAt": datetime.now(timezone.utc).isoformat(), "elapsedSeconds": round(time.time()-started, 1), "scheduleGames": len(schedules)},
+        "meta": {"version": "4.1.0", "season": SEASON, "trackedTeams": TRACKED, "updatedAt": datetime.now(timezone.utc).isoformat(), "elapsedSeconds": round(time.time()-started, 1), "scheduleGames": len(schedules)},
         "standings": standings, "games": rows, "teams": team_summaries(rows), "players": players,
         "daily": daily, "rosters": rosters, "moneypuck": moneypuck
     }
