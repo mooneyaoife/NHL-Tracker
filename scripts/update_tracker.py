@@ -19,7 +19,7 @@ from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
 CONFIG = json.loads((ROOT / "config.json").read_text())
-VERSION = "5.9.0"
+VERSION = "5.10.0"
 SEASON = str(CONFIG["season"])
 TRACKED = [str(t).upper() for t in CONFIG["teams"]]
 API = "https://api-web.nhle.com/v1"
@@ -30,6 +30,7 @@ MP_BASE = f"https://moneypuck.com/moneypuck/playerData/seasonSummary/{MP_SEASON}
 NST_FILE = ROOT / "data" / "naturalstattrick" / f"team_{SEASON}_regular_5v5_sva.csv"
 NST_PLAYER_FILE = ROOT / "data" / "naturalstattrick" / f"player_{SEASON}_regular_5v5.csv"
 NST_GOALIE_FILE = ROOT / "data" / "naturalstattrick" / f"goalie_{SEASON}_regular_5v5.csv"
+NST_REFRESH_FILE = ROOT / "data" / "naturalstattrick" / "naturalstattrick-refresh.json"
 
 
 def set_active_season(season: str) -> None:
@@ -146,8 +147,22 @@ def load_moneypuck() -> dict:
 
 def load_natural_stat_trick(standings: list[dict]) -> dict:
     """Load the user's permitted Natural Stat Trick CSV export without scraping the site."""
-    if not NST_FILE.exists():
+    refresh = {}
+    if NST_REFRESH_FILE.exists():
+        try:
+            candidate = json.loads(NST_REFRESH_FILE.read_text(encoding="utf-8"))
+            if candidate.get("format") == "nhl-tracker-nst-refresh-v1" and str(candidate.get("season")) == SEASON:
+                refresh = candidate
+        except (OSError, json.JSONDecodeError):
+            refresh = {}
+    team_csv, player_csv, goalie_csv = (refresh.get(key, "") for key in ("teamCsv", "playerCsv", "goalieCsv"))
+    if not team_csv and not NST_FILE.exists():
         return {"credit": "Data: NaturalStatTrick.com", "season": SEASON, "updatedAt": None, "teams": [], "players": [], "goalies": [], "status": "Awaiting CSV export"}
+    def rows_from(text: str, path: Path) -> list[dict]:
+        if text:
+            return list(csv.DictReader(io.StringIO(text.lstrip("\ufeff"))))
+        with path.open(newline="", encoding="utf-8-sig") as handle:
+            return list(csv.DictReader(handle))
     code_by_name = {row["name"]: row["team"] for row in standings}
     code_by_name.update({"Montreal Canadiens": "MTL", "St Louis Blues": "STL"})
     def value(row, name):
@@ -169,8 +184,7 @@ def load_natural_stat_trick(standings: list[dict]) -> dict:
         "HDSH%":"hdShPct", "HDSV%":"hdSvPct", "MDSH%":"mdShPct", "MDSV%":"mdSvPct",
         "LDSH%":"ldShPct", "LDSV%":"ldSvPct", "SH%":"shPct", "SV%":"svPct", "PDO":"pdo"
     }
-    with NST_FILE.open(newline="", encoding="utf-8-sig") as handle:
-        raw_rows = list(csv.DictReader(handle))
+    raw_rows = rows_from(team_csv, NST_FILE)
     teams = []
     for row in raw_rows:
         name = row.get("Team", "")
@@ -190,12 +204,11 @@ def load_natural_stat_trick(standings: list[dict]) -> dict:
     }
     team_aliases = {"T.B":"TBL", "S.J":"SJS", "L.A":"LAK", "N.J":"NJD"}
     players = []
-    if NST_PLAYER_FILE.exists():
-        with NST_PLAYER_FILE.open(newline="", encoding="utf-8-sig") as handle:
-            for row in csv.DictReader(handle):
-                player_teams = [team_aliases.get(code.strip(), code.strip()) for code in row.get("Team", "").split(",") if code.strip()]
-                players.append({"name": row.get("Player", ""), "teams": player_teams, "position": row.get("Position", ""),
-                    **{target: value(row, source) for source, target in player_fields.items()}})
+    if player_csv or NST_PLAYER_FILE.exists():
+        for row in rows_from(player_csv, NST_PLAYER_FILE):
+            player_teams = [team_aliases.get(code.strip(), code.strip()) for code in row.get("Team", "").split(",") if code.strip()]
+            players.append({"name": row.get("Player", ""), "teams": player_teams, "position": row.get("Position", ""),
+                **{target: value(row, source) for source, target in player_fields.items()}})
     goalie_fields = {
         "GP":"gp", "TOI":"toi", "Shots Against":"shotsAgainst", "Saves":"saves",
         "Goals Against":"goalsAgainst", "SV%":"savePct", "GAA":"gaa", "GSAA":"gsaa",
@@ -207,20 +220,20 @@ def load_natural_stat_trick(standings: list[dict]) -> dict:
         "Avg. Shot Distance":"avgShotDistance", "Avg. Goal Distance":"avgGoalDistance"
     }
     goalies = []
-    if NST_GOALIE_FILE.exists():
-        with NST_GOALIE_FILE.open(newline="", encoding="utf-8-sig") as handle:
-            for row in csv.DictReader(handle):
-                goalie_teams = [team_aliases.get(code.strip(), code.strip()) for code in row.get("Team", "").split(",") if code.strip()]
-                goalies.append({"name": row.get("Player", ""), "teams": goalie_teams,
-                    **{target: value(row, source) for source, target in goalie_fields.items()}})
+    if goalie_csv or NST_GOALIE_FILE.exists():
+        for row in rows_from(goalie_csv, NST_GOALIE_FILE):
+            goalie_teams = [team_aliases.get(code.strip(), code.strip()) for code in row.get("Team", "").split(",") if code.strip()]
+            goalies.append({"name": row.get("Player", ""), "teams": goalie_teams,
+                **{target: value(row, source) for source, target in goalie_fields.items()}})
     source_mtimes = [path.stat().st_mtime for path in (NST_FILE, NST_PLAYER_FILE, NST_GOALIE_FILE) if path.exists()]
+    updated_at = refresh.get("preparedAt") or (datetime.fromtimestamp(max(source_mtimes), timezone.utc).isoformat() if source_mtimes else datetime.now(timezone.utc).isoformat())
     return {
         "credit": "Data: NaturalStatTrick.com",
         "sourceUrl": "https://www.naturalstattrick.com/teamtable.php",
         "season": SEASON,
         "seasonType": "Regular Season",
         "situation": "5v5 Score & Venue Adjusted",
-        "updatedAt": datetime.fromtimestamp(max(source_mtimes), timezone.utc).isoformat(),
+        "updatedAt": updated_at,
         "teams": teams,
         "players": players,
         "goalies": goalies,

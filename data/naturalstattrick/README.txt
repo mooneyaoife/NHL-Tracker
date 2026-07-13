@@ -25,10 +25,13 @@ The goalie export uses the same season and regular-season settings with:
 - Rate: Counts
 - Export button: CSV (All)
 
-To replace the data later:
-1. Download a new CSV (All) file using the same settings.
-2. Replace the relevant team, player, or goalie CSV in this folder with the new file.
-3. Run: python3 scripts/update_tracker.py --refresh-nst-only
+To replace the data later, use the Natural Stat Trick Refresh Centre on the
+website's Status page. It provides season-aware links, validates all three CSVs,
+and prepares one naturalstattrick-refresh.json file. Upload that file to this
+folder and commit it; the normal GitHub workflow deploys the refreshed data.
+
+The three canonical CSV files remain supported as a fallback. A refresh JSON
+package is used only when its season matches the tracker's active season.
 
 Source: https://www.naturalstattrick.com/teamtable.php
         https://www.naturalstattrick.com/playerteams.php

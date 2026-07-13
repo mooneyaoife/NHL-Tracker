@@ -17,6 +17,7 @@ An automatically updated, interactive NHL dashboard for the Buffalo Sabres, San 
 - Cached boxscores for fast incremental updates
 - Scheduled updates through GitHub Actions
 - Game-night snapshots approximately every 15 minutes while a tracked team is active
+- An in-site Natural Stat Trick Refresh Centre with stale-data reminders and a one-file upload helper
 - Free hosting through GitHub Pages
 
 ## First deployment
