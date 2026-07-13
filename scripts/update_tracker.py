@@ -19,7 +19,7 @@ from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
 CONFIG = json.loads((ROOT / "config.json").read_text())
-VERSION = "5.4.3"
+VERSION = "5.5.0"
 SEASON = str(CONFIG["season"])
 TRACKED = [str(t).upper() for t in CONFIG["teams"]]
 API = "https://api-web.nhle.com/v1"
@@ -124,7 +124,9 @@ def load_natural_stat_trick(standings: list[dict]) -> dict:
         "SF":"sf", "SA":"sa", "SF%":"sfPct", "GF":"gf", "GA":"ga", "GF%":"gfPct",
         "xGF":"xgf", "xGA":"xga", "xGF%":"xgPct", "SCF":"scf", "SCA":"sca",
         "SCF%":"scPct", "HDCF":"hdcf", "HDCA":"hdca", "HDCF%":"hdPct",
-        "SH%":"shPct", "SV%":"svPct", "PDO":"pdo"
+        "MDCF":"mdcf", "MDCA":"mdca", "MDCF%":"mdPct", "LDCF":"ldcf", "LDCA":"ldca", "LDCF%":"ldPct",
+        "HDSH%":"hdShPct", "HDSV%":"hdSvPct", "MDSH%":"mdShPct", "MDSV%":"mdSvPct",
+        "LDSH%":"ldShPct", "LDSV%":"ldSvPct", "SH%":"shPct", "SV%":"svPct", "PDO":"pdo"
     }
     with NST_FILE.open(newline="", encoding="utf-8-sig") as handle:
         raw_rows = list(csv.DictReader(handle))
@@ -136,10 +138,12 @@ def load_natural_stat_trick(standings: list[dict]) -> dict:
             continue
         teams.append({"team": code, "name": name, **{target: value(row, source) for source, target in fields.items()}})
     player_fields = {
-        "GP":"gp", "TOI":"toi", "Goals":"goals", "Total Assists":"assists", "Total Points":"points",
+        "GP":"gp", "TOI":"toi", "Goals":"goals", "Total Assists":"assists", "First Assists":"firstAssists",
+        "Second Assists":"secondAssists", "Total Points":"points",
         "IPP":"ipp", "Shots":"shots", "SH%":"shPct", "ixG":"ixg", "iCF":"icf", "iFF":"iff",
         "iSCF":"iscf", "iHDCF":"ihdcf", "Rush Attempts":"rushAttempts", "Rebounds Created":"rebounds",
-        "PIM":"pim", "Penalties Drawn":"penaltiesDrawn", "Giveaways":"giveaways", "Takeaways":"takeaways",
+        "PIM":"pim", "Total Penalties":"totalPenalties", "Penalties Drawn":"penaltiesDrawn",
+        "Giveaways":"giveaways", "Takeaways":"takeaways",
         "Hits":"hits", "Shots Blocked":"shotsBlocked", "Faceoffs Won":"faceoffsWon",
         "Faceoffs Lost":"faceoffsLost", "Faceoffs %":"faceoffsPct"
     }
