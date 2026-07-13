@@ -4,6 +4,8 @@
 from __future__ import annotations
 
 import json
+import csv
+import io
 import math
 import os
 import sys
@@ -22,6 +24,8 @@ TRACKED = [str(t).upper() for t in CONFIG["teams"]]
 API = "https://api-web.nhle.com/v1"
 CACHE = ROOT / "data" / "cache" / "boxscores"
 OUTPUT = ROOT / "site" / "data" / "tracker.json"
+MP_SEASON = SEASON[:4]
+MP_BASE = f"https://moneypuck.com/moneypuck/playerData/seasonSummary/{MP_SEASON}/regular"
 
 
 def fetch_json(url: str, attempts: int = 4) -> dict:
@@ -35,6 +39,63 @@ def fetch_json(url: str, attempts: int = 4) -> dict:
             last_error = exc
             time.sleep(min(8, 2 ** attempt))
     raise RuntimeError(f"Unable to fetch {url}: {last_error}")
+
+
+def fetch_csv(url: str, attempts: int = 4) -> list[dict]:
+    last_error = None
+    for attempt in range(attempts):
+        try:
+            request = urllib.request.Request(url, headers={"User-Agent": "NHL-Tracker/3.0"})
+            with urllib.request.urlopen(request, timeout=45) as response:
+                return list(csv.DictReader(io.StringIO(response.read().decode("utf-8-sig"))))
+        except (urllib.error.URLError, TimeoutError, UnicodeDecodeError, csv.Error) as exc:
+            last_error = exc; time.sleep(min(8, 2 ** attempt))
+    raise RuntimeError(f"Unable to fetch {url}: {last_error}")
+
+
+def mp_value(row: dict, *names, default=""):
+    for name in names:
+        if row.get(name) not in (None, ""):
+            value = row[name]
+            try: return float(value)
+            except (TypeError, ValueError): return value
+    return default
+
+
+def load_moneypuck() -> dict:
+    """Approved non-commercial CSV downloads. Displayed data must credit MoneyPuck.com."""
+    teams_raw = fetch_csv(f"{MP_BASE}/teams.csv")
+    skaters_raw = fetch_csv(f"{MP_BASE}/skaters.csv")
+    goalies_raw = fetch_csv(f"{MP_BASE}/goalies.csv")
+    lines_raw = fetch_csv(f"{MP_BASE}/lines.csv")
+    simulations = fetch_csv("https://moneypuck.com/moneypuck/simulations/simulations_recent.csv")
+    situation = lambda r: str(r.get("situation", "all")).lower() in {"all", "all situations"}
+    teams = [{"team": mp_value(r,"team"), "games":mp_value(r,"games_played","gamesPlayed"),
+        "xgPct":mp_value(r,"xGoalsPercentage"), "corsiPct":mp_value(r,"corsiPercentage"),
+        "fenwickPct":mp_value(r,"fenwickPercentage"), "xgf":mp_value(r,"xGoalsFor"),
+        "xga":mp_value(r,"xGoalsAgainst"), "gf":mp_value(r,"goalsFor"), "ga":mp_value(r,"goalsAgainst"),
+        "hdFor":mp_value(r,"highDangerShotsFor"), "hdAgainst":mp_value(r,"highDangerShotsAgainst")}
+        for r in teams_raw if situation(r)]
+    skaters = [{"id":str(r.get("playerId", "")).split(".")[0],"name":mp_value(r,"name"),"team":mp_value(r,"team"),"position":mp_value(r,"position"),
+        "games":mp_value(r,"games_played"),"minutes":round(float(mp_value(r,"icetime",default=0) or 0)/60,1),
+        "goals":mp_value(r,"I_F_goals","goals"),"assists":mp_value(r,"I_F_primaryAssists",default=0)+mp_value(r,"I_F_secondaryAssists",default=0),
+        "points":mp_value(r,"I_F_points"),"xGoals":mp_value(r,"I_F_xGoals"),"goalsAboveExpected":mp_value(r,"I_F_goalsAboveExpected"),
+        "onIceXgPct":mp_value(r,"onIce_xGoalsPercentage"),"relativeXgPct":mp_value(r,"onIce_xGoalsPercentage",default=0)-mp_value(r,"offIce_xGoalsPercentage",default=0),
+        "corsiPct":mp_value(r,"onIce_corsiPercentage"),"fenwickPct":mp_value(r,"onIce_fenwickPercentage"),"highDanger":mp_value(r,"I_F_highDangerShots")}
+        for r in skaters_raw if situation(r)]
+    goalies = [{"id":str(r.get("playerId", "")).split(".")[0],"name":mp_value(r,"name"),"team":mp_value(r,"team"),"games":mp_value(r,"games_played"),
+        "minutes":round(float(mp_value(r,"icetime",default=0) or 0)/60,1),"shots":mp_value(r,"shotsOnGoal","unblocked_shot_attempts"),
+        "goalsAgainst":mp_value(r,"goals"),"xGoalsAgainst":mp_value(r,"xGoals"),"gsax":mp_value(r,"xGoals",default=0)-mp_value(r,"goals",default=0),
+        "savePct":mp_value(r,"savePercentage"),"expectedSavePct":mp_value(r,"xSavePercentage"),
+        "savePctAboveExpected":mp_value(r,"savePercentage",default=0)-mp_value(r,"xSavePercentage",default=0),
+        "reboundsAboveExpected":mp_value(r,"rebounds",default=0)-mp_value(r,"xRebounds",default=0)}
+        for r in goalies_raw if situation(r)]
+    lines = [{"team":mp_value(r,"team"),"name":mp_value(r,"name","lineName"),"type":mp_value(r,"position","lineType"),
+        "minutes":round(float(mp_value(r,"icetime",default=0) or 0)/60,1),"xgPct":mp_value(r,"xGoalsPercentage"),
+        "corsiPct":mp_value(r,"corsiPercentage"),"fenwickPct":mp_value(r,"fenwickPercentage"),
+        "gf":mp_value(r,"goalsFor"),"ga":mp_value(r,"goalsAgainst")}
+        for r in lines_raw if situation(r) and float(mp_value(r,"icetime",default=0) or 0)>=300]
+    return {"credit":"Data: MoneyPuck.com","updatedAt":datetime.now(timezone.utc).isoformat(),"teams":teams,"skaters":skaters,"goalies":goalies,"lines":lines,"simulations":simulations}
 
 
 def localised(value) -> str:
@@ -233,10 +294,15 @@ def main() -> None:
     players = build_players(schedules)
     daily = load_daily()
     rosters = load_rosters([r["team"] for r in standings])
+    try:
+        moneypuck = load_moneypuck()
+    except Exception as exc:
+        print(f"warning: MoneyPuck data unavailable: {exc}", file=sys.stderr)
+        moneypuck = {"credit":"Data: MoneyPuck.com","teams":[],"skaters":[],"goalies":[],"lines":[],"simulations":[]}
     payload = {
-        "meta": {"version": "3.0.0", "season": SEASON, "trackedTeams": TRACKED, "updatedAt": datetime.now(timezone.utc).isoformat(), "elapsedSeconds": round(time.time()-started, 1), "scheduleGames": len(schedules)},
+        "meta": {"version": "4.0.0", "season": SEASON, "trackedTeams": TRACKED, "updatedAt": datetime.now(timezone.utc).isoformat(), "elapsedSeconds": round(time.time()-started, 1), "scheduleGames": len(schedules)},
         "standings": standings, "games": rows, "teams": team_summaries(rows), "players": players,
-        "daily": daily, "rosters": rosters
+        "daily": daily, "rosters": rosters, "moneypuck": moneypuck
     }
     OUTPUT.parent.mkdir(parents=True, exist_ok=True)
     temporary = OUTPUT.with_suffix(".tmp")
