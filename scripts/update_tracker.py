@@ -19,6 +19,7 @@ from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
 CONFIG = json.loads((ROOT / "config.json").read_text())
+VERSION = "5.2.0"
 SEASON = str(CONFIG["season"])
 TRACKED = [str(t).upper() for t in CONFIG["teams"]]
 API = "https://api-web.nhle.com/v1"
@@ -26,6 +27,7 @@ CACHE = ROOT / "data" / "cache" / "boxscores"
 OUTPUT = ROOT / "site" / "data" / "tracker.json"
 MP_SEASON = SEASON[:4]
 MP_BASE = f"https://moneypuck.com/moneypuck/playerData/seasonSummary/{MP_SEASON}/regular"
+NST_FILE = ROOT / "data" / "naturalstattrick" / f"team_{SEASON}_regular_5v5_sva.csv"
 
 
 def fetch_json(url: str, attempts: int = 4) -> dict:
@@ -97,6 +99,47 @@ def load_moneypuck() -> dict:
         for r in lines_raw if str(r.get("situation", "5on5")).lower() in {"all", "all situations", "5on5", "5 on 5"}
         and float(mp_value(r,"icetime",default=0) or 0)>=300]
     return {"credit":"Data: MoneyPuck.com","updatedAt":datetime.now(timezone.utc).isoformat(),"teams":teams,"skaters":skaters,"goalies":goalies,"lines":lines,"simulations":simulations}
+
+
+def load_natural_stat_trick(standings: list[dict]) -> dict:
+    """Load the user's permitted Natural Stat Trick CSV export without scraping the site."""
+    if not NST_FILE.exists():
+        return {"credit": "Data: NaturalStatTrick.com", "teams": [], "status": "Awaiting CSV export"}
+    code_by_name = {row["name"]: row["team"] for row in standings}
+    code_by_name.update({"Montreal Canadiens": "MTL", "St Louis Blues": "STL"})
+    def value(row, name):
+        raw = row.get(name, "")
+        try:
+            number = float(raw)
+            return int(number) if number.is_integer() else number
+        except (TypeError, ValueError):
+            return raw
+    fields = {
+        "GP":"gp", "TOI":"toi", "W":"w", "L":"l", "OTL":"otl", "Points":"points",
+        "CF":"cf", "CA":"ca", "CF%":"cfPct", "FF":"ff", "FA":"fa", "FF%":"ffPct",
+        "SF":"sf", "SA":"sa", "SF%":"sfPct", "GF":"gf", "GA":"ga", "GF%":"gfPct",
+        "xGF":"xgf", "xGA":"xga", "xGF%":"xgPct", "SCF":"scf", "SCA":"sca",
+        "SCF%":"scPct", "HDCF":"hdcf", "HDCA":"hdca", "HDCF%":"hdPct",
+        "SH%":"shPct", "SV%":"svPct", "PDO":"pdo"
+    }
+    with NST_FILE.open(newline="", encoding="utf-8-sig") as handle:
+        raw_rows = list(csv.DictReader(handle))
+    teams = []
+    for row in raw_rows:
+        name = row.get("Team", "")
+        code = code_by_name.get(name)
+        if not code:
+            continue
+        teams.append({"team": code, "name": name, **{target: value(row, source) for source, target in fields.items()}})
+    return {
+        "credit": "Data: NaturalStatTrick.com",
+        "sourceUrl": "https://www.naturalstattrick.com/teamtable.php",
+        "season": SEASON,
+        "seasonType": "Regular Season",
+        "situation": "5v5 Score & Venue Adjusted",
+        "updatedAt": datetime.fromtimestamp(NST_FILE.stat().st_mtime, timezone.utc).isoformat(),
+        "teams": teams,
+    }
 
 
 def localised(value) -> str:
@@ -377,11 +420,13 @@ def main() -> None:
     except Exception as exc:
         print(f"warning: MoneyPuck data unavailable: {exc}", file=sys.stderr)
         moneypuck = {"credit":"Data: MoneyPuck.com","teams":[],"skaters":[],"goalies":[],"lines":[],"simulations":[]}
+    natural_stat_trick = load_natural_stat_trick(standings)
     payload = {
-        "meta": {"version": "5.0.0", "season": SEASON, "trackedTeams": TRACKED, "updatedAt": datetime.now(timezone.utc).isoformat(), "elapsedSeconds": round(time.time()-started, 1), "scheduleGames": len(schedules)},
+        "meta": {"version": VERSION, "season": SEASON, "trackedTeams": TRACKED, "updatedAt": datetime.now(timezone.utc).isoformat(), "elapsedSeconds": round(time.time()-started, 1), "scheduleGames": len(schedules)},
         "standings": standings, "games": rows, "teams": team_summaries(rows), "players": players,
         "daily": daily, "rosters": rosters, "rosterChanges": roster_changes(previous, rosters),
-        "divisionHistory": division_histories(schedules, standings), "moneypuck": moneypuck
+        "divisionHistory": division_histories(schedules, standings), "moneypuck": moneypuck,
+        "naturalStatTrick": natural_stat_trick
     }
     OUTPUT.parent.mkdir(parents=True, exist_ok=True)
     temporary = OUTPUT.with_suffix(".tmp")
@@ -394,5 +439,22 @@ def main() -> None:
     print(f"Updated {OUTPUT}: {len(rows)} team-game rows, {len(standings)} standings teams")
 
 
+def refresh_natural_stat_trick_only() -> None:
+    """Refresh the manual Natural Stat Trick import without refetching the NHL or MoneyPuck."""
+    if not OUTPUT.exists():
+        raise RuntimeError("Run the full tracker update before importing Natural Stat Trick data")
+    payload = json.loads(OUTPUT.read_text())
+    payload.setdefault("meta", {})["version"] = VERSION
+    payload["naturalStatTrick"] = load_natural_stat_trick(payload.get("standings", []))
+    OUTPUT.write_text(json.dumps(payload, separators=(",", ":"), ensure_ascii=False))
+    archive = OUTPUT.parent / "seasons" / f"{SEASON}.json"
+    archive.parent.mkdir(parents=True, exist_ok=True)
+    archive.write_text(json.dumps(payload, separators=(",", ":"), ensure_ascii=False))
+    print(f"Imported {len(payload['naturalStatTrick']['teams'])} Natural Stat Trick teams")
+
+
 if __name__ == "__main__":
-    main()
+    if "--refresh-nst-only" in sys.argv:
+        refresh_natural_stat_trick_only()
+    else:
+        main()

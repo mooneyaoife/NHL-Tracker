@@ -4,7 +4,7 @@
   <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
   <title>NHL Tracker</title>
   <script>document.documentElement.dataset.theme=localStorage.getItem("nhl-theme")||"light"</script>
-  <link rel="stylesheet" href="styles.css?v=5.1.0">
+  <link rel="stylesheet" href="styles.css?v=5.2.0">
   <script src="https://cdn.plot.ly/plotly-2.35.2.min.js"></script>
 </head>
 <body>
@@ -43,6 +43,7 @@
     <div class="section-label">Advanced performance</div><div id="team-advanced" class="grid four"></div>
     <div class="grid two"><article class="panel"><h3>Expected versus actual goals</h3><div id="team-xg-chart" class="chart"></div></article><article class="panel"><h3>Best lines and pairings</h3><div id="team-lines" class="table-wrap"></div></article></div>
     <div class="mp-credit">Data: <a href="https://moneypuck.com" target="_blank" rel="noopener">MoneyPuck.com</a></div>
+    <details class="expandable"><summary>Natural Stat Trick team profile</summary><div id="team-nst-metrics" class="grid four"></div><article class="panel"><h3>Five-on-five performance shares</h3><div id="team-nst-chart" class="chart"></div></article><div class="mp-credit">5-on-5 score-and-venue-adjusted data: <a href="https://www.naturalstattrick.com/teamtable.php" target="_blank" rel="noopener">NaturalStatTrick.com</a></div></details>
     <details class="expandable"><summary>Season charts</summary><div class="grid two"><article class="panel"><h3>Cumulative points</h3><div id="team-points" class="chart"></div></article><article class="panel"><h3>Goal differential by game</h3><div id="team-gd" class="chart"></div></article><article class="panel"><h3>Cumulative goal differential</h3><div id="team-cumulative-gd" class="chart"></div></article><article class="panel"><h3>Results breakdown</h3><div id="team-results-chart" class="chart"></div></article></div></details>
     <details class="expandable"><summary>Splits, timeline and opponents</summary><div class="grid two"><article class="panel"><h3>Monthly performance</h3><div id="team-monthly" class="table-wrap"></div></article><article class="panel"><h3>Opponent breakdown</h3><div id="team-opponents" class="table-wrap"></div></article></div><article class="panel"><h3>Season timeline</h3><div id="team-timeline"></div></article></details>
     <details class="expandable"><summary>Complete game log</summary><div id="team-log" class="table-wrap"></div></details>
@@ -84,5 +85,5 @@
   <section id="status" class="page utility-page"><div class="title-bar"><h2>System Status</h2></div><div id="status-cards" class="grid four"></div><div class="grid two"><article class="panel"><h3>Data coverage</h3><div id="status-coverage"></div></article><article class="panel"><h3>Update process</h3><p>GitHub Actions refreshes schedules, scores, standings, rosters and approved analytics automatically. Previous season files remain available for historical comparison.</p></article></div></section>
 </main>
 <footer><div class="footer-links"><button data-page="guide">Stat Guide</button><button data-page="watchlist">Settings</button><a href="https://moneypuck.com/data.htm" target="_blank" rel="noopener">Data sources</a><button data-page="status">Status</button></div><p>NHL Tracker · Unofficial, non-commercial fan project using public NHL data</p></footer>
-<script src="app.js?v=5.1.0"></script>
+<script src="app.js?v=5.2.0"></script>
 </body></html>
