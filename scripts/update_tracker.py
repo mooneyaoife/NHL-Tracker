@@ -94,7 +94,8 @@ def load_moneypuck() -> dict:
         "minutes":round(float(mp_value(r,"icetime",default=0) or 0)/60,1),"xgPct":mp_value(r,"xGoalsPercentage"),
         "corsiPct":mp_value(r,"corsiPercentage"),"fenwickPct":mp_value(r,"fenwickPercentage"),
         "gf":mp_value(r,"goalsFor"),"ga":mp_value(r,"goalsAgainst")}
-        for r in lines_raw if situation(r) and float(mp_value(r,"icetime",default=0) or 0)>=300]
+        for r in lines_raw if str(r.get("situation", "5on5")).lower() in {"all", "all situations", "5on5", "5 on 5"}
+        and float(mp_value(r,"icetime",default=0) or 0)>=300]
     return {"credit":"Data: MoneyPuck.com","updatedAt":datetime.now(timezone.utc).isoformat(),"teams":teams,"skaters":skaters,"goalies":goalies,"lines":lines,"simulations":simulations}
 
 
