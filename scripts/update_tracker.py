@@ -19,7 +19,7 @@ from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
 CONFIG = json.loads((ROOT / "config.json").read_text())
-VERSION = "5.2.0"
+VERSION = "5.3.0"
 SEASON = str(CONFIG["season"])
 TRACKED = [str(t).upper() for t in CONFIG["teams"]]
 API = "https://api-web.nhle.com/v1"
@@ -28,6 +28,8 @@ OUTPUT = ROOT / "site" / "data" / "tracker.json"
 MP_SEASON = SEASON[:4]
 MP_BASE = f"https://moneypuck.com/moneypuck/playerData/seasonSummary/{MP_SEASON}/regular"
 NST_FILE = ROOT / "data" / "naturalstattrick" / f"team_{SEASON}_regular_5v5_sva.csv"
+NST_PLAYER_FILE = ROOT / "data" / "naturalstattrick" / f"player_{SEASON}_regular_5v5.csv"
+NST_GOALIE_FILE = ROOT / "data" / "naturalstattrick" / f"goalie_{SEASON}_regular_5v5.csv"
 
 
 def fetch_json(url: str, attempts: int = 4) -> dict:
@@ -131,14 +133,50 @@ def load_natural_stat_trick(standings: list[dict]) -> dict:
         if not code:
             continue
         teams.append({"team": code, "name": name, **{target: value(row, source) for source, target in fields.items()}})
+    player_fields = {
+        "GP":"gp", "TOI":"toi", "Goals":"goals", "Total Assists":"assists", "Total Points":"points",
+        "IPP":"ipp", "Shots":"shots", "SH%":"shPct", "ixG":"ixg", "iCF":"icf", "iFF":"iff",
+        "iSCF":"iscf", "iHDCF":"ihdcf", "Rush Attempts":"rushAttempts", "Rebounds Created":"rebounds",
+        "PIM":"pim", "Penalties Drawn":"penaltiesDrawn", "Giveaways":"giveaways", "Takeaways":"takeaways",
+        "Hits":"hits", "Shots Blocked":"shotsBlocked", "Faceoffs Won":"faceoffsWon",
+        "Faceoffs Lost":"faceoffsLost", "Faceoffs %":"faceoffsPct"
+    }
+    team_aliases = {"T.B":"TBL", "S.J":"SJS", "L.A":"LAK", "N.J":"NJD"}
+    players = []
+    if NST_PLAYER_FILE.exists():
+        with NST_PLAYER_FILE.open(newline="", encoding="utf-8-sig") as handle:
+            for row in csv.DictReader(handle):
+                player_teams = [team_aliases.get(code.strip(), code.strip()) for code in row.get("Team", "").split(",") if code.strip()]
+                players.append({"name": row.get("Player", ""), "teams": player_teams, "position": row.get("Position", ""),
+                    **{target: value(row, source) for source, target in player_fields.items()}})
+    goalie_fields = {
+        "GP":"gp", "TOI":"toi", "Shots Against":"shotsAgainst", "Saves":"saves",
+        "Goals Against":"goalsAgainst", "SV%":"savePct", "GAA":"gaa", "GSAA":"gsaa",
+        "xG Against":"xGoalsAgainst", "HD Shots Against":"hdShotsAgainst", "HD Saves":"hdSaves",
+        "HD Goals Against":"hdGoalsAgainst", "HDSV%":"hdSavePct", "HDGSAA":"hdGsaa",
+        "MD Shots Against":"mdShotsAgainst", "MDSV%":"mdSavePct", "MDGSAA":"mdGsaa",
+        "LD Shots Against":"ldShotsAgainst", "LDSV%":"ldSavePct", "LDGSAA":"ldGsaa",
+        "Rush Attempts Against":"rushAgainst", "Rebound Attempts Against":"reboundAgainst",
+        "Avg. Shot Distance":"avgShotDistance", "Avg. Goal Distance":"avgGoalDistance"
+    }
+    goalies = []
+    if NST_GOALIE_FILE.exists():
+        with NST_GOALIE_FILE.open(newline="", encoding="utf-8-sig") as handle:
+            for row in csv.DictReader(handle):
+                goalie_teams = [team_aliases.get(code.strip(), code.strip()) for code in row.get("Team", "").split(",") if code.strip()]
+                goalies.append({"name": row.get("Player", ""), "teams": goalie_teams,
+                    **{target: value(row, source) for source, target in goalie_fields.items()}})
+    source_mtimes = [path.stat().st_mtime for path in (NST_FILE, NST_PLAYER_FILE, NST_GOALIE_FILE) if path.exists()]
     return {
         "credit": "Data: NaturalStatTrick.com",
         "sourceUrl": "https://www.naturalstattrick.com/teamtable.php",
         "season": SEASON,
         "seasonType": "Regular Season",
         "situation": "5v5 Score & Venue Adjusted",
-        "updatedAt": datetime.fromtimestamp(NST_FILE.stat().st_mtime, timezone.utc).isoformat(),
+        "updatedAt": datetime.fromtimestamp(max(source_mtimes), timezone.utc).isoformat(),
         "teams": teams,
+        "players": players,
+        "goalies": goalies,
     }
 
 
