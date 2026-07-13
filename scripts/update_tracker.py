@@ -188,7 +188,7 @@ def main() -> None:
     standings = load_standings()
     players = build_players(schedules)
     payload = {
-        "meta": {"version": "1.0.0", "season": SEASON, "trackedTeams": TRACKED, "updatedAt": datetime.now(timezone.utc).isoformat(), "elapsedSeconds": round(time.time()-started, 1), "scheduleGames": len(schedules)},
+        "meta": {"version": "2.0.0", "season": SEASON, "trackedTeams": TRACKED, "updatedAt": datetime.now(timezone.utc).isoformat(), "elapsedSeconds": round(time.time()-started, 1), "scheduleGames": len(schedules)},
         "standings": standings, "games": rows, "teams": team_summaries(rows), "players": players
     }
     OUTPUT.parent.mkdir(parents=True, exist_ok=True)
