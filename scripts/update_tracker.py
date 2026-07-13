@@ -105,14 +105,23 @@ def localised(value) -> str:
     return str(value or "")
 
 
-def load_schedules() -> list[dict]:
+def load_schedules(team_codes: list[str]) -> list[dict]:
+    """Load league schedules in parallel so division race histories are complete."""
     games = {}
-    for team in TRACKED:
-        payload = fetch_json(f"{API}/club-schedule-season/{team}/{SEASON}")
-        for game in payload.get("games", []):
-            if game.get("id") is not None:
-                games[str(game["id"])] = game
-    return sorted(games.values(), key=lambda g: (g.get("gameDate", ""), g.get("id", 0)))
+    def one(team):
+        return fetch_json(f"{API}/club-schedule-season/{team}/{SEASON}").get("games", [])
+    with ThreadPoolExecutor(max_workers=8) as pool:
+        futures = {pool.submit(one, team): team for team in team_codes}
+        for future in as_completed(futures):
+            try:
+                team_games = future.result()
+            except Exception as exc:
+                print(f"warning: schedule {futures[future]}: {exc}", file=sys.stderr)
+                continue
+            for game in team_games:
+                if game.get("id") is not None:
+                    games[str(game["id"])] = game
+    return sorted(games.values(), key=lambda g: (g.get("gameDate") or str(g.get("startTimeUTC", ""))[:10], g.get("id", 0)))
 
 
 def load_standings() -> list[dict]:
@@ -125,6 +134,7 @@ def load_standings() -> list[dict]:
         result.append({
             "team": team,
             "name": localised(row.get("teamName")) or team,
+            "logo": f"https://assets.nhle.com/logos/nhl/svg/{team}_light.svg",
             "conference": localised(row.get("conferenceName")),
             "division": localised(row.get("divisionName")),
             "gp": row.get("gamesPlayed", 0), "w": row.get("wins", 0),
@@ -146,8 +156,9 @@ def load_daily() -> dict:
     games = []
     for game in schedule.get("gameWeek", []):
         for g in game.get("games", []):
+            start_time = g.get("startTimeUTC", "")
             games.append({
-                "id": g.get("id"), "date": g.get("gameDate"), "startTimeUTC": g.get("startTimeUTC", ""),
+                "id": g.get("id"), "date": g.get("gameDate") or (start_time[:10] if start_time else ""), "startTimeUTC": start_time,
                 "state": g.get("gameState", ""), "type": g.get("gameType", 0),
                 "venue": localised(g.get("venue")),
                 "home": localised(g.get("homeTeam", {}).get("abbrev")).upper(),
@@ -276,6 +287,67 @@ def build_players(games: list[dict]) -> dict:
     return output
 
 
+def enrich_players(players: dict, rosters: dict) -> dict:
+    """Replace boxscore abbreviations with roster names and add official headshots."""
+    roster_by_id = {str(p.get("id")): p for rows in rosters.values() for p in rows}
+    for rows in players.values():
+        for player in rows:
+            roster = roster_by_id.get(str(player.get("id")))
+            if roster:
+                player["name"] = roster.get("name") or player.get("name")
+                player["headshot"] = roster.get("headshot", "")
+    return players
+
+
+def division_histories(games: list[dict], standings: list[dict]) -> dict:
+    """Build cumulative points by calendar date for every division team."""
+    divisions = defaultdict(list)
+    for row in standings:
+        divisions[row.get("division", "")].append(row["team"])
+    wanted = {team for teams in divisions.values() for team in teams}
+    events = defaultdict(list)
+    for game in games:
+        if int(game.get("gameType", 0)) != 2 or str(game.get("gameState", "")).upper() not in {"OFF", "FINAL"}:
+            continue
+        home = localised(game.get("homeTeam", {}).get("abbrev")).upper()
+        away = localised(game.get("awayTeam", {}).get("abbrev")).upper()
+        if home not in wanted or away not in wanted:
+            continue
+        hs = int(game.get("homeTeam", {}).get("score") or 0)
+        aws = int(game.get("awayTeam", {}).get("score") or 0)
+        period = str(game.get("gameOutcome", {}).get("lastPeriodType", "REG"))
+        home_points = 2 if hs > aws else (1 if period in {"OT", "SO"} else 0)
+        away_points = 2 if aws > hs else (1 if period in {"OT", "SO"} else 0)
+        date = game.get("gameDate") or str(game.get("startTimeUTC", ""))[:10]
+        events[home].append((date, home_points))
+        events[away].append((date, away_points))
+    output = {}
+    for division, team_codes in divisions.items():
+        series = {}
+        for team in team_codes:
+            total = 0
+            rows = []
+            for date, points in sorted(events.get(team, [])):
+                total += points
+                rows.append({"date": date, "points": total})
+            series[team] = rows
+        output[division] = series
+    return output
+
+
+def roster_changes(previous: dict, current: dict) -> dict:
+    changes = {}
+    old_rosters = previous.get("rosters", {}) if previous else {}
+    for team in TRACKED:
+        old = {str(p.get("id")): p for p in old_rosters.get(team, [])}
+        new = {str(p.get("id")): p for p in current.get(team, [])}
+        changes[team] = {
+            "added": [new[i] for i in new.keys() - old.keys()],
+            "removed": [old[i] for i in old.keys() - new.keys()]
+        }
+    return changes
+
+
 def team_summaries(rows: list[dict]) -> dict:
     output = {}
     for team in TRACKED:
@@ -289,27 +361,36 @@ def team_summaries(rows: list[dict]) -> dict:
 
 def main() -> None:
     started = time.time()
-    schedules = load_schedules()
-    rows = tracked_game_rows(schedules)
+    previous = {}
+    if OUTPUT.exists():
+        try: previous = json.loads(OUTPUT.read_text())
+        except json.JSONDecodeError: pass
     standings = load_standings()
+    schedules = load_schedules([r["team"] for r in standings])
+    rows = tracked_game_rows(schedules)
     players = build_players(schedules)
     daily = load_daily()
     rosters = load_rosters([r["team"] for r in standings])
+    players = enrich_players(players, rosters)
     try:
         moneypuck = load_moneypuck()
     except Exception as exc:
         print(f"warning: MoneyPuck data unavailable: {exc}", file=sys.stderr)
         moneypuck = {"credit":"Data: MoneyPuck.com","teams":[],"skaters":[],"goalies":[],"lines":[],"simulations":[]}
     payload = {
-        "meta": {"version": "4.1.0", "season": SEASON, "trackedTeams": TRACKED, "updatedAt": datetime.now(timezone.utc).isoformat(), "elapsedSeconds": round(time.time()-started, 1), "scheduleGames": len(schedules)},
+        "meta": {"version": "5.0.0", "season": SEASON, "trackedTeams": TRACKED, "updatedAt": datetime.now(timezone.utc).isoformat(), "elapsedSeconds": round(time.time()-started, 1), "scheduleGames": len(schedules)},
         "standings": standings, "games": rows, "teams": team_summaries(rows), "players": players,
-        "daily": daily, "rosters": rosters, "moneypuck": moneypuck
+        "daily": daily, "rosters": rosters, "rosterChanges": roster_changes(previous, rosters),
+        "divisionHistory": division_histories(schedules, standings), "moneypuck": moneypuck
     }
     OUTPUT.parent.mkdir(parents=True, exist_ok=True)
     temporary = OUTPUT.with_suffix(".tmp")
     temporary.write_text(json.dumps(payload, separators=(",", ":"), ensure_ascii=False))
     json.loads(temporary.read_text())
     temporary.replace(OUTPUT)
+    archive = OUTPUT.parent / "seasons" / f"{SEASON}.json"
+    archive.parent.mkdir(parents=True, exist_ok=True)
+    archive.write_text(json.dumps(payload, separators=(",", ":"), ensure_ascii=False))
     print(f"Updated {OUTPUT}: {len(rows)} team-game rows, {len(standings)} standings teams")
 
 
