@@ -1,0 +1,20 @@
+{
+  "name": "NHL Tracker",
+  "short_name": "NHL Tracker",
+  "description": "Scores, schedules, standings and analytics for your NHL teams.",
+  "id": "/NHL-Tracker/",
+  "start_url": "./#dashboard",
+  "scope": "./",
+  "display": "standalone",
+  "background_color": "#f1f4f8",
+  "theme_color": "#10233f",
+  "categories": ["sports", "utilities"],
+  "icons": [
+    {"src": "icons/icon-192.png", "sizes": "192x192", "type": "image/png", "purpose": "any"},
+    {"src": "icons/icon-512.png", "sizes": "512x512", "type": "image/png", "purpose": "any maskable"}
+  ],
+  "shortcuts": [
+    {"name": "Schedule", "short_name": "Schedule", "url": "./#schedule"},
+    {"name": "Game Centre", "short_name": "Games", "url": "./#games"}
+  ]
+}
