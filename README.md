@@ -12,6 +12,7 @@ An automatically updated, interactive NHL dashboard for the Buffalo Sabres, San 
 - Player and goalie centres with full names and official roster images
 - Official NHL standings and tracked-team ranks
 - Confirmed updates, roster-change detection and clearly separated rumour sources
+- Automatic official NHL headlines, curated insider timelines, current podcast episodes and recent hockey videos
 - Power rankings using approved MoneyPuck downloads with visible credit
 - Phase-aware playoff information
 - Automatic season rollover with selectable per-season archives

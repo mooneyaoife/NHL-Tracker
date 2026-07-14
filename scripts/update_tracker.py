@@ -5,21 +5,25 @@ from __future__ import annotations
 
 import json
 import csv
+import html
 import io
 import math
 import os
+import re
 import sys
 import time
 import urllib.error
 import urllib.request
+import xml.etree.ElementTree as ET
 from collections import defaultdict
 from concurrent.futures import ThreadPoolExecutor, as_completed
 from datetime import datetime, timedelta, timezone
+from email.utils import parsedate_to_datetime
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
 CONFIG = json.loads((ROOT / "config.json").read_text())
-VERSION = "5.19.0"
+VERSION = "5.20.0"
 SEASON = str(CONFIG["season"])
 TRACKED = [str(t).upper() for t in CONFIG["teams"]]
 API = "https://api-web.nhle.com/v1"
@@ -31,6 +35,22 @@ NST_FILE = ROOT / "data" / "naturalstattrick" / f"team_{SEASON}_regular_5v5_sva.
 NST_PLAYER_FILE = ROOT / "data" / "naturalstattrick" / f"player_{SEASON}_regular_5v5.csv"
 NST_GOALIE_FILE = ROOT / "data" / "naturalstattrick" / f"goalie_{SEASON}_regular_5v5.csv"
 NST_REFRESH_FILE = ROOT / "data" / "naturalstattrick" / "naturalstattrick-refresh.json"
+TEAM_NICKNAMES = {
+    "ANA":"ducks","BOS":"bruins","BUF":"sabres","CAR":"hurricanes","CBJ":"blue jackets","CGY":"flames","CHI":"blackhawks","COL":"avalanche",
+    "DAL":"stars","DET":"red wings","EDM":"oilers","FLA":"panthers","LAK":"kings","MIN":"wild","MTL":"canadiens","NJD":"devils","NSH":"predators",
+    "NYI":"islanders","NYR":"rangers","OTT":"senators","PHI":"flyers","PIT":"penguins","SEA":"kraken","SJS":"sharks","STL":"blues","TBL":"lightning",
+    "TOR":"maple leafs","UTA":"mammoth","VAN":"canucks","VGK":"golden knights","WPG":"jets","WSH":"capitals"
+}
+PODCASTS = [
+    ("32 Thoughts", "Elliotte Friedman and Kyle Bukauskas", "https://feeds.simplecast.com/fYqFr5h_", "https://podcasts.apple.com/us/podcast/32-thoughts-the-podcast/id1332150124"),
+    ("The Athletic Hockey Show", "The Athletic NHL staff", "https://feeds.acast.com/public/shows/6818bb89f30c20bff73c9ebc", "https://podcasts.apple.com/us/podcast/the-athletic-hockey-show/id1546282862"),
+    ("The Sheet", "Jeff Marek", "https://feeds.acast.com/public/shows/672c0e761e4926b519960bc2", "https://podcasts.apple.com/us/podcast/the-sheet-with-jeff-marek/id1778349773")
+]
+VIDEO_CHANNELS = [
+    ("NHL", "UCqFMzb-4AUf6WAIbl132QKA"),
+    ("Sportsnet", "UCVhibwHk4WKw4leUt6JfRLg"),
+    ("TSN", "UCXoJ8kY9zpLBEz-8saaT3ew")
+]
 
 
 def set_active_season(season: str) -> None:
@@ -85,6 +105,108 @@ def fetch_json(url: str, attempts: int = 4) -> dict:
             last_error = exc
             time.sleep(min(8, 2 ** attempt))
     raise RuntimeError(f"Unable to fetch {url}: {last_error}")
+
+
+def fetch_text(url: str, attempts: int = 3) -> str:
+    last_error = None
+    for attempt in range(attempts):
+        try:
+            request = urllib.request.Request(url, headers={"Accept": "text/html,application/rss+xml", "User-Agent": "NHL-Tracker/5.20"})
+            with urllib.request.urlopen(request, timeout=30) as response:
+                return response.read().decode("utf-8", errors="replace")
+        except (urllib.error.URLError, TimeoutError, UnicodeDecodeError) as exc:
+            last_error = exc
+            time.sleep(min(4, 2 ** attempt))
+    raise RuntimeError(f"Unable to fetch {url}: {last_error}")
+
+
+def clean_markup(value: str) -> str:
+    value = re.sub(r"<[^>]+>", " ", value or "")
+    return re.sub(r"\s+", " ", html.unescape(value)).strip()
+
+
+def news_category(text: str) -> str:
+    text = text.casefold()
+    if re.search(r"\b(trade|signs?|signed|contract|acquire|acquired|waiver|arbitration|free agent|offer sheet|hired?|named)\b", text): return "Moves"
+    if re.search(r"\b(injur|surgery|out for|miss(?:es|ing)?|health|concussion)\b", text): return "Injuries"
+    if re.search(r"\b(draft|prospect|development camp|rookie|world junior)\b", text): return "Prospects"
+    if re.search(r"\b(analysis|outlook|reset|ranking|fantasy|projection|season preview)\b", text): return "Analysis"
+    return "League"
+
+
+def load_official_news(standings: list[dict], rosters: dict, previous: dict) -> dict:
+    """Extract headline metadata from NHL.com's public news page; articles remain on NHL.com."""
+    try:
+        page = fetch_text("https://www.nhl.com/news/")
+        blocks = re.findall(r'<a class="nhl-c-card-wrap[^>]*?href="([^"]+)"[^>]*>(.*?</article>)', page, flags=re.S | re.I)
+        articles, seen = [], set()
+        for href, block in blocks:
+            title_match = re.search(r'<h3[^>]*>(.*?)</h3>', block, flags=re.S | re.I)
+            if not title_match: continue
+            title = clean_markup(title_match.group(1))
+            summary_match = re.search(r'<div class="fa-text__body"[^>]*>\s*<p>(.*?)</p>', block, flags=re.S | re.I)
+            time_match = re.search(r'<time[^>]*datetime="([^"]+)"', block, flags=re.I)
+            image_match = re.search(r'<img[^>]*class="img-responsive"[^>]*src="([^"]+)"', block, flags=re.I)
+            url = href if href.startswith("http") else f"https://www.nhl.com{href}"
+            if url in seen: continue
+            seen.add(url)
+            summary = clean_markup(summary_match.group(1) if summary_match else "")
+            haystack = f"{title} {summary} {url}".casefold()
+            tagged = []
+            for team in standings:
+                code, name = team["team"], team["name"]
+                nickname = TEAM_NICKNAMES.get(code, name.split()[-1]).casefold()
+                team_slug = re.sub(r"[^a-z0-9]+", "-", name.casefold()).strip("-")
+                player_hit = any(p.get("name", "").casefold() in haystack for p in rosters.get(code, []) if len(p.get("name", "")) > 5)
+                if name.casefold() in haystack or re.search(rf"\b{re.escape(nickname)}\b", haystack) or team_slug in haystack or player_hit:
+                    tagged.append(code)
+            articles.append({"title": title, "summary": summary, "url": url, "image": html.unescape(image_match.group(1)) if image_match else "", "publishedAt": time_match.group(1) if time_match else "", "teams": tagged, "category": news_category(haystack), "source": "NHL.com"})
+            if len(articles) >= 48: break
+        return {"updatedAt": datetime.now(timezone.utc).isoformat(), "status": "Ready", "articles": articles}
+    except Exception as exc:
+        print(f"warning: official NHL news unavailable: {exc}", file=sys.stderr)
+        return previous.get("news") or {"updatedAt": None, "status": "Temporarily unavailable", "articles": []}
+
+
+def load_podcasts(previous: dict) -> dict:
+    episodes = []
+    for show, host, feed, fallback in PODCASTS:
+        try:
+            root = ET.fromstring(fetch_text(feed))
+            item = root.find(".//item")
+            if item is None: continue
+            link = (item.findtext("link") or fallback).strip()
+            published = item.findtext("pubDate") or ""
+            try: published = parsedate_to_datetime(published).astimezone(timezone.utc).isoformat()
+            except (TypeError, ValueError): pass
+            episodes.append({"show": show, "host": host, "title": clean_markup(item.findtext("title") or "Latest episode"), "summary": clean_markup(item.findtext("description") or "")[:280], "url": link, "publishedAt": published})
+        except Exception as exc:
+            print(f"warning: podcast {show} unavailable: {exc}", file=sys.stderr)
+    return {"updatedAt": datetime.now(timezone.utc).isoformat(), "episodes": episodes} if episodes else previous.get("podcasts", {"updatedAt": None, "episodes": []})
+
+
+def load_videos(standings: list[dict], previous: dict) -> dict:
+    videos = []
+    atom = {"a":"http://www.w3.org/2005/Atom", "yt":"http://www.youtube.com/xml/schemas/2015", "media":"http://search.yahoo.com/mrss/"}
+    hockey_terms = re.compile(r"\b(nhl|hockey|stanley cup|free agency|trade|draft|goalie|skater)\b", re.I)
+    for channel, channel_id in VIDEO_CHANNELS:
+        try:
+            root = ET.fromstring(fetch_text(f"https://www.youtube.com/feeds/videos.xml?channel_id={channel_id}"))
+            for entry in root.findall("a:entry", atom):
+                title = clean_markup(entry.findtext("a:title", default="", namespaces=atom))
+                haystack = title.casefold()
+                tagged = []
+                for team in standings:
+                    nickname = TEAM_NICKNAMES.get(team["team"], team["name"].split()[-1]).casefold()
+                    if team["name"].casefold() in haystack or re.search(rf"\b{re.escape(nickname)}\b", haystack): tagged.append(team["team"])
+                if channel != "NHL" and not hockey_terms.search(title) and not tagged: continue
+                video_id = entry.findtext("yt:videoId", default="", namespaces=atom)
+                thumb = entry.find("media:group/media:thumbnail", atom)
+                videos.append({"channel":channel, "title":title, "url":f"https://www.youtube.com/watch?v={video_id}", "thumbnail":thumb.get("url", "") if thumb is not None else "", "publishedAt":entry.findtext("a:published", default="", namespaces=atom), "teams":tagged})
+        except Exception as exc:
+            print(f"warning: YouTube channel {channel} unavailable: {exc}", file=sys.stderr)
+    videos.sort(key=lambda x: x.get("publishedAt", ""), reverse=True)
+    return {"updatedAt": datetime.now(timezone.utc).isoformat(), "videos": videos[:18]} if videos else previous.get("videos", {"updatedAt": None, "videos": []})
 
 
 def fetch_csv(url: str, attempts: int = 4) -> list[dict]:
@@ -629,6 +751,9 @@ def main() -> None:
     daily = load_daily()
     rosters = load_rosters([r["team"] for r in standings])
     players = enrich_players(players, rosters)
+    news = load_official_news(standings, rosters, previous)
+    podcasts = load_podcasts(previous)
+    videos = load_videos(standings, previous)
     try:
         moneypuck = load_moneypuck()
     except Exception as exc:
@@ -639,7 +764,7 @@ def main() -> None:
     payload = {
         "meta": {"version": VERSION, "season": SEASON, "seasonMode": CONFIG.get("seasonMode", "manual"), "seasonDecision": rollover_reason, "trackedTeams": TRACKED, "updatedAt": datetime.now(timezone.utc).isoformat(), "elapsedSeconds": round(time.time()-started, 1), "scheduleGames": len(schedules)},
         "standings": standings, "games": rows, "teams": team_summaries(rows, league_teams), "players": players, "gameCentre": game_centres,
-        "daily": daily, "rosters": rosters, "rosterChanges": roster_changes(previous_same_season, rosters),
+        "daily": daily, "rosters": rosters, "rosterChanges": roster_changes(previous_same_season, rosters), "news": news, "podcasts": podcasts, "videos": videos,
         "divisionHistory": division_histories(schedules, standings), "moneypuck": moneypuck,
         "naturalStatTrick": natural_stat_trick,
         "sources": {
