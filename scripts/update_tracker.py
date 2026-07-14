@@ -23,7 +23,7 @@ from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
 CONFIG = json.loads((ROOT / "config.json").read_text())
-VERSION = "5.27.2"
+VERSION = "5.28.0"
 SEASON = str(CONFIG["season"])
 TRACKED = [str(t).upper() for t in CONFIG["teams"]]
 API = "https://api-web.nhle.com/v1"
@@ -246,8 +246,14 @@ def fetch_csv(url: str, attempts: int = 4) -> list[dict]:
         try:
             request = urllib.request.Request(url, headers={"User-Agent": "NHL-Tracker/3.0"})
             with urllib.request.urlopen(request, timeout=45) as response:
-                return list(csv.DictReader(io.StringIO(response.read().decode("utf-8-sig"))))
-        except (urllib.error.URLError, TimeoutError, UnicodeDecodeError, csv.Error) as exc:
+                text = response.read().decode("utf-8-sig")
+                if text.lstrip().lower().startswith(("<!doctype html", "<html")):
+                    raise ValueError("download returned an HTML page rather than CSV data")
+                rows = list(csv.DictReader(io.StringIO(text)))
+                if not rows or len(rows[0]) < 2:
+                    raise ValueError("download did not contain a usable CSV table")
+                return rows
+        except (urllib.error.URLError, TimeoutError, UnicodeDecodeError, csv.Error, ValueError) as exc:
             last_error = exc; time.sleep(min(8, 2 ** attempt))
     raise RuntimeError(f"Unable to fetch {url}: {last_error}")
 
@@ -261,7 +267,57 @@ def mp_value(row: dict, *names, default=""):
     return default
 
 
-def load_moneypuck() -> dict:
+def load_moneypuck_team_games(previous: list[dict] | None = None) -> list[dict]:
+    """Load the explicitly published team game-by-game files without scraping pages."""
+    aliases = {"L.A": "LAK", "N.J": "NJD", "S.J": "SJS", "T.B": "TBL"}
+    normalise_team = lambda value: aliases.get(str(value).upper(), str(value).upper())
+
+    def one_team(team: str) -> list[dict]:
+        url = f"https://moneypuck.com/moneypuck/playerData/teamGameByGame/{MP_SEASON}/regular/{team}.csv"
+        raw = fetch_csv(url, attempts=1)
+        if "gameId" not in raw[0]:
+            raise ValueError(f"{team} game file has no gameId column")
+        games = {}
+        for row in raw:
+            if str(row.get("situation", "all")).lower() not in {"all", "all situations"}:
+                continue
+            game_id = str(row.get("gameId", "")).split(".")[0]
+            if not game_id:
+                continue
+            code = normalise_team(mp_value(row, "playerTeam", "team", "name", default=team))
+            if code != team:
+                continue
+            games[game_id] = {
+                "gameId": game_id, "team": code,
+                "opponent": normalise_team(mp_value(row, "opposingTeam")),
+                "date": str(mp_value(row, "gameDate", default="")),
+                "homeAway": str(mp_value(row, "home_or_away", "homeAway", default="")),
+                "xgf": mp_value(row, "xGoalsFor"), "xga": mp_value(row, "xGoalsAgainst"),
+                "xgPct": mp_value(row, "xGoalsPercentage"),
+                "gf": mp_value(row, "goalsFor"), "ga": mp_value(row, "goalsAgainst"),
+                "corsiPct": mp_value(row, "corsiPercentage"),
+                "fenwickPct": mp_value(row, "fenwickPercentage"),
+                "shotsFor": mp_value(row, "shotsOnGoalFor"),
+                "shotsAgainst": mp_value(row, "shotsOnGoalAgainst"),
+                "hdFor": mp_value(row, "highDangerShotsFor"),
+                "hdAgainst": mp_value(row, "highDangerShotsAgainst")
+            }
+        return list(games.values())
+
+    rows, errors = [], []
+    with ThreadPoolExecutor(max_workers=min(4, len(TRACKED))) as executor:
+        futures = {executor.submit(one_team, team): team for team in TRACKED}
+        for future in as_completed(futures):
+            try: rows.extend(future.result())
+            except Exception as exc: errors.append(f"{futures[future]}: {exc}")
+    if errors:
+        print(f"warning: MoneyPuck team game files unavailable ({'; '.join(errors)})", file=sys.stderr)
+    if not rows and previous:
+        return previous
+    return sorted(rows, key=lambda row: (row.get("date", ""), row.get("gameId", ""), row.get("team", "")))
+
+
+def load_moneypuck(previous: dict | None = None) -> dict:
     """Approved non-commercial CSV downloads. Displayed data must credit MoneyPuck.com."""
     teams_raw = fetch_csv(f"{MP_BASE}/teams.csv")
     skaters_raw = fetch_csv(f"{MP_BASE}/skaters.csv")
@@ -295,7 +351,8 @@ def load_moneypuck() -> dict:
         "gf":mp_value(r,"goalsFor"),"ga":mp_value(r,"goalsAgainst")}
         for r in lines_raw if str(r.get("situation", "5on5")).lower() in {"all", "all situations", "5on5", "5 on 5"}
         and float(mp_value(r,"icetime",default=0) or 0)>=300]
-    return {"credit":"Data: MoneyPuck.com","updatedAt":datetime.now(timezone.utc).isoformat(),"season":SEASON,"status":"Ready","teams":teams,"skaters":skaters,"goalies":goalies,"lines":lines,"simulations":simulations}
+    team_games = load_moneypuck_team_games((previous or {}).get("teamGames", []))
+    return {"credit":"Data: MoneyPuck.com","updatedAt":datetime.now(timezone.utc).isoformat(),"season":SEASON,"status":"Ready","teams":teams,"skaters":skaters,"goalies":goalies,"lines":lines,"simulations":simulations,"teamGames":team_games}
 
 
 def load_natural_stat_trick(standings: list[dict]) -> dict:
@@ -844,6 +901,7 @@ def main() -> None:
     if OUTPUT.exists():
         try: previous = json.loads(OUTPUT.read_text())
         except json.JSONDecodeError: pass
+    previous_same_season = previous if previous.get("meta", {}).get("season") == SEASON else {}
     standings = load_standings(previous)
     schedules = load_schedules([r["team"] for r in standings])
     league_teams = [r["team"] for r in standings]
@@ -858,12 +916,11 @@ def main() -> None:
     podcasts = load_podcasts(previous)
     videos = load_videos(standings, previous)
     try:
-        moneypuck = load_moneypuck()
+        moneypuck = load_moneypuck(previous_same_season.get("moneypuck", {}))
     except Exception as exc:
         print(f"warning: MoneyPuck data unavailable: {exc}", file=sys.stderr)
-        moneypuck = {"credit":"Data: MoneyPuck.com","season":SEASON,"updatedAt":None,"status":"Awaiting new-season data","teams":[],"skaters":[],"goalies":[],"lines":[],"simulations":[]}
+        moneypuck = previous_same_season.get("moneypuck") or {"credit":"Data: MoneyPuck.com","season":SEASON,"updatedAt":None,"status":"Awaiting new-season data","teams":[],"skaters":[],"goalies":[],"lines":[],"simulations":[],"teamGames":[]}
     natural_stat_trick = load_natural_stat_trick(standings)
-    previous_same_season = previous if previous.get("meta", {}).get("season") == SEASON else {}
     changes = roster_changes(previous_same_season, rosters)
     change_history = roster_change_history(previous_same_season, changes)
     history = daily_history(previous_same_season, standings, moneypuck)
