@@ -1,0 +1,1234 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//NHL Tracker//Team Calendar//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+X-WR-CALNAME:Pittsburgh Penguins - NHL Tracker
+X-WR-TIMEZONE:Europe/London
+X-APPLE-CALENDAR-COLOR:#CFC493
+COLOR:#CFC493
+REFRESH-INTERVAL;VALUE=DURATION:PT6H
+X-PUBLISHED-TTL:PT6H
+BEGIN:VEVENT
+UID:nhl-2025010015@mooneyaoife.github.io
+DTSTAMP:20260714T181701Z
+DTSTART:20250922T230000Z
+DTEND:20250923T020000Z
+SUMMARY:Final: Pittsburgh Penguins 1 - 2 Montréal Canadiens
+DESCRIPTION:Preseason. Times display in your calendar's local time. Open 
+ the NHL Tracker Game Centre for scores\, analytics and game details.
+LOCATION:Centre Bell
+URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2025010015#
+ games
+END:VEVENT
+BEGIN:VEVENT
+UID:nhl-2025010032@mooneyaoife.github.io
+DTSTAMP:20260714T181701Z
+DTSTART:20250924T230000Z
+DTEND:20250925T020000Z
+SUMMARY:Final: Pittsburgh Penguins 1 - 4 Columbus Blue Jackets
+DESCRIPTION:Preseason. Times display in your calendar's local time. Open 
+ the NHL Tracker Game Centre for scores\, analytics and game details.
+LOCATION:Nationwide Arena
+URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2025010032#
+ games
+END:VEVENT
+BEGIN:VEVENT
+UID:nhl-2025010041@mooneyaoife.github.io
+DTSTAMP:20260714T181701Z
+DTSTART:20250926T230000Z
+DTEND:20250927T020000Z
+SUMMARY:Final: Detroit Red Wings 2 - 3 Pittsburgh Penguins
+DESCRIPTION:Preseason. Times display in your calendar's local time. Open 
+ the NHL Tracker Game Centre for scores\, analytics and game details.
+LOCATION:PPG Paints Arena
+URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2025010041#
+ games
+END:VEVENT
+BEGIN:VEVENT
+UID:nhl-2025010050@mooneyaoife.github.io
+DTSTAMP:20260714T181701Z
+DTSTART:20250927T230000Z
+DTEND:20250928T020000Z
+SUMMARY:Final: Columbus Blue Jackets 1 - 4 Pittsburgh Penguins
+DESCRIPTION:Preseason. Times display in your calendar's local time. Open 
+ the NHL Tracker Game Centre for scores\, analytics and game details.
+LOCATION:PPG Paints Arena
+URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2025010050#
+ games
+END:VEVENT
+BEGIN:VEVENT
+UID:nhl-2025010064@mooneyaoife.github.io
+DTSTAMP:20260714T181701Z
+DTSTART:20250929T230000Z
+DTEND:20250930T020000Z
+SUMMARY:Final: Pittsburgh Penguins 2 - 1 Detroit Red Wings
+DESCRIPTION:Preseason. Times display in your calendar's local time. Open 
+ the NHL Tracker Game Centre for scores\, analytics and game details.
+LOCATION:Little Caesars Arena
+URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2025010064#
+ games
+END:VEVENT
+BEGIN:VEVENT
+UID:nhl-2025010076@mooneyaoife.github.io
+DTSTAMP:20260714T181701Z
+DTSTART:20251001T230000Z
+DTEND:20251002T020000Z
+SUMMARY:Final: Pittsburgh Penguins 5 - 3 Buffalo Sabres
+DESCRIPTION:Preseason. Times display in your calendar's local time. Open 
+ the NHL Tracker Game Centre for scores\, analytics and game details.
+LOCATION:KeyBank Center
+URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2025010076#
+ games
+END:VEVENT
+BEGIN:VEVENT
+UID:nhl-2025010085@mooneyaoife.github.io
+DTSTAMP:20260714T181701Z
+DTSTART:20251003T230000Z
+DTEND:20251004T020000Z
+SUMMARY:Final: Buffalo Sabres 4 - 5 Pittsburgh Penguins
+DESCRIPTION:Preseason. Times display in your calendar's local time. Open 
+ the NHL Tracker Game Centre for scores\, analytics and game details.
+LOCATION:PPG Paints Arena
+URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2025010085#
+ games
+END:VEVENT
+BEGIN:VEVENT
+UID:nhl-2025020002@mooneyaoife.github.io
+DTSTAMP:20260714T181701Z
+DTSTART:20251008T000000Z
+DTEND:20251008T030000Z
+SUMMARY:Final: Pittsburgh Penguins 3 - 0 New York Rangers
+DESCRIPTION:Regular season. Times display in your calendar's local time. 
+ Open the NHL Tracker Game Centre for scores\, analytics and game details
+ .
+LOCATION:Madison Square Garden
+URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2025020002#
+ games
+END:VEVENT
+BEGIN:VEVENT
+UID:nhl-2025020013@mooneyaoife.github.io
+DTSTAMP:20260714T181701Z
+DTSTART:20251009T230000Z
+DTEND:20251010T020000Z
+SUMMARY:Final: New York Islanders 3 - 4 Pittsburgh Penguins
+DESCRIPTION:Regular season. Times display in your calendar's local time. 
+ Open the NHL Tracker Game Centre for scores\, analytics and game details
+ .
+LOCATION:PPG Paints Arena
+URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2025020013#
+ games
+END:VEVENT
+BEGIN:VEVENT
+UID:nhl-2025020029@mooneyaoife.github.io
+DTSTAMP:20260714T181701Z
+DTSTART:20251011T230000Z
+DTEND:20251012T020000Z
+SUMMARY:Final: New York Rangers 6 - 1 Pittsburgh Penguins
+DESCRIPTION:Regular season. Times display in your calendar's local time. 
+ Open the NHL Tracker Game Centre for scores\, analytics and game details
+ .
+LOCATION:PPG Paints Arena
+URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2025020029#
+ games
+END:VEVENT
+BEGIN:VEVENT
+UID:nhl-2025020056@mooneyaoife.github.io
+DTSTAMP:20260714T181701Z
+DTSTART:20251015T023000Z
+DTEND:20251015T053000Z
+SUMMARY:Final: Pittsburgh Penguins 3 - 4 Anaheim Ducks
+DESCRIPTION:Regular season. Times display in your calendar's local time. 
+ Open the NHL Tracker Game Centre for scores\, analytics and game details
+ .
+LOCATION:Honda Center
+URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2025020056#
+ games
+END:VEVENT
+BEGIN:VEVENT
+UID:nhl-2025020071@mooneyaoife.github.io
+DTSTAMP:20260714T181701Z
+DTSTART:20251017T020000Z
+DTEND:20251017T050000Z
+SUMMARY:Final: Pittsburgh Penguins 4 - 2 Los Angeles Kings
+DESCRIPTION:Regular season. Times display in your calendar's local time. 
+ Open the NHL Tracker Game Centre for scores\, analytics and game details
+ .
+LOCATION:Crypto.com Arena
+URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2025020071#
+ games
+END:VEVENT
+BEGIN:VEVENT
+UID:nhl-2025020088@mooneyaoife.github.io
+DTSTAMP:20260714T181701Z
+DTSTART:20251019T020000Z
+DTEND:20251019T050000Z
+SUMMARY:Final: Pittsburgh Penguins 3 - 0 San Jose Sharks
+DESCRIPTION:Regular season. Times display in your calendar's local time. 
+ Open the NHL Tracker Game Centre for scores\, analytics and game details
+ .
+LOCATION:SAP Center at San Jose
+URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2025020088#
+ games
+END:VEVENT
+BEGIN:VEVENT
+UID:nhl-2025020101@mooneyaoife.github.io
+DTSTAMP:20260714T181701Z
+DTSTART:20251021T230000Z
+DTEND:20251022T020000Z
+SUMMARY:Final: Vancouver Canucks 1 - 5 Pittsburgh Penguins
+DESCRIPTION:Regular season. Times display in your calendar's local time. 
+ Open the NHL Tracker Game Centre for scores\, analytics and game details
+ .
+LOCATION:PPG Paints Arena
+URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2025020101#
+ games
+END:VEVENT
+BEGIN:VEVENT
+UID:nhl-2025020114@mooneyaoife.github.io
+DTSTAMP:20260714T181701Z
+DTSTART:20251023T230000Z
+DTEND:20251024T020000Z
+SUMMARY:Final: Pittsburgh Penguins 5 - 3 Florida Panthers
+DESCRIPTION:Regular season. Times display in your calendar's local time. 
+ Open the NHL Tracker Game Centre for scores\, analytics and game details
+ .
+LOCATION:Amerant Bank Arena
+URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2025020114#
+ games
+END:VEVENT
+BEGIN:VEVENT
+UID:nhl-2025020134@mooneyaoife.github.io
+DTSTAMP:20260714T181701Z
+DTSTART:20251025T230000Z
+DTEND:20251026T020000Z
+SUMMARY:Final: Columbus Blue Jackets 5 - 4 Pittsburgh Penguins
+DESCRIPTION:Regular season. Times display in your calendar's local time. 
+ Open the NHL Tracker Game Centre for scores\, analytics and game details
+ .
+LOCATION:PPG Paints Arena
+URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2025020134#
+ games
+END:VEVENT
+BEGIN:VEVENT
+UID:nhl-2025020148@mooneyaoife.github.io
+DTSTAMP:20260714T181701Z
+DTSTART:20251027T230000Z
+DTEND:20251028T020000Z
+SUMMARY:Final: St. Louis Blues 3 - 6 Pittsburgh Penguins
+DESCRIPTION:Regular season. Times display in your calendar's local time. 
+ Open the NHL Tracker Game Centre for scores\, analytics and game details
+ .
+LOCATION:PPG Paints Arena
+URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2025020148#
+ games
+END:VEVENT
+BEGIN:VEVENT
+UID:nhl-2025020150@mooneyaoife.github.io
+DTSTAMP:20260714T181701Z
+DTSTART:20251028T220000Z
+DTEND:20251029T010000Z
+SUMMARY:Final: Pittsburgh Penguins 2 - 3 Philadelphia Flyers
+DESCRIPTION:Regular season. Times display in your calendar's local time. 
+ Open the NHL Tracker Game Centre for scores\, analytics and game details
+ .
+LOCATION:Xfinity Mobile Arena
+URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2025020150#
+ games
+END:VEVENT
+BEGIN:VEVENT
+UID:nhl-2025020173@mooneyaoife.github.io
+DTSTAMP:20260714T181701Z
+DTSTART:20251031T000000Z
+DTEND:20251031T030000Z
+SUMMARY:Final: Pittsburgh Penguins 4 - 1 Minnesota Wild
+DESCRIPTION:Regular season. Times display in your calendar's local time. 
+ Open the NHL Tracker Game Centre for scores\, analytics and game details
+ .
+LOCATION:Grand Casino Arena
+URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2025020173#
+ games
+END:VEVENT
+BEGIN:VEVENT
+UID:nhl-2025020182@mooneyaoife.github.io
+DTSTAMP:20260714T181701Z
+DTSTART:20251101T190000Z
+DTEND:20251101T220000Z
+SUMMARY:Final: Pittsburgh Penguins 2 - 5 Winnipeg Jets
+DESCRIPTION:Regular season. Times display in your calendar's local time. 
+ Open the NHL Tracker Game Centre for scores\, analytics and game details
+ .
+LOCATION:Canada Life Centre
+URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2025020182#
+ games
+END:VEVENT
+BEGIN:VEVENT
+UID:nhl-2025020199@mooneyaoife.github.io
+DTSTAMP:20260714T181701Z
+DTSTART:20251104T003000Z
+DTEND:20251104T033000Z
+SUMMARY:Final: Pittsburgh Penguins 3 - 4 Toronto Maple Leafs
+DESCRIPTION:Regular season. Times display in your calendar's local time. 
+ Open the NHL Tracker Game Centre for scores\, analytics and game details
+ .
+LOCATION:Scotiabank Arena
+URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2025020199#
+ games
+END:VEVENT
+BEGIN:VEVENT
+UID:nhl-2025020221@mooneyaoife.github.io
+DTSTAMP:20260714T181701Z
+DTSTART:20251107T003000Z
+DTEND:20251107T033000Z
+SUMMARY:Final: Washington Capitals 3 - 5 Pittsburgh Penguins
+DESCRIPTION:Regular season. Times display in your calendar's local time. 
+ Open the NHL Tracker Game Centre for scores\, analytics and game details
+ .
+LOCATION:PPG Paints Arena
+URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2025020221#
+ games
+END:VEVENT
+BEGIN:VEVENT
+UID:nhl-2025020231@mooneyaoife.github.io
+DTSTAMP:20260714T181701Z
+DTSTART:20251108T173000Z
+DTEND:20251108T203000Z
+SUMMARY:Final: Pittsburgh Penguins 1 - 2 New Jersey Devils
+DESCRIPTION:Regular season. Times display in your calendar's local time. 
+ Open the NHL Tracker Game Centre for scores\, analytics and game details
+ .
+LOCATION:Prudential Center
+URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2025020231#
+ games
+END:VEVENT
+BEGIN:VEVENT
+UID:nhl-2025020245@mooneyaoife.github.io
+DTSTAMP:20260714T181701Z
+DTSTART:20251109T190000Z
+DTEND:20251109T220000Z
+SUMMARY:Final: Los Angeles Kings 3 - 2 Pittsburgh Penguins
+DESCRIPTION:Regular season. Times display in your calendar's local time. 
+ Open the NHL Tracker Game Centre for scores\, analytics and game details
+ .
+LOCATION:PPG Paints Arena
+URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2025020245#
+ games
+END:VEVENT
+BEGIN:VEVENT
+UID:nhl-2025020281@mooneyaoife.github.io
+DTSTAMP:20260714T181701Z
+DTSTART:20251114T190000Z
+DTEND:20251114T220000Z
+SUMMARY:Final: Pittsburgh Penguins 1 - 2 Nashville Predators
+DESCRIPTION:Regular season. Times display in your calendar's local time. 
+ Open the NHL Tracker Game Centre for scores\, analytics and game details
+ .
+LOCATION:Avicii Arena
+URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2025020281#
+ games
+END:VEVENT
+BEGIN:VEVENT
+UID:nhl-2025020296@mooneyaoife.github.io
+DTSTAMP:20260714T181701Z
+DTSTART:20251116T140000Z
+DTEND:20251116T170000Z
+SUMMARY:Final: Nashville Predators 0 - 4 Pittsburgh Penguins
+DESCRIPTION:Regular season. Times display in your calendar's local time. 
+ Open the NHL Tracker Game Centre for scores\, analytics and game details
+ .
+LOCATION:Avicii Arena
+URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2025020296#
+ games
+END:VEVENT
+BEGIN:VEVENT
+UID:nhl-2025020332@mooneyaoife.github.io
+DTSTAMP:20260714T181701Z
+DTSTART:20251122T000000Z
+DTEND:20251122T030000Z
+SUMMARY:Final: Minnesota Wild 5 - 0 Pittsburgh Penguins
+DESCRIPTION:Regular season. Times display in your calendar's local time. 
+ Open the NHL Tracker Game Centre for scores\, analytics and game details
+ .
+LOCATION:PPG Paints Arena
+URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2025020332#
+ games
+END:VEVENT
+BEGIN:VEVENT
+UID:nhl-2025020340@mooneyaoife.github.io
+DTSTAMP:20260714T181701Z
+DTSTART:20251123T000000Z
+DTEND:20251123T030000Z
+SUMMARY:Final: Seattle Kraken 3 - 2 Pittsburgh Penguins
+DESCRIPTION:Regular season. Times display in your calendar's local time. 
+ Open the NHL Tracker Game Centre for scores\, analytics and game details
+ .
+LOCATION:PPG Paints Arena
+URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2025020340#
+ games
+END:VEVENT
+BEGIN:VEVENT
+UID:nhl-2025020366@mooneyaoife.github.io
+DTSTAMP:20260714T181701Z
+DTSTART:20251127T000000Z
+DTEND:20251127T030000Z
+SUMMARY:Final: Buffalo Sabres 2 - 4 Pittsburgh Penguins
+DESCRIPTION:Regular season. Times display in your calendar's local time. 
+ Open the NHL Tracker Game Centre for scores\, analytics and game details
+ .
+LOCATION:PPG Paints Arena
+URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2025020366#
+ games
+END:VEVENT
+BEGIN:VEVENT
+UID:nhl-2025020388@mooneyaoife.github.io
+DTSTAMP:20260714T181701Z
+DTSTART:20251129T000000Z
+DTEND:20251129T030000Z
+SUMMARY:Final: Pittsburgh Penguins 4 - 3 Columbus Blue Jackets
+DESCRIPTION:Regular season. Times display in your calendar's local time. 
+ Open the NHL Tracker Game Centre for scores\, analytics and game details
+ .
+LOCATION:Nationwide Arena
+URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2025020388#
+ games
+END:VEVENT
+BEGIN:VEVENT
+UID:nhl-2025020396@mooneyaoife.github.io
+DTSTAMP:20260714T181701Z
+DTSTART:20251130T000000Z
+DTEND:20251130T030000Z
+SUMMARY:Final: Toronto Maple Leafs 7 - 2 Pittsburgh Penguins
+DESCRIPTION:Regular season. Times display in your calendar's local time. 
+ Open the NHL Tracker Game Centre for scores\, analytics and game details
+ .
+LOCATION:PPG Paints Arena
+URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2025020396#
+ games
+END:VEVENT
+BEGIN:VEVENT
+UID:nhl-2025020407@mooneyaoife.github.io
+DTSTAMP:20260714T181701Z
+DTSTART:20251202T000000Z
+DTEND:20251202T030000Z
+SUMMARY:Final: Pittsburgh Penguins 5 - 1 Philadelphia Flyers
+DESCRIPTION:Regular season. Times display in your calendar's local time. 
+ Open the NHL Tracker Game Centre for scores\, analytics and game details
+ .
+LOCATION:Xfinity Mobile Arena
+URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2025020407#
+ games
+END:VEVENT
+BEGIN:VEVENT
+UID:nhl-2025020428@mooneyaoife.github.io
+DTSTAMP:20260714T181701Z
+DTSTART:20251205T000000Z
+DTEND:20251205T030000Z
+SUMMARY:Final: Pittsburgh Penguins 4 - 3 Tampa Bay Lightning
+DESCRIPTION:Regular season. Times display in your calendar's local time. 
+ Open the NHL Tracker Game Centre for scores\, analytics and game details
+ .
+LOCATION:Benchmark International Arena
+URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2025020428#
+ games
+END:VEVENT
+BEGIN:VEVENT
+UID:nhl-2025020456@mooneyaoife.github.io
+DTSTAMP:20260714T181701Z
+DTSTART:20251207T230000Z
+DTEND:20251208T020000Z
+SUMMARY:Final: Pittsburgh Penguins 2 - 3 Dallas Stars
+DESCRIPTION:Regular season. Times display in your calendar's local time. 
+ Open the NHL Tracker Game Centre for scores\, analytics and game details
+ .
+LOCATION:American Airlines Center
+URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2025020456#
+ games
+END:VEVENT
+BEGIN:VEVENT
+UID:nhl-2025020470@mooneyaoife.github.io
+DTSTAMP:20260714T181701Z
+DTSTART:20251210T000000Z
+DTEND:20251210T030000Z
+SUMMARY:Final: Anaheim Ducks 4 - 3 Pittsburgh Penguins
+DESCRIPTION:Regular season. Times display in your calendar's local time. 
+ Open the NHL Tracker Game Centre for scores\, analytics and game details
+ .
+LOCATION:PPG Paints Arena
+URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2025020470#
+ games
+END:VEVENT
+BEGIN:VEVENT
+UID:nhl-2025020484@mooneyaoife.github.io
+DTSTAMP:20260714T181701Z
+DTSTART:20251212T000000Z
+DTEND:20251212T030000Z
+SUMMARY:Final: Montréal Canadiens 4 - 2 Pittsburgh Penguins
+DESCRIPTION:Regular season. Times display in your calendar's local time. 
+ Open the NHL Tracker Game Centre for scores\, analytics and game details
+ .
+LOCATION:PPG Paints Arena
+URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2025020484#
+ games
+END:VEVENT
+BEGIN:VEVENT
+UID:nhl-2025020497@mooneyaoife.github.io
+DTSTAMP:20260714T181701Z
+DTSTART:20251213T200000Z
+DTEND:20251213T230000Z
+SUMMARY:Final: San Jose Sharks 6 - 5 Pittsburgh Penguins
+DESCRIPTION:Regular season. Times display in your calendar's local time. 
+ Open the NHL Tracker Game Centre for scores\, analytics and game details
+ .
+LOCATION:PPG Paints Arena
+URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2025020497#
+ games
+END:VEVENT
+BEGIN:VEVENT
+UID:nhl-2025020509@mooneyaoife.github.io
+DTSTAMP:20260714T181701Z
+DTSTART:20251214T200000Z
+DTEND:20251214T230000Z
+SUMMARY:Final: Utah Mammoth 5 - 4 Pittsburgh Penguins
+DESCRIPTION:Regular season. Times display in your calendar's local time. 
+ Open the NHL Tracker Game Centre for scores\, analytics and game details
+ .
+LOCATION:PPG Paints Arena
+URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2025020509#
+ games
+END:VEVENT
+BEGIN:VEVENT
+UID:nhl-2025020524@mooneyaoife.github.io
+DTSTAMP:20260714T181701Z
+DTSTART:20251217T003000Z
+DTEND:20251217T033000Z
+SUMMARY:Final: Edmonton Oilers 6 - 4 Pittsburgh Penguins
+DESCRIPTION:Regular season. Times display in your calendar's local time. 
+ Open the NHL Tracker Game Centre for scores\, analytics and game details
+ .
+LOCATION:PPG Paints Arena
+URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2025020524#
+ games
+END:VEVENT
+BEGIN:VEVENT
+UID:nhl-2025020537@mooneyaoife.github.io
+DTSTAMP:20260714T181701Z
+DTSTART:20251219T000000Z
+DTEND:20251219T030000Z
+SUMMARY:Final: Pittsburgh Penguins 0 - 4 Ottawa Senators
+DESCRIPTION:Regular season. Times display in your calendar's local time. 
+ Open the NHL Tracker Game Centre for scores\, analytics and game details
+ .
+LOCATION:Canadian Tire Centre
+URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2025020537#
+ games
+END:VEVENT
+BEGIN:VEVENT
+UID:nhl-2025020556@mooneyaoife.github.io
+DTSTAMP:20260714T181701Z
+DTSTART:20251221T000000Z
+DTEND:20251221T030000Z
+SUMMARY:Final: Pittsburgh Penguins 0 - 4 Montréal Canadiens
+DESCRIPTION:Regular season. Times display in your calendar's local time. 
+ Open the NHL Tracker Game Centre for scores\, analytics and game details
+ .
+LOCATION:Centre Bell
+URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2025020556#
+ games
+END:VEVENT
+BEGIN:VEVENT
+UID:nhl-2025020566@mooneyaoife.github.io
+DTSTAMP:20260714T181701Z
+DTSTART:20251222T000000Z
+DTEND:20251222T030000Z
+SUMMARY:Final: Montréal Canadiens 3 - 4 Pittsburgh Penguins
+DESCRIPTION:Regular season. Times display in your calendar's local time. 
+ Open the NHL Tracker Game Centre for scores\, analytics and game details
+ .
+LOCATION:PPG Paints Arena
+URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2025020566#
+ games
+END:VEVENT
+BEGIN:VEVENT
+UID:nhl-2025020575@mooneyaoife.github.io
+DTSTAMP:20260714T181701Z
+DTSTART:20251223T210000Z
+DTEND:20251224T000000Z
+SUMMARY:Final: Pittsburgh Penguins 3 - 6 Toronto Maple Leafs
+DESCRIPTION:Regular season. Times display in your calendar's local time. 
+ Open the NHL Tracker Game Centre for scores\, analytics and game details
+ .
+LOCATION:Scotiabank Arena
+URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2025020575#
+ games
+END:VEVENT
+BEGIN:VEVENT
+UID:nhl-2025020604@mooneyaoife.github.io
+DTSTAMP:20260714T181701Z
+DTSTART:20251229T000000Z
+DTEND:20251229T030000Z
+SUMMARY:Final: Pittsburgh Penguins 7 - 3 Chicago Blackhawks
+DESCRIPTION:Regular season. Times display in your calendar's local time. 
+ Open the NHL Tracker Game Centre for scores\, analytics and game details
+ .
+LOCATION:United Center
+URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2025020604#
+ games
+END:VEVENT
+BEGIN:VEVENT
+UID:nhl-2025020619@mooneyaoife.github.io
+DTSTAMP:20260714T181701Z
+DTSTART:20251231T000000Z
+DTEND:20251231T030000Z
+SUMMARY:Final: Carolina Hurricanes 1 - 5 Pittsburgh Penguins
+DESCRIPTION:Regular season. Times display in your calendar's local time. 
+ Open the NHL Tracker Game Centre for scores\, analytics and game details
+ .
+LOCATION:PPG Paints Arena
+URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2025020619#
+ games
+END:VEVENT
+BEGIN:VEVENT
+UID:nhl-2025020635@mooneyaoife.github.io
+DTSTAMP:20260714T181701Z
+DTSTART:20260102T000000Z
+DTEND:20260102T030000Z
+SUMMARY:Final: Detroit Red Wings 3 - 4 Pittsburgh Penguins
+DESCRIPTION:Regular season. Times display in your calendar's local time. 
+ Open the NHL Tracker Game Centre for scores\, analytics and game details
+ .
+LOCATION:PPG Paints Arena
+URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2025020635#
+ games
+END:VEVENT
+BEGIN:VEVENT
+UID:nhl-2025020644@mooneyaoife.github.io
+DTSTAMP:20260714T181701Z
+DTSTART:20260103T170000Z
+DTEND:20260103T200000Z
+SUMMARY:Final: Pittsburgh Penguins 4 - 1 Detroit Red Wings
+DESCRIPTION:Regular season. Times display in your calendar's local time. 
+ Open the NHL Tracker Game Centre for scores\, analytics and game details
+ .
+LOCATION:Little Caesars Arena
+URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2025020644#
+ games
+END:VEVENT
+BEGIN:VEVENT
+UID:nhl-2025020658@mooneyaoife.github.io
+DTSTAMP:20260714T181701Z
+DTSTART:20260104T200000Z
+DTEND:20260104T230000Z
+SUMMARY:Final: Pittsburgh Penguins 5 - 4 Columbus Blue Jackets
+DESCRIPTION:Regular season. Times display in your calendar's local time. 
+ Open the NHL Tracker Game Centre for scores\, analytics and game details
+ .
+LOCATION:Nationwide Arena
+URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2025020658#
+ games
+END:VEVENT
+BEGIN:VEVENT
+UID:nhl-2025020687@mooneyaoife.github.io
+DTSTAMP:20260714T181701Z
+DTSTART:20260109T000000Z
+DTEND:20260109T030000Z
+SUMMARY:Final: New Jersey Devils 1 - 4 Pittsburgh Penguins
+DESCRIPTION:Regular season. Times display in your calendar's local time. 
+ Open the NHL Tracker Game Centre for scores\, analytics and game details
+ .
+LOCATION:PPG Paints Arena
+URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2025020687#
+ games
+END:VEVENT
+BEGIN:VEVENT
+UID:nhl-2025020698@mooneyaoife.github.io
+DTSTAMP:20260714T181701Z
+DTSTART:20260110T203000Z
+DTEND:20260110T233000Z
+SUMMARY:Final: Calgary Flames 2 - 1 Pittsburgh Penguins
+DESCRIPTION:Regular season. Times display in your calendar's local time. 
+ Open the NHL Tracker Game Centre for scores\, analytics and game details
+ .
+LOCATION:PPG Paints Arena
+URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2025020698#
+ games
+END:VEVENT
+BEGIN:VEVENT
+UID:nhl-2025020712@mooneyaoife.github.io
+DTSTAMP:20260714T181701Z
+DTSTART:20260111T220000Z
+DTEND:20260112T010000Z
+SUMMARY:Final: Pittsburgh Penguins 0 - 1 Boston Bruins
+DESCRIPTION:Regular season. Times display in your calendar's local time. 
+ Open the NHL Tracker Game Centre for scores\, analytics and game details
+ .
+LOCATION:TD Garden
+URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2025020712#
+ games
+END:VEVENT
+BEGIN:VEVENT
+UID:nhl-2025020726@mooneyaoife.github.io
+DTSTAMP:20260714T181701Z
+DTSTART:20260114T000000Z
+DTEND:20260114T030000Z
+SUMMARY:Final: Tampa Bay Lightning 2 - 1 Pittsburgh Penguins
+DESCRIPTION:Regular season. Times display in your calendar's local time. 
+ Open the NHL Tracker Game Centre for scores\, analytics and game details
+ .
+LOCATION:PPG Paints Arena
+URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2025020726#
+ games
+END:VEVENT
+BEGIN:VEVENT
+UID:nhl-2025020741@mooneyaoife.github.io
+DTSTAMP:20260714T181701Z
+DTSTART:20260116T000000Z
+DTEND:20260116T030000Z
+SUMMARY:Final: Philadelphia Flyers 3 - 6 Pittsburgh Penguins
+DESCRIPTION:Regular season. Times display in your calendar's local time. 
+ Open the NHL Tracker Game Centre for scores\, analytics and game details
+ .
+LOCATION:PPG Paints Arena
+URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2025020741#
+ games
+END:VEVENT
+BEGIN:VEVENT
+UID:nhl-2025020760@mooneyaoife.github.io
+DTSTAMP:20260714T181701Z
+DTSTART:20260118T000000Z
+DTEND:20260118T030000Z
+SUMMARY:Final: Columbus Blue Jackets 4 - 3 Pittsburgh Penguins
+DESCRIPTION:Regular season. Times display in your calendar's local time. 
+ Open the NHL Tracker Game Centre for scores\, analytics and game details
+ .
+LOCATION:PPG Paints Arena
+URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2025020760#
+ games
+END:VEVENT
+BEGIN:VEVENT
+UID:nhl-2025020772@mooneyaoife.github.io
+DTSTAMP:20260714T181701Z
+DTSTART:20260119T220000Z
+DTEND:20260120T010000Z
+SUMMARY:Final: Pittsburgh Penguins 6 - 3 Seattle Kraken
+DESCRIPTION:Regular season. Times display in your calendar's local time. 
+ Open the NHL Tracker Game Centre for scores\, analytics and game details
+ .
+LOCATION:Climate Pledge Arena
+URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2025020772#
+ games
+END:VEVENT
+BEGIN:VEVENT
+UID:nhl-2025020791@mooneyaoife.github.io
+DTSTAMP:20260714T181701Z
+DTSTART:20260122T023000Z
+DTEND:20260122T053000Z
+SUMMARY:Final: Pittsburgh Penguins 4 - 1 Calgary Flames
+DESCRIPTION:Regular season. Times display in your calendar's local time. 
+ Open the NHL Tracker Game Centre for scores\, analytics and game details
+ .
+LOCATION:Scotiabank Saddledome
+URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2025020791#
+ games
+END:VEVENT
+BEGIN:VEVENT
+UID:nhl-2025020800@mooneyaoife.github.io
+DTSTAMP:20260714T181701Z
+DTSTART:20260123T020000Z
+DTEND:20260123T050000Z
+SUMMARY:Final: Pittsburgh Penguins 6 - 2 Edmonton Oilers
+DESCRIPTION:Regular season. Times display in your calendar's local time. 
+ Open the NHL Tracker Game Centre for scores\, analytics and game details
+ .
+LOCATION:Rogers Place
+URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2025020800#
+ games
+END:VEVENT
+BEGIN:VEVENT
+UID:nhl-2025020822@mooneyaoife.github.io
+DTSTAMP:20260714T181701Z
+DTSTART:20260125T230000Z
+DTEND:20260126T020000Z
+SUMMARY:Final: Pittsburgh Penguins 3 - 2 Vancouver Canucks
+DESCRIPTION:Regular season. Times display in your calendar's local time. 
+ Open the NHL Tracker Game Centre for scores\, analytics and game details
+ .
+LOCATION:Rogers Arena
+URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2025020822#
+ games
+END:VEVENT
+BEGIN:VEVENT
+UID:nhl-2025020850@mooneyaoife.github.io
+DTSTAMP:20260714T181701Z
+DTSTART:20260130T000000Z
+DTEND:20260130T030000Z
+SUMMARY:Final: Chicago Blackhawks 2 - 6 Pittsburgh Penguins
+DESCRIPTION:Regular season. Times display in your calendar's local time. 
+ Open the NHL Tracker Game Centre for scores\, analytics and game details
+ .
+LOCATION:PPG Paints Arena
+URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2025020850#
+ games
+END:VEVENT
+BEGIN:VEVENT
+UID:nhl-2025020861@mooneyaoife.github.io
+DTSTAMP:20260714T181701Z
+DTSTART:20260131T203000Z
+DTEND:20260131T233000Z
+SUMMARY:Final: New York Rangers 5 - 6 Pittsburgh Penguins
+DESCRIPTION:Regular season. Times display in your calendar's local time. 
+ Open the NHL Tracker Game Centre for scores\, analytics and game details
+ .
+LOCATION:PPG Paints Arena
+URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2025020861#
+ games
+END:VEVENT
+BEGIN:VEVENT
+UID:nhl-2025020877@mooneyaoife.github.io
+DTSTAMP:20260714T181701Z
+DTSTART:20260203T000000Z
+DTEND:20260203T030000Z
+SUMMARY:Final: Ottawa Senators 3 - 2 Pittsburgh Penguins
+DESCRIPTION:Regular season. Times display in your calendar's local time. 
+ Open the NHL Tracker Game Centre for scores\, analytics and game details
+ .
+LOCATION:PPG Paints Arena
+URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2025020877#
+ games
+END:VEVENT
+BEGIN:VEVENT
+UID:nhl-2025020888@mooneyaoife.github.io
+DTSTAMP:20260714T181701Z
+DTSTART:20260204T003000Z
+DTEND:20260204T033000Z
+SUMMARY:Final: Pittsburgh Penguins 4 - 5 New York Islanders
+DESCRIPTION:Regular season. Times display in your calendar's local time. 
+ Open the NHL Tracker Game Centre for scores\, analytics and game details
+ .
+LOCATION:UBS Arena
+URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2025020888#
+ games
+END:VEVENT
+BEGIN:VEVENT
+UID:nhl-2025020903@mooneyaoife.github.io
+DTSTAMP:20260714T181701Z
+DTSTART:20260206T000000Z
+DTEND:20260206T030000Z
+SUMMARY:Final: Pittsburgh Penguins 5 - 2 Buffalo Sabres
+DESCRIPTION:Regular season. Times display in your calendar's local time. 
+ Open the NHL Tracker Game Centre for scores\, analytics and game details
+ .
+LOCATION:KeyBank Center
+URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2025020903#
+ games
+END:VEVENT
+BEGIN:VEVENT
+UID:nhl-2025020922@mooneyaoife.github.io
+DTSTAMP:20260714T181701Z
+DTSTART:20260227T000000Z
+DTEND:20260227T030000Z
+SUMMARY:Final: New Jersey Devils 1 - 4 Pittsburgh Penguins
+DESCRIPTION:Regular season. Times display in your calendar's local time. 
+ Open the NHL Tracker Game Centre for scores\, analytics and game details
+ .
+LOCATION:PPG Paints Arena
+URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2025020922#
+ games
+END:VEVENT
+BEGIN:VEVENT
+UID:nhl-2025020934@mooneyaoife.github.io
+DTSTAMP:20260714T181701Z
+DTSTART:20260228T173000Z
+DTEND:20260228T203000Z
+SUMMARY:Final: Pittsburgh Penguins 2 - 3 New York Rangers
+DESCRIPTION:Regular season. Times display in your calendar's local time. 
+ Open the NHL Tracker Game Centre for scores\, analytics and game details
+ .
+LOCATION:Madison Square Garden
+URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2025020934#
+ games
+END:VEVENT
+BEGIN:VEVENT
+UID:nhl-2025020947@mooneyaoife.github.io
+DTSTAMP:20260714T181701Z
+DTSTART:20260301T180000Z
+DTEND:20260301T210000Z
+SUMMARY:Final: Vegas Golden Knights 0 - 5 Pittsburgh Penguins
+DESCRIPTION:Regular season. Times display in your calendar's local time. 
+ Open the NHL Tracker Game Centre for scores\, analytics and game details
+ .
+LOCATION:PPG Paints Arena
+URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2025020947#
+ games
+END:VEVENT
+BEGIN:VEVENT
+UID:nhl-2025020959@mooneyaoife.github.io
+DTSTAMP:20260714T181701Z
+DTSTART:20260304T000000Z
+DTEND:20260304T030000Z
+SUMMARY:Final: Pittsburgh Penguins 1 - 2 Boston Bruins
+DESCRIPTION:Regular season. Times display in your calendar's local time. 
+ Open the NHL Tracker Game Centre for scores\, analytics and game details
+ .
+LOCATION:TD Garden
+URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2025020959#
+ games
+END:VEVENT
+BEGIN:VEVENT
+UID:nhl-2025020977@mooneyaoife.github.io
+DTSTAMP:20260714T181701Z
+DTSTART:20260306T000000Z
+DTEND:20260306T030000Z
+SUMMARY:Final: Buffalo Sabres 5 - 1 Pittsburgh Penguins
+DESCRIPTION:Regular season. Times display in your calendar's local time. 
+ Open the NHL Tracker Game Centre for scores\, analytics and game details
+ .
+LOCATION:PPG Paints Arena
+URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2025020977#
+ games
+END:VEVENT
+BEGIN:VEVENT
+UID:nhl-2025020993@mooneyaoife.github.io
+DTSTAMP:20260714T181701Z
+DTSTART:20260307T223000Z
+DTEND:20260308T013000Z
+SUMMARY:Final: Philadelphia Flyers 4 - 3 Pittsburgh Penguins
+DESCRIPTION:Regular season. Times display in your calendar's local time. 
+ Open the NHL Tracker Game Centre for scores\, analytics and game details
+ .
+LOCATION:PPG Paints Arena
+URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2025020993#
+ games
+END:VEVENT
+BEGIN:VEVENT
+UID:nhl-2025021002@mooneyaoife.github.io
+DTSTAMP:20260714T181701Z
+DTSTART:20260308T203000Z
+DTEND:20260308T233000Z
+SUMMARY:Final: Boston Bruins 4 - 5 Pittsburgh Penguins
+DESCRIPTION:Regular season. Times display in your calendar's local time. 
+ Open the NHL Tracker Game Centre for scores\, analytics and game details
+ .
+LOCATION:PPG Paints Arena
+URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2025021002#
+ games
+END:VEVENT
+BEGIN:VEVENT
+UID:nhl-2025021018@mooneyaoife.github.io
+DTSTAMP:20260714T181701Z
+DTSTART:20260310T230000Z
+DTEND:20260311T020000Z
+SUMMARY:Final: Pittsburgh Penguins 4 - 5 Carolina Hurricanes
+DESCRIPTION:Regular season. Times display in your calendar's local time. 
+ Open the NHL Tracker Game Centre for scores\, analytics and game details
+ .
+LOCATION:Lenovo Center
+URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2025021018#
+ games
+END:VEVENT
+BEGIN:VEVENT
+UID:nhl-2025021039@mooneyaoife.github.io
+DTSTAMP:20260714T181701Z
+DTSTART:20260313T020000Z
+DTEND:20260313T050000Z
+SUMMARY:Final: Pittsburgh Penguins 2 - 6 Vegas Golden Knights
+DESCRIPTION:Regular season. Times display in your calendar's local time. 
+ Open the NHL Tracker Game Centre for scores\, analytics and game details
+ .
+LOCATION:T-Mobile Arena
+URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2025021039#
+ games
+END:VEVENT
+BEGIN:VEVENT
+UID:nhl-2025021054@mooneyaoife.github.io
+DTSTAMP:20260714T181701Z
+DTSTART:20260315T010000Z
+DTEND:20260315T040000Z
+SUMMARY:Final: Pittsburgh Penguins 4 - 3 Utah Mammoth
+DESCRIPTION:Regular season. Times display in your calendar's local time. 
+ Open the NHL Tracker Game Centre for scores\, analytics and game details
+ .
+LOCATION:Delta Center
+URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2025021054#
+ games
+END:VEVENT
+BEGIN:VEVENT
+UID:nhl-2025021067@mooneyaoife.github.io
+DTSTAMP:20260714T181701Z
+DTSTART:20260317T013000Z
+DTEND:20260317T043000Z
+SUMMARY:Final: Pittsburgh Penguins 7 - 2 Colorado Avalanche
+DESCRIPTION:Regular season. Times display in your calendar's local time. 
+ Open the NHL Tracker Game Centre for scores\, analytics and game details
+ .
+LOCATION:Ball Arena
+URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2025021067#
+ games
+END:VEVENT
+BEGIN:VEVENT
+UID:nhl-2025021078@mooneyaoife.github.io
+DTSTAMP:20260714T181701Z
+DTSTART:20260318T230000Z
+DTEND:20260319T020000Z
+SUMMARY:Final: Pittsburgh Penguins 5 - 6 Carolina Hurricanes
+DESCRIPTION:Regular season. Times display in your calendar's local time. 
+ Open the NHL Tracker Game Centre for scores\, analytics and game details
+ .
+LOCATION:Lenovo Center
+URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2025021078#
+ games
+END:VEVENT
+BEGIN:VEVENT
+UID:nhl-2025021099@mooneyaoife.github.io
+DTSTAMP:20260714T181701Z
+DTSTART:20260321T170000Z
+DTEND:20260321T200000Z
+SUMMARY:Final: Winnipeg Jets 4 - 5 Pittsburgh Penguins
+DESCRIPTION:Regular season. Times display in your calendar's local time. 
+ Open the NHL Tracker Game Centre for scores\, analytics and game details
+ .
+LOCATION:PPG Paints Arena
+URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2025021099#
+ games
+END:VEVENT
+BEGIN:VEVENT
+UID:nhl-2025021112@mooneyaoife.github.io
+DTSTAMP:20260714T181701Z
+DTSTART:20260322T190000Z
+DTEND:20260322T220000Z
+SUMMARY:Final: Carolina Hurricanes 5 - 1 Pittsburgh Penguins
+DESCRIPTION:Regular season. Times display in your calendar's local time. 
+ Open the NHL Tracker Game Centre for scores\, analytics and game details
+ .
+LOCATION:PPG Paints Arena
+URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2025021112#
+ games
+END:VEVENT
+BEGIN:VEVENT
+UID:nhl-2025021126@mooneyaoife.github.io
+DTSTAMP:20260714T181701Z
+DTSTART:20260324T230000Z
+DTEND:20260325T020000Z
+SUMMARY:Final: Colorado Avalanche 6 - 2 Pittsburgh Penguins
+DESCRIPTION:Regular season. Times display in your calendar's local time. 
+ Open the NHL Tracker Game Centre for scores\, analytics and game details
+ .
+LOCATION:PPG Paints Arena
+URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2025021126#
+ games
+END:VEVENT
+BEGIN:VEVENT
+UID:nhl-2025021138@mooneyaoife.github.io
+DTSTAMP:20260714T181701Z
+DTSTART:20260326T230000Z
+DTEND:20260327T020000Z
+SUMMARY:Final: Pittsburgh Penguins 4 - 3 Ottawa Senators
+DESCRIPTION:Regular season. Times display in your calendar's local time. 
+ Open the NHL Tracker Game Centre for scores\, analytics and game details
+ .
+LOCATION:Canadian Tire Centre
+URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2025021138#
+ games
+END:VEVENT
+BEGIN:VEVENT
+UID:nhl-2025021156@mooneyaoife.github.io
+DTSTAMP:20260714T181701Z
+DTSTART:20260328T210000Z
+DTEND:20260329T000000Z
+SUMMARY:Final: Dallas Stars 6 - 3 Pittsburgh Penguins
+DESCRIPTION:Regular season. Times display in your calendar's local time. 
+ Open the NHL Tracker Game Centre for scores\, analytics and game details
+ .
+LOCATION:PPG Paints Arena
+URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2025021156#
+ games
+END:VEVENT
+BEGIN:VEVENT
+UID:nhl-2025021173@mooneyaoife.github.io
+DTSTAMP:20260714T181701Z
+DTSTART:20260330T230000Z
+DTEND:20260331T020000Z
+SUMMARY:Final: Pittsburgh Penguins 8 - 3 New York Islanders
+DESCRIPTION:Regular season. Times display in your calendar's local time. 
+ Open the NHL Tracker Game Centre for scores\, analytics and game details
+ .
+LOCATION:UBS Arena
+URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2025021173#
+ games
+END:VEVENT
+BEGIN:VEVENT
+UID:nhl-2025021183@mooneyaoife.github.io
+DTSTAMP:20260714T181701Z
+DTSTART:20260331T230000Z
+DTEND:20260401T020000Z
+SUMMARY:Final: Detroit Red Wings 1 - 5 Pittsburgh Penguins
+DESCRIPTION:Regular season. Times display in your calendar's local time. 
+ Open the NHL Tracker Game Centre for scores\, analytics and game details
+ .
+LOCATION:PPG Paints Arena
+URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2025021183#
+ games
+END:VEVENT
+BEGIN:VEVENT
+UID:nhl-2025021192@mooneyaoife.github.io
+DTSTAMP:20260714T181701Z
+DTSTART:20260402T230000Z
+DTEND:20260403T020000Z
+SUMMARY:Final: Pittsburgh Penguins 3 - 6 Tampa Bay Lightning
+DESCRIPTION:Regular season. Times display in your calendar's local time. 
+ Open the NHL Tracker Game Centre for scores\, analytics and game details
+ .
+LOCATION:Benchmark International Arena
+URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2025021192#
+ games
+END:VEVENT
+BEGIN:VEVENT
+UID:nhl-2025021211@mooneyaoife.github.io
+DTSTAMP:20260714T181701Z
+DTSTART:20260404T210000Z
+DTEND:20260405T000000Z
+SUMMARY:Final: Florida Panthers 4 - 9 Pittsburgh Penguins
+DESCRIPTION:Regular season. Times display in your calendar's local time. 
+ Open the NHL Tracker Game Centre for scores\, analytics and game details
+ .
+LOCATION:PPG Paints Arena
+URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2025021211#
+ games
+END:VEVENT
+BEGIN:VEVENT
+UID:nhl-2025021223@mooneyaoife.github.io
+DTSTAMP:20260714T181701Z
+DTSTART:20260405T190000Z
+DTEND:20260405T220000Z
+SUMMARY:Final: Florida Panthers 2 - 5 Pittsburgh Penguins
+DESCRIPTION:Regular season. Times display in your calendar's local time. 
+ Open the NHL Tracker Game Centre for scores\, analytics and game details
+ .
+LOCATION:PPG Paints Arena
+URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2025021223#
+ games
+END:VEVENT
+BEGIN:VEVENT
+UID:nhl-2025021251@mooneyaoife.github.io
+DTSTAMP:20260714T181701Z
+DTSTART:20260409T230000Z
+DTEND:20260410T020000Z
+SUMMARY:Final: Pittsburgh Penguins 5 - 2 New Jersey Devils
+DESCRIPTION:Regular season. Times display in your calendar's local time. 
+ Open the NHL Tracker Game Centre for scores\, analytics and game details
+ .
+LOCATION:Prudential Center
+URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2025021251#
+ games
+END:VEVENT
+BEGIN:VEVENT
+UID:nhl-2025021263@mooneyaoife.github.io
+DTSTAMP:20260714T181701Z
+DTSTART:20260411T190000Z
+DTEND:20260411T220000Z
+SUMMARY:Final: Washington Capitals 6 - 3 Pittsburgh Penguins
+DESCRIPTION:Regular season. Times display in your calendar's local time. 
+ Open the NHL Tracker Game Centre for scores\, analytics and game details
+ .
+LOCATION:PPG Paints Arena
+URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2025021263#
+ games
+END:VEVENT
+BEGIN:VEVENT
+UID:nhl-2025021276@mooneyaoife.github.io
+DTSTAMP:20260714T181701Z
+DTSTART:20260412T190000Z
+DTEND:20260412T220000Z
+SUMMARY:Final: Pittsburgh Penguins 0 - 3 Washington Capitals
+DESCRIPTION:Regular season. Times display in your calendar's local time. 
+ Open the NHL Tracker Game Centre for scores\, analytics and game details
+ .
+LOCATION:Capital One Arena
+URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2025021276#
+ games
+END:VEVENT
+BEGIN:VEVENT
+UID:nhl-2025021299@mooneyaoife.github.io
+DTSTAMP:20260714T181701Z
+DTSTART:20260415T013000Z
+DTEND:20260415T043000Z
+SUMMARY:Final: Pittsburgh Penguins 5 - 7 St. Louis Blues
+DESCRIPTION:Regular season. Times display in your calendar's local time. 
+ Open the NHL Tracker Game Centre for scores\, analytics and game details
+ .
+LOCATION:Enterprise Center
+URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2025021299#
+ games
+END:VEVENT
+BEGIN:VEVENT
+UID:nhl-2025030141@mooneyaoife.github.io
+DTSTAMP:20260714T181701Z
+DTSTART:20260419T000000Z
+DTEND:20260419T030000Z
+SUMMARY:Final: Philadelphia Flyers 3 - 2 Pittsburgh Penguins
+DESCRIPTION:Playoffs. Times display in your calendar's local time. Open t
+ he NHL Tracker Game Centre for scores\, analytics and game details.
+LOCATION:PPG Paints Arena
+URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2025030141#
+ games
+END:VEVENT
+BEGIN:VEVENT
+UID:nhl-2025030142@mooneyaoife.github.io
+DTSTAMP:20260714T181701Z
+DTSTART:20260420T230000Z
+DTEND:20260421T020000Z
+SUMMARY:Final: Philadelphia Flyers 3 - 0 Pittsburgh Penguins
+DESCRIPTION:Playoffs. Times display in your calendar's local time. Open t
+ he NHL Tracker Game Centre for scores\, analytics and game details.
+LOCATION:PPG Paints Arena
+URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2025030142#
+ games
+END:VEVENT
+BEGIN:VEVENT
+UID:nhl-2025030143@mooneyaoife.github.io
+DTSTAMP:20260714T181701Z
+DTSTART:20260422T230000Z
+DTEND:20260423T020000Z
+SUMMARY:Final: Pittsburgh Penguins 2 - 5 Philadelphia Flyers
+DESCRIPTION:Playoffs. Times display in your calendar's local time. Open t
+ he NHL Tracker Game Centre for scores\, analytics and game details.
+LOCATION:Xfinity Mobile Arena
+URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2025030143#
+ games
+END:VEVENT
+BEGIN:VEVENT
+UID:nhl-2025030144@mooneyaoife.github.io
+DTSTAMP:20260714T181701Z
+DTSTART:20260426T000000Z
+DTEND:20260426T030000Z
+SUMMARY:Final: Pittsburgh Penguins 4 - 2 Philadelphia Flyers
+DESCRIPTION:Playoffs. Times display in your calendar's local time. Open t
+ he NHL Tracker Game Centre for scores\, analytics and game details.
+LOCATION:Xfinity Mobile Arena
+URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2025030144#
+ games
+END:VEVENT
+BEGIN:VEVENT
+UID:nhl-2025030145@mooneyaoife.github.io
+DTSTAMP:20260714T181701Z
+DTSTART:20260427T230000Z
+DTEND:20260428T020000Z
+SUMMARY:Final: Philadelphia Flyers 2 - 3 Pittsburgh Penguins
+DESCRIPTION:Playoffs. Times display in your calendar's local time. Open t
+ he NHL Tracker Game Centre for scores\, analytics and game details.
+LOCATION:PPG Paints Arena
+URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2025030145#
+ games
+END:VEVENT
+BEGIN:VEVENT
+UID:nhl-2025030146@mooneyaoife.github.io
+DTSTAMP:20260714T181701Z
+DTSTART:20260429T233000Z
+DTEND:20260430T023000Z
+SUMMARY:Final: Pittsburgh Penguins 0 - 1 Philadelphia Flyers
+DESCRIPTION:Playoffs. Times display in your calendar's local time. Open t
+ he NHL Tracker Game Centre for scores\, analytics and game details.
+LOCATION:Xfinity Mobile Arena
+URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2025030146#
+ games
+END:VEVENT
+END:VCALENDAR

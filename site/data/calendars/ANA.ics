@@ -1,0 +1,1306 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//NHL Tracker//Team Calendar//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+X-WR-CALNAME:Anaheim Ducks - NHL Tracker
+X-WR-TIMEZONE:Europe/London
+X-APPLE-CALENDAR-COLOR:#F47A38
+COLOR:#F47A38
+REFRESH-INTERVAL;VALUE=DURATION:PT6H
+X-PUBLISHED-TTL:PT6H
+BEGIN:VEVENT
+UID:nhl-2025010001@mooneyaoife.github.io
+DTSTAMP:20260714T181701Z
+DTSTART:20250921T220000Z
+DTEND:20250922T010000Z
+SUMMARY:Final: Anaheim Ducks 1 - 3 Los Angeles Kings
+DESCRIPTION:Preseason. Times display in your calendar's local time. Open 
+ the NHL Tracker Game Centre for scores\, analytics and game details.
+LOCATION:Toyota Arena
+URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2025010001#
+ games
+END:VEVENT
+BEGIN:VEVENT
+UID:nhl-2025010017@mooneyaoife.github.io
+DTSTAMP:20260714T181701Z
+DTSTART:20250923T020000Z
+DTEND:20250923T050000Z
+SUMMARY:Final: Utah Mammoth 1 - 6 Anaheim Ducks
+DESCRIPTION:Preseason. Times display in your calendar's local time. Open 
+ the NHL Tracker Game Centre for scores\, analytics and game details.
+LOCATION:Honda Center
+URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2025010017#
+ games
+END:VEVENT
+BEGIN:VEVENT
+UID:nhl-2025010031@mooneyaoife.github.io
+DTSTAMP:20260714T181701Z
+DTSTART:20250925T020000Z
+DTEND:20250925T050000Z
+SUMMARY:Final: Los Angeles Kings 3 - 0 Anaheim Ducks
+DESCRIPTION:Preseason. Times display in your calendar's local time. Open 
+ the NHL Tracker Game Centre for scores\, analytics and game details.
+LOCATION:Honda Center
+URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2025010031#
+ games
+END:VEVENT
+BEGIN:VEVENT
+UID:nhl-2025010046@mooneyaoife.github.io
+DTSTAMP:20260714T181701Z
+DTSTART:20250927T220000Z
+DTEND:20250928T010000Z
+SUMMARY:Final: Anaheim Ducks 5 - 3 Los Angeles Kings
+DESCRIPTION:Preseason. Times display in your calendar's local time. Open 
+ the NHL Tracker Game Centre for scores\, analytics and game details.
+LOCATION:Dignity Health Arena
+URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2025010046#
+ games
+END:VEVENT
+BEGIN:VEVENT
+UID:nhl-2025010065@mooneyaoife.github.io
+DTSTAMP:20260714T181701Z
+DTSTART:20250930T020000Z
+DTEND:20250930T050000Z
+SUMMARY:Final: San Jose Sharks 2 - 3 Anaheim Ducks
+DESCRIPTION:Preseason. Times display in your calendar's local time. Open 
+ the NHL Tracker Game Centre for scores\, analytics and game details.
+LOCATION:Honda Center
+URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2025010065#
+ games
+END:VEVENT
+BEGIN:VEVENT
+UID:nhl-2025010073@mooneyaoife.github.io
+DTSTAMP:20260714T181701Z
+DTSTART:20251002T020000Z
+DTEND:20251002T050000Z
+SUMMARY:Final: Anaheim Ducks 5 - 2 San Jose Sharks
+DESCRIPTION:Preseason. Times display in your calendar's local time. Open 
+ the NHL Tracker Game Centre for scores\, analytics and game details.
+LOCATION:SAP Center at San Jose
+URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2025010073#
+ games
+END:VEVENT
+BEGIN:VEVENT
+UID:nhl-2025010090@mooneyaoife.github.io
+DTSTAMP:20260714T181701Z
+DTSTART:20251004T200000Z
+DTEND:20251004T230000Z
+SUMMARY:Final: Anaheim Ducks 4 - 5 Los Angeles Kings
+DESCRIPTION:Preseason. Times display in your calendar's local time. Open 
+ the NHL Tracker Game Centre for scores\, analytics and game details.
+LOCATION:Crypto.com Arena
+URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2025010090#
+ games
+END:VEVENT
+BEGIN:VEVENT
+UID:nhl-2025020021@mooneyaoife.github.io
+DTSTAMP:20260714T181701Z
+DTSTART:20251010T020000Z
+DTEND:20251010T050000Z
+SUMMARY:Final: Anaheim Ducks 1 - 3 Seattle Kraken
+DESCRIPTION:Regular season. Times display in your calendar's local time. 
+ Open the NHL Tracker Game Centre for scores\, analytics and game details
+ .
+LOCATION:Climate Pledge Arena
+URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2025020021#
+ games
+END:VEVENT
+BEGIN:VEVENT
+UID:nhl-2025020036@mooneyaoife.github.io
+DTSTAMP:20260714T181701Z
+DTSTART:20251012T020000Z
+DTEND:20251012T050000Z
+SUMMARY:Final: Anaheim Ducks 7 - 6 San Jose Sharks
+DESCRIPTION:Regular season. Times display in your calendar's local time. 
+ Open the NHL Tracker Game Centre for scores\, analytics and game details
+ .
+LOCATION:SAP Center at San Jose
+URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2025020036#
+ games
+END:VEVENT
+BEGIN:VEVENT
+UID:nhl-2025020056@mooneyaoife.github.io
+DTSTAMP:20260714T181701Z
+DTSTART:20251015T023000Z
+DTEND:20251015T053000Z
+SUMMARY:Final: Pittsburgh Penguins 3 - 4 Anaheim Ducks
+DESCRIPTION:Regular season. Times display in your calendar's local time. 
+ Open the NHL Tracker Game Centre for scores\, analytics and game details
+ .
+LOCATION:Honda Center
+URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2025020056#
+ games
+END:VEVENT
+BEGIN:VEVENT
+UID:nhl-2025020070@mooneyaoife.github.io
+DTSTAMP:20260714T181701Z
+DTSTART:20251017T020000Z
+DTEND:20251017T050000Z
+SUMMARY:Final: Carolina Hurricanes 4 - 1 Anaheim Ducks
+DESCRIPTION:Regular season. Times display in your calendar's local time. 
+ Open the NHL Tracker Game Centre for scores\, analytics and game details
+ .
+LOCATION:Honda Center
+URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2025020070#
+ games
+END:VEVENT
+BEGIN:VEVENT
+UID:nhl-2025020091@mooneyaoife.github.io
+DTSTAMP:20260714T181701Z
+DTSTART:20251019T230000Z
+DTEND:20251020T020000Z
+SUMMARY:Final: Anaheim Ducks 1 - 2 Chicago Blackhawks
+DESCRIPTION:Regular season. Times display in your calendar's local time. 
+ Open the NHL Tracker Game Centre for scores\, analytics and game details
+ .
+LOCATION:United Center
+URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2025020091#
+ games
+END:VEVENT
+BEGIN:VEVENT
+UID:nhl-2025020105@mooneyaoife.github.io
+DTSTAMP:20260714T181701Z
+DTSTART:20251022T000000Z
+DTEND:20251022T030000Z
+SUMMARY:Final: Anaheim Ducks 5 - 2 Nashville Predators
+DESCRIPTION:Regular season. Times display in your calendar's local time. 
+ Open the NHL Tracker Game Centre for scores\, analytics and game details
+ .
+LOCATION:Bridgestone Arena
+URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2025020105#
+ games
+END:VEVENT
+BEGIN:VEVENT
+UID:nhl-2025020111@mooneyaoife.github.io
+DTSTAMP:20260714T181701Z
+DTSTART:20251023T230000Z
+DTEND:20251024T020000Z
+SUMMARY:Final: Anaheim Ducks 7 - 5 Boston Bruins
+DESCRIPTION:Regular season. Times display in your calendar's local time. 
+ Open the NHL Tracker Game Centre for scores\, analytics and game details
+ .
+LOCATION:TD Garden
+URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2025020111#
+ games
+END:VEVENT
+BEGIN:VEVENT
+UID:nhl-2025020129@mooneyaoife.github.io
+DTSTAMP:20260714T181701Z
+DTSTART:20251025T210000Z
+DTEND:20251026T000000Z
+SUMMARY:Final: Anaheim Ducks 3 - 4 Tampa Bay Lightning
+DESCRIPTION:Regular season. Times display in your calendar's local time. 
+ Open the NHL Tracker Game Centre for scores\, analytics and game details
+ .
+LOCATION:Benchmark International Arena
+URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2025020129#
+ games
+END:VEVENT
+BEGIN:VEVENT
+UID:nhl-2025020153@mooneyaoife.github.io
+DTSTAMP:20260714T181701Z
+DTSTART:20251028T230000Z
+DTEND:20251029T020000Z
+SUMMARY:Final: Anaheim Ducks 3 - 2 Florida Panthers
+DESCRIPTION:Regular season. Times display in your calendar's local time. 
+ Open the NHL Tracker Game Centre for scores\, analytics and game details
+ .
+LOCATION:Amerant Bank Arena
+URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2025020153#
+ games
+END:VEVENT
+BEGIN:VEVENT
+UID:nhl-2025020180@mooneyaoife.github.io
+DTSTAMP:20260714T181701Z
+DTSTART:20251101T020000Z
+DTEND:20251101T050000Z
+SUMMARY:Final: Detroit Red Wings 2 - 5 Anaheim Ducks
+DESCRIPTION:Regular season. Times display in your calendar's local time. 
+ Open the NHL Tracker Game Centre for scores\, analytics and game details
+ .
+LOCATION:Honda Center
+URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2025020180#
+ games
+END:VEVENT
+BEGIN:VEVENT
+UID:nhl-2025020197@mooneyaoife.github.io
+DTSTAMP:20260714T181701Z
+DTSTART:20251103T010000Z
+DTEND:20251103T040000Z
+SUMMARY:Final: New Jersey Devils 1 - 4 Anaheim Ducks
+DESCRIPTION:Regular season. Times display in your calendar's local time. 
+ Open the NHL Tracker Game Centre for scores\, analytics and game details
+ .
+LOCATION:Honda Center
+URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2025020197#
+ games
+END:VEVENT
+BEGIN:VEVENT
+UID:nhl-2025020211@mooneyaoife.github.io
+DTSTAMP:20260714T181701Z
+DTSTART:20251105T030000Z
+DTEND:20251105T060000Z
+SUMMARY:Final: Florida Panthers 3 - 7 Anaheim Ducks
+DESCRIPTION:Regular season. Times display in your calendar's local time. 
+ Open the NHL Tracker Game Centre for scores\, analytics and game details
+ .
+LOCATION:Honda Center
+URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2025020211#
+ games
+END:VEVENT
+BEGIN:VEVENT
+UID:nhl-2025020224@mooneyaoife.github.io
+DTSTAMP:20260714T181701Z
+DTSTART:20251107T010000Z
+DTEND:20251107T040000Z
+SUMMARY:Final: Anaheim Ducks 7 - 5 Dallas Stars
+DESCRIPTION:Regular season. Times display in your calendar's local time. 
+ Open the NHL Tracker Game Centre for scores\, analytics and game details
+ .
+LOCATION:American Airlines Center
+URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2025020224#
+ games
+END:VEVENT
+BEGIN:VEVENT
+UID:nhl-2025020242@mooneyaoife.github.io
+DTSTAMP:20260714T181701Z
+DTSTART:20251109T030000Z
+DTEND:20251109T060000Z
+SUMMARY:Final: Anaheim Ducks 4 - 3 Vegas Golden Knights
+DESCRIPTION:Regular season. Times display in your calendar's local time. 
+ Open the NHL Tracker Game Centre for scores\, analytics and game details
+ .
+LOCATION:T-Mobile Arena
+URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2025020242#
+ games
+END:VEVENT
+BEGIN:VEVENT
+UID:nhl-2025020251@mooneyaoife.github.io
+DTSTAMP:20260714T181701Z
+DTSTART:20251110T030000Z
+DTEND:20251110T060000Z
+SUMMARY:Final: Winnipeg Jets 1 - 4 Anaheim Ducks
+DESCRIPTION:Regular season. Times display in your calendar's local time. 
+ Open the NHL Tracker Game Centre for scores\, analytics and game details
+ .
+LOCATION:Honda Center
+URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2025020251#
+ games
+END:VEVENT
+BEGIN:VEVENT
+UID:nhl-2025020262@mooneyaoife.github.io
+DTSTAMP:20260714T181701Z
+DTSTART:20251112T023000Z
+DTEND:20251112T053000Z
+SUMMARY:Final: Anaheim Ducks 1 - 4 Colorado Avalanche
+DESCRIPTION:Regular season. Times display in your calendar's local time. 
+ Open the NHL Tracker Game Centre for scores\, analytics and game details
+ .
+LOCATION:Ball Arena
+URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2025020262#
+ games
+END:VEVENT
+BEGIN:VEVENT
+UID:nhl-2025020272@mooneyaoife.github.io
+DTSTAMP:20260714T181701Z
+DTSTART:20251114T000000Z
+DTEND:20251114T030000Z
+SUMMARY:Final: Anaheim Ducks 3 - 6 Detroit Red Wings
+DESCRIPTION:Regular season. Times display in your calendar's local time. 
+ Open the NHL Tracker Game Centre for scores\, analytics and game details
+ .
+LOCATION:Little Caesars Arena
+URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2025020272#
+ games
+END:VEVENT
+BEGIN:VEVENT
+UID:nhl-2025020284@mooneyaoife.github.io
+DTSTAMP:20260714T181701Z
+DTSTART:20251115T230000Z
+DTEND:20251116T020000Z
+SUMMARY:Final: Anaheim Ducks 0 - 2 Minnesota Wild
+DESCRIPTION:Regular season. Times display in your calendar's local time. 
+ Open the NHL Tracker Game Centre for scores\, analytics and game details
+ .
+LOCATION:Grand Casino Arena
+URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2025020284#
+ games
+END:VEVENT
+BEGIN:VEVENT
+UID:nhl-2025020306@mooneyaoife.github.io
+DTSTAMP:20260714T181701Z
+DTSTART:20251118T030000Z
+DTEND:20251118T060000Z
+SUMMARY:Final: Utah Mammoth 2 - 3 Anaheim Ducks
+DESCRIPTION:Regular season. Times display in your calendar's local time. 
+ Open the NHL Tracker Game Centre for scores\, analytics and game details
+ .
+LOCATION:Honda Center
+URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2025020306#
+ games
+END:VEVENT
+BEGIN:VEVENT
+UID:nhl-2025020318@mooneyaoife.github.io
+DTSTAMP:20260714T181701Z
+DTSTART:20251120T030000Z
+DTEND:20251120T060000Z
+SUMMARY:Final: Boston Bruins 3 - 4 Anaheim Ducks
+DESCRIPTION:Regular season. Times display in your calendar's local time. 
+ Open the NHL Tracker Game Centre for scores\, analytics and game details
+ .
+LOCATION:Honda Center
+URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2025020318#
+ games
+END:VEVENT
+BEGIN:VEVENT
+UID:nhl-2025020329@mooneyaoife.github.io
+DTSTAMP:20260714T181701Z
+DTSTART:20251121T030000Z
+DTEND:20251121T060000Z
+SUMMARY:Final: Ottawa Senators 3 - 2 Anaheim Ducks
+DESCRIPTION:Regular season. Times display in your calendar's local time. 
+ Open the NHL Tracker Game Centre for scores\, analytics and game details
+ .
+LOCATION:Honda Center
+URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2025020329#
+ games
+END:VEVENT
+BEGIN:VEVENT
+UID:nhl-2025020346@mooneyaoife.github.io
+DTSTAMP:20260714T181701Z
+DTSTART:20251123T030000Z
+DTEND:20251123T060000Z
+SUMMARY:Final: Vegas Golden Knights 3 - 4 Anaheim Ducks
+DESCRIPTION:Regular season. Times display in your calendar's local time. 
+ Open the NHL Tracker Game Centre for scores\, analytics and game details
+ .
+LOCATION:Honda Center
+URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2025020346#
+ games
+END:VEVENT
+BEGIN:VEVENT
+UID:nhl-2025020374@mooneyaoife.github.io
+DTSTAMP:20260714T181701Z
+DTSTART:20251127T030000Z
+DTEND:20251127T060000Z
+SUMMARY:Final: Vancouver Canucks 5 - 4 Anaheim Ducks
+DESCRIPTION:Regular season. Times display in your calendar's local time. 
+ Open the NHL Tracker Game Centre for scores\, analytics and game details
+ .
+LOCATION:Honda Center
+URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2025020374#
+ games
+END:VEVENT
+BEGIN:VEVENT
+UID:nhl-2025020384@mooneyaoife.github.io
+DTSTAMP:20260714T181701Z
+DTSTART:20251128T210000Z
+DTEND:20251129T000000Z
+SUMMARY:Final: Los Angeles Kings 4 - 5 Anaheim Ducks
+DESCRIPTION:Regular season. Times display in your calendar's local time. 
+ Open the NHL Tracker Game Centre for scores\, analytics and game details
+ .
+LOCATION:Honda Center
+URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2025020384#
+ games
+END:VEVENT
+BEGIN:VEVENT
+UID:nhl-2025020403@mooneyaoife.github.io
+DTSTAMP:20260714T181701Z
+DTSTART:20251130T203000Z
+DTEND:20251130T233000Z
+SUMMARY:Final: Anaheim Ducks 3 - 5 Chicago Blackhawks
+DESCRIPTION:Regular season. Times display in your calendar's local time. 
+ Open the NHL Tracker Game Centre for scores\, analytics and game details
+ .
+LOCATION:United Center
+URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2025020403#
+ games
+END:VEVENT
+BEGIN:VEVENT
+UID:nhl-2025020409@mooneyaoife.github.io
+DTSTAMP:20260714T181701Z
+DTSTART:20251202T010000Z
+DTEND:20251202T040000Z
+SUMMARY:Final: Anaheim Ducks 4 - 1 St. Louis Blues
+DESCRIPTION:Regular season. Times display in your calendar's local time. 
+ Open the NHL Tracker Game Centre for scores\, analytics and game details
+ .
+LOCATION:Enterprise Center
+URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2025020409#
+ games
+END:VEVENT
+BEGIN:VEVENT
+UID:nhl-2025020424@mooneyaoife.github.io
+DTSTAMP:20260714T181701Z
+DTSTART:20251204T030000Z
+DTEND:20251204T060000Z
+SUMMARY:Final: Utah Mammoth 7 - 0 Anaheim Ducks
+DESCRIPTION:Regular season. Times display in your calendar's local time. 
+ Open the NHL Tracker Game Centre for scores\, analytics and game details
+ .
+LOCATION:Honda Center
+URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2025020424#
+ games
+END:VEVENT
+BEGIN:VEVENT
+UID:nhl-2025020440@mooneyaoife.github.io
+DTSTAMP:20260714T181701Z
+DTSTART:20251206T030000Z
+DTEND:20251206T060000Z
+SUMMARY:Final: Washington Capitals 3 - 4 Anaheim Ducks
+DESCRIPTION:Regular season. Times display in your calendar's local time. 
+ Open the NHL Tracker Game Centre for scores\, analytics and game details
+ .
+LOCATION:Honda Center
+URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2025020440#
+ games
+END:VEVENT
+BEGIN:VEVENT
+UID:nhl-2025020460@mooneyaoife.github.io
+DTSTAMP:20260714T181701Z
+DTSTART:20251208T010000Z
+DTEND:20251208T040000Z
+SUMMARY:Final: Chicago Blackhawks 1 - 7 Anaheim Ducks
+DESCRIPTION:Regular season. Times display in your calendar's local time. 
+ Open the NHL Tracker Game Centre for scores\, analytics and game details
+ .
+LOCATION:Honda Center
+URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2025020460#
+ games
+END:VEVENT
+BEGIN:VEVENT
+UID:nhl-2025020470@mooneyaoife.github.io
+DTSTAMP:20260714T181701Z
+DTSTART:20251210T000000Z
+DTEND:20251210T030000Z
+SUMMARY:Final: Anaheim Ducks 4 - 3 Pittsburgh Penguins
+DESCRIPTION:Regular season. Times display in your calendar's local time. 
+ Open the NHL Tracker Game Centre for scores\, analytics and game details
+ .
+LOCATION:PPG Paints Arena
+URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2025020470#
+ games
+END:VEVENT
+BEGIN:VEVENT
+UID:nhl-2025020482@mooneyaoife.github.io
+DTSTAMP:20260714T181701Z
+DTSTART:20251212T000000Z
+DTEND:20251212T030000Z
+SUMMARY:Final: Anaheim Ducks 2 - 5 New York Islanders
+DESCRIPTION:Regular season. Times display in your calendar's local time. 
+ Open the NHL Tracker Game Centre for scores\, analytics and game details
+ .
+LOCATION:UBS Arena
+URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2025020482#
+ games
+END:VEVENT
+BEGIN:VEVENT
+UID:nhl-2025020495@mooneyaoife.github.io
+DTSTAMP:20260714T181701Z
+DTSTART:20251213T173000Z
+DTEND:20251213T203000Z
+SUMMARY:Final: Anaheim Ducks 1 - 4 New Jersey Devils
+DESCRIPTION:Regular season. Times display in your calendar's local time. 
+ Open the NHL Tracker Game Centre for scores\, analytics and game details
+ .
+LOCATION:Prudential Center
+URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2025020495#
+ games
+END:VEVENT
+BEGIN:VEVENT
+UID:nhl-2025020515@mooneyaoife.github.io
+DTSTAMP:20260714T181701Z
+DTSTART:20251216T000000Z
+DTEND:20251216T030000Z
+SUMMARY:Final: Anaheim Ducks 4 - 1 New York Rangers
+DESCRIPTION:Regular season. Times display in your calendar's local time. 
+ Open the NHL Tracker Game Centre for scores\, analytics and game details
+ .
+LOCATION:Madison Square Garden
+URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2025020515#
+ games
+END:VEVENT
+BEGIN:VEVENT
+UID:nhl-2025020525@mooneyaoife.github.io
+DTSTAMP:20260714T181701Z
+DTSTART:20251217T000000Z
+DTEND:20251217T030000Z
+SUMMARY:Final: Anaheim Ducks 3 - 4 Columbus Blue Jackets
+DESCRIPTION:Regular season. Times display in your calendar's local time. 
+ Open the NHL Tracker Game Centre for scores\, analytics and game details
+ .
+LOCATION:Nationwide Arena
+URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2025020525#
+ games
+END:VEVENT
+BEGIN:VEVENT
+UID:nhl-2025020548@mooneyaoife.github.io
+DTSTAMP:20260714T181701Z
+DTSTART:20251220T030000Z
+DTEND:20251220T060000Z
+SUMMARY:Final: Dallas Stars 8 - 3 Anaheim Ducks
+DESCRIPTION:Regular season. Times display in your calendar's local time. 
+ Open the NHL Tracker Game Centre for scores\, analytics and game details
+ .
+LOCATION:Honda Center
+URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2025020548#
+ games
+END:VEVENT
+BEGIN:VEVENT
+UID:nhl-2025020560@mooneyaoife.github.io
+DTSTAMP:20260714T181701Z
+DTSTART:20251221T030000Z
+DTEND:20251221T060000Z
+SUMMARY:Final: Columbus Blue Jackets 3 - 4 Anaheim Ducks
+DESCRIPTION:Regular season. Times display in your calendar's local time. 
+ Open the NHL Tracker Game Centre for scores\, analytics and game details
+ .
+LOCATION:Honda Center
+URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2025020560#
+ games
+END:VEVENT
+BEGIN:VEVENT
+UID:nhl-2025020573@mooneyaoife.github.io
+DTSTAMP:20260714T181701Z
+DTSTART:20251223T030000Z
+DTEND:20251223T060000Z
+SUMMARY:Final: Seattle Kraken 3 - 1 Anaheim Ducks
+DESCRIPTION:Regular season. Times display in your calendar's local time. 
+ Open the NHL Tracker Game Centre for scores\, analytics and game details
+ .
+LOCATION:Honda Center
+URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2025020573#
+ games
+END:VEVENT
+BEGIN:VEVENT
+UID:nhl-2025020597@mooneyaoife.github.io
+DTSTAMP:20260714T181701Z
+DTSTART:20251228T020000Z
+DTEND:20251228T050000Z
+SUMMARY:Final: Anaheim Ducks 1 - 6 Los Angeles Kings
+DESCRIPTION:Regular season. Times display in your calendar's local time. 
+ Open the NHL Tracker Game Centre for scores\, analytics and game details
+ .
+LOCATION:Crypto.com Arena
+URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2025020597#
+ games
+END:VEVENT
+BEGIN:VEVENT
+UID:nhl-2025020615@mooneyaoife.github.io
+DTSTAMP:20260714T181701Z
+DTSTART:20251230T030000Z
+DTEND:20251230T060000Z
+SUMMARY:Final: San Jose Sharks 5 - 4 Anaheim Ducks
+DESCRIPTION:Regular season. Times display in your calendar's local time. 
+ Open the NHL Tracker Game Centre for scores\, analytics and game details
+ .
+LOCATION:Honda Center
+URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2025020615#
+ games
+END:VEVENT
+BEGIN:VEVENT
+UID:nhl-2025020624@mooneyaoife.github.io
+DTSTAMP:20260714T181701Z
+DTSTART:20251231T210000Z
+DTEND:20260101T000000Z
+SUMMARY:Final: Tampa Bay Lightning 4 - 3 Anaheim Ducks
+DESCRIPTION:Regular season. Times display in your calendar's local time. 
+ Open the NHL Tracker Game Centre for scores\, analytics and game details
+ .
+LOCATION:Honda Center
+URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2025020624#
+ games
+END:VEVENT
+BEGIN:VEVENT
+UID:nhl-2025020643@mooneyaoife.github.io
+DTSTAMP:20260714T181701Z
+DTSTART:20260103T033000Z
+DTEND:20260103T063000Z
+SUMMARY:Final: Minnesota Wild 5 - 2 Anaheim Ducks
+DESCRIPTION:Regular season. Times display in your calendar's local time. 
+ Open the NHL Tracker Game Centre for scores\, analytics and game details
+ .
+LOCATION:Honda Center
+URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2025020643#
+ games
+END:VEVENT
+BEGIN:VEVENT
+UID:nhl-2025020663@mooneyaoife.github.io
+DTSTAMP:20260714T181701Z
+DTSTART:20260106T000000Z
+DTEND:20260106T030000Z
+SUMMARY:Final: Anaheim Ducks 4 - 7 Washington Capitals
+DESCRIPTION:Regular season. Times display in your calendar's local time. 
+ Open the NHL Tracker Game Centre for scores\, analytics and game details
+ .
+LOCATION:Capital One Arena
+URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2025020663#
+ games
+END:VEVENT
+BEGIN:VEVENT
+UID:nhl-2025020670@mooneyaoife.github.io
+DTSTAMP:20260714T181701Z
+DTSTART:20260107T000000Z
+DTEND:20260107T030000Z
+SUMMARY:Final: Anaheim Ducks 2 - 5 Philadelphia Flyers
+DESCRIPTION:Regular season. Times display in your calendar's local time. 
+ Open the NHL Tracker Game Centre for scores\, analytics and game details
+ .
+LOCATION:Xfinity Mobile Arena
+URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2025020670#
+ games
+END:VEVENT
+BEGIN:VEVENT
+UID:nhl-2025020688@mooneyaoife.github.io
+DTSTAMP:20260714T181701Z
+DTSTART:20260109T000000Z
+DTEND:20260109T030000Z
+SUMMARY:Final: Anaheim Ducks 2 - 5 Carolina Hurricanes
+DESCRIPTION:Regular season. Times display in your calendar's local time. 
+ Open the NHL Tracker Game Centre for scores\, analytics and game details
+ .
+LOCATION:Lenovo Center
+URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2025020688#
+ games
+END:VEVENT
+BEGIN:VEVENT
+UID:nhl-2025020701@mooneyaoife.github.io
+DTSTAMP:20260714T181701Z
+DTSTART:20260111T000000Z
+DTEND:20260111T030000Z
+SUMMARY:Final: Anaheim Ducks 3 - 5 Buffalo Sabres
+DESCRIPTION:Regular season. Times display in your calendar's local time. 
+ Open the NHL Tracker Game Centre for scores\, analytics and game details
+ .
+LOCATION:KeyBank Center
+URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2025020701#
+ games
+END:VEVENT
+BEGIN:VEVENT
+UID:nhl-2025020734@mooneyaoife.github.io
+DTSTAMP:20260714T181701Z
+DTSTART:20260114T030000Z
+DTEND:20260114T060000Z
+SUMMARY:Final: Dallas Stars 1 - 3 Anaheim Ducks
+DESCRIPTION:Regular season. Times display in your calendar's local time. 
+ Open the NHL Tracker Game Centre for scores\, analytics and game details
+ .
+LOCATION:Honda Center
+URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2025020734#
+ games
+END:VEVENT
+BEGIN:VEVENT
+UID:nhl-2025020753@mooneyaoife.github.io
+DTSTAMP:20260714T181701Z
+DTSTART:20260117T033000Z
+DTEND:20260117T063000Z
+SUMMARY:Final: Anaheim Ducks 3 - 2 Los Angeles Kings
+DESCRIPTION:Regular season. Times display in your calendar's local time. 
+ Open the NHL Tracker Game Centre for scores\, analytics and game details
+ .
+LOCATION:Crypto.com Arena
+URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2025020753#
+ games
+END:VEVENT
+BEGIN:VEVENT
+UID:nhl-2025020766@mooneyaoife.github.io
+DTSTAMP:20260714T181701Z
+DTSTART:20260118T030000Z
+DTEND:20260118T060000Z
+SUMMARY:Final: Los Angeles Kings 1 - 2 Anaheim Ducks
+DESCRIPTION:Regular season. Times display in your calendar's local time. 
+ Open the NHL Tracker Game Centre for scores\, analytics and game details
+ .
+LOCATION:Honda Center
+URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2025020766#
+ games
+END:VEVENT
+BEGIN:VEVENT
+UID:nhl-2025020779@mooneyaoife.github.io
+DTSTAMP:20260714T181701Z
+DTSTART:20260120T030000Z
+DTEND:20260120T060000Z
+SUMMARY:Final: New York Rangers 3 - 5 Anaheim Ducks
+DESCRIPTION:Regular season. Times display in your calendar's local time. 
+ Open the NHL Tracker Game Centre for scores\, analytics and game details
+ .
+LOCATION:Honda Center
+URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2025020779#
+ games
+END:VEVENT
+BEGIN:VEVENT
+UID:nhl-2025020789@mooneyaoife.github.io
+DTSTAMP:20260714T181701Z
+DTSTART:20260122T020000Z
+DTEND:20260122T050000Z
+SUMMARY:Final: Anaheim Ducks 2 - 1 Colorado Avalanche
+DESCRIPTION:Regular season. Times display in your calendar's local time. 
+ Open the NHL Tracker Game Centre for scores\, analytics and game details
+ .
+LOCATION:Ball Arena
+URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2025020789#
+ games
+END:VEVENT
+BEGIN:VEVENT
+UID:nhl-2025020809@mooneyaoife.github.io
+DTSTAMP:20260714T181701Z
+DTSTART:20260124T030000Z
+DTEND:20260124T060000Z
+SUMMARY:Final: Anaheim Ducks 4 - 2 Seattle Kraken
+DESCRIPTION:Regular season. Times display in your calendar's local time. 
+ Open the NHL Tracker Game Centre for scores\, analytics and game details
+ .
+LOCATION:Climate Pledge Arena
+URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2025020809#
+ games
+END:VEVENT
+BEGIN:VEVENT
+UID:nhl-2025020824@mooneyaoife.github.io
+DTSTAMP:20260714T181701Z
+DTSTART:20260126T010000Z
+DTEND:20260126T040000Z
+SUMMARY:Final: Anaheim Ducks 4 - 3 Calgary Flames
+DESCRIPTION:Regular season. Times display in your calendar's local time. 
+ Open the NHL Tracker Game Centre for scores\, analytics and game details
+ .
+LOCATION:Scotiabank Saddledome
+URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2025020824#
+ games
+END:VEVENT
+BEGIN:VEVENT
+UID:nhl-2025020829@mooneyaoife.github.io
+DTSTAMP:20260714T181701Z
+DTSTART:20260127T013000Z
+DTEND:20260127T043000Z
+SUMMARY:Final: Anaheim Ducks 4 - 7 Edmonton Oilers
+DESCRIPTION:Regular season. Times display in your calendar's local time. 
+ Open the NHL Tracker Game Centre for scores\, analytics and game details
+ .
+LOCATION:Rogers Place
+URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2025020829#
+ games
+END:VEVENT
+BEGIN:VEVENT
+UID:nhl-2025020855@mooneyaoife.github.io
+DTSTAMP:20260714T181701Z
+DTSTART:20260130T030000Z
+DTEND:20260130T060000Z
+SUMMARY:Final: Anaheim Ducks 0 - 2 Vancouver Canucks
+DESCRIPTION:Regular season. Times display in your calendar's local time. 
+ Open the NHL Tracker Game Centre for scores\, analytics and game details
+ .
+LOCATION:Rogers Arena
+URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2025020855#
+ games
+END:VEVENT
+BEGIN:VEVENT
+UID:nhl-2025020875@mooneyaoife.github.io
+DTSTAMP:20260714T181701Z
+DTSTART:20260202T023000Z
+DTEND:20260202T053000Z
+SUMMARY:Final: Vegas Golden Knights 3 - 4 Anaheim Ducks
+DESCRIPTION:Regular season. Times display in your calendar's local time. 
+ Open the NHL Tracker Game Centre for scores\, analytics and game details
+ .
+LOCATION:Honda Center
+URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2025020875#
+ games
+END:VEVENT
+BEGIN:VEVENT
+UID:nhl-2025020892@mooneyaoife.github.io
+DTSTAMP:20260714T181701Z
+DTSTART:20260204T030000Z
+DTEND:20260204T060000Z
+SUMMARY:Final: Seattle Kraken 2 - 4 Anaheim Ducks
+DESCRIPTION:Regular season. Times display in your calendar's local time. 
+ Open the NHL Tracker Game Centre for scores\, analytics and game details
+ .
+LOCATION:Honda Center
+URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2025020892#
+ games
+END:VEVENT
+BEGIN:VEVENT
+UID:nhl-2025020917@mooneyaoife.github.io
+DTSTAMP:20260714T181701Z
+DTSTART:20260226T033000Z
+DTEND:20260226T063000Z
+SUMMARY:Final: Edmonton Oilers 5 - 6 Anaheim Ducks
+DESCRIPTION:Regular season. Times display in your calendar's local time. 
+ Open the NHL Tracker Game Centre for scores\, analytics and game details
+ .
+LOCATION:Honda Center
+URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2025020917#
+ games
+END:VEVENT
+BEGIN:VEVENT
+UID:nhl-2025020933@mooneyaoife.github.io
+DTSTAMP:20260714T181701Z
+DTSTART:20260228T030000Z
+DTEND:20260228T060000Z
+SUMMARY:Final: Winnipeg Jets 4 - 5 Anaheim Ducks
+DESCRIPTION:Regular season. Times display in your calendar's local time. 
+ Open the NHL Tracker Game Centre for scores\, analytics and game details
+ .
+LOCATION:Honda Center
+URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2025020933#
+ games
+END:VEVENT
+BEGIN:VEVENT
+UID:nhl-2025020952@mooneyaoife.github.io
+DTSTAMP:20260714T181701Z
+DTSTART:20260302T010000Z
+DTEND:20260302T040000Z
+SUMMARY:Final: Calgary Flames 2 - 3 Anaheim Ducks
+DESCRIPTION:Regular season. Times display in your calendar's local time. 
+ Open the NHL Tracker Game Centre for scores\, analytics and game details
+ .
+LOCATION:Honda Center
+URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2025020952#
+ games
+END:VEVENT
+BEGIN:VEVENT
+UID:nhl-2025020968@mooneyaoife.github.io
+DTSTAMP:20260714T181701Z
+DTSTART:20260304T030000Z
+DTEND:20260304T060000Z
+SUMMARY:Final: Colorado Avalanche 5 - 1 Anaheim Ducks
+DESCRIPTION:Regular season. Times display in your calendar's local time. 
+ Open the NHL Tracker Game Centre for scores\, analytics and game details
+ .
+LOCATION:Honda Center
+URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2025020968#
+ games
+END:VEVENT
+BEGIN:VEVENT
+UID:nhl-2025020973@mooneyaoife.github.io
+DTSTAMP:20260714T181701Z
+DTSTART:20260305T030000Z
+DTEND:20260305T060000Z
+SUMMARY:Final: New York Islanders 1 - 5 Anaheim Ducks
+DESCRIPTION:Regular season. Times display in your calendar's local time. 
+ Open the NHL Tracker Game Centre for scores\, analytics and game details
+ .
+LOCATION:Honda Center
+URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2025020973#
+ games
+END:VEVENT
+BEGIN:VEVENT
+UID:nhl-2025020987@mooneyaoife.github.io
+DTSTAMP:20260714T181701Z
+DTSTART:20260307T020000Z
+DTEND:20260307T050000Z
+SUMMARY:Final: Montréal Canadiens 5 - 6 Anaheim Ducks
+DESCRIPTION:Regular season. Times display in your calendar's local time. 
+ Open the NHL Tracker Game Centre for scores\, analytics and game details
+ .
+LOCATION:Honda Center
+URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2025020987#
+ games
+END:VEVENT
+BEGIN:VEVENT
+UID:nhl-2025021006@mooneyaoife.github.io
+DTSTAMP:20260714T181701Z
+DTSTART:20260309T010000Z
+DTEND:20260309T040000Z
+SUMMARY:Final: St. Louis Blues 4 - 0 Anaheim Ducks
+DESCRIPTION:Regular season. Times display in your calendar's local time. 
+ Open the NHL Tracker Game Centre for scores\, analytics and game details
+ .
+LOCATION:Honda Center
+URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2025021006#
+ games
+END:VEVENT
+BEGIN:VEVENT
+UID:nhl-2025021022@mooneyaoife.github.io
+DTSTAMP:20260714T181701Z
+DTSTART:20260311T003000Z
+DTEND:20260311T033000Z
+SUMMARY:Final: Anaheim Ducks 4 - 1 Winnipeg Jets
+DESCRIPTION:Regular season. Times display in your calendar's local time. 
+ Open the NHL Tracker Game Centre for scores\, analytics and game details
+ .
+LOCATION:Canada Life Centre
+URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2025021022#
+ games
+END:VEVENT
+BEGIN:VEVENT
+UID:nhl-2025021029@mooneyaoife.github.io
+DTSTAMP:20260714T181701Z
+DTSTART:20260312T230000Z
+DTEND:20260313T020000Z
+SUMMARY:Final: Anaheim Ducks 4 - 6 Toronto Maple Leafs
+DESCRIPTION:Regular season. Times display in your calendar's local time. 
+ Open the NHL Tracker Game Centre for scores\, analytics and game details
+ .
+LOCATION:Scotiabank Arena
+URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2025021029#
+ games
+END:VEVENT
+BEGIN:VEVENT
+UID:nhl-2025021043@mooneyaoife.github.io
+DTSTAMP:20260714T181701Z
+DTSTART:20260314T170000Z
+DTEND:20260314T200000Z
+SUMMARY:Final: Anaheim Ducks 0 - 2 Ottawa Senators
+DESCRIPTION:Regular season. Times display in your calendar's local time. 
+ Open the NHL Tracker Game Centre for scores\, analytics and game details
+ .
+LOCATION:Canadian Tire Centre
+URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2025021043#
+ games
+END:VEVENT
+BEGIN:VEVENT
+UID:nhl-2025021059@mooneyaoife.github.io
+DTSTAMP:20260714T181701Z
+DTSTART:20260315T230000Z
+DTEND:20260316T020000Z
+SUMMARY:Final: Anaheim Ducks 4 - 3 Montréal Canadiens
+DESCRIPTION:Regular season. Times display in your calendar's local time. 
+ Open the NHL Tracker Game Centre for scores\, analytics and game details
+ .
+LOCATION:Centre Bell
+URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2025021059#
+ games
+END:VEVENT
+BEGIN:VEVENT
+UID:nhl-2025021082@mooneyaoife.github.io
+DTSTAMP:20260714T181701Z
+DTSTART:20260319T020000Z
+DTEND:20260319T050000Z
+SUMMARY:Final: Philadelphia Flyers 3 - 2 Anaheim Ducks
+DESCRIPTION:Regular season. Times display in your calendar's local time. 
+ Open the NHL Tracker Game Centre for scores\, analytics and game details
+ .
+LOCATION:Honda Center
+URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2025021082#
+ games
+END:VEVENT
+BEGIN:VEVENT
+UID:nhl-2025021098@mooneyaoife.github.io
+DTSTAMP:20260714T181701Z
+DTSTART:20260321T020000Z
+DTEND:20260321T050000Z
+SUMMARY:Final: Anaheim Ducks 4 - 1 Utah Mammoth
+DESCRIPTION:Regular season. Times display in your calendar's local time. 
+ Open the NHL Tracker Game Centre for scores\, analytics and game details
+ .
+LOCATION:Delta Center
+URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2025021098#
+ games
+END:VEVENT
+BEGIN:VEVENT
+UID:nhl-2025021117@mooneyaoife.github.io
+DTSTAMP:20260714T181701Z
+DTSTART:20260323T000000Z
+DTEND:20260323T030000Z
+SUMMARY:Final: Buffalo Sabres 5 - 6 Anaheim Ducks
+DESCRIPTION:Regular season. Times display in your calendar's local time. 
+ Open the NHL Tracker Game Centre for scores\, analytics and game details
+ .
+LOCATION:Honda Center
+URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2025021117#
+ games
+END:VEVENT
+BEGIN:VEVENT
+UID:nhl-2025021134@mooneyaoife.github.io
+DTSTAMP:20260714T181701Z
+DTSTART:20260325T020000Z
+DTEND:20260325T050000Z
+SUMMARY:Final: Anaheim Ducks 5 - 3 Vancouver Canucks
+DESCRIPTION:Regular season. Times display in your calendar's local time. 
+ Open the NHL Tracker Game Centre for scores\, analytics and game details
+ .
+LOCATION:Rogers Arena
+URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2025021134#
+ games
+END:VEVENT
+BEGIN:VEVENT
+UID:nhl-2025021147@mooneyaoife.github.io
+DTSTAMP:20260714T181701Z
+DTSTART:20260327T010000Z
+DTEND:20260327T040000Z
+SUMMARY:Final: Anaheim Ducks 3 - 2 Calgary Flames
+DESCRIPTION:Regular season. Times display in your calendar's local time. 
+ Open the NHL Tracker Game Centre for scores\, analytics and game details
+ .
+LOCATION:Scotiabank Saddledome
+URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2025021147#
+ games
+END:VEVENT
+BEGIN:VEVENT
+UID:nhl-2025021154@mooneyaoife.github.io
+DTSTAMP:20260714T181701Z
+DTSTART:20260328T193000Z
+DTEND:20260328T223000Z
+SUMMARY:Final: Anaheim Ducks 2 - 4 Edmonton Oilers
+DESCRIPTION:Regular season. Times display in your calendar's local time. 
+ Open the NHL Tracker Game Centre for scores\, analytics and game details
+ .
+LOCATION:Rogers Place
+URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2025021154#
+ games
+END:VEVENT
+BEGIN:VEVENT
+UID:nhl-2025021176@mooneyaoife.github.io
+DTSTAMP:20260714T181701Z
+DTSTART:20260331T020000Z
+DTEND:20260331T050000Z
+SUMMARY:Final: Toronto Maple Leafs 5 - 4 Anaheim Ducks
+DESCRIPTION:Regular season. Times display in your calendar's local time. 
+ Open the NHL Tracker Game Centre for scores\, analytics and game details
+ .
+LOCATION:Honda Center
+URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2025021176#
+ games
+END:VEVENT
+BEGIN:VEVENT
+UID:nhl-2025021190@mooneyaoife.github.io
+DTSTAMP:20260714T181701Z
+DTSTART:20260402T010000Z
+DTEND:20260402T040000Z
+SUMMARY:Final: Anaheim Ducks 3 - 4 San Jose Sharks
+DESCRIPTION:Regular season. Times display in your calendar's local time. 
+ Open the NHL Tracker Game Centre for scores\, analytics and game details
+ .
+LOCATION:SAP Center at San Jose
+URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2025021190#
+ games
+END:VEVENT
+BEGIN:VEVENT
+UID:nhl-2025021206@mooneyaoife.github.io
+DTSTAMP:20260714T181701Z
+DTSTART:20260404T020000Z
+DTEND:20260404T050000Z
+SUMMARY:Final: St. Louis Blues 6 - 2 Anaheim Ducks
+DESCRIPTION:Regular season. Times display in your calendar's local time. 
+ Open the NHL Tracker Game Centre for scores\, analytics and game details
+ .
+LOCATION:Honda Center
+URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2025021206#
+ games
+END:VEVENT
+BEGIN:VEVENT
+UID:nhl-2025021219@mooneyaoife.github.io
+DTSTAMP:20260714T181701Z
+DTSTART:20260405T020000Z
+DTEND:20260405T050000Z
+SUMMARY:Final: Calgary Flames 5 - 3 Anaheim Ducks
+DESCRIPTION:Regular season. Times display in your calendar's local time. 
+ Open the NHL Tracker Game Centre for scores\, analytics and game details
+ .
+LOCATION:Honda Center
+URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2025021219#
+ games
+END:VEVENT
+BEGIN:VEVENT
+UID:nhl-2025021243@mooneyaoife.github.io
+DTSTAMP:20260714T181701Z
+DTSTART:20260408T020000Z
+DTEND:20260408T050000Z
+SUMMARY:Final: Nashville Predators 5 - 0 Anaheim Ducks
+DESCRIPTION:Regular season. Times display in your calendar's local time. 
+ Open the NHL Tracker Game Centre for scores\, analytics and game details
+ .
+LOCATION:Honda Center
+URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2025021243#
+ games
+END:VEVENT
+BEGIN:VEVENT
+UID:nhl-2025021258@mooneyaoife.github.io
+DTSTAMP:20260714T181701Z
+DTSTART:20260410T020000Z
+DTEND:20260410T050000Z
+SUMMARY:Final: San Jose Sharks 1 - 6 Anaheim Ducks
+DESCRIPTION:Regular season. Times display in your calendar's local time. 
+ Open the NHL Tracker Game Centre for scores\, analytics and game details
+ .
+LOCATION:Honda Center
+URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2025021258#
+ games
+END:VEVENT
+BEGIN:VEVENT
+UID:nhl-2025021280@mooneyaoife.github.io
+DTSTAMP:20260714T181701Z
+DTSTART:20260413T000000Z
+DTEND:20260413T030000Z
+SUMMARY:Final: Vancouver Canucks 4 - 3 Anaheim Ducks
+DESCRIPTION:Regular season. Times display in your calendar's local time. 
+ Open the NHL Tracker Game Centre for scores\, analytics and game details
+ .
+LOCATION:Honda Center
+URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2025021280#
+ games
+END:VEVENT
+BEGIN:VEVENT
+UID:nhl-2025021296@mooneyaoife.github.io
+DTSTAMP:20260714T181701Z
+DTSTART:20260415T000000Z
+DTEND:20260415T030000Z
+SUMMARY:Final: Anaheim Ducks 2 - 3 Minnesota Wild
+DESCRIPTION:Regular season. Times display in your calendar's local time. 
+ Open the NHL Tracker Game Centre for scores\, analytics and game details
+ .
+LOCATION:Grand Casino Arena
+URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2025021296#
+ games
+END:VEVENT
+BEGIN:VEVENT
+UID:nhl-2025021307@mooneyaoife.github.io
+DTSTAMP:20260714T181701Z
+DTSTART:20260417T000000Z
+DTEND:20260417T030000Z
+SUMMARY:Final: Anaheim Ducks 5 - 4 Nashville Predators
+DESCRIPTION:Regular season. Times display in your calendar's local time. 
+ Open the NHL Tracker Game Centre for scores\, analytics and game details
+ .
+LOCATION:Bridgestone Arena
+URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2025021307#
+ games
+END:VEVENT
+BEGIN:VEVENT
+UID:nhl-2025030181@mooneyaoife.github.io
+DTSTAMP:20260714T181701Z
+DTSTART:20260421T020000Z
+DTEND:20260421T050000Z
+SUMMARY:Final: Anaheim Ducks 3 - 4 Edmonton Oilers
+DESCRIPTION:Playoffs. Times display in your calendar's local time. Open t
+ he NHL Tracker Game Centre for scores\, analytics and game details.
+LOCATION:Rogers Place
+URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2025030181#
+ games
+END:VEVENT
+BEGIN:VEVENT
+UID:nhl-2025030182@mooneyaoife.github.io
+DTSTAMP:20260714T181701Z
+DTSTART:20260423T020000Z
+DTEND:20260423T050000Z
+SUMMARY:Final: Anaheim Ducks 6 - 4 Edmonton Oilers
+DESCRIPTION:Playoffs. Times display in your calendar's local time. Open t
+ he NHL Tracker Game Centre for scores\, analytics and game details.
+LOCATION:Rogers Place
+URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2025030182#
+ games
+END:VEVENT
+BEGIN:VEVENT
+UID:nhl-2025030183@mooneyaoife.github.io
+DTSTAMP:20260714T181701Z
+DTSTART:20260425T020000Z
+DTEND:20260425T050000Z
+SUMMARY:Final: Edmonton Oilers 4 - 7 Anaheim Ducks
+DESCRIPTION:Playoffs. Times display in your calendar's local time. Open t
+ he NHL Tracker Game Centre for scores\, analytics and game details.
+LOCATION:Honda Center
+URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2025030183#
+ games
+END:VEVENT
+BEGIN:VEVENT
+UID:nhl-2025030184@mooneyaoife.github.io
+DTSTAMP:20260714T181701Z
+DTSTART:20260427T013000Z
+DTEND:20260427T043000Z
+SUMMARY:Final: Edmonton Oilers 3 - 4 Anaheim Ducks
+DESCRIPTION:Playoffs. Times display in your calendar's local time. Open t
+ he NHL Tracker Game Centre for scores\, analytics and game details.
+LOCATION:Honda Center
+URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2025030184#
+ games
+END:VEVENT
+BEGIN:VEVENT
+UID:nhl-2025030185@mooneyaoife.github.io
+DTSTAMP:20260714T181701Z
+DTSTART:20260429T020000Z
+DTEND:20260429T050000Z
+SUMMARY:Final: Anaheim Ducks 1 - 4 Edmonton Oilers
+DESCRIPTION:Playoffs. Times display in your calendar's local time. Open t
+ he NHL Tracker Game Centre for scores\, analytics and game details.
+LOCATION:Rogers Place
+URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2025030185#
+ games
+END:VEVENT
+BEGIN:VEVENT
+UID:nhl-2025030186@mooneyaoife.github.io
+DTSTAMP:20260714T181701Z
+DTSTART:20260501T020000Z
+DTEND:20260501T050000Z
+SUMMARY:Final: Edmonton Oilers 2 - 5 Anaheim Ducks
+DESCRIPTION:Playoffs. Times display in your calendar's local time. Open t
+ he NHL Tracker Game Centre for scores\, analytics and game details.
+LOCATION:Honda Center
+URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2025030186#
+ games
+END:VEVENT
+BEGIN:VEVENT
+UID:nhl-2025030241@mooneyaoife.github.io
+DTSTAMP:20260714T181701Z
+DTSTART:20260505T013000Z
+DTEND:20260505T043000Z
+SUMMARY:Final: Anaheim Ducks 1 - 3 Vegas Golden Knights
+DESCRIPTION:Playoffs. Times display in your calendar's local time. Open t
+ he NHL Tracker Game Centre for scores\, analytics and game details.
+LOCATION:T-Mobile Arena
+URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2025030241#
+ games
+END:VEVENT
+BEGIN:VEVENT
+UID:nhl-2025030242@mooneyaoife.github.io
+DTSTAMP:20260714T181701Z
+DTSTART:20260507T013000Z
+DTEND:20260507T043000Z
+SUMMARY:Final: Anaheim Ducks 3 - 1 Vegas Golden Knights
+DESCRIPTION:Playoffs. Times display in your calendar's local time. Open t
+ he NHL Tracker Game Centre for scores\, analytics and game details.
+LOCATION:T-Mobile Arena
+URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2025030242#
+ games
+END:VEVENT
+BEGIN:VEVENT
+UID:nhl-2025030243@mooneyaoife.github.io
+DTSTAMP:20260714T181701Z
+DTSTART:20260509T013000Z
+DTEND:20260509T043000Z
+SUMMARY:Final: Vegas Golden Knights 6 - 2 Anaheim Ducks
+DESCRIPTION:Playoffs. Times display in your calendar's local time. Open t
+ he NHL Tracker Game Centre for scores\, analytics and game details.
+LOCATION:Honda Center
+URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2025030243#
+ games
+END:VEVENT
+BEGIN:VEVENT
+UID:nhl-2025030244@mooneyaoife.github.io
+DTSTAMP:20260714T181701Z
+DTSTART:20260511T013000Z
+DTEND:20260511T043000Z
+SUMMARY:Final: Vegas Golden Knights 3 - 4 Anaheim Ducks
+DESCRIPTION:Playoffs. Times display in your calendar's local time. Open t
+ he NHL Tracker Game Centre for scores\, analytics and game details.
+LOCATION:Honda Center
+URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2025030244#
+ games
+END:VEVENT
+BEGIN:VEVENT
+UID:nhl-2025030245@mooneyaoife.github.io
+DTSTAMP:20260714T181701Z
+DTSTART:20260513T013000Z
+DTEND:20260513T043000Z
+SUMMARY:Final: Anaheim Ducks 2 - 3 Vegas Golden Knights
+DESCRIPTION:Playoffs. Times display in your calendar's local time. Open t
+ he NHL Tracker Game Centre for scores\, analytics and game details.
+LOCATION:T-Mobile Arena
+URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2025030245#
+ games
+END:VEVENT
+BEGIN:VEVENT
+UID:nhl-2025030246@mooneyaoife.github.io
+DTSTAMP:20260714T181701Z
+DTSTART:20260515T013000Z
+DTEND:20260515T043000Z
+SUMMARY:Final: Vegas Golden Knights 5 - 1 Anaheim Ducks
+DESCRIPTION:Playoffs. Times display in your calendar's local time. Open t
+ he NHL Tracker Game Centre for scores\, analytics and game details.
+LOCATION:Honda Center
+URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2025030246#
+ games
+END:VEVENT
+END:VCALENDAR

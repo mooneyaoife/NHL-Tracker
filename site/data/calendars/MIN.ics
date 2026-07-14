@@ -1,0 +1,1282 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//NHL Tracker//Team Calendar//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+X-WR-CALNAME:Minnesota Wild - NHL Tracker
+X-WR-TIMEZONE:Europe/London
+X-APPLE-CALENDAR-COLOR:#154734
+COLOR:#154734
+REFRESH-INTERVAL;VALUE=DURATION:PT6H
+X-PUBLISHED-TTL:PT6H
+BEGIN:VEVENT
+UID:nhl-2025010006@mooneyaoife.github.io
+DTSTAMP:20260714T181701Z
+DTSTART:20250921T210000Z
+DTEND:20250922T000000Z
+SUMMARY:Final: Minnesota Wild 3 - 2 Winnipeg Jets
+DESCRIPTION:Preseason. Times display in your calendar's local time. Open 
+ the NHL Tracker Game Centre for scores\, analytics and game details.
+LOCATION:Canada Life Centre
+URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2025010006#
+ games
+END:VEVENT
+BEGIN:VEVENT
+UID:nhl-2025010021@mooneyaoife.github.io
+DTSTAMP:20260714T181701Z
+DTSTART:20250924T000000Z
+DTEND:20250924T030000Z
+SUMMARY:Final: Minnesota Wild 2 - 3 Dallas Stars
+DESCRIPTION:Preseason. Times display in your calendar's local time. Open 
+ the NHL Tracker Game Centre for scores\, analytics and game details.
+LOCATION:American Airlines Center
+URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2025010021#
+ games
+END:VEVENT
+BEGIN:VEVENT
+UID:nhl-2025010038@mooneyaoife.github.io
+DTSTAMP:20260714T181701Z
+DTSTART:20250926T000000Z
+DTEND:20250926T030000Z
+SUMMARY:Final: Dallas Stars 5 - 2 Minnesota Wild
+DESCRIPTION:Preseason. Times display in your calendar's local time. Open 
+ the NHL Tracker Game Centre for scores\, analytics and game details.
+LOCATION:Grand Casino Arena
+URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2025010038#
+ games
+END:VEVENT
+BEGIN:VEVENT
+UID:nhl-2025010057@mooneyaoife.github.io
+DTSTAMP:20260714T181701Z
+DTSTART:20250928T220000Z
+DTEND:20250929T010000Z
+SUMMARY:Final: Chicago Blackhawks 4 - 1 Minnesota Wild
+DESCRIPTION:Preseason. Times display in your calendar's local time. Open 
+ the NHL Tracker Game Centre for scores\, analytics and game details.
+LOCATION:Grand Casino Arena
+URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2025010057#
+ games
+END:VEVENT
+BEGIN:VEVENT
+UID:nhl-2025010072@mooneyaoife.github.io
+DTSTAMP:20260714T181701Z
+DTSTART:20251001T000000Z
+DTEND:20251001T030000Z
+SUMMARY:Final: Winnipeg Jets 2 - 3 Minnesota Wild
+DESCRIPTION:Preseason. Times display in your calendar's local time. Open 
+ the NHL Tracker Game Centre for scores\, analytics and game details.
+LOCATION:Grand Casino Arena
+URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2025010072#
+ games
+END:VEVENT
+BEGIN:VEVENT
+UID:nhl-2025010086@mooneyaoife.github.io
+DTSTAMP:20260714T181701Z
+DTSTART:20251004T000000Z
+DTEND:20251004T030000Z
+SUMMARY:Final: Minnesota Wild 3 - 2 Chicago Blackhawks
+DESCRIPTION:Preseason. Times display in your calendar's local time. Open 
+ the NHL Tracker Game Centre for scores\, analytics and game details.
+LOCATION:United Center
+URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2025010086#
+ games
+END:VEVENT
+BEGIN:VEVENT
+UID:nhl-2025020015@mooneyaoife.github.io
+DTSTAMP:20260714T181701Z
+DTSTART:20251010T000000Z
+DTEND:20251010T030000Z
+SUMMARY:Final: Minnesota Wild 5 - 0 St. Louis Blues
+DESCRIPTION:Regular season. Times display in your calendar's local time. 
+ Open the NHL Tracker Game Centre for scores\, analytics and game details
+ .
+LOCATION:Enterprise Center
+URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2025020015#
+ games
+END:VEVENT
+BEGIN:VEVENT
+UID:nhl-2025020033@mooneyaoife.github.io
+DTSTAMP:20260714T181701Z
+DTSTART:20251012T000000Z
+DTEND:20251012T030000Z
+SUMMARY:Final: Columbus Blue Jackets 7 - 4 Minnesota Wild
+DESCRIPTION:Regular season. Times display in your calendar's local time. 
+ Open the NHL Tracker Game Centre for scores\, analytics and game details
+ .
+LOCATION:Grand Casino Arena
+URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2025020033#
+ games
+END:VEVENT
+BEGIN:VEVENT
+UID:nhl-2025020047@mooneyaoife.github.io
+DTSTAMP:20260714T181701Z
+DTSTART:20251014T000000Z
+DTEND:20251014T030000Z
+SUMMARY:Final: Los Angeles Kings 3 - 4 Minnesota Wild
+DESCRIPTION:Regular season. Times display in your calendar's local time. 
+ Open the NHL Tracker Game Centre for scores\, analytics and game details
+ .
+LOCATION:Grand Casino Arena
+URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2025020047#
+ games
+END:VEVENT
+BEGIN:VEVENT
+UID:nhl-2025020054@mooneyaoife.github.io
+DTSTAMP:20260714T181701Z
+DTSTART:20251015T013000Z
+DTEND:20251015T043000Z
+SUMMARY:Final: Minnesota Wild 2 - 5 Dallas Stars
+DESCRIPTION:Regular season. Times display in your calendar's local time. 
+ Open the NHL Tracker Game Centre for scores\, analytics and game details
+ .
+LOCATION:American Airlines Center
+URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2025020054#
+ games
+END:VEVENT
+BEGIN:VEVENT
+UID:nhl-2025020073@mooneyaoife.github.io
+DTSTAMP:20260714T181701Z
+DTSTART:20251017T230000Z
+DTEND:20251018T020000Z
+SUMMARY:Final: Minnesota Wild 1 - 5 Washington Capitals
+DESCRIPTION:Regular season. Times display in your calendar's local time. 
+ Open the NHL Tracker Game Centre for scores\, analytics and game details
+ .
+LOCATION:Capital One Arena
+URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2025020073#
+ games
+END:VEVENT
+BEGIN:VEVENT
+UID:nhl-2025020081@mooneyaoife.github.io
+DTSTAMP:20260714T181701Z
+DTSTART:20251018T230000Z
+DTEND:20251019T020000Z
+SUMMARY:Final: Minnesota Wild 1 - 2 Philadelphia Flyers
+DESCRIPTION:Regular season. Times display in your calendar's local time. 
+ Open the NHL Tracker Game Centre for scores\, analytics and game details
+ .
+LOCATION:Xfinity Mobile Arena
+URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2025020081#
+ games
+END:VEVENT
+BEGIN:VEVENT
+UID:nhl-2025020093@mooneyaoife.github.io
+DTSTAMP:20260714T181701Z
+DTSTART:20251020T230000Z
+DTEND:20251021T020000Z
+SUMMARY:Final: Minnesota Wild 3 - 1 New York Rangers
+DESCRIPTION:Regular season. Times display in your calendar's local time. 
+ Open the NHL Tracker Game Centre for scores\, analytics and game details
+ .
+LOCATION:Madison Square Garden
+URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2025020093#
+ games
+END:VEVENT
+BEGIN:VEVENT
+UID:nhl-2025020108@mooneyaoife.github.io
+DTSTAMP:20260714T181701Z
+DTSTART:20251022T230000Z
+DTEND:20251023T020000Z
+SUMMARY:Final: Minnesota Wild 1 - 4 New Jersey Devils
+DESCRIPTION:Regular season. Times display in your calendar's local time. 
+ Open the NHL Tracker Game Centre for scores\, analytics and game details
+ .
+LOCATION:Prudential Center
+URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2025020108#
+ games
+END:VEVENT
+BEGIN:VEVENT
+UID:nhl-2025020131@mooneyaoife.github.io
+DTSTAMP:20260714T181701Z
+DTSTART:20251025T220000Z
+DTEND:20251026T010000Z
+SUMMARY:Final: Utah Mammoth 6 - 2 Minnesota Wild
+DESCRIPTION:Regular season. Times display in your calendar's local time. 
+ Open the NHL Tracker Game Centre for scores\, analytics and game details
+ .
+LOCATION:Grand Casino Arena
+URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2025020131#
+ games
+END:VEVENT
+BEGIN:VEVENT
+UID:nhl-2025020142@mooneyaoife.github.io
+DTSTAMP:20260714T181701Z
+DTSTART:20251026T220000Z
+DTEND:20251027T010000Z
+SUMMARY:Final: San Jose Sharks 6 - 5 Minnesota Wild
+DESCRIPTION:Regular season. Times display in your calendar's local time. 
+ Open the NHL Tracker Game Centre for scores\, analytics and game details
+ .
+LOCATION:Grand Casino Arena
+URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2025020142#
+ games
+END:VEVENT
+BEGIN:VEVENT
+UID:nhl-2025020157@mooneyaoife.github.io
+DTSTAMP:20260714T181701Z
+DTSTART:20251029T000000Z
+DTEND:20251029T030000Z
+SUMMARY:Final: Winnipeg Jets 4 - 3 Minnesota Wild
+DESCRIPTION:Regular season. Times display in your calendar's local time. 
+ Open the NHL Tracker Game Centre for scores\, analytics and game details
+ .
+LOCATION:Grand Casino Arena
+URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2025020157#
+ games
+END:VEVENT
+BEGIN:VEVENT
+UID:nhl-2025020173@mooneyaoife.github.io
+DTSTAMP:20260714T181701Z
+DTSTART:20251031T000000Z
+DTEND:20251031T030000Z
+SUMMARY:Final: Pittsburgh Penguins 4 - 1 Minnesota Wild
+DESCRIPTION:Regular season. Times display in your calendar's local time. 
+ Open the NHL Tracker Game Centre for scores\, analytics and game details
+ .
+LOCATION:Grand Casino Arena
+URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2025020173#
+ games
+END:VEVENT
+BEGIN:VEVENT
+UID:nhl-2025020190@mooneyaoife.github.io
+DTSTAMP:20260714T181701Z
+DTSTART:20251101T230000Z
+DTEND:20251102T020000Z
+SUMMARY:Final: Vancouver Canucks 2 - 5 Minnesota Wild
+DESCRIPTION:Regular season. Times display in your calendar's local time. 
+ Open the NHL Tracker Game Centre for scores\, analytics and game details
+ .
+LOCATION:Grand Casino Arena
+URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2025020190#
+ games
+END:VEVENT
+BEGIN:VEVENT
+UID:nhl-2025020208@mooneyaoife.github.io
+DTSTAMP:20260714T181701Z
+DTSTART:20251105T010000Z
+DTEND:20251105T040000Z
+SUMMARY:Final: Nashville Predators 2 - 3 Minnesota Wild
+DESCRIPTION:Regular season. Times display in your calendar's local time. 
+ Open the NHL Tracker Game Centre for scores\, analytics and game details
+ .
+LOCATION:Grand Casino Arena
+URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2025020208#
+ games
+END:VEVENT
+BEGIN:VEVENT
+UID:nhl-2025020222@mooneyaoife.github.io
+DTSTAMP:20260714T181701Z
+DTSTART:20251107T000000Z
+DTEND:20251107T030000Z
+SUMMARY:Final: Minnesota Wild 3 - 4 Carolina Hurricanes
+DESCRIPTION:Regular season. Times display in your calendar's local time. 
+ Open the NHL Tracker Game Centre for scores\, analytics and game details
+ .
+LOCATION:Lenovo Center
+URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2025020222#
+ games
+END:VEVENT
+BEGIN:VEVENT
+UID:nhl-2025020228@mooneyaoife.github.io
+DTSTAMP:20260714T181701Z
+DTSTART:20251108T000000Z
+DTEND:20251108T030000Z
+SUMMARY:Final: Minnesota Wild 5 - 2 New York Islanders
+DESCRIPTION:Regular season. Times display in your calendar's local time. 
+ Open the NHL Tracker Game Centre for scores\, analytics and game details
+ .
+LOCATION:UBS Arena
+URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2025020228#
+ games
+END:VEVENT
+BEGIN:VEVENT
+UID:nhl-2025020249@mooneyaoife.github.io
+DTSTAMP:20260714T181701Z
+DTSTART:20251110T010000Z
+DTEND:20251110T040000Z
+SUMMARY:Final: Calgary Flames 0 - 2 Minnesota Wild
+DESCRIPTION:Regular season. Times display in your calendar's local time. 
+ Open the NHL Tracker Game Centre for scores\, analytics and game details
+ .
+LOCATION:Grand Casino Arena
+URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2025020249#
+ games
+END:VEVENT
+BEGIN:VEVENT
+UID:nhl-2025020261@mooneyaoife.github.io
+DTSTAMP:20260714T181701Z
+DTSTART:20251112T010000Z
+DTEND:20251112T040000Z
+SUMMARY:Final: San Jose Sharks 2 - 1 Minnesota Wild
+DESCRIPTION:Regular season. Times display in your calendar's local time. 
+ Open the NHL Tracker Game Centre for scores\, analytics and game details
+ .
+LOCATION:Grand Casino Arena
+URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2025020261#
+ games
+END:VEVENT
+BEGIN:VEVENT
+UID:nhl-2025020284@mooneyaoife.github.io
+DTSTAMP:20260714T181701Z
+DTSTART:20251115T230000Z
+DTEND:20251116T020000Z
+SUMMARY:Final: Anaheim Ducks 0 - 2 Minnesota Wild
+DESCRIPTION:Regular season. Times display in your calendar's local time. 
+ Open the NHL Tracker Game Centre for scores\, analytics and game details
+ .
+LOCATION:Grand Casino Arena
+URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2025020284#
+ games
+END:VEVENT
+BEGIN:VEVENT
+UID:nhl-2025020298@mooneyaoife.github.io
+DTSTAMP:20260714T181701Z
+DTSTART:20251116T230000Z
+DTEND:20251117T020000Z
+SUMMARY:Final: Vegas Golden Knights 2 - 3 Minnesota Wild
+DESCRIPTION:Regular season. Times display in your calendar's local time. 
+ Open the NHL Tracker Game Centre for scores\, analytics and game details
+ .
+LOCATION:Grand Casino Arena
+URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2025020298#
+ games
+END:VEVENT
+BEGIN:VEVENT
+UID:nhl-2025020317@mooneyaoife.github.io
+DTSTAMP:20260714T181701Z
+DTSTART:20251120T023000Z
+DTEND:20251120T053000Z
+SUMMARY:Final: Carolina Hurricanes 3 - 4 Minnesota Wild
+DESCRIPTION:Regular season. Times display in your calendar's local time. 
+ Open the NHL Tracker Game Centre for scores\, analytics and game details
+ .
+LOCATION:Grand Casino Arena
+URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2025020317#
+ games
+END:VEVENT
+BEGIN:VEVENT
+UID:nhl-2025020332@mooneyaoife.github.io
+DTSTAMP:20260714T181701Z
+DTSTART:20251122T000000Z
+DTEND:20251122T030000Z
+SUMMARY:Final: Minnesota Wild 5 - 0 Pittsburgh Penguins
+DESCRIPTION:Regular season. Times display in your calendar's local time. 
+ Open the NHL Tracker Game Centre for scores\, analytics and game details
+ .
+LOCATION:PPG Paints Arena
+URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2025020332#
+ games
+END:VEVENT
+BEGIN:VEVENT
+UID:nhl-2025020348@mooneyaoife.github.io
+DTSTAMP:20260714T181701Z
+DTSTART:20251123T210000Z
+DTEND:20251124T000000Z
+SUMMARY:Final: Minnesota Wild 3 - 0 Winnipeg Jets
+DESCRIPTION:Regular season. Times display in your calendar's local time. 
+ Open the NHL Tracker Game Centre for scores\, analytics and game details
+ .
+LOCATION:Canada Life Centre
+URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2025020348#
+ games
+END:VEVENT
+BEGIN:VEVENT
+UID:nhl-2025020370@mooneyaoife.github.io
+DTSTAMP:20260714T181701Z
+DTSTART:20251127T013000Z
+DTEND:20251127T043000Z
+SUMMARY:Final: Minnesota Wild 4 - 3 Chicago Blackhawks
+DESCRIPTION:Regular season. Times display in your calendar's local time. 
+ Open the NHL Tracker Game Centre for scores\, analytics and game details
+ .
+LOCATION:United Center
+URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2025020370#
+ games
+END:VEVENT
+BEGIN:VEVENT
+UID:nhl-2025020378@mooneyaoife.github.io
+DTSTAMP:20260714T181701Z
+DTSTART:20251128T203000Z
+DTEND:20251128T233000Z
+SUMMARY:Final: Colorado Avalanche 2 - 3 Minnesota Wild
+DESCRIPTION:Regular season. Times display in your calendar's local time. 
+ Open the NHL Tracker Game Centre for scores\, analytics and game details
+ .
+LOCATION:Grand Casino Arena
+URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2025020378#
+ games
+END:VEVENT
+BEGIN:VEVENT
+UID:nhl-2025020399@mooneyaoife.github.io
+DTSTAMP:20260714T181701Z
+DTSTART:20251130T010000Z
+DTEND:20251130T040000Z
+SUMMARY:Final: Buffalo Sabres 3 - 2 Minnesota Wild
+DESCRIPTION:Regular season. Times display in your calendar's local time. 
+ Open the NHL Tracker Game Centre for scores\, analytics and game details
+ .
+LOCATION:Grand Casino Arena
+URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2025020399#
+ games
+END:VEVENT
+BEGIN:VEVENT
+UID:nhl-2025020418@mooneyaoife.github.io
+DTSTAMP:20260714T181701Z
+DTSTART:20251203T020000Z
+DTEND:20251203T050000Z
+SUMMARY:Final: Minnesota Wild 1 - 0 Edmonton Oilers
+DESCRIPTION:Regular season. Times display in your calendar's local time. 
+ Open the NHL Tracker Game Centre for scores\, analytics and game details
+ .
+LOCATION:Rogers Place
+URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2025020418#
+ games
+END:VEVENT
+BEGIN:VEVENT
+UID:nhl-2025020433@mooneyaoife.github.io
+DTSTAMP:20260714T181701Z
+DTSTART:20251205T020000Z
+DTEND:20251205T050000Z
+SUMMARY:Final: Minnesota Wild 1 - 4 Calgary Flames
+DESCRIPTION:Regular season. Times display in your calendar's local time. 
+ Open the NHL Tracker Game Centre for scores\, analytics and game details
+ .
+LOCATION:Scotiabank Saddledome
+URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2025020433#
+ games
+END:VEVENT
+BEGIN:VEVENT
+UID:nhl-2025020451@mooneyaoife.github.io
+DTSTAMP:20260714T181701Z
+DTSTART:20251207T030000Z
+DTEND:20251207T060000Z
+SUMMARY:Final: Minnesota Wild 2 - 4 Vancouver Canucks
+DESCRIPTION:Regular season. Times display in your calendar's local time. 
+ Open the NHL Tracker Game Centre for scores\, analytics and game details
+ .
+LOCATION:Rogers Arena
+URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2025020451#
+ games
+END:VEVENT
+BEGIN:VEVENT
+UID:nhl-2025020465@mooneyaoife.github.io
+DTSTAMP:20260714T181701Z
+DTSTART:20251209T030000Z
+DTEND:20251209T060000Z
+SUMMARY:Final: Minnesota Wild 4 - 1 Seattle Kraken
+DESCRIPTION:Regular season. Times display in your calendar's local time. 
+ Open the NHL Tracker Game Centre for scores\, analytics and game details
+ .
+LOCATION:Climate Pledge Arena
+URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2025020465#
+ games
+END:VEVENT
+BEGIN:VEVENT
+UID:nhl-2025020488@mooneyaoife.github.io
+DTSTAMP:20260714T181701Z
+DTSTART:20251212T010000Z
+DTEND:20251212T040000Z
+SUMMARY:Final: Dallas Stars 2 - 5 Minnesota Wild
+DESCRIPTION:Regular season. Times display in your calendar's local time. 
+ Open the NHL Tracker Game Centre for scores\, analytics and game details
+ .
+LOCATION:Grand Casino Arena
+URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2025020488#
+ games
+END:VEVENT
+BEGIN:VEVENT
+UID:nhl-2025020496@mooneyaoife.github.io
+DTSTAMP:20260714T181701Z
+DTSTART:20251213T190000Z
+DTEND:20251213T220000Z
+SUMMARY:Final: Ottawa Senators 2 - 3 Minnesota Wild
+DESCRIPTION:Regular season. Times display in your calendar's local time. 
+ Open the NHL Tracker Game Centre for scores\, analytics and game details
+ .
+LOCATION:Grand Casino Arena
+URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2025020496#
+ games
+END:VEVENT
+BEGIN:VEVENT
+UID:nhl-2025020511@mooneyaoife.github.io
+DTSTAMP:20260714T181701Z
+DTSTART:20251214T230000Z
+DTEND:20251215T020000Z
+SUMMARY:Final: Boston Bruins 2 - 6 Minnesota Wild
+DESCRIPTION:Regular season. Times display in your calendar's local time. 
+ Open the NHL Tracker Game Centre for scores\, analytics and game details
+ .
+LOCATION:Grand Casino Arena
+URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2025020511#
+ games
+END:VEVENT
+BEGIN:VEVENT
+UID:nhl-2025020526@mooneyaoife.github.io
+DTSTAMP:20260714T181701Z
+DTSTART:20251217T010000Z
+DTEND:20251217T040000Z
+SUMMARY:Final: Washington Capitals 0 - 5 Minnesota Wild
+DESCRIPTION:Regular season. Times display in your calendar's local time. 
+ Open the NHL Tracker Game Centre for scores\, analytics and game details
+ .
+LOCATION:Grand Casino Arena
+URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2025020526#
+ games
+END:VEVENT
+BEGIN:VEVENT
+UID:nhl-2025020540@mooneyaoife.github.io
+DTSTAMP:20260714T181701Z
+DTSTART:20251219T000000Z
+DTEND:20251219T030000Z
+SUMMARY:Final: Minnesota Wild 5 - 2 Columbus Blue Jackets
+DESCRIPTION:Regular season. Times display in your calendar's local time. 
+ Open the NHL Tracker Game Centre for scores\, analytics and game details
+ .
+LOCATION:Nationwide Arena
+URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2025020540#
+ games
+END:VEVENT
+BEGIN:VEVENT
+UID:nhl-2025020552@mooneyaoife.github.io
+DTSTAMP:20260714T181701Z
+DTSTART:20251220T200000Z
+DTEND:20251220T230000Z
+SUMMARY:Final: Edmonton Oilers 2 - 5 Minnesota Wild
+DESCRIPTION:Regular season. Times display in your calendar's local time. 
+ Open the NHL Tracker Game Centre for scores\, analytics and game details
+ .
+LOCATION:Grand Casino Arena
+URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2025020552#
+ games
+END:VEVENT
+BEGIN:VEVENT
+UID:nhl-2025020563@mooneyaoife.github.io
+DTSTAMP:20260714T181701Z
+DTSTART:20251221T230000Z
+DTEND:20251222T020000Z
+SUMMARY:Final: Colorado Avalanche 5 - 1 Minnesota Wild
+DESCRIPTION:Regular season. Times display in your calendar's local time. 
+ Open the NHL Tracker Game Centre for scores\, analytics and game details
+ .
+LOCATION:Grand Casino Arena
+URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2025020563#
+ games
+END:VEVENT
+BEGIN:VEVENT
+UID:nhl-2025020582@mooneyaoife.github.io
+DTSTAMP:20260714T181701Z
+DTSTART:20251224T010000Z
+DTEND:20251224T040000Z
+SUMMARY:Final: Nashville Predators 3 - 2 Minnesota Wild
+DESCRIPTION:Regular season. Times display in your calendar's local time. 
+ Open the NHL Tracker Game Centre for scores\, analytics and game details
+ .
+LOCATION:Grand Casino Arena
+URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2025020582#
+ games
+END:VEVENT
+BEGIN:VEVENT
+UID:nhl-2025020594@mooneyaoife.github.io
+DTSTAMP:20260714T181701Z
+DTSTART:20251228T000000Z
+DTEND:20251228T030000Z
+SUMMARY:Final: Minnesota Wild 4 - 3 Winnipeg Jets
+DESCRIPTION:Regular season. Times display in your calendar's local time. 
+ Open the NHL Tracker Game Centre for scores\, analytics and game details
+ .
+LOCATION:Canada Life Centre
+URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2025020594#
+ games
+END:VEVENT
+BEGIN:VEVENT
+UID:nhl-2025020614@mooneyaoife.github.io
+DTSTAMP:20260714T181701Z
+DTSTART:20251230T030000Z
+DTEND:20251230T060000Z
+SUMMARY:Final: Minnesota Wild 5 - 2 Vegas Golden Knights
+DESCRIPTION:Regular season. Times display in your calendar's local time. 
+ Open the NHL Tracker Game Centre for scores\, analytics and game details
+ .
+LOCATION:T-Mobile Arena
+URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2025020614#
+ games
+END:VEVENT
+BEGIN:VEVENT
+UID:nhl-2025020625@mooneyaoife.github.io
+DTSTAMP:20260714T181701Z
+DTSTART:20251231T210000Z
+DTEND:20260101T000000Z
+SUMMARY:Final: Minnesota Wild 3 - 4 San Jose Sharks
+DESCRIPTION:Regular season. Times display in your calendar's local time. 
+ Open the NHL Tracker Game Centre for scores\, analytics and game details
+ .
+LOCATION:SAP Center at San Jose
+URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2025020625#
+ games
+END:VEVENT
+BEGIN:VEVENT
+UID:nhl-2025020643@mooneyaoife.github.io
+DTSTAMP:20260714T181701Z
+DTSTART:20260103T033000Z
+DTEND:20260103T063000Z
+SUMMARY:Final: Minnesota Wild 5 - 2 Anaheim Ducks
+DESCRIPTION:Regular season. Times display in your calendar's local time. 
+ Open the NHL Tracker Game Centre for scores\, analytics and game details
+ .
+LOCATION:Honda Center
+URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2025020643#
+ games
+END:VEVENT
+BEGIN:VEVENT
+UID:nhl-2025020655@mooneyaoife.github.io
+DTSTAMP:20260714T181701Z
+DTSTART:20260104T020000Z
+DTEND:20260104T050000Z
+SUMMARY:Final: Minnesota Wild 4 - 5 Los Angeles Kings
+DESCRIPTION:Regular season. Times display in your calendar's local time. 
+ Open the NHL Tracker Game Centre for scores\, analytics and game details
+ .
+LOCATION:Crypto.com Arena
+URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2025020655#
+ games
+END:VEVENT
+BEGIN:VEVENT
+UID:nhl-2025020666@mooneyaoife.github.io
+DTSTAMP:20260714T181701Z
+DTSTART:20260106T033000Z
+DTEND:20260106T063000Z
+SUMMARY:Final: Minnesota Wild 2 - 4 Los Angeles Kings
+DESCRIPTION:Regular season. Times display in your calendar's local time. 
+ Open the NHL Tracker Game Centre for scores\, analytics and game details
+ .
+LOCATION:Crypto.com Arena
+URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2025020666#
+ games
+END:VEVENT
+BEGIN:VEVENT
+UID:nhl-2025020693@mooneyaoife.github.io
+DTSTAMP:20260714T181701Z
+DTSTART:20260109T030000Z
+DTEND:20260109T060000Z
+SUMMARY:Final: Minnesota Wild 3 - 2 Seattle Kraken
+DESCRIPTION:Regular season. Times display in your calendar's local time. 
+ Open the NHL Tracker Game Centre for scores\, analytics and game details
+ .
+LOCATION:Climate Pledge Arena
+URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2025020693#
+ games
+END:VEVENT
+BEGIN:VEVENT
+UID:nhl-2025020708@mooneyaoife.github.io
+DTSTAMP:20260714T181701Z
+DTSTART:20260111T010000Z
+DTEND:20260111T040000Z
+SUMMARY:Final: New York Islanders 4 - 3 Minnesota Wild
+DESCRIPTION:Regular season. Times display in your calendar's local time. 
+ Open the NHL Tracker Game Centre for scores\, analytics and game details
+ .
+LOCATION:Grand Casino Arena
+URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2025020708#
+ games
+END:VEVENT
+BEGIN:VEVENT
+UID:nhl-2025020721@mooneyaoife.github.io
+DTSTAMP:20260714T181701Z
+DTSTART:20260113T010000Z
+DTEND:20260113T040000Z
+SUMMARY:Final: New Jersey Devils 5 - 2 Minnesota Wild
+DESCRIPTION:Regular season. Times display in your calendar's local time. 
+ Open the NHL Tracker Game Centre for scores\, analytics and game details
+ .
+LOCATION:Grand Casino Arena
+URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2025020721#
+ games
+END:VEVENT
+BEGIN:VEVENT
+UID:nhl-2025020744@mooneyaoife.github.io
+DTSTAMP:20260714T181701Z
+DTSTART:20260116T010000Z
+DTEND:20260116T040000Z
+SUMMARY:Final: Winnipeg Jets 6 - 2 Minnesota Wild
+DESCRIPTION:Regular season. Times display in your calendar's local time. 
+ Open the NHL Tracker Game Centre for scores\, analytics and game details
+ .
+LOCATION:Grand Casino Arena
+URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2025020744#
+ games
+END:VEVENT
+BEGIN:VEVENT
+UID:nhl-2025020754@mooneyaoife.github.io
+DTSTAMP:20260714T181701Z
+DTSTART:20260117T173000Z
+DTEND:20260117T203000Z
+SUMMARY:Final: Minnesota Wild 5 - 4 Buffalo Sabres
+DESCRIPTION:Regular season. Times display in your calendar's local time. 
+ Open the NHL Tracker Game Centre for scores\, analytics and game details
+ .
+LOCATION:KeyBank Center
+URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2025020754#
+ games
+END:VEVENT
+BEGIN:VEVENT
+UID:nhl-2025020774@mooneyaoife.github.io
+DTSTAMP:20260714T181701Z
+DTSTART:20260120T003000Z
+DTEND:20260120T033000Z
+SUMMARY:Final: Minnesota Wild 6 - 3 Toronto Maple Leafs
+DESCRIPTION:Regular season. Times display in your calendar's local time. 
+ Open the NHL Tracker Game Centre for scores\, analytics and game details
+ .
+LOCATION:Scotiabank Arena
+URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2025020774#
+ games
+END:VEVENT
+BEGIN:VEVENT
+UID:nhl-2025020780@mooneyaoife.github.io
+DTSTAMP:20260714T181701Z
+DTSTART:20260121T000000Z
+DTEND:20260121T030000Z
+SUMMARY:Final: Minnesota Wild 3 - 4 Montréal Canadiens
+DESCRIPTION:Regular season. Times display in your calendar's local time. 
+ Open the NHL Tracker Game Centre for scores\, analytics and game details
+ .
+LOCATION:Centre Bell
+URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2025020780#
+ games
+END:VEVENT
+BEGIN:VEVENT
+UID:nhl-2025020801@mooneyaoife.github.io
+DTSTAMP:20260714T181701Z
+DTSTART:20260123T023000Z
+DTEND:20260123T053000Z
+SUMMARY:Final: Detroit Red Wings 3 - 4 Minnesota Wild
+DESCRIPTION:Regular season. Times display in your calendar's local time. 
+ Open the NHL Tracker Game Centre for scores\, analytics and game details
+ .
+LOCATION:Grand Casino Arena
+URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2025020801#
+ games
+END:VEVENT
+BEGIN:VEVENT
+UID:nhl-2025020817@mooneyaoife.github.io
+DTSTAMP:20260714T181701Z
+DTSTART:20260125T020000Z
+DTEND:20260125T050000Z
+SUMMARY:Final: Florida Panthers 4 - 3 Minnesota Wild
+DESCRIPTION:Regular season. Times display in your calendar's local time. 
+ Open the NHL Tracker Game Centre for scores\, analytics and game details
+ .
+LOCATION:Grand Casino Arena
+URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2025020817#
+ games
+END:VEVENT
+BEGIN:VEVENT
+UID:nhl-2025020837@mooneyaoife.github.io
+DTSTAMP:20260714T181701Z
+DTSTART:20260128T010000Z
+DTEND:20260128T040000Z
+SUMMARY:Final: Chicago Blackhawks 3 - 4 Minnesota Wild
+DESCRIPTION:Regular season. Times display in your calendar's local time. 
+ Open the NHL Tracker Game Centre for scores\, analytics and game details
+ .
+LOCATION:Grand Casino Arena
+URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2025020837#
+ games
+END:VEVENT
+BEGIN:VEVENT
+UID:nhl-2025020853@mooneyaoife.github.io
+DTSTAMP:20260714T181701Z
+DTSTART:20260130T010000Z
+DTEND:20260130T040000Z
+SUMMARY:Final: Calgary Flames 1 - 4 Minnesota Wild
+DESCRIPTION:Regular season. Times display in your calendar's local time. 
+ Open the NHL Tracker Game Centre for scores\, analytics and game details
+ .
+LOCATION:Grand Casino Arena
+URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2025020853#
+ games
+END:VEVENT
+BEGIN:VEVENT
+UID:nhl-2025020871@mooneyaoife.github.io
+DTSTAMP:20260714T181701Z
+DTSTART:20260201T030000Z
+DTEND:20260201T060000Z
+SUMMARY:Final: Minnesota Wild 7 - 3 Edmonton Oilers
+DESCRIPTION:Regular season. Times display in your calendar's local time. 
+ Open the NHL Tracker Game Centre for scores\, analytics and game details
+ .
+LOCATION:Rogers Place
+URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2025020871#
+ games
+END:VEVENT
+BEGIN:VEVENT
+UID:nhl-2025020879@mooneyaoife.github.io
+DTSTAMP:20260714T181701Z
+DTSTART:20260203T003000Z
+DTEND:20260203T033000Z
+SUMMARY:Final: Montréal Canadiens 3 - 4 Minnesota Wild
+DESCRIPTION:Regular season. Times display in your calendar's local time. 
+ Open the NHL Tracker Game Centre for scores\, analytics and game details
+ .
+LOCATION:Grand Casino Arena
+URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2025020879#
+ games
+END:VEVENT
+BEGIN:VEVENT
+UID:nhl-2025020896@mooneyaoife.github.io
+DTSTAMP:20260714T181701Z
+DTSTART:20260205T010000Z
+DTEND:20260205T040000Z
+SUMMARY:Final: Minnesota Wild 6 - 5 Nashville Predators
+DESCRIPTION:Regular season. Times display in your calendar's local time. 
+ Open the NHL Tracker Game Centre for scores\, analytics and game details
+ .
+LOCATION:Bridgestone Arena
+URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2025020896#
+ games
+END:VEVENT
+BEGIN:VEVENT
+UID:nhl-2025020927@mooneyaoife.github.io
+DTSTAMP:20260714T181701Z
+DTSTART:20260227T020000Z
+DTEND:20260227T050000Z
+SUMMARY:Final: Minnesota Wild 5 - 2 Colorado Avalanche
+DESCRIPTION:Regular season. Times display in your calendar's local time. 
+ Open the NHL Tracker Game Centre for scores\, analytics and game details
+ .
+LOCATION:Ball Arena
+URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2025020927#
+ games
+END:VEVENT
+BEGIN:VEVENT
+UID:nhl-2025020932@mooneyaoife.github.io
+DTSTAMP:20260714T181701Z
+DTSTART:20260228T020000Z
+DTEND:20260228T050000Z
+SUMMARY:Final: Minnesota Wild 2 - 5 Utah Mammoth
+DESCRIPTION:Regular season. Times display in your calendar's local time. 
+ Open the NHL Tracker Game Centre for scores\, analytics and game details
+ .
+LOCATION:Delta Center
+URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2025020932#
+ games
+END:VEVENT
+BEGIN:VEVENT
+UID:nhl-2025020951@mooneyaoife.github.io
+DTSTAMP:20260714T181701Z
+DTSTART:20260301T220000Z
+DTEND:20260302T010000Z
+SUMMARY:Final: St. Louis Blues 3 - 1 Minnesota Wild
+DESCRIPTION:Regular season. Times display in your calendar's local time. 
+ Open the NHL Tracker Game Centre for scores\, analytics and game details
+ .
+LOCATION:Grand Casino Arena
+URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2025020951#
+ games
+END:VEVENT
+BEGIN:VEVENT
+UID:nhl-2025020967@mooneyaoife.github.io
+DTSTAMP:20260714T181701Z
+DTSTART:20260304T023000Z
+DTEND:20260304T053000Z
+SUMMARY:Final: Tampa Bay Lightning 1 - 5 Minnesota Wild
+DESCRIPTION:Regular season. Times display in your calendar's local time. 
+ Open the NHL Tracker Game Centre for scores\, analytics and game details
+ .
+LOCATION:Grand Casino Arena
+URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2025020967#
+ games
+END:VEVENT
+BEGIN:VEVENT
+UID:nhl-2025020988@mooneyaoife.github.io
+DTSTAMP:20260714T181701Z
+DTSTART:20260307T030000Z
+DTEND:20260307T060000Z
+SUMMARY:Final: Minnesota Wild 4 - 2 Vegas Golden Knights
+DESCRIPTION:Regular season. Times display in your calendar's local time. 
+ Open the NHL Tracker Game Centre for scores\, analytics and game details
+ .
+LOCATION:T-Mobile Arena
+URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2025020988#
+ games
+END:VEVENT
+BEGIN:VEVENT
+UID:nhl-2025021001@mooneyaoife.github.io
+DTSTAMP:20260714T181701Z
+DTSTART:20260308T180000Z
+DTEND:20260308T210000Z
+SUMMARY:Final: Minnesota Wild 2 - 3 Colorado Avalanche
+DESCRIPTION:Regular season. Times display in your calendar's local time. 
+ Open the NHL Tracker Game Centre for scores\, analytics and game details
+ .
+LOCATION:Ball Arena
+URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2025021001#
+ games
+END:VEVENT
+BEGIN:VEVENT
+UID:nhl-2025021021@mooneyaoife.github.io
+DTSTAMP:20260714T181701Z
+DTSTART:20260311T000000Z
+DTEND:20260311T030000Z
+SUMMARY:Final: Utah Mammoth 0 - 5 Minnesota Wild
+DESCRIPTION:Regular season. Times display in your calendar's local time. 
+ Open the NHL Tracker Game Centre for scores\, analytics and game details
+ .
+LOCATION:Grand Casino Arena
+URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2025021021#
+ games
+END:VEVENT
+BEGIN:VEVENT
+UID:nhl-2025021035@mooneyaoife.github.io
+DTSTAMP:20260714T181701Z
+DTSTART:20260313T000000Z
+DTEND:20260313T030000Z
+SUMMARY:Final: Philadelphia Flyers 3 - 2 Minnesota Wild
+DESCRIPTION:Regular season. Times display in your calendar's local time. 
+ Open the NHL Tracker Game Centre for scores\, analytics and game details
+ .
+LOCATION:Grand Casino Arena
+URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2025021035#
+ games
+END:VEVENT
+BEGIN:VEVENT
+UID:nhl-2025021046@mooneyaoife.github.io
+DTSTAMP:20260714T181701Z
+DTSTART:20260314T220000Z
+DTEND:20260315T010000Z
+SUMMARY:Final: New York Rangers 4 - 2 Minnesota Wild
+DESCRIPTION:Regular season. Times display in your calendar's local time. 
+ Open the NHL Tracker Game Centre for scores\, analytics and game details
+ .
+LOCATION:Grand Casino Arena
+URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2025021046#
+ games
+END:VEVENT
+BEGIN:VEVENT
+UID:nhl-2025021060@mooneyaoife.github.io
+DTSTAMP:20260714T181701Z
+DTSTART:20260315T233000Z
+DTEND:20260316T023000Z
+SUMMARY:Final: Toronto Maple Leafs 4 - 2 Minnesota Wild
+DESCRIPTION:Regular season. Times display in your calendar's local time. 
+ Open the NHL Tracker Game Centre for scores\, analytics and game details
+ .
+LOCATION:Grand Casino Arena
+URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2025021060#
+ games
+END:VEVENT
+BEGIN:VEVENT
+UID:nhl-2025021072@mooneyaoife.github.io
+DTSTAMP:20260714T181701Z
+DTSTART:20260317T233000Z
+DTEND:20260318T023000Z
+SUMMARY:Final: Minnesota Wild 4 - 3 Chicago Blackhawks
+DESCRIPTION:Regular season. Times display in your calendar's local time. 
+ Open the NHL Tracker Game Centre for scores\, analytics and game details
+ .
+LOCATION:United Center
+URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2025021072#
+ games
+END:VEVENT
+BEGIN:VEVENT
+UID:nhl-2025021088@mooneyaoife.github.io
+DTSTAMP:20260714T181701Z
+DTSTART:20260319T233000Z
+DTEND:20260320T023000Z
+SUMMARY:Final: Chicago Blackhawks 2 - 1 Minnesota Wild
+DESCRIPTION:Regular season. Times display in your calendar's local time. 
+ Open the NHL Tracker Game Centre for scores\, analytics and game details
+ .
+LOCATION:Grand Casino Arena
+URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2025021088#
+ games
+END:VEVENT
+BEGIN:VEVENT
+UID:nhl-2025021101@mooneyaoife.github.io
+DTSTAMP:20260714T181701Z
+DTSTART:20260321T200000Z
+DTEND:20260321T230000Z
+SUMMARY:Final: Dallas Stars 1 - 2 Minnesota Wild
+DESCRIPTION:Regular season. Times display in your calendar's local time. 
+ Open the NHL Tracker Game Centre for scores\, analytics and game details
+ .
+LOCATION:Grand Casino Arena
+URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2025021101#
+ games
+END:VEVENT
+BEGIN:VEVENT
+UID:nhl-2025021127@mooneyaoife.github.io
+DTSTAMP:20260714T181701Z
+DTSTART:20260324T233000Z
+DTEND:20260325T023000Z
+SUMMARY:Final: Minnesota Wild 3 - 6 Tampa Bay Lightning
+DESCRIPTION:Regular season. Times display in your calendar's local time. 
+ Open the NHL Tracker Game Centre for scores\, analytics and game details
+ .
+LOCATION:Benchmark International Arena
+URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2025021127#
+ games
+END:VEVENT
+BEGIN:VEVENT
+UID:nhl-2025021140@mooneyaoife.github.io
+DTSTAMP:20260714T181701Z
+DTSTART:20260326T230000Z
+DTEND:20260327T020000Z
+SUMMARY:Final: Minnesota Wild 3 - 2 Florida Panthers
+DESCRIPTION:Regular season. Times display in your calendar's local time. 
+ Open the NHL Tracker Game Centre for scores\, analytics and game details
+ .
+LOCATION:Amerant Bank Arena
+URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2025021140#
+ games
+END:VEVENT
+BEGIN:VEVENT
+UID:nhl-2025021155@mooneyaoife.github.io
+DTSTAMP:20260714T181701Z
+DTSTART:20260328T210000Z
+DTEND:20260329T000000Z
+SUMMARY:Final: Minnesota Wild 3 - 6 Boston Bruins
+DESCRIPTION:Regular season. Times display in your calendar's local time. 
+ Open the NHL Tracker Game Centre for scores\, analytics and game details
+ .
+LOCATION:TD Garden
+URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2025021155#
+ games
+END:VEVENT
+BEGIN:VEVENT
+UID:nhl-2025021199@mooneyaoife.github.io
+DTSTAMP:20260714T181701Z
+DTSTART:20260403T000000Z
+DTEND:20260403T030000Z
+SUMMARY:Final: Vancouver Canucks 2 - 5 Minnesota Wild
+DESCRIPTION:Regular season. Times display in your calendar's local time. 
+ Open the NHL Tracker Game Centre for scores\, analytics and game details
+ .
+LOCATION:Grand Casino Arena
+URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2025021199#
+ games
+END:VEVENT
+BEGIN:VEVENT
+UID:nhl-2025021208@mooneyaoife.github.io
+DTSTAMP:20260714T181701Z
+DTSTART:20260404T170000Z
+DTEND:20260404T200000Z
+SUMMARY:Final: Minnesota Wild 4 - 1 Ottawa Senators
+DESCRIPTION:Regular season. Times display in your calendar's local time. 
+ Open the NHL Tracker Game Centre for scores\, analytics and game details
+ .
+LOCATION:Canadian Tire Centre
+URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2025021208#
+ games
+END:VEVENT
+BEGIN:VEVENT
+UID:nhl-2025021222@mooneyaoife.github.io
+DTSTAMP:20260714T181701Z
+DTSTART:20260405T170000Z
+DTEND:20260405T200000Z
+SUMMARY:Final: Minnesota Wild 5 - 4 Detroit Red Wings
+DESCRIPTION:Regular season. Times display in your calendar's local time. 
+ Open the NHL Tracker Game Centre for scores\, analytics and game details
+ .
+LOCATION:Little Caesars Arena
+URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2025021222#
+ games
+END:VEVENT
+BEGIN:VEVENT
+UID:nhl-2025021240@mooneyaoife.github.io
+DTSTAMP:20260714T181701Z
+DTSTART:20260408T000000Z
+DTEND:20260408T030000Z
+SUMMARY:Final: Seattle Kraken 2 - 5 Minnesota Wild
+DESCRIPTION:Regular season. Times display in your calendar's local time. 
+ Open the NHL Tracker Game Centre for scores\, analytics and game details
+ .
+LOCATION:Grand Casino Arena
+URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2025021240#
+ games
+END:VEVENT
+BEGIN:VEVENT
+UID:nhl-2025021254@mooneyaoife.github.io
+DTSTAMP:20260714T181701Z
+DTSTART:20260410T010000Z
+DTEND:20260410T040000Z
+SUMMARY:Final: Minnesota Wild 4 - 5 Dallas Stars
+DESCRIPTION:Regular season. Times display in your calendar's local time. 
+ Open the NHL Tracker Game Centre for scores\, analytics and game details
+ .
+LOCATION:American Airlines Center
+URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2025021254#
+ games
+END:VEVENT
+BEGIN:VEVENT
+UID:nhl-2025021267@mooneyaoife.github.io
+DTSTAMP:20260714T181701Z
+DTSTART:20260411T210000Z
+DTEND:20260412T000000Z
+SUMMARY:Final: Minnesota Wild 1 - 2 Nashville Predators
+DESCRIPTION:Regular season. Times display in your calendar's local time. 
+ Open the NHL Tracker Game Centre for scores\, analytics and game details
+ .
+LOCATION:Bridgestone Arena
+URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2025021267#
+ games
+END:VEVENT
+BEGIN:VEVENT
+UID:nhl-2025021286@mooneyaoife.github.io
+DTSTAMP:20260714T181701Z
+DTSTART:20260414T000000Z
+DTEND:20260414T030000Z
+SUMMARY:Final: Minnesota Wild 3 - 6 St. Louis Blues
+DESCRIPTION:Regular season. Times display in your calendar's local time. 
+ Open the NHL Tracker Game Centre for scores\, analytics and game details
+ .
+LOCATION:Enterprise Center
+URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2025021286#
+ games
+END:VEVENT
+BEGIN:VEVENT
+UID:nhl-2025021296@mooneyaoife.github.io
+DTSTAMP:20260714T181701Z
+DTSTART:20260415T000000Z
+DTEND:20260415T030000Z
+SUMMARY:Final: Anaheim Ducks 2 - 3 Minnesota Wild
+DESCRIPTION:Regular season. Times display in your calendar's local time. 
+ Open the NHL Tracker Game Centre for scores\, analytics and game details
+ .
+LOCATION:Grand Casino Arena
+URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2025021296#
+ games
+END:VEVENT
+BEGIN:VEVENT
+UID:nhl-2025030161@mooneyaoife.github.io
+DTSTAMP:20260714T181701Z
+DTSTART:20260418T213000Z
+DTEND:20260419T003000Z
+SUMMARY:Final: Minnesota Wild 6 - 1 Dallas Stars
+DESCRIPTION:Playoffs. Times display in your calendar's local time. Open t
+ he NHL Tracker Game Centre for scores\, analytics and game details.
+LOCATION:American Airlines Center
+URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2025030161#
+ games
+END:VEVENT
+BEGIN:VEVENT
+UID:nhl-2025030162@mooneyaoife.github.io
+DTSTAMP:20260714T181701Z
+DTSTART:20260421T013000Z
+DTEND:20260421T043000Z
+SUMMARY:Final: Minnesota Wild 2 - 4 Dallas Stars
+DESCRIPTION:Playoffs. Times display in your calendar's local time. Open t
+ he NHL Tracker Game Centre for scores\, analytics and game details.
+LOCATION:American Airlines Center
+URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2025030162#
+ games
+END:VEVENT
+BEGIN:VEVENT
+UID:nhl-2025030163@mooneyaoife.github.io
+DTSTAMP:20260714T181701Z
+DTSTART:20260423T013000Z
+DTEND:20260423T043000Z
+SUMMARY:Final: Dallas Stars 4 - 3 Minnesota Wild
+DESCRIPTION:Playoffs. Times display in your calendar's local time. Open t
+ he NHL Tracker Game Centre for scores\, analytics and game details.
+LOCATION:Grand Casino Arena
+URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2025030163#
+ games
+END:VEVENT
+BEGIN:VEVENT
+UID:nhl-2025030164@mooneyaoife.github.io
+DTSTAMP:20260714T181701Z
+DTSTART:20260425T213000Z
+DTEND:20260426T003000Z
+SUMMARY:Final: Dallas Stars 2 - 3 Minnesota Wild
+DESCRIPTION:Playoffs. Times display in your calendar's local time. Open t
+ he NHL Tracker Game Centre for scores\, analytics and game details.
+LOCATION:Grand Casino Arena
+URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2025030164#
+ games
+END:VEVENT
+BEGIN:VEVENT
+UID:nhl-2025030165@mooneyaoife.github.io
+DTSTAMP:20260714T181701Z
+DTSTART:20260429T000000Z
+DTEND:20260429T030000Z
+SUMMARY:Final: Minnesota Wild 4 - 2 Dallas Stars
+DESCRIPTION:Playoffs. Times display in your calendar's local time. Open t
+ he NHL Tracker Game Centre for scores\, analytics and game details.
+LOCATION:American Airlines Center
+URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2025030165#
+ games
+END:VEVENT
+BEGIN:VEVENT
+UID:nhl-2025030166@mooneyaoife.github.io
+DTSTAMP:20260714T181701Z
+DTSTART:20260430T233000Z
+DTEND:20260501T023000Z
+SUMMARY:Final: Dallas Stars 2 - 5 Minnesota Wild
+DESCRIPTION:Playoffs. Times display in your calendar's local time. Open t
+ he NHL Tracker Game Centre for scores\, analytics and game details.
+LOCATION:Grand Casino Arena
+URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2025030166#
+ games
+END:VEVENT
+BEGIN:VEVENT
+UID:nhl-2025030231@mooneyaoife.github.io
+DTSTAMP:20260714T181701Z
+DTSTART:20260504T010000Z
+DTEND:20260504T040000Z
+SUMMARY:Final: Minnesota Wild 6 - 9 Colorado Avalanche
+DESCRIPTION:Playoffs. Times display in your calendar's local time. Open t
+ he NHL Tracker Game Centre for scores\, analytics and game details.
+LOCATION:Ball Arena
+URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2025030231#
+ games
+END:VEVENT
+BEGIN:VEVENT
+UID:nhl-2025030232@mooneyaoife.github.io
+DTSTAMP:20260714T181701Z
+DTSTART:20260506T000000Z
+DTEND:20260506T030000Z
+SUMMARY:Final: Minnesota Wild 2 - 5 Colorado Avalanche
+DESCRIPTION:Playoffs. Times display in your calendar's local time. Open t
+ he NHL Tracker Game Centre for scores\, analytics and game details.
+LOCATION:Ball Arena
+URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2025030232#
+ games
+END:VEVENT
+BEGIN:VEVENT
+UID:nhl-2025030233@mooneyaoife.github.io
+DTSTAMP:20260714T181701Z
+DTSTART:20260510T010000Z
+DTEND:20260510T040000Z
+SUMMARY:Final: Colorado Avalanche 1 - 5 Minnesota Wild
+DESCRIPTION:Playoffs. Times display in your calendar's local time. Open t
+ he NHL Tracker Game Centre for scores\, analytics and game details.
+LOCATION:Grand Casino Arena
+URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2025030233#
+ games
+END:VEVENT
+BEGIN:VEVENT
+UID:nhl-2025030234@mooneyaoife.github.io
+DTSTAMP:20260714T181701Z
+DTSTART:20260512T000000Z
+DTEND:20260512T030000Z
+SUMMARY:Final: Colorado Avalanche 5 - 2 Minnesota Wild
+DESCRIPTION:Playoffs. Times display in your calendar's local time. Open t
+ he NHL Tracker Game Centre for scores\, analytics and game details.
+LOCATION:Grand Casino Arena
+URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2025030234#
+ games
+END:VEVENT
+BEGIN:VEVENT
+UID:nhl-2025030235@mooneyaoife.github.io
+DTSTAMP:20260714T181701Z
+DTSTART:20260514T000000Z
+DTEND:20260514T030000Z
+SUMMARY:Final: Minnesota Wild 3 - 4 Colorado Avalanche
+DESCRIPTION:Playoffs. Times display in your calendar's local time. Open t
+ he NHL Tracker Game Centre for scores\, analytics and game details.
+LOCATION:Ball Arena
+URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2025030235#
+ games
+END:VEVENT
+END:VCALENDAR

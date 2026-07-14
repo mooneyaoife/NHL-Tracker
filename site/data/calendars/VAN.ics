@@ -1,0 +1,1150 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//NHL Tracker//Team Calendar//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+X-WR-CALNAME:Vancouver Canucks - NHL Tracker
+X-WR-TIMEZONE:Europe/London
+X-APPLE-CALENDAR-COLOR:#00205B
+COLOR:#00205B
+REFRESH-INTERVAL;VALUE=DURATION:PT6H
+X-PUBLISHED-TTL:PT6H
+BEGIN:VEVENT
+UID:nhl-2025010011@mooneyaoife.github.io
+DTSTAMP:20260714T181702Z
+DTSTART:20250922T000000Z
+DTEND:20250922T030000Z
+SUMMARY:Final: Vancouver Canucks 3 - 5 Seattle Kraken
+DESCRIPTION:Preseason. Times display in your calendar's local time. Open 
+ the NHL Tracker Game Centre for scores\, analytics and game details.
+LOCATION:Climate Pledge Arena
+URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2025010011#
+ games
+END:VEVENT
+BEGIN:VEVENT
+UID:nhl-2025010029@mooneyaoife.github.io
+DTSTAMP:20260714T181702Z
+DTSTART:20250925T020000Z
+DTEND:20250925T050000Z
+SUMMARY:Final: Calgary Flames 1 - 3 Vancouver Canucks
+DESCRIPTION:Preseason. Times display in your calendar's local time. Open 
+ the NHL Tracker Game Centre for scores\, analytics and game details.
+LOCATION:Abbotsford Entertainment Centre
+URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2025010029#
+ games
+END:VEVENT
+BEGIN:VEVENT
+UID:nhl-2025010043@mooneyaoife.github.io
+DTSTAMP:20260714T181702Z
+DTSTART:20250927T020000Z
+DTEND:20250927T050000Z
+SUMMARY:Final: Seattle Kraken 2 - 4 Vancouver Canucks
+DESCRIPTION:Preseason. Times display in your calendar's local time. Open 
+ the NHL Tracker Game Centre for scores\, analytics and game details.
+LOCATION:Rogers Arena
+URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2025010043#
+ games
+END:VEVENT
+BEGIN:VEVENT
+UID:nhl-2025010058@mooneyaoife.github.io
+DTSTAMP:20260714T181702Z
+DTSTART:20250929T000000Z
+DTEND:20250929T030000Z
+SUMMARY:Final: Vancouver Canucks 3 - 4 Edmonton Oilers
+DESCRIPTION:Preseason. Times display in your calendar's local time. Open 
+ the NHL Tracker Game Centre for scores\, analytics and game details.
+LOCATION:Rogers Place
+URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2025010058#
+ games
+END:VEVENT
+BEGIN:VEVENT
+UID:nhl-2025010077@mooneyaoife.github.io
+DTSTAMP:20260714T181702Z
+DTSTART:20251002T010000Z
+DTEND:20251002T040000Z
+SUMMARY:Final: Vancouver Canucks 8 - 1 Calgary Flames
+DESCRIPTION:Preseason. Times display in your calendar's local time. Open 
+ the NHL Tracker Game Centre for scores\, analytics and game details.
+LOCATION:Scotiabank Saddledome
+URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2025010077#
+ games
+END:VEVENT
+BEGIN:VEVENT
+UID:nhl-2025010087@mooneyaoife.github.io
+DTSTAMP:20260714T181702Z
+DTSTART:20251004T020000Z
+DTEND:20251004T050000Z
+SUMMARY:Final: Edmonton Oilers 2 - 3 Vancouver Canucks
+DESCRIPTION:Preseason. Times display in your calendar's local time. Open 
+ the NHL Tracker Game Centre for scores\, analytics and game details.
+LOCATION:Rogers Arena
+URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2025010087#
+ games
+END:VEVENT
+BEGIN:VEVENT
+UID:nhl-2025020019@mooneyaoife.github.io
+DTSTAMP:20260714T181702Z
+DTSTART:20251010T020000Z
+DTEND:20251010T050000Z
+SUMMARY:Final: Calgary Flames 1 - 5 Vancouver Canucks
+DESCRIPTION:Regular season. Times display in your calendar's local time. 
+ Open the NHL Tracker Game Centre for scores\, analytics and game details
+ .
+LOCATION:Rogers Arena
+URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2025020019#
+ games
+END:VEVENT
+BEGIN:VEVENT
+UID:nhl-2025020035@mooneyaoife.github.io
+DTSTAMP:20260714T181702Z
+DTSTART:20251012T020000Z
+DTEND:20251012T050000Z
+SUMMARY:Final: Vancouver Canucks 1 - 3 Edmonton Oilers
+DESCRIPTION:Regular season. Times display in your calendar's local time. 
+ Open the NHL Tracker Game Centre for scores\, analytics and game details
+ .
+LOCATION:Rogers Place
+URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2025020035#
+ games
+END:VEVENT
+BEGIN:VEVENT
+UID:nhl-2025020046@mooneyaoife.github.io
+DTSTAMP:20260714T181702Z
+DTSTART:20251013T233000Z
+DTEND:20251014T023000Z
+SUMMARY:Final: St. Louis Blues 5 - 2 Vancouver Canucks
+DESCRIPTION:Regular season. Times display in your calendar's local time. 
+ Open the NHL Tracker Game Centre for scores\, analytics and game details
+ .
+LOCATION:Rogers Arena
+URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2025020046#
+ games
+END:VEVENT
+BEGIN:VEVENT
+UID:nhl-2025020068@mooneyaoife.github.io
+DTSTAMP:20260714T181702Z
+DTSTART:20251017T000000Z
+DTEND:20251017T030000Z
+SUMMARY:Final: Vancouver Canucks 5 - 3 Dallas Stars
+DESCRIPTION:Regular season. Times display in your calendar's local time. 
+ Open the NHL Tracker Game Centre for scores\, analytics and game details
+ .
+LOCATION:American Airlines Center
+URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2025020068#
+ games
+END:VEVENT
+BEGIN:VEVENT
+UID:nhl-2025020074@mooneyaoife.github.io
+DTSTAMP:20260714T181702Z
+DTSTART:20251018T003000Z
+DTEND:20251018T033000Z
+SUMMARY:Final: Vancouver Canucks 3 - 2 Chicago Blackhawks
+DESCRIPTION:Regular season. Times display in your calendar's local time. 
+ Open the NHL Tracker Game Centre for scores\, analytics and game details
+ .
+LOCATION:United Center
+URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2025020074#
+ games
+END:VEVENT
+BEGIN:VEVENT
+UID:nhl-2025020089@mooneyaoife.github.io
+DTSTAMP:20260714T181702Z
+DTSTART:20251019T163000Z
+DTEND:20251019T193000Z
+SUMMARY:Final: Vancouver Canucks 4 - 3 Washington Capitals
+DESCRIPTION:Regular season. Times display in your calendar's local time. 
+ Open the NHL Tracker Game Centre for scores\, analytics and game details
+ .
+LOCATION:Capital One Arena
+URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2025020089#
+ games
+END:VEVENT
+BEGIN:VEVENT
+UID:nhl-2025020101@mooneyaoife.github.io
+DTSTAMP:20260714T181702Z
+DTSTART:20251021T230000Z
+DTEND:20251022T020000Z
+SUMMARY:Final: Vancouver Canucks 1 - 5 Pittsburgh Penguins
+DESCRIPTION:Regular season. Times display in your calendar's local time. 
+ Open the NHL Tracker Game Centre for scores\, analytics and game details
+ .
+LOCATION:PPG Paints Arena
+URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2025020101#
+ games
+END:VEVENT
+BEGIN:VEVENT
+UID:nhl-2025020118@mooneyaoife.github.io
+DTSTAMP:20260714T181702Z
+DTSTART:20251024T000000Z
+DTEND:20251024T030000Z
+SUMMARY:Final: Vancouver Canucks 1 - 2 Nashville Predators
+DESCRIPTION:Regular season. Times display in your calendar's local time. 
+ Open the NHL Tracker Game Centre for scores\, analytics and game details
+ .
+LOCATION:Bridgestone Arena
+URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2025020118#
+ games
+END:VEVENT
+BEGIN:VEVENT
+UID:nhl-2025020136@mooneyaoife.github.io
+DTSTAMP:20260714T181702Z
+DTSTART:20251025T230000Z
+DTEND:20251026T020000Z
+SUMMARY:Final: Montréal Canadiens 4 - 3 Vancouver Canucks
+DESCRIPTION:Regular season. Times display in your calendar's local time. 
+ Open the NHL Tracker Game Centre for scores\, analytics and game details
+ .
+LOCATION:Rogers Arena
+URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2025020136#
+ games
+END:VEVENT
+BEGIN:VEVENT
+UID:nhl-2025020147@mooneyaoife.github.io
+DTSTAMP:20260714T181702Z
+DTSTART:20251027T020000Z
+DTEND:20251027T050000Z
+SUMMARY:Final: Edmonton Oilers 3 - 4 Vancouver Canucks
+DESCRIPTION:Regular season. Times display in your calendar's local time. 
+ Open the NHL Tracker Game Centre for scores\, analytics and game details
+ .
+LOCATION:Rogers Arena
+URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2025020147#
+ games
+END:VEVENT
+BEGIN:VEVENT
+UID:nhl-2025020163@mooneyaoife.github.io
+DTSTAMP:20260714T181702Z
+DTSTART:20251029T020000Z
+DTEND:20251029T050000Z
+SUMMARY:Final: New York Rangers 2 - 0 Vancouver Canucks
+DESCRIPTION:Regular season. Times display in your calendar's local time. 
+ Open the NHL Tracker Game Centre for scores\, analytics and game details
+ .
+LOCATION:Rogers Arena
+URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2025020163#
+ games
+END:VEVENT
+BEGIN:VEVENT
+UID:nhl-2025020172@mooneyaoife.github.io
+DTSTAMP:20260714T181702Z
+DTSTART:20251031T000000Z
+DTEND:20251031T030000Z
+SUMMARY:Final: Vancouver Canucks 4 - 3 St. Louis Blues
+DESCRIPTION:Regular season. Times display in your calendar's local time. 
+ Open the NHL Tracker Game Centre for scores\, analytics and game details
+ .
+LOCATION:Enterprise Center
+URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2025020172#
+ games
+END:VEVENT
+BEGIN:VEVENT
+UID:nhl-2025020190@mooneyaoife.github.io
+DTSTAMP:20260714T181702Z
+DTSTART:20251101T230000Z
+DTEND:20251102T020000Z
+SUMMARY:Final: Vancouver Canucks 2 - 5 Minnesota Wild
+DESCRIPTION:Regular season. Times display in your calendar's local time. 
+ Open the NHL Tracker Game Centre for scores\, analytics and game details
+ .
+LOCATION:Grand Casino Arena
+URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2025020190#
+ games
+END:VEVENT
+BEGIN:VEVENT
+UID:nhl-2025020201@mooneyaoife.github.io
+DTSTAMP:20260714T181702Z
+DTSTART:20251104T013000Z
+DTEND:20251104T043000Z
+SUMMARY:Final: Vancouver Canucks 5 - 4 Nashville Predators
+DESCRIPTION:Regular season. Times display in your calendar's local time. 
+ Open the NHL Tracker Game Centre for scores\, analytics and game details
+ .
+LOCATION:Bridgestone Arena
+URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2025020201#
+ games
+END:VEVENT
+BEGIN:VEVENT
+UID:nhl-2025020216@mooneyaoife.github.io
+DTSTAMP:20260714T181702Z
+DTSTART:20251106T030000Z
+DTEND:20251106T060000Z
+SUMMARY:Final: Chicago Blackhawks 5 - 2 Vancouver Canucks
+DESCRIPTION:Regular season. Times display in your calendar's local time. 
+ Open the NHL Tracker Game Centre for scores\, analytics and game details
+ .
+LOCATION:Rogers Arena
+URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2025020216#
+ games
+END:VEVENT
+BEGIN:VEVENT
+UID:nhl-2025020241@mooneyaoife.github.io
+DTSTAMP:20260714T181702Z
+DTSTART:20251109T030000Z
+DTEND:20251109T060000Z
+SUMMARY:Final: Columbus Blue Jackets 3 - 4 Vancouver Canucks
+DESCRIPTION:Regular season. Times display in your calendar's local time. 
+ Open the NHL Tracker Game Centre for scores\, analytics and game details
+ .
+LOCATION:Rogers Arena
+URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2025020241#
+ games
+END:VEVENT
+BEGIN:VEVENT
+UID:nhl-2025020250@mooneyaoife.github.io
+DTSTAMP:20260714T181702Z
+DTSTART:20251110T030000Z
+DTEND:20251110T060000Z
+SUMMARY:Final: Colorado Avalanche 5 - 4 Vancouver Canucks
+DESCRIPTION:Regular season. Times display in your calendar's local time. 
+ Open the NHL Tracker Game Centre for scores\, analytics and game details
+ .
+LOCATION:Rogers Arena
+URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2025020250#
+ games
+END:VEVENT
+BEGIN:VEVENT
+UID:nhl-2025020263@mooneyaoife.github.io
+DTSTAMP:20260714T181702Z
+DTSTART:20251112T030000Z
+DTEND:20251112T060000Z
+SUMMARY:Final: Winnipeg Jets 5 - 3 Vancouver Canucks
+DESCRIPTION:Regular season. Times display in your calendar's local time. 
+ Open the NHL Tracker Game Centre for scores\, analytics and game details
+ .
+LOCATION:Rogers Arena
+URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2025020263#
+ games
+END:VEVENT
+BEGIN:VEVENT
+UID:nhl-2025020279@mooneyaoife.github.io
+DTSTAMP:20260714T181702Z
+DTSTART:20251115T000000Z
+DTEND:20251115T030000Z
+SUMMARY:Final: Vancouver Canucks 3 - 4 Carolina Hurricanes
+DESCRIPTION:Regular season. Times display in your calendar's local time. 
+ Open the NHL Tracker Game Centre for scores\, analytics and game details
+ .
+LOCATION:Lenovo Center
+URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2025020279#
+ games
+END:VEVENT
+BEGIN:VEVENT
+UID:nhl-2025020297@mooneyaoife.github.io
+DTSTAMP:20260714T181702Z
+DTSTART:20251116T220000Z
+DTEND:20251117T010000Z
+SUMMARY:Final: Vancouver Canucks 6 - 2 Tampa Bay Lightning
+DESCRIPTION:Regular season. Times display in your calendar's local time. 
+ Open the NHL Tracker Game Centre for scores\, analytics and game details
+ .
+LOCATION:Benchmark International Arena
+URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2025020297#
+ games
+END:VEVENT
+BEGIN:VEVENT
+UID:nhl-2025020303@mooneyaoife.github.io
+DTSTAMP:20260714T181702Z
+DTSTART:20251118T000000Z
+DTEND:20251118T030000Z
+SUMMARY:Final: Vancouver Canucks 5 - 8 Florida Panthers
+DESCRIPTION:Regular season. Times display in your calendar's local time. 
+ Open the NHL Tracker Game Centre for scores\, analytics and game details
+ .
+LOCATION:Amerant Bank Arena
+URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2025020303#
+ games
+END:VEVENT
+BEGIN:VEVENT
+UID:nhl-2025020328@mooneyaoife.github.io
+DTSTAMP:20260714T181702Z
+DTSTART:20251121T030000Z
+DTEND:20251121T060000Z
+SUMMARY:Final: Dallas Stars 4 - 2 Vancouver Canucks
+DESCRIPTION:Regular season. Times display in your calendar's local time. 
+ Open the NHL Tracker Game Centre for scores\, analytics and game details
+ .
+LOCATION:Rogers Arena
+URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2025020328#
+ games
+END:VEVENT
+BEGIN:VEVENT
+UID:nhl-2025020352@mooneyaoife.github.io
+DTSTAMP:20260714T181702Z
+DTSTART:20251124T020000Z
+DTEND:20251124T050000Z
+SUMMARY:Final: Calgary Flames 5 - 2 Vancouver Canucks
+DESCRIPTION:Regular season. Times display in your calendar's local time. 
+ Open the NHL Tracker Game Centre for scores\, analytics and game details
+ .
+LOCATION:Rogers Arena
+URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2025020352#
+ games
+END:VEVENT
+BEGIN:VEVENT
+UID:nhl-2025020374@mooneyaoife.github.io
+DTSTAMP:20260714T181702Z
+DTSTART:20251127T030000Z
+DTEND:20251127T060000Z
+SUMMARY:Final: Vancouver Canucks 5 - 4 Anaheim Ducks
+DESCRIPTION:Regular season. Times display in your calendar's local time. 
+ Open the NHL Tracker Game Centre for scores\, analytics and game details
+ .
+LOCATION:Honda Center
+URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2025020374#
+ games
+END:VEVENT
+BEGIN:VEVENT
+UID:nhl-2025020385@mooneyaoife.github.io
+DTSTAMP:20260714T181702Z
+DTSTART:20251128T210000Z
+DTEND:20251129T000000Z
+SUMMARY:Final: Vancouver Canucks 2 - 3 San Jose Sharks
+DESCRIPTION:Regular season. Times display in your calendar's local time. 
+ Open the NHL Tracker Game Centre for scores\, analytics and game details
+ .
+LOCATION:SAP Center at San Jose
+URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2025020385#
+ games
+END:VEVENT
+BEGIN:VEVENT
+UID:nhl-2025020401@mooneyaoife.github.io
+DTSTAMP:20260714T181702Z
+DTSTART:20251130T030000Z
+DTEND:20251130T060000Z
+SUMMARY:Final: Vancouver Canucks 1 - 2 Los Angeles Kings
+DESCRIPTION:Regular season. Times display in your calendar's local time. 
+ Open the NHL Tracker Game Centre for scores\, analytics and game details
+ .
+LOCATION:Crypto.com Arena
+URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2025020401#
+ games
+END:VEVENT
+BEGIN:VEVENT
+UID:nhl-2025020417@mooneyaoife.github.io
+DTSTAMP:20260714T181702Z
+DTSTART:20251203T020000Z
+DTEND:20251203T050000Z
+SUMMARY:Final: Vancouver Canucks 1 - 3 Colorado Avalanche
+DESCRIPTION:Regular season. Times display in your calendar's local time. 
+ Open the NHL Tracker Game Centre for scores\, analytics and game details
+ .
+LOCATION:Ball Arena
+URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2025020417#
+ games
+END:VEVENT
+BEGIN:VEVENT
+UID:nhl-2025020439@mooneyaoife.github.io
+DTSTAMP:20260714T181702Z
+DTSTART:20251206T020000Z
+DTEND:20251206T050000Z
+SUMMARY:Final: Utah Mammoth 4 - 1 Vancouver Canucks
+DESCRIPTION:Regular season. Times display in your calendar's local time. 
+ Open the NHL Tracker Game Centre for scores\, analytics and game details
+ .
+LOCATION:Rogers Arena
+URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2025020439#
+ games
+END:VEVENT
+BEGIN:VEVENT
+UID:nhl-2025020451@mooneyaoife.github.io
+DTSTAMP:20260714T181702Z
+DTSTART:20251207T030000Z
+DTEND:20251207T060000Z
+SUMMARY:Final: Minnesota Wild 2 - 4 Vancouver Canucks
+DESCRIPTION:Regular season. Times display in your calendar's local time. 
+ Open the NHL Tracker Game Centre for scores\, analytics and game details
+ .
+LOCATION:Rogers Arena
+URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2025020451#
+ games
+END:VEVENT
+BEGIN:VEVENT
+UID:nhl-2025020464@mooneyaoife.github.io
+DTSTAMP:20260714T181702Z
+DTSTART:20251209T030000Z
+DTEND:20251209T060000Z
+SUMMARY:Final: Detroit Red Wings 4 - 0 Vancouver Canucks
+DESCRIPTION:Regular season. Times display in your calendar's local time. 
+ Open the NHL Tracker Game Centre for scores\, analytics and game details
+ .
+LOCATION:Rogers Arena
+URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2025020464#
+ games
+END:VEVENT
+BEGIN:VEVENT
+UID:nhl-2025020492@mooneyaoife.github.io
+DTSTAMP:20260714T181702Z
+DTSTART:20251212T030000Z
+DTEND:20251212T060000Z
+SUMMARY:Final: Buffalo Sabres 3 - 2 Vancouver Canucks
+DESCRIPTION:Regular season. Times display in your calendar's local time. 
+ Open the NHL Tracker Game Centre for scores\, analytics and game details
+ .
+LOCATION:Rogers Arena
+URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2025020492#
+ games
+END:VEVENT
+BEGIN:VEVENT
+UID:nhl-2025020508@mooneyaoife.github.io
+DTSTAMP:20260714T181702Z
+DTSTART:20251214T173000Z
+DTEND:20251214T203000Z
+SUMMARY:Final: Vancouver Canucks 2 - 1 New Jersey Devils
+DESCRIPTION:Regular season. Times display in your calendar's local time. 
+ Open the NHL Tracker Game Centre for scores\, analytics and game details
+ .
+LOCATION:Prudential Center
+URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2025020508#
+ games
+END:VEVENT
+BEGIN:VEVENT
+UID:nhl-2025020523@mooneyaoife.github.io
+DTSTAMP:20260714T181702Z
+DTSTART:20251217T000000Z
+DTEND:20251217T030000Z
+SUMMARY:Final: Vancouver Canucks 3 - 0 New York Rangers
+DESCRIPTION:Regular season. Times display in your calendar's local time. 
+ Open the NHL Tracker Game Centre for scores\, analytics and game details
+ .
+LOCATION:Madison Square Garden
+URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2025020523#
+ games
+END:VEVENT
+BEGIN:VEVENT
+UID:nhl-2025020545@mooneyaoife.github.io
+DTSTAMP:20260714T181702Z
+DTSTART:20251220T000000Z
+DTEND:20251220T030000Z
+SUMMARY:Final: Vancouver Canucks 4 - 1 New York Islanders
+DESCRIPTION:Regular season. Times display in your calendar's local time. 
+ Open the NHL Tracker Game Centre for scores\, analytics and game details
+ .
+LOCATION:UBS Arena
+URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2025020545#
+ games
+END:VEVENT
+BEGIN:VEVENT
+UID:nhl-2025020555@mooneyaoife.github.io
+DTSTAMP:20260714T181702Z
+DTSTART:20251221T000000Z
+DTEND:20251221T030000Z
+SUMMARY:Final: Vancouver Canucks 5 - 4 Boston Bruins
+DESCRIPTION:Regular season. Times display in your calendar's local time. 
+ Open the NHL Tracker Game Centre for scores\, analytics and game details
+ .
+LOCATION:TD Garden
+URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2025020555#
+ games
+END:VEVENT
+BEGIN:VEVENT
+UID:nhl-2025020572@mooneyaoife.github.io
+DTSTAMP:20260714T181702Z
+DTSTART:20251223T003000Z
+DTEND:20251223T033000Z
+SUMMARY:Final: Vancouver Canucks 2 - 5 Philadelphia Flyers
+DESCRIPTION:Regular season. Times display in your calendar's local time. 
+ Open the NHL Tracker Game Centre for scores\, analytics and game details
+ .
+LOCATION:Xfinity Mobile Arena
+URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2025020572#
+ games
+END:VEVENT
+BEGIN:VEVENT
+UID:nhl-2025020599@mooneyaoife.github.io
+DTSTAMP:20260714T181702Z
+DTSTART:20251228T030000Z
+DTEND:20251228T060000Z
+SUMMARY:Final: San Jose Sharks 6 - 3 Vancouver Canucks
+DESCRIPTION:Regular season. Times display in your calendar's local time. 
+ Open the NHL Tracker Game Centre for scores\, analytics and game details
+ .
+LOCATION:Rogers Arena
+URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2025020599#
+ games
+END:VEVENT
+BEGIN:VEVENT
+UID:nhl-2025020616@mooneyaoife.github.io
+DTSTAMP:20260714T181702Z
+DTSTART:20251230T030000Z
+DTEND:20251230T060000Z
+SUMMARY:Final: Vancouver Canucks 3 - 2 Seattle Kraken
+DESCRIPTION:Regular season. Times display in your calendar's local time. 
+ Open the NHL Tracker Game Centre for scores\, analytics and game details
+ .
+LOCATION:Climate Pledge Arena
+URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2025020616#
+ games
+END:VEVENT
+BEGIN:VEVENT
+UID:nhl-2025020621@mooneyaoife.github.io
+DTSTAMP:20260714T181702Z
+DTSTART:20251231T030000Z
+DTEND:20251231T060000Z
+SUMMARY:Final: Philadelphia Flyers 6 - 3 Vancouver Canucks
+DESCRIPTION:Regular season. Times display in your calendar's local time. 
+ Open the NHL Tracker Game Centre for scores\, analytics and game details
+ .
+LOCATION:Rogers Arena
+URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2025020621#
+ games
+END:VEVENT
+BEGIN:VEVENT
+UID:nhl-2025020642@mooneyaoife.github.io
+DTSTAMP:20260714T181702Z
+DTSTART:20260103T033000Z
+DTEND:20260103T063000Z
+SUMMARY:Final: Seattle Kraken 4 - 3 Vancouver Canucks
+DESCRIPTION:Regular season. Times display in your calendar's local time. 
+ Open the NHL Tracker Game Centre for scores\, analytics and game details
+ .
+LOCATION:Rogers Arena
+URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2025020642#
+ games
+END:VEVENT
+BEGIN:VEVENT
+UID:nhl-2025020656@mooneyaoife.github.io
+DTSTAMP:20260714T181702Z
+DTSTART:20260104T030000Z
+DTEND:20260104T060000Z
+SUMMARY:Final: Boston Bruins 3 - 2 Vancouver Canucks
+DESCRIPTION:Regular season. Times display in your calendar's local time. 
+ Open the NHL Tracker Game Centre for scores\, analytics and game details
+ .
+LOCATION:Rogers Arena
+URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2025020656#
+ games
+END:VEVENT
+BEGIN:VEVENT
+UID:nhl-2025020667@mooneyaoife.github.io
+DTSTAMP:20260714T181702Z
+DTSTART:20260107T000000Z
+DTEND:20260107T030000Z
+SUMMARY:Final: Vancouver Canucks 3 - 5 Buffalo Sabres
+DESCRIPTION:Regular season. Times display in your calendar's local time. 
+ Open the NHL Tracker Game Centre for scores\, analytics and game details
+ .
+LOCATION:KeyBank Center
+URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2025020667#
+ games
+END:VEVENT
+BEGIN:VEVENT
+UID:nhl-2025020684@mooneyaoife.github.io
+DTSTAMP:20260714T181702Z
+DTSTART:20260109T000000Z
+DTEND:20260109T030000Z
+SUMMARY:Final: Vancouver Canucks 1 - 5 Detroit Red Wings
+DESCRIPTION:Regular season. Times display in your calendar's local time. 
+ Open the NHL Tracker Game Centre for scores\, analytics and game details
+ .
+LOCATION:Little Caesars Arena
+URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2025020684#
+ games
+END:VEVENT
+BEGIN:VEVENT
+UID:nhl-2025020702@mooneyaoife.github.io
+DTSTAMP:20260714T181702Z
+DTSTART:20260111T000000Z
+DTEND:20260111T030000Z
+SUMMARY:Final: Vancouver Canucks 0 - 5 Toronto Maple Leafs
+DESCRIPTION:Regular season. Times display in your calendar's local time. 
+ Open the NHL Tracker Game Centre for scores\, analytics and game details
+ .
+LOCATION:Scotiabank Arena
+URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2025020702#
+ games
+END:VEVENT
+BEGIN:VEVENT
+UID:nhl-2025020720@mooneyaoife.github.io
+DTSTAMP:20260714T181702Z
+DTSTART:20260113T003000Z
+DTEND:20260113T033000Z
+SUMMARY:Final: Vancouver Canucks 3 - 6 Montréal Canadiens
+DESCRIPTION:Regular season. Times display in your calendar's local time. 
+ Open the NHL Tracker Game Centre for scores\, analytics and game details
+ .
+LOCATION:Centre Bell
+URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2025020720#
+ games
+END:VEVENT
+BEGIN:VEVENT
+UID:nhl-2025020725@mooneyaoife.github.io
+DTSTAMP:20260714T181702Z
+DTSTART:20260114T000000Z
+DTEND:20260114T030000Z
+SUMMARY:Final: Vancouver Canucks 1 - 2 Ottawa Senators
+DESCRIPTION:Regular season. Times display in your calendar's local time. 
+ Open the NHL Tracker Game Centre for scores\, analytics and game details
+ .
+LOCATION:Canadian Tire Centre
+URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2025020725#
+ games
+END:VEVENT
+BEGIN:VEVENT
+UID:nhl-2025020743@mooneyaoife.github.io
+DTSTAMP:20260714T181702Z
+DTSTART:20260116T000000Z
+DTEND:20260116T030000Z
+SUMMARY:Final: Vancouver Canucks 1 - 4 Columbus Blue Jackets
+DESCRIPTION:Regular season. Times display in your calendar's local time. 
+ Open the NHL Tracker Game Centre for scores\, analytics and game details
+ .
+LOCATION:Nationwide Arena
+URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2025020743#
+ games
+END:VEVENT
+BEGIN:VEVENT
+UID:nhl-2025020764@mooneyaoife.github.io
+DTSTAMP:20260714T181702Z
+DTSTART:20260118T030000Z
+DTEND:20260118T060000Z
+SUMMARY:Final: Edmonton Oilers 6 - 0 Vancouver Canucks
+DESCRIPTION:Regular season. Times display in your calendar's local time. 
+ Open the NHL Tracker Game Centre for scores\, analytics and game details
+ .
+LOCATION:Rogers Arena
+URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2025020764#
+ games
+END:VEVENT
+BEGIN:VEVENT
+UID:nhl-2025020778@mooneyaoife.github.io
+DTSTAMP:20260714T181702Z
+DTSTART:20260120T030000Z
+DTEND:20260120T060000Z
+SUMMARY:Final: New York Islanders 4 - 3 Vancouver Canucks
+DESCRIPTION:Regular season. Times display in your calendar's local time. 
+ Open the NHL Tracker Game Centre for scores\, analytics and game details
+ .
+LOCATION:Rogers Arena
+URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2025020778#
+ games
+END:VEVENT
+BEGIN:VEVENT
+UID:nhl-2025020792@mooneyaoife.github.io
+DTSTAMP:20260714T181702Z
+DTSTART:20260122T030000Z
+DTEND:20260122T060000Z
+SUMMARY:Final: Washington Capitals 3 - 4 Vancouver Canucks
+DESCRIPTION:Regular season. Times display in your calendar's local time. 
+ Open the NHL Tracker Game Centre for scores\, analytics and game details
+ .
+LOCATION:Rogers Arena
+URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2025020792#
+ games
+END:VEVENT
+BEGIN:VEVENT
+UID:nhl-2025020807@mooneyaoife.github.io
+DTSTAMP:20260714T181702Z
+DTSTART:20260124T030000Z
+DTEND:20260124T060000Z
+SUMMARY:Final: New Jersey Devils 5 - 4 Vancouver Canucks
+DESCRIPTION:Regular season. Times display in your calendar's local time. 
+ Open the NHL Tracker Game Centre for scores\, analytics and game details
+ .
+LOCATION:Rogers Arena
+URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2025020807#
+ games
+END:VEVENT
+BEGIN:VEVENT
+UID:nhl-2025020822@mooneyaoife.github.io
+DTSTAMP:20260714T181702Z
+DTSTART:20260125T230000Z
+DTEND:20260126T020000Z
+SUMMARY:Final: Pittsburgh Penguins 3 - 2 Vancouver Canucks
+DESCRIPTION:Regular season. Times display in your calendar's local time. 
+ Open the NHL Tracker Game Centre for scores\, analytics and game details
+ .
+LOCATION:Rogers Arena
+URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2025020822#
+ games
+END:VEVENT
+BEGIN:VEVENT
+UID:nhl-2025020838@mooneyaoife.github.io
+DTSTAMP:20260714T181702Z
+DTSTART:20260128T030000Z
+DTEND:20260128T060000Z
+SUMMARY:Final: San Jose Sharks 5 - 2 Vancouver Canucks
+DESCRIPTION:Regular season. Times display in your calendar's local time. 
+ Open the NHL Tracker Game Centre for scores\, analytics and game details
+ .
+LOCATION:Rogers Arena
+URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2025020838#
+ games
+END:VEVENT
+BEGIN:VEVENT
+UID:nhl-2025020855@mooneyaoife.github.io
+DTSTAMP:20260714T181702Z
+DTSTART:20260130T030000Z
+DTEND:20260130T060000Z
+SUMMARY:Final: Anaheim Ducks 0 - 2 Vancouver Canucks
+DESCRIPTION:Regular season. Times display in your calendar's local time. 
+ Open the NHL Tracker Game Centre for scores\, analytics and game details
+ .
+LOCATION:Rogers Arena
+URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2025020855#
+ games
+END:VEVENT
+BEGIN:VEVENT
+UID:nhl-2025020869@mooneyaoife.github.io
+DTSTAMP:20260714T181702Z
+DTSTART:20260201T000000Z
+DTEND:20260201T030000Z
+SUMMARY:Final: Toronto Maple Leafs 3 - 2 Vancouver Canucks
+DESCRIPTION:Regular season. Times display in your calendar's local time. 
+ Open the NHL Tracker Game Centre for scores\, analytics and game details
+ .
+LOCATION:Rogers Arena
+URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2025020869#
+ games
+END:VEVENT
+BEGIN:VEVENT
+UID:nhl-2025020884@mooneyaoife.github.io
+DTSTAMP:20260714T181702Z
+DTSTART:20260203T023000Z
+DTEND:20260203T053000Z
+SUMMARY:Final: Vancouver Canucks 2 - 6 Utah Mammoth
+DESCRIPTION:Regular season. Times display in your calendar's local time. 
+ Open the NHL Tracker Game Centre for scores\, analytics and game details
+ .
+LOCATION:Delta Center
+URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2025020884#
+ games
+END:VEVENT
+BEGIN:VEVENT
+UID:nhl-2025020901@mooneyaoife.github.io
+DTSTAMP:20260714T181702Z
+DTSTART:20260205T030000Z
+DTEND:20260205T060000Z
+SUMMARY:Final: Vancouver Canucks 2 - 5 Vegas Golden Knights
+DESCRIPTION:Regular season. Times display in your calendar's local time. 
+ Open the NHL Tracker Game Centre for scores\, analytics and game details
+ .
+LOCATION:T-Mobile Arena
+URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2025020901#
+ games
+END:VEVENT
+BEGIN:VEVENT
+UID:nhl-2025020915@mooneyaoife.github.io
+DTSTAMP:20260714T181702Z
+DTSTART:20260226T030000Z
+DTEND:20260226T060000Z
+SUMMARY:Final: Winnipeg Jets 3 - 2 Vancouver Canucks
+DESCRIPTION:Regular season. Times display in your calendar's local time. 
+ Open the NHL Tracker Game Centre for scores\, analytics and game details
+ .
+LOCATION:Rogers Arena
+URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2025020915#
+ games
+END:VEVENT
+BEGIN:VEVENT
+UID:nhl-2025020946@mooneyaoife.github.io
+DTSTAMP:20260714T181702Z
+DTSTART:20260301T030000Z
+DTEND:20260301T060000Z
+SUMMARY:Final: Vancouver Canucks 1 - 5 Seattle Kraken
+DESCRIPTION:Regular season. Times display in your calendar's local time. 
+ Open the NHL Tracker Game Centre for scores\, analytics and game details
+ .
+LOCATION:Climate Pledge Arena
+URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2025020946#
+ games
+END:VEVENT
+BEGIN:VEVENT
+UID:nhl-2025020956@mooneyaoife.github.io
+DTSTAMP:20260714T181702Z
+DTSTART:20260303T030000Z
+DTEND:20260303T060000Z
+SUMMARY:Final: Dallas Stars 6 - 1 Vancouver Canucks
+DESCRIPTION:Regular season. Times display in your calendar's local time. 
+ Open the NHL Tracker Game Centre for scores\, analytics and game details
+ .
+LOCATION:Rogers Arena
+URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2025020956#
+ games
+END:VEVENT
+BEGIN:VEVENT
+UID:nhl-2025020972@mooneyaoife.github.io
+DTSTAMP:20260714T181702Z
+DTSTART:20260305T030000Z
+DTEND:20260305T060000Z
+SUMMARY:Final: Carolina Hurricanes 6 - 4 Vancouver Canucks
+DESCRIPTION:Regular season. Times display in your calendar's local time. 
+ Open the NHL Tracker Game Centre for scores\, analytics and game details
+ .
+LOCATION:Rogers Arena
+URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2025020972#
+ games
+END:VEVENT
+BEGIN:VEVENT
+UID:nhl-2025020985@mooneyaoife.github.io
+DTSTAMP:20260714T181702Z
+DTSTART:20260307T013000Z
+DTEND:20260307T043000Z
+SUMMARY:Final: Vancouver Canucks 6 - 3 Chicago Blackhawks
+DESCRIPTION:Regular season. Times display in your calendar's local time. 
+ Open the NHL Tracker Game Centre for scores\, analytics and game details
+ .
+LOCATION:United Center
+URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2025020985#
+ games
+END:VEVENT
+BEGIN:VEVENT
+UID:nhl-2025020996@mooneyaoife.github.io
+DTSTAMP:20260714T181702Z
+DTSTART:20260308T000000Z
+DTEND:20260308T030000Z
+SUMMARY:Final: Vancouver Canucks 2 - 3 Winnipeg Jets
+DESCRIPTION:Regular season. Times display in your calendar's local time. 
+ Open the NHL Tracker Game Centre for scores\, analytics and game details
+ .
+LOCATION:Canada Life Centre
+URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2025020996#
+ games
+END:VEVENT
+BEGIN:VEVENT
+UID:nhl-2025021011@mooneyaoife.github.io
+DTSTAMP:20260714T181702Z
+DTSTART:20260310T010000Z
+DTEND:20260310T040000Z
+SUMMARY:Final: Ottawa Senators 2 - 0 Vancouver Canucks
+DESCRIPTION:Regular season. Times display in your calendar's local time. 
+ Open the NHL Tracker Game Centre for scores\, analytics and game details
+ .
+LOCATION:Rogers Arena
+URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2025021011#
+ games
+END:VEVENT
+BEGIN:VEVENT
+UID:nhl-2025021038@mooneyaoife.github.io
+DTSTAMP:20260714T181702Z
+DTSTART:20260313T020000Z
+DTEND:20260313T050000Z
+SUMMARY:Final: Nashville Predators 3 - 4 Vancouver Canucks
+DESCRIPTION:Regular season. Times display in your calendar's local time. 
+ Open the NHL Tracker Game Centre for scores\, analytics and game details
+ .
+LOCATION:Rogers Arena
+URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2025021038#
+ games
+END:VEVENT
+BEGIN:VEVENT
+UID:nhl-2025021055@mooneyaoife.github.io
+DTSTAMP:20260714T181702Z
+DTSTART:20260315T020000Z
+DTEND:20260315T050000Z
+SUMMARY:Final: Seattle Kraken 5 - 2 Vancouver Canucks
+DESCRIPTION:Regular season. Times display in your calendar's local time. 
+ Open the NHL Tracker Game Centre for scores\, analytics and game details
+ .
+LOCATION:Rogers Arena
+URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2025021055#
+ games
+END:VEVENT
+BEGIN:VEVENT
+UID:nhl-2025021074@mooneyaoife.github.io
+DTSTAMP:20260714T181702Z
+DTSTART:20260318T020000Z
+DTEND:20260318T050000Z
+SUMMARY:Final: Florida Panthers 2 - 5 Vancouver Canucks
+DESCRIPTION:Regular season. Times display in your calendar's local time. 
+ Open the NHL Tracker Game Centre for scores\, analytics and game details
+ .
+LOCATION:Rogers Arena
+URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2025021074#
+ games
+END:VEVENT
+BEGIN:VEVENT
+UID:nhl-2025021090@mooneyaoife.github.io
+DTSTAMP:20260714T181702Z
+DTSTART:20260320T020000Z
+DTEND:20260320T050000Z
+SUMMARY:Final: Tampa Bay Lightning 6 - 2 Vancouver Canucks
+DESCRIPTION:Regular season. Times display in your calendar's local time. 
+ Open the NHL Tracker Game Centre for scores\, analytics and game details
+ .
+LOCATION:Rogers Arena
+URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2025021090#
+ games
+END:VEVENT
+BEGIN:VEVENT
+UID:nhl-2025021107@mooneyaoife.github.io
+DTSTAMP:20260714T181702Z
+DTSTART:20260321T230000Z
+DTEND:20260322T020000Z
+SUMMARY:Final: St. Louis Blues 3 - 1 Vancouver Canucks
+DESCRIPTION:Regular season. Times display in your calendar's local time. 
+ Open the NHL Tracker Game Centre for scores\, analytics and game details
+ .
+LOCATION:Rogers Arena
+URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2025021107#
+ games
+END:VEVENT
+BEGIN:VEVENT
+UID:nhl-2025021134@mooneyaoife.github.io
+DTSTAMP:20260714T181702Z
+DTSTART:20260325T020000Z
+DTEND:20260325T050000Z
+SUMMARY:Final: Anaheim Ducks 5 - 3 Vancouver Canucks
+DESCRIPTION:Regular season. Times display in your calendar's local time. 
+ Open the NHL Tracker Game Centre for scores\, analytics and game details
+ .
+LOCATION:Rogers Arena
+URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2025021134#
+ games
+END:VEVENT
+BEGIN:VEVENT
+UID:nhl-2025021149@mooneyaoife.github.io
+DTSTAMP:20260714T181702Z
+DTSTART:20260327T020000Z
+DTEND:20260327T050000Z
+SUMMARY:Final: Los Angeles Kings 4 - 0 Vancouver Canucks
+DESCRIPTION:Regular season. Times display in your calendar's local time. 
+ Open the NHL Tracker Game Centre for scores\, analytics and game details
+ .
+LOCATION:Rogers Arena
+URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2025021149#
+ games
+END:VEVENT
+BEGIN:VEVENT
+UID:nhl-2025021165@mooneyaoife.github.io
+DTSTAMP:20260714T181702Z
+DTSTART:20260329T020000Z
+DTEND:20260329T050000Z
+SUMMARY:Final: Vancouver Canucks 3 - 7 Calgary Flames
+DESCRIPTION:Regular season. Times display in your calendar's local time. 
+ Open the NHL Tracker Game Centre for scores\, analytics and game details
+ .
+LOCATION:Scotiabank Saddledome
+URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2025021165#
+ games
+END:VEVENT
+BEGIN:VEVENT
+UID:nhl-2025021175@mooneyaoife.github.io
+DTSTAMP:20260714T181702Z
+DTSTART:20260331T020000Z
+DTEND:20260331T050000Z
+SUMMARY:Final: Vancouver Canucks 2 - 4 Vegas Golden Knights
+DESCRIPTION:Regular season. Times display in your calendar's local time. 
+ Open the NHL Tracker Game Centre for scores\, analytics and game details
+ .
+LOCATION:T-Mobile Arena
+URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2025021175#
+ games
+END:VEVENT
+BEGIN:VEVENT
+UID:nhl-2025021188@mooneyaoife.github.io
+DTSTAMP:20260714T181702Z
+DTSTART:20260402T003000Z
+DTEND:20260402T033000Z
+SUMMARY:Final: Vancouver Canucks 8 - 6 Colorado Avalanche
+DESCRIPTION:Regular season. Times display in your calendar's local time. 
+ Open the NHL Tracker Game Centre for scores\, analytics and game details
+ .
+LOCATION:Ball Arena
+URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2025021188#
+ games
+END:VEVENT
+BEGIN:VEVENT
+UID:nhl-2025021199@mooneyaoife.github.io
+DTSTAMP:20260714T181702Z
+DTSTART:20260403T000000Z
+DTEND:20260403T030000Z
+SUMMARY:Final: Vancouver Canucks 2 - 5 Minnesota Wild
+DESCRIPTION:Regular season. Times display in your calendar's local time. 
+ Open the NHL Tracker Game Centre for scores\, analytics and game details
+ .
+LOCATION:Grand Casino Arena
+URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2025021199#
+ games
+END:VEVENT
+BEGIN:VEVENT
+UID:nhl-2025021216@mooneyaoife.github.io
+DTSTAMP:20260714T181702Z
+DTSTART:20260404T230000Z
+DTEND:20260405T020000Z
+SUMMARY:Final: Utah Mammoth 7 - 4 Vancouver Canucks
+DESCRIPTION:Regular season. Times display in your calendar's local time. 
+ Open the NHL Tracker Game Centre for scores\, analytics and game details
+ .
+LOCATION:Rogers Arena
+URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2025021216#
+ games
+END:VEVENT
+BEGIN:VEVENT
+UID:nhl-2025021242@mooneyaoife.github.io
+DTSTAMP:20260714T181702Z
+DTSTART:20260408T020000Z
+DTEND:20260408T050000Z
+SUMMARY:Final: Vegas Golden Knights 2 - 1 Vancouver Canucks
+DESCRIPTION:Regular season. Times display in your calendar's local time. 
+ Open the NHL Tracker Game Centre for scores\, analytics and game details
+ .
+LOCATION:Rogers Arena
+URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2025021242#
+ games
+END:VEVENT
+BEGIN:VEVENT
+UID:nhl-2025021260@mooneyaoife.github.io
+DTSTAMP:20260714T181702Z
+DTSTART:20260410T023000Z
+DTEND:20260410T053000Z
+SUMMARY:Final: Vancouver Canucks 1 - 4 Los Angeles Kings
+DESCRIPTION:Regular season. Times display in your calendar's local time. 
+ Open the NHL Tracker Game Centre for scores\, analytics and game details
+ .
+LOCATION:Crypto.com Arena
+URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2025021260#
+ games
+END:VEVENT
+BEGIN:VEVENT
+UID:nhl-2025021275@mooneyaoife.github.io
+DTSTAMP:20260714T181702Z
+DTSTART:20260412T020000Z
+DTEND:20260412T050000Z
+SUMMARY:Final: Vancouver Canucks 4 - 3 San Jose Sharks
+DESCRIPTION:Regular season. Times display in your calendar's local time. 
+ Open the NHL Tracker Game Centre for scores\, analytics and game details
+ .
+LOCATION:SAP Center at San Jose
+URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2025021275#
+ games
+END:VEVENT
+BEGIN:VEVENT
+UID:nhl-2025021280@mooneyaoife.github.io
+DTSTAMP:20260714T181702Z
+DTSTART:20260413T000000Z
+DTEND:20260413T030000Z
+SUMMARY:Final: Vancouver Canucks 4 - 3 Anaheim Ducks
+DESCRIPTION:Regular season. Times display in your calendar's local time. 
+ Open the NHL Tracker Game Centre for scores\, analytics and game details
+ .
+LOCATION:Honda Center
+URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2025021280#
+ games
+END:VEVENT
+BEGIN:VEVENT
+UID:nhl-2025021300@mooneyaoife.github.io
+DTSTAMP:20260714T181702Z
+DTSTART:20260415T020000Z
+DTEND:20260415T050000Z
+SUMMARY:Final: Los Angeles Kings 3 - 4 Vancouver Canucks
+DESCRIPTION:Regular season. Times display in your calendar's local time. 
+ Open the NHL Tracker Game Centre for scores\, analytics and game details
+ .
+LOCATION:Rogers Arena
+URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2025021300#
+ games
+END:VEVENT
+BEGIN:VEVENT
+UID:nhl-2025021311@mooneyaoife.github.io
+DTSTAMP:20260714T181702Z
+DTSTART:20260417T010000Z
+DTEND:20260417T040000Z
+SUMMARY:Final: Vancouver Canucks 1 - 6 Edmonton Oilers
+DESCRIPTION:Regular season. Times display in your calendar's local time. 
+ Open the NHL Tracker Game Centre for scores\, analytics and game details
+ .
+LOCATION:Rogers Place
+URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2025021311#
+ games
+END:VEVENT
+END:VCALENDAR

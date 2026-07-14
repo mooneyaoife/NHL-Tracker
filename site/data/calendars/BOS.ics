@@ -1,0 +1,1222 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//NHL Tracker//Team Calendar//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+X-WR-CALNAME:Boston Bruins - NHL Tracker
+X-WR-TIMEZONE:Europe/London
+X-APPLE-CALENDAR-COLOR:#FFB81C
+COLOR:#FFB81C
+REFRESH-INTERVAL;VALUE=DURATION:PT6H
+X-PUBLISHED-TTL:PT6H
+BEGIN:VEVENT
+UID:nhl-2025010013@mooneyaoife.github.io
+DTSTAMP:20260714T181701Z
+DTSTART:20250921T210000Z
+DTEND:20250922T000000Z
+SUMMARY:Final: Washington Capitals 5 - 2 Boston Bruins
+DESCRIPTION:Preseason. Times display in your calendar's local time. Open 
+ the NHL Tracker Game Centre for scores\, analytics and game details.
+LOCATION:TD Garden
+URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2025010013#
+ games
+END:VEVENT
+BEGIN:VEVENT
+UID:nhl-2025010018@mooneyaoife.github.io
+DTSTAMP:20260714T181701Z
+DTSTART:20250923T230000Z
+DTEND:20250924T020000Z
+SUMMARY:Final: Boston Bruins 5 - 4 New York Rangers
+DESCRIPTION:Preseason. Times display in your calendar's local time. Open 
+ the NHL Tracker Game Centre for scores\, analytics and game details.
+LOCATION:Madison Square Garden
+URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2025010018#
+ games
+END:VEVENT
+BEGIN:VEVENT
+UID:nhl-2025010047@mooneyaoife.github.io
+DTSTAMP:20260714T181701Z
+DTSTART:20250927T210000Z
+DTEND:20250928T000000Z
+SUMMARY:Final: Boston Bruins 4 - 3 Philadelphia Flyers
+DESCRIPTION:Preseason. Times display in your calendar's local time. Open 
+ the NHL Tracker Game Centre for scores\, analytics and game details.
+LOCATION:Xfinity Mobile Arena
+URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2025010047#
+ games
+END:VEVENT
+BEGIN:VEVENT
+UID:nhl-2025010063@mooneyaoife.github.io
+DTSTAMP:20260714T181701Z
+DTSTART:20250929T230000Z
+DTEND:20250930T020000Z
+SUMMARY:Final: Philadelphia Flyers 3 - 2 Boston Bruins
+DESCRIPTION:Preseason. Times display in your calendar's local time. Open 
+ the NHL Tracker Game Centre for scores\, analytics and game details.
+LOCATION:TD Garden
+URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2025010063#
+ games
+END:VEVENT
+BEGIN:VEVENT
+UID:nhl-2025010078@mooneyaoife.github.io
+DTSTAMP:20260714T181701Z
+DTSTART:20251002T230000Z
+DTEND:20251003T020000Z
+SUMMARY:Final: Boston Bruins 3 - 1 Washington Capitals
+DESCRIPTION:Preseason. Times display in your calendar's local time. Open 
+ the NHL Tracker Game Centre for scores\, analytics and game details.
+LOCATION:Capital One Arena
+URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2025010078#
+ games
+END:VEVENT
+BEGIN:VEVENT
+UID:nhl-2025010095@mooneyaoife.github.io
+DTSTAMP:20260714T181701Z
+DTSTART:20251004T180000Z
+DTEND:20251004T210000Z
+SUMMARY:Final: New York Rangers 1 - 4 Boston Bruins
+DESCRIPTION:Preseason. Times display in your calendar's local time. Open 
+ the NHL Tracker Game Centre for scores\, analytics and game details.
+LOCATION:TD Garden
+URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2025010095#
+ games
+END:VEVENT
+BEGIN:VEVENT
+UID:nhl-2025020005@mooneyaoife.github.io
+DTSTAMP:20260714T181701Z
+DTSTART:20251008T233000Z
+DTEND:20251009T023000Z
+SUMMARY:Final: Boston Bruins 3 - 1 Washington Capitals
+DESCRIPTION:Regular season. Times display in your calendar's local time. 
+ Open the NHL Tracker Game Centre for scores\, analytics and game details
+ .
+LOCATION:Capital One Arena
+URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2025020005#
+ games
+END:VEVENT
+BEGIN:VEVENT
+UID:nhl-2025020008@mooneyaoife.github.io
+DTSTAMP:20260714T181701Z
+DTSTART:20251009T230000Z
+DTEND:20251010T020000Z
+SUMMARY:Final: Chicago Blackhawks 3 - 4 Boston Bruins
+DESCRIPTION:Regular season. Times display in your calendar's local time. 
+ Open the NHL Tracker Game Centre for scores\, analytics and game details
+ .
+LOCATION:TD Garden
+URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2025020008#
+ games
+END:VEVENT
+BEGIN:VEVENT
+UID:nhl-2025020024@mooneyaoife.github.io
+DTSTAMP:20260714T181701Z
+DTSTART:20251011T230000Z
+DTEND:20251012T020000Z
+SUMMARY:Final: Buffalo Sabres 1 - 3 Boston Bruins
+DESCRIPTION:Regular season. Times display in your calendar's local time. 
+ Open the NHL Tracker Game Centre for scores\, analytics and game details
+ .
+LOCATION:TD Garden
+URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2025020024#
+ games
+END:VEVENT
+BEGIN:VEVENT
+UID:nhl-2025020040@mooneyaoife.github.io
+DTSTAMP:20260714T181701Z
+DTSTART:20251013T170000Z
+DTEND:20251013T200000Z
+SUMMARY:Final: Tampa Bay Lightning 4 - 3 Boston Bruins
+DESCRIPTION:Regular season. Times display in your calendar's local time. 
+ Open the NHL Tracker Game Centre for scores\, analytics and game details
+ .
+LOCATION:TD Garden
+URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2025020040#
+ games
+END:VEVENT
+BEGIN:VEVENT
+UID:nhl-2025020069@mooneyaoife.github.io
+DTSTAMP:20260714T181701Z
+DTSTART:20251017T020000Z
+DTEND:20251017T050000Z
+SUMMARY:Final: Boston Bruins 5 - 6 Vegas Golden Knights
+DESCRIPTION:Regular season. Times display in your calendar's local time. 
+ Open the NHL Tracker Game Centre for scores\, analytics and game details
+ .
+LOCATION:T-Mobile Arena
+URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2025020069#
+ games
+END:VEVENT
+BEGIN:VEVENT
+UID:nhl-2025020085@mooneyaoife.github.io
+DTSTAMP:20260714T181701Z
+DTSTART:20251019T010000Z
+DTEND:20251019T040000Z
+SUMMARY:Final: Boston Bruins 1 - 4 Colorado Avalanche
+DESCRIPTION:Regular season. Times display in your calendar's local time. 
+ Open the NHL Tracker Game Centre for scores\, analytics and game details
+ .
+LOCATION:Ball Arena
+URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2025020085#
+ games
+END:VEVENT
+BEGIN:VEVENT
+UID:nhl-2025020092@mooneyaoife.github.io
+DTSTAMP:20260714T181701Z
+DTSTART:20251019T230000Z
+DTEND:20251020T020000Z
+SUMMARY:Final: Boston Bruins 2 - 3 Utah Mammoth
+DESCRIPTION:Regular season. Times display in your calendar's local time. 
+ Open the NHL Tracker Game Centre for scores\, analytics and game details
+ .
+LOCATION:Delta Center
+URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2025020092#
+ games
+END:VEVENT
+BEGIN:VEVENT
+UID:nhl-2025020103@mooneyaoife.github.io
+DTSTAMP:20260714T181701Z
+DTSTART:20251021T233000Z
+DTEND:20251022T023000Z
+SUMMARY:Final: Florida Panthers 4 - 3 Boston Bruins
+DESCRIPTION:Regular season. Times display in your calendar's local time. 
+ Open the NHL Tracker Game Centre for scores\, analytics and game details
+ .
+LOCATION:TD Garden
+URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2025020103#
+ games
+END:VEVENT
+BEGIN:VEVENT
+UID:nhl-2025020111@mooneyaoife.github.io
+DTSTAMP:20260714T181701Z
+DTSTART:20251023T230000Z
+DTEND:20251024T020000Z
+SUMMARY:Final: Anaheim Ducks 7 - 5 Boston Bruins
+DESCRIPTION:Regular season. Times display in your calendar's local time. 
+ Open the NHL Tracker Game Centre for scores\, analytics and game details
+ .
+LOCATION:TD Garden
+URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2025020111#
+ games
+END:VEVENT
+BEGIN:VEVENT
+UID:nhl-2025020128@mooneyaoife.github.io
+DTSTAMP:20260714T181701Z
+DTSTART:20251025T190000Z
+DTEND:20251025T220000Z
+SUMMARY:Final: Colorado Avalanche 2 - 3 Boston Bruins
+DESCRIPTION:Regular season. Times display in your calendar's local time. 
+ Open the NHL Tracker Game Centre for scores\, analytics and game details
+ .
+LOCATION:TD Garden
+URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2025020128#
+ games
+END:VEVENT
+BEGIN:VEVENT
+UID:nhl-2025020149@mooneyaoife.github.io
+DTSTAMP:20260714T181701Z
+DTSTART:20251027T233000Z
+DTEND:20251028T023000Z
+SUMMARY:Final: Boston Bruins 2 - 7 Ottawa Senators
+DESCRIPTION:Regular season. Times display in your calendar's local time. 
+ Open the NHL Tracker Game Centre for scores\, analytics and game details
+ .
+LOCATION:Canadian Tire Centre
+URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2025020149#
+ games
+END:VEVENT
+BEGIN:VEVENT
+UID:nhl-2025020154@mooneyaoife.github.io
+DTSTAMP:20260714T181701Z
+DTSTART:20251028T231500Z
+DTEND:20251029T021500Z
+SUMMARY:Final: New York Islanders 2 - 5 Boston Bruins
+DESCRIPTION:Regular season. Times display in your calendar's local time. 
+ Open the NHL Tracker Game Centre for scores\, analytics and game details
+ .
+LOCATION:TD Garden
+URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2025020154#
+ games
+END:VEVENT
+BEGIN:VEVENT
+UID:nhl-2025020167@mooneyaoife.github.io
+DTSTAMP:20260714T181701Z
+DTSTART:20251030T230000Z
+DTEND:20251031T020000Z
+SUMMARY:Final: Buffalo Sabres 3 - 4 Boston Bruins
+DESCRIPTION:Regular season. Times display in your calendar's local time. 
+ Open the NHL Tracker Game Centre for scores\, analytics and game details
+ .
+LOCATION:TD Garden
+URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2025020167#
+ games
+END:VEVENT
+BEGIN:VEVENT
+UID:nhl-2025020181@mooneyaoife.github.io
+DTSTAMP:20260714T181701Z
+DTSTART:20251101T170000Z
+DTEND:20251101T200000Z
+SUMMARY:Final: Carolina Hurricanes 1 - 2 Boston Bruins
+DESCRIPTION:Regular season. Times display in your calendar's local time. 
+ Open the NHL Tracker Game Centre for scores\, analytics and game details
+ .
+LOCATION:TD Garden
+URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2025020181#
+ games
+END:VEVENT
+BEGIN:VEVENT
+UID:nhl-2025020205@mooneyaoife.github.io
+DTSTAMP:20260714T181701Z
+DTSTART:20251105T000000Z
+DTEND:20251105T030000Z
+SUMMARY:Final: Boston Bruins 4 - 3 New York Islanders
+DESCRIPTION:Regular season. Times display in your calendar's local time. 
+ Open the NHL Tracker Game Centre for scores\, analytics and game details
+ .
+LOCATION:UBS Arena
+URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2025020205#
+ games
+END:VEVENT
+BEGIN:VEVENT
+UID:nhl-2025020218@mooneyaoife.github.io
+DTSTAMP:20260714T181701Z
+DTSTART:20251107T000000Z
+DTEND:20251107T030000Z
+SUMMARY:Final: Ottawa Senators 2 - 3 Boston Bruins
+DESCRIPTION:Regular season. Times display in your calendar's local time. 
+ Open the NHL Tracker Game Centre for scores\, analytics and game details
+ .
+LOCATION:TD Garden
+URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2025020218#
+ games
+END:VEVENT
+BEGIN:VEVENT
+UID:nhl-2025020234@mooneyaoife.github.io
+DTSTAMP:20260714T181701Z
+DTSTART:20251109T000000Z
+DTEND:20251109T030000Z
+SUMMARY:Final: Boston Bruins 5 - 3 Toronto Maple Leafs
+DESCRIPTION:Regular season. Times display in your calendar's local time. 
+ Open the NHL Tracker Game Centre for scores\, analytics and game details
+ .
+LOCATION:Scotiabank Arena
+URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2025020234#
+ games
+END:VEVENT
+BEGIN:VEVENT
+UID:nhl-2025020256@mooneyaoife.github.io
+DTSTAMP:20260714T181701Z
+DTSTART:20251112T000000Z
+DTEND:20251112T030000Z
+SUMMARY:Final: Toronto Maple Leafs 3 - 5 Boston Bruins
+DESCRIPTION:Regular season. Times display in your calendar's local time. 
+ Open the NHL Tracker Game Centre for scores\, analytics and game details
+ .
+LOCATION:TD Garden
+URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2025020256#
+ games
+END:VEVENT
+BEGIN:VEVENT
+UID:nhl-2025020271@mooneyaoife.github.io
+DTSTAMP:20260714T181701Z
+DTSTART:20251114T000000Z
+DTEND:20251114T030000Z
+SUMMARY:Final: Boston Bruins 3 - 5 Ottawa Senators
+DESCRIPTION:Regular season. Times display in your calendar's local time. 
+ Open the NHL Tracker Game Centre for scores\, analytics and game details
+ .
+LOCATION:Canadian Tire Centre
+URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2025020271#
+ games
+END:VEVENT
+BEGIN:VEVENT
+UID:nhl-2025020285@mooneyaoife.github.io
+DTSTAMP:20260714T181701Z
+DTSTART:20251116T000000Z
+DTEND:20251116T030000Z
+SUMMARY:Final: Boston Bruins 3 - 2 Montréal Canadiens
+DESCRIPTION:Regular season. Times display in your calendar's local time. 
+ Open the NHL Tracker Game Centre for scores\, analytics and game details
+ .
+LOCATION:Centre Bell
+URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2025020285#
+ games
+END:VEVENT
+BEGIN:VEVENT
+UID:nhl-2025020301@mooneyaoife.github.io
+DTSTAMP:20260714T181701Z
+DTSTART:20251118T000000Z
+DTEND:20251118T030000Z
+SUMMARY:Final: Carolina Hurricanes 3 - 1 Boston Bruins
+DESCRIPTION:Regular season. Times display in your calendar's local time. 
+ Open the NHL Tracker Game Centre for scores\, analytics and game details
+ .
+LOCATION:TD Garden
+URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2025020301#
+ games
+END:VEVENT
+BEGIN:VEVENT
+UID:nhl-2025020318@mooneyaoife.github.io
+DTSTAMP:20260714T181701Z
+DTSTART:20251120T030000Z
+DTEND:20251120T060000Z
+SUMMARY:Final: Boston Bruins 3 - 4 Anaheim Ducks
+DESCRIPTION:Regular season. Times display in your calendar's local time. 
+ Open the NHL Tracker Game Centre for scores\, analytics and game details
+ .
+LOCATION:Honda Center
+URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2025020318#
+ games
+END:VEVENT
+BEGIN:VEVENT
+UID:nhl-2025020334@mooneyaoife.github.io
+DTSTAMP:20260714T181701Z
+DTSTART:20251122T033000Z
+DTEND:20251122T063000Z
+SUMMARY:Final: Boston Bruins 2 - 1 Los Angeles Kings
+DESCRIPTION:Regular season. Times display in your calendar's local time. 
+ Open the NHL Tracker Game Centre for scores\, analytics and game details
+ .
+LOCATION:Crypto.com Arena
+URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2025020334#
+ games
+END:VEVENT
+BEGIN:VEVENT
+UID:nhl-2025020351@mooneyaoife.github.io
+DTSTAMP:20260714T181701Z
+DTSTART:20251124T010000Z
+DTEND:20251124T040000Z
+SUMMARY:Final: Boston Bruins 1 - 3 San Jose Sharks
+DESCRIPTION:Regular season. Times display in your calendar's local time. 
+ Open the NHL Tracker Game Centre for scores\, analytics and game details
+ .
+LOCATION:SAP Center at San Jose
+URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2025020351#
+ games
+END:VEVENT
+BEGIN:VEVENT
+UID:nhl-2025020365@mooneyaoife.github.io
+DTSTAMP:20260714T181701Z
+DTSTART:20251127T000000Z
+DTEND:20251127T030000Z
+SUMMARY:Final: Boston Bruins 3 - 1 New York Islanders
+DESCRIPTION:Regular season. Times display in your calendar's local time. 
+ Open the NHL Tracker Game Centre for scores\, analytics and game details
+ .
+LOCATION:UBS Arena
+URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2025020365#
+ games
+END:VEVENT
+BEGIN:VEVENT
+UID:nhl-2025020376@mooneyaoife.github.io
+DTSTAMP:20260714T181701Z
+DTSTART:20251128T180000Z
+DTEND:20251128T210000Z
+SUMMARY:Final: New York Rangers 6 - 2 Boston Bruins
+DESCRIPTION:Regular season. Times display in your calendar's local time. 
+ Open the NHL Tracker Game Centre for scores\, analytics and game details
+ .
+LOCATION:TD Garden
+URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2025020376#
+ games
+END:VEVENT
+BEGIN:VEVENT
+UID:nhl-2025020394@mooneyaoife.github.io
+DTSTAMP:20260714T181701Z
+DTSTART:20251130T000000Z
+DTEND:20251130T030000Z
+SUMMARY:Final: Detroit Red Wings 2 - 3 Boston Bruins
+DESCRIPTION:Regular season. Times display in your calendar's local time. 
+ Open the NHL Tracker Game Centre for scores\, analytics and game details
+ .
+LOCATION:TD Garden
+URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2025020394#
+ games
+END:VEVENT
+BEGIN:VEVENT
+UID:nhl-2025020412@mooneyaoife.github.io
+DTSTAMP:20260714T181701Z
+DTSTART:20251203T000000Z
+DTEND:20251203T030000Z
+SUMMARY:Final: Boston Bruins 4 - 5 Detroit Red Wings
+DESCRIPTION:Regular season. Times display in your calendar's local time. 
+ Open the NHL Tracker Game Centre for scores\, analytics and game details
+ .
+LOCATION:Little Caesars Arena
+URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2025020412#
+ games
+END:VEVENT
+BEGIN:VEVENT
+UID:nhl-2025020426@mooneyaoife.github.io
+DTSTAMP:20260714T181701Z
+DTSTART:20251205T000000Z
+DTEND:20251205T030000Z
+SUMMARY:Final: St. Louis Blues 2 - 5 Boston Bruins
+DESCRIPTION:Regular season. Times display in your calendar's local time. 
+ Open the NHL Tracker Game Centre for scores\, analytics and game details
+ .
+LOCATION:TD Garden
+URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2025020426#
+ games
+END:VEVENT
+BEGIN:VEVENT
+UID:nhl-2025020443@mooneyaoife.github.io
+DTSTAMP:20260714T181701Z
+DTSTART:20251207T000000Z
+DTEND:20251207T030000Z
+SUMMARY:Final: New Jersey Devils 1 - 4 Boston Bruins
+DESCRIPTION:Regular season. Times display in your calendar's local time. 
+ Open the NHL Tracker Game Centre for scores\, analytics and game details
+ .
+LOCATION:TD Garden
+URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2025020443#
+ games
+END:VEVENT
+BEGIN:VEVENT
+UID:nhl-2025020472@mooneyaoife.github.io
+DTSTAMP:20260714T181701Z
+DTSTART:20251210T010000Z
+DTEND:20251210T040000Z
+SUMMARY:Final: Boston Bruins 5 - 2 St. Louis Blues
+DESCRIPTION:Regular season. Times display in your calendar's local time. 
+ Open the NHL Tracker Game Centre for scores\, analytics and game details
+ .
+LOCATION:Enterprise Center
+URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2025020472#
+ games
+END:VEVENT
+BEGIN:VEVENT
+UID:nhl-2025020489@mooneyaoife.github.io
+DTSTAMP:20260714T181701Z
+DTSTART:20251212T010000Z
+DTEND:20251212T040000Z
+SUMMARY:Final: Boston Bruins 6 - 3 Winnipeg Jets
+DESCRIPTION:Regular season. Times display in your calendar's local time. 
+ Open the NHL Tracker Game Centre for scores\, analytics and game details
+ .
+LOCATION:Canada Life Centre
+URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2025020489#
+ games
+END:VEVENT
+BEGIN:VEVENT
+UID:nhl-2025020511@mooneyaoife.github.io
+DTSTAMP:20260714T181701Z
+DTSTART:20251214T230000Z
+DTEND:20251215T020000Z
+SUMMARY:Final: Boston Bruins 2 - 6 Minnesota Wild
+DESCRIPTION:Regular season. Times display in your calendar's local time. 
+ Open the NHL Tracker Game Centre for scores\, analytics and game details
+ .
+LOCATION:Grand Casino Arena
+URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2025020511#
+ games
+END:VEVENT
+BEGIN:VEVENT
+UID:nhl-2025020519@mooneyaoife.github.io
+DTSTAMP:20260714T181701Z
+DTSTART:20251217T000000Z
+DTEND:20251217T030000Z
+SUMMARY:Final: Utah Mammoth 1 - 4 Boston Bruins
+DESCRIPTION:Regular season. Times display in your calendar's local time. 
+ Open the NHL Tracker Game Centre for scores\, analytics and game details
+ .
+LOCATION:TD Garden
+URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2025020519#
+ games
+END:VEVENT
+BEGIN:VEVENT
+UID:nhl-2025020534@mooneyaoife.github.io
+DTSTAMP:20260714T181701Z
+DTSTART:20251219T000000Z
+DTEND:20251219T030000Z
+SUMMARY:Final: Edmonton Oilers 3 - 1 Boston Bruins
+DESCRIPTION:Regular season. Times display in your calendar's local time. 
+ Open the NHL Tracker Game Centre for scores\, analytics and game details
+ .
+LOCATION:TD Garden
+URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2025020534#
+ games
+END:VEVENT
+BEGIN:VEVENT
+UID:nhl-2025020555@mooneyaoife.github.io
+DTSTAMP:20260714T181701Z
+DTSTART:20251221T000000Z
+DTEND:20251221T030000Z
+SUMMARY:Final: Vancouver Canucks 5 - 4 Boston Bruins
+DESCRIPTION:Regular season. Times display in your calendar's local time. 
+ Open the NHL Tracker Game Centre for scores\, analytics and game details
+ .
+LOCATION:TD Garden
+URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2025020555#
+ games
+END:VEVENT
+BEGIN:VEVENT
+UID:nhl-2025020564@mooneyaoife.github.io
+DTSTAMP:20260714T181701Z
+DTSTART:20251222T000000Z
+DTEND:20251222T030000Z
+SUMMARY:Final: Ottawa Senators 6 - 2 Boston Bruins
+DESCRIPTION:Regular season. Times display in your calendar's local time. 
+ Open the NHL Tracker Game Centre for scores\, analytics and game details
+ .
+LOCATION:TD Garden
+URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2025020564#
+ games
+END:VEVENT
+BEGIN:VEVENT
+UID:nhl-2025020577@mooneyaoife.github.io
+DTSTAMP:20260714T181701Z
+DTSTART:20251224T000000Z
+DTEND:20251224T030000Z
+SUMMARY:Final: Montréal Canadiens 6 - 2 Boston Bruins
+DESCRIPTION:Regular season. Times display in your calendar's local time. 
+ Open the NHL Tracker Game Centre for scores\, analytics and game details
+ .
+LOCATION:TD Garden
+URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2025020577#
+ games
+END:VEVENT
+BEGIN:VEVENT
+UID:nhl-2025020589@mooneyaoife.github.io
+DTSTAMP:20260714T181701Z
+DTSTART:20251228T000000Z
+DTEND:20251228T030000Z
+SUMMARY:Final: Boston Bruins 1 - 4 Buffalo Sabres
+DESCRIPTION:Regular season. Times display in your calendar's local time. 
+ Open the NHL Tracker Game Centre for scores\, analytics and game details
+ .
+LOCATION:KeyBank Center
+URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2025020589#
+ games
+END:VEVENT
+BEGIN:VEVENT
+UID:nhl-2025020613@mooneyaoife.github.io
+DTSTAMP:20260714T181701Z
+DTSTART:20251230T020000Z
+DTEND:20251230T050000Z
+SUMMARY:Final: Boston Bruins 1 - 2 Calgary Flames
+DESCRIPTION:Regular season. Times display in your calendar's local time. 
+ Open the NHL Tracker Game Centre for scores\, analytics and game details
+ .
+LOCATION:Scotiabank Saddledome
+URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2025020613#
+ games
+END:VEVENT
+BEGIN:VEVENT
+UID:nhl-2025020631@mooneyaoife.github.io
+DTSTAMP:20260714T181701Z
+DTSTART:20260101T023000Z
+DTEND:20260101T053000Z
+SUMMARY:Final: Boston Bruins 6 - 2 Edmonton Oilers
+DESCRIPTION:Regular season. Times display in your calendar's local time. 
+ Open the NHL Tracker Game Centre for scores\, analytics and game details
+ .
+LOCATION:Rogers Place
+URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2025020631#
+ games
+END:VEVENT
+BEGIN:VEVENT
+UID:nhl-2025020656@mooneyaoife.github.io
+DTSTAMP:20260714T181701Z
+DTSTART:20260104T030000Z
+DTEND:20260104T060000Z
+SUMMARY:Final: Boston Bruins 3 - 2 Vancouver Canucks
+DESCRIPTION:Regular season. Times display in your calendar's local time. 
+ Open the NHL Tracker Game Centre for scores\, analytics and game details
+ .
+LOCATION:Rogers Arena
+URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2025020656#
+ games
+END:VEVENT
+BEGIN:VEVENT
+UID:nhl-2025020676@mooneyaoife.github.io
+DTSTAMP:20260714T181701Z
+DTSTART:20260107T030000Z
+DTEND:20260107T060000Z
+SUMMARY:Final: Boston Bruins 4 - 7 Seattle Kraken
+DESCRIPTION:Regular season. Times display in your calendar's local time. 
+ Open the NHL Tracker Game Centre for scores\, analytics and game details
+ .
+LOCATION:Climate Pledge Arena
+URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2025020676#
+ games
+END:VEVENT
+BEGIN:VEVENT
+UID:nhl-2025020682@mooneyaoife.github.io
+DTSTAMP:20260714T181701Z
+DTSTART:20260109T000000Z
+DTEND:20260109T030000Z
+SUMMARY:Final: Calgary Flames 1 - 4 Boston Bruins
+DESCRIPTION:Regular season. Times display in your calendar's local time. 
+ Open the NHL Tracker Game Centre for scores\, analytics and game details
+ .
+LOCATION:TD Garden
+URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2025020682#
+ games
+END:VEVENT
+BEGIN:VEVENT
+UID:nhl-2025020697@mooneyaoife.github.io
+DTSTAMP:20260714T181701Z
+DTSTART:20260110T180000Z
+DTEND:20260110T210000Z
+SUMMARY:Final: New York Rangers 2 - 10 Boston Bruins
+DESCRIPTION:Regular season. Times display in your calendar's local time. 
+ Open the NHL Tracker Game Centre for scores\, analytics and game details
+ .
+LOCATION:TD Garden
+URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2025020697#
+ games
+END:VEVENT
+BEGIN:VEVENT
+UID:nhl-2025020712@mooneyaoife.github.io
+DTSTAMP:20260714T181701Z
+DTSTART:20260111T220000Z
+DTEND:20260112T010000Z
+SUMMARY:Final: Pittsburgh Penguins 0 - 1 Boston Bruins
+DESCRIPTION:Regular season. Times display in your calendar's local time. 
+ Open the NHL Tracker Game Centre for scores\, analytics and game details
+ .
+LOCATION:TD Garden
+URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2025020712#
+ games
+END:VEVENT
+BEGIN:VEVENT
+UID:nhl-2025020729@mooneyaoife.github.io
+DTSTAMP:20260714T181701Z
+DTSTART:20260114T003000Z
+DTEND:20260114T033000Z
+SUMMARY:Final: Detroit Red Wings 0 - 3 Boston Bruins
+DESCRIPTION:Regular season. Times display in your calendar's local time. 
+ Open the NHL Tracker Game Centre for scores\, analytics and game details
+ .
+LOCATION:TD Garden
+URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2025020729#
+ games
+END:VEVENT
+BEGIN:VEVENT
+UID:nhl-2025020739@mooneyaoife.github.io
+DTSTAMP:20260714T181701Z
+DTSTART:20260116T010000Z
+DTEND:20260116T040000Z
+SUMMARY:Final: Seattle Kraken 2 - 4 Boston Bruins
+DESCRIPTION:Regular season. Times display in your calendar's local time. 
+ Open the NHL Tracker Game Centre for scores\, analytics and game details
+ .
+LOCATION:TD Garden
+URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2025020739#
+ games
+END:VEVENT
+BEGIN:VEVENT
+UID:nhl-2025020763@mooneyaoife.github.io
+DTSTAMP:20260714T181701Z
+DTSTART:20260118T010000Z
+DTEND:20260118T040000Z
+SUMMARY:Final: Boston Bruins 5 - 2 Chicago Blackhawks
+DESCRIPTION:Regular season. Times display in your calendar's local time. 
+ Open the NHL Tracker Game Centre for scores\, analytics and game details
+ .
+LOCATION:United Center
+URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2025020763#
+ games
+END:VEVENT
+BEGIN:VEVENT
+UID:nhl-2025020783@mooneyaoife.github.io
+DTSTAMP:20260714T181701Z
+DTSTART:20260121T003000Z
+DTEND:20260121T033000Z
+SUMMARY:Final: Boston Bruins 2 - 6 Dallas Stars
+DESCRIPTION:Regular season. Times display in your calendar's local time. 
+ Open the NHL Tracker Game Centre for scores\, analytics and game details
+ .
+LOCATION:American Airlines Center
+URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2025020783#
+ games
+END:VEVENT
+BEGIN:VEVENT
+UID:nhl-2025020794@mooneyaoife.github.io
+DTSTAMP:20260714T181701Z
+DTSTART:20260123T000000Z
+DTEND:20260123T030000Z
+SUMMARY:Final: Vegas Golden Knights 3 - 4 Boston Bruins
+DESCRIPTION:Regular season. Times display in your calendar's local time. 
+ Open the NHL Tracker Game Centre for scores\, analytics and game details
+ .
+LOCATION:TD Garden
+URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2025020794#
+ games
+END:VEVENT
+BEGIN:VEVENT
+UID:nhl-2025020812@mooneyaoife.github.io
+DTSTAMP:20260714T181701Z
+DTSTART:20260125T000000Z
+DTEND:20260125T030000Z
+SUMMARY:Final: Montréal Canadiens 3 - 4 Boston Bruins
+DESCRIPTION:Regular season. Times display in your calendar's local time. 
+ Open the NHL Tracker Game Centre for scores\, analytics and game details
+ .
+LOCATION:TD Garden
+URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2025020812#
+ games
+END:VEVENT
+BEGIN:VEVENT
+UID:nhl-2025020826@mooneyaoife.github.io
+DTSTAMP:20260714T181701Z
+DTSTART:20260127T000000Z
+DTEND:20260127T030000Z
+SUMMARY:Final: Boston Bruins 3 - 4 New York Rangers
+DESCRIPTION:Regular season. Times display in your calendar's local time. 
+ Open the NHL Tracker Game Centre for scores\, analytics and game details
+ .
+LOCATION:Madison Square Garden
+URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2025020826#
+ games
+END:VEVENT
+BEGIN:VEVENT
+UID:nhl-2025020830@mooneyaoife.github.io
+DTSTAMP:20260714T181701Z
+DTSTART:20260128T000000Z
+DTEND:20260128T030000Z
+SUMMARY:Final: Nashville Predators 2 - 3 Boston Bruins
+DESCRIPTION:Regular season. Times display in your calendar's local time. 
+ Open the NHL Tracker Game Centre for scores\, analytics and game details
+ .
+LOCATION:TD Garden
+URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2025020830#
+ games
+END:VEVENT
+BEGIN:VEVENT
+UID:nhl-2025020843@mooneyaoife.github.io
+DTSTAMP:20260714T181701Z
+DTSTART:20260130T000000Z
+DTEND:20260130T030000Z
+SUMMARY:Final: Philadelphia Flyers 3 - 6 Boston Bruins
+DESCRIPTION:Regular season. Times display in your calendar's local time. 
+ Open the NHL Tracker Game Centre for scores\, analytics and game details
+ .
+LOCATION:TD Garden
+URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2025020843#
+ games
+END:VEVENT
+BEGIN:VEVENT
+UID:nhl-2025020873@mooneyaoife.github.io
+DTSTAMP:20260714T181701Z
+DTSTART:20260201T233000Z
+DTEND:20260202T023000Z
+SUMMARY:Final: Boston Bruins 5 - 6 Tampa Bay Lightning
+DESCRIPTION:Regular season. Times display in your calendar's local time. 
+ Open the NHL Tracker Game Centre for scores\, analytics and game details
+ .
+LOCATION:Raymond James Stadium
+URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2025020873#
+ games
+END:VEVENT
+BEGIN:VEVENT
+UID:nhl-2025020893@mooneyaoife.github.io
+DTSTAMP:20260714T181701Z
+DTSTART:20260205T000000Z
+DTEND:20260205T030000Z
+SUMMARY:Final: Boston Bruins 4 - 5 Florida Panthers
+DESCRIPTION:Regular season. Times display in your calendar's local time. 
+ Open the NHL Tracker Game Centre for scores\, analytics and game details
+ .
+LOCATION:Amerant Bank Arena
+URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2025020893#
+ games
+END:VEVENT
+BEGIN:VEVENT
+UID:nhl-2025020918@mooneyaoife.github.io
+DTSTAMP:20260714T181701Z
+DTSTART:20260227T000000Z
+DTEND:20260227T030000Z
+SUMMARY:Final: Columbus Blue Jackets 2 - 4 Boston Bruins
+DESCRIPTION:Regular season. Times display in your calendar's local time. 
+ Open the NHL Tracker Game Centre for scores\, analytics and game details
+ .
+LOCATION:TD Garden
+URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2025020918#
+ games
+END:VEVENT
+BEGIN:VEVENT
+UID:nhl-2025020935@mooneyaoife.github.io
+DTSTAMP:20260714T181701Z
+DTSTART:20260228T200000Z
+DTEND:20260228T230000Z
+SUMMARY:Final: Boston Bruins 1 - 3 Philadelphia Flyers
+DESCRIPTION:Regular season. Times display in your calendar's local time. 
+ Open the NHL Tracker Game Centre for scores\, analytics and game details
+ .
+LOCATION:Xfinity Mobile Arena
+URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2025020935#
+ games
+END:VEVENT
+BEGIN:VEVENT
+UID:nhl-2025020959@mooneyaoife.github.io
+DTSTAMP:20260714T181701Z
+DTSTART:20260304T000000Z
+DTEND:20260304T030000Z
+SUMMARY:Final: Pittsburgh Penguins 1 - 2 Boston Bruins
+DESCRIPTION:Regular season. Times display in your calendar's local time. 
+ Open the NHL Tracker Game Centre for scores\, analytics and game details
+ .
+LOCATION:TD Garden
+URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2025020959#
+ games
+END:VEVENT
+BEGIN:VEVENT
+UID:nhl-2025020979@mooneyaoife.github.io
+DTSTAMP:20260714T181701Z
+DTSTART:20260306T010000Z
+DTEND:20260306T040000Z
+SUMMARY:Final: Boston Bruins 3 - 6 Nashville Predators
+DESCRIPTION:Regular season. Times display in your calendar's local time. 
+ Open the NHL Tracker Game Centre for scores\, analytics and game details
+ .
+LOCATION:Bridgestone Arena
+URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2025020979#
+ games
+END:VEVENT
+BEGIN:VEVENT
+UID:nhl-2025020990@mooneyaoife.github.io
+DTSTAMP:20260714T181701Z
+DTSTART:20260307T173000Z
+DTEND:20260307T203000Z
+SUMMARY:Final: Washington Capitals 1 - 3 Boston Bruins
+DESCRIPTION:Regular season. Times display in your calendar's local time. 
+ Open the NHL Tracker Game Centre for scores\, analytics and game details
+ .
+LOCATION:TD Garden
+URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2025020990#
+ games
+END:VEVENT
+BEGIN:VEVENT
+UID:nhl-2025021002@mooneyaoife.github.io
+DTSTAMP:20260714T181701Z
+DTSTART:20260308T203000Z
+DTEND:20260308T233000Z
+SUMMARY:Final: Boston Bruins 4 - 5 Pittsburgh Penguins
+DESCRIPTION:Regular season. Times display in your calendar's local time. 
+ Open the NHL Tracker Game Centre for scores\, analytics and game details
+ .
+LOCATION:PPG Paints Arena
+URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2025021002#
+ games
+END:VEVENT
+BEGIN:VEVENT
+UID:nhl-2025021012@mooneyaoife.github.io
+DTSTAMP:20260714T181701Z
+DTSTART:20260310T230000Z
+DTEND:20260311T020000Z
+SUMMARY:Final: Los Angeles Kings 1 - 2 Boston Bruins
+DESCRIPTION:Regular season. Times display in your calendar's local time. 
+ Open the NHL Tracker Game Centre for scores\, analytics and game details
+ .
+LOCATION:TD Garden
+URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2025021012#
+ games
+END:VEVENT
+BEGIN:VEVENT
+UID:nhl-2025021027@mooneyaoife.github.io
+DTSTAMP:20260714T181701Z
+DTSTART:20260312T230000Z
+DTEND:20260313T020000Z
+SUMMARY:Final: San Jose Sharks 4 - 2 Boston Bruins
+DESCRIPTION:Regular season. Times display in your calendar's local time. 
+ Open the NHL Tracker Game Centre for scores\, analytics and game details
+ .
+LOCATION:TD Garden
+URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2025021027#
+ games
+END:VEVENT
+BEGIN:VEVENT
+UID:nhl-2025021044@mooneyaoife.github.io
+DTSTAMP:20260714T181701Z
+DTSTART:20260314T190000Z
+DTEND:20260314T220000Z
+SUMMARY:Final: Boston Bruins 3 - 2 Washington Capitals
+DESCRIPTION:Regular season. Times display in your calendar's local time. 
+ Open the NHL Tracker Game Centre for scores\, analytics and game details
+ .
+LOCATION:Capital One Arena
+URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2025021044#
+ games
+END:VEVENT
+BEGIN:VEVENT
+UID:nhl-2025021064@mooneyaoife.github.io
+DTSTAMP:20260714T181701Z
+DTSTART:20260316T230000Z
+DTEND:20260317T020000Z
+SUMMARY:Final: Boston Bruins 3 - 4 New Jersey Devils
+DESCRIPTION:Regular season. Times display in your calendar's local time. 
+ Open the NHL Tracker Game Centre for scores\, analytics and game details
+ .
+LOCATION:Prudential Center
+URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2025021064#
+ games
+END:VEVENT
+BEGIN:VEVENT
+UID:nhl-2025021069@mooneyaoife.github.io
+DTSTAMP:20260714T181701Z
+DTSTART:20260317T230000Z
+DTEND:20260318T020000Z
+SUMMARY:Final: Boston Bruins 2 - 3 Montréal Canadiens
+DESCRIPTION:Regular season. Times display in your calendar's local time. 
+ Open the NHL Tracker Game Centre for scores\, analytics and game details
+ .
+LOCATION:Centre Bell
+URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2025021069#
+ games
+END:VEVENT
+BEGIN:VEVENT
+UID:nhl-2025021083@mooneyaoife.github.io
+DTSTAMP:20260714T181701Z
+DTSTART:20260319T230000Z
+DTEND:20260320T020000Z
+SUMMARY:Final: Winnipeg Jets 1 - 6 Boston Bruins
+DESCRIPTION:Regular season. Times display in your calendar's local time. 
+ Open the NHL Tracker Game Centre for scores\, analytics and game details
+ .
+LOCATION:TD Garden
+URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2025021083#
+ games
+END:VEVENT
+BEGIN:VEVENT
+UID:nhl-2025021108@mooneyaoife.github.io
+DTSTAMP:20260714T181701Z
+DTSTART:20260322T000000Z
+DTEND:20260322T030000Z
+SUMMARY:Final: Boston Bruins 4 - 2 Detroit Red Wings
+DESCRIPTION:Regular season. Times display in your calendar's local time. 
+ Open the NHL Tracker Game Centre for scores\, analytics and game details
+ .
+LOCATION:Little Caesars Arena
+URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2025021108#
+ games
+END:VEVENT
+BEGIN:VEVENT
+UID:nhl-2025021120@mooneyaoife.github.io
+DTSTAMP:20260714T181701Z
+DTSTART:20260324T230000Z
+DTEND:20260325T020000Z
+SUMMARY:Final: Toronto Maple Leafs 4 - 2 Boston Bruins
+DESCRIPTION:Regular season. Times display in your calendar's local time. 
+ Open the NHL Tracker Game Centre for scores\, analytics and game details
+ .
+LOCATION:TD Garden
+URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2025021120#
+ games
+END:VEVENT
+BEGIN:VEVENT
+UID:nhl-2025021135@mooneyaoife.github.io
+DTSTAMP:20260714T181701Z
+DTSTART:20260325T233000Z
+DTEND:20260326T023000Z
+SUMMARY:Final: Boston Bruins 4 - 3 Buffalo Sabres
+DESCRIPTION:Regular season. Times display in your calendar's local time. 
+ Open the NHL Tracker Game Centre for scores\, analytics and game details
+ .
+LOCATION:KeyBank Center
+URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2025021135#
+ games
+END:VEVENT
+BEGIN:VEVENT
+UID:nhl-2025021155@mooneyaoife.github.io
+DTSTAMP:20260714T181701Z
+DTSTART:20260328T210000Z
+DTEND:20260329T000000Z
+SUMMARY:Final: Minnesota Wild 3 - 6 Boston Bruins
+DESCRIPTION:Regular season. Times display in your calendar's local time. 
+ Open the NHL Tracker Game Centre for scores\, analytics and game details
+ .
+LOCATION:TD Garden
+URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2025021155#
+ games
+END:VEVENT
+BEGIN:VEVENT
+UID:nhl-2025021170@mooneyaoife.github.io
+DTSTAMP:20260714T181701Z
+DTSTART:20260329T210000Z
+DTEND:20260330T000000Z
+SUMMARY:Final: Boston Bruins 4 - 3 Columbus Blue Jackets
+DESCRIPTION:Regular season. Times display in your calendar's local time. 
+ Open the NHL Tracker Game Centre for scores\, analytics and game details
+ .
+LOCATION:Nationwide Arena
+URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2025021170#
+ games
+END:VEVENT
+BEGIN:VEVENT
+UID:nhl-2025021178@mooneyaoife.github.io
+DTSTAMP:20260714T181701Z
+DTSTART:20260331T230000Z
+DTEND:20260401T020000Z
+SUMMARY:Final: Dallas Stars 3 - 6 Boston Bruins
+DESCRIPTION:Regular season. Times display in your calendar's local time. 
+ Open the NHL Tracker Game Centre for scores\, analytics and game details
+ .
+LOCATION:TD Garden
+URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2025021178#
+ games
+END:VEVENT
+BEGIN:VEVENT
+UID:nhl-2025021193@mooneyaoife.github.io
+DTSTAMP:20260714T181701Z
+DTSTART:20260402T230000Z
+DTEND:20260403T020000Z
+SUMMARY:Final: Boston Bruins 1 - 2 Florida Panthers
+DESCRIPTION:Regular season. Times display in your calendar's local time. 
+ Open the NHL Tracker Game Centre for scores\, analytics and game details
+ .
+LOCATION:Amerant Bank Arena
+URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2025021193#
+ games
+END:VEVENT
+BEGIN:VEVENT
+UID:nhl-2025021210@mooneyaoife.github.io
+DTSTAMP:20260714T181701Z
+DTSTART:20260404T210000Z
+DTEND:20260405T000000Z
+SUMMARY:Final: Boston Bruins 1 - 3 Tampa Bay Lightning
+DESCRIPTION:Regular season. Times display in your calendar's local time. 
+ Open the NHL Tracker Game Centre for scores\, analytics and game details
+ .
+LOCATION:Benchmark International Arena
+URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2025021210#
+ games
+END:VEVENT
+BEGIN:VEVENT
+UID:nhl-2025021224@mooneyaoife.github.io
+DTSTAMP:20260714T181701Z
+DTSTART:20260405T193000Z
+DTEND:20260405T223000Z
+SUMMARY:Final: Boston Bruins 1 - 2 Philadelphia Flyers
+DESCRIPTION:Regular season. Times display in your calendar's local time. 
+ Open the NHL Tracker Game Centre for scores\, analytics and game details
+ .
+LOCATION:Xfinity Mobile Arena
+URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2025021224#
+ games
+END:VEVENT
+BEGIN:VEVENT
+UID:nhl-2025021237@mooneyaoife.github.io
+DTSTAMP:20260714T181701Z
+DTSTART:20260407T230000Z
+DTEND:20260408T020000Z
+SUMMARY:Final: Boston Bruins 5 - 6 Carolina Hurricanes
+DESCRIPTION:Regular season. Times display in your calendar's local time. 
+ Open the NHL Tracker Game Centre for scores\, analytics and game details
+ .
+LOCATION:Lenovo Center
+URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2025021237#
+ games
+END:VEVENT
+BEGIN:VEVENT
+UID:nhl-2025021261@mooneyaoife.github.io
+DTSTAMP:20260714T181701Z
+DTSTART:20260411T163000Z
+DTEND:20260411T193000Z
+SUMMARY:Final: Tampa Bay Lightning 2 - 1 Boston Bruins
+DESCRIPTION:Regular season. Times display in your calendar's local time. 
+ Open the NHL Tracker Game Centre for scores\, analytics and game details
+ .
+LOCATION:TD Garden
+URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2025021261#
+ games
+END:VEVENT
+BEGIN:VEVENT
+UID:nhl-2025021278@mooneyaoife.github.io
+DTSTAMP:20260714T181701Z
+DTSTART:20260412T220000Z
+DTEND:20260413T010000Z
+SUMMARY:Final: Boston Bruins 3 - 2 Columbus Blue Jackets
+DESCRIPTION:Regular season. Times display in your calendar's local time. 
+ Open the NHL Tracker Game Centre for scores\, analytics and game details
+ .
+LOCATION:Nationwide Arena
+URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2025021278#
+ games
+END:VEVENT
+BEGIN:VEVENT
+UID:nhl-2025021292@mooneyaoife.github.io
+DTSTAMP:20260714T181701Z
+DTSTART:20260414T230000Z
+DTEND:20260415T020000Z
+SUMMARY:Final: New Jersey Devils 0 - 4 Boston Bruins
+DESCRIPTION:Regular season. Times display in your calendar's local time. 
+ Open the NHL Tracker Game Centre for scores\, analytics and game details
+ .
+LOCATION:TD Garden
+URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2025021292#
+ games
+END:VEVENT
+BEGIN:VEVENT
+UID:nhl-2025030111@mooneyaoife.github.io
+DTSTAMP:20260714T181701Z
+DTSTART:20260419T233000Z
+DTEND:20260420T023000Z
+SUMMARY:Final: Boston Bruins 3 - 4 Buffalo Sabres
+DESCRIPTION:Playoffs. Times display in your calendar's local time. Open t
+ he NHL Tracker Game Centre for scores\, analytics and game details.
+LOCATION:KeyBank Center
+URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2025030111#
+ games
+END:VEVENT
+BEGIN:VEVENT
+UID:nhl-2025030112@mooneyaoife.github.io
+DTSTAMP:20260714T181701Z
+DTSTART:20260421T233000Z
+DTEND:20260422T023000Z
+SUMMARY:Final: Boston Bruins 4 - 2 Buffalo Sabres
+DESCRIPTION:Playoffs. Times display in your calendar's local time. Open t
+ he NHL Tracker Game Centre for scores\, analytics and game details.
+LOCATION:KeyBank Center
+URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2025030112#
+ games
+END:VEVENT
+BEGIN:VEVENT
+UID:nhl-2025030113@mooneyaoife.github.io
+DTSTAMP:20260714T181701Z
+DTSTART:20260423T230000Z
+DTEND:20260424T020000Z
+SUMMARY:Final: Buffalo Sabres 3 - 1 Boston Bruins
+DESCRIPTION:Playoffs. Times display in your calendar's local time. Open t
+ he NHL Tracker Game Centre for scores\, analytics and game details.
+LOCATION:TD Garden
+URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2025030113#
+ games
+END:VEVENT
+BEGIN:VEVENT
+UID:nhl-2025030114@mooneyaoife.github.io
+DTSTAMP:20260714T181701Z
+DTSTART:20260426T180000Z
+DTEND:20260426T210000Z
+SUMMARY:Final: Buffalo Sabres 6 - 1 Boston Bruins
+DESCRIPTION:Playoffs. Times display in your calendar's local time. Open t
+ he NHL Tracker Game Centre for scores\, analytics and game details.
+LOCATION:TD Garden
+URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2025030114#
+ games
+END:VEVENT
+BEGIN:VEVENT
+UID:nhl-2025030115@mooneyaoife.github.io
+DTSTAMP:20260714T181701Z
+DTSTART:20260428T233000Z
+DTEND:20260429T023000Z
+SUMMARY:Final: Boston Bruins 2 - 1 Buffalo Sabres
+DESCRIPTION:Playoffs. Times display in your calendar's local time. Open t
+ he NHL Tracker Game Centre for scores\, analytics and game details.
+LOCATION:KeyBank Center
+URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2025030115#
+ games
+END:VEVENT
+BEGIN:VEVENT
+UID:nhl-2025030116@mooneyaoife.github.io
+DTSTAMP:20260714T181701Z
+DTSTART:20260501T233000Z
+DTEND:20260502T023000Z
+SUMMARY:Final: Buffalo Sabres 4 - 1 Boston Bruins
+DESCRIPTION:Playoffs. Times display in your calendar's local time. Open t
+ he NHL Tracker Game Centre for scores\, analytics and game details.
+LOCATION:TD Garden
+URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2025030116#
+ games
+END:VEVENT
+END:VCALENDAR

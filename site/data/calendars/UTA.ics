@@ -1,0 +1,1234 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//NHL Tracker//Team Calendar//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+X-WR-CALNAME:Utah Mammoth - NHL Tracker
+X-WR-TIMEZONE:Europe/London
+X-APPLE-CALENDAR-COLOR:#71AFE5
+COLOR:#71AFE5
+REFRESH-INTERVAL;VALUE=DURATION:PT6H
+X-PUBLISHED-TTL:PT6H
+BEGIN:VEVENT
+UID:nhl-2025010103@mooneyaoife.github.io
+DTSTAMP:20260714T181701Z
+DTSTART:20250921T230000Z
+DTEND:20250922T020000Z
+SUMMARY:Final: Colorado Avalanche 5 - 1 Utah Mammoth
+DESCRIPTION:Preseason. Times display in your calendar's local time. Open 
+ the NHL Tracker Game Centre for scores\, analytics and game details.
+LOCATION:Magness Arena
+URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2025010103#
+ games
+END:VEVENT
+BEGIN:VEVENT
+UID:nhl-2025010104@mooneyaoife.github.io
+DTSTAMP:20260714T181701Z
+DTSTART:20250922T013000Z
+DTEND:20250922T043000Z
+SUMMARY:Final: Utah Mammoth 2 - 3 Colorado Avalanche
+DESCRIPTION:Preseason. Times display in your calendar's local time. Open 
+ the NHL Tracker Game Centre for scores\, analytics and game details.
+LOCATION:Ball Arena
+URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2025010104#
+ games
+END:VEVENT
+BEGIN:VEVENT
+UID:nhl-2025010017@mooneyaoife.github.io
+DTSTAMP:20260714T181701Z
+DTSTART:20250923T020000Z
+DTEND:20250923T050000Z
+SUMMARY:Final: Utah Mammoth 1 - 6 Anaheim Ducks
+DESCRIPTION:Preseason. Times display in your calendar's local time. Open 
+ the NHL Tracker Game Centre for scores\, analytics and game details.
+LOCATION:Honda Center
+URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2025010017#
+ games
+END:VEVENT
+BEGIN:VEVENT
+UID:nhl-2025010039@mooneyaoife.github.io
+DTSTAMP:20260714T181701Z
+DTSTART:20250926T020000Z
+DTEND:20250926T050000Z
+SUMMARY:Final: Utah Mammoth 2 - 3 Vegas Golden Knights
+DESCRIPTION:Preseason. Times display in your calendar's local time. Open 
+ the NHL Tracker Game Centre for scores\, analytics and game details.
+LOCATION:T-Mobile Arena
+URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2025010039#
+ games
+END:VEVENT
+BEGIN:VEVENT
+UID:nhl-2025010068@mooneyaoife.github.io
+DTSTAMP:20260714T181701Z
+DTSTART:20251001T010000Z
+DTEND:20251001T040000Z
+SUMMARY:Final: Los Angeles Kings 3 - 2 Utah Mammoth
+DESCRIPTION:Preseason. Times display in your calendar's local time. Open 
+ the NHL Tracker Game Centre for scores\, analytics and game details.
+LOCATION:Idaho Central Arena
+URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2025010068#
+ games
+END:VEVENT
+BEGIN:VEVENT
+UID:nhl-2025010081@mooneyaoife.github.io
+DTSTAMP:20260714T181701Z
+DTSTART:20251003T010000Z
+DTEND:20251003T040000Z
+SUMMARY:Final: Los Angeles Kings 1 - 2 Utah Mammoth
+DESCRIPTION:Preseason. Times display in your calendar's local time. Open 
+ the NHL Tracker Game Centre for scores\, analytics and game details.
+LOCATION:Delta Center
+URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2025010081#
+ games
+END:VEVENT
+BEGIN:VEVENT
+UID:nhl-2025010098@mooneyaoife.github.io
+DTSTAMP:20260714T181701Z
+DTSTART:20251005T000000Z
+DTEND:20251005T030000Z
+SUMMARY:Final: San Jose Sharks 4 - 6 Utah Mammoth
+DESCRIPTION:Preseason. Times display in your calendar's local time. Open 
+ the NHL Tracker Game Centre for scores\, analytics and game details.
+LOCATION:Delta Center
+URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2025010098#
+ games
+END:VEVENT
+BEGIN:VEVENT
+UID:nhl-2025020018@mooneyaoife.github.io
+DTSTAMP:20260714T181701Z
+DTSTART:20251010T010000Z
+DTEND:20251010T040000Z
+SUMMARY:Final: Utah Mammoth 1 - 2 Colorado Avalanche
+DESCRIPTION:Regular season. Times display in your calendar's local time. 
+ Open the NHL Tracker Game Centre for scores\, analytics and game details
+ .
+LOCATION:Ball Arena
+URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2025020018#
+ games
+END:VEVENT
+BEGIN:VEVENT
+UID:nhl-2025020032@mooneyaoife.github.io
+DTSTAMP:20260714T181701Z
+DTSTART:20251012T000000Z
+DTEND:20251012T030000Z
+SUMMARY:Final: Utah Mammoth 3 - 2 Nashville Predators
+DESCRIPTION:Regular season. Times display in your calendar's local time. 
+ Open the NHL Tracker Game Centre for scores\, analytics and game details
+ .
+LOCATION:Bridgestone Arena
+URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2025020032#
+ games
+END:VEVENT
+BEGIN:VEVENT
+UID:nhl-2025020048@mooneyaoife.github.io
+DTSTAMP:20260714T181701Z
+DTSTART:20251014T003000Z
+DTEND:20251014T033000Z
+SUMMARY:Final: Utah Mammoth 1 - 3 Chicago Blackhawks
+DESCRIPTION:Regular season. Times display in your calendar's local time. 
+ Open the NHL Tracker Game Centre for scores\, analytics and game details
+ .
+LOCATION:United Center
+URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2025020048#
+ games
+END:VEVENT
+BEGIN:VEVENT
+UID:nhl-2025020060@mooneyaoife.github.io
+DTSTAMP:20260714T181701Z
+DTSTART:20251016T013000Z
+DTEND:20251016T043000Z
+SUMMARY:Final: Calgary Flames 1 - 3 Utah Mammoth
+DESCRIPTION:Regular season. Times display in your calendar's local time. 
+ Open the NHL Tracker Game Centre for scores\, analytics and game details
+ .
+LOCATION:Delta Center
+URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2025020060#
+ games
+END:VEVENT
+BEGIN:VEVENT
+UID:nhl-2025020075@mooneyaoife.github.io
+DTSTAMP:20260714T181701Z
+DTSTART:20251018T010000Z
+DTEND:20251018T040000Z
+SUMMARY:Final: San Jose Sharks 3 - 6 Utah Mammoth
+DESCRIPTION:Regular season. Times display in your calendar's local time. 
+ Open the NHL Tracker Game Centre for scores\, analytics and game details
+ .
+LOCATION:Delta Center
+URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2025020075#
+ games
+END:VEVENT
+BEGIN:VEVENT
+UID:nhl-2025020092@mooneyaoife.github.io
+DTSTAMP:20260714T181701Z
+DTSTART:20251019T230000Z
+DTEND:20251020T020000Z
+SUMMARY:Final: Boston Bruins 2 - 3 Utah Mammoth
+DESCRIPTION:Regular season. Times display in your calendar's local time. 
+ Open the NHL Tracker Game Centre for scores\, analytics and game details
+ .
+LOCATION:Delta Center
+URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2025020092#
+ games
+END:VEVENT
+BEGIN:VEVENT
+UID:nhl-2025020107@mooneyaoife.github.io
+DTSTAMP:20260714T181701Z
+DTSTART:20251022T020000Z
+DTEND:20251022T050000Z
+SUMMARY:Final: Colorado Avalanche 3 - 4 Utah Mammoth
+DESCRIPTION:Regular season. Times display in your calendar's local time. 
+ Open the NHL Tracker Game Centre for scores\, analytics and game details
+ .
+LOCATION:Delta Center
+URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2025020107#
+ games
+END:VEVENT
+BEGIN:VEVENT
+UID:nhl-2025020117@mooneyaoife.github.io
+DTSTAMP:20260714T181701Z
+DTSTART:20251024T000000Z
+DTEND:20251024T030000Z
+SUMMARY:Final: Utah Mammoth 7 - 4 St. Louis Blues
+DESCRIPTION:Regular season. Times display in your calendar's local time. 
+ Open the NHL Tracker Game Centre for scores\, analytics and game details
+ .
+LOCATION:Enterprise Center
+URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2025020117#
+ games
+END:VEVENT
+BEGIN:VEVENT
+UID:nhl-2025020131@mooneyaoife.github.io
+DTSTAMP:20260714T181701Z
+DTSTART:20251025T220000Z
+DTEND:20251026T010000Z
+SUMMARY:Final: Utah Mammoth 6 - 2 Minnesota Wild
+DESCRIPTION:Regular season. Times display in your calendar's local time. 
+ Open the NHL Tracker Game Centre for scores\, analytics and game details
+ .
+LOCATION:Grand Casino Arena
+URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2025020131#
+ games
+END:VEVENT
+BEGIN:VEVENT
+UID:nhl-2025020143@mooneyaoife.github.io
+DTSTAMP:20260714T181701Z
+DTSTART:20251026T220000Z
+DTEND:20251027T010000Z
+SUMMARY:Final: Utah Mammoth 3 - 2 Winnipeg Jets
+DESCRIPTION:Regular season. Times display in your calendar's local time. 
+ Open the NHL Tracker Game Centre for scores\, analytics and game details
+ .
+LOCATION:Canada Life Centre
+URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2025020143#
+ games
+END:VEVENT
+BEGIN:VEVENT
+UID:nhl-2025020162@mooneyaoife.github.io
+DTSTAMP:20260714T181701Z
+DTSTART:20251029T013000Z
+DTEND:20251029T043000Z
+SUMMARY:Final: Utah Mammoth 3 - 6 Edmonton Oilers
+DESCRIPTION:Regular season. Times display in your calendar's local time. 
+ Open the NHL Tracker Game Centre for scores\, analytics and game details
+ .
+LOCATION:Rogers Place
+URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2025020162#
+ games
+END:VEVENT
+BEGIN:VEVENT
+UID:nhl-2025020194@mooneyaoife.github.io
+DTSTAMP:20260714T181701Z
+DTSTART:20251102T203000Z
+DTEND:20251102T233000Z
+SUMMARY:Final: Tampa Bay Lightning 4 - 2 Utah Mammoth
+DESCRIPTION:Regular season. Times display in your calendar's local time. 
+ Open the NHL Tracker Game Centre for scores\, analytics and game details
+ .
+LOCATION:Delta Center
+URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2025020194#
+ games
+END:VEVENT
+BEGIN:VEVENT
+UID:nhl-2025020203@mooneyaoife.github.io
+DTSTAMP:20260714T181701Z
+DTSTART:20251105T000000Z
+DTEND:20251105T030000Z
+SUMMARY:Final: Utah Mammoth 2 - 1 Buffalo Sabres
+DESCRIPTION:Regular season. Times display in your calendar's local time. 
+ Open the NHL Tracker Game Centre for scores\, analytics and game details
+ .
+LOCATION:KeyBank Center
+URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2025020203#
+ games
+END:VEVENT
+BEGIN:VEVENT
+UID:nhl-2025020213@mooneyaoife.github.io
+DTSTAMP:20260714T181701Z
+DTSTART:20251106T000000Z
+DTEND:20251106T030000Z
+SUMMARY:Final: Utah Mammoth 3 - 5 Toronto Maple Leafs
+DESCRIPTION:Regular season. Times display in your calendar's local time. 
+ Open the NHL Tracker Game Centre for scores\, analytics and game details
+ .
+LOCATION:Scotiabank Arena
+URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2025020213#
+ games
+END:VEVENT
+BEGIN:VEVENT
+UID:nhl-2025020235@mooneyaoife.github.io
+DTSTAMP:20260714T181701Z
+DTSTART:20251109T000000Z
+DTEND:20251109T030000Z
+SUMMARY:Final: Utah Mammoth 2 - 6 Montréal Canadiens
+DESCRIPTION:Regular season. Times display in your calendar's local time. 
+ Open the NHL Tracker Game Centre for scores\, analytics and game details
+ .
+LOCATION:Centre Bell
+URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2025020235#
+ games
+END:VEVENT
+BEGIN:VEVENT
+UID:nhl-2025020247@mooneyaoife.github.io
+DTSTAMP:20260714T181701Z
+DTSTART:20251110T000000Z
+DTEND:20251110T030000Z
+SUMMARY:Final: Utah Mammoth 2 - 4 Ottawa Senators
+DESCRIPTION:Regular season. Times display in your calendar's local time. 
+ Open the NHL Tracker Game Centre for scores\, analytics and game details
+ .
+LOCATION:Canadian Tire Centre
+URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2025020247#
+ games
+END:VEVENT
+BEGIN:VEVENT
+UID:nhl-2025020267@mooneyaoife.github.io
+DTSTAMP:20260714T181701Z
+DTSTART:20251113T020000Z
+DTEND:20251113T050000Z
+SUMMARY:Final: Buffalo Sabres 2 - 5 Utah Mammoth
+DESCRIPTION:Regular season. Times display in your calendar's local time. 
+ Open the NHL Tracker Game Centre for scores\, analytics and game details
+ .
+LOCATION:Delta Center
+URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2025020267#
+ games
+END:VEVENT
+BEGIN:VEVENT
+UID:nhl-2025020282@mooneyaoife.github.io
+DTSTAMP:20260714T181701Z
+DTSTART:20251115T020000Z
+DTEND:20251115T050000Z
+SUMMARY:Final: New York Islanders 3 - 2 Utah Mammoth
+DESCRIPTION:Regular season. Times display in your calendar's local time. 
+ Open the NHL Tracker Game Centre for scores\, analytics and game details
+ .
+LOCATION:Delta Center
+URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2025020282#
+ games
+END:VEVENT
+BEGIN:VEVENT
+UID:nhl-2025020306@mooneyaoife.github.io
+DTSTAMP:20260714T181701Z
+DTSTART:20251118T030000Z
+DTEND:20251118T060000Z
+SUMMARY:Final: Utah Mammoth 2 - 3 Anaheim Ducks
+DESCRIPTION:Regular season. Times display in your calendar's local time. 
+ Open the NHL Tracker Game Centre for scores\, analytics and game details
+ .
+LOCATION:Honda Center
+URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2025020306#
+ games
+END:VEVENT
+BEGIN:VEVENT
+UID:nhl-2025020314@mooneyaoife.github.io
+DTSTAMP:20260714T181701Z
+DTSTART:20251119T030000Z
+DTEND:20251119T060000Z
+SUMMARY:Final: Utah Mammoth 2 - 3 San Jose Sharks
+DESCRIPTION:Regular season. Times display in your calendar's local time. 
+ Open the NHL Tracker Game Centre for scores\, analytics and game details
+ .
+LOCATION:SAP Center at San Jose
+URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2025020314#
+ games
+END:VEVENT
+BEGIN:VEVENT
+UID:nhl-2025020327@mooneyaoife.github.io
+DTSTAMP:20260714T181701Z
+DTSTART:20251121T020000Z
+DTEND:20251121T050000Z
+SUMMARY:Final: Vegas Golden Knights 4 - 1 Utah Mammoth
+DESCRIPTION:Regular season. Times display in your calendar's local time. 
+ Open the NHL Tracker Game Centre for scores\, analytics and game details
+ .
+LOCATION:Delta Center
+URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2025020327#
+ games
+END:VEVENT
+BEGIN:VEVENT
+UID:nhl-2025020344@mooneyaoife.github.io
+DTSTAMP:20260714T181701Z
+DTSTART:20251123T020000Z
+DTEND:20251123T050000Z
+SUMMARY:Final: New York Rangers 2 - 3 Utah Mammoth
+DESCRIPTION:Regular season. Times display in your calendar's local time. 
+ Open the NHL Tracker Game Centre for scores\, analytics and game details
+ .
+LOCATION:Delta Center
+URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2025020344#
+ games
+END:VEVENT
+BEGIN:VEVENT
+UID:nhl-2025020358@mooneyaoife.github.io
+DTSTAMP:20260714T181701Z
+DTSTART:20251125T020000Z
+DTEND:20251125T050000Z
+SUMMARY:Final: Vegas Golden Knights 1 - 5 Utah Mammoth
+DESCRIPTION:Regular season. Times display in your calendar's local time. 
+ Open the NHL Tracker Game Centre for scores\, analytics and game details
+ .
+LOCATION:Delta Center
+URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2025020358#
+ games
+END:VEVENT
+BEGIN:VEVENT
+UID:nhl-2025020372@mooneyaoife.github.io
+DTSTAMP:20260714T181701Z
+DTSTART:20251127T023000Z
+DTEND:20251127T053000Z
+SUMMARY:Final: Montréal Canadiens 4 - 3 Utah Mammoth
+DESCRIPTION:Regular season. Times display in your calendar's local time. 
+ Open the NHL Tracker Game Centre for scores\, analytics and game details
+ .
+LOCATION:Delta Center
+URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2025020372#
+ games
+END:VEVENT
+BEGIN:VEVENT
+UID:nhl-2025020390@mooneyaoife.github.io
+DTSTAMP:20260714T181701Z
+DTSTART:20251129T010000Z
+DTEND:20251129T040000Z
+SUMMARY:Final: Utah Mammoth 3 - 4 Dallas Stars
+DESCRIPTION:Regular season. Times display in your calendar's local time. 
+ Open the NHL Tracker Game Centre for scores\, analytics and game details
+ .
+LOCATION:American Airlines Center
+URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2025020390#
+ games
+END:VEVENT
+BEGIN:VEVENT
+UID:nhl-2025020398@mooneyaoife.github.io
+DTSTAMP:20260714T181701Z
+DTSTART:20251130T010000Z
+DTEND:20251130T040000Z
+SUMMARY:Final: Utah Mammoth 0 - 1 St. Louis Blues
+DESCRIPTION:Regular season. Times display in your calendar's local time. 
+ Open the NHL Tracker Game Centre for scores\, analytics and game details
+ .
+LOCATION:Enterprise Center
+URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2025020398#
+ games
+END:VEVENT
+BEGIN:VEVENT
+UID:nhl-2025020410@mooneyaoife.github.io
+DTSTAMP:20260714T181701Z
+DTSTART:20251202T030000Z
+DTEND:20251202T060000Z
+SUMMARY:Final: Utah Mammoth 3 - 6 San Jose Sharks
+DESCRIPTION:Regular season. Times display in your calendar's local time. 
+ Open the NHL Tracker Game Centre for scores\, analytics and game details
+ .
+LOCATION:SAP Center at San Jose
+URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2025020410#
+ games
+END:VEVENT
+BEGIN:VEVENT
+UID:nhl-2025020424@mooneyaoife.github.io
+DTSTAMP:20260714T181701Z
+DTSTART:20251204T030000Z
+DTEND:20251204T060000Z
+SUMMARY:Final: Utah Mammoth 7 - 0 Anaheim Ducks
+DESCRIPTION:Regular season. Times display in your calendar's local time. 
+ Open the NHL Tracker Game Centre for scores\, analytics and game details
+ .
+LOCATION:Honda Center
+URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2025020424#
+ games
+END:VEVENT
+BEGIN:VEVENT
+UID:nhl-2025020439@mooneyaoife.github.io
+DTSTAMP:20260714T181701Z
+DTSTART:20251206T020000Z
+DTEND:20251206T050000Z
+SUMMARY:Final: Utah Mammoth 4 - 1 Vancouver Canucks
+DESCRIPTION:Regular season. Times display in your calendar's local time. 
+ Open the NHL Tracker Game Centre for scores\, analytics and game details
+ .
+LOCATION:Rogers Arena
+URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2025020439#
+ games
+END:VEVENT
+BEGIN:VEVENT
+UID:nhl-2025020448@mooneyaoife.github.io
+DTSTAMP:20260714T181701Z
+DTSTART:20251207T000000Z
+DTEND:20251207T030000Z
+SUMMARY:Final: Utah Mammoth 0 - 2 Calgary Flames
+DESCRIPTION:Regular season. Times display in your calendar's local time. 
+ Open the NHL Tracker Game Centre for scores\, analytics and game details
+ .
+LOCATION:Scotiabank Saddledome
+URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2025020448#
+ games
+END:VEVENT
+BEGIN:VEVENT
+UID:nhl-2025020462@mooneyaoife.github.io
+DTSTAMP:20260714T181701Z
+DTSTART:20251209T020000Z
+DTEND:20251209T050000Z
+SUMMARY:Final: Los Angeles Kings 4 - 2 Utah Mammoth
+DESCRIPTION:Regular season. Times display in your calendar's local time. 
+ Open the NHL Tracker Game Centre for scores\, analytics and game details
+ .
+LOCATION:Delta Center
+URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2025020462#
+ games
+END:VEVENT
+BEGIN:VEVENT
+UID:nhl-2025020478@mooneyaoife.github.io
+DTSTAMP:20260714T181701Z
+DTSTART:20251211T020000Z
+DTEND:20251211T050000Z
+SUMMARY:Final: Florida Panthers 4 - 3 Utah Mammoth
+DESCRIPTION:Regular season. Times display in your calendar's local time. 
+ Open the NHL Tracker Game Centre for scores\, analytics and game details
+ .
+LOCATION:Delta Center
+URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2025020478#
+ games
+END:VEVENT
+BEGIN:VEVENT
+UID:nhl-2025020494@mooneyaoife.github.io
+DTSTAMP:20260714T181701Z
+DTSTART:20251213T020000Z
+DTEND:20251213T050000Z
+SUMMARY:Final: Seattle Kraken 3 - 5 Utah Mammoth
+DESCRIPTION:Regular season. Times display in your calendar's local time. 
+ Open the NHL Tracker Game Centre for scores\, analytics and game details
+ .
+LOCATION:Delta Center
+URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2025020494#
+ games
+END:VEVENT
+BEGIN:VEVENT
+UID:nhl-2025020509@mooneyaoife.github.io
+DTSTAMP:20260714T181701Z
+DTSTART:20251214T200000Z
+DTEND:20251214T230000Z
+SUMMARY:Final: Utah Mammoth 5 - 4 Pittsburgh Penguins
+DESCRIPTION:Regular season. Times display in your calendar's local time. 
+ Open the NHL Tracker Game Centre for scores\, analytics and game details
+ .
+LOCATION:PPG Paints Arena
+URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2025020509#
+ games
+END:VEVENT
+BEGIN:VEVENT
+UID:nhl-2025020519@mooneyaoife.github.io
+DTSTAMP:20260714T181701Z
+DTSTART:20251217T000000Z
+DTEND:20251217T030000Z
+SUMMARY:Final: Utah Mammoth 1 - 4 Boston Bruins
+DESCRIPTION:Regular season. Times display in your calendar's local time. 
+ Open the NHL Tracker Game Centre for scores\, analytics and game details
+ .
+LOCATION:TD Garden
+URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2025020519#
+ games
+END:VEVENT
+BEGIN:VEVENT
+UID:nhl-2025020530@mooneyaoife.github.io
+DTSTAMP:20260714T181701Z
+DTSTART:20251218T003000Z
+DTEND:20251218T033000Z
+SUMMARY:Final: Utah Mammoth 4 - 1 Detroit Red Wings
+DESCRIPTION:Regular season. Times display in your calendar's local time. 
+ Open the NHL Tracker Game Centre for scores\, analytics and game details
+ .
+LOCATION:Little Caesars Arena
+URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2025020530#
+ games
+END:VEVENT
+BEGIN:VEVENT
+UID:nhl-2025020547@mooneyaoife.github.io
+DTSTAMP:20260714T181701Z
+DTSTART:20251220T020000Z
+DTEND:20251220T050000Z
+SUMMARY:Final: New Jersey Devils 2 - 1 Utah Mammoth
+DESCRIPTION:Regular season. Times display in your calendar's local time. 
+ Open the NHL Tracker Game Centre for scores\, analytics and game details
+ .
+LOCATION:Delta Center
+URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2025020547#
+ games
+END:VEVENT
+BEGIN:VEVENT
+UID:nhl-2025020569@mooneyaoife.github.io
+DTSTAMP:20260714T181701Z
+DTSTART:20251222T000000Z
+DTEND:20251222T030000Z
+SUMMARY:Final: Winnipeg Jets 3 - 4 Utah Mammoth
+DESCRIPTION:Regular season. Times display in your calendar's local time. 
+ Open the NHL Tracker Game Centre for scores\, analytics and game details
+ .
+LOCATION:Delta Center
+URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2025020569#
+ games
+END:VEVENT
+BEGIN:VEVENT
+UID:nhl-2025020584@mooneyaoife.github.io
+DTSTAMP:20260714T181701Z
+DTSTART:20251224T020000Z
+DTEND:20251224T050000Z
+SUMMARY:Final: Utah Mammoth 0 - 1 Colorado Avalanche
+DESCRIPTION:Regular season. Times display in your calendar's local time. 
+ Open the NHL Tracker Game Centre for scores\, analytics and game details
+ .
+LOCATION:Ball Arena
+URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2025020584#
+ games
+END:VEVENT
+BEGIN:VEVENT
+UID:nhl-2025020612@mooneyaoife.github.io
+DTSTAMP:20260714T181701Z
+DTSTART:20251230T020000Z
+DTEND:20251230T050000Z
+SUMMARY:Final: Nashville Predators 4 - 3 Utah Mammoth
+DESCRIPTION:Regular season. Times display in your calendar's local time. 
+ Open the NHL Tracker Game Centre for scores\, analytics and game details
+ .
+LOCATION:Delta Center
+URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2025020612#
+ games
+END:VEVENT
+BEGIN:VEVENT
+UID:nhl-2025020633@mooneyaoife.github.io
+DTSTAMP:20260714T181701Z
+DTSTART:20260101T200000Z
+DTEND:20260101T230000Z
+SUMMARY:Final: Utah Mammoth 7 - 2 New York Islanders
+DESCRIPTION:Regular season. Times display in your calendar's local time. 
+ Open the NHL Tracker Game Centre for scores\, analytics and game details
+ .
+LOCATION:UBS Arena
+URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2025020633#
+ games
+END:VEVENT
+BEGIN:VEVENT
+UID:nhl-2025020645@mooneyaoife.github.io
+DTSTAMP:20260714T181701Z
+DTSTART:20260103T200000Z
+DTEND:20260103T230000Z
+SUMMARY:Final: Utah Mammoth 1 - 4 New Jersey Devils
+DESCRIPTION:Regular season. Times display in your calendar's local time. 
+ Open the NHL Tracker Game Centre for scores\, analytics and game details
+ .
+LOCATION:Prudential Center
+URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2025020645#
+ games
+END:VEVENT
+BEGIN:VEVENT
+UID:nhl-2025020662@mooneyaoife.github.io
+DTSTAMP:20260714T181701Z
+DTSTART:20260106T000000Z
+DTEND:20260106T030000Z
+SUMMARY:Final: Utah Mammoth 3 - 2 New York Rangers
+DESCRIPTION:Regular season. Times display in your calendar's local time. 
+ Open the NHL Tracker Game Centre for scores\, analytics and game details
+ .
+LOCATION:Madison Square Garden
+URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2025020662#
+ games
+END:VEVENT
+BEGIN:VEVENT
+UID:nhl-2025020680@mooneyaoife.github.io
+DTSTAMP:20260714T181701Z
+DTSTART:20260108T023000Z
+DTEND:20260108T053000Z
+SUMMARY:Final: Ottawa Senators 1 - 3 Utah Mammoth
+DESCRIPTION:Regular season. Times display in your calendar's local time. 
+ Open the NHL Tracker Game Centre for scores\, analytics and game details
+ .
+LOCATION:Delta Center
+URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2025020680#
+ games
+END:VEVENT
+BEGIN:VEVENT
+UID:nhl-2025020696@mooneyaoife.github.io
+DTSTAMP:20260714T181701Z
+DTSTART:20260110T020000Z
+DTEND:20260110T050000Z
+SUMMARY:Final: St. Louis Blues 2 - 4 Utah Mammoth
+DESCRIPTION:Regular season. Times display in your calendar's local time. 
+ Open the NHL Tracker Game Centre for scores\, analytics and game details
+ .
+LOCATION:Delta Center
+URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2025020696#
+ games
+END:VEVENT
+BEGIN:VEVENT
+UID:nhl-2025020714@mooneyaoife.github.io
+DTSTAMP:20260714T181701Z
+DTSTART:20260112T000000Z
+DTEND:20260112T030000Z
+SUMMARY:Final: Columbus Blue Jackets 3 - 2 Utah Mammoth
+DESCRIPTION:Regular season. Times display in your calendar's local time. 
+ Open the NHL Tracker Game Centre for scores\, analytics and game details
+ .
+LOCATION:Delta Center
+URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2025020714#
+ games
+END:VEVENT
+BEGIN:VEVENT
+UID:nhl-2025020733@mooneyaoife.github.io
+DTSTAMP:20260714T181701Z
+DTSTART:20260114T030000Z
+DTEND:20260114T060000Z
+SUMMARY:Final: Toronto Maple Leafs 1 - 6 Utah Mammoth
+DESCRIPTION:Regular season. Times display in your calendar's local time. 
+ Open the NHL Tracker Game Centre for scores\, analytics and game details
+ .
+LOCATION:Delta Center
+URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2025020733#
+ games
+END:VEVENT
+BEGIN:VEVENT
+UID:nhl-2025020746@mooneyaoife.github.io
+DTSTAMP:20260714T181701Z
+DTSTART:20260116T020000Z
+DTEND:20260116T050000Z
+SUMMARY:Final: Dallas Stars 1 - 2 Utah Mammoth
+DESCRIPTION:Regular season. Times display in your calendar's local time. 
+ Open the NHL Tracker Game Centre for scores\, analytics and game details
+ .
+LOCATION:Delta Center
+URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2025020746#
+ games
+END:VEVENT
+BEGIN:VEVENT
+UID:nhl-2025020757@mooneyaoife.github.io
+DTSTAMP:20260714T181701Z
+DTSTART:20260117T220000Z
+DTEND:20260118T010000Z
+SUMMARY:Final: Seattle Kraken 3 - 6 Utah Mammoth
+DESCRIPTION:Regular season. Times display in your calendar's local time. 
+ Open the NHL Tracker Game Centre for scores\, analytics and game details
+ .
+LOCATION:Delta Center
+URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2025020757#
+ games
+END:VEVENT
+BEGIN:VEVENT
+UID:nhl-2025020790@mooneyaoife.github.io
+DTSTAMP:20260714T181701Z
+DTSTART:20260122T020000Z
+DTEND:20260122T050000Z
+SUMMARY:Final: Philadelphia Flyers 4 - 5 Utah Mammoth
+DESCRIPTION:Regular season. Times display in your calendar's local time. 
+ Open the NHL Tracker Game Centre for scores\, analytics and game details
+ .
+LOCATION:Delta Center
+URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2025020790#
+ games
+END:VEVENT
+BEGIN:VEVENT
+UID:nhl-2025020811@mooneyaoife.github.io
+DTSTAMP:20260714T181701Z
+DTSTART:20260124T183000Z
+DTEND:20260124T213000Z
+SUMMARY:Final: Utah Mammoth 5 - 2 Nashville Predators
+DESCRIPTION:Regular season. Times display in your calendar's local time. 
+ Open the NHL Tracker Game Centre for scores\, analytics and game details
+ .
+LOCATION:Bridgestone Arena
+URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2025020811#
+ games
+END:VEVENT
+BEGIN:VEVENT
+UID:nhl-2025020825@mooneyaoife.github.io
+DTSTAMP:20260714T181701Z
+DTSTART:20260127T000000Z
+DTEND:20260127T030000Z
+SUMMARY:Final: Utah Mammoth 0 - 2 Tampa Bay Lightning
+DESCRIPTION:Regular season. Times display in your calendar's local time. 
+ Open the NHL Tracker Game Centre for scores\, analytics and game details
+ .
+LOCATION:Benchmark International Arena
+URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2025020825#
+ games
+END:VEVENT
+BEGIN:VEVENT
+UID:nhl-2025020834@mooneyaoife.github.io
+DTSTAMP:20260714T181701Z
+DTSTART:20260128T000000Z
+DTEND:20260128T030000Z
+SUMMARY:Final: Utah Mammoth 4 - 3 Florida Panthers
+DESCRIPTION:Regular season. Times display in your calendar's local time. 
+ Open the NHL Tracker Game Centre for scores\, analytics and game details
+ .
+LOCATION:Amerant Bank Arena
+URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2025020834#
+ games
+END:VEVENT
+BEGIN:VEVENT
+UID:nhl-2025020851@mooneyaoife.github.io
+DTSTAMP:20260714T181701Z
+DTSTART:20260130T000000Z
+DTEND:20260130T030000Z
+SUMMARY:Final: Utah Mammoth 4 - 5 Carolina Hurricanes
+DESCRIPTION:Regular season. Times display in your calendar's local time. 
+ Open the NHL Tracker Game Centre for scores\, analytics and game details
+ .
+LOCATION:Lenovo Center
+URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2025020851#
+ games
+END:VEVENT
+BEGIN:VEVENT
+UID:nhl-2025020870@mooneyaoife.github.io
+DTSTAMP:20260714T181701Z
+DTSTART:20260201T020000Z
+DTEND:20260201T050000Z
+SUMMARY:Final: Dallas Stars 3 - 2 Utah Mammoth
+DESCRIPTION:Regular season. Times display in your calendar's local time. 
+ Open the NHL Tracker Game Centre for scores\, analytics and game details
+ .
+LOCATION:Delta Center
+URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2025020870#
+ games
+END:VEVENT
+BEGIN:VEVENT
+UID:nhl-2025020884@mooneyaoife.github.io
+DTSTAMP:20260714T181701Z
+DTSTART:20260203T023000Z
+DTEND:20260203T053000Z
+SUMMARY:Final: Vancouver Canucks 2 - 6 Utah Mammoth
+DESCRIPTION:Regular season. Times display in your calendar's local time. 
+ Open the NHL Tracker Game Centre for scores\, analytics and game details
+ .
+LOCATION:Delta Center
+URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2025020884#
+ games
+END:VEVENT
+BEGIN:VEVENT
+UID:nhl-2025020898@mooneyaoife.github.io
+DTSTAMP:20260714T181701Z
+DTSTART:20260205T020000Z
+DTEND:20260205T050000Z
+SUMMARY:Final: Detroit Red Wings 1 - 4 Utah Mammoth
+DESCRIPTION:Regular season. Times display in your calendar's local time. 
+ Open the NHL Tracker Game Centre for scores\, analytics and game details
+ .
+LOCATION:Delta Center
+URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2025020898#
+ games
+END:VEVENT
+BEGIN:VEVENT
+UID:nhl-2025020914@mooneyaoife.github.io
+DTSTAMP:20260714T181701Z
+DTSTART:20260226T020000Z
+DTEND:20260226T050000Z
+SUMMARY:Final: Colorado Avalanche 4 - 2 Utah Mammoth
+DESCRIPTION:Regular season. Times display in your calendar's local time. 
+ Open the NHL Tracker Game Centre for scores\, analytics and game details
+ .
+LOCATION:Delta Center
+URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2025020914#
+ games
+END:VEVENT
+BEGIN:VEVENT
+UID:nhl-2025020932@mooneyaoife.github.io
+DTSTAMP:20260714T181701Z
+DTSTART:20260228T020000Z
+DTEND:20260228T050000Z
+SUMMARY:Final: Minnesota Wild 2 - 5 Utah Mammoth
+DESCRIPTION:Regular season. Times display in your calendar's local time. 
+ Open the NHL Tracker Game Centre for scores\, analytics and game details
+ .
+LOCATION:Delta Center
+URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2025020932#
+ games
+END:VEVENT
+BEGIN:VEVENT
+UID:nhl-2025020949@mooneyaoife.github.io
+DTSTAMP:20260714T181701Z
+DTSTART:20260301T210000Z
+DTEND:20260302T000000Z
+SUMMARY:Final: Chicago Blackhawks 4 - 0 Utah Mammoth
+DESCRIPTION:Regular season. Times display in your calendar's local time. 
+ Open the NHL Tracker Game Centre for scores\, analytics and game details
+ .
+LOCATION:Delta Center
+URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2025020949#
+ games
+END:VEVENT
+BEGIN:VEVENT
+UID:nhl-2025020962@mooneyaoife.github.io
+DTSTAMP:20260714T181701Z
+DTSTART:20260304T000000Z
+DTEND:20260304T030000Z
+SUMMARY:Final: Utah Mammoth 3 - 2 Washington Capitals
+DESCRIPTION:Regular season. Times display in your calendar's local time. 
+ Open the NHL Tracker Game Centre for scores\, analytics and game details
+ .
+LOCATION:Capital One Arena
+URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2025020962#
+ games
+END:VEVENT
+BEGIN:VEVENT
+UID:nhl-2025020976@mooneyaoife.github.io
+DTSTAMP:20260714T181701Z
+DTSTART:20260306T000000Z
+DTEND:20260306T030000Z
+SUMMARY:Final: Utah Mammoth 3 - 0 Philadelphia Flyers
+DESCRIPTION:Regular season. Times display in your calendar's local time. 
+ Open the NHL Tracker Game Centre for scores\, analytics and game details
+ .
+LOCATION:Xfinity Mobile Arena
+URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2025020976#
+ games
+END:VEVENT
+BEGIN:VEVENT
+UID:nhl-2025020995@mooneyaoife.github.io
+DTSTAMP:20260714T181701Z
+DTSTART:20260308T000000Z
+DTEND:20260308T030000Z
+SUMMARY:Final: Utah Mammoth 5 - 4 Columbus Blue Jackets
+DESCRIPTION:Regular season. Times display in your calendar's local time. 
+ Open the NHL Tracker Game Centre for scores\, analytics and game details
+ .
+LOCATION:Nationwide Arena
+URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2025020995#
+ games
+END:VEVENT
+BEGIN:VEVENT
+UID:nhl-2025021010@mooneyaoife.github.io
+DTSTAMP:20260714T181701Z
+DTSTART:20260310T003000Z
+DTEND:20260310T033000Z
+SUMMARY:Final: Utah Mammoth 2 - 3 Chicago Blackhawks
+DESCRIPTION:Regular season. Times display in your calendar's local time. 
+ Open the NHL Tracker Game Centre for scores\, analytics and game details
+ .
+LOCATION:United Center
+URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2025021010#
+ games
+END:VEVENT
+BEGIN:VEVENT
+UID:nhl-2025021021@mooneyaoife.github.io
+DTSTAMP:20260714T181701Z
+DTSTART:20260311T000000Z
+DTEND:20260311T030000Z
+SUMMARY:Final: Utah Mammoth 0 - 5 Minnesota Wild
+DESCRIPTION:Regular season. Times display in your calendar's local time. 
+ Open the NHL Tracker Game Centre for scores\, analytics and game details
+ .
+LOCATION:Grand Casino Arena
+URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2025021021#
+ games
+END:VEVENT
+BEGIN:VEVENT
+UID:nhl-2025021037@mooneyaoife.github.io
+DTSTAMP:20260714T181701Z
+DTSTART:20260313T010000Z
+DTEND:20260313T040000Z
+SUMMARY:Final: Chicago Blackhawks 3 - 2 Utah Mammoth
+DESCRIPTION:Regular season. Times display in your calendar's local time. 
+ Open the NHL Tracker Game Centre for scores\, analytics and game details
+ .
+LOCATION:Delta Center
+URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2025021037#
+ games
+END:VEVENT
+BEGIN:VEVENT
+UID:nhl-2025021054@mooneyaoife.github.io
+DTSTAMP:20260714T181701Z
+DTSTART:20260315T010000Z
+DTEND:20260315T040000Z
+SUMMARY:Final: Pittsburgh Penguins 4 - 3 Utah Mammoth
+DESCRIPTION:Regular season. Times display in your calendar's local time. 
+ Open the NHL Tracker Game Centre for scores\, analytics and game details
+ .
+LOCATION:Delta Center
+URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2025021054#
+ games
+END:VEVENT
+BEGIN:VEVENT
+UID:nhl-2025021066@mooneyaoife.github.io
+DTSTAMP:20260714T181701Z
+DTSTART:20260317T000000Z
+DTEND:20260317T030000Z
+SUMMARY:Final: Utah Mammoth 6 - 3 Dallas Stars
+DESCRIPTION:Regular season. Times display in your calendar's local time. 
+ Open the NHL Tracker Game Centre for scores\, analytics and game details
+ .
+LOCATION:American Airlines Center
+URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2025021066#
+ games
+END:VEVENT
+BEGIN:VEVENT
+UID:nhl-2025021091@mooneyaoife.github.io
+DTSTAMP:20260714T181701Z
+DTSTART:20260320T020000Z
+DTEND:20260320T050000Z
+SUMMARY:Final: Utah Mammoth 4 - 0 Vegas Golden Knights
+DESCRIPTION:Regular season. Times display in your calendar's local time. 
+ Open the NHL Tracker Game Centre for scores\, analytics and game details
+ .
+LOCATION:T-Mobile Arena
+URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2025021091#
+ games
+END:VEVENT
+BEGIN:VEVENT
+UID:nhl-2025021098@mooneyaoife.github.io
+DTSTAMP:20260714T181701Z
+DTSTART:20260321T020000Z
+DTEND:20260321T050000Z
+SUMMARY:Final: Anaheim Ducks 4 - 1 Utah Mammoth
+DESCRIPTION:Regular season. Times display in your calendar's local time. 
+ Open the NHL Tracker Game Centre for scores\, analytics and game details
+ .
+LOCATION:Delta Center
+URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2025021098#
+ games
+END:VEVENT
+BEGIN:VEVENT
+UID:nhl-2025021118@mooneyaoife.github.io
+DTSTAMP:20260714T181701Z
+DTSTART:20260323T010000Z
+DTEND:20260323T040000Z
+SUMMARY:Final: Los Angeles Kings 3 - 4 Utah Mammoth
+DESCRIPTION:Regular season. Times display in your calendar's local time. 
+ Open the NHL Tracker Game Centre for scores\, analytics and game details
+ .
+LOCATION:Delta Center
+URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2025021118#
+ games
+END:VEVENT
+BEGIN:VEVENT
+UID:nhl-2025021132@mooneyaoife.github.io
+DTSTAMP:20260714T181701Z
+DTSTART:20260325T013000Z
+DTEND:20260325T043000Z
+SUMMARY:Final: Edmonton Oilers 5 - 2 Utah Mammoth
+DESCRIPTION:Regular season. Times display in your calendar's local time. 
+ Open the NHL Tracker Game Centre for scores\, analytics and game details
+ .
+LOCATION:Delta Center
+URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2025021132#
+ games
+END:VEVENT
+BEGIN:VEVENT
+UID:nhl-2025021146@mooneyaoife.github.io
+DTSTAMP:20260714T181701Z
+DTSTART:20260327T010000Z
+DTEND:20260327T040000Z
+SUMMARY:Final: Washington Capitals 7 - 4 Utah Mammoth
+DESCRIPTION:Regular season. Times display in your calendar's local time. 
+ Open the NHL Tracker Game Centre for scores\, analytics and game details
+ .
+LOCATION:Delta Center
+URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2025021146#
+ games
+END:VEVENT
+BEGIN:VEVENT
+UID:nhl-2025021164@mooneyaoife.github.io
+DTSTAMP:20260714T181701Z
+DTSTART:20260329T010000Z
+DTEND:20260329T040000Z
+SUMMARY:Final: Utah Mammoth 6 - 2 Los Angeles Kings
+DESCRIPTION:Regular season. Times display in your calendar's local time. 
+ Open the NHL Tracker Game Centre for scores\, analytics and game details
+ .
+LOCATION:Crypto.com Arena
+URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2025021164#
+ games
+END:VEVENT
+BEGIN:VEVENT
+UID:nhl-2025021203@mooneyaoife.github.io
+DTSTAMP:20260714T181701Z
+DTSTART:20260403T020000Z
+DTEND:20260403T050000Z
+SUMMARY:Final: Utah Mammoth 6 - 2 Seattle Kraken
+DESCRIPTION:Regular season. Times display in your calendar's local time. 
+ Open the NHL Tracker Game Centre for scores\, analytics and game details
+ .
+LOCATION:Climate Pledge Arena
+URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2025021203#
+ games
+END:VEVENT
+BEGIN:VEVENT
+UID:nhl-2025021216@mooneyaoife.github.io
+DTSTAMP:20260714T181701Z
+DTSTART:20260404T230000Z
+DTEND:20260405T020000Z
+SUMMARY:Final: Utah Mammoth 7 - 4 Vancouver Canucks
+DESCRIPTION:Regular season. Times display in your calendar's local time. 
+ Open the NHL Tracker Game Centre for scores\, analytics and game details
+ .
+LOCATION:Rogers Arena
+URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2025021216#
+ games
+END:VEVENT
+BEGIN:VEVENT
+UID:nhl-2025021241@mooneyaoife.github.io
+DTSTAMP:20260714T181701Z
+DTSTART:20260408T013000Z
+DTEND:20260408T043000Z
+SUMMARY:Final: Edmonton Oilers 5 - 6 Utah Mammoth
+DESCRIPTION:Regular season. Times display in your calendar's local time. 
+ Open the NHL Tracker Game Centre for scores\, analytics and game details
+ .
+LOCATION:Delta Center
+URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2025021241#
+ games
+END:VEVENT
+BEGIN:VEVENT
+UID:nhl-2025021257@mooneyaoife.github.io
+DTSTAMP:20260714T181701Z
+DTSTART:20260410T010000Z
+DTEND:20260410T040000Z
+SUMMARY:Final: Nashville Predators 1 - 4 Utah Mammoth
+DESCRIPTION:Regular season. Times display in your calendar's local time. 
+ Open the NHL Tracker Game Centre for scores\, analytics and game details
+ .
+LOCATION:Delta Center
+URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2025021257#
+ games
+END:VEVENT
+BEGIN:VEVENT
+UID:nhl-2025021269@mooneyaoife.github.io
+DTSTAMP:20260714T181701Z
+DTSTART:20260411T210000Z
+DTEND:20260412T000000Z
+SUMMARY:Final: Carolina Hurricanes 4 - 1 Utah Mammoth
+DESCRIPTION:Regular season. Times display in your calendar's local time. 
+ Open the NHL Tracker Game Centre for scores\, analytics and game details
+ .
+LOCATION:Delta Center
+URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2025021269#
+ games
+END:VEVENT
+BEGIN:VEVENT
+UID:nhl-2025021281@mooneyaoife.github.io
+DTSTAMP:20260714T181701Z
+DTSTART:20260413T010000Z
+DTEND:20260413T040000Z
+SUMMARY:Final: Utah Mammoth 1 - 4 Calgary Flames
+DESCRIPTION:Regular season. Times display in your calendar's local time. 
+ Open the NHL Tracker Game Centre for scores\, analytics and game details
+ .
+LOCATION:Scotiabank Saddledome
+URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2025021281#
+ games
+END:VEVENT
+BEGIN:VEVENT
+UID:nhl-2025021297@mooneyaoife.github.io
+DTSTAMP:20260714T181701Z
+DTSTART:20260415T010000Z
+DTEND:20260415T040000Z
+SUMMARY:Final: Winnipeg Jets 3 - 5 Utah Mammoth
+DESCRIPTION:Regular season. Times display in your calendar's local time. 
+ Open the NHL Tracker Game Centre for scores\, analytics and game details
+ .
+LOCATION:Delta Center
+URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2025021297#
+ games
+END:VEVENT
+BEGIN:VEVENT
+UID:nhl-2025021309@mooneyaoife.github.io
+DTSTAMP:20260714T181701Z
+DTSTART:20260416T233000Z
+DTEND:20260417T023000Z
+SUMMARY:Final: St. Louis Blues 5 - 3 Utah Mammoth
+DESCRIPTION:Regular season. Times display in your calendar's local time. 
+ Open the NHL Tracker Game Centre for scores\, analytics and game details
+ .
+LOCATION:Delta Center
+URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2025021309#
+ games
+END:VEVENT
+BEGIN:VEVENT
+UID:nhl-2025030171@mooneyaoife.github.io
+DTSTAMP:20260714T181701Z
+DTSTART:20260420T020000Z
+DTEND:20260420T050000Z
+SUMMARY:Final: Utah Mammoth 2 - 4 Vegas Golden Knights
+DESCRIPTION:Playoffs. Times display in your calendar's local time. Open t
+ he NHL Tracker Game Centre for scores\, analytics and game details.
+LOCATION:T-Mobile Arena
+URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2025030171#
+ games
+END:VEVENT
+BEGIN:VEVENT
+UID:nhl-2025030172@mooneyaoife.github.io
+DTSTAMP:20260714T181701Z
+DTSTART:20260422T013000Z
+DTEND:20260422T043000Z
+SUMMARY:Final: Utah Mammoth 3 - 2 Vegas Golden Knights
+DESCRIPTION:Playoffs. Times display in your calendar's local time. Open t
+ he NHL Tracker Game Centre for scores\, analytics and game details.
+LOCATION:T-Mobile Arena
+URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2025030172#
+ games
+END:VEVENT
+BEGIN:VEVENT
+UID:nhl-2025030173@mooneyaoife.github.io
+DTSTAMP:20260714T181701Z
+DTSTART:20260425T013000Z
+DTEND:20260425T043000Z
+SUMMARY:Final: Vegas Golden Knights 2 - 4 Utah Mammoth
+DESCRIPTION:Playoffs. Times display in your calendar's local time. Open t
+ he NHL Tracker Game Centre for scores\, analytics and game details.
+LOCATION:Delta Center
+URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2025030173#
+ games
+END:VEVENT
+BEGIN:VEVENT
+UID:nhl-2025030174@mooneyaoife.github.io
+DTSTAMP:20260714T181701Z
+DTSTART:20260428T013000Z
+DTEND:20260428T043000Z
+SUMMARY:Final: Vegas Golden Knights 5 - 4 Utah Mammoth
+DESCRIPTION:Playoffs. Times display in your calendar's local time. Open t
+ he NHL Tracker Game Centre for scores\, analytics and game details.
+LOCATION:Delta Center
+URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2025030174#
+ games
+END:VEVENT
+BEGIN:VEVENT
+UID:nhl-2025030175@mooneyaoife.github.io
+DTSTAMP:20260714T181701Z
+DTSTART:20260430T020000Z
+DTEND:20260430T050000Z
+SUMMARY:Final: Utah Mammoth 4 - 5 Vegas Golden Knights
+DESCRIPTION:Playoffs. Times display in your calendar's local time. Open t
+ he NHL Tracker Game Centre for scores\, analytics and game details.
+LOCATION:T-Mobile Arena
+URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2025030175#
+ games
+END:VEVENT
+BEGIN:VEVENT
+UID:nhl-2025030176@mooneyaoife.github.io
+DTSTAMP:20260714T181701Z
+DTSTART:20260502T020000Z
+DTEND:20260502T050000Z
+SUMMARY:Final: Vegas Golden Knights 5 - 1 Utah Mammoth
+DESCRIPTION:Playoffs. Times display in your calendar's local time. Open t
+ he NHL Tracker Game Centre for scores\, analytics and game details.
+LOCATION:Delta Center
+URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2025030176#
+ games
+END:VEVENT
+END:VCALENDAR
