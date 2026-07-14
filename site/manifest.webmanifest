@@ -3,7 +3,7 @@
   "short_name": "NHL Tracker",
   "description": "Scores, schedules, standings and analytics for your NHL teams.",
   "id": "/NHL-Tracker/",
-  "start_url": "./#dashboard",
+  "start_url": "./",
   "scope": "./",
   "display": "standalone",
   "background_color": "#f1f4f8",
