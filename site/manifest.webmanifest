@@ -14,6 +14,7 @@
     {"src": "icons/icon-512.png", "sizes": "512x512", "type": "image/png", "purpose": "any maskable"}
   ],
   "shortcuts": [
+    {"name": "Tonight", "short_name": "Tonight", "url": "./#tonight"},
     {"name": "Schedule", "short_name": "Schedule", "url": "./#schedule"},
     {"name": "Game Centre", "short_name": "Games", "url": "./#games"}
   ]
