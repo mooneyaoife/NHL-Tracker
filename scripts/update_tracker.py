@@ -10,6 +10,7 @@ import io
 import math
 import os
 import re
+import subprocess
 import sys
 import time
 import urllib.error
@@ -1113,6 +1114,12 @@ def main() -> None:
     archive.write_text(json.dumps(payload, separators=(",", ":"), ensure_ascii=False))
     write_season_index(SEASON)
     write_calendar_feeds(schedules, standings)
+    model_update = subprocess.run(
+        [sys.executable, str(ROOT / "scripts" / "train_tracker_models.py"), "--max-games", "45"],
+        check=False,
+    )
+    if model_update.returncode:
+        print("warning: Tracker model collection did not complete; the previous model remains available", file=sys.stderr)
     print(f"Updated {OUTPUT}: {len(rows)} team-game rows, {len(standings)} standings teams")
 
 
