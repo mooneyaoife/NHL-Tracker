@@ -11,7 +11,7 @@
   <link rel="manifest" href="manifest.webmanifest">
   <link rel="apple-touch-icon" href="icons/icon-192.png">
   <script>document.documentElement.dataset.theme=localStorage.getItem("nhl-theme")||"light"</script>
-  <link rel="stylesheet" href="styles.css?v=5.41.0">
+  <link rel="stylesheet" href="styles.css?v=5.42.0">
   <script src="vendor/plotly-2.35.2.min.js"></script>
 </head>
 <body>
@@ -22,7 +22,7 @@
 <div id="global-search-overlay" class="global-search-overlay" hidden><section class="global-search-dialog" role="dialog" aria-modal="true" aria-labelledby="global-search-title"><div class="global-search-head"><div><span class="section-kicker">NHL Tracker</span><h2 id="global-search-title">Find anything</h2></div><button id="global-search-close" type="button" aria-label="Close search">×</button></div><label class="global-search-input"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="10.5" cy="10.5" r="6.5"></circle><path d="m15.5 15.5 5 5"></path></svg><input id="global-search-input" type="search" autocomplete="off" placeholder="Search players, teams, games, stats or pages"></label><div id="global-search-results" class="global-search-results"></div><div class="global-search-hint"><span>Type to search the entire tracker</span><span><kbd>/</kbd> opens search · <kbd>Esc</kbd> closes</span></div></section></div>
 <nav id="nav" aria-label="Primary navigation">
   <button data-group="home" data-default-page="dashboard" class="active">Home</button>
-  <div class="nav-destination"><button data-group="games" data-default-page="tonight">Games</button><div class="nav-hover-menu" aria-label="Games shortcuts"><button data-hover-page="tonight">Tonight</button><button data-hover-page="schedule">Schedule</button><button data-hover-page="games">Game Centre</button></div></div>
+  <div class="nav-destination"><button data-group="games" data-default-page="tonight">Games</button><div class="nav-hover-menu" aria-label="Games shortcuts"><button data-hover-page="tonight">Tonight</button><button data-hover-page="schedule">Schedule</button><button data-hover-page="games">Game Centre</button><button data-hover-page="availability">Lineups</button></div></div>
   <div class="nav-destination"><button data-group="explore" data-default-page="teams">Explore</button><div class="nav-hover-menu" aria-label="Explore shortcuts"><button data-hover-page="teams">Teams</button><button data-hover-page="players">Players</button><button data-hover-page="compare">Compare</button><button data-hover-page="league">League</button></div></div>
   <div class="nav-destination"><button data-group="news" data-default-page="news">News</button><div class="nav-hover-menu" aria-label="News shortcuts"><button data-hover-page="news" data-update-target="offseason">Latest</button><button data-hover-page="news" data-update-target="confirmed">Transactions</button><button data-hover-page="news" data-update-target="cap-centre">Cap Centre</button><button data-hover-page="news" data-update-target="rumours">Insider Wire</button><button data-hover-page="news" data-update-target="rosters">Rosters</button></div></div>
 </nav>
@@ -71,6 +71,16 @@
       <section class="game-centre-pane active" data-game-pane="featured"><div class="control-row game-centre-controls"><label for="game-select">Select game</label><select id="game-select"></select><button id="game-refresh" type="button">Refresh view</button><p>Follow the next game, check a live score or revisit a completed matchup. During tracked games, a fresh official NHL snapshot is deployed approximately every 15 minutes.</p></div><div id="game-browse-nav" class="game-browse-nav"></div><div id="game-detail"></div></section>
       <section class="game-centre-pane" data-game-pane="library"><div class="game-library-intro"><div><span class="section-kicker">Season archive</span><h3>Game Library</h3></div><span id="game-library-count"></span></div><div class="game-library-controls"><label>Team<select id="game-library-team"></select></label><label>Month<select id="game-library-month"></select></label><label>Opponent<select id="game-library-opponent"></select></label><label>Result<select id="game-library-result"><option value="ALL">All results</option><option value="W">Wins</option><option value="L">Regulation losses</option><option value="OTL">Overtime losses</option></select></label></div><div id="game-library-list" class="game-library-list"></div></section>
     </div>
+  </section>
+
+  <section id="availability" class="page availability-page">
+    <div class="availability-heading"><div class="title-bar"><h2>Lineups &amp; Availability</h2></div><label>Team<select id="availability-team"></select></label></div>
+    <div class="availability-legend"><span><i class="confirmed"></i><strong>Confirmed</strong> NHL roster and completed-game data</span><span><i class="usage"></i><strong>Recent usage</strong> stored season combinations</span><span><i class="projected"></i><strong>Projected</strong> live external source</span></div>
+    <div id="availability-summary" class="grid four availability-summary"></div>
+    <div class="grid two availability-snapshot"><article id="availability-next" class="panel availability-next"></article><article id="availability-goalie" class="panel availability-goalie"></article></div>
+    <div class="grid two availability-body"><article class="panel"><div class="availability-panel-head"><div><span class="section-kicker">Recent usage</span><h3>Forward Lines</h3></div><span>MoneyPuck</span></div><div id="availability-lines" class="availability-combinations"></div></article><article class="panel"><div class="availability-panel-head"><div><span class="section-kicker">Recent usage</span><h3>Defence Pairings</h3></div><span>MoneyPuck</span></div><div id="availability-pairings" class="availability-combinations"></div></article></div>
+    <section class="panel availability-roster-panel"><div class="availability-panel-head"><div><span class="section-kicker">Confirmed NHL roster</span><h3 id="availability-roster-title">Current Roster</h3></div><span id="availability-roster-status" class="update-state automatic">Automatic</span></div><div id="availability-roster" class="availability-roster"></div></section>
+    <div class="grid two availability-lower"><article class="panel"><div class="availability-panel-head"><div><span class="section-kicker">Latest reporting</span><h3>Roster Movement</h3></div><span>Automatic</span></div><div id="availability-moves" class="availability-moves"></div></article><article class="panel availability-live"><div class="availability-panel-head"><div><span class="section-kicker">Game-day cross-check</span><h3>Live Lineup Sources</h3></div><span>Check status</span></div><div id="availability-sources" class="availability-sources"></div><p>Projected lines and goalies can change before puck drop. Always check the source’s confirmation label and update time.</p></article></div>
   </section>
 
   <section id="teams" class="page">
@@ -171,5 +181,5 @@
 </main>
 <footer><div class="footer-links"><button data-page="watchlist">Settings</button><button data-page="guide">Stat Guide</button><a href="https://moneypuck.com/data.htm" target="_blank" rel="noopener">Data sources</a><button data-page="status">Status</button></div><p>NHL Tracker · Unofficial, non-commercial fan project using public NHL data</p></footer>
 <aside id="app-update" class="app-update" role="status" hidden><span>A fresh version of NHL Tracker is ready.</span><button id="app-update-button" type="button">Update now</button></aside>
-  <script src="app.js?v=5.41.0"></script>
+  <script src="app.js?v=5.42.0"></script>
 </body></html>
