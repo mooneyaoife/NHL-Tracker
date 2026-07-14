@@ -24,7 +24,7 @@ from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
 CONFIG = json.loads((ROOT / "config.json").read_text())
-VERSION = "5.40.0"
+VERSION = "5.55.0"
 SEASON = str(CONFIG["season"])
 TRACKED = [str(t).upper() for t in CONFIG["teams"]]
 API = "https://api-web.nhle.com/v1"
@@ -799,7 +799,10 @@ def build_game_library(games: list[dict], rosters: dict, moneypuck: dict, previo
                     "name": roster.get("name") or localised(player.get("name")) or "Unknown player",
                     "goals": int(player.get("goals") or 0), "assists": int(player.get("assists") or 0),
                     "points": int(player.get("points") or 0), "shots": int(player.get("sog") or 0),
-                    "toi": player.get("toi") or ""
+                    "toi": player.get("toi") or "", "position": player.get("position") or "",
+                    "plusMinus": int(player.get("plusMinus") or 0), "hits": int(player.get("hits") or 0),
+                    "blocks": int(player.get("blockedShots") or 0), "takeaways": int(player.get("takeaways") or 0),
+                    "giveaways": int(player.get("giveaways") or 0), "pim": int(player.get("pim") or 0)
                 })
             for player in side_stats.get("goalies", []) or []:
                 roster = roster_by_id.get(str(player.get("playerId")), {})
@@ -830,7 +833,7 @@ def build_game_library(games: list[dict], rosters: dict, moneypuck: dict, previo
             "away": away, "home": home, "awayScore": away_score, "homeScore": home_score,
             "winner": away if away_score > home_score else home, "outcome": period,
             "venue": localised(data.get("venue")) or localised(game.get("venue")),
-            "teams": team_stats, "leaders": all_skaters[:3], "goalies": goalies[:3],
+            "teams": team_stats, "players": all_skaters, "leaders": all_skaters[:3], "goalies": goalies,
             "xg": {away: compact_number(mp_away.get("xgf") if mp_away else mp_home.get("xga") if mp_home else None, 2),
                    home: compact_number(mp_home.get("xgf") if mp_home else mp_away.get("xga") if mp_away else None, 2)},
             "officialUrl": f"https://www.nhl.com/gamecenter/{away.lower()}-vs-{home.lower()}/{str(data.get('gameDate') or game.get('gameDate') or '').replace('-', '/')}/{game_id}"
