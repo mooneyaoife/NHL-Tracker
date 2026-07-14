@@ -11,7 +11,7 @@
   <link rel="manifest" href="manifest.webmanifest">
   <link rel="apple-touch-icon" href="icons/icon-192.png">
   <script>document.documentElement.dataset.theme=localStorage.getItem("nhl-theme")||"light"</script>
-  <link rel="stylesheet" href="styles.css?v=5.37.0">
+  <link rel="stylesheet" href="styles.css?v=5.38.0">
   <script src="vendor/plotly-2.35.2.min.js"></script>
 </head>
 <body>
@@ -140,6 +140,17 @@
     <details class="expandable"><summary>Complete NHL standings — 32 teams</summary><div id="standings-table" class="table-wrap"></div></details><div id="tracked-ranks" hidden></div>
   </section>
 
+  <section id="trends" class="page trends-page">
+    <div class="title-bar"><h2>Trends Centre</h2></div>
+    <div class="trends-toolbar"><label>Form window<select id="trend-window"><option value="5">Last 5 games</option><option value="10" selected>Last 10 games</option><option value="20">Last 20 games</option></select></label><label>Show<select id="trend-scope"><option value="ALL">All NHL teams</option><option value="TRACKED">Followed teams</option></select></label></div>
+    <div id="trend-tracked" class="grid four trend-tracked"></div>
+    <div class="grid two trend-chart-grid"><article class="panel"><h3>Recent Form Against Season Performance</h3><div id="trend-form-chart" class="chart"></div></article><article class="panel"><h3>Expected and Actual Goal Share</h3><div id="trend-sustainability-chart" class="chart"></div></article><article class="panel"><h3>Largest Form Changes</h3><div id="trend-movers-chart" class="chart trend-tall"></div></article><article class="panel"><h3>Followed-Team Player Pace</h3><div id="trend-player-chart" class="chart trend-tall"></div></article></div>
+    <div id="trend-stories" class="trend-stories"></div>
+    <article class="panel trend-table-panel"><h3>League Form Table</h3><div id="trend-team-table" class="table-wrap"></div></article>
+    <article class="panel trend-table-panel"><h3>Followed-Team Player Form</h3><div id="trend-player-table" class="table-wrap"></div></article>
+    <div class="mp-credit">Results and standings: NHL · Expected-goals context: <a href="https://moneypuck.com/teams.htm" target="_blank" rel="noopener">MoneyPuck.com</a></div>
+  </section>
+
   <section id="power" class="page"><div class="title-bar"><h2>Power Rankings</h2></div><div id="power-tracked" class="grid four"></div><div class="power-layout"><div class="power-side"><article class="panel"><h3>All 32 Teams</h3><div id="power-chart" class="chart tall"></div></article><article class="panel"><h3>Performance Profile</h3><div id="power-scatter" class="chart"></div></article></div><article class="panel"><h3>Ranking Factors</h3><div id="power-table" class="table-wrap"></div></article></div><div class="notice">This is the NHL Tracker’s transparent index, not MoneyPuck’s proprietary Power Score.</div><div class="mp-credit">Underlying data: <a href="https://moneypuck.com/power.htm" target="_blank" rel="noopener">MoneyPuck.com</a></div></section>
 
   <section id="playoffs" class="page"><div class="title-bar"><h2 id="playoff-heading">Playoff Overview</h2></div><article class="panel playoff-path"><div class="playoff-path-head"><div><span class="section-kicker">MoneyPuck model</span><h3>Playoff Path Probability</h3></div><label>Team<select id="playoff-team-select"></select></label></div><div id="playoff-path-chart" class="chart playoff-pie"></div><p id="playoff-path-note" class="detail-note"></p></article><details class="expandable forecast-section" open><summary>MoneyPuck Playoff Forecast</summary><div id="forecast-table" class="table-wrap"></div></details><div class="mp-credit">Forecast data: <a href="https://moneypuck.com/predictions.htm" target="_blank" rel="noopener">MoneyPuck.com</a></div><details class="expandable"><summary>Points Outlook</summary><div class="grid two"><article class="panel"><h3>Projected 82-game pace</h3><div id="pace-chart" class="chart"></div></article><article class="panel"><h3>Maximum possible points</h3><div id="max-chart" class="chart"></div></article></div></details><details class="expandable"><summary>Routes, Scenarios and Remaining Schedule</summary><div id="playoff-routes" class="table-wrap"></div><div id="playoff-schedule" class="table-wrap"></div></details><div id="playoff-cards" hidden></div><div id="playoff-forecast" hidden></div></section>
@@ -150,5 +161,5 @@
 </main>
 <footer><div class="footer-links"><button data-page="watchlist">Settings</button><button data-page="guide">Stat Guide</button><a href="https://moneypuck.com/data.htm" target="_blank" rel="noopener">Data sources</a><button data-page="status">Status</button></div><p>NHL Tracker · Unofficial, non-commercial fan project using public NHL data</p></footer>
 <aside id="app-update" class="app-update" role="status" hidden><span>A fresh version of NHL Tracker is ready.</span><button id="app-update-button" type="button">Update now</button></aside>
-<script src="app.js?v=5.37.0"></script>
+<script src="app.js?v=5.38.0"></script>
 </body></html>
