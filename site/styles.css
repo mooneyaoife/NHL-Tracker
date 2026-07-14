@@ -185,4 +185,5 @@ html[data-theme="dark"] .context-nav{background:#1c3049}
   .section-subnav button{min-width:0;padding:12px 4px;font-size:11px;white-space:normal}
   .compare-subnav{grid-template-columns:repeat(2,minmax(0,1fr))}
   .trend-panel .chart{height:330px}
+  #dashboard-points .annotation{display:none!important}
 }

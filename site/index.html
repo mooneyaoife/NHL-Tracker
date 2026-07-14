@@ -11,7 +11,7 @@
   <link rel="manifest" href="manifest.webmanifest">
   <link rel="apple-touch-icon" href="icons/icon-192.png">
   <script>document.documentElement.dataset.theme=localStorage.getItem("nhl-theme")||"light"</script>
-  <link rel="stylesheet" href="styles.css?v=5.29.1">
+  <link rel="stylesheet" href="styles.css?v=5.30.1">
   <script src="vendor/plotly-2.35.2.min.js"></script>
 </head>
 <body>
@@ -36,7 +36,7 @@
     <div id="nst-refresh-reminder" class="source-notice nst-reminder" hidden><div><strong>Natural Stat Trick refresh due</strong><span id="nst-reminder-text"></span></div><button type="button" data-page="status">Open Refresh Centre</button></div>
     <div class="today-strip"><div><span class="section-kicker">Hockey now</span><strong id="today-date">Latest NHL update</strong></div><div id="today-games" class="today-games"></div></div>
     <div id="team-cards" class="grid four team-card-grid"></div>
-    <div class="grid two dashboard-summary"><article class="panel"><h3>Points comparison</h3><div id="dashboard-points" class="chart"></div></article><article class="panel"><h3>Recent form</h3><div id="recent-form"></div><h3 class="subheading">Team leaders</h3><div id="dashboard-leaders"></div></article></div>
+    <div class="grid two dashboard-summary"><article class="panel"><h3>Performance map</h3><div id="dashboard-points" class="chart"></div></article><article class="panel"><h3>Recent form</h3><div id="recent-form"></div><h3 class="subheading">Team leaders</h3><div id="dashboard-leaders"></div></article></div>
     <details class="expandable" open><summary>Division races through the season</summary><p class="detail-note">Each highlighted team is compared with every club in its division.</p><div id="division-race-charts" class="grid two"></div></details>
     <details class="expandable"><summary>Season stories</summary><div id="dashboard-stories" class="grid two"></div></details>
     <details class="expandable"><summary>Recent results</summary><div id="dashboard-results" class="table-wrap"></div></details>
@@ -132,5 +132,5 @@
 </main>
 <footer><div class="footer-links"><button data-page="watchlist">Settings</button><button data-page="guide">Stat Guide</button><a href="https://moneypuck.com/data.htm" target="_blank" rel="noopener">Data sources</a><button data-page="status">Status</button></div><p>NHL Tracker · Unofficial, non-commercial fan project using public NHL data</p></footer>
 <aside id="app-update" class="app-update" role="status" hidden><span>A fresh version of NHL Tracker is ready.</span><button id="app-update-button" type="button">Update now</button></aside>
-<script src="app.js?v=5.29.1"></script>
+<script src="app.js?v=5.30.1"></script>
 </body></html>
