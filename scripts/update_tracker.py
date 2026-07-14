@@ -19,7 +19,7 @@ from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
 CONFIG = json.loads((ROOT / "config.json").read_text())
-VERSION = "5.15.0"
+VERSION = "5.17.0"
 SEASON = str(CONFIG["season"])
 TRACKED = [str(t).upper() for t in CONFIG["teams"]]
 API = "https://api-web.nhle.com/v1"
@@ -344,7 +344,8 @@ def load_rosters(team_codes: list[str]) -> dict:
     return output
 
 
-def tracked_game_rows(games: list[dict]) -> list[dict]:
+def tracked_game_rows(games: list[dict], team_codes: list[str] | None = None) -> list[dict]:
+    team_codes = team_codes or TRACKED
     rows = []
     for game in games:
         if int(game.get("gameType", 0)) not in (2, 3):
@@ -352,7 +353,7 @@ def tracked_game_rows(games: list[dict]) -> list[dict]:
         home = localised(game.get("homeTeam", {}).get("abbrev")).upper()
         away = localised(game.get("awayTeam", {}).get("abbrev")).upper()
         finished = str(game.get("gameState", "")).upper() in {"OFF", "FINAL"}
-        for team in TRACKED:
+        for team in team_codes:
             if team not in {home, away}:
                 continue
             is_home = team == home
@@ -575,7 +576,7 @@ def division_histories(games: list[dict], standings: list[dict]) -> dict:
 def roster_changes(previous: dict, current: dict) -> dict:
     changes = {}
     old_rosters = previous.get("rosters", {}) if previous else {}
-    for team in TRACKED:
+    for team in current:
         old = {str(p.get("id")): p for p in old_rosters.get(team, [])}
         new = {str(p.get("id")): p for p in current.get(team, [])}
         changes[team] = {
@@ -585,9 +586,10 @@ def roster_changes(previous: dict, current: dict) -> dict:
     return changes
 
 
-def team_summaries(rows: list[dict]) -> dict:
+def team_summaries(rows: list[dict], team_codes: list[str] | None = None) -> dict:
+    team_codes = team_codes or TRACKED
     output = {}
-    for team in TRACKED:
+    for team in team_codes:
         games = [r for r in rows if r["team"] == team and r["type"] == "Regular Season" and r["finished"]]
         games.sort(key=lambda r: r["date"] or "")
         w = sum(r["result"] == "W" for r in games); otl = sum(r["result"] == "OTL" for r in games)
@@ -620,7 +622,8 @@ def main() -> None:
         except json.JSONDecodeError: pass
     standings = load_standings(previous)
     schedules = load_schedules([r["team"] for r in standings])
-    rows = tracked_game_rows(schedules)
+    league_teams = [r["team"] for r in standings]
+    rows = tracked_game_rows(schedules, league_teams)
     players = build_players(schedules)
     game_centres = load_game_centres(schedules, previous)
     daily = load_daily()
@@ -635,7 +638,7 @@ def main() -> None:
     previous_same_season = previous if previous.get("meta", {}).get("season") == SEASON else {}
     payload = {
         "meta": {"version": VERSION, "season": SEASON, "seasonMode": CONFIG.get("seasonMode", "manual"), "seasonDecision": rollover_reason, "trackedTeams": TRACKED, "updatedAt": datetime.now(timezone.utc).isoformat(), "elapsedSeconds": round(time.time()-started, 1), "scheduleGames": len(schedules)},
-        "standings": standings, "games": rows, "teams": team_summaries(rows), "players": players, "gameCentre": game_centres,
+        "standings": standings, "games": rows, "teams": team_summaries(rows, league_teams), "players": players, "gameCentre": game_centres,
         "daily": daily, "rosters": rosters, "rosterChanges": roster_changes(previous_same_season, rosters),
         "divisionHistory": division_histories(schedules, standings), "moneypuck": moneypuck,
         "naturalStatTrick": natural_stat_trick,
