@@ -11,7 +11,7 @@
   <link rel="manifest" href="manifest.webmanifest">
   <link rel="apple-touch-icon" href="icons/icon-192.png">
   <script>document.documentElement.dataset.theme=localStorage.getItem("nhl-theme")||"light"</script>
-  <link rel="stylesheet" href="styles.css?v=5.42.0">
+  <link rel="stylesheet" href="styles.css?v=5.42.1">
   <script src="vendor/plotly-2.35.2.min.js"></script>
 </head>
 <body>
@@ -74,7 +74,7 @@
   </section>
 
   <section id="availability" class="page availability-page">
-    <div class="availability-heading"><div class="title-bar"><h2>Lineups &amp; Availability</h2></div><label>Team<select id="availability-team"></select></label></div>
+    <div class="availability-heading title-bar"><h2>Lineups &amp; Availability</h2><label><span>Team</span><select id="availability-team" aria-label="Lineups team"></select></label></div>
     <div class="availability-legend"><span><i class="confirmed"></i><strong>Confirmed</strong> NHL roster and completed-game data</span><span><i class="usage"></i><strong>Recent usage</strong> stored season combinations</span><span><i class="projected"></i><strong>Projected</strong> live external source</span></div>
     <div id="availability-summary" class="grid four availability-summary"></div>
     <div class="grid two availability-snapshot"><article id="availability-next" class="panel availability-next"></article><article id="availability-goalie" class="panel availability-goalie"></article></div>
@@ -181,5 +181,5 @@
 </main>
 <footer><div class="footer-links"><button data-page="watchlist">Settings</button><button data-page="guide">Stat Guide</button><a href="https://moneypuck.com/data.htm" target="_blank" rel="noopener">Data sources</a><button data-page="status">Status</button></div><p>NHL Tracker · Unofficial, non-commercial fan project using public NHL data</p></footer>
 <aside id="app-update" class="app-update" role="status" hidden><span>A fresh version of NHL Tracker is ready.</span><button id="app-update-button" type="button">Update now</button></aside>
-  <script src="app.js?v=5.42.0"></script>
+  <script src="app.js?v=5.42.1"></script>
 </body></html>
