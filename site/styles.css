@@ -187,3 +187,15 @@ html[data-theme="dark"] .context-nav{background:#1c3049}
   .trend-panel .chart{height:330px}
   #dashboard-points .annotation{display:none!important}
 }
+
+/* 5.30.2 compact dashboard introduction */
+.dashboard-intro{display:grid;grid-template-columns:minmax(0,1.2fr) minmax(390px,.8fr);gap:14px;margin-bottom:18px}
+.dashboard-intro .dashboard-hero,.dashboard-intro .today-strip{margin:0;min-height:112px}
+.dashboard-intro .dashboard-hero{padding:20px 24px}
+.dashboard-intro .dashboard-hero h2{margin:0;font-size:24px}
+.dashboard-intro .hero-logos img{width:48px;height:48px;margin-left:2px}
+.dashboard-intro .today-strip{display:grid;grid-template-columns:1fr;padding:15px 18px;align-content:center;gap:9px}
+.dashboard-intro .today-games .rank-row{display:grid;grid-template-columns:auto minmax(0,1fr);align-items:center;justify-content:start;gap:12px;border:0;padding:0}
+.dashboard-intro .today-games .rank-row span{text-align:left;color:var(--muted);font-size:12px}
+@media(max-width:900px){.dashboard-intro{grid-template-columns:1fr}.dashboard-intro .dashboard-hero,.dashboard-intro .today-strip{min-height:0}}
+@media(max-width:640px){.dashboard-intro{gap:0;border:1px solid var(--line)}.dashboard-intro .dashboard-hero{border-radius:0;padding:18px}.dashboard-intro .today-strip{border:0;border-radius:0;padding:14px 16px}.dashboard-intro .hero-logos{margin-top:14px}.dashboard-intro .hero-logos img{width:43px;height:43px}.dashboard-intro .today-games .rank-row{grid-template-columns:1fr;gap:2px}}
