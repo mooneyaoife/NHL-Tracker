@@ -23,7 +23,7 @@ from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
 CONFIG = json.loads((ROOT / "config.json").read_text())
-VERSION = "5.34.0"
+VERSION = "5.34.1"
 SEASON = str(CONFIG["season"])
 TRACKED = [str(t).upper() for t in CONFIG["teams"]]
 API = "https://api-web.nhle.com/v1"
@@ -41,6 +41,12 @@ TEAM_NICKNAMES = {
     "DAL":"stars","DET":"red wings","EDM":"oilers","FLA":"panthers","LAK":"kings","MIN":"wild","MTL":"canadiens","NJD":"devils","NSH":"predators",
     "NYI":"islanders","NYR":"rangers","OTT":"senators","PHI":"flyers","PIT":"penguins","SEA":"kraken","SJS":"sharks","STL":"blues","TBL":"lightning",
     "TOR":"maple leafs","UTA":"mammoth","VAN":"canucks","VGK":"golden knights","WPG":"jets","WSH":"capitals"
+}
+TEAM_CALENDAR_COLOURS = {
+    "ANA":"#F47A38", "BOS":"#FFB81C", "BUF":"#003087", "CAR":"#CC0000", "CBJ":"#002654", "CGY":"#D2001C", "CHI":"#CF0A2C", "COL":"#6F263D",
+    "DAL":"#006847", "DET":"#CE1126", "EDM":"#FF4C00", "FLA":"#C8102E", "LAK":"#111111", "MIN":"#154734", "MTL":"#AF1E2D", "NJD":"#CE1126",
+    "NSH":"#FFB81C", "NYI":"#00539B", "NYR":"#0038A8", "OTT":"#C52032", "PHI":"#F74902", "PIT":"#CFC493", "SEA":"#007A9A", "SJS":"#006D75",
+    "STL":"#002F87", "TBL":"#002868", "TOR":"#003E7E", "UTA":"#71AFE5", "VAN":"#00205B", "VGK":"#B4975A", "WPG":"#041E42", "WSH":"#C8102E"
 }
 PODCASTS = [
     ("32 Thoughts", "Elliotte Friedman and Kyle Bukauskas", "https://feeds.simplecast.com/fYqFr5h_", "https://podcasts.apple.com/us/podcast/32-thoughts-the-podcast/id1332150124"),
@@ -991,11 +997,12 @@ def ical_fold(line: str) -> list[str]:
     return parts
 
 
-def calendar_feed(name: str, games: list[dict], team_names: dict[str, str]) -> str:
+def calendar_feed(name: str, games: list[dict], team_names: dict[str, str], colour: str = "#142640") -> str:
     generated = datetime.now(timezone.utc).strftime("%Y%m%dT%H%M%SZ")
     lines = ["BEGIN:VCALENDAR", "VERSION:2.0", "PRODID:-//NHL Tracker//Team Calendar//EN",
         "CALSCALE:GREGORIAN", "METHOD:PUBLISH", f"X-WR-CALNAME:{ical_escape(name)}",
-        "X-WR-TIMEZONE:Europe/London", "REFRESH-INTERVAL;VALUE=DURATION:PT6H", "X-PUBLISHED-TTL:PT6H"]
+        "X-WR-TIMEZONE:Europe/London", f"X-APPLE-CALENDAR-COLOR:{colour}", f"COLOR:{colour}",
+        "REFRESH-INTERVAL;VALUE=DURATION:PT6H", "X-PUBLISHED-TTL:PT6H"]
     for game in games:
         game_id = str(game.get("id") or "")
         away_code = localised(game.get("awayTeam", {}).get("abbrev")).upper()
@@ -1042,7 +1049,8 @@ def write_calendar_feeds(schedules: list[dict], standings: list[dict]) -> None:
         games = [game for game in eligible if team in {
             localised(game.get("awayTeam", {}).get("abbrev")).upper(),
             localised(game.get("homeTeam", {}).get("abbrev")).upper()}]
-        (CALENDAR_DIR / f"{team}.ics").write_text(calendar_feed(f"{name} - NHL Tracker", games, team_names), encoding="utf-8", newline="")
+        colour = TEAM_CALENDAR_COLOURS.get(team, "#142640")
+        (CALENDAR_DIR / f"{team}.ics").write_text(calendar_feed(f"{name} - NHL Tracker", games, team_names, colour), encoding="utf-8", newline="")
     (CALENDAR_DIR / "NHL.ics").write_text(calendar_feed("NHL Schedule - NHL Tracker", eligible, team_names), encoding="utf-8", newline="")
 
 
