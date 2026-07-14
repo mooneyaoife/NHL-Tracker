@@ -7,6 +7,7 @@ An automatically updated, interactive NHL dashboard for the Buffalo Sabres, San 
 - Four-team-first dashboard with expandable detail
 - UK-time schedule calendar and dedicated Game Centre
 - Game Night Centre with official scoring, penalties, player leaders, three stars, play-by-play and shot maps
+- Live game-day lineup, injury and starting-goalie links for every selected matchup
 - Team dashboards, division race histories and interactive season graphs
 - Player and goalie centres with full names and official roster images
 - Official NHL standings and tracked-team ranks
