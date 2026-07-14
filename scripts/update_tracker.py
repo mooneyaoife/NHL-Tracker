@@ -23,12 +23,13 @@ from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
 CONFIG = json.loads((ROOT / "config.json").read_text())
-VERSION = "5.33.0"
+VERSION = "5.34.0"
 SEASON = str(CONFIG["season"])
 TRACKED = [str(t).upper() for t in CONFIG["teams"]]
 API = "https://api-web.nhle.com/v1"
 CACHE = ROOT / "data" / "cache" / "boxscores"
 OUTPUT = ROOT / "site" / "data" / "tracker.json"
+CALENDAR_DIR = ROOT / "site" / "data" / "calendars"
 MP_SEASON = SEASON[:4]
 MP_BASE = f"https://moneypuck.com/moneypuck/playerData/seasonSummary/{MP_SEASON}/regular"
 NST_FILE = ROOT / "data" / "naturalstattrick" / f"team_{SEASON}_regular_5v5_sva.csv"
@@ -972,6 +973,79 @@ def write_season_index(current_season: str) -> None:
     (season_dir / "index.json").write_text(json.dumps({"current": current_season, "seasons": entries}, separators=(",", ":")))
 
 
+def ical_escape(value: object) -> str:
+    """Escape plain text for an iCalendar property value."""
+    return str(value or "").replace("\\", "\\\\").replace("\r", "").replace("\n", "\\n").replace(",", "\\,").replace(";", "\\;")
+
+
+def ical_fold(line: str) -> list[str]:
+    """Fold long iCalendar lines so subscription clients can read them reliably."""
+    parts = []
+    while len(line.encode("utf-8")) > 73:
+        cut = min(73, len(line))
+        while cut > 1 and len(line[:cut].encode("utf-8")) > 73:
+            cut -= 1
+        parts.append(line[:cut])
+        line = " " + line[cut:]
+    parts.append(line)
+    return parts
+
+
+def calendar_feed(name: str, games: list[dict], team_names: dict[str, str]) -> str:
+    generated = datetime.now(timezone.utc).strftime("%Y%m%dT%H%M%SZ")
+    lines = ["BEGIN:VCALENDAR", "VERSION:2.0", "PRODID:-//NHL Tracker//Team Calendar//EN",
+        "CALSCALE:GREGORIAN", "METHOD:PUBLISH", f"X-WR-CALNAME:{ical_escape(name)}",
+        "X-WR-TIMEZONE:Europe/London", "REFRESH-INTERVAL;VALUE=DURATION:PT6H", "X-PUBLISHED-TTL:PT6H"]
+    for game in games:
+        game_id = str(game.get("id") or "")
+        away_code = localised(game.get("awayTeam", {}).get("abbrev")).upper()
+        home_code = localised(game.get("homeTeam", {}).get("abbrev")).upper()
+        if not game_id or not away_code or not home_code:
+            continue
+        away, home = team_names.get(away_code, away_code), team_names.get(home_code, home_code)
+        state = str(game.get("gameState") or "").upper()
+        finished = state in {"OFF", "FINAL"}
+        away_score, home_score = game.get("awayTeam", {}).get("score"), game.get("homeTeam", {}).get("score")
+        summary = f"{away} at {home}"
+        if finished and away_score is not None and home_score is not None:
+            summary = f"Final: {away} {away_score} - {home_score} {home}"
+        game_type = {1: "Preseason", 2: "Regular season", 3: "Playoffs"}.get(int(game.get("gameType") or 0), "NHL game")
+        venue = localised(game.get("venue"))
+        tracker_url = f"https://mooneyaoife.github.io/NHL-Tracker/?game={game_id}#games"
+        description = f"{game_type}. Times display in your calendar's local time. Open the NHL Tracker Game Centre for scores, analytics and game details."
+        event = ["BEGIN:VEVENT", f"UID:nhl-{game_id}@mooneyaoife.github.io", f"DTSTAMP:{generated}"]
+        start_raw = str(game.get("startTimeUTC") or "")
+        try:
+            start = datetime.fromisoformat(start_raw.replace("Z", "+00:00")).astimezone(timezone.utc)
+            event.extend([f"DTSTART:{start.strftime('%Y%m%dT%H%M%SZ')}", f"DTEND:{(start + timedelta(hours=3)).strftime('%Y%m%dT%H%M%SZ')}"])
+        except ValueError:
+            date = str(game.get("gameDate") or "").replace("-", "")
+            if len(date) == 8:
+                next_date = (datetime.strptime(date, "%Y%m%d") + timedelta(days=1)).strftime("%Y%m%d")
+                event.extend([f"DTSTART;VALUE=DATE:{date}", f"DTEND;VALUE=DATE:{next_date}"])
+        event.extend([f"SUMMARY:{ical_escape(summary)}", f"DESCRIPTION:{ical_escape(description)}",
+            f"LOCATION:{ical_escape(venue)}", f"URL;VALUE=URI:{tracker_url}"])
+        if str(game.get("gameScheduleState") or "").upper() in {"PPD", "CANCELLED"}:
+            event.append("STATUS:CANCELLED")
+        event.append("END:VEVENT")
+        lines.extend(event)
+    lines.append("END:VCALENDAR")
+    return "\r\n".join(part for line in lines for part in ical_fold(line)) + "\r\n"
+
+
+def write_calendar_feeds(schedules: list[dict], standings: list[dict]) -> None:
+    """Publish one stable subscription URL per NHL team plus a league-wide feed."""
+    CALENDAR_DIR.mkdir(parents=True, exist_ok=True)
+    team_names = {row["team"]: row["name"] for row in standings}
+    eligible = [game for game in schedules if int(game.get("gameType") or 0) in {1, 2, 3}]
+    for team, name in team_names.items():
+        games = [game for game in eligible if team in {
+            localised(game.get("awayTeam", {}).get("abbrev")).upper(),
+            localised(game.get("homeTeam", {}).get("abbrev")).upper()}]
+        (CALENDAR_DIR / f"{team}.ics").write_text(calendar_feed(f"{name} - NHL Tracker", games, team_names), encoding="utf-8", newline="")
+    (CALENDAR_DIR / "NHL.ics").write_text(calendar_feed("NHL Schedule - NHL Tracker", eligible, team_names), encoding="utf-8", newline="")
+
+
 def main() -> None:
     started = time.time()
     active_season, rollover_reason = resolve_active_season()
@@ -1026,6 +1100,7 @@ def main() -> None:
     archive.parent.mkdir(parents=True, exist_ok=True)
     archive.write_text(json.dumps(payload, separators=(",", ":"), ensure_ascii=False))
     write_season_index(SEASON)
+    write_calendar_feeds(schedules, standings)
     print(f"Updated {OUTPUT}: {len(rows)} team-game rows, {len(standings)} standings teams")
 
 
