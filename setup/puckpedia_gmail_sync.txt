@@ -1,0 +1,163 @@
+/**
+ * NHL Tracker · PuckPedia Gmail bridge
+ *
+ * This script reads ONLY mail carrying the Gmail label:
+ * NHL Tracker/PuckPedia
+ *
+ * It publishes ONLY:
+ * - the email subject
+ * - its received date
+ * - an inferred category
+ * - a public puckpedia.com link
+ *
+ * Email bodies, sender addresses, Gmail identifiers and account information
+ * are never written to GitHub.
+ *
+ * ONE-TIME SETUP
+ * 1. Open https://script.google.com and create a new project.
+ * 2. Paste this entire file into Code.gs.
+ * 3. In Project Settings, add a Script Property named GITHUB_TOKEN.
+ * 4. Its value must be a fine-grained GitHub token limited to
+ *    mooneyaoife/NHL-Tracker with Contents: Read and write permission.
+ * 5. Run setupPuckPediaBridge once and approve Gmail + external-request access.
+ * 6. In Gmail, apply the label NHL Tracker/PuckPedia to a PuckPedia email.
+ *    A Gmail filter can apply that label automatically to future messages.
+ */
+
+const PUCKPEDIA_CONFIG = {
+  label: "NHL Tracker/PuckPedia",
+  owner: "mooneyaoife",
+  repo: "NHL-Tracker",
+  branch: "main",
+  path: "site/data/puckpedia-mail.json",
+  maximumMessages: 30
+};
+
+function setupPuckPediaBridge() {
+  const token = PropertiesService.getScriptProperties().getProperty("GITHUB_TOKEN");
+  if (!token) throw new Error("Add the GITHUB_TOKEN Script Property first.");
+  if (!GmailApp.getUserLabelByName(PUCKPEDIA_CONFIG.label)) {
+    GmailApp.createLabel(PUCKPEDIA_CONFIG.label);
+  }
+  ScriptApp.getProjectTriggers()
+    .filter(trigger => trigger.getHandlerFunction() === "syncPuckPediaUpdates")
+    .forEach(trigger => ScriptApp.deleteTrigger(trigger));
+  ScriptApp.newTrigger("syncPuckPediaUpdates").timeBased().everyHours(6).create();
+  syncPuckPediaUpdates();
+}
+
+function syncPuckPediaUpdates() {
+  const label = GmailApp.getUserLabelByName(PUCKPEDIA_CONFIG.label);
+  if (!label) throw new Error(`Create the Gmail label ${PUCKPEDIA_CONFIG.label} first.`);
+  const messages = label.getThreads(0, PUCKPEDIA_CONFIG.maximumMessages)
+    .reduce((all, thread) => all.concat(thread.getMessages()), [])
+    .filter(message => String(message.getFrom()).toLowerCase().includes("puckpedia"))
+    .sort((a, b) => b.getDate().getTime() - a.getDate().getTime());
+
+  const seen = {};
+  const items = messages.map(message => {
+    const title = cleanSubject_(message.getSubject());
+    const publishedAt = message.getDate().toISOString();
+    const category = categoryFor_(title);
+    const body = `${message.getPlainBody()}\n${message.getBody()}`;
+    const url = firstPublicPuckPediaLink_(body) || fallbackLink_(category);
+    const id = digest_(`${title}|${publishedAt.slice(0, 10)}|${url}`);
+    return { id, title, publishedAt, category, url };
+  }).filter(item => {
+    if (!item.title || seen[item.id]) return false;
+    seen[item.id] = true;
+    return true;
+  }).slice(0, PUCKPEDIA_CONFIG.maximumMessages);
+
+  const current = readGitHubFile_();
+  const previousItems = current.data && Array.isArray(current.data.items) ? current.data.items : [];
+  if (JSON.stringify(previousItems) === JSON.stringify(items)) return;
+  const payload = { schema: 1, updatedAt: new Date().toISOString(), items };
+  writeGitHubFile_(payload, current.sha);
+}
+
+function cleanSubject_(value) {
+  return String(value || "")
+    .replace(/^\s*(?:re|fw|fwd):\s*/i, "")
+    .replace(/\s+/g, " ")
+    .trim()
+    .slice(0, 180);
+}
+
+function categoryFor_(title) {
+  const value = title.toLowerCase();
+  if (/trade|acquire|deal/.test(value)) return "Trade";
+  if (/sign|contract|extension|free agent/.test(value)) return "Contract";
+  if (/waiver/.test(value)) return "Waivers";
+  if (/cap|salary|ltir|buyout/.test(value)) return "Salary cap";
+  if (/recall|assign|transaction|roster/.test(value)) return "Transaction";
+  return "PuckPedia update";
+}
+
+function firstPublicPuckPediaLink_(body) {
+  const matches = String(body || "").match(/https?:\/\/(?:www\.)?puckpedia\.com\/[A-Za-z0-9_~:/?#\[\]@!$&'()*+,;=%.-]*/gi) || [];
+  const blocked = /unsubscribe|privacy|account|login|preferences/i;
+  const useful = matches.map(link => link.replace(/&amp;/gi, "&").replace(/[)>.,]+$/, ""))
+    .find(link => !blocked.test(link));
+  return useful || "";
+}
+
+function fallbackLink_(category) {
+  if (category === "Trade") return "https://puckpedia.com/trades";
+  if (category === "Contract") return "https://puckpedia.com/signings";
+  if (category === "Waivers") return "https://puckpedia.com/waiver-wire";
+  if (category === "Transaction") return "https://puckpedia.com/transactions";
+  return "https://puckpedia.com/";
+}
+
+function digest_(value) {
+  return Utilities.computeDigest(Utilities.DigestAlgorithm.SHA_256, value)
+    .slice(0, 10)
+    .map(byte => (`0${((byte + 256) % 256).toString(16)}`).slice(-2))
+    .join("");
+}
+
+function githubRequest_(method, body) {
+  const token = PropertiesService.getScriptProperties().getProperty("GITHUB_TOKEN");
+  if (!token) throw new Error("GITHUB_TOKEN is missing from Script Properties.");
+  const url = `https://api.github.com/repos/${PUCKPEDIA_CONFIG.owner}/${PUCKPEDIA_CONFIG.repo}/contents/${PUCKPEDIA_CONFIG.path}`;
+  const options = {
+    method,
+    muteHttpExceptions: true,
+    headers: {
+      Authorization: `Bearer ${token}`,
+      Accept: "application/vnd.github+json",
+      "X-GitHub-Api-Version": "2022-11-28"
+    }
+  };
+  if (body) {
+    options.contentType = "application/json";
+    options.payload = JSON.stringify(body);
+  }
+  const response = UrlFetchApp.fetch(url, options);
+  const code = response.getResponseCode();
+  if (code < 200 || code >= 300) throw new Error(`GitHub returned ${code}: ${response.getContentText()}`);
+  return JSON.parse(response.getContentText());
+}
+
+function readGitHubFile_() {
+  try {
+    const file = githubRequest_("get");
+    const text = Utilities.newBlob(Utilities.base64Decode(String(file.content).replace(/\s/g, ""))).getDataAsString();
+    return { sha: file.sha, data: JSON.parse(text) };
+  } catch (error) {
+    if (String(error).includes("GitHub returned 404")) return { sha: null, data: null };
+    throw error;
+  }
+}
+
+function writeGitHubFile_(data, sha) {
+  const content = Utilities.base64Encode(JSON.stringify(data, null, 2));
+  const body = {
+    message: "Update PuckPedia Gmail feed",
+    content,
+    branch: PUCKPEDIA_CONFIG.branch
+  };
+  if (sha) body.sha = sha;
+  githubRequest_("put", body);
+}
