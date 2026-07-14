@@ -11,7 +11,7 @@
   <link rel="manifest" href="manifest.webmanifest">
   <link rel="apple-touch-icon" href="icons/icon-192.png">
   <script>document.documentElement.dataset.theme=localStorage.getItem("nhl-theme")||"light"</script>
-  <link rel="stylesheet" href="styles.css?v=5.26.0">
+  <link rel="stylesheet" href="styles.css?v=5.27.2">
   <script src="vendor/plotly-2.35.2.min.js"></script>
 </head>
 <body>
@@ -54,7 +54,7 @@
 
   <section id="teams" class="page">
     <div class="section-head"><div class="identity-heading"><img id="team-logo" class="team-logo" alt=""><h2 id="team-title">Team</h2></div><select id="team-select"></select></div>
-    <div class="subnav section-subnav" role="tablist" aria-label="Team sections"><button class="active" data-section-tab="team-overview">Overview</button><button data-section-tab="team-advanced">Advanced Analytics</button><button data-section-tab="team-season">Season</button><button data-section-tab="team-games">Games</button></div>
+    <div class="subnav section-subnav" role="tablist" aria-label="Team sections"><button class="active" data-section-tab="team-overview">Overview</button><button data-section-tab="team-advanced">Performance</button><button data-section-tab="team-season">Trends</button><button data-section-tab="team-games">Games</button></div>
     <div id="team-metrics" class="grid four section-pane active" data-section-pane="team-overview"></div><div id="team-story" class="story section-pane active" data-section-pane="team-overview"></div><article id="team-cap-link" class="panel contract-panel team-cap-panel section-pane active" data-section-pane="team-overview"></article>
     <div class="section-label section-pane" data-section-pane="team-advanced">Advanced performance</div><div id="team-advanced" class="grid four section-pane" data-section-pane="team-advanced"></div>
     <div class="grid two section-pane" data-section-pane="team-advanced"><article class="panel"><h3>Expected versus actual goals</h3><div id="team-xg-chart" class="chart"></div></article><article class="panel"><h3>Shot quality profile</h3><div id="team-shot-profile" class="chart"></div></article><article class="panel"><h3>Best lines and pairings</h3><div id="team-lines" class="table-wrap"></div></article><article class="panel"><h3>Line and pairing effectiveness</h3><div id="team-lines-chart" class="chart"></div></article></div>
@@ -67,7 +67,7 @@
 
   <section id="players" class="page">
     <div class="title-bar"><h2>Players and Goalies</h2></div>
-    <div class="subnav section-subnav" role="tablist" aria-label="Player sections"><button class="active" data-section-tab="player-profile">Profile</button><button data-section-tab="player-advanced">Advanced Analytics</button><button data-section-tab="player-explore">League Explorer</button><button data-section-tab="player-goalies">Goalies</button></div>
+    <div class="subnav section-subnav" role="tablist" aria-label="Player sections"><button class="active" data-section-tab="player-profile">Overview</button><button data-section-tab="player-advanced">Performance</button><button data-section-tab="player-explore">League</button><button data-section-tab="player-goalies">Goalies</button></div>
     <div class="section-head player-heading"><div class="identity-heading"><img id="player-headshot" class="player-headshot" alt=""><h2 id="player-title">Player</h2></div><div class="selectors"><select id="player-team-select"></select><select id="player-select"></select></div></div>
     <article class="panel roster-search section-pane" data-section-pane="player-explore"><h3>Search every current NHL roster</h3><input id="league-player-search" placeholder="Type a full player or team name"><div id="league-player-results"></div></article>
     <details class="expandable data-lab section-pane" data-section-pane="player-explore" open><summary>Five-on-five skater explorer</summary><p class="detail-note">Compare every skater in the Natural Stat Trick export. Per-60 rates make different workloads easier to compare.</p><div class="data-lab-controls"><label>Team<select id="nst-skater-team"><option value="ALL">All NHL teams</option><option value="TRACKED">My tracked teams</option></select></label><label>Position<select id="nst-skater-position"><option value="ALL">All skaters</option><option value="F">Forwards</option><option value="D">Defencemen</option></select></label><label>Measure<select id="nst-skater-metric"><option value="points60">Points per 60</option><option value="goals60">Goals per 60</option><option value="ixg60">Expected goals per 60</option><option value="shots60">Shots per 60</option><option value="ihdcf60">High-danger chances per 60</option><option value="takeaways60">Takeaways per 60</option><option value="hits60">Hits per 60</option><option value="faceoffsPct">Faceoff percentage</option></select></label><label>Minimum ice time<select id="nst-skater-min-toi"><option value="200">200 minutes</option><option value="500" selected>500 minutes</option><option value="800">800 minutes</option></select></label><label class="data-lab-search">Find player<input id="nst-skater-search" placeholder="Type a full or partial name"></label></div><div class="grid two data-lab-results"><article class="panel"><h3 id="nst-skater-chart-title">League leaders</h3><div id="nst-skater-chart" class="chart data-lab-chart"></div></article><article class="panel"><h3 id="nst-skater-table-title">Skater results</h3><div id="nst-skater-table" class="table-wrap data-table"></div></article></div><div class="mp-credit">Five-on-five data: <a href="https://www.naturalstattrick.com/playerteams.php?stdoi=std" target="_blank" rel="noopener">NaturalStatTrick.com</a></div></details>
@@ -129,5 +129,5 @@
 </main>
 <footer><div class="footer-links"><button data-page="watchlist">Settings</button><button data-page="guide">Stat Guide</button><a href="https://moneypuck.com/data.htm" target="_blank" rel="noopener">Data sources</a><button data-page="status">Status</button></div><p>NHL Tracker · Unofficial, non-commercial fan project using public NHL data</p></footer>
 <aside id="app-update" class="app-update" role="status" hidden><span>A fresh version of NHL Tracker is ready.</span><button id="app-update-button" type="button">Update now</button></aside>
-<script src="app.js?v=5.26.0"></script>
+<script src="app.js?v=5.27.2"></script>
 </body></html>

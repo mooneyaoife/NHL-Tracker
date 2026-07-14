@@ -23,7 +23,7 @@ from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
 CONFIG = json.loads((ROOT / "config.json").read_text())
-VERSION = "5.25.0"
+VERSION = "5.27.2"
 SEASON = str(CONFIG["season"])
 TRACKED = [str(t).upper() for t in CONFIG["teams"]]
 API = "https://api-web.nhle.com/v1"
@@ -759,6 +759,57 @@ def roster_change_history(previous: dict, changes: dict) -> list[dict]:
     return sorted((x for x in history if current(x)), key=lambda x: x.get("detectedAt", ""), reverse=True)[:240]
 
 
+def compact_number(value, digits: int = 3):
+    """Keep historical snapshots small while preserving useful chart precision."""
+    try:
+        number = float(value)
+        return round(number, digits) if math.isfinite(number) else None
+    except (TypeError, ValueError):
+        return None
+
+
+def daily_history(previous: dict, standings: list[dict], moneypuck: dict) -> list[dict]:
+    """Append one durable league snapshot per UTC day for future trend views."""
+    same_season = str(previous.get("meta", {}).get("season")) == SEASON
+    history = list(previous.get("history", [])) if same_season else []
+    mp_teams = {str(row.get("team", "")).upper(): row for row in moneypuck.get("teams", [])}
+    team_rows = []
+    for rank, standing in enumerate(standings, 1):
+        code = str(standing.get("team", "")).upper()
+        advanced = mp_teams.get(code, {})
+        gp = compact_number(standing.get("gp"), 0) or 0
+        points = compact_number(standing.get("points"), 0) or 0
+        raw_xg = compact_number(advanced.get("xgPct"))
+        xg_pct = raw_xg * 100 if raw_xg is not None and abs(raw_xg) <= 1 else raw_xg
+        points_pct = points / (gp * 2) * 100 if gp else 0
+        gd_per_game = (compact_number(standing.get("gd")) or 0) / gp if gp else 0
+        power_index = (points_pct - 50) * .45 + ((xg_pct if xg_pct is not None else 50) - 50) * .45 + gd_per_game * 2.5
+        team_rows.append({
+            "team": code, "rank": rank, "gp": int(gp), "points": int(points),
+            "gd": compact_number(standing.get("gd"), 0), "pointsPct": round(points_pct, 2),
+            "xgPct": compact_number(xg_pct, 2), "powerIndex": round(power_index, 2)
+        })
+    forecasts = []
+    for row in moneypuck.get("simulations", []):
+        if str(row.get("scenerio", row.get("scenario", "ALL"))).upper() not in {"ALL", ""}:
+            continue
+        code = str(row.get("teamCode", row.get("team", ""))).upper()
+        if not code:
+            continue
+        forecasts.append({
+            "team": code, "makePlayoffs": compact_number(row.get("madePlayoffs", row.get("makePlayoffs"))),
+            "round2": compact_number(row.get("round2")), "round3": compact_number(row.get("round3")),
+            "final": compact_number(row.get("round4", row.get("makeFinal"))),
+            "cup": compact_number(row.get("wonCup", row.get("winCup"))),
+            "projectedPoints": compact_number(row.get("points", row.get("averagePoints")), 1)
+        })
+    now = datetime.now(timezone.utc)
+    snapshot = {"date": now.date().isoformat(), "updatedAt": now.isoformat(), "teams": team_rows, "forecasts": forecasts}
+    history = [row for row in history if row.get("date") != snapshot["date"]]
+    history.append(snapshot)
+    return sorted(history, key=lambda row: row.get("date", ""))[-500:]
+
+
 def team_summaries(rows: list[dict], team_codes: list[str] | None = None) -> dict:
     team_codes = team_codes or TRACKED
     output = {}
@@ -815,11 +866,12 @@ def main() -> None:
     previous_same_season = previous if previous.get("meta", {}).get("season") == SEASON else {}
     changes = roster_changes(previous_same_season, rosters)
     change_history = roster_change_history(previous_same_season, changes)
+    history = daily_history(previous_same_season, standings, moneypuck)
     payload = {
-        "meta": {"version": VERSION, "season": SEASON, "seasonMode": CONFIG.get("seasonMode", "manual"), "seasonDecision": rollover_reason, "trackedTeams": TRACKED, "updatedAt": datetime.now(timezone.utc).isoformat(), "elapsedSeconds": round(time.time()-started, 1), "scheduleGames": len(schedules)},
+        "meta": {"version": VERSION, "season": SEASON, "seasonMode": CONFIG.get("seasonMode", "manual"), "seasonDecision": rollover_reason, "trackedTeams": TRACKED, "updatedAt": datetime.now(timezone.utc).isoformat(), "elapsedSeconds": round(time.time()-started, 1), "scheduleGames": len(schedules), "historyDays": len(history)},
         "standings": standings, "games": rows, "teams": team_summaries(rows, league_teams), "players": players, "gameCentre": game_centres,
         "daily": daily, "rosters": rosters, "rosterChanges": changes, "rosterChangeHistory": change_history, "news": news, "transactions": transactions, "podcasts": podcasts, "videos": videos,
-        "divisionHistory": division_histories(schedules, standings), "moneypuck": moneypuck,
+        "divisionHistory": division_histories(schedules, standings), "history": history, "moneypuck": moneypuck,
         "naturalStatTrick": natural_stat_trick,
         "sources": {
             "nhl": {"status": "Ready", "season": SEASON, "updatedAt": datetime.now(timezone.utc).isoformat()},

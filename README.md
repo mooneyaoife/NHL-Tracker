@@ -4,18 +4,19 @@ An automatically updated, interactive NHL dashboard for the Buffalo Sabres, San 
 
 ## What it includes
 
-- Four-team-first dashboard with expandable detail
+- Four-team-first dashboard with progressive Home, Games, Explore and News navigation
 - UK-time schedule calendar and dedicated Game Centre
 - Game Night Centre with official scoring, penalties, player leaders, three stars, play-by-play and shot maps
 - Live game-day lineup, injury and starting-goalie links for every selected matchup
-- Team dashboards, division race histories and interactive season graphs
-- Player and goalie centres with full names and official roster images
+- Team dashboards with rolling form, schedule-rhythm, division-race and season trend graphs
+- Player and goalie centres with full names, official roster images and rolling contribution views
 - Official NHL standings and tracked-team ranks
 - Confirmed updates, roster-change detection and clearly separated rumour sources
 - Automatic official NHL headlines, curated insider timelines, current podcast episodes and recent hockey videos
 - Power rankings using approved MoneyPuck downloads with visible credit
 - Phase-aware playoff information
 - Automatic season rollover with selectable per-season archives
+- One compact daily history snapshot for standings, power index, expected-goal share and playoff forecasts
 - Cached boxscores for fast incremental updates
 - Scheduled updates through GitHub Actions
 - Game-night snapshots approximately every 15 minutes while a tracked team is active

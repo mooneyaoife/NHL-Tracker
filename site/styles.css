@@ -174,4 +174,8 @@ html[data-theme="dark"] .context-nav{background:#1c3049}
   .context-nav-level::-webkit-scrollbar{display:none}
   .context-nav-level button{flex:1;padding:12px 13px;font-size:12px}
   .context-nav-detail>span{display:none}
+  .section-subnav{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));overflow:visible}
+  .section-subnav button{min-width:0;padding:12px 4px;font-size:11px;white-space:normal}
+  .compare-subnav{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .trend-panel .chart{height:330px}
 }
