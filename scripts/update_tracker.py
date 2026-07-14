@@ -23,7 +23,7 @@ from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
 CONFIG = json.loads((ROOT / "config.json").read_text())
-VERSION = "5.31.0"
+VERSION = "5.32.0"
 SEASON = str(CONFIG["season"])
 TRACKED = [str(t).upper() for t in CONFIG["teams"]]
 API = "https://api-web.nhle.com/v1"
@@ -747,6 +747,85 @@ def enrich_players(players: dict, rosters: dict) -> dict:
     return players
 
 
+def build_game_library(games: list[dict], rosters: dict, moneypuck: dict, previous: dict | None = None) -> list[dict]:
+    """Store a compact, durable summary for every completed tracked game."""
+    completed = [g for g in games if int(g.get("gameType", 0)) in (2, 3)
+        and str(g.get("gameState", "")).upper() in {"OFF", "FINAL"}]
+    relevant = [g for g in completed if localised(g.get("homeTeam", {}).get("abbrev")).upper() in TRACKED
+        or localised(g.get("awayTeam", {}).get("abbrev")).upper() in TRACKED]
+    roster_by_id = {str(p.get("id")): p for rows in rosters.values() for p in rows}
+    prior = {str(row.get("id")): row for row in (previous or {}).get("gameLibrary", [])}
+    mp_rows = {}
+    for row in moneypuck.get("teamGames", []):
+        game_id = str(row.get("gameId", "")).split(".")[0]
+        team = str(row.get("team", "")).upper()
+        if game_id and team:
+            mp_rows[(game_id, team)] = row
+
+    output = []
+    for game in relevant:
+        game_id = str(game.get("id"))
+        away = localised(game.get("awayTeam", {}).get("abbrev")).upper()
+        home = localised(game.get("homeTeam", {}).get("abbrev")).upper()
+        try:
+            data = boxscore(int(game_id))
+        except Exception as exc:
+            print(f"warning: game library {game_id}: {exc}", file=sys.stderr)
+            if game_id in prior:
+                output.append(prior[game_id])
+                continue
+            data = {}
+        stats = data.get("playerByGameStats", {})
+        all_skaters, goalies, team_stats = [], [], {}
+        for side, team in (("awayTeam", away), ("homeTeam", home)):
+            side_stats = stats.get(side, {}) or {}
+            skaters = [*(side_stats.get("forwards", []) or []), *(side_stats.get("defense", []) or [])]
+            for player in skaters:
+                roster = roster_by_id.get(str(player.get("playerId")), {})
+                all_skaters.append({
+                    "id": str(player.get("playerId", "")), "team": team,
+                    "name": roster.get("name") or localised(player.get("name")) or "Unknown player",
+                    "goals": int(player.get("goals") or 0), "assists": int(player.get("assists") or 0),
+                    "points": int(player.get("points") or 0), "shots": int(player.get("sog") or 0),
+                    "toi": player.get("toi") or ""
+                })
+            for player in side_stats.get("goalies", []) or []:
+                roster = roster_by_id.get(str(player.get("playerId")), {})
+                goalies.append({
+                    "id": str(player.get("playerId", "")), "team": team,
+                    "name": roster.get("name") or localised(player.get("name")) or "Unknown goalie",
+                    "saves": int(player.get("saves") or 0), "shotsAgainst": int(player.get("shotsAgainst") or 0),
+                    "savePct": compact_number(player.get("savePctg"), 3), "toi": player.get("toi") or ""
+                })
+            club = data.get(side, {}) or game.get(side, {}) or {}
+            team_stats[team] = {
+                "goals": int(club.get("score") or 0), "shots": int(club.get("sog") or 0),
+                "hits": sum(int(p.get("hits") or 0) for p in skaters),
+                "pim": sum(int(p.get("pim") or 0) for p in skaters),
+                "blocks": sum(int(p.get("blockedShots") or 0) for p in skaters),
+                "ppg": sum(int(p.get("powerPlayGoals") or 0) for p in skaters)
+            }
+        all_skaters.sort(key=lambda p: (-p["points"], -p["goals"], -p["shots"], p["name"]))
+        goalies.sort(key=lambda p: (-p["saves"], p["name"]))
+        away_score = team_stats.get(away, {}).get("goals", int(game.get("awayTeam", {}).get("score") or 0))
+        home_score = team_stats.get(home, {}).get("goals", int(game.get("homeTeam", {}).get("score") or 0))
+        period = str((data.get("gameOutcome") or game.get("gameOutcome") or {}).get("lastPeriodType", "REG"))
+        mp_away, mp_home = mp_rows.get((game_id, away)), mp_rows.get((game_id, home))
+        output.append({
+            "id": game_id, "date": data.get("gameDate") or game.get("gameDate"),
+            "type": "Playoffs" if int(game.get("gameType", 0)) == 3 else "Regular Season",
+            "startTimeUTC": data.get("startTimeUTC") or game.get("startTimeUTC", ""),
+            "away": away, "home": home, "awayScore": away_score, "homeScore": home_score,
+            "winner": away if away_score > home_score else home, "outcome": period,
+            "venue": localised(data.get("venue")) or localised(game.get("venue")),
+            "teams": team_stats, "leaders": all_skaters[:3], "goalies": goalies[:3],
+            "xg": {away: compact_number(mp_away.get("xgf") if mp_away else mp_home.get("xga") if mp_home else None, 2),
+                   home: compact_number(mp_home.get("xgf") if mp_home else mp_away.get("xga") if mp_away else None, 2)},
+            "officialUrl": f"https://www.nhl.com/gamecenter/{away.lower()}-vs-{home.lower()}/{str(data.get('gameDate') or game.get('gameDate') or '').replace('-', '/')}/{game_id}"
+        })
+    return sorted(output, key=lambda row: (row.get("date") or "", row.get("id") or ""))
+
+
 def division_histories(games: list[dict], standings: list[dict]) -> dict:
     """Build cumulative points by calendar date for every division team."""
     divisions = defaultdict(list)
@@ -920,6 +999,7 @@ def main() -> None:
     except Exception as exc:
         print(f"warning: MoneyPuck data unavailable: {exc}", file=sys.stderr)
         moneypuck = previous_same_season.get("moneypuck") or {"credit":"Data: MoneyPuck.com","season":SEASON,"updatedAt":None,"status":"Awaiting new-season data","teams":[],"skaters":[],"goalies":[],"lines":[],"simulations":[],"teamGames":[]}
+    game_library = build_game_library(schedules, rosters, moneypuck, previous_same_season)
     natural_stat_trick = load_natural_stat_trick(standings)
     changes = roster_changes(previous_same_season, rosters)
     change_history = roster_change_history(previous_same_season, changes)
@@ -928,6 +1008,7 @@ def main() -> None:
         "meta": {"version": VERSION, "season": SEASON, "seasonMode": CONFIG.get("seasonMode", "manual"), "seasonDecision": rollover_reason, "trackedTeams": TRACKED, "updatedAt": datetime.now(timezone.utc).isoformat(), "elapsedSeconds": round(time.time()-started, 1), "scheduleGames": len(schedules), "historyDays": len(history)},
         "standings": standings, "games": rows, "teams": team_summaries(rows, league_teams), "players": players, "gameCentre": game_centres,
         "daily": daily, "rosters": rosters, "rosterChanges": changes, "rosterChangeHistory": change_history, "news": news, "transactions": transactions, "podcasts": podcasts, "videos": videos,
+        "gameLibrary": game_library,
         "divisionHistory": division_histories(schedules, standings), "history": history, "moneypuck": moneypuck,
         "naturalStatTrick": natural_stat_trick,
         "sources": {
