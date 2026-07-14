@@ -1,4 +1,4 @@
-const UI_VERSION="5.29.0";
+const UI_VERSION="5.29.1";
 const TEAM_NAMES={BUF:"Buffalo Sabres",SJS:"San Jose Sharks",MIN:"Minnesota Wild",CAR:"Carolina Hurricanes"};
 const COLOURS={BUF:"#607da3",SJS:"#5f8f91",MIN:"#728a74",CAR:"#a56b72"}; let DATA,SELECTED_TEAMS;
 const NHL_COLOURS={ANA:"#F47A38",ARI:"#8C2633",BOS:"#FFB81C",BUF:"#003087",CAR:"#CC0000",CBJ:"#002654",CGY:"#D2001C",CHI:"#CF0A2C",COL:"#6F263D",DAL:"#006847",DET:"#CE1126",EDM:"#FF4C00",FLA:"#C8102E",LAK:"#A2AAAD",MIN:"#154734",MTL:"#AF1E2D",NJD:"#CE1126",NSH:"#FFB81C",NYI:"#00539B",NYR:"#0038A8",OTT:"#C52032",PHI:"#F74902",PIT:"#FCB514",SEA:"#007A9A",SJS:"#006D75",STL:"#002F87",TBL:"#002868",TOR:"#003E7E",UTA:"#71AFE5",VAN:"#00205B",VGK:"#B4975A",WPG:"#041E42",WSH:"#C8102E"};
@@ -406,6 +406,7 @@ async function init(){
   window.addEventListener("resize",()=>{resizeVisiblePlots();syncGameDayDetails()});
   document.body.addEventListener("click",e=>{const sorter=e.target.closest(".table-sort");if(sorter){sortTable(sorter);return}const game=e.target.closest("[data-open-game]");if(game){showPage("games");el("game-select").value=String(game.dataset.openGame);renderGame();setTimeout(()=>el("game-centre").scrollIntoView({behavior:"smooth",block:"start"}),80);return}const b=e.target.closest(".metric-help");if(!b)return;el("guide-search").value=b.dataset.guide;el("guide-source").value="ALL";el("guide-category").value="ALL";renderGuide();showPage("guide")});
   document.body.addEventListener("input",event=>{const input=event.target;if(!input.matches?.('[id^="player-compare-search-"]'))return;const exact=[...el("player-comparison-options").options].some(option=>option.value===input.value);if(exact)input.dispatchEvent(new Event("change"))});
+  document.body.addEventListener("change",event=>{const select=event.target;if(!select.matches?.('#player-compare-a,#player-compare-b'))return;const side=select.id.endsWith("-a")?"a":"b",player=comparisonPlayers().find(p=>comparisonPlayerKey(p)===select.value);if(player)el(`player-compare-search-${side}`).value=comparisonPlayerLabel(player);renderPlayerComparison()});
   showPage(location.hash.slice(1)||"dashboard",false);
 }
 init().catch(err=>{el("updated").textContent=err.message;console.error(err)});
