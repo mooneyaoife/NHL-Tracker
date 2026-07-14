@@ -23,7 +23,7 @@ from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
 CONFIG = json.loads((ROOT / "config.json").read_text())
-VERSION = "5.20.0"
+VERSION = "5.21.0"
 SEASON = str(CONFIG["season"])
 TRACKED = [str(t).upper() for t in CONFIG["teams"]]
 API = "https://api-web.nhle.com/v1"
@@ -51,6 +51,7 @@ VIDEO_CHANNELS = [
     ("Sportsnet", "UCVhibwHk4WKw4leUt6JfRLg"),
     ("TSN", "UCXoJ8kY9zpLBEz-8saaT3ew")
 ]
+TRANSACTIONS_FEED = "https://www.prohockeyrumors.com/transactions/feed"
 
 
 def set_active_season(season: str) -> None:
@@ -166,6 +167,36 @@ def load_official_news(standings: list[dict], rosters: dict, previous: dict) -> 
     except Exception as exc:
         print(f"warning: official NHL news unavailable: {exc}", file=sys.stderr)
         return previous.get("news") or {"updatedAt": None, "status": "Temporarily unavailable", "articles": []}
+
+
+def load_reported_transactions(standings: list[dict], rosters: dict, previous: dict) -> dict:
+    """Load transaction headlines from a public RSS feed; every item remains explicitly secondary."""
+    try:
+        root = ET.fromstring(fetch_text(TRANSACTIONS_FEED))
+        items = []
+        for item in root.findall(".//item")[:60]:
+            title = clean_markup(item.findtext("title") or "")
+            url = (item.findtext("link") or "").strip()
+            description = clean_markup(item.findtext("description") or "")
+            categories = [clean_markup(node.text or "") for node in item.findall("category")]
+            haystack = " ".join([title, description, *categories]).casefold()
+            tagged = []
+            for team in standings:
+                code, name = team["team"], team["name"]
+                nickname = TEAM_NICKNAMES.get(code, name.split()[-1]).casefold()
+                player_hit = any(p.get("name", "").casefold() in haystack for p in rosters.get(code, []) if len(p.get("name", "")) > 5)
+                if name.casefold() in haystack or re.search(rf"\b{re.escape(nickname)}\b", haystack) or player_hit:
+                    tagged.append(code)
+            published = item.findtext("pubDate") or ""
+            try: published = parsedate_to_datetime(published).astimezone(timezone.utc).isoformat()
+            except (TypeError, ValueError): pass
+            if title and url:
+                items.append({"title": title, "url": url, "publishedAt": published, "teams": tagged,
+                    "source": "Pro Hockey Rumors", "status": "Reported"})
+        return {"updatedAt": datetime.now(timezone.utc).isoformat(), "status": "Ready", "items": items}
+    except Exception as exc:
+        print(f"warning: reported transactions unavailable: {exc}", file=sys.stderr)
+        return previous.get("transactions") or {"updatedAt": None, "status": "Temporarily unavailable", "items": []}
 
 
 def load_podcasts(previous: dict) -> dict:
@@ -708,6 +739,26 @@ def roster_changes(previous: dict, current: dict) -> dict:
     return changes
 
 
+def roster_change_history(previous: dict, changes: dict) -> list[dict]:
+    """Keep detected roster events useful after the next automatic update."""
+    history = list(previous.get("rosterChangeHistory", [])) if previous else []
+    if previous and previous.get("rosters"):
+        detected = datetime.now(timezone.utc).isoformat()
+        existing = {(x.get("team"), x.get("direction"), str(x.get("player", {}).get("id")), str(x.get("detectedAt", ""))[:10]) for x in history}
+        for team, change in changes.items():
+            for direction, key in (("Added", "added"), ("Departed", "removed")):
+                for player in change.get(key, []):
+                    identity = (team, direction, str(player.get("id")), detected[:10])
+                    if identity not in existing:
+                        history.append({"team": team, "direction": direction, "player": player, "detectedAt": detected})
+                        existing.add(identity)
+    cutoff = datetime.now(timezone.utc) - timedelta(days=180)
+    def current(item: dict) -> bool:
+        try: return datetime.fromisoformat(str(item.get("detectedAt", "")).replace("Z", "+00:00")) >= cutoff
+        except ValueError: return False
+    return sorted((x for x in history if current(x)), key=lambda x: x.get("detectedAt", ""), reverse=True)[:240]
+
+
 def team_summaries(rows: list[dict], team_codes: list[str] | None = None) -> dict:
     team_codes = team_codes or TRACKED
     output = {}
@@ -752,6 +803,7 @@ def main() -> None:
     rosters = load_rosters([r["team"] for r in standings])
     players = enrich_players(players, rosters)
     news = load_official_news(standings, rosters, previous)
+    transactions = load_reported_transactions(standings, rosters, previous)
     podcasts = load_podcasts(previous)
     videos = load_videos(standings, previous)
     try:
@@ -761,10 +813,12 @@ def main() -> None:
         moneypuck = {"credit":"Data: MoneyPuck.com","season":SEASON,"updatedAt":None,"status":"Awaiting new-season data","teams":[],"skaters":[],"goalies":[],"lines":[],"simulations":[]}
     natural_stat_trick = load_natural_stat_trick(standings)
     previous_same_season = previous if previous.get("meta", {}).get("season") == SEASON else {}
+    changes = roster_changes(previous_same_season, rosters)
+    change_history = roster_change_history(previous_same_season, changes)
     payload = {
         "meta": {"version": VERSION, "season": SEASON, "seasonMode": CONFIG.get("seasonMode", "manual"), "seasonDecision": rollover_reason, "trackedTeams": TRACKED, "updatedAt": datetime.now(timezone.utc).isoformat(), "elapsedSeconds": round(time.time()-started, 1), "scheduleGames": len(schedules)},
         "standings": standings, "games": rows, "teams": team_summaries(rows, league_teams), "players": players, "gameCentre": game_centres,
-        "daily": daily, "rosters": rosters, "rosterChanges": roster_changes(previous_same_season, rosters), "news": news, "podcasts": podcasts, "videos": videos,
+        "daily": daily, "rosters": rosters, "rosterChanges": changes, "rosterChangeHistory": change_history, "news": news, "transactions": transactions, "podcasts": podcasts, "videos": videos,
         "divisionHistory": division_histories(schedules, standings), "moneypuck": moneypuck,
         "naturalStatTrick": natural_stat_trick,
         "sources": {
