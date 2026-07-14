@@ -608,8 +608,14 @@ def boxscore(game_id: int) -> dict:
 
 def fetch_game_centre(game_id: str) -> tuple[str, dict]:
     base = f"{API}/gamecenter/{game_id}"
-    return str(game_id), {"landing": fetch_json(f"{base}/landing"),
+    detail = {"landing": fetch_json(f"{base}/landing"),
         "pbp": fetch_json(f"{base}/play-by-play"), "box": fetch_json(f"{base}/boxscore")}
+    try:
+        detail["rightRail"] = fetch_json(f"{base}/right-rail")
+    except Exception as exc:
+        # This report is often absent until game day. Keep the core game snapshot usable.
+        print(f"warning: game report {game_id}: {exc}", file=sys.stderr)
+    return str(game_id), detail
 
 
 def load_game_centres(games: list[dict], previous: dict | None = None) -> dict:
@@ -635,12 +641,10 @@ def load_game_centres(games: list[dict], previous: dict | None = None) -> dict:
 
 
 def active_game_ids(daily: dict, now: datetime | None = None) -> list[str]:
-    """Return tracked games inside the pregame-to-postgame refresh window."""
+    """Return every NHL game inside the pregame-to-postgame refresh window."""
     now = now or datetime.now(timezone.utc)
     active = []
     for game in daily.get("games", []):
-        if game.get("home") not in TRACKED and game.get("away") not in TRACKED:
-            continue
         state = str(game.get("state", "")).upper()
         try:
             start = datetime.fromisoformat(str(game.get("startTimeUTC", "")).replace("Z", "+00:00"))
