@@ -154,3 +154,24 @@ html[data-theme="dark"] nav button.active{color:var(--blue);box-shadow:inset 0 -
 /* 5.25 unified secondary navigation and content subpages */
 .title-bar:has(+.subnav){margin-bottom:0}.subnav{background:var(--navy);border:0;margin-bottom:18px;padding:0 12px;gap:2px}.subnav button{color:rgba(255,255,255,.72);padding:14px 18px}.subnav button:hover{color:#fff;background:rgba(255,255,255,.07)}.subnav button.active{color:#fff;border:0;box-shadow:inset 0 -3px #fff;background:rgba(255,255,255,.1)}.section-pane:not(.active){display:none!important}details.section-pane{border:0;background:transparent;margin-bottom:18px}details.section-pane>summary{display:none}details.section-pane>*:not(summary){margin-left:0;margin-right:0}.section-subnav{margin-top:-4px}.section-subnav+.section-head{margin-top:18px}html[data-theme="dark"] .subnav{background:#1c3049}
 @media(max-width:640px){.subnav{padding:0 5px}.subnav button{padding:12px 14px}.section-subnav{margin-top:0}.section-subnav+.section-head{margin-top:14px}}
+
+/* 5.26 progressive navigation: choose a destination, then reveal its views */
+#nav{justify-content:center;overflow:visible}
+#nav button{min-width:108px}
+.context-nav{background:var(--navy);color:#fff;border-bottom:1px solid rgba(255,255,255,.14)}
+.context-nav[hidden]{display:none}
+.context-nav-level{display:flex;justify-content:center;gap:2px;padding:0 max(12px,calc((100vw - 1400px)/2))}
+.context-nav button{border:0;background:transparent;color:rgba(255,255,255,.72);padding:13px 20px;font-weight:800;white-space:nowrap;cursor:pointer}
+.context-nav button:hover{color:#fff;background:rgba(255,255,255,.07)}
+.context-nav button.active{color:#fff;background:rgba(255,255,255,.1);box-shadow:inset 0 -3px #fff}
+.context-nav-detail{background:rgba(0,0,0,.12);border-top:1px solid rgba(255,255,255,.11)}
+.context-nav-detail>span{align-self:center;color:rgba(255,255,255,.5);font-size:10px;font-weight:900;letter-spacing:.1em;text-transform:uppercase;padding:0 10px}
+html[data-theme="dark"] .context-nav{background:#1c3049}
+@media(max-width:640px){
+  #nav{display:grid;grid-template-columns:repeat(4,1fr);padding:0}
+  #nav button{min-width:0;padding:12px 5px;font-size:12px}
+  .context-nav-level{justify-content:flex-start;overflow-x:auto;padding:0 5px;scrollbar-width:none}
+  .context-nav-level::-webkit-scrollbar{display:none}
+  .context-nav-level button{flex:1;padding:12px 13px;font-size:12px}
+  .context-nav-detail>span{display:none}
+}
