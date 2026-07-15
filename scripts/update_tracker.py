@@ -24,10 +24,11 @@ from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
 CONFIG = json.loads((ROOT / "config.json").read_text())
-VERSION = "5.63.0"
+VERSION = "5.65.0"
 SEASON = str(CONFIG["season"])
 TRACKED = [str(t).upper() for t in CONFIG["teams"]]
 API = "https://api-web.nhle.com/v1"
+STATS_API = "https://api.nhle.com/stats/rest/en"
 CACHE = ROOT / "data" / "cache" / "boxscores"
 OUTPUT = ROOT / "site" / "data" / "tracker.json"
 CALENDAR_DIR = ROOT / "site" / "data" / "calendars"
@@ -354,25 +355,37 @@ def mp_value(row: dict, *names, default=""):
     return default
 
 
-def load_moneypuck_team_games(previous: list[dict] | None = None) -> list[dict]:
+def load_moneypuck_team_games(previous: list[dict] | None = None, previous_special: list[dict] | None = None) -> tuple[list[dict], list[dict]]:
     """Load the explicitly published team game-by-game files without scraping pages."""
     aliases = {"L.A": "LAK", "N.J": "NJD", "S.J": "SJS", "T.B": "TBL"}
     normalise_team = lambda value: aliases.get(str(value).upper(), str(value).upper())
 
-    def one_team(team: str) -> list[dict]:
+    def one_team(team: str) -> tuple[list[dict], list[dict]]:
         url = f"https://moneypuck.com/moneypuck/playerData/teamGameByGame/{MP_SEASON}/regular/{team}.csv"
         raw = fetch_csv(url, attempts=1)
         if "gameId" not in raw[0]:
             raise ValueError(f"{team} game file has no gameId column")
-        games = {}
+        games, special = {}, []
         for row in raw:
-            if str(row.get("situation", "all")).lower() not in {"all", "all situations"}:
-                continue
             game_id = str(row.get("gameId", "")).split(".")[0]
             if not game_id:
                 continue
             code = normalise_team(mp_value(row, "playerTeam", "team", "name", default=team))
             if code != team:
+                continue
+            situation = str(row.get("situation", "all")).lower().replace(" ", "")
+            if situation in {"5on4", "4on5"}:
+                special.append({
+                    "gameId": game_id, "team": code, "role": "powerPlay" if situation == "5on4" else "penaltyKill",
+                    "opponent": normalise_team(mp_value(row, "opposingTeam")),
+                    "date": str(mp_value(row, "gameDate", default="")),
+                    "minutes": round(float(mp_value(row, "icetime", "iceTime", default=0) or 0) / 60, 2),
+                    "xgf": mp_value(row, "xGoalsFor"), "xga": mp_value(row, "xGoalsAgainst"),
+                    "gf": mp_value(row, "goalsFor"), "ga": mp_value(row, "goalsAgainst"),
+                    "shotsFor": mp_value(row, "shotsOnGoalFor"), "shotsAgainst": mp_value(row, "shotsOnGoalAgainst"),
+                })
+                continue
+            if situation not in {"all", "allsituations"}:
                 continue
             games[game_id] = {
                 "gameId": game_id, "team": code,
@@ -389,19 +402,24 @@ def load_moneypuck_team_games(previous: list[dict] | None = None) -> list[dict]:
                 "hdFor": mp_value(row, "highDangerShotsFor"),
                 "hdAgainst": mp_value(row, "highDangerShotsAgainst")
             }
-        return list(games.values())
+        return list(games.values()), special
 
-    rows, errors = [], []
+    rows, special_rows, errors = [], [], []
     with ThreadPoolExecutor(max_workers=min(4, len(TRACKED))) as executor:
         futures = {executor.submit(one_team, team): team for team in TRACKED}
         for future in as_completed(futures):
-            try: rows.extend(future.result())
+            try:
+                team_games, team_special = future.result()
+                rows.extend(team_games); special_rows.extend(team_special)
             except Exception as exc: errors.append(f"{futures[future]}: {exc}")
     if errors:
         print(f"warning: MoneyPuck team game files unavailable ({'; '.join(errors)})", file=sys.stderr)
     if not rows and previous:
-        return previous
-    return sorted(rows, key=lambda row: (row.get("date", ""), row.get("gameId", ""), row.get("team", "")))
+        rows = previous
+    if not special_rows and previous_special:
+        special_rows = previous_special
+    return (sorted(rows, key=lambda row: (row.get("date", ""), row.get("gameId", ""), row.get("team", ""))),
+        sorted(special_rows, key=lambda row: (row.get("date", ""), row.get("gameId", ""), row.get("team", ""), row.get("role", ""))))
 
 
 def load_moneypuck(previous: dict | None = None) -> dict:
@@ -418,6 +436,13 @@ def load_moneypuck(previous: dict | None = None) -> dict:
         "xga":mp_value(r,"xGoalsAgainst"), "gf":mp_value(r,"goalsFor"), "ga":mp_value(r,"goalsAgainst"),
         "hdFor":mp_value(r,"highDangerShotsFor"), "hdAgainst":mp_value(r,"highDangerShotsAgainst")}
         for r in teams_raw if situation(r)]
+    special_teams = [{"team":mp_value(r,"team"), "role":"powerPlay" if str(r.get("situation", "")).lower().replace(" ", "")=="5on4" else "penaltyKill",
+        "minutes":round(float(mp_value(r,"icetime","iceTime",default=0) or 0)/60,1),
+        "xgf":mp_value(r,"xGoalsFor"), "xga":mp_value(r,"xGoalsAgainst"),
+        "gf":mp_value(r,"goalsFor"), "ga":mp_value(r,"goalsAgainst"),
+        "shotsFor":mp_value(r,"shotsOnGoalFor"), "shotsAgainst":mp_value(r,"shotsOnGoalAgainst"),
+        "hdFor":mp_value(r,"highDangerShotsFor"), "hdAgainst":mp_value(r,"highDangerShotsAgainst")}
+        for r in teams_raw if str(r.get("situation", "")).lower().replace(" ", "") in {"5on4", "4on5"}]
     skaters = [{"id":str(r.get("playerId", "")).split(".")[0],"name":mp_value(r,"name"),"team":mp_value(r,"team"),"position":mp_value(r,"position"),
         "games":mp_value(r,"games_played"),"minutes":round(float(mp_value(r,"icetime",default=0) or 0)/60,1),
         "goals":mp_value(r,"I_F_goals","goals"),"assists":mp_value(r,"I_F_primaryAssists",default=0)+mp_value(r,"I_F_secondaryAssists",default=0),
@@ -438,8 +463,8 @@ def load_moneypuck(previous: dict | None = None) -> dict:
         "gf":mp_value(r,"goalsFor"),"ga":mp_value(r,"goalsAgainst")}
         for r in lines_raw if str(r.get("situation", "5on5")).lower() in {"all", "all situations", "5on5", "5 on 5"}
         and float(mp_value(r,"icetime",default=0) or 0)>=300]
-    team_games = load_moneypuck_team_games((previous or {}).get("teamGames", []))
-    return {"credit":"Data: MoneyPuck.com","updatedAt":datetime.now(timezone.utc).isoformat(),"season":SEASON,"status":"Ready","teams":teams,"skaters":skaters,"goalies":goalies,"lines":lines,"simulations":simulations,"teamGames":team_games}
+    team_games, special_team_games = load_moneypuck_team_games((previous or {}).get("teamGames", []), (previous or {}).get("specialTeamGames", []))
+    return {"credit":"Data: MoneyPuck.com","updatedAt":datetime.now(timezone.utc).isoformat(),"season":SEASON,"status":"Ready","teams":teams,"specialTeams":special_teams,"skaters":skaters,"goalies":goalies,"lines":lines,"simulations":simulations,"teamGames":team_games,"specialTeamGames":special_team_games}
 
 
 def load_natural_stat_trick(standings: list[dict]) -> dict:
@@ -594,6 +619,52 @@ def load_standings(previous: dict | None = None) -> list[dict]:
             "streak": f"{row.get('streakCode', '')}{row.get('streakCount', '')}"
         })
     return sorted(result, key=lambda r: (-r["points"], -r["rw"], -r["gd"]))
+
+
+def load_special_teams(standings: list[dict], previous: list[dict] | None = None) -> list[dict]:
+    """Load league-wide power-play and penalty-kill results from the official NHL summary report."""
+    url = (f"{STATS_API}/team/summary?isAggregate=false&isGame=false&start=0&limit=50"
+        f"&cayenneExp=seasonId={SEASON}%20and%20gameTypeId=2")
+    raw = fetch_json(url).get("data", [])
+    code_by_name = {row["name"].casefold(): row["team"] for row in standings}
+
+    def value(row: dict, *names, default=0):
+        for name in names:
+            if row.get(name) not in (None, ""):
+                return row[name]
+        return default
+
+    def percentage(row: dict, *names) -> float:
+        try: number = float(value(row, *names))
+        except (TypeError, ValueError): return 0.0
+        return round(number * 100 if abs(number) <= 1.5 else number, 2)
+
+    result = []
+    for row in raw:
+        abbreviation = str(value(row, "teamAbbrevs", "teamAbbrev", default="")).split(",")[0].strip().upper()
+        name = str(value(row, "teamFullName", "teamName", default="")).strip()
+        code = abbreviation if any(team["team"] == abbreviation for team in standings) else code_by_name.get(name.casefold(), "")
+        if not code:
+            continue
+        result.append({
+            "team": code, "name": name or next((team["name"] for team in standings if team["team"] == code), code),
+            "gp": int(value(row, "gamesPlayed", default=0) or 0),
+            "ppPct": percentage(row, "powerPlayPct"), "pkPct": percentage(row, "penaltyKillPct"),
+            "ppNetPct": percentage(row, "powerPlayNetPct"), "pkNetPct": percentage(row, "penaltyKillNetPct"),
+            "ppGoals": int(value(row, "powerPlayGoalsFor", "powerPlayGoals", default=0) or 0),
+            "ppOpportunities": int(value(row, "powerPlayOpportunities", default=0) or 0),
+            "ppGoalsAgainst": int(value(row, "powerPlayGoalsAgainst", default=0) or 0),
+            "timesShorthanded": int(value(row, "timesShorthanded", default=0) or 0),
+            "shGoalsFor": int(value(row, "shorthandedGoalsFor", default=0) or 0),
+            "shGoalsAgainst": int(value(row, "shorthandedGoalsAgainst", default=0) or 0),
+        })
+    if not result:
+        return previous or []
+    pp_order = {row["team"]: index + 1 for index, row in enumerate(sorted(result, key=lambda item: -item["ppPct"]))}
+    pk_order = {row["team"]: index + 1 for index, row in enumerate(sorted(result, key=lambda item: -item["pkPct"]))}
+    for row in result:
+        row["ppRank"] = pp_order[row["team"]]; row["pkRank"] = pk_order[row["team"]]
+    return sorted(result, key=lambda row: row["team"])
 
 
 def load_daily() -> dict:
@@ -1173,6 +1244,11 @@ def main() -> None:
     previous_same_season = previous if previous.get("meta", {}).get("season") == SEASON else {}
     preview = next_season_preview(SEASON, previous.get("nextSeasonPreview"))
     standings = load_standings(previous)
+    try:
+        special_teams = load_special_teams(standings, previous_same_season.get("specialTeams", []))
+    except Exception as exc:
+        print(f"warning: official special-teams data unavailable: {exc}", file=sys.stderr)
+        special_teams = previous_same_season.get("specialTeams", [])
     schedules = load_schedules([r["team"] for r in standings])
     league_teams = [r["team"] for r in standings]
     rows = tracked_game_rows(schedules, league_teams)
@@ -1190,7 +1266,7 @@ def main() -> None:
         moneypuck = load_moneypuck(previous_same_season.get("moneypuck", {}))
     except Exception as exc:
         print(f"warning: MoneyPuck data unavailable: {exc}", file=sys.stderr)
-        moneypuck = previous_same_season.get("moneypuck") or {"credit":"Data: MoneyPuck.com","season":SEASON,"updatedAt":None,"status":"Awaiting new-season data","teams":[],"skaters":[],"goalies":[],"lines":[],"simulations":[],"teamGames":[]}
+        moneypuck = previous_same_season.get("moneypuck") or {"credit":"Data: MoneyPuck.com","season":SEASON,"updatedAt":None,"status":"Awaiting new-season data","teams":[],"specialTeams":[],"skaters":[],"goalies":[],"lines":[],"simulations":[],"teamGames":[],"specialTeamGames":[]}
     game_library = build_game_library(schedules, rosters, moneypuck, previous_same_season)
     natural_stat_trick = load_natural_stat_trick(standings)
     changes = roster_changes(previous_same_season, rosters)
@@ -1199,7 +1275,7 @@ def main() -> None:
     schedule_release = schedule_release_state(SEASON, schedules, previous_same_season.get("scheduleRelease"))
     payload = {
         "meta": {"version": VERSION, "season": SEASON, "seasonMode": CONFIG.get("seasonMode", "manual"), "seasonDecision": rollover_reason, "gamesPerTeam": regular_season_games(SEASON), "trackedTeams": TRACKED, "updatedAt": datetime.now(timezone.utc).isoformat(), "elapsedSeconds": round(time.time()-started, 1), "scheduleGames": len(schedules), "historyDays": len(history)},
-        "standings": standings, "games": rows, "preseasonGames": preseason, "teams": team_summaries(rows, league_teams), "players": players, "gameCentre": game_centres,
+        "standings": standings, "specialTeams": special_teams, "games": rows, "preseasonGames": preseason, "teams": team_summaries(rows, league_teams), "players": players, "gameCentre": game_centres,
         "previousSeasonStandings": previous.get("standings", []) if previous.get("meta", {}).get("season") != SEASON else previous.get("previousSeasonStandings", []),
         "scheduleRelease": schedule_release, "nextSeasonPreview": preview,
         "daily": daily, "rosters": rosters, "rosterChanges": changes, "rosterChangeHistory": change_history, "news": news, "transactions": transactions, "podcasts": podcasts, "videos": videos,

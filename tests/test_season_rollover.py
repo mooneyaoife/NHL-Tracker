@@ -64,6 +64,22 @@ class SeasonRolloverTests(unittest.TestCase):
         self.assertEqual(rows[0]["type"], "Preseason")
         self.assertEqual(rows[0]["awayScore"], 3)
 
+    def test_official_special_teams_percentages_are_normalised_and_ranked(self):
+        standings = [{"team": "BUF", "name": "Buffalo Sabres"}, {"team": "BOS", "name": "Boston Bruins"}]
+        response = {"data": [
+            {"teamAbbrevs": "BUF", "teamFullName": "Buffalo Sabres", "gamesPlayed": 82,
+                "powerPlayPct": 0.25, "penaltyKillPct": 0.80},
+            {"teamAbbrevs": "BOS", "teamFullName": "Boston Bruins", "gamesPlayed": 82,
+                "powerPlayPct": 0.20, "penaltyKillPct": 0.85},
+        ]}
+        with patch.object(TRACKER, "fetch_json", return_value=response):
+            rows = TRACKER.load_special_teams(standings)
+        buffalo = next(row for row in rows if row["team"] == "BUF")
+        self.assertEqual(buffalo["ppPct"], 25.0)
+        self.assertEqual(buffalo["pkPct"], 80.0)
+        self.assertEqual(buffalo["ppRank"], 1)
+        self.assertEqual(buffalo["pkRank"], 2)
+
 
 if __name__ == "__main__":
     unittest.main()
