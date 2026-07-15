@@ -9,11 +9,12 @@
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
   <meta name="apple-mobile-web-app-title" content="NHL Tracker">
   <link rel="manifest" href="manifest.webmanifest">
-  <link rel="icon" href="icons/icon.svg?v=5.70.0" type="image/svg+xml">
+  <link rel="icon" href="icons/icon.svg?v=6.0.0" type="image/svg+xml">
   <link rel="apple-touch-icon" href="icons/icon-192.png">
   <script>document.documentElement.dataset.theme=localStorage.getItem("nhl-theme")||"light"</script>
-  <link rel="stylesheet" href="styles.css?v=5.70.0">
-  <link rel="stylesheet" href="theme-569.css?v=5.70.0">
+  <link rel="stylesheet" href="styles.css?v=6.0.0">
+  <link rel="stylesheet" href="theme-569.css?v=6.0.0">
+  <link rel="stylesheet" href="design-system.css?v=6.0.3">
   <script src="vendor/plotly-2.35.2.min.js"></script>
 </head>
 <body>
@@ -59,7 +60,7 @@
   </section>
 
   <section id="schedule" class="page">
-    <div class="title-bar"><h2>Schedule and Calendar</h2></div>
+    <div class="title-bar"><h2>Schedule</h2></div>
     <section class="schedule-release-centre"><header><div><span class="section-kicker">Automatic publication monitor</span><h3>Schedule Release Centre</h3></div><span id="schedule-release-season"></span></header><div id="schedule-release-status"></div><div id="schedule-release-teams" class="schedule-release-teams"></div><details id="schedule-release-details"><summary>Release details</summary><div class="grid two schedule-release-detail-grid"><article class="panel"><h3>Opening Dates</h3><div id="schedule-release-openers"></div></article><article class="panel"><h3>Publication Updates</h3><div id="schedule-release-changes"></div></article></div></details></section>
     <section class="schedule-intelligence"><header><div><span class="section-kicker">Automatic season analysis</span><h3>Schedule Intelligence</h3></div><label>Focus<select id="schedule-intelligence-team"><option value="ALL">All followed teams</option></select></label></header><div id="schedule-intelligence-status" class="schedule-intelligence-status"></div><div id="schedule-intelligence-summary" class="grid four"></div><div class="grid two schedule-intelligence-charts"><article class="panel"><h3>Monthly Density</h3><p class="detail-note">Regular-season games scheduled by month.</p><div id="schedule-density-chart" class="chart"></div></article><article class="panel"><h3>Opponent Strength</h3><p class="detail-note">Average opponent points percentage using the latest complete evidence available.</p><div id="schedule-difficulty-chart" class="chart"></div></article></div><div class="grid two schedule-intelligence-details"><article class="panel"><h3>Opening Dates and Followed-Team Meetings</h3><div id="schedule-key-dates"></div></article><article class="panel"><h3>Demanding Stretches</h3><div id="schedule-stretches"></div></article></div><div class="section-label schedule-roadmap-heading">Season Roadmap</div><div class="schedule-roadmap"><article class="panel schedule-roadmap-timeline"><h3>Rolling Opponent Strength</h3><p class="detail-note">Average opponent points percentage across each 10-game window.</p><div id="schedule-strength-timeline" class="chart"></div></article><div class="grid two schedule-roadmap-lower"><article class="panel"><h3>Rest Balance by Month</h3><p class="detail-note">Rest advantages minus rest deficits. Positive values favour the selected team.</p><div id="schedule-rest-heatmap" class="chart"></div></article><article class="panel"><h3>Key 10-game Windows</h3><div id="schedule-window-list"></div></article></div></div></section>
     <div class="control-row calendar-controls"><label for="calendar-team">Show games for</label><select id="calendar-team"></select><label for="calendar-month">Month</label><select id="calendar-month" aria-label="Calendar month"></select><p>All times shown automatically in the UK.</p></div>
@@ -79,7 +80,7 @@
   </section>
 
   <section id="availability" class="page availability-page">
-    <div class="availability-heading title-bar"><h2>Lineups &amp; Availability</h2><label><span>Team</span><select id="availability-team" aria-label="Lineups team"></select></label></div>
+    <div class="availability-heading title-bar"><h2>Lineups</h2><label><span>Choose team</span><select id="availability-team" aria-label="Lineups team"></select></label></div>
     <div class="availability-legend"><span><i class="confirmed"></i><strong>Confirmed</strong> NHL roster and completed-game data</span><span><i class="usage"></i><strong>Recent usage</strong> stored season combinations</span><span><i class="projected"></i><strong>Projected</strong> live external source</span></div>
     <div id="availability-summary" class="grid four availability-summary"></div>
     <div class="grid two availability-snapshot"><article id="availability-next" class="panel availability-next"></article><article id="availability-goalie" class="panel availability-goalie"></article></div>
@@ -120,7 +121,7 @@
   </section>
 
   <section id="compare" class="page compare-page">
-    <div class="title-bar"><h2>Comparison Centre</h2></div>
+    <div class="title-bar"><h2>Compare</h2></div>
     <div class="subnav compare-subnav" role="tablist" aria-label="Comparison sections"><button class="active" data-compare-tab="compare-teams">Teams</button><button data-compare-tab="compare-players">Players</button></div>
     <article id="compare-teams" class="compare-workspace comparison-pane active">
       <div class="compare-heading"><div><span class="section-kicker">Team profiles</span><h3>Team Comparison</h3></div><button id="copy-team-comparison" class="comparison-share" type="button">Copy link</button></div>
@@ -179,7 +180,7 @@
   </section>
 
   <section id="trends" class="page trends-page">
-    <div class="title-bar"><h2>Trends Centre</h2></div>
+    <div class="title-bar"><h2>Trends</h2></div>
     <div class="trends-toolbar"><label>Form window<select id="trend-window"><option value="5">Last 5 games</option><option value="10" selected>Last 10 games</option><option value="20">Last 20 games</option></select></label><label>Show<select id="trend-scope"><option value="ALL">All NHL teams</option><option value="TRACKED">Followed teams</option></select></label></div>
     <div id="trend-tracked" class="grid four trend-tracked"></div>
     <div class="grid two trend-chart-grid"><article class="panel"><h3>Recent Form Against Season Performance</h3><div id="trend-form-chart" class="chart"></div></article><article class="panel"><h3>Expected and Actual Goal Share</h3><div id="trend-sustainability-chart" class="chart"></div></article><article class="panel"><h3>Largest Form Changes</h3><div id="trend-movers-chart" class="chart trend-tall"></div></article><article class="panel"><h3>Followed-Team Player Pace</h3><div id="trend-player-chart" class="chart trend-tall"></div></article></div>
@@ -199,5 +200,5 @@
 </main>
 <footer><div class="footer-links"><button data-page="watchlist">Settings</button><button data-page="guide">Stat Guide</button><a href="https://moneypuck.com/data.htm" target="_blank" rel="noopener">Data sources</a><button data-page="status">Status</button></div><p>NHL Tracker · Unofficial, non-commercial fan project using public NHL data</p></footer>
 <aside id="app-update" class="app-update" role="status" hidden><span>A fresh version of NHL Tracker is ready.</span><button id="app-update-button" type="button">Update now</button></aside>
-  <script src="app.js?v=5.70.0"></script>
+<script src="app.js?v=6.0.1"></script>
 </body></html>
