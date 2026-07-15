@@ -11,6 +11,11 @@ SPEC.loader.exec_module(TRACKER)
 
 
 class SeasonRolloverTests(unittest.TestCase):
+    @staticmethod
+    def schedule_game(game_id, date="2026-10-06", start="2026-10-06T23:00:00Z", away="BUF", home="BOS"):
+        return {"id": game_id, "gameType": 2, "gameDate": date, "startTimeUTC": start,
+            "awayTeam": {"abbrev": away}, "homeTeam": {"abbrev": home}, "venue": {"default": "Arena"}}
+
     def test_schedule_lengths_change_in_2026_27(self):
         self.assertEqual(TRACKER.regular_season_games("20252026"), 82)
         self.assertEqual(TRACKER.regular_season_games("20262027"), 84)
@@ -32,6 +37,20 @@ class SeasonRolloverTests(unittest.TestCase):
                 self.assertEqual(TRACKER.resolve_active_season()[0], "20252026")
             with patch.object(TRACKER, "schedule_is_published", return_value=(True, 84)):
                 self.assertEqual(TRACKER.resolve_active_season()[0], "20262027")
+
+    def test_release_state_counts_tracked_games_and_uses_84_game_target(self):
+        state = TRACKER.schedule_release_state("20262027", [self.schedule_game(1)])
+        self.assertEqual(state["expectedGamesPerTeam"], 84)
+        self.assertEqual(state["counts"]["BUF"], 1)
+        self.assertFalse(state["complete"])
+
+    def test_release_state_detects_time_changes_without_duplicate_history(self):
+        first = TRACKER.schedule_release_state("20262027", [self.schedule_game(1)])
+        changed = TRACKER.schedule_release_state("20262027", [self.schedule_game(1, start="2026-10-07T00:00:00Z")], first)
+        self.assertEqual(len(changed["recentChanges"]), 1)
+        self.assertEqual(changed["recentChanges"][0]["kind"], "changed")
+        unchanged = TRACKER.schedule_release_state("20262027", [self.schedule_game(1, start="2026-10-07T00:00:00Z")], changed)
+        self.assertEqual(len(unchanged["recentChanges"]), 1)
 
 
 if __name__ == "__main__":

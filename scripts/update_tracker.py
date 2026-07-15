@@ -24,7 +24,7 @@ from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
 CONFIG = json.loads((ROOT / "config.json").read_text())
-VERSION = "5.60.0"
+VERSION = "5.61.0"
 SEASON = str(CONFIG["season"])
 TRACKED = [str(t).upper() for t in CONFIG["teams"]]
 API = "https://api-web.nhle.com/v1"
@@ -82,6 +82,78 @@ def calendar_season(now: datetime | None = None) -> str:
 def regular_season_games(season: str) -> int:
     """Return the scheduled games per club for an NHL season."""
     return 84 if int(str(season)[:4]) >= 2026 else 82
+
+
+def schedule_release_state(season: str, games: list[dict], previous: dict | None = None) -> dict:
+    """Store a compact tracked-team schedule snapshot and describe later changes."""
+    previous = previous or {}
+    now = datetime.now(timezone.utc).isoformat()
+    snapshot = []
+    for game in games:
+        if int(game.get("gameType") or 0) != 2 or game.get("id") is None:
+            continue
+        away = localised(game.get("awayTeam", {}).get("abbrev")).upper()
+        home = localised(game.get("homeTeam", {}).get("abbrev")).upper()
+        if not ({away, home} & set(TRACKED)):
+            continue
+        snapshot.append({
+            "id": str(game["id"]), "date": str(game.get("gameDate") or ""),
+            "startTimeUTC": str(game.get("startTimeUTC") or ""),
+            "away": away, "home": home, "venue": localised(game.get("venue")),
+        })
+    snapshot.sort(key=lambda row: (row["date"], row["startTimeUTC"], row["id"]))
+    current_map = {row["id"]: row for row in snapshot}
+    previous_map = {str(row.get("id")): row for row in previous.get("snapshot", []) if row.get("id") is not None}
+    changes = []
+    if previous_map:
+        for game_id, row in current_map.items():
+            before = previous_map.get(game_id)
+            if before is None:
+                changes.append({"key": f"added:{game_id}", "kind": "added", "game": row, "detectedAt": now})
+            elif (before.get("date"), before.get("startTimeUTC")) != (row["date"], row["startTimeUTC"]):
+                changes.append({"key": f"changed:{game_id}:{row['startTimeUTC']}", "kind": "changed", "game": row,
+                    "previousDate": before.get("date", ""), "previousStartTimeUTC": before.get("startTimeUTC", ""), "detectedAt": now})
+        for game_id, row in previous_map.items():
+            if game_id not in current_map:
+                changes.append({"key": f"removed:{game_id}", "kind": "removed", "game": row, "detectedAt": now})
+    history = changes + list(previous.get("recentChanges", []))
+    unique_history = []
+    seen = set()
+    for change in history:
+        key = change.get("key")
+        if not key or key in seen:
+            continue
+        seen.add(key); unique_history.append(change)
+    counts = {team: sum(team in {row["away"], row["home"]} for row in snapshot) for team in TRACKED}
+    expected = regular_season_games(season)
+    complete = bool(counts) and all(count >= expected for count in counts.values())
+    return {
+        "season": str(season), "capturedAt": now, "expectedGamesPerTeam": expected,
+        "counts": counts, "complete": complete, "uniqueGames": len(snapshot),
+        "firstSeenAt": previous.get("firstSeenAt") or (now if snapshot else None),
+        "completedAt": previous.get("completedAt") or (now if complete else None),
+        "lastChangedAt": now if changes else previous.get("lastChangedAt"),
+        "recentChanges": unique_history[:30], "snapshot": snapshot,
+    }
+
+
+def next_season_preview(active_season: str, previous: dict | None = None) -> dict:
+    """Watch limited opening-night announcements without rolling the active season."""
+    candidate = calendar_season()
+    if candidate <= str(active_season):
+        return {}
+    games = {}
+    try:
+        with ThreadPoolExecutor(max_workers=min(4, len(TRACKED))) as pool:
+            futures = [pool.submit(fetch_json, f"{API}/club-schedule-season/{team}/{candidate}") for team in TRACKED]
+            for future in as_completed(futures):
+                for game in future.result().get("games", []):
+                    if game.get("id") is not None:
+                        games[str(game["id"])] = game
+    except Exception as exc:
+        print(f"warning: next-season preview unavailable: {exc}", file=sys.stderr)
+        return previous or {}
+    return schedule_release_state(candidate, list(games.values()), previous)
 
 
 def schedule_is_published(season: str) -> tuple[bool, int]:
@@ -1078,6 +1150,7 @@ def main() -> None:
         try: previous = json.loads(OUTPUT.read_text())
         except json.JSONDecodeError: pass
     previous_same_season = previous if previous.get("meta", {}).get("season") == SEASON else {}
+    preview = next_season_preview(SEASON, previous.get("nextSeasonPreview"))
     standings = load_standings(previous)
     schedules = load_schedules([r["team"] for r in standings])
     league_teams = [r["team"] for r in standings]
@@ -1101,10 +1174,12 @@ def main() -> None:
     changes = roster_changes(previous_same_season, rosters)
     change_history = roster_change_history(previous_same_season, changes)
     history = daily_history(previous_same_season, standings, moneypuck)
+    schedule_release = schedule_release_state(SEASON, schedules, previous_same_season.get("scheduleRelease"))
     payload = {
         "meta": {"version": VERSION, "season": SEASON, "seasonMode": CONFIG.get("seasonMode", "manual"), "seasonDecision": rollover_reason, "gamesPerTeam": regular_season_games(SEASON), "trackedTeams": TRACKED, "updatedAt": datetime.now(timezone.utc).isoformat(), "elapsedSeconds": round(time.time()-started, 1), "scheduleGames": len(schedules), "historyDays": len(history)},
         "standings": standings, "games": rows, "teams": team_summaries(rows, league_teams), "players": players, "gameCentre": game_centres,
         "previousSeasonStandings": previous.get("standings", []) if previous.get("meta", {}).get("season") != SEASON else previous.get("previousSeasonStandings", []),
+        "scheduleRelease": schedule_release, "nextSeasonPreview": preview,
         "daily": daily, "rosters": rosters, "rosterChanges": changes, "rosterChangeHistory": change_history, "news": news, "transactions": transactions, "podcasts": podcasts, "videos": videos,
         "gameLibrary": game_library,
         "divisionHistory": division_histories(schedules, standings), "history": history, "moneypuck": moneypuck,
