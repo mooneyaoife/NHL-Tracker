@@ -1,13 +1,216 @@
 {
   "schema": 1,
-  "updatedAt": "2026-07-14T18:10:38.851Z",
+  "updatedAt": "2026-07-15T17:40:38.446Z",
   "items": [
+    {
+      "id": "cf7556a6d6f2161c5ea2",
+      "title": "Elton Hermansson Signs a 3-Year, $3.23M Contract with the Los Angeles Kings",
+      "publishedAt": "2026-07-15T17:26:10.000Z",
+      "category": "Contract",
+      "url": "https://puckpedia.com/signing/10735?utm_source=email&utm_medium=email&utm_campaign=signing&utm_content=primary"
+    },
+    {
+      "id": "3cecc7f4d170ff5e55ad",
+      "title": "Anthony Mantha Signs a 2-Year, $9.50M Contract with the New Jersey Devils",
+      "publishedAt": "2026-07-15T13:16:10.000Z",
+      "category": "Contract",
+      "url": "https://puckpedia.com/signing/10733?utm_source=email&utm_medium=email&utm_campaign=signing&utm_content=primary"
+    },
+    {
+      "id": "4cea9c3cbf1631084566",
+      "title": "Anthony Mantha Signs a 2-Year, $9.50M Contract with the Pittsburgh Penguins",
+      "publishedAt": "2026-07-15T12:59:09.000Z",
+      "category": "Contract",
+      "url": "https://puckpedia.com/signing/10733?utm_source=email&utm_medium=email&utm_campaign=signing&utm_content=primary"
+    },
+    {
+      "id": "8089a56047ad8f6e5409",
+      "title": "Oliver Suvanto Signs a 3-Year, $3.23M Contract with the Washington Capitals",
+      "publishedAt": "2026-07-15T01:15:09.000Z",
+      "category": "Contract",
+      "url": "https://puckpedia.com/signing/10732?utm_source=email&utm_medium=email&utm_campaign=signing&utm_content=primary"
+    },
     {
       "id": "8c4f78cf599dd0314e1b",
       "title": "Malte Gustafsson Signs a 3-Year, $3.23M Contract with the New York Islanders",
       "publishedAt": "2026-07-14T16:24:16.000Z",
       "category": "Contract",
       "url": "https://puckpedia.com/signing/10731?utm_source=email&utm_medium=email&utm_campaign=signing&utm_content=primary"
+    },
+    {
+      "id": "d5c73d506fd2c62690a6",
+      "title": "Nicholas Robertson Signs a 2-Year, $6.50M Contract with the Pittsburgh Penguins",
+      "publishedAt": "2026-07-14T16:23:37.000Z",
+      "category": "Contract",
+      "url": "https://puckpedia.com/signing/10729?utm_source=email&utm_medium=email&utm_campaign=signing&utm_content=primary"
+    },
+    {
+      "id": "7fab61a0c39fd718f2f5",
+      "title": "Nicholas Robertson Signs a 2-Year, $6.50M Contract with the Pittsburgh Penguins",
+      "publishedAt": "2026-07-14T16:23:15.000Z",
+      "category": "Contract",
+      "url": "https://puckpedia.com/signing/10730?utm_source=email&utm_medium=email&utm_campaign=signing&utm_content=primary"
+    },
+    {
+      "id": "1e76e656a871b4538071",
+      "title": "Ronald Attard Signs a 1-Year, $850K Contract with the Detroit Red Wings",
+      "publishedAt": "2026-07-14T16:23:06.000Z",
+      "category": "Contract",
+      "url": "https://puckpedia.com/signing/10728?utm_source=email&utm_medium=email&utm_campaign=signing&utm_content=primary"
+    },
+    {
+      "id": "719a59f4631b7a27e0c9",
+      "title": "Filip Ruzicka Signs a 3-Year, $2.96M Contract with the Minnesota Wild",
+      "publishedAt": "2026-07-14T00:40:07.000Z",
+      "category": "Contract",
+      "url": "https://puckpedia.com/signing/10727?utm_source=email&utm_medium=email&utm_campaign=signing&utm_content=primary"
+    },
+    {
+      "id": "6b685f4cb8e9f99debcf",
+      "title": "Fabian Lysell Signs a 1-Year, $850K Contract with the Colorado Avalanche",
+      "publishedAt": "2026-07-14T00:37:09.000Z",
+      "category": "Contract",
+      "url": "https://puckpedia.com/signing/10726?utm_source=email&utm_medium=email&utm_campaign=signing&utm_content=primary"
+    },
+    {
+      "id": "04789ff9e5b51fabb356",
+      "title": "The Buffalo Sabres acquire Zac Funk from the Washington Capitals for Tyler Kopff",
+      "publishedAt": "2026-07-13T20:09:11.000Z",
+      "category": "Trade",
+      "url": "https://puckpedia.com/trade/1199?utm_source=email&utm_medium=email&utm_campaign=trade&utm_content=primary"
+    },
+    {
+      "id": "8049480fa8fdffa60b60",
+      "title": "Braden Schneider Signs a 1-Year, $5.50M Contract with the New York Rangers",
+      "publishedAt": "2026-07-13T20:04:08.000Z",
+      "category": "Contract",
+      "url": "https://puckpedia.com/signing/10725?utm_source=email&utm_medium=email&utm_campaign=signing&utm_content=primary"
+    },
+    {
+      "id": "d63bfbe432b0590d4995",
+      "title": "Viggo Bj?rck Signs a 3-Year, $3.23M Contract with the Winnipeg Jets",
+      "publishedAt": "2026-07-13T17:35:09.000Z",
+      "category": "Contract",
+      "url": "https://puckpedia.com/signing/10724?utm_source=email&utm_medium=email&utm_campaign=signing&utm_content=primary"
+    },
+    {
+      "id": "f110f78f1165d5df518d",
+      "title": "Peyton Krebs Signs a 4-Year, $14.00M Contract with the Buffalo Sabres",
+      "publishedAt": "2026-07-13T14:53:11.000Z",
+      "category": "Contract",
+      "url": "https://puckpedia.com/signing/10723?utm_source=email&utm_medium=email&utm_campaign=signing&utm_content=primary"
+    },
+    {
+      "id": "35963ce48ac0dd1856ce",
+      "title": "Colton Dach Signs a 2-Year, $2.40M Contract with the Edmonton Oilers",
+      "publishedAt": "2026-07-12T18:37:09.000Z",
+      "category": "Contract",
+      "url": "https://puckpedia.com/signing/10722?utm_source=email&utm_medium=email&utm_campaign=signing&utm_content=primary"
+    },
+    {
+      "id": "9a3fa9660e919b621867",
+      "title": "Oskar Sundqvist Signs a 1-Year, $850K Contract with the St. Louis Blues",
+      "publishedAt": "2026-07-11T00:21:06.000Z",
+      "category": "Contract",
+      "url": "https://puckpedia.com/signing/10721?utm_source=email&utm_medium=email&utm_campaign=signing&utm_content=primary"
+    },
+    {
+      "id": "d1532d532a232959912e",
+      "title": "Ville Ottavainen Signs a 1-Year, $850K Contract with the Seattle Kraken",
+      "publishedAt": "2026-07-11T00:16:07.000Z",
+      "category": "Contract",
+      "url": "https://puckpedia.com/signing/10720?utm_source=email&utm_medium=email&utm_campaign=signing&utm_content=primary"
+    },
+    {
+      "id": "b68cb2e9fe239c7f827a",
+      "title": "Carson Lambos Signs a 1-Year, $850K Contract with the Minnesota Wild",
+      "publishedAt": "2026-07-11T00:12:08.000Z",
+      "category": "Contract",
+      "url": "https://puckpedia.com/signing/10719?utm_source=email&utm_medium=email&utm_campaign=signing&utm_content=primary"
+    },
+    {
+      "id": "1d1791dcc1e152c4f981",
+      "title": "Bogdan Konyushkov Signs a 2-Year, $2.03M Contract with the Montreal Canadiens",
+      "publishedAt": "2026-07-10T19:04:08.000Z",
+      "category": "Contract",
+      "url": "https://puckpedia.com/signing/10718?utm_source=email&utm_medium=email&utm_campaign=signing&utm_content=primary"
+    },
+    {
+      "id": "386ff5f6590d62be9ba4",
+      "title": "Victor Ostman Signs a 1-Year, $850K Contract with the Seattle Kraken",
+      "publishedAt": "2026-07-10T18:14:10.000Z",
+      "category": "Contract",
+      "url": "https://puckpedia.com/signing/10717?utm_source=email&utm_medium=email&utm_campaign=signing&utm_content=primary"
+    },
+    {
+      "id": "ce8e2dcca979c961efe5",
+      "title": "Tyler Boucher Signs a 1-Year, $850K Contract with the Ottawa Senators",
+      "publishedAt": "2026-07-10T17:09:09.000Z",
+      "category": "Contract",
+      "url": "https://puckpedia.com/signing/10716?utm_source=email&utm_medium=email&utm_campaign=signing&utm_content=primary"
+    },
+    {
+      "id": "49c917bdb62ae7b96cc8",
+      "title": "Tomas Galvas Signs a 3-Year, $3.02M Contract with the Pittsburgh Penguins",
+      "publishedAt": "2026-07-09T23:53:07.000Z",
+      "category": "Contract",
+      "url": "https://puckpedia.com/signing/10715?utm_source=email&utm_medium=email&utm_campaign=signing&utm_content=primary"
+    },
+    {
+      "id": "f8dd15ec3abc87646cbd",
+      "title": "David Spacek Signs a 1-Year, $850K Contract with the Minnesota Wild",
+      "publishedAt": "2026-07-09T23:49:06.000Z",
+      "category": "Contract",
+      "url": "https://puckpedia.com/signing/10714?utm_source=email&utm_medium=email&utm_campaign=signing&utm_content=primary"
+    },
+    {
+      "id": "ca5c4facfb126b86f746",
+      "title": "Caedan Bankier Signs a 1-Year, $850K Contract with the Minnesota Wild",
+      "publishedAt": "2026-07-09T23:46:07.000Z",
+      "category": "Contract",
+      "url": "https://puckpedia.com/signing/10713?utm_source=email&utm_medium=email&utm_campaign=signing&utm_content=primary"
+    },
+    {
+      "id": "0120dbac4a2299bd7ce6",
+      "title": "Brett Berard Signs a 1-Year, $850K Contract with the Montreal Canadiens",
+      "publishedAt": "2026-07-09T19:11:11.000Z",
+      "category": "Contract",
+      "url": "https://puckpedia.com/signing/10712?utm_source=email&utm_medium=email&utm_campaign=signing&utm_content=primary"
+    },
+    {
+      "id": "03281376a8c270596138",
+      "title": "Xavier Bourgault Signs a 1-Year, $850K Contract with the Ottawa Senators",
+      "publishedAt": "2026-07-09T16:36:09.000Z",
+      "category": "Contract",
+      "url": "https://puckpedia.com/signing/10711?utm_source=email&utm_medium=email&utm_campaign=signing&utm_content=primary"
+    },
+    {
+      "id": "66f051584b6f8af9c9ec",
+      "title": "Aleksi Heimosalmi Signs a 1-Year, $850K Contract with the Carolina Hurricanes",
+      "publishedAt": "2026-07-09T15:08:10.000Z",
+      "category": "Contract",
+      "url": "https://puckpedia.com/signing/10710?utm_source=email&utm_medium=email&utm_campaign=signing&utm_content=primary"
+    },
+    {
+      "id": "d3823b5543fc4105edbe",
+      "title": "Riley Duran Signs a 1-Year, $850K Contract with the Boston Bruins",
+      "publishedAt": "2026-07-09T14:48:08.000Z",
+      "category": "Contract",
+      "url": "https://puckpedia.com/signing/10709?utm_source=email&utm_medium=email&utm_campaign=signing&utm_content=primary"
+    },
+    {
+      "id": "563c2b529b53b2bde7d0",
+      "title": "Sergei Ivanov Signs a 2-Year, $1.94M Contract with the Columbus Blue Jackets",
+      "publishedAt": "2026-07-08T23:41:07.000Z",
+      "category": "Contract",
+      "url": "https://puckpedia.com/signing/10708?utm_source=email&utm_medium=email&utm_campaign=signing&utm_content=primary"
+    },
+    {
+      "id": "1eeb06b623a1a15f5c71",
+      "title": "William Villeneuve Signs a 2-Year, $1.75M Contract with the Toronto Maple Leafs",
+      "publishedAt": "2026-07-08T23:39:09.000Z",
+      "category": "Contract",
+      "url": "https://puckpedia.com/signing/10707?utm_source=email&utm_medium=email&utm_campaign=signing&utm_content=primary"
     }
   ]
 }
