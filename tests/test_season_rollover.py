@@ -1,4 +1,6 @@
 import importlib.util
+import json
+import tempfile
 import unittest
 from pathlib import Path
 from unittest.mock import patch
@@ -29,6 +31,21 @@ class SeasonRolloverTests(unittest.TestCase):
         games = [{"gameType": 2, "gameDate": "2026-10-06"}] * 84
         with patch.object(TRACKER, "fetch_json", return_value={"games": games}):
             self.assertEqual(TRACKER.schedule_is_published("20262027"), (True, 84))
+
+    def test_83_game_schedule_does_not_roll_season(self):
+        games = [{"gameType": 2, "gameDate": "2026-10-06"}] * 83
+        with patch.object(TRACKER, "fetch_json", return_value={"games": games}):
+            self.assertEqual(TRACKER.schedule_is_published("20262027"), (False, 83))
+
+    def test_rollover_waits_for_every_tracked_team(self):
+        full = [{"gameType": 2, "gameDate": "2026-10-06"}] * 84
+        partial = full[:-1]
+
+        def response(url):
+            return {"games": partial if "/CAR/" in url else full}
+
+        with patch.object(TRACKER, "fetch_json", side_effect=response):
+            self.assertEqual(TRACKER.schedule_is_published("20262027"), (False, 83))
 
     def test_auto_mode_waits_then_rolls_forward(self):
         config = {**TRACKER.CONFIG, "season": "20252026", "seasonMode": "auto"}
@@ -63,6 +80,60 @@ class SeasonRolloverTests(unittest.TestCase):
         self.assertEqual(len(rows), 1)
         self.assertEqual(rows[0]["type"], "Preseason")
         self.assertEqual(rows[0]["awayScore"], 3)
+
+    def test_new_season_standings_fallback_keeps_identities_but_zeros_results(self):
+        previous = {"standings": [{"team": "BUF", "name": "Buffalo Sabres", "conference": "Eastern",
+            "division": "Atlantic", "gp": 82, "w": 50, "l": 24, "otl": 8, "points": 108,
+            "rw": 42, "gf": 290, "ga": 235, "gd": 55, "divisionRank": 1, "wildcardRank": 0,
+            "streak": "W3"}]}
+        with patch.object(TRACKER, "fetch_json", return_value={"standings": []}):
+            rows = TRACKER.load_standings(previous)
+        self.assertEqual(rows[0]["team"], "BUF")
+        for key in ("gp", "w", "l", "otl", "points", "gf", "ga", "gd"):
+            self.assertEqual(rows[0][key], 0)
+
+    def test_new_schedule_starts_team_summaries_at_zero(self):
+        regular = self.schedule_game(101)
+        regular["gameState"] = "FUT"
+        preseason = self.schedule_game(102)
+        preseason["gameType"] = 1
+        preseason["gameState"] = "FINAL"
+        preseason["awayTeam"]["score"] = 4
+        preseason["homeTeam"]["score"] = 1
+        rows = TRACKER.tracked_game_rows([regular, preseason], ["BUF"])
+        summary = TRACKER.team_summaries(rows, ["BUF"])["BUF"]
+        self.assertEqual(summary["gp"], 0)
+        self.assertEqual(summary["points"], 0)
+
+    def test_calendar_contains_preseason_and_regular_games_in_utc(self):
+        preseason = self.schedule_game(201, date="2026-09-25", start="2026-09-25T23:00:00Z")
+        preseason["gameType"] = 1
+        regular = self.schedule_game(202)
+        feed = TRACKER.calendar_feed("Buffalo Sabres - NHL Tracker", [preseason, regular],
+            {"BUF": "Buffalo Sabres", "BOS": "Boston Bruins"}, "#003087")
+        self.assertEqual(feed.count("BEGIN:VEVENT"), 2)
+        self.assertIn("X-WR-TIMEZONE:Europe/London", feed)
+        self.assertIn("X-APPLE-CALENDAR-COLOR:#003087", feed)
+        self.assertIn("DTSTART:20260925T230000Z", feed)
+        self.assertIn("DTSTART:20261006T230000Z", feed)
+        self.assertIn("Preseason", feed)
+        self.assertIn("Regular season", feed)
+
+    def test_season_index_preserves_old_archive_and_marks_new_current(self):
+        with tempfile.TemporaryDirectory() as directory:
+            output = Path(directory) / "data" / "tracker.json"
+            seasons = output.parent / "seasons"
+            seasons.mkdir(parents=True)
+            for season in ("20252026", "20262027"):
+                (seasons / f"{season}.json").write_text(json.dumps({
+                    "meta": {"season": season, "updatedAt": "2026-07-15T12:00:00Z"}
+                }))
+            with patch.object(TRACKER, "OUTPUT", output):
+                TRACKER.write_season_index("20262027")
+            index = json.loads((seasons / "index.json").read_text())
+        self.assertEqual(index["current"], "20262027")
+        self.assertEqual({row["season"] for row in index["seasons"]}, {"20252026", "20262027"})
+        self.assertTrue(next(row for row in index["seasons"] if row["season"] == "20262027")["current"])
 
     def test_official_special_teams_percentages_are_normalised_and_ranked(self):
         standings = [{"team": "BUF", "name": "Buffalo Sabres"}, {"team": "BOS", "name": "Boston Bruins"}]

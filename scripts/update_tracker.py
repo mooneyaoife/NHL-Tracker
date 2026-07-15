@@ -24,7 +24,7 @@ from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
 CONFIG = json.loads((ROOT / "config.json").read_text())
-VERSION = "5.67.0"
+VERSION = "5.67.1"
 SEASON = str(CONFIG["season"])
 TRACKED = [str(t).upper() for t in CONFIG["teams"]]
 API = "https://api-web.nhle.com/v1"
@@ -158,12 +158,17 @@ def next_season_preview(active_season: str, previous: dict | None = None) -> dic
 
 
 def schedule_is_published(season: str) -> tuple[bool, int]:
-    """Require a substantial regular-season schedule before rolling forward."""
-    games = fetch_json(f"{API}/club-schedule-season/{TRACKED[0]}/{season}").get("games", [])
-    regular = [g for g in games if int(g.get("gameType") or 0) == 2 and g.get("gameDate")]
-    # Showcase games are announced before the full schedule. Waiting for half
-    # a club schedule prevents that preview from triggering a false rollover.
-    return len(regular) >= regular_season_games(season) // 2, len(regular)
+    """Require every tracked club's full regular-season schedule before rolling forward."""
+    expected = regular_season_games(season)
+
+    def regular_count(team: str) -> int:
+        games = fetch_json(f"{API}/club-schedule-season/{team}/{season}").get("games", [])
+        return sum(int(game.get("gameType") or 0) == 2 and bool(game.get("gameDate")) for game in games)
+
+    with ThreadPoolExecutor(max_workers=min(4, len(TRACKED))) as pool:
+        counts = list(pool.map(regular_count, TRACKED))
+    minimum = min(counts, default=0)
+    return bool(counts) and minimum >= expected, minimum
 
 
 def resolve_active_season() -> tuple[str, str]:
@@ -179,8 +184,8 @@ def resolve_active_season() -> tuple[str, str]:
         print(f"warning: new-season schedule check failed: {exc}", file=sys.stderr)
         return configured, "New-season schedule could not be verified"
     if ready:
-        return candidate, f"NHL published {games} regular-season games for a tracked team"
-    return configured, f"Waiting for the NHL schedule ({games} regular-season games found)"
+        return candidate, f"NHL published all {games} regular-season games for every tracked team"
+    return configured, f"Waiting for the complete NHL schedule ({games} games found for the least-complete tracked team)"
 
 
 def fetch_json(url: str, attempts: int = 4) -> dict:
@@ -1282,6 +1287,8 @@ def main() -> None:
         except json.JSONDecodeError: pass
     previous_same_season = previous if previous.get("meta", {}).get("season") == SEASON else {}
     preview = next_season_preview(SEASON, previous.get("nextSeasonPreview"))
+    # Old standings may provide team identities during the summer, but
+    # load_standings always zeroes their results before using them here.
     standings = load_standings(previous)
     try:
         special_teams = load_special_teams(standings, previous_same_season.get("specialTeams", []))
@@ -1293,7 +1300,7 @@ def main() -> None:
     rows = tracked_game_rows(schedules, league_teams)
     preseason = preseason_schedule_rows(schedules)
     players = build_players(schedules)
-    game_centres = load_game_centres(schedules, previous)
+    game_centres = load_game_centres(schedules, previous_same_season)
     daily = load_daily()
     rosters = load_rosters([r["team"] for r in standings])
     players = enrich_players(players, rosters)
