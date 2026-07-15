@@ -80,6 +80,28 @@ class SeasonRolloverTests(unittest.TestCase):
         self.assertEqual(buffalo["ppRank"], 1)
         self.assertEqual(buffalo["pkRank"], 2)
 
+    def test_daily_history_stores_category_ranks(self):
+        standings = [
+            {"team": "BUF", "gp": 10, "points": 14, "gf": 35, "ga": 25, "gd": 10},
+            {"team": "BOS", "gp": 10, "points": 12, "gf": 28, "ga": 27, "gd": 1},
+        ]
+        moneypuck = {"teams": [
+            {"team": "BUF", "games": 10, "xgPct": .55, "corsiPct": .54, "hdFor": 60, "hdAgainst": 40,
+                "xgf": 32, "xga": 24, "gf": 35, "ga": 25},
+            {"team": "BOS", "games": 10, "xgPct": .49, "corsiPct": .50, "hdFor": 45, "hdAgainst": 55,
+                "xgf": 29, "xga": 28, "gf": 28, "ga": 27},
+        ], "simulations": []}
+        special = [
+            {"team": "BUF", "ppPct": 25, "pkPct": 82},
+            {"team": "BOS", "ppPct": 20, "pkPct": 78},
+        ]
+        history = TRACKER.daily_history({}, standings, moneypuck, special)
+        buffalo = next(row for row in history[-1]["teams"] if row["team"] == "BUF")
+        self.assertEqual(buffalo["ranks"]["overall"], 1)
+        self.assertEqual(buffalo["ranks"]["special"], 1)
+        self.assertEqual(buffalo["ranks"]["defence"], 1)
+        self.assertAlmostEqual(buffalo["specialIndex"], 7)
+
 
 if __name__ == "__main__":
     unittest.main()

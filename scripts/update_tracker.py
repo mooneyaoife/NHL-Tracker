@@ -24,7 +24,7 @@ from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
 CONFIG = json.loads((ROOT / "config.json").read_text())
-VERSION = "5.65.0"
+VERSION = "5.66.0"
 SEASON = str(CONFIG["season"])
 TRACKED = [str(t).upper() for t in CONFIG["teams"]]
 API = "https://api-web.nhle.com/v1"
@@ -1090,27 +1090,66 @@ def compact_number(value, digits: int = 3):
         return None
 
 
-def daily_history(previous: dict, standings: list[dict], moneypuck: dict) -> list[dict]:
+def daily_history(previous: dict, standings: list[dict], moneypuck: dict, special_teams: list[dict] | None = None) -> list[dict]:
     """Append one durable league snapshot per UTC day for future trend views."""
     same_season = str(previous.get("meta", {}).get("season")) == SEASON
     history = list(previous.get("history", [])) if same_season else []
     mp_teams = {str(row.get("team", "")).upper(): row for row in moneypuck.get("teams", [])}
+    special_by_team = {str(row.get("team", "")).upper(): row for row in (special_teams or [])}
+
+    def percentage(value):
+        number = compact_number(value)
+        return number * 100 if number is not None and abs(number) <= 1 else number
+
     team_rows = []
     for rank, standing in enumerate(standings, 1):
         code = str(standing.get("team", "")).upper()
         advanced = mp_teams.get(code, {})
+        special = special_by_team.get(code, {})
         gp = compact_number(standing.get("gp"), 0) or 0
         points = compact_number(standing.get("points"), 0) or 0
-        raw_xg = compact_number(advanced.get("xgPct"))
-        xg_pct = raw_xg * 100 if raw_xg is not None and abs(raw_xg) <= 1 else raw_xg
+        model_games = compact_number(advanced.get("games")) or gp or 1
+        xg_pct = percentage(advanced.get("xgPct"))
+        corsi_pct = percentage(advanced.get("corsiPct"))
+        hd_for, hd_against = compact_number(advanced.get("hdFor")), compact_number(advanced.get("hdAgainst"))
+        high_danger = hd_for / (hd_for + hd_against) * 100 if hd_for is not None and hd_against is not None and hd_for + hd_against else None
         points_pct = points / (gp * 2) * 100 if gp else 0
         gd_per_game = (compact_number(standing.get("gd")) or 0) / gp if gp else 0
+        gf_per_game = (compact_number(standing.get("gf")) or 0) / gp if gp else 0
+        ga_per_game = (compact_number(standing.get("ga")) or 0) / gp if gp else 0
+        xgf = compact_number(advanced.get("xgf")); xga = compact_number(advanced.get("xga"))
+        model_gf = compact_number(advanced.get("gf")); model_ga = compact_number(advanced.get("ga"))
+        xgf_per_game = xgf / model_games if xgf is not None else None
+        xga_per_game = xga / model_games if xga is not None else None
+        finishing = (model_gf - xgf) / model_games if model_gf is not None and xgf is not None else None
+        goaltending = (xga - model_ga) / model_games if xga is not None and model_ga is not None else None
+        pp_pct, pk_pct = compact_number(special.get("ppPct")), compact_number(special.get("pkPct"))
+        special_index = pp_pct + pk_pct - 100 if pp_pct is not None and pk_pct is not None else None
+        process = (xg_pct + corsi_pct + high_danger) / 3 if xg_pct is not None and corsi_pct is not None and high_danger is not None else None
         power_index = (points_pct - 50) * .45 + ((xg_pct if xg_pct is not None else 50) - 50) * .45 + gd_per_game * 2.5
         team_rows.append({
             "team": code, "rank": rank, "gp": int(gp), "points": int(points),
             "gd": compact_number(standing.get("gd"), 0), "pointsPct": round(points_pct, 2),
-            "xgPct": compact_number(xg_pct, 2), "powerIndex": round(power_index, 2)
+            "xgPct": compact_number(xg_pct, 2), "corsiPct": compact_number(corsi_pct, 2),
+            "highDanger": compact_number(high_danger, 2), "powerIndex": round(power_index, 2),
+            "gfPerGame": compact_number(gf_per_game, 3), "gaPerGame": compact_number(ga_per_game, 3),
+            "xgfPerGame": compact_number(xgf_per_game, 3), "xgaPerGame": compact_number(xga_per_game, 3),
+            "finishing": compact_number(finishing, 3), "goaltending": compact_number(goaltending, 3),
+            "ppPct": compact_number(pp_pct, 2), "pkPct": compact_number(pk_pct, 2),
+            "specialIndex": compact_number(special_index, 2), "process": compact_number(process, 2),
+            "ranks": {}
         })
+    categories = {
+        "overall": ("powerIndex", True), "results": ("pointsPct", True),
+        "process": ("process", True), "attack": ("gfPerGame", True),
+        "defence": ("gaPerGame", False), "special": ("specialIndex", True),
+        "finishing": ("finishing", True), "goaltending": ("goaltending", True)
+    }
+    for category, (field, higher) in categories.items():
+        eligible = [row for row in team_rows if row.get(field) is not None]
+        eligible.sort(key=lambda row: ((-row[field]) if higher else row[field], row["team"]))
+        for category_rank, row in enumerate(eligible, 1):
+            row["ranks"][category] = category_rank
     forecasts = []
     for row in moneypuck.get("simulations", []):
         if str(row.get("scenerio", row.get("scenario", "ALL"))).upper() not in {"ALL", ""}:
@@ -1271,7 +1310,7 @@ def main() -> None:
     natural_stat_trick = load_natural_stat_trick(standings)
     changes = roster_changes(previous_same_season, rosters)
     change_history = roster_change_history(previous_same_season, changes)
-    history = daily_history(previous_same_season, standings, moneypuck)
+    history = daily_history(previous_same_season, standings, moneypuck, special_teams)
     schedule_release = schedule_release_state(SEASON, schedules, previous_same_season.get("scheduleRelease"))
     payload = {
         "meta": {"version": VERSION, "season": SEASON, "seasonMode": CONFIG.get("seasonMode", "manual"), "seasonDecision": rollover_reason, "gamesPerTeam": regular_season_games(SEASON), "trackedTeams": TRACKED, "updatedAt": datetime.now(timezone.utc).isoformat(), "elapsedSeconds": round(time.time()-started, 1), "scheduleGames": len(schedules), "historyDays": len(history)},
