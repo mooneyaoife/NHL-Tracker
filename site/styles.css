@@ -203,6 +203,228 @@ html[data-theme="dark"] .context-nav{background:#1c3049}
   #dashboard-points .annotation{display:none!important}
 }
 
+/* 5.69 Warm Mineral — a quieter, genuinely minimal interface */
+:root{
+  --ink:#202622;
+  --muted:#6e756f;
+  --navy:#315f52;
+  --blue:#315f52;
+  --bg:#f3f1ea;
+  --card:#fcfcf9;
+  --line:#d9ddd7;
+  --soft:#e8eee9;
+  --green:#315f52;
+  --red:#a14f51;
+  --amber:#9a743b;
+  --display-font:Inter,ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;
+  --content-width:1320px;
+  --quiet-shadow:none;
+}
+
+body{
+  background:var(--bg);
+  color:var(--ink);
+  font-size:14px;
+  line-height:1.55;
+}
+
+body>header{
+  min-height:72px;
+  background:rgba(252,252,249,.92);
+  border-bottom:0;
+  padding-block:14px;
+}
+.brand{gap:10px}.brand img{width:34px;height:34px;border-radius:50%}.brand h1{font-size:21px;font-weight:720}
+.season-switcher select{background:transparent}.icon-button{border-color:transparent}.icon-button:hover{border-color:var(--line)}
+
+body>#nav{
+  min-height:48px;
+  gap:26px;
+  background:rgba(252,252,249,.92);
+  border-top:1px solid color-mix(in srgb,var(--line) 58%,transparent);
+  border-bottom:1px solid var(--line);
+}
+#nav>button,#nav>.nav-destination>button{
+  min-width:92px;
+  padding:13px 10px 12px;
+  font-size:12px;
+  font-weight:650;
+}
+#nav>button:hover,#nav>.nav-destination>button:hover{background:transparent;color:var(--ink)}
+#nav>button.active,#nav>.nav-destination>button.active{color:var(--navy);box-shadow:inset 0 -2px var(--navy)}
+.nav-hover-menu{border:1px solid var(--line);border-top:2px solid var(--navy);border-radius:10px;box-shadow:0 18px 45px rgba(36,45,39,.12)}
+
+.context-nav{background:var(--card);border-bottom:1px solid var(--line)}
+.context-nav-level{min-height:42px;justify-content:center;gap:8px}
+.context-nav-level button{padding:9px 13px;border-radius:999px;font-size:11px;font-weight:650}
+.context-nav-level button.active{background:var(--soft);color:var(--navy);box-shadow:inset 0 0 0 1px color-mix(in srgb,var(--navy) 18%,transparent)}
+.context-nav-level button:hover{background:var(--soft);color:var(--ink)}
+
+main{padding:38px 28px 72px}.back-button{margin-bottom:18px;color:var(--navy)}
+h2{font-size:36px;font-weight:680;letter-spacing:-.045em}h3{font-size:16px;font-weight:690;letter-spacing:-.02em}
+.section-kicker,.eyebrow{color:var(--muted);font-size:9px;letter-spacing:.13em}
+
+.title-bar{
+  min-height:0;
+  overflow:visible;
+  background:transparent;
+  color:var(--ink);
+  border:0;
+  border-bottom:1px solid var(--line);
+  padding:2px 0 22px;
+  margin-bottom:24px;
+}
+.title-bar:before{display:none}.title-bar h2{font-size:39px;font-weight:680;letter-spacing:-.05em}
+.title-bar label{color:var(--muted)}.title-bar select{background:var(--card);border-color:var(--line);color:var(--ink)}
+
+.dashboard-hero,.dashboard-intro .dashboard-hero{
+  min-height:0;
+  align-items:flex-end;
+  background:transparent;
+  color:var(--ink);
+  border:0;
+  border-bottom:1px solid var(--line);
+  padding:4px 0 22px;
+}
+.dashboard-hero:before{display:none}.dashboard-hero h2,.dashboard-intro .dashboard-hero h2{font-size:42px;font-weight:680;letter-spacing:-.055em}
+.hero-logos img{width:46px;height:46px;filter:none}.today-strip{min-height:58px;background:transparent;border:0;padding:12px 0;margin-bottom:24px}
+
+.section-head{min-height:0;border-bottom:1px solid var(--line);padding:4px 0 16px;margin-bottom:20px}.section-head h2{font-weight:680}
+.subnav{
+  min-height:44px;
+  gap:22px;
+  overflow:auto;
+  background:transparent;
+  border-bottom:1px solid var(--line);
+  padding:0;
+  margin-bottom:24px;
+}
+.subnav button{padding:11px 1px 10px;color:var(--muted);font-size:11px;font-weight:680;border-bottom:2px solid transparent}
+.subnav button:hover{background:transparent;color:var(--ink)}.subnav button.active{color:var(--navy);border-bottom-color:var(--navy)}
+.section-label{
+  background:transparent;
+  color:var(--ink);
+  border:0;
+  border-bottom:1px solid var(--line);
+  padding:0 0 9px;
+  margin:28px 0 16px;
+  font-size:15px;
+  font-weight:700;
+}
+
+.grid{gap:14px;margin-bottom:14px}.grid.four{gap:10px}
+.panel,.metric,.identity-card,.story{
+  background:var(--card);
+  border:1px solid var(--line);
+  border-radius:12px;
+  box-shadow:none;
+}
+.panel{padding:20px}.metric{min-height:108px;padding:16px 17px}.metric:before{height:2px;background:var(--navy);opacity:.38}
+.team-card-grid .team-card{min-height:118px;border-radius:12px}.team-card .value{font-size:23px}.story{border-left:3px solid color-mix(in srgb,var(--navy) 55%,var(--line))}
+
+.expandable{
+  overflow:hidden;
+  background:var(--card);
+  border:1px solid var(--line);
+  border-radius:12px;
+  box-shadow:none;
+  margin-bottom:14px;
+}
+.expandable>summary{background:transparent;color:var(--ink);padding:15px 18px;font-size:13px}
+.expandable>summary:hover{background:color-mix(in srgb,var(--soft) 55%,transparent)}
+.expandable>summary:after{color:var(--muted)}.expandable[open]>summary{border-bottom:1px solid var(--line)}
+
+.control-row{min-height:58px;background:transparent;border:0;border-bottom:1px solid var(--line);border-radius:0;padding:0 0 14px}
+select,input{background:var(--card);border-color:var(--line);border-radius:9px}
+select:focus,input:focus{outline-color:color-mix(in srgb,var(--navy) 28%,transparent);border-color:var(--navy)}
+.selectors button,.control-row button,.matchup-intelligence-controls button,.game-centre-controls button,.nst-reminder button,.nst-refresh-centre button,.upload-refresh-link,.game-special-teams button{
+  background:var(--navy);
+  border-color:var(--navy);
+  color:#fff;
+  border-radius:9px;
+}
+
+.table-wrap{border:0;border-top:1px solid var(--line);border-radius:0;background:transparent}
+th{background:transparent;color:var(--muted)}th,td{padding:12px 10px}
+tbody tr:nth-child(even){background:color-mix(in srgb,var(--soft) 36%,transparent)}tbody tr:hover{background:var(--soft)}
+
+/* Remove the nested application frames that made dense pages look unfinished. */
+.game-centre-page,.schedule-release-centre,.schedule-intelligence,.matchup-intelligence-section,.special-teams-centre>.panel{
+  background:transparent;
+  border:0;
+  border-radius:0;
+  box-shadow:none;
+}
+.game-centre-page{padding:0}.game-centre-page>.subnav{margin-inline:0}.game-centre-page>.game-centre-controls{margin-inline:0}
+.schedule-intelligence,.schedule-release-centre{padding:0}.matchup-intelligence-section{padding:18px 0;border-top:1px solid var(--line)}
+
+.matchup-intelligence-pane{padding:0}
+.matchup-intelligence-header{
+  background:transparent;
+  color:var(--ink);
+  border-bottom:1px solid var(--line);
+  margin:0;
+  padding:4px 0 20px;
+}
+.matchup-intelligence-header:before{display:none}.matchup-intelligence-header h3{font-size:27px}.matchup-intelligence-header p{color:var(--muted);font-size:11px}
+.matchup-intelligence-header>span{border-color:var(--line);color:var(--muted);border-radius:999px}
+.matchup-intelligence-controls{background:transparent;border:0;margin:0;padding:14px 0}
+.matchup-intelligence-hero{border-radius:12px;box-shadow:none;padding:24px}
+.matchup-method{border-color:var(--line);border-radius:10px;overflow:hidden}.matchup-method summary{background:var(--soft);color:var(--ink)}
+.matchup-evidence-state{border-left-color:var(--amber);border-radius:8px}
+
+.special-teams-hero{
+  background:var(--card);
+  color:var(--ink);
+  border:1px solid var(--line);
+  border-radius:12px;
+}
+.special-teams-hero:before{width:4px;background:var(--team-colour)}
+.special-teams-hero .section-kicker,.special-teams-hero p,.special-teams-score span,.special-teams-score small{color:var(--muted)}
+.special-teams-score{border-left-color:var(--line)}
+.matchup-intelligence-header,.special-teams-hero{box-shadow:none}
+
+.game-hero,.game-feature-hero,.league-leaders-hero,.pregame-brief>header,.game-day-mode>header{
+  background:#294b42;
+}
+.game-centre-page,.schedule-release-centre,.schedule-intelligence,.matchup-intelligence-section,.game-day-mode,.visit-panel,.pregame-brief,.game-feature-hero,.league-leaders-hero{box-shadow:none}
+
+footer{background:var(--bg);border-top:1px solid var(--line)}
+
+html[data-theme="dark"]{
+  --ink:#edf0eb;
+  --muted:#a2aaa3;
+  --navy:#79a996;
+  --blue:#79a996;
+  --bg:#151a17;
+  --card:#1d231f;
+  --line:#343c36;
+  --soft:#28312b;
+  --green:#79a996;
+  --red:#d18182;
+  --amber:#c2a26d;
+  --quiet-shadow:none;
+}
+html[data-theme="dark"] body>header,html[data-theme="dark"] body>#nav,html[data-theme="dark"] .context-nav{background:rgba(29,35,31,.94)}
+html[data-theme="dark"] .title-bar,html[data-theme="dark"] .dashboard-hero,html[data-theme="dark"] .subnav,html[data-theme="dark"] .section-label,html[data-theme="dark"] .expandable>summary,html[data-theme="dark"] .matchup-intelligence-header{background:transparent;color:var(--ink)}
+html[data-theme="dark"] .special-teams-hero{background:var(--card);color:var(--ink)}
+html[data-theme="dark"] .game-hero,html[data-theme="dark"] .game-feature-hero,html[data-theme="dark"] .league-leaders-hero,html[data-theme="dark"] .pregame-brief>header,html[data-theme="dark"] .game-day-mode>header{background:#203b33}
+
+@media(max-width:900px){
+  main{padding:28px 20px 60px}.title-bar{padding:0 0 18px}.title-bar h2{font-size:34px}
+  .dashboard-hero,.dashboard-intro .dashboard-hero{padding:0 0 18px}.dashboard-hero h2,.dashboard-intro .dashboard-hero h2{font-size:36px}
+}
+@media(max-width:640px){
+  body>header{padding:10px 13px}.brand img{width:30px;height:30px}.brand h1{font-size:17px}
+  body>#nav{gap:0}.context-nav-level{justify-content:flex-start}
+  main{padding:22px 13px 48px}.title-bar{min-height:0;padding:0 0 14px;margin-bottom:18px}.title-bar h2{font-size:30px}
+  .dashboard-hero,.dashboard-intro .dashboard-hero{padding:0 0 15px}.dashboard-hero h2,.dashboard-intro .dashboard-hero h2{font-size:31px}.hero-logos{margin-top:13px}.hero-logos img{width:39px;height:39px}
+  .today-strip{padding:10px 0;margin-bottom:16px}.subnav{gap:18px;margin-bottom:18px;padding:0}.subnav button{padding:10px 1px 9px;font-size:10px}
+  .section-label{padding-bottom:8px;margin-top:22px}.panel,.metric{border-radius:10px}.expandable{border-radius:10px}
+  .matchup-intelligence-header{margin:0;padding:0 0 16px}.matchup-intelligence-header h3{font-size:24px}.matchup-intelligence-controls{margin:0;padding:12px 0}
+  .matchup-intelligence-hero{padding:17px 11px}.special-teams-hero{border-radius:10px}
+}
+
 /* 5.30.3 restrained dashboard heading */
 .dashboard-intro{display:block;margin-bottom:18px}
 .dashboard-intro .dashboard-hero{margin:0;min-height:0;padding:15px 22px}
