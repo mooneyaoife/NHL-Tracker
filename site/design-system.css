@@ -73,3 +73,55 @@ main{max-width:var(--content-width);padding:var(--space-7) 28px var(--space-8)}.
 
 @media(max-width:900px){.comparison-analysis{grid-template-columns:1fr!important}.player-game-cards{grid-template-columns:repeat(2,minmax(0,1fr))!important}}
 @media(max-width:760px){.guide-grid{grid-template-columns:1fr}.player-game-cards{grid-template-columns:1fr!important}.availability-roster>section:nth-child(3),.availability-roster>.roster-group:nth-child(3){grid-template-columns:1fr}.compare-workspace{padding:14px}.comparison-radar{height:360px!important}.news-desk-head,.news-controls{padding-inline:16px}}
+
+/* Screenshot QA: repair regressions caused by legacy component rules. */
+.pregame-brief>header{background:transparent!important;color:var(--ink)!important;padding:4px 0 16px!important}
+.pregame-brief>header h2{color:var(--ink)!important}.pregame-brief>header .section-kicker{color:var(--brand)!important}
+.pregame-brief>header .pregame-state{background:var(--surface);color:#806019!important}
+.pregame-brief>header .pregame-state.confirmed{color:var(--positive)!important}
+
+.availability-roster{grid-template-columns:minmax(0,1.25fr) minmax(0,1fr) minmax(230px,.72fr)!important;gap:var(--space-5)!important;align-items:start!important}
+.availability-roster>section:nth-child(3),.availability-roster>.roster-group:nth-child(3){grid-column:auto!important;display:block!important}
+.availability-roster>section:nth-child(3)>h3,.availability-roster>.roster-group:nth-child(3)>h3{grid-column:auto!important}
+.availability-roster-heading{min-height:34px}.availability-player{min-height:51px}
+
+.comparison-analysis{grid-template-columns:minmax(0,1.08fr) minmax(460px,.92fr)!important;align-items:start!important}
+.compare-workspace,.comparison-pane,.comparison-analysis{min-height:0!important}
+.comparison-analysis>.panel{align-self:start!important}.comparison-analysis .table-wrap{max-width:100%}
+
+.cap-centre-hero .section-kicker{color:var(--brand)!important}.cap-centre-hero p{color:var(--ink-soft)!important}
+.cap-centre-hero .update-state{background:var(--surface);color:var(--positive)!important;border-color:color-mix(in srgb,var(--positive) 45%,var(--rule))!important}
+.cap-summary-card{border-radius:var(--radius-m);background:var(--surface)}
+
+#roster-changes{grid-template-columns:repeat(4,minmax(0,1fr))!important;align-items:start!important}
+.roster-team{padding:16px!important}.roster-team summary{min-height:42px}.roster-team summary span{margin-left:auto}
+
+.pill.W{background:color-mix(in srgb,var(--positive) 13%,var(--surface))!important;color:var(--positive)!important;border-color:color-mix(in srgb,var(--positive) 25%,var(--rule))!important}
+.pill.L{background:color-mix(in srgb,#b53b45 11%,var(--surface))!important;color:#a52f3a!important;border-color:color-mix(in srgb,#b53b45 23%,var(--rule))!important}
+.pill.OTL{background:color-mix(in srgb,#b1842b 13%,var(--surface))!important;color:#806019!important;border-color:color-mix(in srgb,#b1842b 25%,var(--rule))!important}
+
+body>footer{min-height:0!important;padding:24px max(20px,calc((100vw - var(--content-width))/2))!important}
+.footer-links{gap:20px!important;margin:0 0 10px!important}.footer-links button,.footer-links a{border:0!important;background:transparent!important;padding:5px 0!important;color:var(--ink-soft)!important;border-radius:0!important}
+.footer-links button:hover,.footer-links a:hover{color:var(--brand)!important}.footer-links+p{margin:0!important}
+
+/* Transparency is reserved for navigation and transient context, never data cards. */
+@supports ((backdrop-filter:blur(1px)) or (-webkit-backdrop-filter:blur(1px))){
+body>header{background:color-mix(in srgb,var(--surface) 86%,transparent);backdrop-filter:blur(20px) saturate(125%);-webkit-backdrop-filter:blur(20px) saturate(125%)}
+body>#nav,.context-nav{background:color-mix(in srgb,var(--surface) 82%,transparent);backdrop-filter:blur(18px) saturate(118%);-webkit-backdrop-filter:blur(18px) saturate(118%)}
+.context-nav-level button.active,.subnav button.active{background:color-mix(in srgb,var(--brand-soft) 78%,transparent)}
+.schedule-intelligence-status,.availability-legend,.visit-change{background:color-mix(in srgb,var(--surface) 88%,transparent);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px)}
+}
+
+/* Quiet material texture: grain, tonal light and inset paper edges. */
+body:after{content:"";position:fixed;inset:0;z-index:1000;pointer-events:none;opacity:.018;background-image:url("data:image/svg+xml,%3Csvg viewBox='0 0 180 180' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.85' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='.7'/%3E%3C/svg%3E")}
+.title-bar,.dashboard-hero,.guide-hero{position:relative}.title-bar:before,.dashboard-hero:before,.guide-hero:before{content:"";position:absolute;inset:-18px -24px;z-index:-1;pointer-events:none;background:radial-gradient(ellipse at 12% 10%,color-mix(in srgb,var(--brand) 7%,transparent),transparent 58%)}
+.panel,.metric,.team-card,.compare-workspace,.schedule-release-centre,.schedule-intelligence,.news-desk,.availability-roster-panel{box-shadow:inset 0 1px color-mix(in srgb,#fff 72%,transparent)}
+html[data-theme="dark"] body:after{opacity:.026;mix-blend-mode:soft-light}html[data-theme="dark"] .panel,html[data-theme="dark"] .metric,html[data-theme="dark"] .team-card{box-shadow:inset 0 1px rgba(255,255,255,.045)}
+
+/* Installation stays discoverable without occupying primary navigation. */
+.install-panel{border-radius:var(--radius-m)!important}.install-panel>button{border-radius:999px!important;min-width:112px}
+.install-steps{grid-column:2/-1;margin:0;padding:14px 18px 14px 36px;border-radius:var(--radius-s);background:color-mix(in srgb,var(--brand-soft) 54%,var(--surface));color:var(--ink-soft);font-size:13px;line-height:1.55}
+.install-steps li+li{margin-top:5px}.install-steps[hidden]{display:none}
+
+@media(max-width:1050px){.availability-roster{grid-template-columns:1fr 1fr!important}.availability-roster>section:nth-child(3),.availability-roster>.roster-group:nth-child(3){grid-column:1/-1!important}.comparison-analysis{grid-template-columns:1fr!important}#roster-changes{grid-template-columns:repeat(2,minmax(0,1fr))!important}}
+@media(max-width:700px){.availability-roster{grid-template-columns:1fr!important}.availability-roster>section:nth-child(3),.availability-roster>.roster-group:nth-child(3){grid-column:auto!important}#roster-changes{grid-template-columns:1fr!important}.pregame-brief>header{padding-inline:0!important}body>footer{padding-block:20px!important}.season-switcher select{max-width:168px!important}.news-subnav{display:grid!important;grid-template-columns:repeat(5,minmax(0,1fr))!important;overflow:hidden!important}.news-subnav button{min-width:0!important;padding:10px 2px!important;font-size:9px!important;line-height:1.15;white-space:normal}.install-steps{grid-column:1/-1}}
