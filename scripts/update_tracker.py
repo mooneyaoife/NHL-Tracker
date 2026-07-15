@@ -24,7 +24,7 @@ from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
 CONFIG = json.loads((ROOT / "config.json").read_text())
-VERSION = "5.57.2"
+VERSION = "5.58.0"
 SEASON = str(CONFIG["season"])
 TRACKED = [str(t).upper() for t in CONFIG["teams"]]
 API = "https://api-web.nhle.com/v1"
@@ -79,11 +79,18 @@ def calendar_season(now: datetime | None = None) -> str:
     return f"{start}{start + 1}"
 
 
+def regular_season_games(season: str) -> int:
+    """Return the scheduled games per club for an NHL season."""
+    return 84 if int(str(season)[:4]) >= 2026 else 82
+
+
 def schedule_is_published(season: str) -> tuple[bool, int]:
     """Require a substantial regular-season schedule before rolling forward."""
     games = fetch_json(f"{API}/club-schedule-season/{TRACKED[0]}/{season}").get("games", [])
     regular = [g for g in games if int(g.get("gameType") or 0) == 2 and g.get("gameDate")]
-    return len(regular) >= 40, len(regular)
+    # Showcase games are announced before the full schedule. Waiting for half
+    # a club schedule prevents that preview from triggering a false rollover.
+    return len(regular) >= regular_season_games(season) // 2, len(regular)
 
 
 def resolve_active_season() -> tuple[str, str]:
@@ -1095,7 +1102,7 @@ def main() -> None:
     change_history = roster_change_history(previous_same_season, changes)
     history = daily_history(previous_same_season, standings, moneypuck)
     payload = {
-        "meta": {"version": VERSION, "season": SEASON, "seasonMode": CONFIG.get("seasonMode", "manual"), "seasonDecision": rollover_reason, "trackedTeams": TRACKED, "updatedAt": datetime.now(timezone.utc).isoformat(), "elapsedSeconds": round(time.time()-started, 1), "scheduleGames": len(schedules), "historyDays": len(history)},
+        "meta": {"version": VERSION, "season": SEASON, "seasonMode": CONFIG.get("seasonMode", "manual"), "seasonDecision": rollover_reason, "gamesPerTeam": regular_season_games(SEASON), "trackedTeams": TRACKED, "updatedAt": datetime.now(timezone.utc).isoformat(), "elapsedSeconds": round(time.time()-started, 1), "scheduleGames": len(schedules), "historyDays": len(history)},
         "standings": standings, "games": rows, "teams": team_summaries(rows, league_teams), "players": players, "gameCentre": game_centres,
         "daily": daily, "rosters": rosters, "rosterChanges": changes, "rosterChangeHistory": change_history, "news": news, "transactions": transactions, "podcasts": podcasts, "videos": videos,
         "gameLibrary": game_library,
