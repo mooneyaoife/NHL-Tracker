@@ -11,7 +11,7 @@
   <link rel="manifest" href="manifest.webmanifest">
   <link rel="apple-touch-icon" href="icons/icon-192.png">
   <script>document.documentElement.dataset.theme=localStorage.getItem("nhl-theme")||"light"</script>
-  <link rel="stylesheet" href="styles.css?v=5.58.0">
+  <link rel="stylesheet" href="styles.css?v=5.59.0">
   <script src="vendor/plotly-2.35.2.min.js"></script>
 </head>
 <body>
@@ -58,6 +58,7 @@
 
   <section id="schedule" class="page">
     <div class="title-bar"><h2>Schedule and Calendar</h2></div>
+    <section class="schedule-intelligence"><header><div><span class="section-kicker">Automatic season analysis</span><h3>Schedule Intelligence</h3></div><label>Focus<select id="schedule-intelligence-team"><option value="ALL">All followed teams</option></select></label></header><div id="schedule-intelligence-status" class="schedule-intelligence-status"></div><div id="schedule-intelligence-summary" class="grid four"></div><div class="grid two schedule-intelligence-charts"><article class="panel"><h3>Monthly Density</h3><p class="detail-note">Regular-season games scheduled by month.</p><div id="schedule-density-chart" class="chart"></div></article><article class="panel"><h3>Opponent Strength</h3><p class="detail-note">Average opponent points percentage using the latest complete evidence available.</p><div id="schedule-difficulty-chart" class="chart"></div></article></div><div class="grid two schedule-intelligence-details"><article class="panel"><h3>Opening Dates and Followed-Team Meetings</h3><div id="schedule-key-dates"></div></article><article class="panel"><h3>Demanding Stretches</h3><div id="schedule-stretches"></div></article></div></section>
     <div class="control-row calendar-controls"><label for="calendar-team">Show games for</label><select id="calendar-team"></select><label for="calendar-month">Month</label><select id="calendar-month" aria-label="Calendar month"></select><p>All times shown automatically in the UK.</p></div>
     <details class="calendar-subscribe"><summary><span><small>Calendar subscription</small><strong>Add games to your calendar</strong></span><em>Subscribe once · updates automatically</em></summary><div class="calendar-subscribe-body"><p>Your followed teams each have a permanent calendar feed. Schedule and playoff changes arrive through the tracker's automatic updates.</p><div id="calendar-feed-list" class="calendar-feed-list"></div><p class="detail-note">On iPhone or Mac, tap Subscribe. For Google Calendar or Outlook, copy the feed link and add it as a calendar from URL.</p></div></details>
     <div class="calendar-weekdays" aria-hidden="true"><span>Mon</span><span>Tue</span><span>Wed</span><span>Thu</span><span>Fri</span><span>Sat</span><span>Sun</span></div>
@@ -184,5 +185,5 @@
 </main>
 <footer><div class="footer-links"><button data-page="watchlist">Settings</button><button data-page="guide">Stat Guide</button><a href="https://moneypuck.com/data.htm" target="_blank" rel="noopener">Data sources</a><button data-page="status">Status</button></div><p>NHL Tracker · Unofficial, non-commercial fan project using public NHL data</p></footer>
 <aside id="app-update" class="app-update" role="status" hidden><span>A fresh version of NHL Tracker is ready.</span><button id="app-update-button" type="button">Update now</button></aside>
-  <script src="app.js?v=5.58.0"></script>
+  <script src="app.js?v=5.59.0"></script>
 </body></html>
