@@ -52,6 +52,18 @@ class SeasonRolloverTests(unittest.TestCase):
         unchanged = TRACKER.schedule_release_state("20262027", [self.schedule_game(1, start="2026-10-07T00:00:00Z")], changed)
         self.assertEqual(len(unchanged["recentChanges"]), 1)
 
+    def test_preseason_is_published_separately_from_standings_rows(self):
+        preseason = self.schedule_game(91)
+        preseason["gameType"] = 1
+        preseason["gameState"] = "FINAL"
+        preseason["awayTeam"]["score"] = 3
+        preseason["homeTeam"]["score"] = 2
+        self.assertEqual(TRACKER.tracked_game_rows([preseason], ["BUF"]), [])
+        rows = TRACKER.preseason_schedule_rows([preseason])
+        self.assertEqual(len(rows), 1)
+        self.assertEqual(rows[0]["type"], "Preseason")
+        self.assertEqual(rows[0]["awayScore"], 3)
+
 
 if __name__ == "__main__":
     unittest.main()

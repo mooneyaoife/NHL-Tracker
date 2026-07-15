@@ -24,7 +24,7 @@ from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
 CONFIG = json.loads((ROOT / "config.json").read_text())
-VERSION = "5.62.0"
+VERSION = "5.63.0"
 SEASON = str(CONFIG["season"])
 TRACKED = [str(t).upper() for t in CONFIG["teams"]]
 API = "https://api-web.nhle.com/v1"
@@ -673,6 +673,27 @@ def tracked_game_rows(games: list[dict], team_codes: list[str] | None = None) ->
     return rows
 
 
+def preseason_schedule_rows(games: list[dict]) -> list[dict]:
+    """Expose preseason games for schedules without mixing them into standings rows."""
+    rows = []
+    for game in games:
+        if int(game.get("gameType") or 0) != 1 or game.get("id") is None:
+            continue
+        home = localised(game.get("homeTeam", {}).get("abbrev")).upper()
+        away = localised(game.get("awayTeam", {}).get("abbrev")).upper()
+        state = str(game.get("gameState") or "").upper()
+        finished = state in {"OFF", "FINAL"}
+        rows.append({
+            "id": str(game["id"]), "date": str(game.get("gameDate") or ""),
+            "startTimeUTC": str(game.get("startTimeUTC") or ""), "type": "Preseason", "state": state or "FUT",
+            "away": away, "home": home, "venue": localised(game.get("venue")),
+            "awayScore": game.get("awayTeam", {}).get("score") if finished else None,
+            "homeScore": game.get("homeTeam", {}).get("score") if finished else None,
+            "broadcasts": [row.get("network") for row in game.get("tvBroadcasts", []) if row.get("network")],
+        })
+    return sorted(rows, key=lambda row: (row["date"], row["startTimeUTC"], row["id"]))
+
+
 def boxscore(game_id: int) -> dict:
     CACHE.mkdir(parents=True, exist_ok=True)
     path = CACHE / f"{game_id}.json"
@@ -1155,6 +1176,7 @@ def main() -> None:
     schedules = load_schedules([r["team"] for r in standings])
     league_teams = [r["team"] for r in standings]
     rows = tracked_game_rows(schedules, league_teams)
+    preseason = preseason_schedule_rows(schedules)
     players = build_players(schedules)
     game_centres = load_game_centres(schedules, previous)
     daily = load_daily()
@@ -1177,7 +1199,7 @@ def main() -> None:
     schedule_release = schedule_release_state(SEASON, schedules, previous_same_season.get("scheduleRelease"))
     payload = {
         "meta": {"version": VERSION, "season": SEASON, "seasonMode": CONFIG.get("seasonMode", "manual"), "seasonDecision": rollover_reason, "gamesPerTeam": regular_season_games(SEASON), "trackedTeams": TRACKED, "updatedAt": datetime.now(timezone.utc).isoformat(), "elapsedSeconds": round(time.time()-started, 1), "scheduleGames": len(schedules), "historyDays": len(history)},
-        "standings": standings, "games": rows, "teams": team_summaries(rows, league_teams), "players": players, "gameCentre": game_centres,
+        "standings": standings, "games": rows, "preseasonGames": preseason, "teams": team_summaries(rows, league_teams), "players": players, "gameCentre": game_centres,
         "previousSeasonStandings": previous.get("standings", []) if previous.get("meta", {}).get("season") != SEASON else previous.get("previousSeasonStandings", []),
         "scheduleRelease": schedule_release, "nextSeasonPreview": preview,
         "daily": daily, "rosters": rosters, "rosterChanges": changes, "rosterChangeHistory": change_history, "news": news, "transactions": transactions, "podcasts": podcasts, "videos": videos,
