@@ -1,7 +1,28 @@
 {
   "schema": 1,
-  "updatedAt": "2026-07-15T17:40:38.446Z",
+  "updatedAt": "2026-07-15T23:40:14.555Z",
   "items": [
+    {
+      "id": "6089ec04b4d238f4c97d",
+      "title": "William H?kansson Signs a 3-Year, $2.99M Contract with the Carolina Hurricanes",
+      "publishedAt": "2026-07-15T20:06:09.000Z",
+      "category": "Contract",
+      "url": "https://puckpedia.com/signing/10738?utm_source=email&utm_medium=email&utm_campaign=signing&utm_content=primary"
+    },
+    {
+      "id": "bbd89a4fe65943e99905",
+      "title": "Cole Perfetti Signs a 5-Year, $30.00M Contract with the Winnipeg Jets",
+      "publishedAt": "2026-07-15T19:57:09.000Z",
+      "category": "Contract",
+      "url": "https://puckpedia.com/signing/10737?utm_source=email&utm_medium=email&utm_campaign=signing&utm_content=primary"
+    },
+    {
+      "id": "0490519d5480a571ebcb",
+      "title": "Juho Piiparinen Signs a 3-Year, $3.23M Contract with the Vegas Golden Knights",
+      "publishedAt": "2026-07-15T18:52:08.000Z",
+      "category": "Contract",
+      "url": "https://puckpedia.com/signing/10736?utm_source=email&utm_medium=email&utm_campaign=signing&utm_content=primary"
+    },
     {
       "id": "cf7556a6d6f2161c5ea2",
       "title": "Elton Hermansson Signs a 3-Year, $3.23M Contract with the Los Angeles Kings",
@@ -190,27 +211,6 @@
       "publishedAt": "2026-07-09T15:08:10.000Z",
       "category": "Contract",
       "url": "https://puckpedia.com/signing/10710?utm_source=email&utm_medium=email&utm_campaign=signing&utm_content=primary"
-    },
-    {
-      "id": "d3823b5543fc4105edbe",
-      "title": "Riley Duran Signs a 1-Year, $850K Contract with the Boston Bruins",
-      "publishedAt": "2026-07-09T14:48:08.000Z",
-      "category": "Contract",
-      "url": "https://puckpedia.com/signing/10709?utm_source=email&utm_medium=email&utm_campaign=signing&utm_content=primary"
-    },
-    {
-      "id": "563c2b529b53b2bde7d0",
-      "title": "Sergei Ivanov Signs a 2-Year, $1.94M Contract with the Columbus Blue Jackets",
-      "publishedAt": "2026-07-08T23:41:07.000Z",
-      "category": "Contract",
-      "url": "https://puckpedia.com/signing/10708?utm_source=email&utm_medium=email&utm_campaign=signing&utm_content=primary"
-    },
-    {
-      "id": "1eeb06b623a1a15f5c71",
-      "title": "William Villeneuve Signs a 2-Year, $1.75M Contract with the Toronto Maple Leafs",
-      "publishedAt": "2026-07-08T23:39:09.000Z",
-      "category": "Contract",
-      "url": "https://puckpedia.com/signing/10707?utm_source=email&utm_medium=email&utm_campaign=signing&utm_content=primary"
     }
   ]
 }
