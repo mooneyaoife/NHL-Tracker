@@ -11,7 +11,7 @@
   <link rel="manifest" href="manifest.webmanifest">
   <link rel="apple-touch-icon" href="icons/icon-192.png">
   <script>document.documentElement.dataset.theme=localStorage.getItem("nhl-theme")||"light"</script>
-  <link rel="stylesheet" href="styles.css?v=5.66.0">
+  <link rel="stylesheet" href="styles.css?v=5.67.0">
   <script src="vendor/plotly-2.35.2.min.js"></script>
 </head>
 <body>
@@ -68,9 +68,10 @@
 
   <section id="games" class="page">
     <div class="title-bar"><h2>Game Centre</h2></div>
-    <div class="subnav game-centre-subnav" role="tablist" aria-label="Game Centre sections"><button class="active" data-game-view="featured">Selected Game</button><button data-game-view="library">Game Library</button></div>
+    <div class="subnav game-centre-subnav" role="tablist" aria-label="Game Centre sections"><button class="active" data-game-view="featured">Selected Game</button><button data-game-view="intelligence">Matchup Intelligence</button><button data-game-view="library">Game Library</button></div>
     <div id="game-centre" class="game-centre game-centre-page">
       <section class="game-centre-pane active" data-game-pane="featured"><div class="control-row game-centre-controls"><label for="game-select">Select game</label><select id="game-select"></select><button id="game-refresh" type="button">Refresh view</button><p>Follow the next game, check a live score or revisit a completed matchup. During tracked games, a fresh official NHL snapshot is deployed approximately every 15 minutes.</p></div><div id="game-browse-nav" class="game-browse-nav"></div><div id="game-detail"></div></section>
+      <section class="game-centre-pane matchup-intelligence-pane" data-game-pane="intelligence"><header class="matchup-intelligence-header"><div><span class="section-kicker">Automatic pregame analysis</span><h3>Matchup Intelligence Centre</h3><p>One focused view of team strength, schedule context, special teams, goaltending and the players most likely to shape the game.</p></div><span>Updates with the tracker</span></header><div class="matchup-intelligence-controls"><label>Choose matchup<select id="matchup-intelligence-game" aria-label="Choose matchup"></select></label><button id="matchup-open-game" type="button">Open Full Game Centre</button></div><div id="matchup-intelligence-detail"></div></section>
       <section class="game-centre-pane" data-game-pane="library"><div class="game-library-intro"><div><span class="section-kicker">Season archive</span><h3>Game Library</h3></div><span id="game-library-count"></span></div><div class="game-library-controls"><label>Team<select id="game-library-team"></select></label><label>Month<select id="game-library-month"></select></label><label>Opponent<select id="game-library-opponent"></select></label><label>Result<select id="game-library-result"><option value="ALL">All results</option><option value="W">Wins</option><option value="L">Regulation losses</option><option value="OTL">Overtime losses</option></select></label></div><div id="game-library-list" class="game-library-list"></div></section>
     </div>
   </section>
@@ -196,5 +197,5 @@
 </main>
 <footer><div class="footer-links"><button data-page="watchlist">Settings</button><button data-page="guide">Stat Guide</button><a href="https://moneypuck.com/data.htm" target="_blank" rel="noopener">Data sources</a><button data-page="status">Status</button></div><p>NHL Tracker · Unofficial, non-commercial fan project using public NHL data</p></footer>
 <aside id="app-update" class="app-update" role="status" hidden><span>A fresh version of NHL Tracker is ready.</span><button id="app-update-button" type="button">Update now</button></aside>
-  <script src="app.js?v=5.66.0"></script>
+  <script src="app.js?v=5.67.0"></script>
 </body></html>
