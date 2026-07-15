@@ -1,4 +1,4 @@
-const UI_VERSION="5.69.0";
+const UI_VERSION="5.70.0";
 const TEAM_NAMES={BUF:"Buffalo Sabres",SJS:"San Jose Sharks",MIN:"Minnesota Wild",CAR:"Carolina Hurricanes"};
 const COLOURS={BUF:"#607da3",SJS:"#5f8f91",MIN:"#728a74",CAR:"#a56b72"}; let DATA,SELECTED_TEAMS,SEARCH_INDEX=[],SEARCH_BY_ID=new Map(),SEARCH_RETURN_FOCUS=null,ROUTE_READY=false,ROUTE_RESTORING=false,RESTORED_SCROLL=0,ROUTE_TIMER=null;
 const ROUTE_STORAGE_KEY="nhl-last-route-v1";
