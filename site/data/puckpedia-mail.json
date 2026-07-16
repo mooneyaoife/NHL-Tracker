@@ -1,7 +1,21 @@
 {
   "schema": 1,
-  "updatedAt": "2026-07-16T17:40:14.482Z",
+  "updatedAt": "2026-07-16T23:40:12.971Z",
   "items": [
+    {
+      "id": "69a444dbb7621ae88ba0",
+      "title": "Kirby Dach Signs a 1-Year, $3.60M Contract with the Montreal Canadiens",
+      "publishedAt": "2026-07-16T21:05:09.000Z",
+      "category": "Contract",
+      "url": "https://puckpedia.com/signing/10743?utm_source=email&utm_medium=email&utm_campaign=signing&utm_content=primary"
+    },
+    {
+      "id": "67da2c7958624f784a93",
+      "title": "Connor McMichael Signs a 6-Year, $40.50M Contract with the St. Louis Blues",
+      "publishedAt": "2026-07-16T20:55:09.000Z",
+      "category": "Contract",
+      "url": "https://puckpedia.com/signing/10742?utm_source=email&utm_medium=email&utm_campaign=signing&utm_content=primary"
+    },
     {
       "id": "ff6e88b96d14ab784bb6",
       "title": "Trevor Zegras Signs a 4-Year, $36.50M Contract with the Philadelphia Flyers",
@@ -197,20 +211,6 @@
       "publishedAt": "2026-07-09T23:53:07.000Z",
       "category": "Contract",
       "url": "https://puckpedia.com/signing/10715?utm_source=email&utm_medium=email&utm_campaign=signing&utm_content=primary"
-    },
-    {
-      "id": "f8dd15ec3abc87646cbd",
-      "title": "David Spacek Signs a 1-Year, $850K Contract with the Minnesota Wild",
-      "publishedAt": "2026-07-09T23:49:06.000Z",
-      "category": "Contract",
-      "url": "https://puckpedia.com/signing/10714?utm_source=email&utm_medium=email&utm_campaign=signing&utm_content=primary"
-    },
-    {
-      "id": "ca5c4facfb126b86f746",
-      "title": "Caedan Bankier Signs a 1-Year, $850K Contract with the Minnesota Wild",
-      "publishedAt": "2026-07-09T23:46:07.000Z",
-      "category": "Contract",
-      "url": "https://puckpedia.com/signing/10713?utm_source=email&utm_medium=email&utm_campaign=signing&utm_content=primary"
     }
   ]
 }
