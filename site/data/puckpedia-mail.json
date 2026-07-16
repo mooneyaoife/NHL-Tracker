@@ -1,7 +1,28 @@
 {
   "schema": 1,
-  "updatedAt": "2026-07-15T23:40:14.555Z",
+  "updatedAt": "2026-07-16T05:40:17.051Z",
   "items": [
+    {
+      "id": "ff6e88b96d14ab784bb6",
+      "title": "Trevor Zegras Signs a 4-Year, $36.50M Contract with the Philadelphia Flyers",
+      "publishedAt": "2026-07-16T02:02:10.000Z",
+      "category": "Contract",
+      "url": "https://puckpedia.com/signing/10741?utm_source=email&utm_medium=email&utm_campaign=signing&utm_content=primary"
+    },
+    {
+      "id": "e1b0026393c6c25d814e",
+      "title": "Alberts Smits Signs a 3-Year, $3.23M Contract with the New York Rangers",
+      "publishedAt": "2026-07-15T23:59:07.000Z",
+      "category": "Contract",
+      "url": "https://puckpedia.com/signing/10740?utm_source=email&utm_medium=email&utm_campaign=signing&utm_content=primary"
+    },
+    {
+      "id": "b66a4be93a5bf00b97f2",
+      "title": "Marcus Nordmark Signs a 3-Year, $3.23M Contract with the Anaheim Ducks",
+      "publishedAt": "2026-07-15T23:57:09.000Z",
+      "category": "Contract",
+      "url": "https://puckpedia.com/signing/10739?utm_source=email&utm_medium=email&utm_campaign=signing&utm_content=primary"
+    },
     {
       "id": "6089ec04b4d238f4c97d",
       "title": "William H?kansson Signs a 3-Year, $2.99M Contract with the Carolina Hurricanes",
@@ -190,27 +211,6 @@
       "publishedAt": "2026-07-09T23:46:07.000Z",
       "category": "Contract",
       "url": "https://puckpedia.com/signing/10713?utm_source=email&utm_medium=email&utm_campaign=signing&utm_content=primary"
-    },
-    {
-      "id": "0120dbac4a2299bd7ce6",
-      "title": "Brett Berard Signs a 1-Year, $850K Contract with the Montreal Canadiens",
-      "publishedAt": "2026-07-09T19:11:11.000Z",
-      "category": "Contract",
-      "url": "https://puckpedia.com/signing/10712?utm_source=email&utm_medium=email&utm_campaign=signing&utm_content=primary"
-    },
-    {
-      "id": "03281376a8c270596138",
-      "title": "Xavier Bourgault Signs a 1-Year, $850K Contract with the Ottawa Senators",
-      "publishedAt": "2026-07-09T16:36:09.000Z",
-      "category": "Contract",
-      "url": "https://puckpedia.com/signing/10711?utm_source=email&utm_medium=email&utm_campaign=signing&utm_content=primary"
-    },
-    {
-      "id": "66f051584b6f8af9c9ec",
-      "title": "Aleksi Heimosalmi Signs a 1-Year, $850K Contract with the Carolina Hurricanes",
-      "publishedAt": "2026-07-09T15:08:10.000Z",
-      "category": "Contract",
-      "url": "https://puckpedia.com/signing/10710?utm_source=email&utm_medium=email&utm_campaign=signing&utm_content=primary"
     }
   ]
 }
