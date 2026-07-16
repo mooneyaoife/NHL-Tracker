@@ -14,13 +14,13 @@
   <script>document.documentElement.dataset.theme=localStorage.getItem("nhl-theme")||"light"</script>
   <link rel="stylesheet" href="styles.css?v=6.0.0">
   <link rel="stylesheet" href="theme-569.css?v=6.0.0">
-  <link rel="stylesheet" href="design-system.css?v=6.8.0">
+  <link rel="stylesheet" href="design-system.css?v=6.9.0">
   <script src="vendor/plotly-2.35.2.min.js"></script>
 </head>
 <body>
 <a class="skip-link" href="#main-content">Skip to content</a>
 <header>
-  <div class="brand"><img src="icons/icon.svg?v=5.70.0" alt="" aria-hidden="true"><h1>NHL Tracker</h1></div>
+  <div class="brand"><img src="icons/icon.svg?v=5.70.0" alt="" aria-hidden="true"><div><h1>NHL Tracker</h1><small>Hockey intelligence</small></div></div>
   <div class="header-tools"><label class="season-switcher">Season <select id="season-select" aria-label="Choose season"></select></label><div id="updated" class="status">Loading data…</div><button id="global-search-button" class="icon-button global-search-button" aria-label="Find anything" title="Find anything"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="10.5" cy="10.5" r="6.5"></circle><path d="m15.5 15.5 5 5"></path></svg></button><button id="theme-button" class="icon-button" aria-label="Switch colour theme">☾</button></div>
 </header>
 <div id="global-search-overlay" class="global-search-overlay" hidden><section class="global-search-dialog" role="dialog" aria-modal="true" aria-labelledby="global-search-title"><div class="global-search-head"><div><span class="section-kicker">NHL Tracker</span><h2 id="global-search-title">Find anything</h2></div><button id="global-search-close" type="button" aria-label="Close search">×</button></div><label class="global-search-input"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="10.5" cy="10.5" r="6.5"></circle><path d="m15.5 15.5 5 5"></path></svg><input id="global-search-input" type="search" autocomplete="off" placeholder="Search players, teams, games, stats or pages"></label><div id="global-search-results" class="global-search-results"></div><div class="global-search-hint"><span>Type to search the entire tracker</span><span><kbd>/</kbd> opens search · <kbd>Esc</kbd> closes</span></div></section></div>
@@ -41,9 +41,9 @@
       <div class="home-masthead-copy"><span class="section-kicker">Your NHL command desk</span><h2>Tonight, then the whole season.</h2><p>Start with the games in front of you. Move through the year, then open the deeper evidence when you want it.</p><div class="home-masthead-actions"><button type="button" data-home-page="tonight">Open tonight</button><button type="button" data-home-page="schedule">Open the season</button></div></div>
       <div id="dashboard-hero-logos" class="hero-logos home-team-marks"></div>
     </section>
+    <nav class="home-file-tabs" aria-label="Homepage file sections"><button type="button" data-home-scroll="dashboard">Overview</button><button type="button" data-home-page="teams">Teams</button><button type="button" data-home-page="players">Players</button><button type="button" data-home-page="league">Metrics</button><button type="button" data-home-page="guide">Notes</button></nav>
     <section class="home-tonight" aria-labelledby="home-tonight-title"><header><div><span class="section-kicker">Tonight</span><h3 id="home-tonight-title">Your game window</h3><strong id="today-date">Latest NHL update</strong></div><button type="button" data-home-page="tonight">Full tonight →</button></header><div id="today-games" class="today-games"></div></section>
     <section id="game-day-mode" class="game-day-mode" hidden></section>
-    <section id="since-last-visit" class="visit-panel" hidden><div class="visit-panel-head"><div><span class="section-kicker">Tracker briefing</span><h3 id="visit-panel-title">What Changed</h3><p id="visit-panel-note"></p></div><button id="visit-mark-seen" type="button">Mark as read</button></div><div id="visit-change-list" class="visit-change-list"></div></section>
     <div class="story-chapter current-season-chapter"><span>Season file</span><strong id="dashboard-season-label">Current season</strong><em>Record, form, process and path</em></div>
     <section id="season-file" class="season-file" aria-labelledby="season-file-title">
       <header class="season-file-head">
@@ -64,6 +64,7 @@
       <article class="panel home-module" data-home-module="players" draggable="false"><div class="home-module-head"><div><h3>Saved players</h3><span>Meaningful watchlist signals</span></div><div class="home-module-controls"><button type="button" data-module-move="up" aria-label="Move Saved players earlier">↑</button><button type="button" data-module-move="down" aria-label="Move Saved players later">↓</button><button type="button" data-module-hide aria-label="Hide Saved players">×</button></div></div><div id="home-saved-players"></div><button class="context-link" type="button" data-home-page="players">Open player analysis →</button></article>
       <article class="panel home-module" data-home-module="pinned" draggable="false"><div class="home-module-head"><div><h3>Pinned &amp; saved</h3><span>Your preferred deep views</span></div><div class="home-module-controls"><button type="button" data-module-move="up" aria-label="Move Pinned analytics earlier">↑</button><button type="button" data-module-move="down" aria-label="Move Pinned analytics later">↓</button><button type="button" data-module-hide aria-label="Hide Pinned analytics">×</button></div></div><div id="home-pinned-analytics"></div><button class="context-link" type="button" data-home-page="watchlist">Manage workspace →</button></article>
     </div></section>
+    <section id="since-last-visit" class="visit-panel" hidden><div class="visit-panel-head"><div><span class="section-kicker">Tracker briefing</span><h3 id="visit-panel-title">What Changed</h3><p id="visit-panel-note"></p></div><button id="visit-mark-seen" type="button">Mark as read</button></div><div id="visit-change-list" class="visit-change-list"></div></section>
     <section id="dashboard-league-tonight" class="dashboard-league-tonight" hidden></section>
     <nav class="home-authority-links" aria-label="Complete analysis"><button type="button" data-home-page="teams"><span>Teams</span><strong>Complete team evidence</strong></button><button type="button" data-home-page="schedule"><span>Season</span><strong>Calendar and season shape</strong></button><button type="button" data-home-page="games"><span>Games</span><strong>Game Centre and library</strong></button><button type="button" data-home-page="compare"><span>Compare</span><strong>Head-to-head workspaces</strong></button></nav>
     <div class="dashboard-background-renders" hidden><div id="team-cards"></div><div id="dashboard-leaders"></div><div id="division-race-charts"></div><div id="dashboard-results"></div></div>
@@ -240,5 +241,5 @@
 <footer><div class="footer-links"><button data-page="watchlist" id="footer-install-link">Install app</button><button data-page="watchlist">Settings</button><button data-page="guide">Stat Guide</button><a href="https://moneypuck.com/data.htm" target="_blank" rel="noopener">Data sources</a><button data-page="status">Status</button></div><p>NHL Tracker · Unofficial, non-commercial fan project using public NHL data</p></footer>
 <aside id="app-update" class="app-update" role="status" hidden><span>A fresh version of NHL Tracker is ready.</span><button id="app-update-button" type="button">Update now</button></aside>
 <div id="chart-help-overlay" class="chart-help-overlay" hidden><section role="dialog" aria-modal="true" aria-labelledby="chart-help-title"><header><div><span class="section-kicker">How to use this view</span><h2 id="chart-help-title">Chart guide</h2></div><button id="chart-help-close" type="button" aria-label="Close chart guide">×</button></header><div id="chart-help-body"></div></section></div>
-  <script src="app.js?v=6.8.0"></script>
+  <script src="app.js?v=6.9.0"></script>
 </body></html>
