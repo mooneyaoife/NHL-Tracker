@@ -14,7 +14,7 @@
   <script>document.documentElement.dataset.theme=localStorage.getItem("nhl-theme")||"light"</script>
   <link rel="stylesheet" href="styles.css?v=6.0.0">
   <link rel="stylesheet" href="theme-569.css?v=6.0.0">
-  <link rel="stylesheet" href="design-system.css?v=6.3.0">
+  <link rel="stylesheet" href="design-system.css?v=6.4.1">
   <script src="vendor/plotly-2.35.2.min.js"></script>
 </head>
 <body>
@@ -42,6 +42,17 @@
     <section id="game-day-mode" class="game-day-mode" hidden></section>
     <section id="since-last-visit" class="visit-panel" hidden><div class="visit-panel-head"><div><span class="section-kicker">Tracker briefing</span><h3 id="visit-panel-title">What Changed</h3><p id="visit-panel-note"></p></div><button id="visit-mark-seen" type="button">Mark as read</button></div><div id="visit-change-list" class="visit-change-list"></div></section>
     <div class="story-chapter current-season-chapter"><span>Season record</span><strong id="dashboard-season-label">Current season</strong><em>Results, form and performance evidence</em></div>
+    <section id="season-file" class="season-file" aria-labelledby="season-file-title">
+      <header class="season-file-head">
+        <div><span class="section-kicker">Interactive season file</span><h3 id="season-file-title">Read the season in four states</h3></div>
+        <p>Move through results, recent form, underlying play and the road ahead. Every transition changes the evidence, not just the scenery.</p>
+      </header>
+      <div class="season-file-body">
+        <nav id="season-state-nav" class="season-state-nav" aria-label="Season states"></nav>
+        <div id="season-state-stage" class="season-state-stage" aria-live="polite"></div>
+      </div>
+      <footer class="season-file-footer"><span id="season-file-index">File 01 / 04</span><span>Official NHL data · MoneyPuck context</span></footer>
+    </section>
     <div id="data-source-notice" class="source-notice" hidden></div>
     <div id="nst-refresh-reminder" class="source-notice nst-reminder" hidden><div><strong>Natural Stat Trick refresh due</strong><span id="nst-reminder-text"></span></div><button type="button" data-page="status">Open Refresh Centre</button></div>
     <div id="team-cards" class="grid four team-card-grid"></div>
@@ -215,5 +226,5 @@
 </main>
 <footer><div class="footer-links"><button data-page="watchlist" id="footer-install-link">Install app</button><button data-page="watchlist">Settings</button><button data-page="guide">Stat Guide</button><a href="https://moneypuck.com/data.htm" target="_blank" rel="noopener">Data sources</a><button data-page="status">Status</button></div><p>NHL Tracker · Unofficial, non-commercial fan project using public NHL data</p></footer>
 <aside id="app-update" class="app-update" role="status" hidden><span>A fresh version of NHL Tracker is ready.</span><button id="app-update-button" type="button">Update now</button></aside>
-  <script src="app.js?v=6.3.0"></script>
+  <script src="app.js?v=6.4.1"></script>
 </body></html>

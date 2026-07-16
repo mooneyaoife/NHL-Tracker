@@ -381,6 +381,54 @@ html[data-theme="dark"] .metric .detail,html[data-theme="dark"] .detail-note,htm
   .chapter-nav{display:grid;grid-template-columns:1fr;gap:4px}.chapter-nav button{text-align:left}
   .player-game-leaders{grid-template-columns:repeat(2,minmax(0,1fr))!important}
 }
+
+/* 6.4 — Motion works like commentary: it appears only when the evidence changes.
+   The season file borrows the clarity of a physical dossier and the progression
+   of scrollytelling, while remaining a compact, keyboard-operable dashboard tool. */
+@media(min-width:761px){
+  body>#nav{position:sticky;top:12px;z-index:90;width:max-content;max-width:calc(100% - 32px);min-height:0;margin:12px auto 0;padding:5px;gap:3px;border:1px solid color-mix(in srgb,var(--rule) 80%,transparent);border-radius:12px;background:color-mix(in srgb,var(--surface) 88%,transparent);box-shadow:0 12px 32px color-mix(in srgb,var(--ink) 8%,transparent);backdrop-filter:blur(20px) saturate(130%);-webkit-backdrop-filter:blur(20px) saturate(130%)}
+  #nav>button,#nav>.nav-destination>button{min-width:108px;padding:11px 20px;border-radius:8px;font-size:13px;text-align:center}
+  #nav>button:after,#nav>.nav-destination>button:after{display:none}
+  #nav>button.active,#nav>.nav-destination>button.active{background:var(--ink);color:var(--surface);box-shadow:none}
+  .context-nav{top:76px}
+}
+.season-file{position:relative;margin:24px 0 42px;border:1px solid var(--ink);border-radius:2px;background:color-mix(in srgb,var(--surface) 90%,transparent);box-shadow:7px 7px 0 color-mix(in srgb,var(--ink) 9%,transparent)}
+.season-file:before{content:"CURRENT SEASON";position:absolute;right:24px;top:-26px;z-index:-1;min-width:148px;padding:6px 15px 5px;border:1px solid var(--rule);border-bottom:0;border-radius:8px 8px 0 0;background:var(--ochre);color:#fff;font-family:var(--font-data);font-size:9px;font-weight:800;letter-spacing:.12em;text-align:center}
+.season-file:after{content:"";position:absolute;left:17px;top:17px;width:8px;height:8px;border-radius:50%;background:var(--canvas);box-shadow:0 0 0 1px var(--rule),0 calc(100% + 436px) 0 var(--canvas),0 calc(100% + 436px) 0 1px var(--rule);pointer-events:none}
+.season-file-head{display:grid;grid-template-columns:minmax(280px,.85fr) minmax(320px,1.15fr);align-items:end;gap:48px;padding:30px 38px 26px 52px;border-bottom:1px solid var(--rule)}
+.season-file-head h3{margin:4px 0 0;font-size:clamp(28px,3vw,44px)!important;line-height:1.02!important;letter-spacing:-.05em!important}
+.season-file-head p{margin:0;color:var(--ink-soft);font-family:var(--font-editorial);font-size:17px!important;line-height:1.45!important}
+.season-file-body{display:grid;grid-template-columns:208px minmax(0,1fr);min-height:430px}
+.season-state-nav{display:grid;align-content:start;border-right:1px solid var(--ink);background:color-mix(in srgb,var(--surface-subtle) 45%,transparent)}
+.season-state-nav button{position:relative;display:grid;grid-template-columns:30px 1fr;gap:1px 10px;min-height:90px;border:0;border-bottom:1px solid var(--rule);background:transparent;color:var(--ink-soft);padding:18px 20px;text-align:left;cursor:pointer}
+.season-state-nav button:before{content:"";position:absolute;inset:0 auto 0 0;width:0;background:var(--brand);transition:width .22s ease}
+.season-state-nav button span{grid-row:1/3;font-family:var(--font-data);font-size:10px;color:var(--ink-faint)}
+.season-state-nav button strong{font-size:15px;color:inherit}.season-state-nav button small{font-family:var(--font-editorial);font-size:12px!important;color:inherit}
+.season-state-nav button:hover,.season-state-nav button:focus-visible{background:color-mix(in srgb,var(--brand-soft) 55%,transparent);color:var(--ink)}
+.season-state-nav button.active{background:var(--ink);color:var(--surface)}.season-state-nav button.active:before{width:4px}.season-state-nav button.active span{color:var(--mineral)}
+.season-state-stage{position:relative;overflow:hidden;display:grid;grid-template-columns:minmax(170px,.42fr) minmax(420px,1.58fr);gap:34px;padding:94px 38px 30px;background-image:linear-gradient(90deg,transparent 49.9%,color-mix(in srgb,var(--rule) 24%,transparent) 50%,transparent 50.1%)}
+.season-rink{position:absolute;inset:24px 38px auto;height:45px;border:1px solid color-mix(in srgb,var(--mineral) 48%,var(--rule));border-radius:28px;background:color-mix(in srgb,var(--surface) 82%,transparent)}
+.season-rink:before,.season-rink:after{content:"";position:absolute;top:50%;width:25px;height:25px;border:1px solid color-mix(in srgb,var(--terracotta) 50%,var(--rule));border-radius:50%;transform:translateY(-50%)}.season-rink:before{left:7%}.season-rink:after{right:7%}
+.rink-line{position:absolute;top:0;bottom:0;width:1px;background:var(--terracotta);opacity:.6}.rink-line.centre{left:50%}.rink-line.blue{background:var(--mineral)}.rink-line.left{left:31%}.rink-line.right{right:31%}
+.season-puck{position:absolute;z-index:2;left:var(--puck-position);top:50%;width:14px;height:14px;border-radius:50%;background:var(--ink);box-shadow:0 3px 0 color-mix(in srgb,var(--ink) 32%,transparent);transform:translate(-50%,-56%);transition:left .7s cubic-bezier(.2,.8,.2,1)}
+.season-state-heading{align-self:start;padding-top:5px}.season-state-heading span{font-family:var(--font-data);font-size:10px;letter-spacing:.1em;text-transform:uppercase;color:var(--brand)}.season-state-heading h4{margin:9px 0 2px;font-size:clamp(36px,4vw,62px);line-height:.95;letter-spacing:-.06em}.season-state-heading p{margin:0;color:var(--ink-soft);font-family:var(--font-editorial);font-style:italic}
+.season-state-teams{display:grid;grid-template-columns:1fr 1fr;border-top:1px solid var(--ink);border-left:1px solid var(--rule)}
+.season-state-teams article{position:relative;display:grid;grid-template-columns:42px 1fr;gap:12px;min-width:0;min-height:136px;padding:18px;border-right:1px solid var(--rule);border-bottom:1px solid var(--rule);opacity:0;transform:translateY(8px);animation:season-evidence-in .36s ease forwards;animation-delay:var(--delay)}
+.season-state-teams article:before{content:"";position:absolute;left:0;right:0;top:0;height:2px;background:var(--team-colour)}
+.season-state-teams img{width:42px;height:42px;object-fit:contain}.season-state-teams article>div{min-width:0}.season-state-teams span,.season-state-teams small{display:block;font-family:var(--font-data);font-size:9px!important;letter-spacing:.06em;text-transform:uppercase;color:var(--ink-soft)}
+.season-state-teams strong{display:block;margin:2px 0 0;font-size:26px;letter-spacing:-.045em}.season-state-teams p{margin:6px 0 12px;font-size:11px!important;line-height:1.4!important;color:var(--ink-soft)}
+.season-state-meter{position:absolute;left:72px;right:18px;bottom:15px;height:2px;background:var(--rule)}.season-state-meter b{display:block;height:100%;background:var(--team-colour);transition:width .65s cubic-bezier(.2,.8,.2,1)}
+.season-file-footer{display:flex;justify-content:space-between;gap:20px;border-top:1px solid var(--ink);padding:10px 38px 10px 52px;font-family:var(--font-data);font-size:9px;letter-spacing:.08em;text-transform:uppercase;color:var(--ink-soft)}
+.reveal-item{opacity:0;transform:translateY(15px);transition:opacity .52s ease,transform .52s ease}.reveal-item.is-revealed{opacity:1;transform:none}
+@keyframes season-evidence-in{to{opacity:1;transform:none}}
+
+@media(max-width:900px){
+  .season-file-head{grid-template-columns:1fr;gap:12px}.season-file-body{grid-template-columns:160px minmax(0,1fr)}.season-state-nav button{grid-template-columns:24px 1fr;padding:15px 12px}.season-state-stage{grid-template-columns:1fr;padding-inline:24px}.season-state-heading{display:flex;align-items:baseline;gap:12px}.season-state-heading p{margin-left:auto}.season-file:after{display:none}
+}
+@media(max-width:640px){
+  .season-file{margin:14px 0 30px;box-shadow:4px 4px 0 color-mix(in srgb,var(--ink) 9%,transparent)}.season-file:before{right:12px;top:-22px;min-width:112px;padding:5px 9px;font-size:8px}.season-file-head{padding:24px 16px 18px}.season-file-head h3{font-size:30px!important}.season-file-head p{font-size:14px!important}.season-file-body{display:block;min-height:0}.season-state-nav{grid-template-columns:repeat(4,1fr);border-right:0;border-bottom:1px solid var(--ink);overflow:hidden}.season-state-nav button{display:grid;grid-template-columns:1fr;gap:2px;min-height:68px;padding:10px 5px;border-right:1px solid var(--rule);border-bottom:0;text-align:center}.season-state-nav button:last-child{border-right:0}.season-state-nav button:before{inset:auto 0 0;width:auto;height:0;transition:height .22s ease}.season-state-nav button.active:before{width:auto;height:3px}.season-state-nav button span{grid-row:auto;font-size:8px}.season-state-nav button strong{font-size:12px}.season-state-nav button small{display:none!important}.season-state-stage{display:block;padding:76px 14px 16px;background:none}.season-rink{inset:17px 14px auto;height:37px}.season-puck{width:12px;height:12px}.season-state-heading{display:grid;grid-template-columns:auto 1fr;gap:0 10px;margin-bottom:15px}.season-state-heading span{grid-column:1/-1}.season-state-heading h4{font-size:34px}.season-state-heading p{align-self:end;margin:0 0 2px;font-size:13px!important}.season-state-teams{grid-template-columns:1fr 1fr}.season-state-teams article{grid-template-columns:30px 1fr;gap:8px;min-height:128px;padding:13px 10px}.season-state-teams img{width:30px;height:30px}.season-state-teams strong{font-size:21px}.season-state-teams p{font-size:9px!important}.season-state-meter{left:48px;right:10px;bottom:11px}.season-file-footer{padding:9px 14px;font-size:8px}.season-file-footer span:last-child{display:none}.dashboard-form-row .pill-detail{display:none!important}
+}
+@media(prefers-reduced-motion:reduce){.season-puck,.season-state-meter b,.season-state-nav button:before,.reveal-item{transition:none!important}.season-state-teams article{opacity:1;transform:none;animation:none!important}}
 @media(max-width:480px){.player-game-leaders{grid-template-columns:1fr!important}.player-game-card{border-right:0!important;border-bottom:1px solid var(--rule)!important}}
 
 /* 6.3 News is a reading surface, not another dashboard. The hierarchy is one
