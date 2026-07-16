@@ -258,3 +258,15 @@ main small,.story-chapter span,.identity-traits span,.identity-measure span,.ide
   .news-subnav button{min-width:0!important;padding:9px 5px!important;font-size:11px!important;line-height:1.2!important;white-space:normal!important}
   .news-card.media-image-missing:before{width:92px;min-height:142px}.video-card.media-image-missing:before{width:104px;min-height:0}
 }
+
+/* 6.1.2 navigation interaction repair. The menu owns the layer above the
+   secondary navigation and maintains an unbroken pointer path from trigger. */
+@media(min-width:761px){
+  body>#nav{z-index:70;isolation:isolate}
+  .context-nav{z-index:50}
+  .nav-destination{z-index:1}
+  .nav-destination:hover,.nav-destination:focus-within,.nav-destination.menu-open{z-index:5}
+  .nav-hover-menu{z-index:100;top:calc(100% - 1px)!important;min-width:224px;padding:9px!important;pointer-events:auto}
+  .nav-destination.menu-open .nav-hover-menu{display:block}
+  .nav-hover-menu button{position:relative;z-index:1;cursor:pointer}
+}
