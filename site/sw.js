@@ -1,5 +1,5 @@
-const CACHE="nhl-tracker-6.7.0";
-const SHELL=["./","./index.html","./styles.css?v=6.0.0","./theme-569.css?v=6.0.0","./design-system.css?v=6.7.0","./app.js?v=6.7.0","./manifest.webmanifest","./icons/icon.svg?v=6.0.0","./icons/icon-192.png","./icons/icon-512.png","./data/tracker.json","./data/tracker-models.json","./data/puckpedia-mail.json","./data/seasons/index.json","./vendor/plotly-2.35.2.min.js"];
+const CACHE="nhl-tracker-6.8.0";
+const SHELL=["./","./index.html","./styles.css?v=6.0.0","./theme-569.css?v=6.0.0","./design-system.css?v=6.8.0","./app.js?v=6.8.0","./manifest.webmanifest","./icons/icon.svg?v=6.0.0","./icons/icon-192.png","./icons/icon-512.png","./data/tracker.json","./data/tracker-models.json","./data/puckpedia-mail.json","./data/seasons/index.json","./vendor/plotly-2.35.2.min.js"];
 
 self.addEventListener("install",event=>event.waitUntil(caches.open(CACHE).then(cache=>Promise.allSettled(SHELL.map(url=>cache.add(url))))));
 self.addEventListener("activate",event=>event.waitUntil(caches.keys().then(keys=>Promise.all(keys.filter(key=>key!==CACHE).map(key=>caches.delete(key)))).then(()=>self.clients.claim())));
