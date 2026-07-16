@@ -270,3 +270,115 @@ main small,.story-chapter span,.identity-traits span,.identity-measure span,.ide
   .nav-destination.menu-open .nav-hover-menu{display:block}
   .nav-hover-menu button{position:relative;z-index:1;cursor:pointer}
 }
+
+/* 6.2 typographic system and clarity pass.
+   A small, explicit scale replaces accumulated page-level font exceptions. */
+:root{
+  --type-micro:10px;
+  --type-caption:11px;
+  --type-small:13px;
+  --type-body:15px;
+  --type-body-large:17px;
+  --type-card-title:19px;
+  --type-section:24px;
+  --type-page:clamp(42px,5.2vw,76px);
+  --leading-tight:1.08;
+  --leading-heading:1.18;
+  --leading-body:1.55;
+}
+body{font-size:var(--type-body);line-height:var(--leading-body)}
+body>header h1{font-size:22px!important;line-height:1!important;letter-spacing:-.035em}
+.title-bar h2,.hero h2,.section-head h2,.dashboard-hero h2{font-size:var(--type-page)!important;line-height:var(--leading-tight)!important;letter-spacing:-.065em!important}
+.panel h3,.subheading,.availability-panel-head h3,.game-library-intro h3{font-size:var(--type-card-title)!important;line-height:var(--leading-heading)!important;letter-spacing:-.025em}
+.schedule-intelligence>header h3,.schedule-release-centre>header h3,.player-game-centre>header h3{font-size:var(--type-section)!important;line-height:var(--leading-heading)!important}
+p,.detail-note,.notice,.source-notice,.schedule-chapter-purpose{font-size:var(--type-body)!important;line-height:var(--leading-body)!important}
+small,.metric .detail,.status,.pill-detail span,.pill-detail small,.news-card p,.tonight-matchup small{font-size:var(--type-small)!important;line-height:1.45!important}
+.section-kicker,.eyebrow,.metric .label,.section-label,.source-tag,.update-state,.refresh-badge,.availability-state,.pregame-state,.table-sort,th,label{font-size:var(--type-caption)!important;line-height:1.35!important;letter-spacing:.08em}
+button,select,input,summary{font-size:var(--type-small);line-height:1.3}
+table{font-size:var(--type-small)}
+.metric .value{font-size:clamp(28px,2.1vw,38px)!important;line-height:1.05!important;letter-spacing:-.045em}
+
+/* Recent form reads as a compact result sequence, not a row of floating badges. */
+.dashboard-form-row{grid-template-columns:48px minmax(0,1fr)!important;min-height:45px;padding:5px 0!important}
+.dashboard-form-row .form{grid-template-columns:repeat(10,minmax(28px,1fr))!important;gap:6px!important}
+.dashboard-form-row .form:before{display:none!important}
+.dashboard-form-row .pill{width:auto!important;min-width:29px!important;max-width:42px!important;min-height:27px!important;height:27px!important;padding:0 6px!important;border:1px solid color-mix(in srgb,currentColor 36%,transparent)!important;border-radius:999px!important;background:color-mix(in srgb,currentColor 8%,var(--surface))!important;box-shadow:none!important;font-size:var(--type-caption)!important;font-weight:750}
+.dashboard-form-row .pill.OTL{width:auto!important;min-width:36px!important;font-size:var(--type-micro)!important;letter-spacing:0!important}
+.dashboard-form-row>strong{font-size:var(--type-small)!important}
+
+/* News becomes an editorial lead followed by a calm, regular reading grid. */
+.news-feed{display:grid!important;grid-template-columns:repeat(12,minmax(0,1fr))!important;gap:1px!important;background:var(--rule);border-top:1px solid var(--rule);overflow:hidden}
+.news-card{grid-column:span 4!important;display:flex!important;flex-direction:column!important;min-height:310px!important;background:var(--surface)!important;border:0!important;padding:0!important}
+.news-card img{width:100%!important;height:165px!important;min-height:165px!important;object-fit:cover}
+.news-card>div{padding:18px!important;display:flex;flex:1;flex-direction:column}
+.news-card h3{font-size:var(--type-card-title)!important;line-height:1.18!important;letter-spacing:-.025em!important}
+.news-card.lead{grid-column:1/-1!important;display:grid!important;grid-template-columns:minmax(280px,.72fr) minmax(0,1.28fr)!important;min-height:350px!important}
+.news-card.lead img{width:100%!important;height:100%!important;min-height:350px!important}
+.news-card.lead>div{padding:clamp(24px,3vw,48px)!important;justify-content:center}
+.news-card.lead h3{font-size:clamp(28px,3.2vw,48px)!important;line-height:1.04!important;letter-spacing:-.055em!important}
+.news-card .news-meta{margin-top:auto}
+
+/* Tonight comparisons state clearly which team owns each value. */
+.tonight-context-head{padding-top:9px!important;border-top:1px solid var(--rule);border-bottom:1px solid var(--rule);color:var(--ink-soft)}
+.tonight-context-head span,.tonight-context-head strong{font-family:var(--font-data);font-size:var(--type-micro)!important;letter-spacing:.08em;text-transform:uppercase}
+.tonight-context-head strong:nth-child(2){color:var(--away-colour)}
+.tonight-context-head strong:nth-child(3){color:var(--home-colour)}
+
+/* Schedule chapters explain themselves and provide a visible way out. */
+.chapter-nav button{appearance:none;border:0;background:transparent;color:var(--ink-soft);padding:11px 16px;font-weight:700;cursor:pointer;border-radius:999px}
+.chapter-nav button:hover,.chapter-nav button:focus-visible{background:var(--brand-soft);color:var(--brand)}
+.schedule-chapter{scroll-margin-top:150px}
+.schedule-chapter-purpose{max-width:76ch;margin:8px 0 26px;padding:14px 18px;border-left:3px solid var(--brand);background:color-mix(in srgb,var(--brand-soft) 58%,transparent);color:var(--ink-soft)}
+.chapter-return{display:block;margin:28px 0 8px auto;padding:10px 0;border:0;background:transparent;color:var(--brand);font-weight:750;cursor:pointer}
+.chapter-return:hover{text-decoration:underline;text-underline-offset:4px}
+.chart-empty{display:grid;place-items:center;min-height:190px;margin:0!important;padding:28px!important;text-align:center;color:var(--ink-soft);background:color-mix(in srgb,var(--surface-subtle) 72%,transparent);border-left:3px solid var(--rule)}
+
+/* Plotly controls and labels follow the current theme without recolouring data. */
+.modebar{opacity:.52!important;transition:opacity .18s ease}
+.js-plotly-plot:hover .modebar,.modebar:focus-within{opacity:.92!important}
+.modebar-btn{border-radius:7px!important;background:color-mix(in srgb,var(--surface) 86%,transparent)!important}
+.modebar-btn path{fill:var(--ink-soft)!important}
+.modebar-btn:hover path,.modebar-btn:focus path{fill:var(--ink)!important}
+.hoverlayer .hovertext path{fill:var(--surface)!important;stroke:var(--rule)!important}
+.hoverlayer .hovertext text{fill:var(--ink)!important;font-family:var(--font-sans)!important;font-size:12px!important}
+html[data-theme="dark"] .cartesianlayer .gridlayer path,html[data-theme="dark"] .cartesianlayer .zerolinelayer path{stroke:color-mix(in srgb,var(--ink-soft) 28%,transparent)!important}
+html[data-theme="dark"] .xaxislayer-above text,html[data-theme="dark"] .yaxislayer-above text,html[data-theme="dark"] .infolayer text{fill:var(--ink-soft)!important}
+
+/* Player game cards become an editorial report rather than a foreign dashboard. */
+.player-game-centre{border:0!important;background:transparent!important;box-shadow:none!important}
+.player-game-centre>header{padding:18px 0!important;background:transparent!important;color:var(--ink)!important;border-top:1px solid var(--ink);border-bottom:1px solid var(--rule)}
+.player-game-centre>header .section-kicker{color:var(--brand)!important}
+.player-game-note{padding:14px 0!important;background:transparent!important;border-bottom:1px solid var(--rule)}
+.player-game-leaders{display:grid!important;grid-template-columns:repeat(5,minmax(0,1fr))!important;gap:0!important;padding:0!important;background:transparent!important;border-bottom:1px solid var(--rule)}
+.player-game-card{min-width:0!important;padding:20px 16px!important;border:0!important;border-right:1px solid var(--rule)!important;background:transparent!important;box-shadow:none!important}
+.player-game-card:last-child{border-right:0!important}
+.player-game-card:before{top:0!important;left:0!important;right:0!important;width:auto!important;height:3px!important}
+.player-game-card-head span,.player-game-card dt{font-size:var(--type-micro)!important;line-height:1.35!important;letter-spacing:.04em}
+.player-game-card-head strong{font-size:var(--type-body)!important;line-height:1.2!important}
+.player-game-card-head small,.player-game-context span{font-size:var(--type-micro)!important;line-height:1.35!important}
+.player-game-card dd,.player-game-primary>b{font-size:var(--type-caption)!important}
+.player-game-full>summary{background:transparent!important;border-top:1px solid var(--rule);color:var(--ink)!important}
+
+/* Dark mode keeps statistical density but restores separation and readability. */
+html[data-theme="dark"] .metric,html[data-theme="dark"] .tonight-context,html[data-theme="dark"] .schedule-intelligence-status{background:color-mix(in srgb,var(--surface) 92%,var(--brand) 8%)!important}
+html[data-theme="dark"] .metric .value,html[data-theme="dark"] .metric strong,html[data-theme="dark"] .player-game-card strong{color:var(--ink)!important}
+html[data-theme="dark"] .metric .detail,html[data-theme="dark"] .detail-note,html[data-theme="dark"] .chart-empty{color:var(--ink-soft)!important}
+
+@media(max-width:1100px){
+  .news-card{grid-column:span 6!important}.player-game-leaders{grid-template-columns:repeat(3,minmax(0,1fr))!important}
+}
+@media(max-width:700px){
+  :root{--type-body:14px;--type-body-large:16px;--type-card-title:18px;--type-section:22px;--type-page:clamp(38px,13vw,58px)}
+  .title-bar h2,.hero h2,.section-head h2,.dashboard-hero h2{letter-spacing:-.055em!important}
+  .dashboard-form-row{grid-template-columns:34px minmax(0,1fr)!important;min-height:37px!important;padding:3px 0!important}
+  .dashboard-form-row .form{grid-template-columns:repeat(10,minmax(20px,1fr))!important;gap:3px!important}
+  .dashboard-form-row .pill{min-width:23px!important;min-height:23px!important;height:23px!important;padding:0 3px!important;font-size:9px!important}
+  .dashboard-form-row .pill.OTL{min-width:29px!important;font-size:7px!important}
+  .news-card,.news-card.lead{grid-column:1/-1!important;display:flex!important;min-height:0!important}
+  .news-card img,.news-card.lead img{height:190px!important;min-height:190px!important}
+  .news-card.lead h3{font-size:27px!important;line-height:1.08!important}
+  .news-card.lead>div{padding:20px!important}
+  .chapter-nav{display:grid;grid-template-columns:1fr;gap:4px}.chapter-nav button{text-align:left}
+  .player-game-leaders{grid-template-columns:repeat(2,minmax(0,1fr))!important}
+}
+@media(max-width:480px){.player-game-leaders{grid-template-columns:1fr!important}.player-game-card{border-right:0!important;border-bottom:1px solid var(--rule)!important}}

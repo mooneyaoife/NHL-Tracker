@@ -14,7 +14,7 @@
   <script>document.documentElement.dataset.theme=localStorage.getItem("nhl-theme")||"light"</script>
   <link rel="stylesheet" href="styles.css?v=6.0.0">
   <link rel="stylesheet" href="theme-569.css?v=6.0.0">
-  <link rel="stylesheet" href="design-system.css?v=6.1.2">
+  <link rel="stylesheet" href="design-system.css?v=6.2.0">
   <script src="vendor/plotly-2.35.2.min.js"></script>
 </head>
 <body>
@@ -47,7 +47,6 @@
     <div id="team-cards" class="grid four team-card-grid"></div>
     <div class="grid two dashboard-summary"><article class="panel"><h3>Performance map</h3><div id="dashboard-points" class="chart"></div></article><article class="panel"><h3>Recent form</h3><div id="recent-form"></div><h3 class="subheading">Team leaders</h3><div id="dashboard-leaders"></div></article></div><section id="dashboard-league-tonight" class="dashboard-league-tonight" hidden></section>
     <details class="expandable" open><summary>Division races through the season</summary><p class="detail-note">Each highlighted team is compared with every club in its division.</p><div id="division-race-charts" class="grid two"></div></details>
-    <details class="expandable"><summary>Season stories</summary><div id="dashboard-stories" class="grid two"></div></details>
     <details class="expandable"><summary>Recent results</summary><div id="dashboard-results" class="table-wrap"></div></details>
     <div id="today-cards" hidden></div><div id="today-teams" hidden></div><div id="today-glance" hidden></div>
   </section>
@@ -63,7 +62,7 @@
 
   <section id="schedule" class="page">
     <div class="title-bar"><h2>Schedule</h2></div>
-    <nav class="chapter-nav" aria-label="Schedule chapters"><a href="#schedule-calendar-chapter">Calendar</a><a href="#schedule-intelligence-chapter">Season shape</a><a href="#schedule-release-chapter">Publication status</a></nav>
+    <nav id="schedule-chapter-nav" class="chapter-nav" aria-label="Schedule chapters"><button type="button" data-schedule-target="schedule-calendar-chapter">Calendar</button><button type="button" data-schedule-target="schedule-intelligence-chapter">Season shape</button><button type="button" data-schedule-target="schedule-release-chapter">Publication status</button></nav>
     <section id="schedule-calendar-chapter" class="schedule-chapter">
       <div class="story-chapter"><span>Chapter one</span><strong>Calendar</strong><em>Every game in UK time</em></div>
     <div class="control-row calendar-controls"><label for="calendar-team">Show games for</label><select id="calendar-team"></select><label for="calendar-month">Month</label><select id="calendar-month" aria-label="Calendar month"></select><p>All times shown automatically in the UK.</p></div>
@@ -73,11 +72,15 @@
     </section>
     <section id="schedule-intelligence-chapter" class="schedule-chapter">
       <div class="story-chapter"><span>Chapter two</span><strong>Season shape</strong><em>Density, travel and competitive difficulty</em></div>
+      <p class="schedule-chapter-purpose"><strong>What this is for:</strong> a planning view of workload, difficult stretches, rest and opponent strength after enough of the regular-season schedule has been published.</p>
       <section class="schedule-intelligence"><header><div><span class="section-kicker">Season analysis</span><h3>How the year unfolds</h3></div><label>Focus<select id="schedule-intelligence-team"><option value="ALL">All followed teams</option></select></label></header><div id="schedule-intelligence-status" class="schedule-intelligence-status"></div><div id="schedule-intelligence-summary" class="grid four"></div><div class="grid two schedule-intelligence-charts"><article class="panel visual-panel"><h3>Monthly rhythm</h3><p class="detail-note">Regular-season games scheduled by month.</p><div id="schedule-density-chart" class="chart"></div></article><article class="panel visual-panel"><h3>Strength of path</h3><p class="detail-note">Average opponent points percentage using the latest complete evidence available.</p><div id="schedule-difficulty-chart" class="chart"></div></article></div><div class="grid two schedule-intelligence-details"><article class="panel"><h3>Dates worth circling</h3><div id="schedule-key-dates"></div></article><article class="panel"><h3>Demanding stretches</h3><div id="schedule-stretches"></div></article></div><div class="section-label schedule-roadmap-heading">Season roadmap</div><div class="schedule-roadmap"><article class="panel visual-panel schedule-roadmap-timeline"><h3>Difficulty over time</h3><p class="detail-note">Average opponent points percentage across each 10-game window.</p><div id="schedule-strength-timeline" class="chart"></div></article><div class="grid two schedule-roadmap-lower"><article class="panel visual-panel"><h3>Rest balance by month</h3><p class="detail-note">Rest advantages minus rest deficits. Positive values favour the selected team.</p><div id="schedule-rest-heatmap" class="chart"></div></article><article class="panel"><h3>Key 10-game windows</h3><div id="schedule-window-list"></div></article></div></div></section>
+      <button type="button" class="chapter-return" data-schedule-target="schedule-chapter-nav">Back to schedule sections ↑</button>
     </section>
     <section id="schedule-release-chapter" class="schedule-chapter release-chapter">
       <div class="story-chapter future-season-chapter"><span>Separate timeline</span><strong>Next season</strong><em>Publication monitoring only — never mixed with the archive</em></div>
+      <p class="schedule-chapter-purpose"><strong>What this is for:</strong> an automatic monitor that confirms when the NHL has published a complete future schedule and records later date or time changes. It never mixes future fixtures into the selected season.</p>
       <section class="schedule-release-centre"><header><div><span class="section-kicker">Publication monitor</span><h3>Schedule release status</h3></div><span id="schedule-release-season"></span></header><div id="schedule-release-status"></div><div id="schedule-release-teams" class="schedule-release-teams"></div><details id="schedule-release-details"><summary>View release details</summary><div class="grid two schedule-release-detail-grid"><article class="panel"><h3>Opening dates</h3><div id="schedule-release-openers"></div></article><article class="panel"><h3>Publication changes</h3><div id="schedule-release-changes"></div></article></div></details></section>
+      <button type="button" class="chapter-return" data-schedule-target="schedule-chapter-nav">Back to schedule sections ↑</button>
     </section>
   </section>
 
@@ -212,5 +215,5 @@
 </main>
 <footer><div class="footer-links"><button data-page="watchlist" id="footer-install-link">Install app</button><button data-page="watchlist">Settings</button><button data-page="guide">Stat Guide</button><a href="https://moneypuck.com/data.htm" target="_blank" rel="noopener">Data sources</a><button data-page="status">Status</button></div><p>NHL Tracker · Unofficial, non-commercial fan project using public NHL data</p></footer>
 <aside id="app-update" class="app-update" role="status" hidden><span>A fresh version of NHL Tracker is ready.</span><button id="app-update-button" type="button">Update now</button></aside>
-  <script src="app.js?v=6.1.2"></script>
+  <script src="app.js?v=6.2.0"></script>
 </body></html>
