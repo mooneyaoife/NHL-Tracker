@@ -10,1273 +10,1095 @@ COLOR:#F74902
 REFRESH-INTERVAL;VALUE=DURATION:PT6H
 X-PUBLISHED-TTL:PT6H
 BEGIN:VEVENT
-UID:nhl-2025010008@mooneyaoife.github.io
-DTSTAMP:20260716T125159Z
-DTSTART:20250921T230000Z
-DTEND:20250922T020000Z
-SUMMARY:Final: Philadelphia Flyers 3 - 2 New York Islanders
-DESCRIPTION:Preseason. Times display in your calendar's local time. Open 
- the NHL Tracker Game Centre for scores\, analytics and game details.
-LOCATION:UBS Arena
-URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2025010008#
- games
-END:VEVENT
-BEGIN:VEVENT
-UID:nhl-2025010026@mooneyaoife.github.io
-DTSTAMP:20260716T125159Z
-DTSTART:20250923T230000Z
-DTEND:20250924T020000Z
-SUMMARY:Final: Philadelphia Flyers 2 - 4 Montréal Canadiens
-DESCRIPTION:Preseason. Times display in your calendar's local time. Open 
- the NHL Tracker Game Centre for scores\, analytics and game details.
-LOCATION:Centre Bell
-URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2025010026#
- games
-END:VEVENT
-BEGIN:VEVENT
-UID:nhl-2025010036@mooneyaoife.github.io
-DTSTAMP:20260716T125159Z
-DTSTART:20250925T230000Z
-DTEND:20250926T020000Z
-SUMMARY:Final: Philadelphia Flyers 1 - 5 Washington Capitals
-DESCRIPTION:Preseason. Times display in your calendar's local time. Open 
- the NHL Tracker Game Centre for scores\, analytics and game details.
-LOCATION:Giant Center
-URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2025010036#
- games
-END:VEVENT
-BEGIN:VEVENT
-UID:nhl-2025010047@mooneyaoife.github.io
-DTSTAMP:20260716T125159Z
-DTSTART:20250927T210000Z
-DTEND:20250928T000000Z
-SUMMARY:Final: Boston Bruins 4 - 3 Philadelphia Flyers
-DESCRIPTION:Preseason. Times display in your calendar's local time. Open 
- the NHL Tracker Game Centre for scores\, analytics and game details.
-LOCATION:Xfinity Mobile Arena
-URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2025010047#
- games
-END:VEVENT
-BEGIN:VEVENT
-UID:nhl-2025010063@mooneyaoife.github.io
-DTSTAMP:20260716T125159Z
-DTSTART:20250929T230000Z
-DTEND:20250930T020000Z
-SUMMARY:Final: Philadelphia Flyers 3 - 2 Boston Bruins
-DESCRIPTION:Preseason. Times display in your calendar's local time. Open 
- the NHL Tracker Game Centre for scores\, analytics and game details.
-LOCATION:TD Garden
-URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2025010063#
- games
-END:VEVENT
-BEGIN:VEVENT
-UID:nhl-2025010083@mooneyaoife.github.io
-DTSTAMP:20260716T125159Z
-DTSTART:20251002T230000Z
-DTEND:20251003T020000Z
-SUMMARY:Final: New York Islanders 4 - 3 Philadelphia Flyers
-DESCRIPTION:Preseason. Times display in your calendar's local time. Open 
- the NHL Tracker Game Centre for scores\, analytics and game details.
-LOCATION:Xfinity Mobile Arena
-URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2025010083#
- games
-END:VEVENT
-BEGIN:VEVENT
-UID:nhl-2025010094@mooneyaoife.github.io
-DTSTAMP:20260716T125159Z
-DTSTART:20251004T163000Z
-DTEND:20251004T193000Z
-SUMMARY:Final: New Jersey Devils 3 - 4 Philadelphia Flyers
-DESCRIPTION:Preseason. Times display in your calendar's local time. Open 
- the NHL Tracker Game Centre for scores\, analytics and game details.
-LOCATION:Xfinity Mobile Arena
-URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2025010094#
- games
-END:VEVENT
-BEGIN:VEVENT
-UID:nhl-2025020012@mooneyaoife.github.io
-DTSTAMP:20260716T125159Z
-DTSTART:20251009T230000Z
-DTEND:20251010T020000Z
-SUMMARY:Final: Philadelphia Flyers 1 - 2 Florida Panthers
-DESCRIPTION:Regular season. Times display in your calendar's local time. 
- Open the NHL Tracker Game Centre for scores\, analytics and game details
- .
-LOCATION:Amerant Bank Arena
-URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2025020012#
- games
-END:VEVENT
-BEGIN:VEVENT
-UID:nhl-2025020030@mooneyaoife.github.io
-DTSTAMP:20260716T125159Z
-DTSTART:20251011T230000Z
-DTEND:20251012T020000Z
-SUMMARY:Final: Philadelphia Flyers 3 - 4 Carolina Hurricanes
-DESCRIPTION:Regular season. Times display in your calendar's local time. 
- Open the NHL Tracker Game Centre for scores\, analytics and game details
- .
-LOCATION:Lenovo Center
-URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2025020030#
- games
-END:VEVENT
-BEGIN:VEVENT
-UID:nhl-2025020044@mooneyaoife.github.io
-DTSTAMP:20260716T125159Z
-DTSTART:20251013T230000Z
-DTEND:20251014T020000Z
-SUMMARY:Final: Florida Panthers 2 - 5 Philadelphia Flyers
+UID:nhl-2026020006@mooneyaoife.github.io
+DTSTAMP:20260716T181958Z
+DTSTART:20260930T233000Z
+DTEND:20261001T023000Z
+SUMMARY:Pittsburgh Penguins at Philadelphia Flyers
 DESCRIPTION:Regular season. Times display in your calendar's local time. 
  Open the NHL Tracker Game Centre for scores\, analytics and game details
  .
 LOCATION:Xfinity Mobile Arena
-URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2025020044#
+URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2026020006#
  games
 END:VEVENT
 BEGIN:VEVENT
-UID:nhl-2025020066@mooneyaoife.github.io
-DTSTAMP:20260716T125159Z
-DTSTART:20251016T230000Z
-DTEND:20251017T020000Z
-SUMMARY:Final: Winnipeg Jets 5 - 2 Philadelphia Flyers
+UID:nhl-2026020009@mooneyaoife.github.io
+DTSTAMP:20260716T181958Z
+DTSTART:20261001T230000Z
+DTEND:20261002T020000Z
+SUMMARY:Philadelphia Flyers at New Jersey Devils
+DESCRIPTION:Regular season. Times display in your calendar's local time. 
+ Open the NHL Tracker Game Centre for scores\, analytics and game details
+ .
+LOCATION:Prudential Center
+URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2026020009#
+ games
+END:VEVENT
+BEGIN:VEVENT
+UID:nhl-2026020025@mooneyaoife.github.io
+DTSTAMP:20260716T181958Z
+DTSTART:20261003T230000Z
+DTEND:20261004T020000Z
+SUMMARY:Carolina Hurricanes at Philadelphia Flyers
 DESCRIPTION:Regular season. Times display in your calendar's local time. 
  Open the NHL Tracker Game Centre for scores\, analytics and game details
  .
 LOCATION:Xfinity Mobile Arena
-URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2025020066#
+URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2026020025#
  games
 END:VEVENT
 BEGIN:VEVENT
-UID:nhl-2025020081@mooneyaoife.github.io
-DTSTAMP:20260716T125159Z
-DTSTART:20251018T230000Z
-DTEND:20251019T020000Z
-SUMMARY:Final: Minnesota Wild 1 - 2 Philadelphia Flyers
-DESCRIPTION:Regular season. Times display in your calendar's local time. 
- Open the NHL Tracker Game Centre for scores\, analytics and game details
- .
-LOCATION:Xfinity Mobile Arena
-URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2025020081#
- games
-END:VEVENT
-BEGIN:VEVENT
-UID:nhl-2025020094@mooneyaoife.github.io
-DTSTAMP:20260716T125159Z
-DTSTART:20251020T230000Z
-DTEND:20251021T020000Z
-SUMMARY:Final: Seattle Kraken 2 - 5 Philadelphia Flyers
-DESCRIPTION:Regular season. Times display in your calendar's local time. 
- Open the NHL Tracker Game Centre for scores\, analytics and game details
- .
-LOCATION:Xfinity Mobile Arena
-URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2025020094#
- games
-END:VEVENT
-BEGIN:VEVENT
-UID:nhl-2025020112@mooneyaoife.github.io
-DTSTAMP:20260716T125159Z
-DTSTART:20251023T230000Z
-DTEND:20251024T020000Z
-SUMMARY:Final: Philadelphia Flyers 1 - 2 Ottawa Senators
-DESCRIPTION:Regular season. Times display in your calendar's local time. 
- Open the NHL Tracker Game Centre for scores\, analytics and game details
- .
-LOCATION:Canadian Tire Centre
-URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2025020112#
- games
-END:VEVENT
-BEGIN:VEVENT
-UID:nhl-2025020127@mooneyaoife.github.io
-DTSTAMP:20260716T125159Z
-DTSTART:20251025T163000Z
-DTEND:20251025T193000Z
-SUMMARY:Final: New York Islanders 3 - 4 Philadelphia Flyers
-DESCRIPTION:Regular season. Times display in your calendar's local time. 
- Open the NHL Tracker Game Centre for scores\, analytics and game details
- .
-LOCATION:Xfinity Mobile Arena
-URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2025020127#
- games
-END:VEVENT
-BEGIN:VEVENT
-UID:nhl-2025020150@mooneyaoife.github.io
-DTSTAMP:20260716T125159Z
-DTSTART:20251028T220000Z
-DTEND:20251029T010000Z
-SUMMARY:Final: Pittsburgh Penguins 2 - 3 Philadelphia Flyers
-DESCRIPTION:Regular season. Times display in your calendar's local time. 
- Open the NHL Tracker Game Centre for scores\, analytics and game details
- .
-LOCATION:Xfinity Mobile Arena
-URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2025020150#
- games
-END:VEVENT
-BEGIN:VEVENT
-UID:nhl-2025020170@mooneyaoife.github.io
-DTSTAMP:20260716T125159Z
-DTSTART:20251030T230000Z
-DTEND:20251031T020000Z
-SUMMARY:Final: Nashville Predators 1 - 4 Philadelphia Flyers
-DESCRIPTION:Regular season. Times display in your calendar's local time. 
- Open the NHL Tracker Game Centre for scores\, analytics and game details
- .
-LOCATION:Xfinity Mobile Arena
-URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2025020170#
- games
-END:VEVENT
-BEGIN:VEVENT
-UID:nhl-2025020188@mooneyaoife.github.io
-DTSTAMP:20260716T125159Z
-DTSTART:20251101T230000Z
-DTEND:20251102T020000Z
-SUMMARY:Final: Toronto Maple Leafs 5 - 2 Philadelphia Flyers
-DESCRIPTION:Regular season. Times display in your calendar's local time. 
- Open the NHL Tracker Game Centre for scores\, analytics and game details
- .
-LOCATION:Xfinity Mobile Arena
-URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2025020188#
- games
-END:VEVENT
-BEGIN:VEVENT
-UID:nhl-2025020196@mooneyaoife.github.io
-DTSTAMP:20260716T125159Z
-DTSTART:20251103T000000Z
-DTEND:20251103T030000Z
-SUMMARY:Final: Calgary Flames 2 - 1 Philadelphia Flyers
-DESCRIPTION:Regular season. Times display in your calendar's local time. 
- Open the NHL Tracker Game Centre for scores\, analytics and game details
- .
-LOCATION:Xfinity Mobile Arena
-URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2025020196#
- games
-END:VEVENT
-BEGIN:VEVENT
-UID:nhl-2025020204@mooneyaoife.github.io
-DTSTAMP:20260716T125159Z
-DTSTART:20251105T000000Z
-DTEND:20251105T030000Z
-SUMMARY:Final: Philadelphia Flyers 5 - 4 Montréal Canadiens
-DESCRIPTION:Regular season. Times display in your calendar's local time. 
- Open the NHL Tracker Game Centre for scores\, analytics and game details
- .
-LOCATION:Centre Bell
-URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2025020204#
- games
-END:VEVENT
-BEGIN:VEVENT
-UID:nhl-2025020223@mooneyaoife.github.io
-DTSTAMP:20260716T125159Z
-DTSTART:20251107T010000Z
-DTEND:20251107T040000Z
-SUMMARY:Final: Philadelphia Flyers 3 - 1 Nashville Predators
-DESCRIPTION:Regular season. Times display in your calendar's local time. 
- Open the NHL Tracker Game Centre for scores\, analytics and game details
- .
-LOCATION:Bridgestone Arena
-URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2025020223#
- games
-END:VEVENT
-BEGIN:VEVENT
-UID:nhl-2025020232@mooneyaoife.github.io
-DTSTAMP:20260716T125159Z
-DTSTART:20251108T180000Z
-DTEND:20251108T210000Z
-SUMMARY:Final: Ottawa Senators 3 - 2 Philadelphia Flyers
-DESCRIPTION:Regular season. Times display in your calendar's local time. 
- Open the NHL Tracker Game Centre for scores\, analytics and game details
- .
-LOCATION:Xfinity Mobile Arena
-URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2025020232#
- games
-END:VEVENT
-BEGIN:VEVENT
-UID:nhl-2025020266@mooneyaoife.github.io
-DTSTAMP:20260716T125159Z
-DTSTART:20251113T003000Z
-DTEND:20251113T033000Z
-SUMMARY:Final: Edmonton Oilers 2 - 1 Philadelphia Flyers
-DESCRIPTION:Regular season. Times display in your calendar's local time. 
- Open the NHL Tracker Game Centre for scores\, analytics and game details
- .
-LOCATION:Xfinity Mobile Arena
-URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2025020266#
- games
-END:VEVENT
-BEGIN:VEVENT
-UID:nhl-2025020280@mooneyaoife.github.io
-DTSTAMP:20260716T125159Z
-DTSTART:20251115T010000Z
-DTEND:20251115T040000Z
-SUMMARY:Final: Philadelphia Flyers 6 - 5 St. Louis Blues
-DESCRIPTION:Regular season. Times display in your calendar's local time. 
- Open the NHL Tracker Game Centre for scores\, analytics and game details
- .
-LOCATION:Enterprise Center
-URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2025020280#
- games
-END:VEVENT
-BEGIN:VEVENT
-UID:nhl-2025020293@mooneyaoife.github.io
-DTSTAMP:20260716T125159Z
-DTSTART:20251116T010000Z
-DTEND:20251116T040000Z
-SUMMARY:Final: Philadelphia Flyers 1 - 5 Dallas Stars
-DESCRIPTION:Regular season. Times display in your calendar's local time. 
- Open the NHL Tracker Game Centre for scores\, analytics and game details
- .
-LOCATION:American Airlines Center
-URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2025020293#
- games
-END:VEVENT
-BEGIN:VEVENT
-UID:nhl-2025020324@mooneyaoife.github.io
-DTSTAMP:20260716T125159Z
-DTSTART:20251121T000000Z
-DTEND:20251121T030000Z
-SUMMARY:Final: St. Louis Blues 2 - 3 Philadelphia Flyers
-DESCRIPTION:Regular season. Times display in your calendar's local time. 
- Open the NHL Tracker Game Centre for scores\, analytics and game details
- .
-LOCATION:Xfinity Mobile Arena
-URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2025020324#
- games
-END:VEVENT
-BEGIN:VEVENT
-UID:nhl-2025020339@mooneyaoife.github.io
-DTSTAMP:20260716T125159Z
-DTSTART:20251123T000000Z
-DTEND:20251123T030000Z
-SUMMARY:Final: New Jersey Devils 3 - 6 Philadelphia Flyers
-DESCRIPTION:Regular season. Times display in your calendar's local time. 
- Open the NHL Tracker Game Centre for scores\, analytics and game details
- .
-LOCATION:Xfinity Mobile Arena
-URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2025020339#
- games
-END:VEVENT
-BEGIN:VEVENT
-UID:nhl-2025020353@mooneyaoife.github.io
-DTSTAMP:20260716T125159Z
-DTSTART:20251125T000000Z
-DTEND:20251125T030000Z
-SUMMARY:Final: Philadelphia Flyers 0 - 3 Tampa Bay Lightning
+UID:nhl-2026020040@mooneyaoife.github.io
+DTSTAMP:20260716T181958Z
+DTSTART:20261005T230000Z
+DTEND:20261006T020000Z
+SUMMARY:Philadelphia Flyers at Tampa Bay Lightning
 DESCRIPTION:Regular season. Times display in your calendar's local time. 
  Open the NHL Tracker Game Centre for scores\, analytics and game details
  .
 LOCATION:Benchmark International Arena
-URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2025020353#
+URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2026020040#
  games
 END:VEVENT
 BEGIN:VEVENT
-UID:nhl-2025020363@mooneyaoife.github.io
-DTSTAMP:20260716T125159Z
-DTSTART:20251127T000000Z
-DTEND:20251127T030000Z
-SUMMARY:Final: Philadelphia Flyers 4 - 2 Florida Panthers
+UID:nhl-2026020059@mooneyaoife.github.io
+DTSTAMP:20260716T181958Z
+DTSTART:20261008T230000Z
+DTEND:20261009T020000Z
+SUMMARY:Philadelphia Flyers at Ottawa Senators
 DESCRIPTION:Regular season. Times display in your calendar's local time. 
  Open the NHL Tracker Game Centre for scores\, analytics and game details
  .
-LOCATION:Amerant Bank Arena
-URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2025020363#
+LOCATION:Canadian Tire Centre
+URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2026020059#
  games
 END:VEVENT
 BEGIN:VEVENT
-UID:nhl-2025020381@mooneyaoife.github.io
-DTSTAMP:20260716T125159Z
-DTSTART:20251128T210000Z
-DTEND:20251129T000000Z
-SUMMARY:Final: Philadelphia Flyers 4 - 3 New York Islanders
-DESCRIPTION:Regular season. Times display in your calendar's local time. 
- Open the NHL Tracker Game Centre for scores\, analytics and game details
- .
-LOCATION:UBS Arena
-URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2025020381#
- games
-END:VEVENT
-BEGIN:VEVENT
-UID:nhl-2025020395@mooneyaoife.github.io
-DTSTAMP:20260716T125159Z
-DTSTART:20251130T000000Z
-DTEND:20251130T030000Z
-SUMMARY:Final: Philadelphia Flyers 5 - 3 New Jersey Devils
-DESCRIPTION:Regular season. Times display in your calendar's local time. 
- Open the NHL Tracker Game Centre for scores\, analytics and game details
- .
-LOCATION:Prudential Center
-URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2025020395#
- games
-END:VEVENT
-BEGIN:VEVENT
-UID:nhl-2025020407@mooneyaoife.github.io
-DTSTAMP:20260716T125159Z
-DTSTART:20251202T000000Z
-DTEND:20251202T030000Z
-SUMMARY:Final: Pittsburgh Penguins 5 - 1 Philadelphia Flyers
-DESCRIPTION:Regular season. Times display in your calendar's local time. 
- Open the NHL Tracker Game Centre for scores\, analytics and game details
- .
-LOCATION:Xfinity Mobile Arena
-URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2025020407#
- games
-END:VEVENT
-BEGIN:VEVENT
-UID:nhl-2025020423@mooneyaoife.github.io
-DTSTAMP:20260716T125159Z
-DTSTART:20251204T003000Z
-DTEND:20251204T033000Z
-SUMMARY:Final: Buffalo Sabres 2 - 5 Philadelphia Flyers
-DESCRIPTION:Regular season. Times display in your calendar's local time. 
- Open the NHL Tracker Game Centre for scores\, analytics and game details
- .
-LOCATION:Xfinity Mobile Arena
-URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2025020423#
- games
-END:VEVENT
-BEGIN:VEVENT
-UID:nhl-2025020453@mooneyaoife.github.io
-DTSTAMP:20260716T125159Z
-DTSTART:20251207T180000Z
-DTEND:20251207T210000Z
-SUMMARY:Final: Colorado Avalanche 3 - 2 Philadelphia Flyers
-DESCRIPTION:Regular season. Times display in your calendar's local time. 
- Open the NHL Tracker Game Centre for scores\, analytics and game details
- .
-LOCATION:Xfinity Mobile Arena
-URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2025020453#
- games
-END:VEVENT
-BEGIN:VEVENT
-UID:nhl-2025020469@mooneyaoife.github.io
-DTSTAMP:20260716T125159Z
-DTSTART:20251210T000000Z
-DTEND:20251210T030000Z
-SUMMARY:Final: San Jose Sharks 1 - 4 Philadelphia Flyers
-DESCRIPTION:Regular season. Times display in your calendar's local time. 
- Open the NHL Tracker Game Centre for scores\, analytics and game details
- .
-LOCATION:Xfinity Mobile Arena
-URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2025020469#
- games
-END:VEVENT
-BEGIN:VEVENT
-UID:nhl-2025020483@mooneyaoife.github.io
-DTSTAMP:20260716T125159Z
-DTSTART:20251212T000000Z
-DTEND:20251212T030000Z
-SUMMARY:Final: Vegas Golden Knights 3 - 2 Philadelphia Flyers
-DESCRIPTION:Regular season. Times display in your calendar's local time. 
- Open the NHL Tracker Game Centre for scores\, analytics and game details
- .
-LOCATION:Xfinity Mobile Arena
-URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2025020483#
- games
-END:VEVENT
-BEGIN:VEVENT
-UID:nhl-2025020501@mooneyaoife.github.io
-DTSTAMP:20260716T125159Z
-DTSTART:20251214T000000Z
-DTEND:20251214T030000Z
-SUMMARY:Final: Carolina Hurricanes 4 - 3 Philadelphia Flyers
-DESCRIPTION:Regular season. Times display in your calendar's local time. 
- Open the NHL Tracker Game Centre for scores\, analytics and game details
- .
-LOCATION:Xfinity Mobile Arena
-URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2025020501#
- games
-END:VEVENT
-BEGIN:VEVENT
-UID:nhl-2025020510@mooneyaoife.github.io
-DTSTAMP:20260716T125159Z
-DTSTART:20251214T220000Z
-DTEND:20251215T010000Z
-SUMMARY:Final: Philadelphia Flyers 2 - 3 Carolina Hurricanes
-DESCRIPTION:Regular season. Times display in your calendar's local time. 
- Open the NHL Tracker Game Centre for scores\, analytics and game details
- .
-LOCATION:Lenovo Center
-URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2025020510#
- games
-END:VEVENT
-BEGIN:VEVENT
-UID:nhl-2025020521@mooneyaoife.github.io
-DTSTAMP:20260716T125159Z
-DTSTART:20251217T000000Z
-DTEND:20251217T030000Z
-SUMMARY:Final: Philadelphia Flyers 4 - 1 Montréal Canadiens
-DESCRIPTION:Regular season. Times display in your calendar's local time. 
- Open the NHL Tracker Game Centre for scores\, analytics and game details
- .
-LOCATION:Centre Bell
-URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2025020521#
- games
-END:VEVENT
-BEGIN:VEVENT
-UID:nhl-2025020535@mooneyaoife.github.io
-DTSTAMP:20260716T125159Z
-DTSTART:20251219T003000Z
-DTEND:20251219T033000Z
-SUMMARY:Final: Philadelphia Flyers 3 - 5 Buffalo Sabres
-DESCRIPTION:Regular season. Times display in your calendar's local time. 
- Open the NHL Tracker Game Centre for scores\, analytics and game details
- .
-LOCATION:KeyBank Center
-URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2025020535#
- games
-END:VEVENT
-BEGIN:VEVENT
-UID:nhl-2025020549@mooneyaoife.github.io
-DTSTAMP:20260716T125159Z
-DTSTART:20251220T173000Z
-DTEND:20251220T203000Z
-SUMMARY:Final: Philadelphia Flyers 4 - 5 New York Rangers
-DESCRIPTION:Regular season. Times display in your calendar's local time. 
- Open the NHL Tracker Game Centre for scores\, analytics and game details
- .
-LOCATION:Madison Square Garden
-URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2025020549#
- games
-END:VEVENT
-BEGIN:VEVENT
-UID:nhl-2025020572@mooneyaoife.github.io
-DTSTAMP:20260716T125159Z
-DTSTART:20251223T003000Z
-DTEND:20251223T033000Z
-SUMMARY:Final: Vancouver Canucks 2 - 5 Philadelphia Flyers
-DESCRIPTION:Regular season. Times display in your calendar's local time. 
- Open the NHL Tracker Game Centre for scores\, analytics and game details
- .
-LOCATION:Xfinity Mobile Arena
-URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2025020572#
- games
-END:VEVENT
-BEGIN:VEVENT
-UID:nhl-2025020583@mooneyaoife.github.io
-DTSTAMP:20260716T125159Z
-DTSTART:20251224T020000Z
-DTEND:20251224T050000Z
-SUMMARY:Final: Philadelphia Flyers 3 - 1 Chicago Blackhawks
-DESCRIPTION:Regular season. Times display in your calendar's local time. 
- Open the NHL Tracker Game Centre for scores\, analytics and game details
- .
-LOCATION:United Center
-URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2025020583#
- games
-END:VEVENT
-BEGIN:VEVENT
-UID:nhl-2025020605@mooneyaoife.github.io
-DTSTAMP:20260716T125159Z
-DTSTART:20251229T010000Z
-DTEND:20251229T040000Z
-SUMMARY:Final: Philadelphia Flyers 1 - 4 Seattle Kraken
-DESCRIPTION:Regular season. Times display in your calendar's local time. 
- Open the NHL Tracker Game Centre for scores\, analytics and game details
- .
-LOCATION:Climate Pledge Arena
-URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2025020605#
- games
-END:VEVENT
-BEGIN:VEVENT
-UID:nhl-2025020621@mooneyaoife.github.io
-DTSTAMP:20260716T125159Z
-DTSTART:20251231T030000Z
-DTEND:20251231T060000Z
-SUMMARY:Final: Philadelphia Flyers 6 - 3 Vancouver Canucks
-DESCRIPTION:Regular season. Times display in your calendar's local time. 
- Open the NHL Tracker Game Centre for scores\, analytics and game details
- .
-LOCATION:Rogers Arena
-URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2025020621#
- games
-END:VEVENT
-BEGIN:VEVENT
-UID:nhl-2025020630@mooneyaoife.github.io
-DTSTAMP:20260716T125159Z
-DTSTART:20260101T023000Z
-DTEND:20260101T053000Z
-SUMMARY:Final: Philadelphia Flyers 1 - 5 Calgary Flames
-DESCRIPTION:Regular season. Times display in your calendar's local time. 
- Open the NHL Tracker Game Centre for scores\, analytics and game details
- .
-LOCATION:Scotiabank Saddledome
-URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2025020630#
- games
-END:VEVENT
-BEGIN:VEVENT
-UID:nhl-2025020647@mooneyaoife.github.io
-DTSTAMP:20260716T125159Z
-DTSTART:20260103T203000Z
-DTEND:20260103T233000Z
-SUMMARY:Final: Philadelphia Flyers 5 - 2 Edmonton Oilers
-DESCRIPTION:Regular season. Times display in your calendar's local time. 
- Open the NHL Tracker Game Centre for scores\, analytics and game details
- .
-LOCATION:Rogers Place
-URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2025020647#
- games
-END:VEVENT
-BEGIN:VEVENT
-UID:nhl-2025020670@mooneyaoife.github.io
-DTSTAMP:20260716T125159Z
-DTSTART:20260107T000000Z
-DTEND:20260107T030000Z
-SUMMARY:Final: Anaheim Ducks 2 - 5 Philadelphia Flyers
-DESCRIPTION:Regular season. Times display in your calendar's local time. 
- Open the NHL Tracker Game Centre for scores\, analytics and game details
- .
-LOCATION:Xfinity Mobile Arena
-URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2025020670#
- games
-END:VEVENT
-BEGIN:VEVENT
-UID:nhl-2025020686@mooneyaoife.github.io
-DTSTAMP:20260716T125159Z
-DTSTART:20260109T000000Z
-DTEND:20260109T030000Z
-SUMMARY:Final: Toronto Maple Leafs 2 - 1 Philadelphia Flyers
-DESCRIPTION:Regular season. Times display in your calendar's local time. 
- Open the NHL Tracker Game Centre for scores\, analytics and game details
- .
-LOCATION:Xfinity Mobile Arena
-URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2025020686#
- games
-END:VEVENT
-BEGIN:VEVENT
-UID:nhl-2025020705@mooneyaoife.github.io
-DTSTAMP:20260716T125159Z
-DTSTART:20260111T000000Z
-DTEND:20260111T030000Z
-SUMMARY:Final: Tampa Bay Lightning 7 - 2 Philadelphia Flyers
-DESCRIPTION:Regular season. Times display in your calendar's local time. 
- Open the NHL Tracker Game Centre for scores\, analytics and game details
- .
-LOCATION:Xfinity Mobile Arena
-URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2025020705#
- games
-END:VEVENT
-BEGIN:VEVENT
-UID:nhl-2025020719@mooneyaoife.github.io
-DTSTAMP:20260716T125159Z
-DTSTART:20260113T000000Z
-DTEND:20260113T030000Z
-SUMMARY:Final: Tampa Bay Lightning 5 - 1 Philadelphia Flyers
-DESCRIPTION:Regular season. Times display in your calendar's local time. 
- Open the NHL Tracker Game Centre for scores\, analytics and game details
- .
-LOCATION:Xfinity Mobile Arena
-URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2025020719#
- games
-END:VEVENT
-BEGIN:VEVENT
-UID:nhl-2025020736@mooneyaoife.github.io
-DTSTAMP:20260716T125159Z
-DTSTART:20260115T003000Z
-DTEND:20260115T033000Z
-SUMMARY:Final: Philadelphia Flyers 2 - 5 Buffalo Sabres
-DESCRIPTION:Regular season. Times display in your calendar's local time. 
- Open the NHL Tracker Game Centre for scores\, analytics and game details
- .
-LOCATION:KeyBank Center
-URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2025020736#
- games
-END:VEVENT
-BEGIN:VEVENT
-UID:nhl-2025020741@mooneyaoife.github.io
-DTSTAMP:20260716T125159Z
-DTSTART:20260116T000000Z
-DTEND:20260116T030000Z
-SUMMARY:Final: Philadelphia Flyers 3 - 6 Pittsburgh Penguins
-DESCRIPTION:Regular season. Times display in your calendar's local time. 
- Open the NHL Tracker Game Centre for scores\, analytics and game details
- .
-LOCATION:PPG Paints Arena
-URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2025020741#
- games
-END:VEVENT
-BEGIN:VEVENT
-UID:nhl-2025020755@mooneyaoife.github.io
-DTSTAMP:20260716T125159Z
-DTSTART:20260117T180000Z
-DTEND:20260117T210000Z
-SUMMARY:Final: New York Rangers 6 - 3 Philadelphia Flyers
-DESCRIPTION:Regular season. Times display in your calendar's local time. 
- Open the NHL Tracker Game Centre for scores\, analytics and game details
- .
-LOCATION:Xfinity Mobile Arena
-URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2025020755#
- games
-END:VEVENT
-BEGIN:VEVENT
-UID:nhl-2025020775@mooneyaoife.github.io
-DTSTAMP:20260716T125159Z
-DTSTART:20260120T010000Z
-DTEND:20260120T040000Z
-SUMMARY:Final: Philadelphia Flyers 2 - 1 Vegas Golden Knights
-DESCRIPTION:Regular season. Times display in your calendar's local time. 
- Open the NHL Tracker Game Centre for scores\, analytics and game details
- .
-LOCATION:T-Mobile Arena
-URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2025020775#
- games
-END:VEVENT
-BEGIN:VEVENT
-UID:nhl-2025020790@mooneyaoife.github.io
-DTSTAMP:20260716T125159Z
-DTSTART:20260122T020000Z
-DTEND:20260122T050000Z
-SUMMARY:Final: Philadelphia Flyers 4 - 5 Utah Mammoth
-DESCRIPTION:Regular season. Times display in your calendar's local time. 
- Open the NHL Tracker Game Centre for scores\, analytics and game details
- .
-LOCATION:Delta Center
-URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2025020790#
- games
-END:VEVENT
-BEGIN:VEVENT
-UID:nhl-2025020805@mooneyaoife.github.io
-DTSTAMP:20260716T125159Z
-DTSTART:20260124T020000Z
-DTEND:20260124T050000Z
-SUMMARY:Final: Philadelphia Flyers 7 - 3 Colorado Avalanche
-DESCRIPTION:Regular season. Times display in your calendar's local time. 
- Open the NHL Tracker Game Centre for scores\, analytics and game details
- .
-LOCATION:Ball Arena
-URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2025020805#
- games
-END:VEVENT
-BEGIN:VEVENT
-UID:nhl-2025020827@mooneyaoife.github.io
-DTSTAMP:20260716T125159Z
-DTSTART:20260127T000000Z
-DTEND:20260127T030000Z
-SUMMARY:Final: New York Islanders 4 - 0 Philadelphia Flyers
-DESCRIPTION:Regular season. Times display in your calendar's local time. 
- Open the NHL Tracker Game Centre for scores\, analytics and game details
- .
-LOCATION:Xfinity Mobile Arena
-URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2025020827#
- games
-END:VEVENT
-BEGIN:VEVENT
-UID:nhl-2025020840@mooneyaoife.github.io
-DTSTAMP:20260716T125159Z
-DTSTART:20260129T003000Z
-DTEND:20260129T033000Z
-SUMMARY:Final: Philadelphia Flyers 3 - 5 Columbus Blue Jackets
-DESCRIPTION:Regular season. Times display in your calendar's local time. 
- Open the NHL Tracker Game Centre for scores\, analytics and game details
- .
-LOCATION:Nationwide Arena
-URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2025020840#
- games
-END:VEVENT
-BEGIN:VEVENT
-UID:nhl-2025020843@mooneyaoife.github.io
-DTSTAMP:20260716T125159Z
-DTSTART:20260130T000000Z
-DTEND:20260130T030000Z
-SUMMARY:Final: Philadelphia Flyers 3 - 6 Boston Bruins
+UID:nhl-2026020070@mooneyaoife.github.io
+DTSTAMP:20260716T181958Z
+DTSTART:20261010T170000Z
+DTEND:20261010T200000Z
+SUMMARY:Philadelphia Flyers at Boston Bruins
 DESCRIPTION:Regular season. Times display in your calendar's local time. 
  Open the NHL Tracker Game Centre for scores\, analytics and game details
  .
 LOCATION:TD Garden
-URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2025020843#
+URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2026020070#
  games
 END:VEVENT
 BEGIN:VEVENT
-UID:nhl-2025020859@mooneyaoife.github.io
-DTSTAMP:20260716T125159Z
-DTSTART:20260131T173000Z
-DTEND:20260131T203000Z
-SUMMARY:Final: Los Angeles Kings 3 - 2 Philadelphia Flyers
+UID:nhl-2026020086@mooneyaoife.github.io
+DTSTAMP:20260716T181958Z
+DTSTART:20261011T230000Z
+DTEND:20261012T020000Z
+SUMMARY:Carolina Hurricanes at Philadelphia Flyers
 DESCRIPTION:Regular season. Times display in your calendar's local time. 
  Open the NHL Tracker Game Centre for scores\, analytics and game details
  .
 LOCATION:Xfinity Mobile Arena
-URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2025020859#
+URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2026020086#
  games
 END:VEVENT
 BEGIN:VEVENT
-UID:nhl-2025020889@mooneyaoife.github.io
-DTSTAMP:20260716T125159Z
-DTSTART:20260204T000000Z
-DTEND:20260204T030000Z
-SUMMARY:Final: Washington Capitals 2 - 4 Philadelphia Flyers
+UID:nhl-2026020094@mooneyaoife.github.io
+DTSTAMP:20260716T181958Z
+DTSTART:20261013T230000Z
+DTEND:20261014T020000Z
+SUMMARY:Seattle Kraken at Philadelphia Flyers
 DESCRIPTION:Regular season. Times display in your calendar's local time. 
  Open the NHL Tracker Game Centre for scores\, analytics and game details
  .
 LOCATION:Xfinity Mobile Arena
-URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2025020889#
+URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2026020094#
  games
 END:VEVENT
 BEGIN:VEVENT
-UID:nhl-2025020907@mooneyaoife.github.io
-DTSTAMP:20260716T125159Z
-DTSTART:20260206T000000Z
-DTEND:20260206T030000Z
-SUMMARY:Final: Ottawa Senators 2 - 1 Philadelphia Flyers
+UID:nhl-2026020110@mooneyaoife.github.io
+DTSTAMP:20260716T181958Z
+DTSTART:20261015T230000Z
+DTEND:20261016T020000Z
+SUMMARY:Philadelphia Flyers at Detroit Red Wings
+DESCRIPTION:Regular season. Times display in your calendar's local time. 
+ Open the NHL Tracker Game Centre for scores\, analytics and game details
+ .
+LOCATION:Little Caesars Arena
+URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2026020110#
+ games
+END:VEVENT
+BEGIN:VEVENT
+UID:nhl-2026020128@mooneyaoife.github.io
+DTSTAMP:20260716T181958Z
+DTSTART:20261017T230000Z
+DTEND:20261018T020000Z
+SUMMARY:Ottawa Senators at Philadelphia Flyers
 DESCRIPTION:Regular season. Times display in your calendar's local time. 
  Open the NHL Tracker Game Centre for scores\, analytics and game details
  .
 LOCATION:Xfinity Mobile Arena
-URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2025020907#
+URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2026020128#
  games
 END:VEVENT
 BEGIN:VEVENT
-UID:nhl-2025020911@mooneyaoife.github.io
-DTSTAMP:20260716T125159Z
-DTSTART:20260226T000000Z
-DTEND:20260226T030000Z
-SUMMARY:Final: Philadelphia Flyers 1 - 3 Washington Capitals
+UID:nhl-2026020138@mooneyaoife.github.io
+DTSTAMP:20260716T181958Z
+DTSTART:20261019T230000Z
+DTEND:20261020T020000Z
+SUMMARY:Colorado Avalanche at Philadelphia Flyers
+DESCRIPTION:Regular season. Times display in your calendar's local time. 
+ Open the NHL Tracker Game Centre for scores\, analytics and game details
+ .
+LOCATION:Xfinity Mobile Arena
+URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2026020138#
+ games
+END:VEVENT
+BEGIN:VEVENT
+UID:nhl-2026020152@mooneyaoife.github.io
+DTSTAMP:20260716T181958Z
+DTSTART:20261021T233000Z
+DTEND:20261022T023000Z
+SUMMARY:Philadelphia Flyers at Buffalo Sabres
+DESCRIPTION:Regular season. Times display in your calendar's local time. 
+ Open the NHL Tracker Game Centre for scores\, analytics and game details
+ .
+LOCATION:KeyBank Center
+URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2026020152#
+ games
+END:VEVENT
+BEGIN:VEVENT
+UID:nhl-2026020168@mooneyaoife.github.io
+DTSTAMP:20260716T181958Z
+DTSTART:20261024T170000Z
+DTEND:20261024T200000Z
+SUMMARY:Anaheim Ducks at Philadelphia Flyers
+DESCRIPTION:Regular season. Times display in your calendar's local time. 
+ Open the NHL Tracker Game Centre for scores\, analytics and game details
+ .
+LOCATION:Xfinity Mobile Arena
+URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2026020168#
+ games
+END:VEVENT
+BEGIN:VEVENT
+UID:nhl-2026020188@mooneyaoife.github.io
+DTSTAMP:20260716T181958Z
+DTSTART:20261027T230000Z
+DTEND:20261028T020000Z
+SUMMARY:Columbus Blue Jackets at Philadelphia Flyers
+DESCRIPTION:Regular season. Times display in your calendar's local time. 
+ Open the NHL Tracker Game Centre for scores\, analytics and game details
+ .
+LOCATION:Xfinity Mobile Arena
+URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2026020188#
+ games
+END:VEVENT
+BEGIN:VEVENT
+UID:nhl-2026020199@mooneyaoife.github.io
+DTSTAMP:20260716T181958Z
+DTSTART:20261028T233000Z
+DTEND:20261029T023000Z
+SUMMARY:Philadelphia Flyers at Washington Capitals
 DESCRIPTION:Regular season. Times display in your calendar's local time. 
  Open the NHL Tracker Game Centre for scores\, analytics and game details
  .
 LOCATION:Capital One Arena
-URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2025020911#
+URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2026020199#
  games
 END:VEVENT
 BEGIN:VEVENT
-UID:nhl-2025020924@mooneyaoife.github.io
-DTSTAMP:20260716T125159Z
-DTSTART:20260227T010000Z
-DTEND:20260227T040000Z
-SUMMARY:Final: Philadelphia Flyers 3 - 2 New York Rangers
+UID:nhl-2026020229@mooneyaoife.github.io
+DTSTAMP:20260716T181958Z
+DTSTART:20261101T210000Z
+DTEND:20261102T000000Z
+SUMMARY:Utah Mammoth at Philadelphia Flyers
+DESCRIPTION:Regular season. Times display in your calendar's local time. 
+ Open the NHL Tracker Game Centre for scores\, analytics and game details
+ .
+LOCATION:Xfinity Mobile Arena
+URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2026020229#
+ games
+END:VEVENT
+BEGIN:VEVENT
+UID:nhl-2026020241@mooneyaoife.github.io
+DTSTAMP:20260716T181958Z
+DTSTART:20261104T000000Z
+DTEND:20261104T030000Z
+SUMMARY:Minnesota Wild at Philadelphia Flyers
+DESCRIPTION:Regular season. Times display in your calendar's local time. 
+ Open the NHL Tracker Game Centre for scores\, analytics and game details
+ .
+LOCATION:Xfinity Mobile Arena
+URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2026020241#
+ games
+END:VEVENT
+BEGIN:VEVENT
+UID:nhl-2026020256@mooneyaoife.github.io
+DTSTAMP:20260716T181958Z
+DTSTART:20261106T000000Z
+DTEND:20261106T030000Z
+SUMMARY:Philadelphia Flyers at New York Rangers
 DESCRIPTION:Regular season. Times display in your calendar's local time. 
  Open the NHL Tracker Game Centre for scores\, analytics and game details
  .
 LOCATION:Madison Square Garden
-URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2025020924#
+URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2026020256#
  games
 END:VEVENT
 BEGIN:VEVENT
-UID:nhl-2025020935@mooneyaoife.github.io
-DTSTAMP:20260716T125159Z
-DTSTART:20260228T200000Z
-DTEND:20260228T230000Z
-SUMMARY:Final: Boston Bruins 1 - 3 Philadelphia Flyers
+UID:nhl-2026020281@mooneyaoife.github.io
+DTSTAMP:20260716T181958Z
+DTSTART:20261109T000000Z
+DTEND:20261109T030000Z
+SUMMARY:Philadelphia Flyers at Calgary Flames
+DESCRIPTION:Regular season. Times display in your calendar's local time. 
+ Open the NHL Tracker Game Centre for scores\, analytics and game details
+ .
+LOCATION:Scotiabank Saddledome
+URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2026020281#
+ games
+END:VEVENT
+BEGIN:VEVENT
+UID:nhl-2026020284@mooneyaoife.github.io
+DTSTAMP:20260716T181958Z
+DTSTART:20261110T023000Z
+DTEND:20261110T053000Z
+SUMMARY:Philadelphia Flyers at Vancouver Canucks
+DESCRIPTION:Regular season. Times display in your calendar's local time. 
+ Open the NHL Tracker Game Centre for scores\, analytics and game details
+ .
+LOCATION:Rogers Arena
+URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2026020284#
+ games
+END:VEVENT
+BEGIN:VEVENT
+UID:nhl-2026020295@mooneyaoife.github.io
+DTSTAMP:20260716T181958Z
+DTSTART:20261112T020000Z
+DTEND:20261112T050000Z
+SUMMARY:Philadelphia Flyers at Edmonton Oilers
+DESCRIPTION:Regular season. Times display in your calendar's local time. 
+ Open the NHL Tracker Game Centre for scores\, analytics and game details
+ .
+LOCATION:Rogers Place
+URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2026020295#
+ games
+END:VEVENT
+BEGIN:VEVENT
+UID:nhl-2026020319@mooneyaoife.github.io
+DTSTAMP:20260716T181958Z
+DTSTART:20261115T000000Z
+DTEND:20261115T030000Z
+SUMMARY:Philadelphia Flyers at Columbus Blue Jackets
+DESCRIPTION:Regular season. Times display in your calendar's local time. 
+ Open the NHL Tracker Game Centre for scores\, analytics and game details
+ .
+LOCATION:Nationwide Arena
+URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2026020319#
+ games
+END:VEVENT
+BEGIN:VEVENT
+UID:nhl-2026020326@mooneyaoife.github.io
+DTSTAMP:20260716T181958Z
+DTSTART:20261116T003000Z
+DTEND:20261116T033000Z
+SUMMARY:Edmonton Oilers at Philadelphia Flyers
 DESCRIPTION:Regular season. Times display in your calendar's local time. 
  Open the NHL Tracker Game Centre for scores\, analytics and game details
  .
 LOCATION:Xfinity Mobile Arena
-URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2025020935#
+URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2026020326#
  games
 END:VEVENT
 BEGIN:VEVENT
-UID:nhl-2025020954@mooneyaoife.github.io
-DTSTAMP:20260716T125159Z
-DTSTART:20260303T003000Z
-DTEND:20260303T033000Z
-SUMMARY:Final: Philadelphia Flyers 3 - 2 Toronto Maple Leafs
-DESCRIPTION:Regular season. Times display in your calendar's local time. 
- Open the NHL Tracker Game Centre for scores\, analytics and game details
- .
-LOCATION:Scotiabank Arena
-URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2025020954#
- games
-END:VEVENT
-BEGIN:VEVENT
-UID:nhl-2025020976@mooneyaoife.github.io
-DTSTAMP:20260716T125159Z
-DTSTART:20260306T000000Z
-DTEND:20260306T030000Z
-SUMMARY:Final: Utah Mammoth 3 - 0 Philadelphia Flyers
+UID:nhl-2026020337@mooneyaoife.github.io
+DTSTAMP:20260716T181958Z
+DTSTART:20261118T000000Z
+DTEND:20261118T030000Z
+SUMMARY:Buffalo Sabres at Philadelphia Flyers
 DESCRIPTION:Regular season. Times display in your calendar's local time. 
  Open the NHL Tracker Game Centre for scores\, analytics and game details
  .
 LOCATION:Xfinity Mobile Arena
-URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2025020976#
+URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2026020337#
  games
 END:VEVENT
 BEGIN:VEVENT
-UID:nhl-2025020993@mooneyaoife.github.io
-DTSTAMP:20260716T125159Z
-DTSTART:20260307T223000Z
-DTEND:20260308T013000Z
-SUMMARY:Final: Philadelphia Flyers 4 - 3 Pittsburgh Penguins
+UID:nhl-2026020348@mooneyaoife.github.io
+DTSTAMP:20260716T181958Z
+DTSTART:20261120T000000Z
+DTEND:20261120T030000Z
+SUMMARY:Philadelphia Flyers at Ottawa Senators
 DESCRIPTION:Regular season. Times display in your calendar's local time. 
  Open the NHL Tracker Game Centre for scores\, analytics and game details
  .
-LOCATION:PPG Paints Arena
-URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2025020993#
+LOCATION:Canadian Tire Centre
+URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2026020348#
  games
 END:VEVENT
 BEGIN:VEVENT
-UID:nhl-2025021008@mooneyaoife.github.io
-DTSTAMP:20260716T125159Z
-DTSTART:20260309T230000Z
-DTEND:20260310T020000Z
-SUMMARY:Final: New York Rangers 6 - 2 Philadelphia Flyers
+UID:nhl-2026020365@mooneyaoife.github.io
+DTSTAMP:20260716T181958Z
+DTSTART:20261122T000000Z
+DTEND:20261122T030000Z
+SUMMARY:Philadelphia Flyers at Montréal Canadiens
 DESCRIPTION:Regular season. Times display in your calendar's local time. 
  Open the NHL Tracker Game Centre for scores\, analytics and game details
  .
-LOCATION:Xfinity Mobile Arena
-URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2025021008#
+LOCATION:Centre Bell
+URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2026020365#
  games
 END:VEVENT
 BEGIN:VEVENT
-UID:nhl-2025021026@mooneyaoife.github.io
-DTSTAMP:20260716T125159Z
-DTSTART:20260311T233000Z
-DTEND:20260312T023000Z
-SUMMARY:Final: Washington Capitals 1 - 4 Philadelphia Flyers
-DESCRIPTION:Regular season. Times display in your calendar's local time. 
- Open the NHL Tracker Game Centre for scores\, analytics and game details
- .
-LOCATION:Xfinity Mobile Arena
-URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2025021026#
- games
-END:VEVENT
-BEGIN:VEVENT
-UID:nhl-2025021035@mooneyaoife.github.io
-DTSTAMP:20260716T125159Z
-DTSTART:20260313T000000Z
-DTEND:20260313T030000Z
-SUMMARY:Final: Philadelphia Flyers 3 - 2 Minnesota Wild
-DESCRIPTION:Regular season. Times display in your calendar's local time. 
- Open the NHL Tracker Game Centre for scores\, analytics and game details
- .
-LOCATION:Grand Casino Arena
-URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2025021035#
- games
-END:VEVENT
-BEGIN:VEVENT
-UID:nhl-2025021052@mooneyaoife.github.io
-DTSTAMP:20260716T125159Z
-DTSTART:20260314T233000Z
-DTEND:20260315T023000Z
-SUMMARY:Final: Columbus Blue Jackets 2 - 1 Philadelphia Flyers
-DESCRIPTION:Regular season. Times display in your calendar's local time. 
- Open the NHL Tracker Game Centre for scores\, analytics and game details
- .
-LOCATION:Xfinity Mobile Arena
-URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2025021052#
- games
-END:VEVENT
-BEGIN:VEVENT
-UID:nhl-2025021082@mooneyaoife.github.io
-DTSTAMP:20260716T125159Z
-DTSTART:20260319T020000Z
-DTEND:20260319T050000Z
-SUMMARY:Final: Philadelphia Flyers 3 - 2 Anaheim Ducks
-DESCRIPTION:Regular season. Times display in your calendar's local time. 
- Open the NHL Tracker Game Centre for scores\, analytics and game details
- .
-LOCATION:Honda Center
-URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2025021082#
- games
-END:VEVENT
-BEGIN:VEVENT
-UID:nhl-2025021093@mooneyaoife.github.io
-DTSTAMP:20260716T125159Z
-DTSTART:20260320T023000Z
-DTEND:20260320T053000Z
-SUMMARY:Final: Philadelphia Flyers 4 - 3 Los Angeles Kings
-DESCRIPTION:Regular season. Times display in your calendar's local time. 
- Open the NHL Tracker Game Centre for scores\, analytics and game details
- .
-LOCATION:Crypto.com Arena
-URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2025021093#
- games
-END:VEVENT
-BEGIN:VEVENT
-UID:nhl-2025021103@mooneyaoife.github.io
-DTSTAMP:20260716T125159Z
-DTSTART:20260321T200000Z
-DTEND:20260321T230000Z
-SUMMARY:Final: Philadelphia Flyers 4 - 1 San Jose Sharks
-DESCRIPTION:Regular season. Times display in your calendar's local time. 
- Open the NHL Tracker Game Centre for scores\, analytics and game details
- .
-LOCATION:SAP Center at San Jose
-URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2025021103#
- games
-END:VEVENT
-BEGIN:VEVENT
-UID:nhl-2025021125@mooneyaoife.github.io
-DTSTAMP:20260716T125159Z
-DTSTART:20260324T230000Z
-DTEND:20260325T020000Z
-SUMMARY:Final: Columbus Blue Jackets 3 - 2 Philadelphia Flyers
-DESCRIPTION:Regular season. Times display in your calendar's local time. 
- Open the NHL Tracker Game Centre for scores\, analytics and game details
- .
-LOCATION:Xfinity Mobile Arena
-URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2025021125#
- games
-END:VEVENT
-BEGIN:VEVENT
-UID:nhl-2025021142@mooneyaoife.github.io
-DTSTAMP:20260716T125159Z
-DTSTART:20260326T230000Z
-DTEND:20260327T020000Z
-SUMMARY:Final: Chicago Blackhawks 1 - 5 Philadelphia Flyers
-DESCRIPTION:Regular season. Times display in your calendar's local time. 
- Open the NHL Tracker Game Centre for scores\, analytics and game details
- .
-LOCATION:Xfinity Mobile Arena
-URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2025021142#
- games
-END:VEVENT
-BEGIN:VEVENT
-UID:nhl-2025021163@mooneyaoife.github.io
-DTSTAMP:20260716T125159Z
-DTSTART:20260329T000000Z
-DTEND:20260329T030000Z
-SUMMARY:Final: Philadelphia Flyers 5 - 3 Detroit Red Wings
-DESCRIPTION:Regular season. Times display in your calendar's local time. 
- Open the NHL Tracker Game Centre for scores\, analytics and game details
- .
-LOCATION:Little Caesars Arena
-URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2025021163#
- games
-END:VEVENT
-BEGIN:VEVENT
-UID:nhl-2025021172@mooneyaoife.github.io
-DTSTAMP:20260716T125159Z
-DTSTART:20260329T230000Z
-DTEND:20260330T020000Z
-SUMMARY:Final: Dallas Stars 1 - 2 Philadelphia Flyers
-DESCRIPTION:Regular season. Times display in your calendar's local time. 
- Open the NHL Tracker Game Centre for scores\, analytics and game details
- .
-LOCATION:Xfinity Mobile Arena
-URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2025021172#
- games
-END:VEVENT
-BEGIN:VEVENT
-UID:nhl-2025021184@mooneyaoife.github.io
-DTSTAMP:20260716T125159Z
-DTSTART:20260331T230000Z
-DTEND:20260401T020000Z
-SUMMARY:Final: Philadelphia Flyers 4 - 6 Washington Capitals
+UID:nhl-2026020392@mooneyaoife.github.io
+DTSTAMP:20260716T181958Z
+DTSTART:20261126T000000Z
+DTEND:20261126T030000Z
+SUMMARY:Philadelphia Flyers at Washington Capitals
 DESCRIPTION:Regular season. Times display in your calendar's local time. 
  Open the NHL Tracker Game Centre for scores\, analytics and game details
  .
 LOCATION:Capital One Arena
-URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2025021184#
+URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2026020392#
  games
 END:VEVENT
 BEGIN:VEVENT
-UID:nhl-2025021196@mooneyaoife.github.io
-DTSTAMP:20260716T125159Z
-DTSTART:20260402T230000Z
-DTEND:20260403T020000Z
-SUMMARY:Final: Detroit Red Wings 4 - 2 Philadelphia Flyers
+UID:nhl-2026020405@mooneyaoife.github.io
+DTSTAMP:20260716T181958Z
+DTSTART:20261127T200000Z
+DTEND:20261127T230000Z
+SUMMARY:Vancouver Canucks at Philadelphia Flyers
 DESCRIPTION:Regular season. Times display in your calendar's local time. 
  Open the NHL Tracker Game Centre for scores\, analytics and game details
  .
 LOCATION:Xfinity Mobile Arena
-URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2025021196#
+URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2026020405#
  games
 END:VEVENT
 BEGIN:VEVENT
-UID:nhl-2025021205@mooneyaoife.github.io
-DTSTAMP:20260716T125159Z
-DTSTART:20260403T230000Z
-DTEND:20260404T020000Z
-SUMMARY:Final: Philadelphia Flyers 4 - 1 New York Islanders
-DESCRIPTION:Regular season. Times display in your calendar's local time. 
- Open the NHL Tracker Game Centre for scores\, analytics and game details
- .
-LOCATION:UBS Arena
-URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2025021205#
- games
-END:VEVENT
-BEGIN:VEVENT
-UID:nhl-2025021224@mooneyaoife.github.io
-DTSTAMP:20260716T125159Z
-DTSTART:20260405T193000Z
-DTEND:20260405T223000Z
-SUMMARY:Final: Boston Bruins 1 - 2 Philadelphia Flyers
+UID:nhl-2026020423@mooneyaoife.github.io
+DTSTAMP:20260716T181958Z
+DTSTART:20261129T003000Z
+DTEND:20261129T033000Z
+SUMMARY:New York Islanders at Philadelphia Flyers
 DESCRIPTION:Regular season. Times display in your calendar's local time. 
  Open the NHL Tracker Game Centre for scores\, analytics and game details
  .
 LOCATION:Xfinity Mobile Arena
-URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2025021224#
+URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2026020423#
  games
 END:VEVENT
 BEGIN:VEVENT
-UID:nhl-2025021236@mooneyaoife.github.io
-DTSTAMP:20260716T125159Z
-DTSTART:20260407T230000Z
-DTEND:20260408T020000Z
-SUMMARY:Final: Philadelphia Flyers 5 - 1 New Jersey Devils
+UID:nhl-2026020433@mooneyaoife.github.io
+DTSTAMP:20260716T181958Z
+DTSTART:20261201T003000Z
+DTEND:20261201T033000Z
+SUMMARY:Philadelphia Flyers at Toronto Maple Leafs
 DESCRIPTION:Regular season. Times display in your calendar's local time. 
  Open the NHL Tracker Game Centre for scores\, analytics and game details
  .
-LOCATION:Prudential Center
-URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2025021236#
+LOCATION:Scotiabank Arena
+URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2026020433#
  games
 END:VEVENT
 BEGIN:VEVENT
-UID:nhl-2025021250@mooneyaoife.github.io
-DTSTAMP:20260716T125159Z
-DTSTART:20260409T230000Z
-DTEND:20260410T020000Z
-SUMMARY:Final: Philadelphia Flyers 3 - 6 Detroit Red Wings
+UID:nhl-2026020452@mooneyaoife.github.io
+DTSTAMP:20260716T181958Z
+DTSTART:20261204T000000Z
+DTEND:20261204T030000Z
+SUMMARY:New York Islanders at Philadelphia Flyers
 DESCRIPTION:Regular season. Times display in your calendar's local time. 
  Open the NHL Tracker Game Centre for scores\, analytics and game details
  .
-LOCATION:Little Caesars Arena
-URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2025021250#
+LOCATION:Xfinity Mobile Arena
+URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2026020452#
  games
 END:VEVENT
 BEGIN:VEVENT
-UID:nhl-2025021272@mooneyaoife.github.io
-DTSTAMP:20260716T125159Z
-DTSTART:20260411T230000Z
-DTEND:20260412T020000Z
-SUMMARY:Final: Philadelphia Flyers 7 - 1 Winnipeg Jets
+UID:nhl-2026020473@mooneyaoife.github.io
+DTSTAMP:20260716T181958Z
+DTSTART:20261206T010000Z
+DTEND:20261206T040000Z
+SUMMARY:Philadelphia Flyers at Minnesota Wild
+DESCRIPTION:Regular season. Times display in your calendar's local time. 
+ Open the NHL Tracker Game Centre for scores\, analytics and game details
+ .
+LOCATION:Grand Casino Arena
+URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2026020473#
+ games
+END:VEVENT
+BEGIN:VEVENT
+UID:nhl-2026020492@mooneyaoife.github.io
+DTSTAMP:20260716T181958Z
+DTSTART:20261209T010000Z
+DTEND:20261209T040000Z
+SUMMARY:Philadelphia Flyers at Winnipeg Jets
 DESCRIPTION:Regular season. Times display in your calendar's local time. 
  Open the NHL Tracker Game Centre for scores\, analytics and game details
  .
 LOCATION:Canada Life Centre
-URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2025021272#
+URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2026020492#
  games
 END:VEVENT
 BEGIN:VEVENT
-UID:nhl-2025021284@mooneyaoife.github.io
-DTSTAMP:20260716T125159Z
-DTSTART:20260413T230000Z
-DTEND:20260414T020000Z
-SUMMARY:Final: Carolina Hurricanes 2 - 3 Philadelphia Flyers
+UID:nhl-2026020511@mooneyaoife.github.io
+DTSTAMP:20260716T181958Z
+DTSTART:20261212T000000Z
+DTEND:20261212T030000Z
+SUMMARY:Calgary Flames at Philadelphia Flyers
 DESCRIPTION:Regular season. Times display in your calendar's local time. 
  Open the NHL Tracker Game Centre for scores\, analytics and game details
  .
 LOCATION:Xfinity Mobile Arena
-URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2025021284#
+URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2026020511#
  games
 END:VEVENT
 BEGIN:VEVENT
-UID:nhl-2025021294@mooneyaoife.github.io
-DTSTAMP:20260716T125159Z
-DTSTART:20260414T230000Z
-DTEND:20260415T020000Z
-SUMMARY:Final: Montréal Canadiens 2 - 4 Philadelphia Flyers
+UID:nhl-2026020532@mooneyaoife.github.io
+DTSTAMP:20260716T181958Z
+DTSTART:20261215T000000Z
+DTEND:20261215T030000Z
+SUMMARY:Florida Panthers at Philadelphia Flyers
 DESCRIPTION:Regular season. Times display in your calendar's local time. 
  Open the NHL Tracker Game Centre for scores\, analytics and game details
  .
 LOCATION:Xfinity Mobile Arena
-URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2025021294#
+URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2026020532#
  games
 END:VEVENT
 BEGIN:VEVENT
-UID:nhl-2025030141@mooneyaoife.github.io
-DTSTAMP:20260716T125159Z
-DTSTART:20260419T000000Z
-DTEND:20260419T030000Z
-SUMMARY:Final: Philadelphia Flyers 3 - 2 Pittsburgh Penguins
-DESCRIPTION:Playoffs. Times display in your calendar's local time. Open t
- he NHL Tracker Game Centre for scores\, analytics and game details.
-LOCATION:PPG Paints Arena
-URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2025030141#
- games
-END:VEVENT
-BEGIN:VEVENT
-UID:nhl-2025030142@mooneyaoife.github.io
-DTSTAMP:20260716T125159Z
-DTSTART:20260420T230000Z
-DTEND:20260421T020000Z
-SUMMARY:Final: Philadelphia Flyers 3 - 0 Pittsburgh Penguins
-DESCRIPTION:Playoffs. Times display in your calendar's local time. Open t
- he NHL Tracker Game Centre for scores\, analytics and game details.
-LOCATION:PPG Paints Arena
-URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2025030142#
- games
-END:VEVENT
-BEGIN:VEVENT
-UID:nhl-2025030143@mooneyaoife.github.io
-DTSTAMP:20260716T125159Z
-DTSTART:20260422T230000Z
-DTEND:20260423T020000Z
-SUMMARY:Final: Pittsburgh Penguins 2 - 5 Philadelphia Flyers
-DESCRIPTION:Playoffs. Times display in your calendar's local time. Open t
- he NHL Tracker Game Centre for scores\, analytics and game details.
+UID:nhl-2026020547@mooneyaoife.github.io
+DTSTAMP:20260716T181958Z
+DTSTART:20261217T003000Z
+DTEND:20261217T033000Z
+SUMMARY:New York Rangers at Philadelphia Flyers
+DESCRIPTION:Regular season. Times display in your calendar's local time. 
+ Open the NHL Tracker Game Centre for scores\, analytics and game details
+ .
 LOCATION:Xfinity Mobile Arena
-URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2025030143#
+URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2026020547#
  games
 END:VEVENT
 BEGIN:VEVENT
-UID:nhl-2025030144@mooneyaoife.github.io
-DTSTAMP:20260716T125159Z
-DTSTART:20260426T000000Z
-DTEND:20260426T030000Z
-SUMMARY:Final: Pittsburgh Penguins 4 - 2 Philadelphia Flyers
-DESCRIPTION:Playoffs. Times display in your calendar's local time. Open t
- he NHL Tracker Game Centre for scores\, analytics and game details.
+UID:nhl-2026020562@mooneyaoife.github.io
+DTSTAMP:20260716T181958Z
+DTSTART:20261219T000000Z
+DTEND:20261219T030000Z
+SUMMARY:Detroit Red Wings at Philadelphia Flyers
+DESCRIPTION:Regular season. Times display in your calendar's local time. 
+ Open the NHL Tracker Game Centre for scores\, analytics and game details
+ .
 LOCATION:Xfinity Mobile Arena
-URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2025030144#
+URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2026020562#
  games
 END:VEVENT
 BEGIN:VEVENT
-UID:nhl-2025030145@mooneyaoife.github.io
-DTSTAMP:20260716T125159Z
-DTSTART:20260427T230000Z
-DTEND:20260428T020000Z
-SUMMARY:Final: Philadelphia Flyers 2 - 3 Pittsburgh Penguins
-DESCRIPTION:Playoffs. Times display in your calendar's local time. Open t
- he NHL Tracker Game Centre for scores\, analytics and game details.
-LOCATION:PPG Paints Arena
-URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2025030145#
+UID:nhl-2026020576@mooneyaoife.github.io
+DTSTAMP:20260716T181958Z
+DTSTART:20261220T180000Z
+DTEND:20261220T210000Z
+SUMMARY:Philadelphia Flyers at Boston Bruins
+DESCRIPTION:Regular season. Times display in your calendar's local time. 
+ Open the NHL Tracker Game Centre for scores\, analytics and game details
+ .
+LOCATION:TD Garden
+URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2026020576#
  games
 END:VEVENT
 BEGIN:VEVENT
-UID:nhl-2025030146@mooneyaoife.github.io
-DTSTAMP:20260716T125159Z
-DTSTART:20260429T233000Z
-DTEND:20260430T023000Z
-SUMMARY:Final: Pittsburgh Penguins 0 - 1 Philadelphia Flyers
-DESCRIPTION:Playoffs. Times display in your calendar's local time. Open t
- he NHL Tracker Game Centre for scores\, analytics and game details.
+UID:nhl-2026020587@mooneyaoife.github.io
+DTSTAMP:20260716T181958Z
+DTSTART:20261222T000000Z
+DTEND:20261222T030000Z
+SUMMARY:Columbus Blue Jackets at Philadelphia Flyers
+DESCRIPTION:Regular season. Times display in your calendar's local time. 
+ Open the NHL Tracker Game Centre for scores\, analytics and game details
+ .
 LOCATION:Xfinity Mobile Arena
-URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2025030146#
+URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2026020587#
  games
 END:VEVENT
 BEGIN:VEVENT
-UID:nhl-2025030221@mooneyaoife.github.io
-DTSTAMP:20260716T125159Z
-DTSTART:20260503T000000Z
-DTEND:20260503T030000Z
-SUMMARY:Final: Philadelphia Flyers 0 - 3 Carolina Hurricanes
-DESCRIPTION:Playoffs. Times display in your calendar's local time. Open t
- he NHL Tracker Game Centre for scores\, analytics and game details.
+UID:nhl-2026020612@mooneyaoife.github.io
+DTSTAMP:20260716T181958Z
+DTSTART:20261227T200000Z
+DTEND:20261227T230000Z
+SUMMARY:Philadelphia Flyers at Chicago Blackhawks
+DESCRIPTION:Regular season. Times display in your calendar's local time. 
+ Open the NHL Tracker Game Centre for scores\, analytics and game details
+ .
+LOCATION:United Center
+URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2026020612#
+ games
+END:VEVENT
+BEGIN:VEVENT
+UID:nhl-2026020635@mooneyaoife.github.io
+DTSTAMP:20260716T181958Z
+DTSTART:20261230T024000Z
+DTEND:20261230T054000Z
+SUMMARY:Philadelphia Flyers at Seattle Kraken
+DESCRIPTION:Regular season. Times display in your calendar's local time. 
+ Open the NHL Tracker Game Centre for scores\, analytics and game details
+ .
+LOCATION:Climate Pledge Arena
+URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2026020635#
+ games
+END:VEVENT
+BEGIN:VEVENT
+UID:nhl-2026020653@mooneyaoife.github.io
+DTSTAMP:20260716T181958Z
+DTSTART:20270101T210000Z
+DTEND:20270102T000000Z
+SUMMARY:Philadelphia Flyers at San Jose Sharks
+DESCRIPTION:Regular season. Times display in your calendar's local time. 
+ Open the NHL Tracker Game Centre for scores\, analytics and game details
+ .
+LOCATION:SAP Center at San Jose
+URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2026020653#
+ games
+END:VEVENT
+BEGIN:VEVENT
+UID:nhl-2026020672@mooneyaoife.github.io
+DTSTAMP:20260716T181958Z
+DTSTART:20270104T010000Z
+DTEND:20270104T040000Z
+SUMMARY:Philadelphia Flyers at Anaheim Ducks
+DESCRIPTION:Regular season. Times display in your calendar's local time. 
+ Open the NHL Tracker Game Centre for scores\, analytics and game details
+ .
+LOCATION:Honda Center
+URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2026020672#
+ games
+END:VEVENT
+BEGIN:VEVENT
+UID:nhl-2026020679@mooneyaoife.github.io
+DTSTAMP:20260716T181958Z
+DTSTART:20270105T030000Z
+DTEND:20270105T060000Z
+SUMMARY:Philadelphia Flyers at Los Angeles Kings
+DESCRIPTION:Regular season. Times display in your calendar's local time. 
+ Open the NHL Tracker Game Centre for scores\, analytics and game details
+ .
+LOCATION:Crypto.com Arena
+URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2026020679#
+ games
+END:VEVENT
+BEGIN:VEVENT
+UID:nhl-2026020697@mooneyaoife.github.io
+DTSTAMP:20260716T181958Z
+DTSTART:20270108T000000Z
+DTEND:20270108T030000Z
+SUMMARY:Toronto Maple Leafs at Philadelphia Flyers
+DESCRIPTION:Regular season. Times display in your calendar's local time. 
+ Open the NHL Tracker Game Centre for scores\, analytics and game details
+ .
+LOCATION:Xfinity Mobile Arena
+URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2026020697#
+ games
+END:VEVENT
+BEGIN:VEVENT
+UID:nhl-2026020713@mooneyaoife.github.io
+DTSTAMP:20260716T181958Z
+DTSTART:20270110T000000Z
+DTEND:20270110T030000Z
+SUMMARY:Philadelphia Flyers at Toronto Maple Leafs
+DESCRIPTION:Regular season. Times display in your calendar's local time. 
+ Open the NHL Tracker Game Centre for scores\, analytics and game details
+ .
+LOCATION:Scotiabank Arena
+URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2026020713#
+ games
+END:VEVENT
+BEGIN:VEVENT
+UID:nhl-2026020722@mooneyaoife.github.io
+DTSTAMP:20260716T181958Z
+DTSTART:20270111T003000Z
+DTEND:20270111T033000Z
+SUMMARY:Chicago Blackhawks at Philadelphia Flyers
+DESCRIPTION:Regular season. Times display in your calendar's local time. 
+ Open the NHL Tracker Game Centre for scores\, analytics and game details
+ .
+LOCATION:Xfinity Mobile Arena
+URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2026020722#
+ games
+END:VEVENT
+BEGIN:VEVENT
+UID:nhl-2026020733@mooneyaoife.github.io
+DTSTAMP:20260716T181958Z
+DTSTART:20270113T010000Z
+DTEND:20270113T040000Z
+SUMMARY:Philadelphia Flyers at Nashville Predators
+DESCRIPTION:Regular season. Times display in your calendar's local time. 
+ Open the NHL Tracker Game Centre for scores\, analytics and game details
+ .
+LOCATION:Bridgestone Arena
+URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2026020733#
+ games
+END:VEVENT
+BEGIN:VEVENT
+UID:nhl-2026020755@mooneyaoife.github.io
+DTSTAMP:20260716T181958Z
+DTSTART:20270116T000000Z
+DTEND:20270116T030000Z
+SUMMARY:Philadelphia Flyers at Carolina Hurricanes
+DESCRIPTION:Regular season. Times display in your calendar's local time. 
+ Open the NHL Tracker Game Centre for scores\, analytics and game details
+ .
 LOCATION:Lenovo Center
-URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2025030221#
+URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2026020755#
  games
 END:VEVENT
 BEGIN:VEVENT
-UID:nhl-2025030222@mooneyaoife.github.io
-DTSTAMP:20260716T125159Z
-DTSTART:20260504T230000Z
-DTEND:20260505T020000Z
-SUMMARY:Final: Philadelphia Flyers 2 - 3 Carolina Hurricanes
-DESCRIPTION:Playoffs. Times display in your calendar's local time. Open t
- he NHL Tracker Game Centre for scores\, analytics and game details.
+UID:nhl-2026020764@mooneyaoife.github.io
+DTSTAMP:20260716T181958Z
+DTSTART:20270117T000000Z
+DTEND:20270117T030000Z
+SUMMARY:Montréal Canadiens at Philadelphia Flyers
+DESCRIPTION:Regular season. Times display in your calendar's local time. 
+ Open the NHL Tracker Game Centre for scores\, analytics and game details
+ .
+LOCATION:Xfinity Mobile Arena
+URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2026020764#
+ games
+END:VEVENT
+BEGIN:VEVENT
+UID:nhl-2026020788@mooneyaoife.github.io
+DTSTAMP:20260716T181958Z
+DTSTART:20270120T000000Z
+DTEND:20270120T030000Z
+SUMMARY:Philadelphia Flyers at New York Rangers
+DESCRIPTION:Regular season. Times display in your calendar's local time. 
+ Open the NHL Tracker Game Centre for scores\, analytics and game details
+ .
+LOCATION:Madison Square Garden
+URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2026020788#
+ games
+END:VEVENT
+BEGIN:VEVENT
+UID:nhl-2026020802@mooneyaoife.github.io
+DTSTAMP:20260716T181958Z
+DTSTART:20270122T000000Z
+DTEND:20270122T030000Z
+SUMMARY:Nashville Predators at Philadelphia Flyers
+DESCRIPTION:Regular season. Times display in your calendar's local time. 
+ Open the NHL Tracker Game Centre for scores\, analytics and game details
+ .
+LOCATION:Xfinity Mobile Arena
+URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2026020802#
+ games
+END:VEVENT
+BEGIN:VEVENT
+UID:nhl-2026020820@mooneyaoife.github.io
+DTSTAMP:20260716T181958Z
+DTSTART:20270124T003000Z
+DTEND:20270124T033000Z
+SUMMARY:New Jersey Devils at Philadelphia Flyers
+DESCRIPTION:Regular season. Times display in your calendar's local time. 
+ Open the NHL Tracker Game Centre for scores\, analytics and game details
+ .
+LOCATION:Xfinity Mobile Arena
+URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2026020820#
+ games
+END:VEVENT
+BEGIN:VEVENT
+UID:nhl-2026020839@mooneyaoife.github.io
+DTSTAMP:20260716T181958Z
+DTSTART:20270127T000000Z
+DTEND:20270127T030000Z
+SUMMARY:Florida Panthers at Philadelphia Flyers
+DESCRIPTION:Regular season. Times display in your calendar's local time. 
+ Open the NHL Tracker Game Centre for scores\, analytics and game details
+ .
+LOCATION:Xfinity Mobile Arena
+URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2026020839#
+ games
+END:VEVENT
+BEGIN:VEVENT
+UID:nhl-2026020850@mooneyaoife.github.io
+DTSTAMP:20260716T181958Z
+DTSTART:20270129T000000Z
+DTEND:20270129T030000Z
+SUMMARY:Los Angeles Kings at Philadelphia Flyers
+DESCRIPTION:Regular season. Times display in your calendar's local time. 
+ Open the NHL Tracker Game Centre for scores\, analytics and game details
+ .
+LOCATION:Xfinity Mobile Arena
+URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2026020850#
+ games
+END:VEVENT
+BEGIN:VEVENT
+UID:nhl-2026020864@mooneyaoife.github.io
+DTSTAMP:20260716T181958Z
+DTSTART:20270130T180000Z
+DTEND:20270130T210000Z
+SUMMARY:Winnipeg Jets at Philadelphia Flyers
+DESCRIPTION:Regular season. Times display in your calendar's local time. 
+ Open the NHL Tracker Game Centre for scores\, analytics and game details
+ .
+LOCATION:Xfinity Mobile Arena
+URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2026020864#
+ games
+END:VEVENT
+BEGIN:VEVENT
+UID:nhl-2026020878@mooneyaoife.github.io
+DTSTAMP:20260716T181958Z
+DTSTART:20270131T170000Z
+DTEND:20270131T200000Z
+SUMMARY:Philadelphia Flyers at Pittsburgh Penguins
+DESCRIPTION:Regular season. Times display in your calendar's local time. 
+ Open the NHL Tracker Game Centre for scores\, analytics and game details
+ .
+LOCATION:PPG Paints Arena
+URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2026020878#
+ games
+END:VEVENT
+BEGIN:VEVENT
+UID:nhl-2026020890@mooneyaoife.github.io
+DTSTAMP:20260716T181958Z
+DTSTART:20270204T003000Z
+DTEND:20270204T033000Z
+SUMMARY:Tampa Bay Lightning at Philadelphia Flyers
+DESCRIPTION:Regular season. Times display in your calendar's local time. 
+ Open the NHL Tracker Game Centre for scores\, analytics and game details
+ .
+LOCATION:Xfinity Mobile Arena
+URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2026020890#
+ games
+END:VEVENT
+BEGIN:VEVENT
+UID:nhl-2026020923@mooneyaoife.github.io
+DTSTAMP:20260716T181958Z
+DTSTART:20270214T003000Z
+DTEND:20270214T033000Z
+SUMMARY:New Jersey Devils at Philadelphia Flyers
+DESCRIPTION:Regular season. Times display in your calendar's local time. 
+ Open the NHL Tracker Game Centre for scores\, analytics and game details
+ .
+LOCATION:Xfinity Mobile Arena
+URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2026020923#
+ games
+END:VEVENT
+BEGIN:VEVENT
+UID:nhl-2026020936@mooneyaoife.github.io
+DTSTAMP:20260716T181958Z
+DTSTART:20270216T010000Z
+DTEND:20270216T040000Z
+SUMMARY:Philadelphia Flyers at St. Louis Blues
+DESCRIPTION:Regular season. Times display in your calendar's local time. 
+ Open the NHL Tracker Game Centre for scores\, analytics and game details
+ .
+LOCATION:Enterprise Center
+URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2026020936#
+ games
+END:VEVENT
+BEGIN:VEVENT
+UID:nhl-2026020957@mooneyaoife.github.io
+DTSTAMP:20260716T181958Z
+DTSTART:20270219T010000Z
+DTEND:20270219T040000Z
+SUMMARY:Philadelphia Flyers at Dallas Stars
+DESCRIPTION:Regular season. Times display in your calendar's local time. 
+ Open the NHL Tracker Game Centre for scores\, analytics and game details
+ .
+LOCATION:American Airlines Center
+URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2026020957#
+ games
+END:VEVENT
+BEGIN:VEVENT
+UID:nhl-2026020967@mooneyaoife.github.io
+DTSTAMP:20260716T181958Z
+DTSTART:20270220T170000Z
+DTEND:20270220T200000Z
+SUMMARY:New York Rangers at Philadelphia Flyers
+DESCRIPTION:Regular season. Times display in your calendar's local time. 
+ Open the NHL Tracker Game Centre for scores\, analytics and game details
+ .
+LOCATION:Xfinity Mobile Arena
+URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2026020967#
+ games
+END:VEVENT
+BEGIN:VEVENT
+UID:nhl-2026020986@mooneyaoife.github.io
+DTSTAMP:20260716T181958Z
+DTSTART:20270222T180000Z
+DTEND:20270222T210000Z
+SUMMARY:Montréal Canadiens at Philadelphia Flyers
+DESCRIPTION:Regular season. Times display in your calendar's local time. 
+ Open the NHL Tracker Game Centre for scores\, analytics and game details
+ .
+LOCATION:Xfinity Mobile Arena
+URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2026020986#
+ games
+END:VEVENT
+BEGIN:VEVENT
+UID:nhl-2026020999@mooneyaoife.github.io
+DTSTAMP:20260716T181958Z
+DTSTART:20270225T000000Z
+DTEND:20270225T030000Z
+SUMMARY:Buffalo Sabres at Philadelphia Flyers
+DESCRIPTION:Regular season. Times display in your calendar's local time. 
+ Open the NHL Tracker Game Centre for scores\, analytics and game details
+ .
+LOCATION:Xfinity Mobile Arena
+URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2026020999#
+ games
+END:VEVENT
+BEGIN:VEVENT
+UID:nhl-2026021013@mooneyaoife.github.io
+DTSTAMP:20260716T181958Z
+DTSTART:20270227T000000Z
+DTEND:20270227T030000Z
+SUMMARY:Philadelphia Flyers at New York Islanders
+DESCRIPTION:Regular season. Times display in your calendar's local time. 
+ Open the NHL Tracker Game Centre for scores\, analytics and game details
+ .
+LOCATION:UBS Arena
+URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2026021013#
+ games
+END:VEVENT
+BEGIN:VEVENT
+UID:nhl-2026021023@mooneyaoife.github.io
+DTSTAMP:20260716T181958Z
+DTSTART:20270228T000000Z
+DTEND:20270228T030000Z
+SUMMARY:San Jose Sharks at Philadelphia Flyers
+DESCRIPTION:Regular season. Times display in your calendar's local time. 
+ Open the NHL Tracker Game Centre for scores\, analytics and game details
+ .
+LOCATION:Xfinity Mobile Arena
+URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2026021023#
+ games
+END:VEVENT
+BEGIN:VEVENT
+UID:nhl-2026021046@mooneyaoife.github.io
+DTSTAMP:20260716T181958Z
+DTSTART:20270303T000000Z
+DTEND:20270303T030000Z
+SUMMARY:Vegas Golden Knights at Philadelphia Flyers
+DESCRIPTION:Regular season. Times display in your calendar's local time. 
+ Open the NHL Tracker Game Centre for scores\, analytics and game details
+ .
+LOCATION:Xfinity Mobile Arena
+URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2026021046#
+ games
+END:VEVENT
+BEGIN:VEVENT
+UID:nhl-2026021064@mooneyaoife.github.io
+DTSTAMP:20260716T181958Z
+DTSTART:20270306T000000Z
+DTEND:20270306T030000Z
+SUMMARY:Dallas Stars at Philadelphia Flyers
+DESCRIPTION:Regular season. Times display in your calendar's local time. 
+ Open the NHL Tracker Game Centre for scores\, analytics and game details
+ .
+LOCATION:Xfinity Mobile Arena
+URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2026021064#
+ games
+END:VEVENT
+BEGIN:VEVENT
+UID:nhl-2026021081@mooneyaoife.github.io
+DTSTAMP:20260716T181958Z
+DTSTART:20270307T180000Z
+DTEND:20270307T210000Z
+SUMMARY:St. Louis Blues at Philadelphia Flyers
+DESCRIPTION:Regular season. Times display in your calendar's local time. 
+ Open the NHL Tracker Game Centre for scores\, analytics and game details
+ .
+LOCATION:Xfinity Mobile Arena
+URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2026021081#
+ games
+END:VEVENT
+BEGIN:VEVENT
+UID:nhl-2026021101@mooneyaoife.github.io
+DTSTAMP:20260716T181958Z
+DTSTART:20270310T020000Z
+DTEND:20270310T050000Z
+SUMMARY:Philadelphia Flyers at Colorado Avalanche
+DESCRIPTION:Regular season. Times display in your calendar's local time. 
+ Open the NHL Tracker Game Centre for scores\, analytics and game details
+ .
+LOCATION:Ball Arena
+URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2026021101#
+ games
+END:VEVENT
+BEGIN:VEVENT
+UID:nhl-2026021116@mooneyaoife.github.io
+DTSTAMP:20260716T181958Z
+DTSTART:20270312T030000Z
+DTEND:20270312T060000Z
+SUMMARY:Philadelphia Flyers at Vegas Golden Knights
+DESCRIPTION:Regular season. Times display in your calendar's local time. 
+ Open the NHL Tracker Game Centre for scores\, analytics and game details
+ .
+LOCATION:T-Mobile Arena
+URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2026021116#
+ games
+END:VEVENT
+BEGIN:VEVENT
+UID:nhl-2026021130@mooneyaoife.github.io
+DTSTAMP:20260716T181958Z
+DTSTART:20270313T220000Z
+DTEND:20270314T010000Z
+SUMMARY:Philadelphia Flyers at Utah Mammoth
+DESCRIPTION:Regular season. Times display in your calendar's local time. 
+ Open the NHL Tracker Game Centre for scores\, analytics and game details
+ .
+LOCATION:Delta Center
+URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2026021130#
+ games
+END:VEVENT
+BEGIN:VEVENT
+UID:nhl-2026021149@mooneyaoife.github.io
+DTSTAMP:20260716T181958Z
+DTSTART:20270316T230000Z
+DTEND:20270317T020000Z
+SUMMARY:Detroit Red Wings at Philadelphia Flyers
+DESCRIPTION:Regular season. Times display in your calendar's local time. 
+ Open the NHL Tracker Game Centre for scores\, analytics and game details
+ .
+LOCATION:Xfinity Mobile Arena
+URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2026021149#
+ games
+END:VEVENT
+BEGIN:VEVENT
+UID:nhl-2026021166@mooneyaoife.github.io
+DTSTAMP:20260716T181958Z
+DTSTART:20270318T230000Z
+DTEND:20270319T020000Z
+SUMMARY:Boston Bruins at Philadelphia Flyers
+DESCRIPTION:Regular season. Times display in your calendar's local time. 
+ Open the NHL Tracker Game Centre for scores\, analytics and game details
+ .
+LOCATION:Xfinity Mobile Arena
+URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2026021166#
+ games
+END:VEVENT
+BEGIN:VEVENT
+UID:nhl-2026021176@mooneyaoife.github.io
+DTSTAMP:20260716T181958Z
+DTSTART:20270320T190000Z
+DTEND:20270320T220000Z
+SUMMARY:Philadelphia Flyers at New York Islanders
+DESCRIPTION:Regular season. Times display in your calendar's local time. 
+ Open the NHL Tracker Game Centre for scores\, analytics and game details
+ .
+LOCATION:UBS Arena
+URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2026021176#
+ games
+END:VEVENT
+BEGIN:VEVENT
+UID:nhl-2026021198@mooneyaoife.github.io
+DTSTAMP:20260716T181958Z
+DTSTART:20270323T230000Z
+DTEND:20270324T020000Z
+SUMMARY:Philadelphia Flyers at New Jersey Devils
+DESCRIPTION:Regular season. Times display in your calendar's local time. 
+ Open the NHL Tracker Game Centre for scores\, analytics and game details
+ .
+LOCATION:Prudential Center
+URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2026021198#
+ games
+END:VEVENT
+BEGIN:VEVENT
+UID:nhl-2026021213@mooneyaoife.github.io
+DTSTAMP:20260716T181958Z
+DTSTART:20270325T230000Z
+DTEND:20270326T020000Z
+SUMMARY:Philadelphia Flyers at Tampa Bay Lightning
+DESCRIPTION:Regular season. Times display in your calendar's local time. 
+ Open the NHL Tracker Game Centre for scores\, analytics and game details
+ .
+LOCATION:Benchmark International Arena
+URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2026021213#
+ games
+END:VEVENT
+BEGIN:VEVENT
+UID:nhl-2026021230@mooneyaoife.github.io
+DTSTAMP:20260716T181958Z
+DTSTART:20270327T220000Z
+DTEND:20270328T010000Z
+SUMMARY:Philadelphia Flyers at Florida Panthers
+DESCRIPTION:Regular season. Times display in your calendar's local time. 
+ Open the NHL Tracker Game Centre for scores\, analytics and game details
+ .
+LOCATION:Amerant Bank Arena
+URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2026021230#
+ games
+END:VEVENT
+BEGIN:VEVENT
+UID:nhl-2026021253@mooneyaoife.github.io
+DTSTAMP:20260716T181958Z
+DTSTART:20270330T230000Z
+DTEND:20270331T020000Z
+SUMMARY:Pittsburgh Penguins at Philadelphia Flyers
+DESCRIPTION:Regular season. Times display in your calendar's local time. 
+ Open the NHL Tracker Game Centre for scores\, analytics and game details
+ .
+LOCATION:Xfinity Mobile Arena
+URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2026021253#
+ games
+END:VEVENT
+BEGIN:VEVENT
+UID:nhl-2026021266@mooneyaoife.github.io
+DTSTAMP:20260716T181958Z
+DTSTART:20270401T230000Z
+DTEND:20270402T020000Z
+SUMMARY:Washington Capitals at Philadelphia Flyers
+DESCRIPTION:Regular season. Times display in your calendar's local time. 
+ Open the NHL Tracker Game Centre for scores\, analytics and game details
+ .
+LOCATION:Xfinity Mobile Arena
+URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2026021266#
+ games
+END:VEVENT
+BEGIN:VEVENT
+UID:nhl-2026021285@mooneyaoife.github.io
+DTSTAMP:20260716T181958Z
+DTSTART:20270404T000000Z
+DTEND:20270404T030000Z
+SUMMARY:Philadelphia Flyers at Pittsburgh Penguins
+DESCRIPTION:Regular season. Times display in your calendar's local time. 
+ Open the NHL Tracker Game Centre for scores\, analytics and game details
+ .
+LOCATION:PPG Paints Arena
+URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2026021285#
+ games
+END:VEVENT
+BEGIN:VEVENT
+UID:nhl-2026021296@mooneyaoife.github.io
+DTSTAMP:20260716T181958Z
+DTSTART:20270405T180000Z
+DTEND:20270405T210000Z
+SUMMARY:Philadelphia Flyers at Carolina Hurricanes
+DESCRIPTION:Regular season. Times display in your calendar's local time. 
+ Open the NHL Tracker Game Centre for scores\, analytics and game details
+ .
 LOCATION:Lenovo Center
-URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2025030222#
+URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2026021296#
  games
 END:VEVENT
 BEGIN:VEVENT
-UID:nhl-2025030223@mooneyaoife.github.io
-DTSTAMP:20260716T125159Z
-DTSTART:20260508T000000Z
-DTEND:20260508T030000Z
-SUMMARY:Final: Carolina Hurricanes 4 - 1 Philadelphia Flyers
-DESCRIPTION:Playoffs. Times display in your calendar's local time. Open t
- he NHL Tracker Game Centre for scores\, analytics and game details.
-LOCATION:Xfinity Mobile Arena
-URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2025030223#
+UID:nhl-2026021319@mooneyaoife.github.io
+DTSTAMP:20260716T181958Z
+DTSTART:20270408T230000Z
+DTEND:20270409T020000Z
+SUMMARY:Philadelphia Flyers at Columbus Blue Jackets
+DESCRIPTION:Regular season. Times display in your calendar's local time. 
+ Open the NHL Tracker Game Centre for scores\, analytics and game details
+ .
+LOCATION:Nationwide Arena
+URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2026021319#
  games
 END:VEVENT
 BEGIN:VEVENT
-UID:nhl-2025030224@mooneyaoife.github.io
-DTSTAMP:20260716T125159Z
-DTSTART:20260509T220000Z
-DTEND:20260510T010000Z
-SUMMARY:Final: Carolina Hurricanes 3 - 2 Philadelphia Flyers
-DESCRIPTION:Playoffs. Times display in your calendar's local time. Open t
- he NHL Tracker Game Centre for scores\, analytics and game details.
+UID:nhl-2026021329@mooneyaoife.github.io
+DTSTAMP:20260716T181958Z
+DTSTART:20270410T160000Z
+DTEND:20270410T190000Z
+SUMMARY:Washington Capitals at Philadelphia Flyers
+DESCRIPTION:Regular season. Times display in your calendar's local time. 
+ Open the NHL Tracker Game Centre for scores\, analytics and game details
+ .
 LOCATION:Xfinity Mobile Arena
-URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2025030224#
+URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2026021329#
  games
 END:VEVENT
 END:VCALENDAR

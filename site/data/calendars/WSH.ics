@@ -10,1141 +10,1095 @@ COLOR:#C8102E
 REFRESH-INTERVAL;VALUE=DURATION:PT6H
 X-PUBLISHED-TTL:PT6H
 BEGIN:VEVENT
-UID:nhl-2025010013@mooneyaoife.github.io
-DTSTAMP:20260716T125159Z
-DTSTART:20250921T210000Z
-DTEND:20250922T000000Z
-SUMMARY:Final: Washington Capitals 5 - 2 Boston Bruins
-DESCRIPTION:Preseason. Times display in your calendar's local time. Open 
- the NHL Tracker Game Centre for scores\, analytics and game details.
-LOCATION:TD Garden
-URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2025010013#
- games
-END:VEVENT
-BEGIN:VEVENT
-UID:nhl-2025010036@mooneyaoife.github.io
-DTSTAMP:20260716T125159Z
-DTSTART:20250925T230000Z
-DTEND:20250926T020000Z
-SUMMARY:Final: Philadelphia Flyers 1 - 5 Washington Capitals
-DESCRIPTION:Preseason. Times display in your calendar's local time. Open 
- the NHL Tracker Game Centre for scores\, analytics and game details.
-LOCATION:Giant Center
-URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2025010036#
- games
-END:VEVENT
-BEGIN:VEVENT
-UID:nhl-2025010059@mooneyaoife.github.io
-DTSTAMP:20260716T125159Z
-DTSTART:20250928T190000Z
-DTEND:20250928T220000Z
-SUMMARY:Final: Washington Capitals 3 - 2 New Jersey Devils
-DESCRIPTION:Preseason. Times display in your calendar's local time. Open 
- the NHL Tracker Game Centre for scores\, analytics and game details.
-LOCATION:Prudential Center
-URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2025010059#
- games
-END:VEVENT
-BEGIN:VEVENT
-UID:nhl-2025010071@mooneyaoife.github.io
-DTSTAMP:20260716T125159Z
-DTSTART:20250930T230000Z
-DTEND:20251001T020000Z
-SUMMARY:Final: Washington Capitals 4 - 3 Columbus Blue Jackets
-DESCRIPTION:Preseason. Times display in your calendar's local time. Open 
- the NHL Tracker Game Centre for scores\, analytics and game details.
-LOCATION:Nationwide Arena
-URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2025010071#
- games
-END:VEVENT
-BEGIN:VEVENT
-UID:nhl-2025010078@mooneyaoife.github.io
-DTSTAMP:20260716T125159Z
-DTSTART:20251002T230000Z
-DTEND:20251003T020000Z
-SUMMARY:Final: Boston Bruins 3 - 1 Washington Capitals
-DESCRIPTION:Preseason. Times display in your calendar's local time. Open 
- the NHL Tracker Game Centre for scores\, analytics and game details.
-LOCATION:Capital One Arena
-URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2025010078#
- games
-END:VEVENT
-BEGIN:VEVENT
-UID:nhl-2025010093@mooneyaoife.github.io
-DTSTAMP:20260716T125159Z
-DTSTART:20251004T230000Z
-DTEND:20251005T020000Z
-SUMMARY:Final: Columbus Blue Jackets 1 - 2 Washington Capitals
-DESCRIPTION:Preseason. Times display in your calendar's local time. Open 
- the NHL Tracker Game Centre for scores\, analytics and game details.
-LOCATION:Capital One Arena
-URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2025010093#
- games
-END:VEVENT
-BEGIN:VEVENT
-UID:nhl-2025020005@mooneyaoife.github.io
-DTSTAMP:20260716T125159Z
-DTSTART:20251008T233000Z
-DTEND:20251009T023000Z
-SUMMARY:Final: Boston Bruins 3 - 1 Washington Capitals
-DESCRIPTION:Regular season. Times display in your calendar's local time. 
- Open the NHL Tracker Game Centre for scores\, analytics and game details
- .
-LOCATION:Capital One Arena
-URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2025020005#
- games
-END:VEVENT
-BEGIN:VEVENT
-UID:nhl-2025020028@mooneyaoife.github.io
-DTSTAMP:20260716T125159Z
-DTSTART:20251011T230000Z
-DTEND:20251012T020000Z
-SUMMARY:Final: Washington Capitals 4 - 2 New York Islanders
-DESCRIPTION:Regular season. Times display in your calendar's local time. 
- Open the NHL Tracker Game Centre for scores\, analytics and game details
- .
-LOCATION:UBS Arena
-URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2025020028#
- games
-END:VEVENT
-BEGIN:VEVENT
-UID:nhl-2025020038@mooneyaoife.github.io
-DTSTAMP:20260716T125159Z
-DTSTART:20251012T230000Z
-DTEND:20251013T020000Z
-SUMMARY:Final: Washington Capitals 1 - 0 New York Rangers
-DESCRIPTION:Regular season. Times display in your calendar's local time. 
- Open the NHL Tracker Game Centre for scores\, analytics and game details
- .
-LOCATION:Madison Square Garden
-URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2025020038#
- games
-END:VEVENT
-BEGIN:VEVENT
-UID:nhl-2025020052@mooneyaoife.github.io
-DTSTAMP:20260716T125159Z
-DTSTART:20251014T230000Z
-DTEND:20251015T020000Z
-SUMMARY:Final: Tampa Bay Lightning 2 - 3 Washington Capitals
-DESCRIPTION:Regular season. Times display in your calendar's local time. 
- Open the NHL Tracker Game Centre for scores\, analytics and game details
- .
-LOCATION:Capital One Arena
-URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2025020052#
- games
-END:VEVENT
-BEGIN:VEVENT
-UID:nhl-2025020073@mooneyaoife.github.io
-DTSTAMP:20260716T125159Z
-DTSTART:20251017T230000Z
-DTEND:20251018T020000Z
-SUMMARY:Final: Minnesota Wild 1 - 5 Washington Capitals
-DESCRIPTION:Regular season. Times display in your calendar's local time. 
- Open the NHL Tracker Game Centre for scores\, analytics and game details
- .
-LOCATION:Capital One Arena
-URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2025020073#
- games
-END:VEVENT
-BEGIN:VEVENT
-UID:nhl-2025020089@mooneyaoife.github.io
-DTSTAMP:20260716T125159Z
-DTSTART:20251019T163000Z
-DTEND:20251019T193000Z
-SUMMARY:Final: Vancouver Canucks 4 - 3 Washington Capitals
-DESCRIPTION:Regular season. Times display in your calendar's local time. 
- Open the NHL Tracker Game Centre for scores\, analytics and game details
- .
-LOCATION:Capital One Arena
-URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2025020089#
- games
-END:VEVENT
-BEGIN:VEVENT
-UID:nhl-2025020102@mooneyaoife.github.io
-DTSTAMP:20260716T125159Z
-DTSTART:20251021T230000Z
-DTEND:20251022T020000Z
-SUMMARY:Final: Seattle Kraken 1 - 4 Washington Capitals
-DESCRIPTION:Regular season. Times display in your calendar's local time. 
- Open the NHL Tracker Game Centre for scores\, analytics and game details
- .
-LOCATION:Capital One Arena
-URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2025020102#
- games
-END:VEVENT
-BEGIN:VEVENT
-UID:nhl-2025020125@mooneyaoife.github.io
-DTSTAMP:20260716T125159Z
-DTSTART:20251024T230000Z
-DTEND:20251025T020000Z
-SUMMARY:Final: Washington Capitals 5 - 1 Columbus Blue Jackets
-DESCRIPTION:Regular season. Times display in your calendar's local time. 
- Open the NHL Tracker Game Centre for scores\, analytics and game details
- .
-LOCATION:Nationwide Arena
-URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2025020125#
- games
-END:VEVENT
-BEGIN:VEVENT
-UID:nhl-2025020135@mooneyaoife.github.io
-DTSTAMP:20260716T125159Z
-DTSTART:20251025T230000Z
-DTEND:20251026T020000Z
-SUMMARY:Final: Ottawa Senators 7 - 1 Washington Capitals
-DESCRIPTION:Regular season. Times display in your calendar's local time. 
- Open the NHL Tracker Game Centre for scores\, analytics and game details
- .
-LOCATION:Capital One Arena
-URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2025020135#
- games
-END:VEVENT
-BEGIN:VEVENT
-UID:nhl-2025020159@mooneyaoife.github.io
-DTSTAMP:20260716T125159Z
-DTSTART:20251029T003000Z
-DTEND:20251029T033000Z
-SUMMARY:Final: Washington Capitals 0 - 1 Dallas Stars
-DESCRIPTION:Regular season. Times display in your calendar's local time. 
- Open the NHL Tracker Game Centre for scores\, analytics and game details
- .
-LOCATION:American Airlines Center
-URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2025020159#
- games
-END:VEVENT
-BEGIN:VEVENT
-UID:nhl-2025020179@mooneyaoife.github.io
-DTSTAMP:20260716T125159Z
-DTSTART:20251031T230000Z
-DTEND:20251101T020000Z
-SUMMARY:Final: New York Islanders 3 - 1 Washington Capitals
-DESCRIPTION:Regular season. Times display in your calendar's local time. 
- Open the NHL Tracker Game Centre for scores\, analytics and game details
- .
-LOCATION:Capital One Arena
-URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2025020179#
- games
-END:VEVENT
-BEGIN:VEVENT
-UID:nhl-2025020186@mooneyaoife.github.io
-DTSTAMP:20260716T125159Z
-DTSTART:20251101T230000Z
-DTEND:20251102T020000Z
-SUMMARY:Final: Washington Capitals 3 - 4 Buffalo Sabres
-DESCRIPTION:Regular season. Times display in your calendar's local time. 
- Open the NHL Tracker Game Centre for scores\, analytics and game details
- .
-LOCATION:KeyBank Center
-URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2025020186#
- games
-END:VEVENT
-BEGIN:VEVENT
-UID:nhl-2025020214@mooneyaoife.github.io
-DTSTAMP:20260716T125159Z
-DTSTART:20251106T003000Z
-DTEND:20251106T033000Z
-SUMMARY:Final: St. Louis Blues 1 - 6 Washington Capitals
-DESCRIPTION:Regular season. Times display in your calendar's local time. 
- Open the NHL Tracker Game Centre for scores\, analytics and game details
- .
-LOCATION:Capital One Arena
-URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2025020214#
- games
-END:VEVENT
-BEGIN:VEVENT
-UID:nhl-2025020221@mooneyaoife.github.io
-DTSTAMP:20260716T125159Z
-DTSTART:20251107T003000Z
-DTEND:20251107T033000Z
-SUMMARY:Final: Washington Capitals 3 - 5 Pittsburgh Penguins
-DESCRIPTION:Regular season. Times display in your calendar's local time. 
- Open the NHL Tracker Game Centre for scores\, analytics and game details
- .
-LOCATION:PPG Paints Arena
-URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2025020221#
- games
-END:VEVENT
-BEGIN:VEVENT
-UID:nhl-2025020236@mooneyaoife.github.io
-DTSTAMP:20260716T125159Z
-DTSTART:20251109T000000Z
-DTEND:20251109T030000Z
-SUMMARY:Final: Washington Capitals 2 - 3 Tampa Bay Lightning
-DESCRIPTION:Regular season. Times display in your calendar's local time. 
- Open the NHL Tracker Game Centre for scores\, analytics and game details
- .
-LOCATION:Benchmark International Arena
-URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2025020236#
- games
-END:VEVENT
-BEGIN:VEVENT
-UID:nhl-2025020259@mooneyaoife.github.io
-DTSTAMP:20260716T125159Z
-DTSTART:20251112T000000Z
-DTEND:20251112T030000Z
-SUMMARY:Final: Washington Capitals 4 - 1 Carolina Hurricanes
+UID:nhl-2026020018@mooneyaoife.github.io
+DTSTAMP:20260716T181958Z
+DTSTART:20261002T230000Z
+DTEND:20261003T020000Z
+SUMMARY:Washington Capitals at Carolina Hurricanes
 DESCRIPTION:Regular season. Times display in your calendar's local time. 
  Open the NHL Tracker Game Centre for scores\, analytics and game details
  .
 LOCATION:Lenovo Center
-URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2025020259#
+URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2026020018#
  games
 END:VEVENT
 BEGIN:VEVENT
-UID:nhl-2025020273@mooneyaoife.github.io
-DTSTAMP:20260716T125159Z
-DTSTART:20251114T000000Z
-DTEND:20251114T030000Z
-SUMMARY:Final: Washington Capitals 3 - 6 Florida Panthers
+UID:nhl-2026020024@mooneyaoife.github.io
+DTSTAMP:20260716T181958Z
+DTSTART:20261003T230000Z
+DTEND:20261004T020000Z
+SUMMARY:Washington Capitals at Tampa Bay Lightning
 DESCRIPTION:Regular season. Times display in your calendar's local time. 
  Open the NHL Tracker Game Centre for scores\, analytics and game details
  .
-LOCATION:Amerant Bank Arena
-URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2025020273#
+LOCATION:Benchmark International Arena
+URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2026020024#
  games
 END:VEVENT
 BEGIN:VEVENT
-UID:nhl-2025020288@mooneyaoife.github.io
-DTSTAMP:20260716T125159Z
-DTSTART:20251116T000000Z
-DTEND:20251116T030000Z
-SUMMARY:Final: New Jersey Devils 3 - 2 Washington Capitals
-DESCRIPTION:Regular season. Times display in your calendar's local time. 
- Open the NHL Tracker Game Centre for scores\, analytics and game details
- .
-LOCATION:Capital One Arena
-URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2025020288#
- games
-END:VEVENT
-BEGIN:VEVENT
-UID:nhl-2025020304@mooneyaoife.github.io
-DTSTAMP:20260716T125159Z
-DTSTART:20251118T000000Z
-DTEND:20251118T030000Z
-SUMMARY:Final: Los Angeles Kings 1 - 2 Washington Capitals
+UID:nhl-2026020053@mooneyaoife.github.io
+DTSTAMP:20260716T181958Z
+DTSTART:20261007T233000Z
+DTEND:20261008T023000Z
+SUMMARY:Pittsburgh Penguins at Washington Capitals
 DESCRIPTION:Regular season. Times display in your calendar's local time. 
  Open the NHL Tracker Game Centre for scores\, analytics and game details
  .
 LOCATION:Capital One Arena
-URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2025020304#
+URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2026020053#
  games
 END:VEVENT
 BEGIN:VEVENT
-UID:nhl-2025020315@mooneyaoife.github.io
-DTSTAMP:20260716T125159Z
-DTSTART:20251120T000000Z
-DTEND:20251120T030000Z
-SUMMARY:Final: Edmonton Oilers 4 - 7 Washington Capitals
+UID:nhl-2026020067@mooneyaoife.github.io
+DTSTAMP:20260716T181958Z
+DTSTART:20261009T230000Z
+DTEND:20261010T020000Z
+SUMMARY:New York Rangers at Washington Capitals
 DESCRIPTION:Regular season. Times display in your calendar's local time. 
  Open the NHL Tracker Game Centre for scores\, analytics and game details
  .
 LOCATION:Capital One Arena
-URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2025020315#
+URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2026020067#
  games
 END:VEVENT
 BEGIN:VEVENT
-UID:nhl-2025020320@mooneyaoife.github.io
-DTSTAMP:20260716T125159Z
-DTSTART:20251121T000000Z
-DTEND:20251121T030000Z
-SUMMARY:Final: Washington Capitals 8 - 4 Montréal Canadiens
-DESCRIPTION:Regular season. Times display in your calendar's local time. 
- Open the NHL Tracker Game Centre for scores\, analytics and game details
- .
-LOCATION:Centre Bell
-URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2025020320#
- games
-END:VEVENT
-BEGIN:VEVENT
-UID:nhl-2025020341@mooneyaoife.github.io
-DTSTAMP:20260716T125159Z
-DTSTART:20251123T000000Z
-DTEND:20251123T030000Z
-SUMMARY:Final: Tampa Bay Lightning 5 - 3 Washington Capitals
+UID:nhl-2026020084@mooneyaoife.github.io
+DTSTAMP:20260716T181958Z
+DTSTART:20261011T210000Z
+DTEND:20261012T000000Z
+SUMMARY:Seattle Kraken at Washington Capitals
 DESCRIPTION:Regular season. Times display in your calendar's local time. 
  Open the NHL Tracker Game Centre for scores\, analytics and game details
  .
 LOCATION:Capital One Arena
-URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2025020341#
+URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2026020084#
  games
 END:VEVENT
 BEGIN:VEVENT
-UID:nhl-2025020356@mooneyaoife.github.io
-DTSTAMP:20260716T125159Z
-DTSTART:20251125T000000Z
-DTEND:20251125T030000Z
-SUMMARY:Final: Columbus Blue Jackets 1 - 5 Washington Capitals
+UID:nhl-2026020093@mooneyaoife.github.io
+DTSTAMP:20260716T181958Z
+DTSTART:20261013T224500Z
+DTEND:20261014T014500Z
+SUMMARY:Washington Capitals at Carolina Hurricanes
+DESCRIPTION:Regular season. Times display in your calendar's local time. 
+ Open the NHL Tracker Game Centre for scores\, analytics and game details
+ .
+LOCATION:Lenovo Center
+URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2026020093#
+ games
+END:VEVENT
+BEGIN:VEVENT
+UID:nhl-2026020106@mooneyaoife.github.io
+DTSTAMP:20260716T181958Z
+DTSTART:20261014T233000Z
+DTEND:20261015T023000Z
+SUMMARY:Montréal Canadiens at Washington Capitals
 DESCRIPTION:Regular season. Times display in your calendar's local time. 
  Open the NHL Tracker Game Centre for scores\, analytics and game details
  .
 LOCATION:Capital One Arena
-URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2025020356#
+URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2026020106#
  games
 END:VEVENT
 BEGIN:VEVENT
-UID:nhl-2025020367@mooneyaoife.github.io
-DTSTAMP:20260716T125159Z
-DTSTART:20251127T000000Z
-DTEND:20251127T030000Z
-SUMMARY:Final: Winnipeg Jets 3 - 4 Washington Capitals
+UID:nhl-2026020121@mooneyaoife.github.io
+DTSTAMP:20260716T181958Z
+DTSTART:20261017T170000Z
+DTEND:20261017T200000Z
+SUMMARY:New Jersey Devils at Washington Capitals
 DESCRIPTION:Regular season. Times display in your calendar's local time. 
  Open the NHL Tracker Game Centre for scores\, analytics and game details
  .
 LOCATION:Capital One Arena
-URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2025020367#
+URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2026020121#
  games
 END:VEVENT
 BEGIN:VEVENT
-UID:nhl-2025020386@mooneyaoife.github.io
-DTSTAMP:20260716T125159Z
-DTSTART:20251128T220000Z
-DTEND:20251129T010000Z
-SUMMARY:Final: Toronto Maple Leafs 2 - 4 Washington Capitals
+UID:nhl-2026020144@mooneyaoife.github.io
+DTSTAMP:20260716T181958Z
+DTSTART:20261020T230000Z
+DTEND:20261021T020000Z
+SUMMARY:Los Angeles Kings at Washington Capitals
 DESCRIPTION:Regular season. Times display in your calendar's local time. 
  Open the NHL Tracker Game Centre for scores\, analytics and game details
  .
 LOCATION:Capital One Arena
-URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2025020386#
+URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2026020144#
  games
 END:VEVENT
 BEGIN:VEVENT
-UID:nhl-2025020402@mooneyaoife.github.io
-DTSTAMP:20260716T125159Z
-DTSTART:20251130T180000Z
-DTEND:20251130T210000Z
-SUMMARY:Final: Washington Capitals 4 - 1 New York Islanders
-DESCRIPTION:Regular season. Times display in your calendar's local time. 
- Open the NHL Tracker Game Centre for scores\, analytics and game details
- .
-LOCATION:UBS Arena
-URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2025020402#
- games
-END:VEVENT
-BEGIN:VEVENT
-UID:nhl-2025020420@mooneyaoife.github.io
-DTSTAMP:20260716T125159Z
-DTSTART:20251203T033000Z
-DTEND:20251203T063000Z
-SUMMARY:Final: Washington Capitals 3 - 1 Los Angeles Kings
-DESCRIPTION:Regular season. Times display in your calendar's local time. 
- Open the NHL Tracker Game Centre for scores\, analytics and game details
- .
-LOCATION:Crypto.com Arena
-URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2025020420#
- games
-END:VEVENT
-BEGIN:VEVENT
-UID:nhl-2025020425@mooneyaoife.github.io
-DTSTAMP:20260716T125159Z
-DTSTART:20251204T030000Z
-DTEND:20251204T060000Z
-SUMMARY:Final: Washington Capitals 7 - 1 San Jose Sharks
-DESCRIPTION:Regular season. Times display in your calendar's local time. 
- Open the NHL Tracker Game Centre for scores\, analytics and game details
- .
-LOCATION:SAP Center at San Jose
-URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2025020425#
- games
-END:VEVENT
-BEGIN:VEVENT
-UID:nhl-2025020440@mooneyaoife.github.io
-DTSTAMP:20260716T125159Z
-DTSTART:20251206T030000Z
-DTEND:20251206T060000Z
-SUMMARY:Final: Washington Capitals 3 - 4 Anaheim Ducks
-DESCRIPTION:Regular season. Times display in your calendar's local time. 
- Open the NHL Tracker Game Centre for scores\, analytics and game details
- .
-LOCATION:Honda Center
-URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2025020440#
- games
-END:VEVENT
-BEGIN:VEVENT
-UID:nhl-2025020459@mooneyaoife.github.io
-DTSTAMP:20260716T125159Z
-DTSTART:20251208T000000Z
-DTEND:20251208T030000Z
-SUMMARY:Final: Columbus Blue Jackets 0 - 2 Washington Capitals
+UID:nhl-2026020173@mooneyaoife.github.io
+DTSTAMP:20260716T181958Z
+DTSTART:20261024T230000Z
+DTEND:20261025T020000Z
+SUMMARY:Buffalo Sabres at Washington Capitals
 DESCRIPTION:Regular season. Times display in your calendar's local time. 
  Open the NHL Tracker Game Centre for scores\, analytics and game details
  .
 LOCATION:Capital One Arena
-URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2025020459#
+URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2026020173#
  games
 END:VEVENT
 BEGIN:VEVENT
-UID:nhl-2025020485@mooneyaoife.github.io
-DTSTAMP:20260716T125159Z
-DTSTART:20251212T000000Z
-DTEND:20251212T030000Z
-SUMMARY:Final: Carolina Hurricanes 3 - 2 Washington Capitals
+UID:nhl-2026020199@mooneyaoife.github.io
+DTSTAMP:20260716T181958Z
+DTSTART:20261028T233000Z
+DTEND:20261029T023000Z
+SUMMARY:Philadelphia Flyers at Washington Capitals
 DESCRIPTION:Regular season. Times display in your calendar's local time. 
  Open the NHL Tracker Game Centre for scores\, analytics and game details
  .
 LOCATION:Capital One Arena
-URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2025020485#
+URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2026020199#
  games
 END:VEVENT
 BEGIN:VEVENT
-UID:nhl-2025020503@mooneyaoife.github.io
-DTSTAMP:20260716T125159Z
-DTSTART:20251214T000000Z
-DTEND:20251214T030000Z
-SUMMARY:Final: Washington Capitals 1 - 5 Winnipeg Jets
-DESCRIPTION:Regular season. Times display in your calendar's local time. 
- Open the NHL Tracker Game Centre for scores\, analytics and game details
- .
-LOCATION:Canada Life Centre
-URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2025020503#
- games
-END:VEVENT
-BEGIN:VEVENT
-UID:nhl-2025020526@mooneyaoife.github.io
-DTSTAMP:20260716T125159Z
-DTSTART:20251217T010000Z
-DTEND:20251217T040000Z
-SUMMARY:Final: Washington Capitals 0 - 5 Minnesota Wild
-DESCRIPTION:Regular season. Times display in your calendar's local time. 
- Open the NHL Tracker Game Centre for scores\, analytics and game details
- .
-LOCATION:Grand Casino Arena
-URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2025020526#
- games
-END:VEVENT
-BEGIN:VEVENT
-UID:nhl-2025020539@mooneyaoife.github.io
-DTSTAMP:20260716T125159Z
-DTSTART:20251219T000000Z
-DTEND:20251219T030000Z
-SUMMARY:Final: Toronto Maple Leafs 0 - 4 Washington Capitals
-DESCRIPTION:Regular season. Times display in your calendar's local time. 
- Open the NHL Tracker Game Centre for scores\, analytics and game details
- .
-LOCATION:Capital One Arena
-URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2025020539#
- games
-END:VEVENT
-BEGIN:VEVENT
-UID:nhl-2025020550@mooneyaoife.github.io
-DTSTAMP:20260716T125159Z
-DTSTART:20251220T173000Z
-DTEND:20251220T203000Z
-SUMMARY:Final: Detroit Red Wings 5 - 2 Washington Capitals
-DESCRIPTION:Regular season. Times display in your calendar's local time. 
- Open the NHL Tracker Game Centre for scores\, analytics and game details
- .
-LOCATION:Capital One Arena
-URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2025020550#
- games
-END:VEVENT
-BEGIN:VEVENT
-UID:nhl-2025020562@mooneyaoife.github.io
-DTSTAMP:20260716T125159Z
-DTSTART:20251221T180000Z
-DTEND:20251221T210000Z
-SUMMARY:Final: Washington Capitals 2 - 3 Detroit Red Wings
-DESCRIPTION:Regular season. Times display in your calendar's local time. 
- Open the NHL Tracker Game Centre for scores\, analytics and game details
- .
-LOCATION:Little Caesars Arena
-URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2025020562#
- games
-END:VEVENT
-BEGIN:VEVENT
-UID:nhl-2025020576@mooneyaoife.github.io
-DTSTAMP:20260716T125159Z
-DTSTART:20251224T000000Z
-DTEND:20251224T030000Z
-SUMMARY:Final: New York Rangers 7 - 3 Washington Capitals
-DESCRIPTION:Regular season. Times display in your calendar's local time. 
- Open the NHL Tracker Game Centre for scores\, analytics and game details
- .
-LOCATION:Capital One Arena
-URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2025020576#
- games
-END:VEVENT
-BEGIN:VEVENT
-UID:nhl-2025020592@mooneyaoife.github.io
-DTSTAMP:20260716T125159Z
-DTSTART:20251228T000000Z
-DTEND:20251228T030000Z
-SUMMARY:Final: Washington Capitals 4 - 3 New Jersey Devils
-DESCRIPTION:Regular season. Times display in your calendar's local time. 
- Open the NHL Tracker Game Centre for scores\, analytics and game details
- .
-LOCATION:Prudential Center
-URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2025020592#
- games
-END:VEVENT
-BEGIN:VEVENT
-UID:nhl-2025020607@mooneyaoife.github.io
-DTSTAMP:20260716T125159Z
-DTSTART:20251230T000000Z
-DTEND:20251230T030000Z
-SUMMARY:Final: Washington Capitals 3 - 5 Florida Panthers
-DESCRIPTION:Regular season. Times display in your calendar's local time. 
- Open the NHL Tracker Game Centre for scores\, analytics and game details
- .
-LOCATION:Amerant Bank Arena
-URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2025020607#
- games
-END:VEVENT
-BEGIN:VEVENT
-UID:nhl-2025020622@mooneyaoife.github.io
-DTSTAMP:20260716T125159Z
-DTSTART:20251231T173000Z
-DTEND:20251231T203000Z
-SUMMARY:Final: New York Rangers 3 - 6 Washington Capitals
-DESCRIPTION:Regular season. Times display in your calendar's local time. 
- Open the NHL Tracker Game Centre for scores\, analytics and game details
- .
-LOCATION:Capital One Arena
-URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2025020622#
- games
-END:VEVENT
-BEGIN:VEVENT
-UID:nhl-2025020632@mooneyaoife.github.io
-DTSTAMP:20260716T125159Z
-DTSTART:20260101T180000Z
-DTEND:20260101T210000Z
-SUMMARY:Final: Washington Capitals 3 - 4 Ottawa Senators
-DESCRIPTION:Regular season. Times display in your calendar's local time. 
- Open the NHL Tracker Game Centre for scores\, analytics and game details
- .
-LOCATION:Canadian Tire Centre
-URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2025020632#
- games
-END:VEVENT
-BEGIN:VEVENT
-UID:nhl-2025020652@mooneyaoife.github.io
-DTSTAMP:20260716T125159Z
-DTSTART:20260104T000000Z
-DTEND:20260104T030000Z
-SUMMARY:Final: Chicago Blackhawks 3 - 2 Washington Capitals
-DESCRIPTION:Regular season. Times display in your calendar's local time. 
- Open the NHL Tracker Game Centre for scores\, analytics and game details
- .
-LOCATION:Capital One Arena
-URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2025020652#
- games
-END:VEVENT
-BEGIN:VEVENT
-UID:nhl-2025020663@mooneyaoife.github.io
-DTSTAMP:20260716T125159Z
-DTSTART:20260106T000000Z
-DTEND:20260106T030000Z
-SUMMARY:Final: Anaheim Ducks 4 - 7 Washington Capitals
-DESCRIPTION:Regular season. Times display in your calendar's local time. 
- Open the NHL Tracker Game Centre for scores\, analytics and game details
- .
-LOCATION:Capital One Arena
-URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2025020663#
- games
-END:VEVENT
-BEGIN:VEVENT
-UID:nhl-2025020677@mooneyaoife.github.io
-DTSTAMP:20260716T125159Z
-DTSTART:20260108T000000Z
-DTEND:20260108T030000Z
-SUMMARY:Final: Dallas Stars 4 - 1 Washington Capitals
-DESCRIPTION:Regular season. Times display in your calendar's local time. 
- Open the NHL Tracker Game Centre for scores\, analytics and game details
- .
-LOCATION:Capital One Arena
-URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2025020677#
- games
-END:VEVENT
-BEGIN:VEVENT
-UID:nhl-2025020694@mooneyaoife.github.io
-DTSTAMP:20260716T125159Z
-DTSTART:20260110T010000Z
-DTEND:20260110T040000Z
-SUMMARY:Final: Washington Capitals 5 - 1 Chicago Blackhawks
-DESCRIPTION:Regular season. Times display in your calendar's local time. 
- Open the NHL Tracker Game Centre for scores\, analytics and game details
- .
-LOCATION:United Center
-URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2025020694#
- games
-END:VEVENT
-BEGIN:VEVENT
-UID:nhl-2025020713@mooneyaoife.github.io
-DTSTAMP:20260716T125159Z
-DTSTART:20260112T000000Z
-DTEND:20260112T030000Z
-SUMMARY:Final: Washington Capitals 2 - 3 Nashville Predators
+UID:nhl-2026020208@mooneyaoife.github.io
+DTSTAMP:20260716T181958Z
+DTSTART:20261030T000000Z
+DTEND:20261030T030000Z
+SUMMARY:Washington Capitals at Nashville Predators
 DESCRIPTION:Regular season. Times display in your calendar's local time. 
  Open the NHL Tracker Game Centre for scores\, analytics and game details
  .
 LOCATION:Bridgestone Arena
-URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2025020713#
+URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2026020208#
  games
 END:VEVENT
 BEGIN:VEVENT
-UID:nhl-2025020727@mooneyaoife.github.io
-DTSTAMP:20260716T125159Z
-DTSTART:20260114T000000Z
-DTEND:20260114T030000Z
-SUMMARY:Final: Montréal Canadiens 2 - 3 Washington Capitals
+UID:nhl-2026020228@mooneyaoife.github.io
+DTSTAMP:20260716T181958Z
+DTSTART:20261101T203000Z
+DTEND:20261101T233000Z
+SUMMARY:Minnesota Wild at Washington Capitals
 DESCRIPTION:Regular season. Times display in your calendar's local time. 
  Open the NHL Tracker Game Centre for scores\, analytics and game details
  .
 LOCATION:Capital One Arena
-URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2025020727#
+URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2026020228#
  games
 END:VEVENT
 BEGIN:VEVENT
-UID:nhl-2025020742@mooneyaoife.github.io
-DTSTAMP:20260716T125159Z
-DTSTART:20260116T000000Z
-DTEND:20260116T030000Z
-SUMMARY:Final: San Jose Sharks 3 - 2 Washington Capitals
+UID:nhl-2026020243@mooneyaoife.github.io
+DTSTAMP:20260716T181958Z
+DTSTART:20261104T000000Z
+DTEND:20261104T030000Z
+SUMMARY:Dallas Stars at Washington Capitals
 DESCRIPTION:Regular season. Times display in your calendar's local time. 
  Open the NHL Tracker Game Centre for scores\, analytics and game details
  .
 LOCATION:Capital One Arena
-URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2025020742#
+URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2026020243#
  games
 END:VEVENT
 BEGIN:VEVENT
-UID:nhl-2025020761@mooneyaoife.github.io
-DTSTAMP:20260716T125159Z
-DTSTART:20260118T000000Z
-DTEND:20260118T030000Z
-SUMMARY:Final: Florida Panthers 5 - 2 Washington Capitals
+UID:nhl-2026020265@mooneyaoife.github.io
+DTSTAMP:20260716T181958Z
+DTSTART:20261107T173000Z
+DTEND:20261107T203000Z
+SUMMARY:Florida Panthers at Washington Capitals
 DESCRIPTION:Regular season. Times display in your calendar's local time. 
  Open the NHL Tracker Game Centre for scores\, analytics and game details
  .
 LOCATION:Capital One Arena
-URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2025020761#
+URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2026020265#
  games
 END:VEVENT
 BEGIN:VEVENT
-UID:nhl-2025020771@mooneyaoife.github.io
-DTSTAMP:20260716T125159Z
-DTSTART:20260119T210000Z
-DTEND:20260120T000000Z
-SUMMARY:Final: Washington Capitals 2 - 5 Colorado Avalanche
+UID:nhl-2026020288@mooneyaoife.github.io
+DTSTAMP:20260716T181958Z
+DTSTART:20261111T000000Z
+DTEND:20261111T030000Z
+SUMMARY:Washington Capitals at Ottawa Senators
 DESCRIPTION:Regular season. Times display in your calendar's local time. 
  Open the NHL Tracker Game Centre for scores\, analytics and game details
  .
-LOCATION:Ball Arena
-URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2025020771#
+LOCATION:Canadian Tire Centre
+URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2026020288#
  games
 END:VEVENT
 BEGIN:VEVENT
-UID:nhl-2025020792@mooneyaoife.github.io
-DTSTAMP:20260716T125159Z
-DTSTART:20260122T030000Z
-DTEND:20260122T060000Z
-SUMMARY:Final: Washington Capitals 3 - 4 Vancouver Canucks
-DESCRIPTION:Regular season. Times display in your calendar's local time. 
- Open the NHL Tracker Game Centre for scores\, analytics and game details
- .
-LOCATION:Rogers Arena
-URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2025020792#
- games
-END:VEVENT
-BEGIN:VEVENT
-UID:nhl-2025020806@mooneyaoife.github.io
-DTSTAMP:20260716T125159Z
-DTSTART:20260124T020000Z
-DTEND:20260124T050000Z
-SUMMARY:Final: Washington Capitals 3 - 1 Calgary Flames
-DESCRIPTION:Regular season. Times display in your calendar's local time. 
- Open the NHL Tracker Game Centre for scores\, analytics and game details
- .
-LOCATION:Scotiabank Saddledome
-URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2025020806#
- games
-END:VEVENT
-BEGIN:VEVENT
-UID:nhl-2025020818@mooneyaoife.github.io
-DTSTAMP:20260716T125159Z
-DTSTART:20260125T030000Z
-DTEND:20260125T060000Z
-SUMMARY:Final: Washington Capitals 5 - 6 Edmonton Oilers
-DESCRIPTION:Regular season. Times display in your calendar's local time. 
- Open the NHL Tracker Game Centre for scores\, analytics and game details
- .
-LOCATION:Rogers Place
-URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2025020818#
- games
-END:VEVENT
-BEGIN:VEVENT
-UID:nhl-2025020839@mooneyaoife.github.io
-DTSTAMP:20260716T125159Z
-DTSTART:20260128T030000Z
-DTEND:20260128T060000Z
-SUMMARY:Final: Washington Capitals 1 - 5 Seattle Kraken
-DESCRIPTION:Regular season. Times display in your calendar's local time. 
- Open the NHL Tracker Game Centre for scores\, analytics and game details
- .
-LOCATION:Climate Pledge Arena
-URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2025020839#
- games
-END:VEVENT
-BEGIN:VEVENT
-UID:nhl-2025020846@mooneyaoife.github.io
-DTSTAMP:20260716T125159Z
-DTSTART:20260130T003000Z
-DTEND:20260130T033000Z
-SUMMARY:Final: Washington Capitals 4 - 3 Detroit Red Wings
-DESCRIPTION:Regular season. Times display in your calendar's local time. 
- Open the NHL Tracker Game Centre for scores\, analytics and game details
- .
-LOCATION:Little Caesars Arena
-URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2025020846#
- games
-END:VEVENT
-BEGIN:VEVENT
-UID:nhl-2025020864@mooneyaoife.github.io
-DTSTAMP:20260716T125159Z
-DTSTART:20260131T220000Z
-DTEND:20260201T010000Z
-SUMMARY:Final: Carolina Hurricanes 3 - 4 Washington Capitals
-DESCRIPTION:Regular season. Times display in your calendar's local time. 
- Open the NHL Tracker Game Centre for scores\, analytics and game details
- .
-LOCATION:Capital One Arena
-URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2025020864#
- games
-END:VEVENT
-BEGIN:VEVENT
-UID:nhl-2025020878@mooneyaoife.github.io
-DTSTAMP:20260716T125159Z
-DTSTART:20260203T000000Z
-DTEND:20260203T030000Z
-SUMMARY:Final: New York Islanders 1 - 4 Washington Capitals
-DESCRIPTION:Regular season. Times display in your calendar's local time. 
- Open the NHL Tracker Game Centre for scores\, analytics and game details
- .
-LOCATION:Capital One Arena
-URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2025020878#
- games
-END:VEVENT
-BEGIN:VEVENT
-UID:nhl-2025020889@mooneyaoife.github.io
-DTSTAMP:20260716T125159Z
-DTSTART:20260204T000000Z
-DTEND:20260204T030000Z
-SUMMARY:Final: Washington Capitals 2 - 4 Philadelphia Flyers
-DESCRIPTION:Regular season. Times display in your calendar's local time. 
- Open the NHL Tracker Game Centre for scores\, analytics and game details
- .
-LOCATION:Xfinity Mobile Arena
-URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2025020889#
- games
-END:VEVENT
-BEGIN:VEVENT
-UID:nhl-2025020908@mooneyaoife.github.io
-DTSTAMP:20260716T125159Z
-DTSTART:20260206T000000Z
-DTEND:20260206T030000Z
-SUMMARY:Final: Nashville Predators 2 - 4 Washington Capitals
-DESCRIPTION:Regular season. Times display in your calendar's local time. 
- Open the NHL Tracker Game Centre for scores\, analytics and game details
- .
-LOCATION:Capital One Arena
-URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2025020908#
- games
-END:VEVENT
-BEGIN:VEVENT
-UID:nhl-2025020911@mooneyaoife.github.io
-DTSTAMP:20260716T125159Z
-DTSTART:20260226T000000Z
-DTEND:20260226T030000Z
-SUMMARY:Final: Philadelphia Flyers 1 - 3 Washington Capitals
-DESCRIPTION:Regular season. Times display in your calendar's local time. 
- Open the NHL Tracker Game Centre for scores\, analytics and game details
- .
-LOCATION:Capital One Arena
-URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2025020911#
- games
-END:VEVENT
-BEGIN:VEVENT
-UID:nhl-2025020931@mooneyaoife.github.io
-DTSTAMP:20260716T125159Z
-DTSTART:20260228T000000Z
-DTEND:20260228T030000Z
-SUMMARY:Final: Vegas Golden Knights 2 - 3 Washington Capitals
-DESCRIPTION:Regular season. Times display in your calendar's local time. 
- Open the NHL Tracker Game Centre for scores\, analytics and game details
- .
-LOCATION:Capital One Arena
-URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2025020931#
- games
-END:VEVENT
-BEGIN:VEVENT
-UID:nhl-2025020940@mooneyaoife.github.io
-DTSTAMP:20260716T125159Z
-DTSTART:20260301T000000Z
-DTEND:20260301T030000Z
-SUMMARY:Final: Washington Capitals 2 - 6 Montréal Canadiens
-DESCRIPTION:Regular season. Times display in your calendar's local time. 
- Open the NHL Tracker Game Centre for scores\, analytics and game details
- .
-LOCATION:Centre Bell
-URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2025020940#
- games
-END:VEVENT
-BEGIN:VEVENT
-UID:nhl-2025020962@mooneyaoife.github.io
-DTSTAMP:20260716T125159Z
-DTSTART:20260304T000000Z
-DTEND:20260304T030000Z
-SUMMARY:Final: Utah Mammoth 3 - 2 Washington Capitals
-DESCRIPTION:Regular season. Times display in your calendar's local time. 
- Open the NHL Tracker Game Centre for scores\, analytics and game details
- .
-LOCATION:Capital One Arena
-URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2025020962#
- games
-END:VEVENT
-BEGIN:VEVENT
-UID:nhl-2025020990@mooneyaoife.github.io
-DTSTAMP:20260716T125159Z
-DTSTART:20260307T173000Z
-DTEND:20260307T203000Z
-SUMMARY:Final: Washington Capitals 1 - 3 Boston Bruins
-DESCRIPTION:Regular season. Times display in your calendar's local time. 
- Open the NHL Tracker Game Centre for scores\, analytics and game details
- .
-LOCATION:TD Garden
-URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2025020990#
- games
-END:VEVENT
-BEGIN:VEVENT
-UID:nhl-2025021009@mooneyaoife.github.io
-DTSTAMP:20260716T125159Z
-DTSTART:20260309T230000Z
-DTEND:20260310T020000Z
-SUMMARY:Final: Calgary Flames 3 - 7 Washington Capitals
-DESCRIPTION:Regular season. Times display in your calendar's local time. 
- Open the NHL Tracker Game Centre for scores\, analytics and game details
- .
-LOCATION:Capital One Arena
-URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2025021009#
- games
-END:VEVENT
-BEGIN:VEVENT
-UID:nhl-2025021026@mooneyaoife.github.io
-DTSTAMP:20260716T125159Z
-DTSTART:20260311T233000Z
-DTEND:20260312T023000Z
-SUMMARY:Final: Washington Capitals 1 - 4 Philadelphia Flyers
-DESCRIPTION:Regular season. Times display in your calendar's local time. 
- Open the NHL Tracker Game Centre for scores\, analytics and game details
- .
-LOCATION:Xfinity Mobile Arena
-URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2025021026#
- games
-END:VEVENT
-BEGIN:VEVENT
-UID:nhl-2025021028@mooneyaoife.github.io
-DTSTAMP:20260716T125159Z
-DTSTART:20260312T230000Z
-DTEND:20260313T020000Z
-SUMMARY:Final: Washington Capitals 2 - 1 Buffalo Sabres
-DESCRIPTION:Regular season. Times display in your calendar's local time. 
- Open the NHL Tracker Game Centre for scores\, analytics and game details
- .
-LOCATION:KeyBank Center
-URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2025021028#
- games
-END:VEVENT
-BEGIN:VEVENT
-UID:nhl-2025021044@mooneyaoife.github.io
-DTSTAMP:20260716T125159Z
-DTSTART:20260314T190000Z
-DTEND:20260314T220000Z
-SUMMARY:Final: Boston Bruins 3 - 2 Washington Capitals
-DESCRIPTION:Regular season. Times display in your calendar's local time. 
- Open the NHL Tracker Game Centre for scores\, analytics and game details
- .
-LOCATION:Capital One Arena
-URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2025021044#
- games
-END:VEVENT
-BEGIN:VEVENT
-UID:nhl-2025021079@mooneyaoife.github.io
-DTSTAMP:20260716T125159Z
-DTSTART:20260318T233000Z
-DTEND:20260319T023000Z
-SUMMARY:Final: Ottawa Senators 1 - 4 Washington Capitals
-DESCRIPTION:Regular season. Times display in your calendar's local time. 
- Open the NHL Tracker Game Centre for scores\, analytics and game details
- .
-LOCATION:Capital One Arena
-URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2025021079#
- games
-END:VEVENT
-BEGIN:VEVENT
-UID:nhl-2025021095@mooneyaoife.github.io
-DTSTAMP:20260716T125159Z
-DTSTART:20260320T230000Z
-DTEND:20260321T020000Z
-SUMMARY:Final: New Jersey Devils 1 - 2 Washington Capitals
-DESCRIPTION:Regular season. Times display in your calendar's local time. 
- Open the NHL Tracker Game Centre for scores\, analytics and game details
- .
-LOCATION:Capital One Arena
-URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2025021095#
- games
-END:VEVENT
-BEGIN:VEVENT
-UID:nhl-2025021111@mooneyaoife.github.io
-DTSTAMP:20260716T125159Z
-DTSTART:20260322T163000Z
-DTEND:20260322T193000Z
-SUMMARY:Final: Colorado Avalanche 3 - 2 Washington Capitals
-DESCRIPTION:Regular season. Times display in your calendar's local time. 
- Open the NHL Tracker Game Centre for scores\, analytics and game details
- .
-LOCATION:Capital One Arena
-URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2025021111#
- games
-END:VEVENT
-BEGIN:VEVENT
-UID:nhl-2025021128@mooneyaoife.github.io
-DTSTAMP:20260716T125159Z
-DTSTART:20260325T000000Z
-DTEND:20260325T030000Z
-SUMMARY:Final: Washington Capitals 0 - 3 St. Louis Blues
-DESCRIPTION:Regular season. Times display in your calendar's local time. 
- Open the NHL Tracker Game Centre for scores\, analytics and game details
- .
-LOCATION:Enterprise Center
-URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2025021128#
- games
-END:VEVENT
-BEGIN:VEVENT
-UID:nhl-2025021146@mooneyaoife.github.io
-DTSTAMP:20260716T125159Z
-DTSTART:20260327T010000Z
-DTEND:20260327T040000Z
-SUMMARY:Final: Washington Capitals 7 - 4 Utah Mammoth
-DESCRIPTION:Regular season. Times display in your calendar's local time. 
- Open the NHL Tracker Game Centre for scores\, analytics and game details
- .
-LOCATION:Delta Center
-URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2025021146#
- games
-END:VEVENT
-BEGIN:VEVENT
-UID:nhl-2025021166@mooneyaoife.github.io
-DTSTAMP:20260716T125159Z
-DTSTART:20260329T023000Z
-DTEND:20260329T053000Z
-SUMMARY:Final: Washington Capitals 5 - 4 Vegas Golden Knights
-DESCRIPTION:Regular season. Times display in your calendar's local time. 
- Open the NHL Tracker Game Centre for scores\, analytics and game details
- .
-LOCATION:T-Mobile Arena
-URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2025021166#
- games
-END:VEVENT
-BEGIN:VEVENT
-UID:nhl-2025021184@mooneyaoife.github.io
-DTSTAMP:20260716T125159Z
-DTSTART:20260331T230000Z
-DTEND:20260401T020000Z
-SUMMARY:Final: Philadelphia Flyers 4 - 6 Washington Capitals
-DESCRIPTION:Regular season. Times display in your calendar's local time. 
- Open the NHL Tracker Game Centre for scores\, analytics and game details
- .
-LOCATION:Capital One Arena
-URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2025021184#
- games
-END:VEVENT
-BEGIN:VEVENT
-UID:nhl-2025021194@mooneyaoife.github.io
-DTSTAMP:20260716T125159Z
-DTSTART:20260402T233000Z
-DTEND:20260403T023000Z
-SUMMARY:Final: Washington Capitals 3 - 7 New Jersey Devils
+UID:nhl-2026020303@mooneyaoife.github.io
+DTSTAMP:20260716T181958Z
+DTSTART:20261113T000000Z
+DTEND:20261113T030000Z
+SUMMARY:Washington Capitals at New Jersey Devils
 DESCRIPTION:Regular season. Times display in your calendar's local time. 
  Open the NHL Tracker Game Centre for scores\, analytics and game details
  .
 LOCATION:Prudential Center
-URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2025021194#
+URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2026020303#
  games
 END:VEVENT
 BEGIN:VEVENT
-UID:nhl-2025021213@mooneyaoife.github.io
-DTSTAMP:20260716T125159Z
-DTSTART:20260404T230000Z
-DTEND:20260405T020000Z
-SUMMARY:Final: Buffalo Sabres 2 - 6 Washington Capitals
+UID:nhl-2026020318@mooneyaoife.github.io
+DTSTAMP:20260716T181958Z
+DTSTART:20261115T000000Z
+DTEND:20261115T030000Z
+SUMMARY:New Jersey Devils at Washington Capitals
 DESCRIPTION:Regular season. Times display in your calendar's local time. 
  Open the NHL Tracker Game Centre for scores\, analytics and game details
  .
 LOCATION:Capital One Arena
-URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2025021213#
+URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2026020318#
  games
 END:VEVENT
 BEGIN:VEVENT
-UID:nhl-2025021227@mooneyaoife.github.io
-DTSTAMP:20260716T125159Z
-DTSTART:20260405T230000Z
-DTEND:20260406T020000Z
-SUMMARY:Final: Washington Capitals 1 - 8 New York Rangers
+UID:nhl-2026020334@mooneyaoife.github.io
+DTSTAMP:20260716T181958Z
+DTSTART:20261118T000000Z
+DTEND:20261118T030000Z
+SUMMARY:Washington Capitals at Tampa Bay Lightning
 DESCRIPTION:Regular season. Times display in your calendar's local time. 
  Open the NHL Tracker Game Centre for scores\, analytics and game details
  .
-LOCATION:Madison Square Garden
-URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2025021227#
+LOCATION:Benchmark International Arena
+URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2026020334#
  games
 END:VEVENT
 BEGIN:VEVENT
-UID:nhl-2025021245@mooneyaoife.github.io
-DTSTAMP:20260716T125159Z
-DTSTART:20260408T233000Z
-DTEND:20260409T023000Z
-SUMMARY:Final: Washington Capitals 4 - 0 Toronto Maple Leafs
+UID:nhl-2026020351@mooneyaoife.github.io
+DTSTAMP:20260716T181958Z
+DTSTART:20261120T000000Z
+DTEND:20261120T030000Z
+SUMMARY:Buffalo Sabres at Washington Capitals
+DESCRIPTION:Regular season. Times display in your calendar's local time. 
+ Open the NHL Tracker Game Centre for scores\, analytics and game details
+ .
+LOCATION:Capital One Arena
+URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2026020351#
+ games
+END:VEVENT
+BEGIN:VEVENT
+UID:nhl-2026020363@mooneyaoife.github.io
+DTSTAMP:20260716T181958Z
+DTSTART:20261122T000000Z
+DTEND:20261122T030000Z
+SUMMARY:Washington Capitals at Boston Bruins
+DESCRIPTION:Regular season. Times display in your calendar's local time. 
+ Open the NHL Tracker Game Centre for scores\, analytics and game details
+ .
+LOCATION:TD Garden
+URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2026020363#
+ games
+END:VEVENT
+BEGIN:VEVENT
+UID:nhl-2026020392@mooneyaoife.github.io
+DTSTAMP:20260716T181958Z
+DTSTART:20261126T000000Z
+DTEND:20261126T030000Z
+SUMMARY:Philadelphia Flyers at Washington Capitals
+DESCRIPTION:Regular season. Times display in your calendar's local time. 
+ Open the NHL Tracker Game Centre for scores\, analytics and game details
+ .
+LOCATION:Capital One Arena
+URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2026020392#
+ games
+END:VEVENT
+BEGIN:VEVENT
+UID:nhl-2026020406@mooneyaoife.github.io
+DTSTAMP:20260716T181958Z
+DTSTART:20261127T200000Z
+DTEND:20261127T230000Z
+SUMMARY:Florida Panthers at Washington Capitals
+DESCRIPTION:Regular season. Times display in your calendar's local time. 
+ Open the NHL Tracker Game Centre for scores\, analytics and game details
+ .
+LOCATION:Capital One Arena
+URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2026020406#
+ games
+END:VEVENT
+BEGIN:VEVENT
+UID:nhl-2026020422@mooneyaoife.github.io
+DTSTAMP:20260716T181958Z
+DTSTART:20261129T000000Z
+DTEND:20261129T030000Z
+SUMMARY:Washington Capitals at St. Louis Blues
+DESCRIPTION:Regular season. Times display in your calendar's local time. 
+ Open the NHL Tracker Game Centre for scores\, analytics and game details
+ .
+LOCATION:Enterprise Center
+URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2026020422#
+ games
+END:VEVENT
+BEGIN:VEVENT
+UID:nhl-2026020439@mooneyaoife.github.io
+DTSTAMP:20260716T181958Z
+DTSTART:20261202T000000Z
+DTEND:20261202T030000Z
+SUMMARY:Vancouver Canucks at Washington Capitals
+DESCRIPTION:Regular season. Times display in your calendar's local time. 
+ Open the NHL Tracker Game Centre for scores\, analytics and game details
+ .
+LOCATION:Capital One Arena
+URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2026020439#
+ games
+END:VEVENT
+BEGIN:VEVENT
+UID:nhl-2026020456@mooneyaoife.github.io
+DTSTAMP:20260716T181958Z
+DTSTART:20261204T010000Z
+DTEND:20261204T040000Z
+SUMMARY:Washington Capitals at Edmonton Oilers
+DESCRIPTION:Regular season. Times display in your calendar's local time. 
+ Open the NHL Tracker Game Centre for scores\, analytics and game details
+ .
+LOCATION:Rogers Place
+URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2026020456#
+ games
+END:VEVENT
+BEGIN:VEVENT
+UID:nhl-2026020468@mooneyaoife.github.io
+DTSTAMP:20260716T181958Z
+DTSTART:20261205T203000Z
+DTEND:20261205T233000Z
+SUMMARY:Washington Capitals at Calgary Flames
+DESCRIPTION:Regular season. Times display in your calendar's local time. 
+ Open the NHL Tracker Game Centre for scores\, analytics and game details
+ .
+LOCATION:Scotiabank Saddledome
+URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2026020468#
+ games
+END:VEVENT
+BEGIN:VEVENT
+UID:nhl-2026020485@mooneyaoife.github.io
+DTSTAMP:20260716T181958Z
+DTSTART:20261208T020000Z
+DTEND:20261208T050000Z
+SUMMARY:Washington Capitals at Vancouver Canucks
+DESCRIPTION:Regular season. Times display in your calendar's local time. 
+ Open the NHL Tracker Game Centre for scores\, analytics and game details
+ .
+LOCATION:Rogers Arena
+URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2026020485#
+ games
+END:VEVENT
+BEGIN:VEVENT
+UID:nhl-2026020509@mooneyaoife.github.io
+DTSTAMP:20260716T181958Z
+DTSTART:20261211T020000Z
+DTEND:20261211T050000Z
+SUMMARY:Washington Capitals at Seattle Kraken
+DESCRIPTION:Regular season. Times display in your calendar's local time. 
+ Open the NHL Tracker Game Centre for scores\, analytics and game details
+ .
+LOCATION:Climate Pledge Arena
+URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2026020509#
+ games
+END:VEVENT
+BEGIN:VEVENT
+UID:nhl-2026020524@mooneyaoife.github.io
+DTSTAMP:20260716T181958Z
+DTSTART:20261213T020000Z
+DTEND:20261213T050000Z
+SUMMARY:Washington Capitals at Colorado Avalanche
+DESCRIPTION:Regular season. Times display in your calendar's local time. 
+ Open the NHL Tracker Game Centre for scores\, analytics and game details
+ .
+LOCATION:Ball Arena
+URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2026020524#
+ games
+END:VEVENT
+BEGIN:VEVENT
+UID:nhl-2026020546@mooneyaoife.github.io
+DTSTAMP:20260716T181958Z
+DTSTART:20261216T023000Z
+DTEND:20261216T053000Z
+SUMMARY:Washington Capitals at Dallas Stars
+DESCRIPTION:Regular season. Times display in your calendar's local time. 
+ Open the NHL Tracker Game Centre for scores\, analytics and game details
+ .
+LOCATION:American Airlines Center
+URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2026020546#
+ games
+END:VEVENT
+BEGIN:VEVENT
+UID:nhl-2026020555@mooneyaoife.github.io
+DTSTAMP:20260716T181958Z
+DTSTART:20261218T000000Z
+DTEND:20261218T030000Z
+SUMMARY:Detroit Red Wings at Washington Capitals
+DESCRIPTION:Regular season. Times display in your calendar's local time. 
+ Open the NHL Tracker Game Centre for scores\, analytics and game details
+ .
+LOCATION:Capital One Arena
+URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2026020555#
+ games
+END:VEVENT
+BEGIN:VEVENT
+UID:nhl-2026020571@mooneyaoife.github.io
+DTSTAMP:20260716T181958Z
+DTSTART:20261220T000000Z
+DTEND:20261220T030000Z
+SUMMARY:St. Louis Blues at Washington Capitals
+DESCRIPTION:Regular season. Times display in your calendar's local time. 
+ Open the NHL Tracker Game Centre for scores\, analytics and game details
+ .
+LOCATION:Capital One Arena
+URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2026020571#
+ games
+END:VEVENT
+BEGIN:VEVENT
+UID:nhl-2026020585@mooneyaoife.github.io
+DTSTAMP:20260716T181958Z
+DTSTART:20261221T180000Z
+DTEND:20261221T210000Z
+SUMMARY:Washington Capitals at Toronto Maple Leafs
 DESCRIPTION:Regular season. Times display in your calendar's local time. 
  Open the NHL Tracker Game Centre for scores\, analytics and game details
  .
 LOCATION:Scotiabank Arena
-URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2025021245#
+URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2026020585#
  games
 END:VEVENT
 BEGIN:VEVENT
-UID:nhl-2025021263@mooneyaoife.github.io
-DTSTAMP:20260716T125159Z
-DTSTART:20260411T190000Z
-DTEND:20260411T220000Z
-SUMMARY:Final: Washington Capitals 6 - 3 Pittsburgh Penguins
-DESCRIPTION:Regular season. Times display in your calendar's local time. 
- Open the NHL Tracker Game Centre for scores\, analytics and game details
- .
-LOCATION:PPG Paints Arena
-URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2025021263#
- games
-END:VEVENT
-BEGIN:VEVENT
-UID:nhl-2025021276@mooneyaoife.github.io
-DTSTAMP:20260716T125159Z
-DTSTART:20260412T190000Z
-DTEND:20260412T220000Z
-SUMMARY:Final: Pittsburgh Penguins 0 - 3 Washington Capitals
+UID:nhl-2026020605@mooneyaoife.github.io
+DTSTAMP:20260716T181958Z
+DTSTART:20261227T000000Z
+DTEND:20261227T030000Z
+SUMMARY:Columbus Blue Jackets at Washington Capitals
 DESCRIPTION:Regular season. Times display in your calendar's local time. 
  Open the NHL Tracker Game Centre for scores\, analytics and game details
  .
 LOCATION:Capital One Arena
-URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2025021276#
+URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2026020605#
  games
 END:VEVENT
 BEGIN:VEVENT
-UID:nhl-2025021295@mooneyaoife.github.io
-DTSTAMP:20260716T125159Z
-DTSTART:20260414T230000Z
-DTEND:20260415T020000Z
-SUMMARY:Final: Washington Capitals 2 - 1 Columbus Blue Jackets
+UID:nhl-2026020622@mooneyaoife.github.io
+DTSTAMP:20260716T181958Z
+DTSTART:20261229T000000Z
+DTEND:20261229T030000Z
+SUMMARY:Edmonton Oilers at Washington Capitals
+DESCRIPTION:Regular season. Times display in your calendar's local time. 
+ Open the NHL Tracker Game Centre for scores\, analytics and game details
+ .
+LOCATION:Capital One Arena
+URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2026020622#
+ games
+END:VEVENT
+BEGIN:VEVENT
+UID:nhl-2026020637@mooneyaoife.github.io
+DTSTAMP:20260716T181958Z
+DTSTART:20261230T210000Z
+DTEND:20261231T000000Z
+SUMMARY:Washington Capitals at New York Islanders
+DESCRIPTION:Regular season. Times display in your calendar's local time. 
+ Open the NHL Tracker Game Centre for scores\, analytics and game details
+ .
+LOCATION:UBS Arena
+URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2026020637#
+ games
+END:VEVENT
+BEGIN:VEVENT
+UID:nhl-2026020645@mooneyaoife.github.io
+DTSTAMP:20260716T181958Z
+DTSTART:20261231T190000Z
+DTEND:20261231T220000Z
+SUMMARY:Washington Capitals at Columbus Blue Jackets
 DESCRIPTION:Regular season. Times display in your calendar's local time. 
  Open the NHL Tracker Game Centre for scores\, analytics and game details
  .
 LOCATION:Nationwide Arena
-URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2025021295#
+URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2026020645#
+ games
+END:VEVENT
+BEGIN:VEVENT
+UID:nhl-2026020658@mooneyaoife.github.io
+DTSTAMP:20260716T181958Z
+DTSTART:20270103T000000Z
+DTEND:20270103T030000Z
+SUMMARY:Ottawa Senators at Washington Capitals
+DESCRIPTION:Regular season. Times display in your calendar's local time. 
+ Open the NHL Tracker Game Centre for scores\, analytics and game details
+ .
+LOCATION:Capital One Arena
+URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2026020658#
+ games
+END:VEVENT
+BEGIN:VEVENT
+UID:nhl-2026020676@mooneyaoife.github.io
+DTSTAMP:20260716T181958Z
+DTSTART:20270105T003000Z
+DTEND:20270105T033000Z
+SUMMARY:Toronto Maple Leafs at Washington Capitals
+DESCRIPTION:Regular season. Times display in your calendar's local time. 
+ Open the NHL Tracker Game Centre for scores\, analytics and game details
+ .
+LOCATION:Capital One Arena
+URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2026020676#
+ games
+END:VEVENT
+BEGIN:VEVENT
+UID:nhl-2026020692@mooneyaoife.github.io
+DTSTAMP:20260716T181958Z
+DTSTART:20270107T030000Z
+DTEND:20270107T060000Z
+SUMMARY:Washington Capitals at Los Angeles Kings
+DESCRIPTION:Regular season. Times display in your calendar's local time. 
+ Open the NHL Tracker Game Centre for scores\, analytics and game details
+ .
+LOCATION:Crypto.com Arena
+URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2026020692#
+ games
+END:VEVENT
+BEGIN:VEVENT
+UID:nhl-2026020708@mooneyaoife.github.io
+DTSTAMP:20260716T181958Z
+DTSTART:20270109T030000Z
+DTEND:20270109T060000Z
+SUMMARY:Washington Capitals at San Jose Sharks
+DESCRIPTION:Regular season. Times display in your calendar's local time. 
+ Open the NHL Tracker Game Centre for scores\, analytics and game details
+ .
+LOCATION:SAP Center at San Jose
+URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2026020708#
+ games
+END:VEVENT
+BEGIN:VEVENT
+UID:nhl-2026020724@mooneyaoife.github.io
+DTSTAMP:20260716T181958Z
+DTSTART:20270111T010000Z
+DTEND:20270111T040000Z
+SUMMARY:Washington Capitals at Anaheim Ducks
+DESCRIPTION:Regular season. Times display in your calendar's local time. 
+ Open the NHL Tracker Game Centre for scores\, analytics and game details
+ .
+LOCATION:Honda Center
+URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2026020724#
+ games
+END:VEVENT
+BEGIN:VEVENT
+UID:nhl-2026020731@mooneyaoife.github.io
+DTSTAMP:20260716T181958Z
+DTSTART:20270113T000000Z
+DTEND:20270113T030000Z
+SUMMARY:Vegas Golden Knights at Washington Capitals
+DESCRIPTION:Regular season. Times display in your calendar's local time. 
+ Open the NHL Tracker Game Centre for scores\, analytics and game details
+ .
+LOCATION:Capital One Arena
+URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2026020731#
+ games
+END:VEVENT
+BEGIN:VEVENT
+UID:nhl-2026020748@mooneyaoife.github.io
+DTSTAMP:20260716T181958Z
+DTSTART:20270115T000000Z
+DTEND:20270115T030000Z
+SUMMARY:Carolina Hurricanes at Washington Capitals
+DESCRIPTION:Regular season. Times display in your calendar's local time. 
+ Open the NHL Tracker Game Centre for scores\, analytics and game details
+ .
+LOCATION:Capital One Arena
+URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2026020748#
+ games
+END:VEVENT
+BEGIN:VEVENT
+UID:nhl-2026020765@mooneyaoife.github.io
+DTSTAMP:20260716T181958Z
+DTSTART:20270117T000000Z
+DTEND:20270117T030000Z
+SUMMARY:Colorado Avalanche at Washington Capitals
+DESCRIPTION:Regular season. Times display in your calendar's local time. 
+ Open the NHL Tracker Game Centre for scores\, analytics and game details
+ .
+LOCATION:Capital One Arena
+URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2026020765#
+ games
+END:VEVENT
+BEGIN:VEVENT
+UID:nhl-2026020780@mooneyaoife.github.io
+DTSTAMP:20260716T181958Z
+DTSTART:20270118T210000Z
+DTEND:20270119T000000Z
+SUMMARY:Washington Capitals at Pittsburgh Penguins
+DESCRIPTION:Regular season. Times display in your calendar's local time. 
+ Open the NHL Tracker Game Centre for scores\, analytics and game details
+ .
+LOCATION:PPG Paints Arena
+URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2026020780#
+ games
+END:VEVENT
+BEGIN:VEVENT
+UID:nhl-2026020789@mooneyaoife.github.io
+DTSTAMP:20260716T181958Z
+DTSTART:20270120T000000Z
+DTEND:20270120T030000Z
+SUMMARY:Montréal Canadiens at Washington Capitals
+DESCRIPTION:Regular season. Times display in your calendar's local time. 
+ Open the NHL Tracker Game Centre for scores\, analytics and game details
+ .
+LOCATION:Capital One Arena
+URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2026020789#
+ games
+END:VEVENT
+BEGIN:VEVENT
+UID:nhl-2026020808@mooneyaoife.github.io
+DTSTAMP:20260716T181958Z
+DTSTART:20270123T000000Z
+DTEND:20270123T030000Z
+SUMMARY:New York Islanders at Washington Capitals
+DESCRIPTION:Regular season. Times display in your calendar's local time. 
+ Open the NHL Tracker Game Centre for scores\, analytics and game details
+ .
+LOCATION:Capital One Arena
+URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2026020808#
+ games
+END:VEVENT
+BEGIN:VEVENT
+UID:nhl-2026020828@mooneyaoife.github.io
+DTSTAMP:20260716T181958Z
+DTSTART:20270125T000000Z
+DTEND:20270125T030000Z
+SUMMARY:Washington Capitals at New Jersey Devils
+DESCRIPTION:Regular season. Times display in your calendar's local time. 
+ Open the NHL Tracker Game Centre for scores\, analytics and game details
+ .
+LOCATION:Prudential Center
+URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2026020828#
+ games
+END:VEVENT
+BEGIN:VEVENT
+UID:nhl-2026020863@mooneyaoife.github.io
+DTSTAMP:20260716T181958Z
+DTSTART:20270130T020000Z
+DTEND:20270130T050000Z
+SUMMARY:Washington Capitals at Utah Mammoth
+DESCRIPTION:Regular season. Times display in your calendar's local time. 
+ Open the NHL Tracker Game Centre for scores\, analytics and game details
+ .
+LOCATION:Delta Center
+URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2026020863#
+ games
+END:VEVENT
+BEGIN:VEVENT
+UID:nhl-2026020876@mooneyaoife.github.io
+DTSTAMP:20260716T181958Z
+DTSTART:20270131T030000Z
+DTEND:20270131T060000Z
+SUMMARY:Washington Capitals at Vegas Golden Knights
+DESCRIPTION:Regular season. Times display in your calendar's local time. 
+ Open the NHL Tracker Game Centre for scores\, analytics and game details
+ .
+LOCATION:T-Mobile Arena
+URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2026020876#
+ games
+END:VEVENT
+BEGIN:VEVENT
+UID:nhl-2026020884@mooneyaoife.github.io
+DTSTAMP:20260716T181958Z
+DTSTART:20270202T230000Z
+DTEND:20270203T020000Z
+SUMMARY:Winnipeg Jets at Washington Capitals
+DESCRIPTION:Regular season. Times display in your calendar's local time. 
+ Open the NHL Tracker Game Centre for scores\, analytics and game details
+ .
+LOCATION:Capital One Arena
+URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2026020884#
+ games
+END:VEVENT
+BEGIN:VEVENT
+UID:nhl-2026020888@mooneyaoife.github.io
+DTSTAMP:20260716T181958Z
+DTSTART:20270204T000000Z
+DTEND:20270204T030000Z
+SUMMARY:Washington Capitals at Florida Panthers
+DESCRIPTION:Regular season. Times display in your calendar's local time. 
+ Open the NHL Tracker Game Centre for scores\, analytics and game details
+ .
+LOCATION:Amerant Bank Arena
+URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2026020888#
+ games
+END:VEVENT
+BEGIN:VEVENT
+UID:nhl-2026020912@mooneyaoife.github.io
+DTSTAMP:20260716T181958Z
+DTSTART:20270213T180000Z
+DTEND:20270213T210000Z
+SUMMARY:Washington Capitals at Montréal Canadiens
+DESCRIPTION:Regular season. Times display in your calendar's local time. 
+ Open the NHL Tracker Game Centre for scores\, analytics and game details
+ .
+LOCATION:Centre Bell
+URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2026020912#
+ games
+END:VEVENT
+BEGIN:VEVENT
+UID:nhl-2026020928@mooneyaoife.github.io
+DTSTAMP:20260716T181958Z
+DTSTART:20270214T180000Z
+DTEND:20270214T210000Z
+SUMMARY:Utah Mammoth at Washington Capitals
+DESCRIPTION:Regular season. Times display in your calendar's local time. 
+ Open the NHL Tracker Game Centre for scores\, analytics and game details
+ .
+LOCATION:Capital One Arena
+URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2026020928#
+ games
+END:VEVENT
+BEGIN:VEVENT
+UID:nhl-2026020941@mooneyaoife.github.io
+DTSTAMP:20260716T181958Z
+DTSTART:20270217T000000Z
+DTEND:20270217T030000Z
+SUMMARY:Anaheim Ducks at Washington Capitals
+DESCRIPTION:Regular season. Times display in your calendar's local time. 
+ Open the NHL Tracker Game Centre for scores\, analytics and game details
+ .
+LOCATION:Capital One Arena
+URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2026020941#
+ games
+END:VEVENT
+BEGIN:VEVENT
+UID:nhl-2026020961@mooneyaoife.github.io
+DTSTAMP:20260716T181958Z
+DTSTART:20270220T000000Z
+DTEND:20270220T030000Z
+SUMMARY:San Jose Sharks at Washington Capitals
+DESCRIPTION:Regular season. Times display in your calendar's local time. 
+ Open the NHL Tracker Game Centre for scores\, analytics and game details
+ .
+LOCATION:Capital One Arena
+URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2026020961#
+ games
+END:VEVENT
+BEGIN:VEVENT
+UID:nhl-2026020981@mooneyaoife.github.io
+DTSTAMP:20260716T181958Z
+DTSTART:20270221T230000Z
+DTEND:20270222T020000Z
+SUMMARY:Nashville Predators at Washington Capitals
+DESCRIPTION:Regular season. Times display in your calendar's local time. 
+ Open the NHL Tracker Game Centre for scores\, analytics and game details
+ .
+LOCATION:Capital One Arena
+URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2026020981#
+ games
+END:VEVENT
+BEGIN:VEVENT
+UID:nhl-2026020994@mooneyaoife.github.io
+DTSTAMP:20260716T181958Z
+DTSTART:20270224T000000Z
+DTEND:20270224T030000Z
+SUMMARY:New York Rangers at Washington Capitals
+DESCRIPTION:Regular season. Times display in your calendar's local time. 
+ Open the NHL Tracker Game Centre for scores\, analytics and game details
+ .
+LOCATION:Capital One Arena
+URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2026020994#
+ games
+END:VEVENT
+BEGIN:VEVENT
+UID:nhl-2026021007@mooneyaoife.github.io
+DTSTAMP:20260716T181958Z
+DTSTART:20270226T010000Z
+DTEND:20270226T040000Z
+SUMMARY:Washington Capitals at Boston Bruins
+DESCRIPTION:Regular season. Times display in your calendar's local time. 
+ Open the NHL Tracker Game Centre for scores\, analytics and game details
+ .
+LOCATION:TD Garden
+URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2026021007#
+ games
+END:VEVENT
+BEGIN:VEVENT
+UID:nhl-2026021014@mooneyaoife.github.io
+DTSTAMP:20260716T181958Z
+DTSTART:20270227T000000Z
+DTEND:20270227T030000Z
+SUMMARY:Washington Capitals at New York Rangers
+DESCRIPTION:Regular season. Times display in your calendar's local time. 
+ Open the NHL Tracker Game Centre for scores\, analytics and game details
+ .
+LOCATION:Madison Square Garden
+URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2026021014#
+ games
+END:VEVENT
+BEGIN:VEVENT
+UID:nhl-2026021037@mooneyaoife.github.io
+DTSTAMP:20260716T181958Z
+DTSTART:20270302T000000Z
+DTEND:20270302T030000Z
+SUMMARY:Washington Capitals at New York Islanders
+DESCRIPTION:Regular season. Times display in your calendar's local time. 
+ Open the NHL Tracker Game Centre for scores\, analytics and game details
+ .
+LOCATION:UBS Arena
+URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2026021037#
+ games
+END:VEVENT
+BEGIN:VEVENT
+UID:nhl-2026021050@mooneyaoife.github.io
+DTSTAMP:20260716T181958Z
+DTSTART:20270304T000000Z
+DTEND:20270304T030000Z
+SUMMARY:Carolina Hurricanes at Washington Capitals
+DESCRIPTION:Regular season. Times display in your calendar's local time. 
+ Open the NHL Tracker Game Centre for scores\, analytics and game details
+ .
+LOCATION:Capital One Arena
+URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2026021050#
+ games
+END:VEVENT
+BEGIN:VEVENT
+UID:nhl-2026021066@mooneyaoife.github.io
+DTSTAMP:20260716T181958Z
+DTSTART:20270306T010000Z
+DTEND:20270306T040000Z
+SUMMARY:Washington Capitals at Winnipeg Jets
+DESCRIPTION:Regular season. Times display in your calendar's local time. 
+ Open the NHL Tracker Game Centre for scores\, analytics and game details
+ .
+LOCATION:Canada Life Centre
+URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2026021066#
+ games
+END:VEVENT
+BEGIN:VEVENT
+UID:nhl-2026021088@mooneyaoife.github.io
+DTSTAMP:20260716T181958Z
+DTSTART:20270308T013000Z
+DTEND:20270308T043000Z
+SUMMARY:Washington Capitals at Minnesota Wild
+DESCRIPTION:Regular season. Times display in your calendar's local time. 
+ Open the NHL Tracker Game Centre for scores\, analytics and game details
+ .
+LOCATION:Grand Casino Arena
+URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2026021088#
+ games
+END:VEVENT
+BEGIN:VEVENT
+UID:nhl-2026021096@mooneyaoife.github.io
+DTSTAMP:20260716T181958Z
+DTSTART:20270310T000000Z
+DTEND:20270310T030000Z
+SUMMARY:Calgary Flames at Washington Capitals
+DESCRIPTION:Regular season. Times display in your calendar's local time. 
+ Open the NHL Tracker Game Centre for scores\, analytics and game details
+ .
+LOCATION:Capital One Arena
+URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2026021096#
+ games
+END:VEVENT
+BEGIN:VEVENT
+UID:nhl-2026021105@mooneyaoife.github.io
+DTSTAMP:20260716T181958Z
+DTSTART:20270311T023000Z
+DTEND:20270311T053000Z
+SUMMARY:Washington Capitals at Chicago Blackhawks
+DESCRIPTION:Regular season. Times display in your calendar's local time. 
+ Open the NHL Tracker Game Centre for scores\, analytics and game details
+ .
+LOCATION:United Center
+URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2026021105#
+ games
+END:VEVENT
+BEGIN:VEVENT
+UID:nhl-2026021120@mooneyaoife.github.io
+DTSTAMP:20260716T181958Z
+DTSTART:20270313T200000Z
+DTEND:20270313T230000Z
+SUMMARY:Washington Capitals at Pittsburgh Penguins
+DESCRIPTION:Regular season. Times display in your calendar's local time. 
+ Open the NHL Tracker Game Centre for scores\, analytics and game details
+ .
+LOCATION:PPG Paints Arena
+URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2026021120#
+ games
+END:VEVENT
+BEGIN:VEVENT
+UID:nhl-2026021138@mooneyaoife.github.io
+DTSTAMP:20260716T181958Z
+DTSTART:20270315T170000Z
+DTEND:20270315T200000Z
+SUMMARY:Tampa Bay Lightning at Washington Capitals
+DESCRIPTION:Regular season. Times display in your calendar's local time. 
+ Open the NHL Tracker Game Centre for scores\, analytics and game details
+ .
+LOCATION:Capital One Arena
+URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2026021138#
+ games
+END:VEVENT
+BEGIN:VEVENT
+UID:nhl-2026021154@mooneyaoife.github.io
+DTSTAMP:20260716T181958Z
+DTSTART:20270317T230000Z
+DTEND:20270318T020000Z
+SUMMARY:New York Islanders at Washington Capitals
+DESCRIPTION:Regular season. Times display in your calendar's local time. 
+ Open the NHL Tracker Game Centre for scores\, analytics and game details
+ .
+LOCATION:Capital One Arena
+URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2026021154#
+ games
+END:VEVENT
+BEGIN:VEVENT
+UID:nhl-2026021160@mooneyaoife.github.io
+DTSTAMP:20260716T181958Z
+DTSTART:20270318T230000Z
+DTEND:20270319T020000Z
+SUMMARY:Washington Capitals at Buffalo Sabres
+DESCRIPTION:Regular season. Times display in your calendar's local time. 
+ Open the NHL Tracker Game Centre for scores\, analytics and game details
+ .
+LOCATION:KeyBank Center
+URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2026021160#
+ games
+END:VEVENT
+BEGIN:VEVENT
+UID:nhl-2026021189@mooneyaoife.github.io
+DTSTAMP:20260716T181958Z
+DTSTART:20270321T230000Z
+DTEND:20270322T020000Z
+SUMMARY:Washington Capitals at New York Rangers
+DESCRIPTION:Regular season. Times display in your calendar's local time. 
+ Open the NHL Tracker Game Centre for scores\, analytics and game details
+ .
+LOCATION:Madison Square Garden
+URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2026021189#
+ games
+END:VEVENT
+BEGIN:VEVENT
+UID:nhl-2026021199@mooneyaoife.github.io
+DTSTAMP:20260716T181958Z
+DTSTART:20270323T230000Z
+DTEND:20270324T020000Z
+SUMMARY:Detroit Red Wings at Washington Capitals
+DESCRIPTION:Regular season. Times display in your calendar's local time. 
+ Open the NHL Tracker Game Centre for scores\, analytics and game details
+ .
+LOCATION:Capital One Arena
+URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2026021199#
+ games
+END:VEVENT
+BEGIN:VEVENT
+UID:nhl-2026021209@mooneyaoife.github.io
+DTSTAMP:20260716T181958Z
+DTSTART:20270324T233000Z
+DTEND:20270325T023000Z
+SUMMARY:Washington Capitals at Detroit Red Wings
+DESCRIPTION:Regular season. Times display in your calendar's local time. 
+ Open the NHL Tracker Game Centre for scores\, analytics and game details
+ .
+LOCATION:Little Caesars Arena
+URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2026021209#
+ games
+END:VEVENT
+BEGIN:VEVENT
+UID:nhl-2026021224@mooneyaoife.github.io
+DTSTAMP:20260716T181958Z
+DTSTART:20270326T230000Z
+DTEND:20270327T020000Z
+SUMMARY:Boston Bruins at Washington Capitals
+DESCRIPTION:Regular season. Times display in your calendar's local time. 
+ Open the NHL Tracker Game Centre for scores\, analytics and game details
+ .
+LOCATION:Capital One Arena
+URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2026021224#
+ games
+END:VEVENT
+BEGIN:VEVENT
+UID:nhl-2026021241@mooneyaoife.github.io
+DTSTAMP:20260716T181958Z
+DTSTART:20270328T220000Z
+DTEND:20270329T010000Z
+SUMMARY:Washington Capitals at Toronto Maple Leafs
+DESCRIPTION:Regular season. Times display in your calendar's local time. 
+ Open the NHL Tracker Game Centre for scores\, analytics and game details
+ .
+LOCATION:Scotiabank Arena
+URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2026021241#
+ games
+END:VEVENT
+BEGIN:VEVENT
+UID:nhl-2026021254@mooneyaoife.github.io
+DTSTAMP:20260716T181958Z
+DTSTART:20270330T230000Z
+DTEND:20270331T020000Z
+SUMMARY:Chicago Blackhawks at Washington Capitals
+DESCRIPTION:Regular season. Times display in your calendar's local time. 
+ Open the NHL Tracker Game Centre for scores\, analytics and game details
+ .
+LOCATION:Capital One Arena
+URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2026021254#
+ games
+END:VEVENT
+BEGIN:VEVENT
+UID:nhl-2026021266@mooneyaoife.github.io
+DTSTAMP:20260716T181958Z
+DTSTART:20270401T230000Z
+DTEND:20270402T020000Z
+SUMMARY:Washington Capitals at Philadelphia Flyers
+DESCRIPTION:Regular season. Times display in your calendar's local time. 
+ Open the NHL Tracker Game Centre for scores\, analytics and game details
+ .
+LOCATION:Xfinity Mobile Arena
+URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2026021266#
+ games
+END:VEVENT
+BEGIN:VEVENT
+UID:nhl-2026021280@mooneyaoife.github.io
+DTSTAMP:20260716T181958Z
+DTSTART:20270403T210000Z
+DTEND:20270404T000000Z
+SUMMARY:Columbus Blue Jackets at Washington Capitals
+DESCRIPTION:Regular season. Times display in your calendar's local time. 
+ Open the NHL Tracker Game Centre for scores\, analytics and game details
+ .
+LOCATION:Capital One Arena
+URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2026021280#
+ games
+END:VEVENT
+BEGIN:VEVENT
+UID:nhl-2026021293@mooneyaoife.github.io
+DTSTAMP:20260716T181958Z
+DTSTART:20270404T230000Z
+DTEND:20270405T020000Z
+SUMMARY:Pittsburgh Penguins at Washington Capitals
+DESCRIPTION:Regular season. Times display in your calendar's local time. 
+ Open the NHL Tracker Game Centre for scores\, analytics and game details
+ .
+LOCATION:Capital One Arena
+URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2026021293#
+ games
+END:VEVENT
+BEGIN:VEVENT
+UID:nhl-2026021304@mooneyaoife.github.io
+DTSTAMP:20260716T181958Z
+DTSTART:20270406T230000Z
+DTEND:20270407T020000Z
+SUMMARY:Washington Capitals at Columbus Blue Jackets
+DESCRIPTION:Regular season. Times display in your calendar's local time. 
+ Open the NHL Tracker Game Centre for scores\, analytics and game details
+ .
+LOCATION:Nationwide Arena
+URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2026021304#
+ games
+END:VEVENT
+BEGIN:VEVENT
+UID:nhl-2026021316@mooneyaoife.github.io
+DTSTAMP:20260716T181958Z
+DTSTART:20270408T230000Z
+DTEND:20270409T020000Z
+SUMMARY:Washington Capitals at Ottawa Senators
+DESCRIPTION:Regular season. Times display in your calendar's local time. 
+ Open the NHL Tracker Game Centre for scores\, analytics and game details
+ .
+LOCATION:Canadian Tire Centre
+URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2026021316#
+ games
+END:VEVENT
+BEGIN:VEVENT
+UID:nhl-2026021329@mooneyaoife.github.io
+DTSTAMP:20260716T181958Z
+DTSTART:20270410T160000Z
+DTEND:20270410T190000Z
+SUMMARY:Washington Capitals at Philadelphia Flyers
+DESCRIPTION:Regular season. Times display in your calendar's local time. 
+ Open the NHL Tracker Game Centre for scores\, analytics and game details
+ .
+LOCATION:Xfinity Mobile Arena
+URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2026021329#
  games
 END:VEVENT
 END:VCALENDAR

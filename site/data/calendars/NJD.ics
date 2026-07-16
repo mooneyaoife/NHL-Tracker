@@ -10,1153 +10,1095 @@ COLOR:#CE1126
 REFRESH-INTERVAL;VALUE=DURATION:PT6H
 X-PUBLISHED-TTL:PT6H
 BEGIN:VEVENT
-UID:nhl-2025010007@mooneyaoife.github.io
-DTSTAMP:20260716T125159Z
-DTSTART:20250921T170000Z
-DTEND:20250921T200000Z
-SUMMARY:Final: New York Rangers 5 - 3 New Jersey Devils
-DESCRIPTION:Preseason. Times display in your calendar's local time. Open 
- the NHL Tracker Game Centre for scores\, analytics and game details.
-LOCATION:Prudential Center
-URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2025010007#
- games
-END:VEVENT
-BEGIN:VEVENT
-UID:nhl-2025010024@mooneyaoife.github.io
-DTSTAMP:20260716T125159Z
-DTSTART:20250923T230000Z
-DTEND:20250924T020000Z
-SUMMARY:Final: New York Islanders 2 - 6 New Jersey Devils
-DESCRIPTION:Preseason. Times display in your calendar's local time. Open 
- the NHL Tracker Game Centre for scores\, analytics and game details.
-LOCATION:Prudential Center
-URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2025010024#
- games
-END:VEVENT
-BEGIN:VEVENT
-UID:nhl-2025010042@mooneyaoife.github.io
-DTSTAMP:20260716T125159Z
-DTSTART:20250926T230000Z
-DTEND:20250927T020000Z
-SUMMARY:Final: New Jersey Devils 4 - 2 New York Islanders
-DESCRIPTION:Preseason. Times display in your calendar's local time. Open 
- the NHL Tracker Game Centre for scores\, analytics and game details.
-LOCATION:UBS Arena
-URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2025010042#
- games
-END:VEVENT
-BEGIN:VEVENT
-UID:nhl-2025010056@mooneyaoife.github.io
-DTSTAMP:20260716T125159Z
-DTSTART:20250928T190000Z
-DTEND:20250928T220000Z
-SUMMARY:Final: New Jersey Devils 0 - 2 Ottawa Senators
-DESCRIPTION:Preseason. Times display in your calendar's local time. Open 
- the NHL Tracker Game Centre for scores\, analytics and game details.
-LOCATION:Centre Videotron
-URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2025010056#
- games
-END:VEVENT
-BEGIN:VEVENT
-UID:nhl-2025010059@mooneyaoife.github.io
-DTSTAMP:20260716T125159Z
-DTSTART:20250928T190000Z
-DTEND:20250928T220000Z
-SUMMARY:Final: Washington Capitals 3 - 2 New Jersey Devils
-DESCRIPTION:Preseason. Times display in your calendar's local time. Open 
- the NHL Tracker Game Centre for scores\, analytics and game details.
-LOCATION:Prudential Center
-URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2025010059#
- games
-END:VEVENT
-BEGIN:VEVENT
-UID:nhl-2025010082@mooneyaoife.github.io
-DTSTAMP:20260716T125159Z
-DTSTART:20251002T230000Z
-DTEND:20251003T020000Z
-SUMMARY:Final: New Jersey Devils 3 - 1 New York Rangers
-DESCRIPTION:Preseason. Times display in your calendar's local time. Open 
- the NHL Tracker Game Centre for scores\, analytics and game details.
-LOCATION:Madison Square Garden
-URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2025010082#
- games
-END:VEVENT
-BEGIN:VEVENT
-UID:nhl-2025010094@mooneyaoife.github.io
-DTSTAMP:20260716T125159Z
-DTSTART:20251004T163000Z
-DTEND:20251004T193000Z
-SUMMARY:Final: New Jersey Devils 3 - 4 Philadelphia Flyers
-DESCRIPTION:Preseason. Times display in your calendar's local time. Open 
- the NHL Tracker Game Centre for scores\, analytics and game details.
-LOCATION:Xfinity Mobile Arena
-URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2025010094#
- games
-END:VEVENT
-BEGIN:VEVENT
-UID:nhl-2025020014@mooneyaoife.github.io
-DTSTAMP:20260716T125159Z
-DTSTART:20251009T233000Z
-DTEND:20251010T023000Z
-SUMMARY:Final: New Jersey Devils 3 - 6 Carolina Hurricanes
-DESCRIPTION:Regular season. Times display in your calendar's local time. 
- Open the NHL Tracker Game Centre for scores\, analytics and game details
- .
-LOCATION:Lenovo Center
-URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2025020014#
- games
-END:VEVENT
-BEGIN:VEVENT
-UID:nhl-2025020026@mooneyaoife.github.io
-DTSTAMP:20260716T125159Z
-DTSTART:20251011T230000Z
-DTEND:20251012T020000Z
-SUMMARY:Final: New Jersey Devils 5 - 3 Tampa Bay Lightning
-DESCRIPTION:Regular season. Times display in your calendar's local time. 
- Open the NHL Tracker Game Centre for scores\, analytics and game details
- .
-LOCATION:Benchmark International Arena
-URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2025020026#
- games
-END:VEVENT
-BEGIN:VEVENT
-UID:nhl-2025020045@mooneyaoife.github.io
-DTSTAMP:20260716T125159Z
-DTSTART:20251013T230000Z
-DTEND:20251014T020000Z
-SUMMARY:Final: New Jersey Devils 3 - 2 Columbus Blue Jackets
-DESCRIPTION:Regular season. Times display in your calendar's local time. 
- Open the NHL Tracker Game Centre for scores\, analytics and game details
- .
-LOCATION:Nationwide Arena
-URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2025020045#
- games
-END:VEVENT
-BEGIN:VEVENT
-UID:nhl-2025020064@mooneyaoife.github.io
-DTSTAMP:20260716T125159Z
-DTSTART:20251016T230000Z
-DTEND:20251017T020000Z
-SUMMARY:Final: Florida Panthers 1 - 3 New Jersey Devils
+UID:nhl-2026020009@mooneyaoife.github.io
+DTSTAMP:20260716T181958Z
+DTSTART:20261001T230000Z
+DTEND:20261002T020000Z
+SUMMARY:Philadelphia Flyers at New Jersey Devils
 DESCRIPTION:Regular season. Times display in your calendar's local time. 
  Open the NHL Tracker Game Centre for scores\, analytics and game details
  .
 LOCATION:Prudential Center
-URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2025020064#
+URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2026020009#
  games
 END:VEVENT
 BEGIN:VEVENT
-UID:nhl-2025020078@mooneyaoife.github.io
-DTSTAMP:20260716T125159Z
-DTSTART:20251018T193000Z
-DTEND:20251018T223000Z
-SUMMARY:Final: Edmonton Oilers 3 - 5 New Jersey Devils
-DESCRIPTION:Regular season. Times display in your calendar's local time. 
- Open the NHL Tracker Game Centre for scores\, analytics and game details
- .
-LOCATION:Prudential Center
-URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2025020078#
- games
-END:VEVENT
-BEGIN:VEVENT
-UID:nhl-2025020098@mooneyaoife.github.io
-DTSTAMP:20260716T125159Z
-DTSTART:20251021T230000Z
-DTEND:20251022T020000Z
-SUMMARY:Final: New Jersey Devils 5 - 2 Toronto Maple Leafs
-DESCRIPTION:Regular season. Times display in your calendar's local time. 
- Open the NHL Tracker Game Centre for scores\, analytics and game details
- .
-LOCATION:Scotiabank Arena
-URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2025020098#
- games
-END:VEVENT
-BEGIN:VEVENT
-UID:nhl-2025020108@mooneyaoife.github.io
-DTSTAMP:20260716T125159Z
-DTSTART:20251022T230000Z
-DTEND:20251023T020000Z
-SUMMARY:Final: Minnesota Wild 1 - 4 New Jersey Devils
-DESCRIPTION:Regular season. Times display in your calendar's local time. 
- Open the NHL Tracker Game Centre for scores\, analytics and game details
- .
-LOCATION:Prudential Center
-URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2025020108#
- games
-END:VEVENT
-BEGIN:VEVENT
-UID:nhl-2025020124@mooneyaoife.github.io
-DTSTAMP:20260716T125159Z
-DTSTART:20251024T230000Z
-DTEND:20251025T020000Z
-SUMMARY:Final: San Jose Sharks 1 - 3 New Jersey Devils
-DESCRIPTION:Regular season. Times display in your calendar's local time. 
- Open the NHL Tracker Game Centre for scores\, analytics and game details
- .
-LOCATION:Prudential Center
-URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2025020124#
- games
-END:VEVENT
-BEGIN:VEVENT
-UID:nhl-2025020140@mooneyaoife.github.io
-DTSTAMP:20260716T125159Z
-DTSTART:20251026T170000Z
-DTEND:20251026T200000Z
-SUMMARY:Final: Colorado Avalanche 3 - 4 New Jersey Devils
-DESCRIPTION:Regular season. Times display in your calendar's local time. 
- Open the NHL Tracker Game Centre for scores\, analytics and game details
- .
-LOCATION:Prudential Center
-URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2025020140#
- games
-END:VEVENT
-BEGIN:VEVENT
-UID:nhl-2025020161@mooneyaoife.github.io
-DTSTAMP:20260716T125159Z
-DTSTART:20251029T010000Z
-DTEND:20251029T040000Z
-SUMMARY:Final: New Jersey Devils 4 - 8 Colorado Avalanche
-DESCRIPTION:Regular season. Times display in your calendar's local time. 
- Open the NHL Tracker Game Centre for scores\, analytics and game details
- .
-LOCATION:Ball Arena
-URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2025020161#
- games
-END:VEVENT
-BEGIN:VEVENT
-UID:nhl-2025020176@mooneyaoife.github.io
-DTSTAMP:20260716T125159Z
-DTSTART:20251031T020000Z
-DTEND:20251031T050000Z
-SUMMARY:Final: New Jersey Devils 2 - 5 San Jose Sharks
-DESCRIPTION:Regular season. Times display in your calendar's local time. 
- Open the NHL Tracker Game Centre for scores\, analytics and game details
- .
-LOCATION:SAP Center at San Jose
-URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2025020176#
- games
-END:VEVENT
-BEGIN:VEVENT
-UID:nhl-2025020191@mooneyaoife.github.io
-DTSTAMP:20260716T125159Z
-DTSTART:20251102T010000Z
-DTEND:20251102T040000Z
-SUMMARY:Final: New Jersey Devils 4 - 1 Los Angeles Kings
-DESCRIPTION:Regular season. Times display in your calendar's local time. 
- Open the NHL Tracker Game Centre for scores\, analytics and game details
- .
-LOCATION:Crypto.com Arena
-URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2025020191#
- games
-END:VEVENT
-BEGIN:VEVENT
-UID:nhl-2025020197@mooneyaoife.github.io
-DTSTAMP:20260716T125159Z
-DTSTART:20251103T010000Z
-DTEND:20251103T040000Z
-SUMMARY:Final: New Jersey Devils 1 - 4 Anaheim Ducks
-DESCRIPTION:Regular season. Times display in your calendar's local time. 
- Open the NHL Tracker Game Centre for scores\, analytics and game details
- .
-LOCATION:Honda Center
-URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2025020197#
- games
-END:VEVENT
-BEGIN:VEVENT
-UID:nhl-2025020220@mooneyaoife.github.io
-DTSTAMP:20260716T125159Z
-DTSTART:20251107T000000Z
-DTEND:20251107T030000Z
-SUMMARY:Final: Montréal Canadiens 3 - 4 New Jersey Devils
-DESCRIPTION:Regular season. Times display in your calendar's local time. 
- Open the NHL Tracker Game Centre for scores\, analytics and game details
- .
-LOCATION:Prudential Center
-URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2025020220#
- games
-END:VEVENT
-BEGIN:VEVENT
-UID:nhl-2025020231@mooneyaoife.github.io
-DTSTAMP:20260716T125159Z
-DTSTART:20251108T173000Z
-DTEND:20251108T203000Z
-SUMMARY:Final: Pittsburgh Penguins 1 - 2 New Jersey Devils
-DESCRIPTION:Regular season. Times display in your calendar's local time. 
- Open the NHL Tracker Game Centre for scores\, analytics and game details
- .
-LOCATION:Prudential Center
-URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2025020231#
- games
-END:VEVENT
-BEGIN:VEVENT
-UID:nhl-2025020252@mooneyaoife.github.io
-DTSTAMP:20260716T125159Z
-DTSTART:20251111T000000Z
-DTEND:20251111T030000Z
-SUMMARY:Final: New York Islanders 3 - 2 New Jersey Devils
-DESCRIPTION:Regular season. Times display in your calendar's local time. 
- Open the NHL Tracker Game Centre for scores\, analytics and game details
- .
-LOCATION:Prudential Center
-URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2025020252#
- games
-END:VEVENT
-BEGIN:VEVENT
-UID:nhl-2025020268@mooneyaoife.github.io
-DTSTAMP:20260716T125159Z
-DTSTART:20251113T023000Z
-DTEND:20251113T053000Z
-SUMMARY:Final: New Jersey Devils 4 - 3 Chicago Blackhawks
-DESCRIPTION:Regular season. Times display in your calendar's local time. 
- Open the NHL Tracker Game Centre for scores\, analytics and game details
- .
-LOCATION:United Center
-URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2025020268#
- games
-END:VEVENT
-BEGIN:VEVENT
-UID:nhl-2025020288@mooneyaoife.github.io
-DTSTAMP:20260716T125159Z
-DTSTART:20251116T000000Z
-DTEND:20251116T030000Z
-SUMMARY:Final: New Jersey Devils 3 - 2 Washington Capitals
-DESCRIPTION:Regular season. Times display in your calendar's local time. 
- Open the NHL Tracker Game Centre for scores\, analytics and game details
- .
-LOCATION:Capital One Arena
-URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2025020288#
- games
-END:VEVENT
-BEGIN:VEVENT
-UID:nhl-2025020309@mooneyaoife.github.io
-DTSTAMP:20260716T125159Z
-DTSTART:20251119T000000Z
-DTEND:20251119T030000Z
-SUMMARY:Final: New Jersey Devils 1 - 5 Tampa Bay Lightning
-DESCRIPTION:Regular season. Times display in your calendar's local time. 
- Open the NHL Tracker Game Centre for scores\, analytics and game details
- .
-LOCATION:Benchmark International Arena
-URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2025020309#
- games
-END:VEVENT
-BEGIN:VEVENT
-UID:nhl-2025020323@mooneyaoife.github.io
-DTSTAMP:20260716T125159Z
-DTSTART:20251121T000000Z
-DTEND:20251121T030000Z
-SUMMARY:Final: New Jersey Devils 0 - 1 Florida Panthers
-DESCRIPTION:Regular season. Times display in your calendar's local time. 
- Open the NHL Tracker Game Centre for scores\, analytics and game details
- .
-LOCATION:Amerant Bank Arena
-URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2025020323#
- games
-END:VEVENT
-BEGIN:VEVENT
-UID:nhl-2025020339@mooneyaoife.github.io
-DTSTAMP:20260716T125159Z
-DTSTART:20251123T000000Z
-DTEND:20251123T030000Z
-SUMMARY:Final: New Jersey Devils 3 - 6 Philadelphia Flyers
-DESCRIPTION:Regular season. Times display in your calendar's local time. 
- Open the NHL Tracker Game Centre for scores\, analytics and game details
- .
-LOCATION:Xfinity Mobile Arena
-URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2025020339#
- games
-END:VEVENT
-BEGIN:VEVENT
-UID:nhl-2025020354@mooneyaoife.github.io
-DTSTAMP:20260716T125159Z
-DTSTART:20251125T000000Z
-DTEND:20251125T030000Z
-SUMMARY:Final: Detroit Red Wings 3 - 4 New Jersey Devils
-DESCRIPTION:Regular season. Times display in your calendar's local time. 
- Open the NHL Tracker Game Centre for scores\, analytics and game details
- .
-LOCATION:Prudential Center
-URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2025020354#
- games
-END:VEVENT
-BEGIN:VEVENT
-UID:nhl-2025020364@mooneyaoife.github.io
-DTSTAMP:20260716T125159Z
-DTSTART:20251127T000000Z
-DTEND:20251127T030000Z
-SUMMARY:Final: St. Louis Blues 2 - 3 New Jersey Devils
-DESCRIPTION:Regular season. Times display in your calendar's local time. 
- Open the NHL Tracker Game Centre for scores\, analytics and game details
- .
-LOCATION:Prudential Center
-URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2025020364#
- games
-END:VEVENT
-BEGIN:VEVENT
-UID:nhl-2025020379@mooneyaoife.github.io
-DTSTAMP:20260716T125159Z
-DTSTART:20251128T210000Z
-DTEND:20251129T000000Z
-SUMMARY:Final: New Jersey Devils 5 - 0 Buffalo Sabres
-DESCRIPTION:Regular season. Times display in your calendar's local time. 
- Open the NHL Tracker Game Centre for scores\, analytics and game details
- .
-LOCATION:KeyBank Center
-URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2025020379#
- games
-END:VEVENT
-BEGIN:VEVENT
-UID:nhl-2025020395@mooneyaoife.github.io
-DTSTAMP:20260716T125159Z
-DTSTART:20251130T000000Z
-DTEND:20251130T030000Z
-SUMMARY:Final: Philadelphia Flyers 5 - 3 New Jersey Devils
-DESCRIPTION:Regular season. Times display in your calendar's local time. 
- Open the NHL Tracker Game Centre for scores\, analytics and game details
- .
-LOCATION:Prudential Center
-URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2025020395#
- games
-END:VEVENT
-BEGIN:VEVENT
-UID:nhl-2025020406@mooneyaoife.github.io
-DTSTAMP:20260716T125159Z
-DTSTART:20251202T000000Z
-DTEND:20251202T030000Z
-SUMMARY:Final: Columbus Blue Jackets 5 - 3 New Jersey Devils
-DESCRIPTION:Regular season. Times display in your calendar's local time. 
- Open the NHL Tracker Game Centre for scores\, analytics and game details
- .
-LOCATION:Prudential Center
-URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2025020406#
- games
-END:VEVENT
-BEGIN:VEVENT
-UID:nhl-2025020421@mooneyaoife.github.io
-DTSTAMP:20260716T125159Z
-DTSTART:20251204T000000Z
-DTEND:20251204T030000Z
-SUMMARY:Final: Dallas Stars 3 - 0 New Jersey Devils
-DESCRIPTION:Regular season. Times display in your calendar's local time. 
- Open the NHL Tracker Game Centre for scores\, analytics and game details
- .
-LOCATION:Prudential Center
-URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2025020421#
- games
-END:VEVENT
-BEGIN:VEVENT
-UID:nhl-2025020436@mooneyaoife.github.io
-DTSTAMP:20260716T125159Z
-DTSTART:20251206T000000Z
-DTEND:20251206T030000Z
-SUMMARY:Final: Vegas Golden Knights 3 - 0 New Jersey Devils
-DESCRIPTION:Regular season. Times display in your calendar's local time. 
- Open the NHL Tracker Game Centre for scores\, analytics and game details
- .
-LOCATION:Prudential Center
-URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2025020436#
- games
-END:VEVENT
-BEGIN:VEVENT
-UID:nhl-2025020443@mooneyaoife.github.io
-DTSTAMP:20260716T125159Z
-DTSTART:20251207T000000Z
-DTEND:20251207T030000Z
-SUMMARY:Final: New Jersey Devils 1 - 4 Boston Bruins
-DESCRIPTION:Regular season. Times display in your calendar's local time. 
- Open the NHL Tracker Game Centre for scores\, analytics and game details
- .
-LOCATION:TD Garden
-URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2025020443#
- games
-END:VEVENT
-BEGIN:VEVENT
-UID:nhl-2025020467@mooneyaoife.github.io
-DTSTAMP:20260716T125159Z
-DTSTART:20251210T000000Z
-DTEND:20251210T030000Z
-SUMMARY:Final: New Jersey Devils 4 - 3 Ottawa Senators
-DESCRIPTION:Regular season. Times display in your calendar's local time. 
- Open the NHL Tracker Game Centre for scores\, analytics and game details
- .
-LOCATION:Canadian Tire Centre
-URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2025020467#
- games
-END:VEVENT
-BEGIN:VEVENT
-UID:nhl-2025020481@mooneyaoife.github.io
-DTSTAMP:20260716T125159Z
-DTSTART:20251212T000000Z
-DTEND:20251212T030000Z
-SUMMARY:Final: Tampa Bay Lightning 8 - 4 New Jersey Devils
-DESCRIPTION:Regular season. Times display in your calendar's local time. 
- Open the NHL Tracker Game Centre for scores\, analytics and game details
- .
-LOCATION:Prudential Center
-URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2025020481#
- games
-END:VEVENT
-BEGIN:VEVENT
-UID:nhl-2025020495@mooneyaoife.github.io
-DTSTAMP:20260716T125159Z
-DTSTART:20251213T173000Z
-DTEND:20251213T203000Z
-SUMMARY:Final: Anaheim Ducks 1 - 4 New Jersey Devils
-DESCRIPTION:Regular season. Times display in your calendar's local time. 
- Open the NHL Tracker Game Centre for scores\, analytics and game details
- .
-LOCATION:Prudential Center
-URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2025020495#
- games
-END:VEVENT
-BEGIN:VEVENT
-UID:nhl-2025020508@mooneyaoife.github.io
-DTSTAMP:20260716T125159Z
-DTSTART:20251214T173000Z
-DTEND:20251214T203000Z
-SUMMARY:Final: Vancouver Canucks 2 - 1 New Jersey Devils
-DESCRIPTION:Regular season. Times display in your calendar's local time. 
- Open the NHL Tracker Game Centre for scores\, analytics and game details
- .
-LOCATION:Prudential Center
-URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2025020508#
- games
-END:VEVENT
-BEGIN:VEVENT
-UID:nhl-2025020533@mooneyaoife.github.io
-DTSTAMP:20260716T125159Z
-DTSTART:20251218T030000Z
-DTEND:20251218T060000Z
-SUMMARY:Final: New Jersey Devils 2 - 1 Vegas Golden Knights
-DESCRIPTION:Regular season. Times display in your calendar's local time. 
- Open the NHL Tracker Game Centre for scores\, analytics and game details
- .
-LOCATION:T-Mobile Arena
-URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2025020533#
- games
-END:VEVENT
-BEGIN:VEVENT
-UID:nhl-2025020547@mooneyaoife.github.io
-DTSTAMP:20260716T125159Z
-DTSTART:20251220T020000Z
-DTEND:20251220T050000Z
-SUMMARY:Final: New Jersey Devils 2 - 1 Utah Mammoth
-DESCRIPTION:Regular season. Times display in your calendar's local time. 
- Open the NHL Tracker Game Centre for scores\, analytics and game details
- .
-LOCATION:Delta Center
-URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2025020547#
- games
-END:VEVENT
-BEGIN:VEVENT
-UID:nhl-2025020565@mooneyaoife.github.io
-DTSTAMP:20260716T125159Z
-DTSTART:20251222T000000Z
-DTEND:20251222T030000Z
-SUMMARY:Final: Buffalo Sabres 3 - 1 New Jersey Devils
-DESCRIPTION:Regular season. Times display in your calendar's local time. 
- Open the NHL Tracker Game Centre for scores\, analytics and game details
- .
-LOCATION:Prudential Center
-URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2025020565#
- games
-END:VEVENT
-BEGIN:VEVENT
-UID:nhl-2025020580@mooneyaoife.github.io
-DTSTAMP:20260716T125159Z
-DTSTART:20251224T000000Z
-DTEND:20251224T030000Z
-SUMMARY:Final: New Jersey Devils 1 - 2 New York Islanders
+UID:nhl-2026020029@mooneyaoife.github.io
+DTSTAMP:20260716T181958Z
+DTSTART:20261003T233000Z
+DTEND:20261004T023000Z
+SUMMARY:New Jersey Devils at New York Islanders
 DESCRIPTION:Regular season. Times display in your calendar's local time. 
  Open the NHL Tracker Game Centre for scores\, analytics and game details
  .
 LOCATION:UBS Arena
-URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2025020580#
+URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2026020029#
  games
 END:VEVENT
 BEGIN:VEVENT
-UID:nhl-2025020592@mooneyaoife.github.io
-DTSTAMP:20260716T125159Z
-DTSTART:20251228T000000Z
-DTEND:20251228T030000Z
-SUMMARY:Final: Washington Capitals 4 - 3 New Jersey Devils
+UID:nhl-2026020047@mooneyaoife.github.io
+DTSTAMP:20260716T181958Z
+DTSTART:20261006T230000Z
+DTEND:20261007T020000Z
+SUMMARY:Utah Mammoth at New Jersey Devils
 DESCRIPTION:Regular season. Times display in your calendar's local time. 
  Open the NHL Tracker Game Centre for scores\, analytics and game details
  .
 LOCATION:Prudential Center
-URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2025020592#
+URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2026020047#
  games
 END:VEVENT
 BEGIN:VEVENT
-UID:nhl-2025020617@mooneyaoife.github.io
-DTSTAMP:20260716T125159Z
-DTSTART:20251231T000000Z
-DTEND:20251231T030000Z
-SUMMARY:Final: New Jersey Devils 0 - 4 Toronto Maple Leafs
-DESCRIPTION:Regular season. Times display in your calendar's local time. 
- Open the NHL Tracker Game Centre for scores\, analytics and game details
- .
-LOCATION:Scotiabank Arena
-URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2025020617#
- games
-END:VEVENT
-BEGIN:VEVENT
-UID:nhl-2025020627@mooneyaoife.github.io
-DTSTAMP:20260716T125159Z
-DTSTART:20260101T000000Z
-DTEND:20260101T030000Z
-SUMMARY:Final: New Jersey Devils 3 - 2 Columbus Blue Jackets
-DESCRIPTION:Regular season. Times display in your calendar's local time. 
- Open the NHL Tracker Game Centre for scores\, analytics and game details
- .
-LOCATION:Nationwide Arena
-URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2025020627#
- games
-END:VEVENT
-BEGIN:VEVENT
-UID:nhl-2025020645@mooneyaoife.github.io
-DTSTAMP:20260716T125159Z
-DTSTART:20260103T200000Z
-DTEND:20260103T230000Z
-SUMMARY:Final: Utah Mammoth 1 - 4 New Jersey Devils
+UID:nhl-2026020071@mooneyaoife.github.io
+DTSTAMP:20260716T181958Z
+DTSTART:20261010T193000Z
+DTEND:20261010T223000Z
+SUMMARY:Vancouver Canucks at New Jersey Devils
 DESCRIPTION:Regular season. Times display in your calendar's local time. 
  Open the NHL Tracker Game Centre for scores\, analytics and game details
  .
 LOCATION:Prudential Center
-URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2025020645#
+URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2026020071#
  games
 END:VEVENT
 BEGIN:VEVENT
-UID:nhl-2025020660@mooneyaoife.github.io
-DTSTAMP:20260716T125159Z
-DTSTART:20260105T000000Z
-DTEND:20260105T030000Z
-SUMMARY:Final: Carolina Hurricanes 3 - 1 New Jersey Devils
+UID:nhl-2026020088@mooneyaoife.github.io
+DTSTAMP:20260716T181958Z
+DTSTART:20261012T230000Z
+DTEND:20261013T020000Z
+SUMMARY:Ottawa Senators at New Jersey Devils
 DESCRIPTION:Regular season. Times display in your calendar's local time. 
  Open the NHL Tracker Game Centre for scores\, analytics and game details
  .
 LOCATION:Prudential Center
-URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2025020660#
+URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2026020088#
  games
 END:VEVENT
 BEGIN:VEVENT
-UID:nhl-2025020669@mooneyaoife.github.io
-DTSTAMP:20260716T125159Z
-DTSTART:20260107T003000Z
-DTEND:20260107T033000Z
-SUMMARY:Final: New Jersey Devils 0 - 9 New York Islanders
-DESCRIPTION:Regular season. Times display in your calendar's local time. 
- Open the NHL Tracker Game Centre for scores\, analytics and game details
- .
-LOCATION:UBS Arena
-URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2025020669#
- games
-END:VEVENT
-BEGIN:VEVENT
-UID:nhl-2025020687@mooneyaoife.github.io
-DTSTAMP:20260716T125159Z
-DTSTART:20260109T000000Z
-DTEND:20260109T030000Z
-SUMMARY:Final: New Jersey Devils 1 - 4 Pittsburgh Penguins
-DESCRIPTION:Regular season. Times display in your calendar's local time. 
- Open the NHL Tracker Game Centre for scores\, analytics and game details
- .
-LOCATION:PPG Paints Arena
-URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2025020687#
- games
-END:VEVENT
-BEGIN:VEVENT
-UID:nhl-2025020711@mooneyaoife.github.io
-DTSTAMP:20260716T125159Z
-DTSTART:20260111T190000Z
-DTEND:20260111T220000Z
-SUMMARY:Final: New Jersey Devils 3 - 4 Winnipeg Jets
-DESCRIPTION:Regular season. Times display in your calendar's local time. 
- Open the NHL Tracker Game Centre for scores\, analytics and game details
- .
-LOCATION:Canada Life Centre
-URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2025020711#
- games
-END:VEVENT
-BEGIN:VEVENT
-UID:nhl-2025020721@mooneyaoife.github.io
-DTSTAMP:20260716T125159Z
-DTSTART:20260113T010000Z
-DTEND:20260113T040000Z
-SUMMARY:Final: New Jersey Devils 5 - 2 Minnesota Wild
-DESCRIPTION:Regular season. Times display in your calendar's local time. 
- Open the NHL Tracker Game Centre for scores\, analytics and game details
- .
-LOCATION:Grand Casino Arena
-URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2025020721#
- games
-END:VEVENT
-BEGIN:VEVENT
-UID:nhl-2025020735@mooneyaoife.github.io
-DTSTAMP:20260716T125159Z
-DTSTART:20260115T000000Z
-DTEND:20260115T030000Z
-SUMMARY:Final: Seattle Kraken 2 - 3 New Jersey Devils
-DESCRIPTION:Regular season. Times display in your calendar's local time. 
- Open the NHL Tracker Game Centre for scores\, analytics and game details
- .
-LOCATION:Prudential Center
-URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2025020735#
- games
-END:VEVENT
-BEGIN:VEVENT
-UID:nhl-2025020759@mooneyaoife.github.io
-DTSTAMP:20260716T125159Z
-DTSTART:20260118T000000Z
-DTEND:20260118T030000Z
-SUMMARY:Final: Carolina Hurricanes 4 - 1 New Jersey Devils
-DESCRIPTION:Regular season. Times display in your calendar's local time. 
- Open the NHL Tracker Game Centre for scores\, analytics and game details
- .
-LOCATION:Prudential Center
-URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2025020759#
- games
-END:VEVENT
-BEGIN:VEVENT
-UID:nhl-2025020777@mooneyaoife.github.io
-DTSTAMP:20260716T125159Z
-DTSTART:20260120T020000Z
-DTEND:20260120T050000Z
-SUMMARY:Final: New Jersey Devils 2 - 1 Calgary Flames
-DESCRIPTION:Regular season. Times display in your calendar's local time. 
- Open the NHL Tracker Game Centre for scores\, analytics and game details
- .
-LOCATION:Scotiabank Saddledome
-URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2025020777#
- games
-END:VEVENT
-BEGIN:VEVENT
-UID:nhl-2025020786@mooneyaoife.github.io
-DTSTAMP:20260716T125159Z
-DTSTART:20260121T030000Z
-DTEND:20260121T060000Z
-SUMMARY:Final: New Jersey Devils 2 - 1 Edmonton Oilers
-DESCRIPTION:Regular season. Times display in your calendar's local time. 
- Open the NHL Tracker Game Centre for scores\, analytics and game details
- .
-LOCATION:Rogers Place
-URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2025020786#
- games
-END:VEVENT
-BEGIN:VEVENT
-UID:nhl-2025020807@mooneyaoife.github.io
-DTSTAMP:20260716T125159Z
-DTSTART:20260124T030000Z
-DTEND:20260124T060000Z
-SUMMARY:Final: New Jersey Devils 5 - 4 Vancouver Canucks
-DESCRIPTION:Regular season. Times display in your calendar's local time. 
- Open the NHL Tracker Game Centre for scores\, analytics and game details
- .
-LOCATION:Rogers Arena
-URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2025020807#
- games
-END:VEVENT
-BEGIN:VEVENT
-UID:nhl-2025020820@mooneyaoife.github.io
-DTSTAMP:20260716T125159Z
-DTSTART:20260125T200000Z
-DTEND:20260125T230000Z
-SUMMARY:Final: New Jersey Devils 2 - 4 Seattle Kraken
-DESCRIPTION:Regular season. Times display in your calendar's local time. 
- Open the NHL Tracker Game Centre for scores\, analytics and game details
- .
-LOCATION:Climate Pledge Arena
-URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2025020820#
- games
-END:VEVENT
-BEGIN:VEVENT
-UID:nhl-2025020835@mooneyaoife.github.io
-DTSTAMP:20260716T125159Z
-DTSTART:20260128T000000Z
-DTEND:20260128T030000Z
-SUMMARY:Final: Winnipeg Jets 4 - 3 New Jersey Devils
-DESCRIPTION:Regular season. Times display in your calendar's local time. 
- Open the NHL Tracker Game Centre for scores\, analytics and game details
- .
-LOCATION:Prudential Center
-URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2025020835#
- games
-END:VEVENT
-BEGIN:VEVENT
-UID:nhl-2025020848@mooneyaoife.github.io
-DTSTAMP:20260716T125159Z
-DTSTART:20260130T000000Z
-DTEND:20260130T030000Z
-SUMMARY:Final: Nashville Predators 2 - 3 New Jersey Devils
-DESCRIPTION:Regular season. Times display in your calendar's local time. 
- Open the NHL Tracker Game Centre for scores\, analytics and game details
- .
-LOCATION:Prudential Center
-URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2025020848#
- games
-END:VEVENT
-BEGIN:VEVENT
-UID:nhl-2025020866@mooneyaoife.github.io
-DTSTAMP:20260716T125159Z
-DTSTART:20260201T000000Z
-DTEND:20260201T030000Z
-SUMMARY:Final: New Jersey Devils 1 - 4 Ottawa Senators
-DESCRIPTION:Regular season. Times display in your calendar's local time. 
- Open the NHL Tracker Game Centre for scores\, analytics and game details
- .
-LOCATION:Canadian Tire Centre
-URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2025020866#
- games
-END:VEVENT
-BEGIN:VEVENT
-UID:nhl-2025020887@mooneyaoife.github.io
-DTSTAMP:20260716T125159Z
-DTSTART:20260204T000000Z
-DTEND:20260204T030000Z
-SUMMARY:Final: Columbus Blue Jackets 3 - 0 New Jersey Devils
-DESCRIPTION:Regular season. Times display in your calendar's local time. 
- Open the NHL Tracker Game Centre for scores\, analytics and game details
- .
-LOCATION:Prudential Center
-URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2025020887#
- games
-END:VEVENT
-BEGIN:VEVENT
-UID:nhl-2025020905@mooneyaoife.github.io
-DTSTAMP:20260716T125159Z
-DTSTART:20260206T000000Z
-DTEND:20260206T030000Z
-SUMMARY:Final: New York Islanders 3 - 1 New Jersey Devils
-DESCRIPTION:Regular season. Times display in your calendar's local time. 
- Open the NHL Tracker Game Centre for scores\, analytics and game details
- .
-LOCATION:Prudential Center
-URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2025020905#
- games
-END:VEVENT
-BEGIN:VEVENT
-UID:nhl-2025020910@mooneyaoife.github.io
-DTSTAMP:20260716T125159Z
-DTSTART:20260226T000000Z
-DTEND:20260226T030000Z
-SUMMARY:Final: Buffalo Sabres 2 - 1 New Jersey Devils
-DESCRIPTION:Regular season. Times display in your calendar's local time. 
- Open the NHL Tracker Game Centre for scores\, analytics and game details
- .
-LOCATION:Prudential Center
-URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2025020910#
- games
-END:VEVENT
-BEGIN:VEVENT
-UID:nhl-2025020922@mooneyaoife.github.io
-DTSTAMP:20260716T125159Z
-DTSTART:20260227T000000Z
-DTEND:20260227T030000Z
-SUMMARY:Final: New Jersey Devils 1 - 4 Pittsburgh Penguins
-DESCRIPTION:Regular season. Times display in your calendar's local time. 
- Open the NHL Tracker Game Centre for scores\, analytics and game details
- .
-LOCATION:PPG Paints Arena
-URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2025020922#
- games
-END:VEVENT
-BEGIN:VEVENT
-UID:nhl-2025020943@mooneyaoife.github.io
-DTSTAMP:20260716T125159Z
-DTSTART:20260228T220000Z
-DTEND:20260301T010000Z
-SUMMARY:Final: New Jersey Devils 3 - 1 St. Louis Blues
-DESCRIPTION:Regular season. Times display in your calendar's local time. 
- Open the NHL Tracker Game Centre for scores\, analytics and game details
- .
-LOCATION:Enterprise Center
-URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2025020943#
- games
-END:VEVENT
-BEGIN:VEVENT
-UID:nhl-2025020961@mooneyaoife.github.io
-DTSTAMP:20260716T125159Z
-DTSTART:20260304T000000Z
-DTEND:20260304T030000Z
-SUMMARY:Final: Florida Panthers 1 - 5 New Jersey Devils
-DESCRIPTION:Regular season. Times display in your calendar's local time. 
- Open the NHL Tracker Game Centre for scores\, analytics and game details
- .
-LOCATION:Prudential Center
-URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2025020961#
- games
-END:VEVENT
-BEGIN:VEVENT
-UID:nhl-2025020971@mooneyaoife.github.io
-DTSTAMP:20260716T125159Z
-DTSTART:20260305T000000Z
-DTEND:20260305T030000Z
-SUMMARY:Final: Toronto Maple Leafs 3 - 4 New Jersey Devils
-DESCRIPTION:Regular season. Times display in your calendar's local time. 
- Open the NHL Tracker Game Centre for scores\, analytics and game details
- .
-LOCATION:Prudential Center
-URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2025020971#
- games
-END:VEVENT
-BEGIN:VEVENT
-UID:nhl-2025020991@mooneyaoife.github.io
-DTSTAMP:20260716T125159Z
-DTSTART:20260307T200000Z
-DTEND:20260307T230000Z
-SUMMARY:Final: New York Rangers 3 - 6 New Jersey Devils
-DESCRIPTION:Regular season. Times display in your calendar's local time. 
- Open the NHL Tracker Game Centre for scores\, analytics and game details
- .
-LOCATION:Prudential Center
-URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2025020991#
- games
-END:VEVENT
-BEGIN:VEVENT
-UID:nhl-2025021005@mooneyaoife.github.io
-DTSTAMP:20260716T125159Z
-DTSTART:20260308T230000Z
-DTEND:20260309T020000Z
-SUMMARY:Final: Detroit Red Wings 3 - 0 New Jersey Devils
-DESCRIPTION:Regular season. Times display in your calendar's local time. 
- Open the NHL Tracker Game Centre for scores\, analytics and game details
- .
-LOCATION:Prudential Center
-URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2025021005#
- games
-END:VEVENT
-BEGIN:VEVENT
-UID:nhl-2025021032@mooneyaoife.github.io
-DTSTAMP:20260716T125159Z
-DTSTART:20260312T230000Z
-DTEND:20260313T020000Z
-SUMMARY:Final: Calgary Flames 5 - 4 New Jersey Devils
-DESCRIPTION:Regular season. Times display in your calendar's local time. 
- Open the NHL Tracker Game Centre for scores\, analytics and game details
- .
-LOCATION:Prudential Center
-URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2025021032#
- games
-END:VEVENT
-BEGIN:VEVENT
-UID:nhl-2025021050@mooneyaoife.github.io
-DTSTAMP:20260716T125159Z
-DTSTART:20260314T230000Z
-DTEND:20260315T020000Z
-SUMMARY:Final: Los Angeles Kings 4 - 6 New Jersey Devils
-DESCRIPTION:Regular season. Times display in your calendar's local time. 
- Open the NHL Tracker Game Centre for scores\, analytics and game details
- .
-LOCATION:Prudential Center
-URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2025021050#
- games
-END:VEVENT
-BEGIN:VEVENT
-UID:nhl-2025021064@mooneyaoife.github.io
-DTSTAMP:20260716T125159Z
-DTSTART:20260316T230000Z
-DTEND:20260317T020000Z
-SUMMARY:Final: Boston Bruins 3 - 4 New Jersey Devils
-DESCRIPTION:Regular season. Times display in your calendar's local time. 
- Open the NHL Tracker Game Centre for scores\, analytics and game details
- .
-LOCATION:Prudential Center
-URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2025021064#
- games
-END:VEVENT
-BEGIN:VEVENT
-UID:nhl-2025021077@mooneyaoife.github.io
-DTSTAMP:20260716T125159Z
-DTSTART:20260318T230000Z
-DTEND:20260319T020000Z
-SUMMARY:Final: New Jersey Devils 6 - 3 New York Rangers
-DESCRIPTION:Regular season. Times display in your calendar's local time. 
- Open the NHL Tracker Game Centre for scores\, analytics and game details
- .
-LOCATION:Madison Square Garden
-URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2025021077#
- games
-END:VEVENT
-BEGIN:VEVENT
-UID:nhl-2025021095@mooneyaoife.github.io
-DTSTAMP:20260716T125159Z
-DTSTART:20260320T230000Z
-DTEND:20260321T020000Z
-SUMMARY:Final: New Jersey Devils 1 - 2 Washington Capitals
-DESCRIPTION:Regular season. Times display in your calendar's local time. 
- Open the NHL Tracker Game Centre for scores\, analytics and game details
- .
-LOCATION:Capital One Arena
-URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2025021095#
- games
-END:VEVENT
-BEGIN:VEVENT
-UID:nhl-2025021130@mooneyaoife.github.io
-DTSTAMP:20260716T125159Z
-DTSTART:20260325T000000Z
-DTEND:20260325T030000Z
-SUMMARY:Final: New Jersey Devils 6 - 4 Dallas Stars
-DESCRIPTION:Regular season. Times display in your calendar's local time. 
- Open the NHL Tracker Game Centre for scores\, analytics and game details
- .
-LOCATION:American Airlines Center
-URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2025021130#
- games
-END:VEVENT
-BEGIN:VEVENT
-UID:nhl-2025021144@mooneyaoife.github.io
-DTSTAMP:20260716T125159Z
-DTSTART:20260327T000000Z
-DTEND:20260327T030000Z
-SUMMARY:Final: New Jersey Devils 4 - 2 Nashville Predators
-DESCRIPTION:Regular season. Times display in your calendar's local time. 
- Open the NHL Tracker Game Centre for scores\, analytics and game details
- .
-LOCATION:Bridgestone Arena
-URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2025021144#
- games
-END:VEVENT
-BEGIN:VEVENT
-UID:nhl-2025021157@mooneyaoife.github.io
-DTSTAMP:20260716T125159Z
-DTSTART:20260328T210000Z
-DTEND:20260329T000000Z
-SUMMARY:Final: New Jersey Devils 2 - 5 Carolina Hurricanes
-DESCRIPTION:Regular season. Times display in your calendar's local time. 
- Open the NHL Tracker Game Centre for scores\, analytics and game details
- .
-LOCATION:Lenovo Center
-URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2025021157#
- games
-END:VEVENT
-BEGIN:VEVENT
-UID:nhl-2025021171@mooneyaoife.github.io
-DTSTAMP:20260716T125159Z
-DTSTART:20260329T230000Z
-DTEND:20260330T020000Z
-SUMMARY:Final: Chicago Blackhawks 3 - 5 New Jersey Devils
-DESCRIPTION:Regular season. Times display in your calendar's local time. 
- Open the NHL Tracker Game Centre for scores\, analytics and game details
- .
-LOCATION:Prudential Center
-URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2025021171#
- games
-END:VEVENT
-BEGIN:VEVENT
-UID:nhl-2025021182@mooneyaoife.github.io
-DTSTAMP:20260716T125159Z
-DTSTART:20260331T230000Z
-DTEND:20260401T020000Z
-SUMMARY:Final: New Jersey Devils 1 - 4 New York Rangers
-DESCRIPTION:Regular season. Times display in your calendar's local time. 
- Open the NHL Tracker Game Centre for scores\, analytics and game details
- .
-LOCATION:Madison Square Garden
-URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2025021182#
- games
-END:VEVENT
-BEGIN:VEVENT
-UID:nhl-2025021194@mooneyaoife.github.io
-DTSTAMP:20260716T125159Z
-DTSTART:20260402T233000Z
-DTEND:20260403T023000Z
-SUMMARY:Final: Washington Capitals 3 - 7 New Jersey Devils
-DESCRIPTION:Regular season. Times display in your calendar's local time. 
- Open the NHL Tracker Game Centre for scores\, analytics and game details
- .
-LOCATION:Prudential Center
-URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2025021194#
- games
-END:VEVENT
-BEGIN:VEVENT
-UID:nhl-2025021212@mooneyaoife.github.io
-DTSTAMP:20260716T125159Z
-DTSTART:20260404T230000Z
-DTEND:20260405T020000Z
-SUMMARY:Final: Montréal Canadiens 4 - 3 New Jersey Devils
-DESCRIPTION:Regular season. Times display in your calendar's local time. 
- Open the NHL Tracker Game Centre for scores\, analytics and game details
- .
-LOCATION:Prudential Center
-URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2025021212#
- games
-END:VEVENT
-BEGIN:VEVENT
-UID:nhl-2025021226@mooneyaoife.github.io
-DTSTAMP:20260716T125159Z
-DTSTART:20260405T230000Z
-DTEND:20260406T020000Z
-SUMMARY:Final: New Jersey Devils 3 - 0 Montréal Canadiens
-DESCRIPTION:Regular season. Times display in your calendar's local time. 
- Open the NHL Tracker Game Centre for scores\, analytics and game details
- .
-LOCATION:Centre Bell
-URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2025021226#
- games
-END:VEVENT
-BEGIN:VEVENT
-UID:nhl-2025021236@mooneyaoife.github.io
-DTSTAMP:20260716T125159Z
-DTSTART:20260407T230000Z
-DTEND:20260408T020000Z
-SUMMARY:Final: Philadelphia Flyers 5 - 1 New Jersey Devils
-DESCRIPTION:Regular season. Times display in your calendar's local time. 
- Open the NHL Tracker Game Centre for scores\, analytics and game details
- .
-LOCATION:Prudential Center
-URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2025021236#
- games
-END:VEVENT
-BEGIN:VEVENT
-UID:nhl-2025021251@mooneyaoife.github.io
-DTSTAMP:20260716T125159Z
-DTSTART:20260409T230000Z
-DTEND:20260410T020000Z
-SUMMARY:Final: Pittsburgh Penguins 5 - 2 New Jersey Devils
-DESCRIPTION:Regular season. Times display in your calendar's local time. 
- Open the NHL Tracker Game Centre for scores\, analytics and game details
- .
-LOCATION:Prudential Center
-URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2025021251#
- games
-END:VEVENT
-BEGIN:VEVENT
-UID:nhl-2025021265@mooneyaoife.github.io
-DTSTAMP:20260716T125159Z
-DTSTART:20260411T210000Z
-DTEND:20260412T000000Z
-SUMMARY:Final: New Jersey Devils 5 - 3 Detroit Red Wings
+UID:nhl-2026020090@mooneyaoife.github.io
+DTSTAMP:20260716T181958Z
+DTSTART:20261013T220000Z
+DTEND:20261014T010000Z
+SUMMARY:New Jersey Devils at Detroit Red Wings
 DESCRIPTION:Regular season. Times display in your calendar's local time. 
  Open the NHL Tracker Game Centre for scores\, analytics and game details
  .
 LOCATION:Little Caesars Arena
-URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2025021265#
+URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2026020090#
  games
 END:VEVENT
 BEGIN:VEVENT
-UID:nhl-2025021279@mooneyaoife.github.io
-DTSTAMP:20260716T125159Z
-DTSTART:20260412T230000Z
-DTEND:20260413T020000Z
-SUMMARY:Final: Ottawa Senators 3 - 4 New Jersey Devils
+UID:nhl-2026020113@mooneyaoife.github.io
+DTSTAMP:20260716T181958Z
+DTSTART:20261015T230000Z
+DTEND:20261016T020000Z
+SUMMARY:New York Rangers at New Jersey Devils
 DESCRIPTION:Regular season. Times display in your calendar's local time. 
  Open the NHL Tracker Game Centre for scores\, analytics and game details
  .
 LOCATION:Prudential Center
-URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2025021279#
+URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2026020113#
  games
 END:VEVENT
 BEGIN:VEVENT
-UID:nhl-2025021292@mooneyaoife.github.io
-DTSTAMP:20260716T125159Z
-DTSTART:20260414T230000Z
-DTEND:20260415T020000Z
-SUMMARY:Final: New Jersey Devils 0 - 4 Boston Bruins
+UID:nhl-2026020121@mooneyaoife.github.io
+DTSTAMP:20260716T181958Z
+DTSTART:20261017T170000Z
+DTEND:20261017T200000Z
+SUMMARY:New Jersey Devils at Washington Capitals
+DESCRIPTION:Regular season. Times display in your calendar's local time. 
+ Open the NHL Tracker Game Centre for scores\, analytics and game details
+ .
+LOCATION:Capital One Arena
+URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2026020121#
+ games
+END:VEVENT
+BEGIN:VEVENT
+UID:nhl-2026020142@mooneyaoife.github.io
+DTSTAMP:20260716T181958Z
+DTSTART:20261020T230000Z
+DTEND:20261021T020000Z
+SUMMARY:Colorado Avalanche at New Jersey Devils
+DESCRIPTION:Regular season. Times display in your calendar's local time. 
+ Open the NHL Tracker Game Centre for scores\, analytics and game details
+ .
+LOCATION:Prudential Center
+URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2026020142#
+ games
+END:VEVENT
+BEGIN:VEVENT
+UID:nhl-2026020157@mooneyaoife.github.io
+DTSTAMP:20260716T181958Z
+DTSTART:20261022T230000Z
+DTEND:20261023T020000Z
+SUMMARY:Anaheim Ducks at New Jersey Devils
+DESCRIPTION:Regular season. Times display in your calendar's local time. 
+ Open the NHL Tracker Game Centre for scores\, analytics and game details
+ .
+LOCATION:Prudential Center
+URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2026020157#
+ games
+END:VEVENT
+BEGIN:VEVENT
+UID:nhl-2026020169@mooneyaoife.github.io
+DTSTAMP:20260716T181958Z
+DTSTART:20261024T193000Z
+DTEND:20261024T223000Z
+SUMMARY:Los Angeles Kings at New Jersey Devils
+DESCRIPTION:Regular season. Times display in your calendar's local time. 
+ Open the NHL Tracker Game Centre for scores\, analytics and game details
+ .
+LOCATION:Prudential Center
+URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2026020169#
+ games
+END:VEVENT
+BEGIN:VEVENT
+UID:nhl-2026020193@mooneyaoife.github.io
+DTSTAMP:20260716T181958Z
+DTSTART:20261028T000000Z
+DTEND:20261028T030000Z
+SUMMARY:New Jersey Devils at Dallas Stars
+DESCRIPTION:Regular season. Times display in your calendar's local time. 
+ Open the NHL Tracker Game Centre for scores\, analytics and game details
+ .
+LOCATION:American Airlines Center
+URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2026020193#
+ games
+END:VEVENT
+BEGIN:VEVENT
+UID:nhl-2026020201@mooneyaoife.github.io
+DTSTAMP:20260716T181958Z
+DTSTART:20261029T010000Z
+DTEND:20261029T040000Z
+SUMMARY:New Jersey Devils at Colorado Avalanche
+DESCRIPTION:Regular season. Times display in your calendar's local time. 
+ Open the NHL Tracker Game Centre for scores\, analytics and game details
+ .
+LOCATION:Ball Arena
+URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2026020201#
+ games
+END:VEVENT
+BEGIN:VEVENT
+UID:nhl-2026020214@mooneyaoife.github.io
+DTSTAMP:20260716T181958Z
+DTSTART:20261030T220000Z
+DTEND:20261031T010000Z
+SUMMARY:New Jersey Devils at Vegas Golden Knights
+DESCRIPTION:Regular season. Times display in your calendar's local time. 
+ Open the NHL Tracker Game Centre for scores\, analytics and game details
+ .
+LOCATION:T-Mobile Arena
+URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2026020214#
+ games
+END:VEVENT
+BEGIN:VEVENT
+UID:nhl-2026020239@mooneyaoife.github.io
+DTSTAMP:20260716T181958Z
+DTSTART:20261104T000000Z
+DTEND:20261104T030000Z
+SUMMARY:Edmonton Oilers at New Jersey Devils
+DESCRIPTION:Regular season. Times display in your calendar's local time. 
+ Open the NHL Tracker Game Centre for scores\, analytics and game details
+ .
+LOCATION:Prudential Center
+URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2026020239#
+ games
+END:VEVENT
+BEGIN:VEVENT
+UID:nhl-2026020254@mooneyaoife.github.io
+DTSTAMP:20260716T181958Z
+DTSTART:20261106T000000Z
+DTEND:20261106T030000Z
+SUMMARY:St. Louis Blues at New Jersey Devils
+DESCRIPTION:Regular season. Times display in your calendar's local time. 
+ Open the NHL Tracker Game Centre for scores\, analytics and game details
+ .
+LOCATION:Prudential Center
+URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2026020254#
+ games
+END:VEVENT
+BEGIN:VEVENT
+UID:nhl-2026020270@mooneyaoife.github.io
+DTSTAMP:20260716T181958Z
+DTSTART:20261108T000000Z
+DTEND:20261108T030000Z
+SUMMARY:New Jersey Devils at New York Islanders
+DESCRIPTION:Regular season. Times display in your calendar's local time. 
+ Open the NHL Tracker Game Centre for scores\, analytics and game details
+ .
+LOCATION:UBS Arena
+URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2026020270#
+ games
+END:VEVENT
+BEGIN:VEVENT
+UID:nhl-2026020279@mooneyaoife.github.io
+DTSTAMP:20260716T181958Z
+DTSTART:20261109T000000Z
+DTEND:20261109T030000Z
+SUMMARY:New Jersey Devils at Toronto Maple Leafs
+DESCRIPTION:Regular season. Times display in your calendar's local time. 
+ Open the NHL Tracker Game Centre for scores\, analytics and game details
+ .
+LOCATION:Scotiabank Arena
+URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2026020279#
+ games
+END:VEVENT
+BEGIN:VEVENT
+UID:nhl-2026020291@mooneyaoife.github.io
+DTSTAMP:20260716T181958Z
+DTSTART:20261111T010000Z
+DTEND:20261111T040000Z
+SUMMARY:New Jersey Devils at Winnipeg Jets
+DESCRIPTION:Regular season. Times display in your calendar's local time. 
+ Open the NHL Tracker Game Centre for scores\, analytics and game details
+ .
+LOCATION:Canada Life Centre
+URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2026020291#
+ games
+END:VEVENT
+BEGIN:VEVENT
+UID:nhl-2026020303@mooneyaoife.github.io
+DTSTAMP:20260716T181958Z
+DTSTART:20261113T000000Z
+DTEND:20261113T030000Z
+SUMMARY:Washington Capitals at New Jersey Devils
+DESCRIPTION:Regular season. Times display in your calendar's local time. 
+ Open the NHL Tracker Game Centre for scores\, analytics and game details
+ .
+LOCATION:Prudential Center
+URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2026020303#
+ games
+END:VEVENT
+BEGIN:VEVENT
+UID:nhl-2026020318@mooneyaoife.github.io
+DTSTAMP:20260716T181958Z
+DTSTART:20261115T000000Z
+DTEND:20261115T030000Z
+SUMMARY:New Jersey Devils at Washington Capitals
+DESCRIPTION:Regular season. Times display in your calendar's local time. 
+ Open the NHL Tracker Game Centre for scores\, analytics and game details
+ .
+LOCATION:Capital One Arena
+URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2026020318#
+ games
+END:VEVENT
+BEGIN:VEVENT
+UID:nhl-2026020345@mooneyaoife.github.io
+DTSTAMP:20260716T181958Z
+DTSTART:20261119T003000Z
+DTEND:20261119T033000Z
+SUMMARY:Montréal Canadiens at New Jersey Devils
+DESCRIPTION:Regular season. Times display in your calendar's local time. 
+ Open the NHL Tracker Game Centre for scores\, analytics and game details
+ .
+LOCATION:Prudential Center
+URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2026020345#
+ games
+END:VEVENT
+BEGIN:VEVENT
+UID:nhl-2026020368@mooneyaoife.github.io
+DTSTAMP:20260716T181958Z
+DTSTART:20261122T000000Z
+DTEND:20261122T030000Z
+SUMMARY:New Jersey Devils at St. Louis Blues
+DESCRIPTION:Regular season. Times display in your calendar's local time. 
+ Open the NHL Tracker Game Centre for scores\, analytics and game details
+ .
+LOCATION:Enterprise Center
+URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2026020368#
+ games
+END:VEVENT
+BEGIN:VEVENT
+UID:nhl-2026020378@mooneyaoife.github.io
+DTSTAMP:20260716T181958Z
+DTSTART:20261124T000000Z
+DTEND:20261124T030000Z
+SUMMARY:Columbus Blue Jackets at New Jersey Devils
+DESCRIPTION:Regular season. Times display in your calendar's local time. 
+ Open the NHL Tracker Game Centre for scores\, analytics and game details
+ .
+LOCATION:Prudential Center
+URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2026020378#
+ games
+END:VEVENT
+BEGIN:VEVENT
+UID:nhl-2026020393@mooneyaoife.github.io
+DTSTAMP:20260716T181958Z
+DTSTART:20261126T000000Z
+DTEND:20261126T030000Z
+SUMMARY:New Jersey Devils at Columbus Blue Jackets
+DESCRIPTION:Regular season. Times display in your calendar's local time. 
+ Open the NHL Tracker Game Centre for scores\, analytics and game details
+ .
+LOCATION:Nationwide Arena
+URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2026020393#
+ games
+END:VEVENT
+BEGIN:VEVENT
+UID:nhl-2026020401@mooneyaoife.github.io
+DTSTAMP:20260716T181958Z
+DTSTART:20261127T180000Z
+DTEND:20261127T210000Z
+SUMMARY:Calgary Flames at New Jersey Devils
+DESCRIPTION:Regular season. Times display in your calendar's local time. 
+ Open the NHL Tracker Game Centre for scores\, analytics and game details
+ .
+LOCATION:Prudential Center
+URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2026020401#
+ games
+END:VEVENT
+BEGIN:VEVENT
+UID:nhl-2026020418@mooneyaoife.github.io
+DTSTAMP:20260716T181958Z
+DTSTART:20261129T000000Z
+DTEND:20261129T030000Z
+SUMMARY:Winnipeg Jets at New Jersey Devils
+DESCRIPTION:Regular season. Times display in your calendar's local time. 
+ Open the NHL Tracker Game Centre for scores\, analytics and game details
+ .
+LOCATION:Prudential Center
+URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2026020418#
+ games
+END:VEVENT
+BEGIN:VEVENT
+UID:nhl-2026020437@mooneyaoife.github.io
+DTSTAMP:20260716T181958Z
+DTSTART:20261202T000000Z
+DTEND:20261202T030000Z
+SUMMARY:San Jose Sharks at New Jersey Devils
+DESCRIPTION:Regular season. Times display in your calendar's local time. 
+ Open the NHL Tracker Game Centre for scores\, analytics and game details
+ .
+LOCATION:Prudential Center
+URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2026020437#
+ games
+END:VEVENT
+BEGIN:VEVENT
+UID:nhl-2026020449@mooneyaoife.github.io
+DTSTAMP:20260716T181958Z
+DTSTART:20261204T000000Z
+DTEND:20261204T030000Z
+SUMMARY:New Jersey Devils at Ottawa Senators
+DESCRIPTION:Regular season. Times display in your calendar's local time. 
+ Open the NHL Tracker Game Centre for scores\, analytics and game details
+ .
+LOCATION:Canadian Tire Centre
+URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2026020449#
+ games
+END:VEVENT
+BEGIN:VEVENT
+UID:nhl-2026020467@mooneyaoife.github.io
+DTSTAMP:20260716T181958Z
+DTSTART:20261205T200000Z
+DTEND:20261205T230000Z
+SUMMARY:New Jersey Devils at Pittsburgh Penguins
+DESCRIPTION:Regular season. Times display in your calendar's local time. 
+ Open the NHL Tracker Game Centre for scores\, analytics and game details
+ .
+LOCATION:PPG Paints Arena
+URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2026020467#
+ games
+END:VEVENT
+BEGIN:VEVENT
+UID:nhl-2026020484@mooneyaoife.github.io
+DTSTAMP:20260716T181958Z
+DTSTART:20261208T000000Z
+DTEND:20261208T030000Z
+SUMMARY:New Jersey Devils at New York Rangers
+DESCRIPTION:Regular season. Times display in your calendar's local time. 
+ Open the NHL Tracker Game Centre for scores\, analytics and game details
+ .
+LOCATION:Madison Square Garden
+URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2026020484#
+ games
+END:VEVENT
+BEGIN:VEVENT
+UID:nhl-2026020496@mooneyaoife.github.io
+DTSTAMP:20260716T181958Z
+DTSTART:20261210T003000Z
+DTEND:20261210T033000Z
+SUMMARY:Detroit Red Wings at New Jersey Devils
+DESCRIPTION:Regular season. Times display in your calendar's local time. 
+ Open the NHL Tracker Game Centre for scores\, analytics and game details
+ .
+LOCATION:Prudential Center
+URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2026020496#
+ games
+END:VEVENT
+BEGIN:VEVENT
+UID:nhl-2026020514@mooneyaoife.github.io
+DTSTAMP:20260716T181958Z
+DTSTART:20261212T180000Z
+DTEND:20261212T210000Z
+SUMMARY:New Jersey Devils at Boston Bruins
 DESCRIPTION:Regular season. Times display in your calendar's local time. 
  Open the NHL Tracker Game Centre for scores\, analytics and game details
  .
 LOCATION:TD Garden
-URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2025021292#
+URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2026020514#
+ games
+END:VEVENT
+BEGIN:VEVENT
+UID:nhl-2026020539@mooneyaoife.github.io
+DTSTAMP:20260716T181958Z
+DTSTART:20261216T000000Z
+DTEND:20261216T030000Z
+SUMMARY:New York Rangers at New Jersey Devils
+DESCRIPTION:Regular season. Times display in your calendar's local time. 
+ Open the NHL Tracker Game Centre for scores\, analytics and game details
+ .
+LOCATION:Prudential Center
+URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2026020539#
+ games
+END:VEVENT
+BEGIN:VEVENT
+UID:nhl-2026020553@mooneyaoife.github.io
+DTSTAMP:20260716T181958Z
+DTSTART:20261218T000000Z
+DTEND:20261218T030000Z
+SUMMARY:Toronto Maple Leafs at New Jersey Devils
+DESCRIPTION:Regular season. Times display in your calendar's local time. 
+ Open the NHL Tracker Game Centre for scores\, analytics and game details
+ .
+LOCATION:Prudential Center
+URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2026020553#
+ games
+END:VEVENT
+BEGIN:VEVENT
+UID:nhl-2026020567@mooneyaoife.github.io
+DTSTAMP:20260716T181958Z
+DTSTART:20261219T170000Z
+DTEND:20261219T200000Z
+SUMMARY:Boston Bruins at New Jersey Devils
+DESCRIPTION:Regular season. Times display in your calendar's local time. 
+ Open the NHL Tracker Game Centre for scores\, analytics and game details
+ .
+LOCATION:Prudential Center
+URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2026020567#
+ games
+END:VEVENT
+BEGIN:VEVENT
+UID:nhl-2026020581@mooneyaoife.github.io
+DTSTAMP:20260716T181958Z
+DTSTART:20261221T000000Z
+DTEND:20261221T030000Z
+SUMMARY:Nashville Predators at New Jersey Devils
+DESCRIPTION:Regular season. Times display in your calendar's local time. 
+ Open the NHL Tracker Game Centre for scores\, analytics and game details
+ .
+LOCATION:Prudential Center
+URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2026020581#
+ games
+END:VEVENT
+BEGIN:VEVENT
+UID:nhl-2026020592@mooneyaoife.github.io
+DTSTAMP:20260716T181958Z
+DTSTART:20261223T000000Z
+DTEND:20261223T030000Z
+SUMMARY:New Jersey Devils at New York Rangers
+DESCRIPTION:Regular season. Times display in your calendar's local time. 
+ Open the NHL Tracker Game Centre for scores\, analytics and game details
+ .
+LOCATION:Madison Square Garden
+URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2026020592#
+ games
+END:VEVENT
+BEGIN:VEVENT
+UID:nhl-2026020603@mooneyaoife.github.io
+DTSTAMP:20260716T181958Z
+DTSTART:20261227T000000Z
+DTEND:20261227T030000Z
+SUMMARY:New Jersey Devils at Buffalo Sabres
+DESCRIPTION:Regular season. Times display in your calendar's local time. 
+ Open the NHL Tracker Game Centre for scores\, analytics and game details
+ .
+LOCATION:KeyBank Center
+URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2026020603#
+ games
+END:VEVENT
+BEGIN:VEVENT
+UID:nhl-2026020616@mooneyaoife.github.io
+DTSTAMP:20260716T181958Z
+DTSTART:20261228T000000Z
+DTEND:20261228T030000Z
+SUMMARY:Boston Bruins at New Jersey Devils
+DESCRIPTION:Regular season. Times display in your calendar's local time. 
+ Open the NHL Tracker Game Centre for scores\, analytics and game details
+ .
+LOCATION:Prudential Center
+URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2026020616#
+ games
+END:VEVENT
+BEGIN:VEVENT
+UID:nhl-2026020634@mooneyaoife.github.io
+DTSTAMP:20260716T181958Z
+DTSTART:20261230T020000Z
+DTEND:20261230T050000Z
+SUMMARY:New Jersey Devils at Utah Mammoth
+DESCRIPTION:Regular season. Times display in your calendar's local time. 
+ Open the NHL Tracker Game Centre for scores\, analytics and game details
+ .
+LOCATION:Delta Center
+URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2026020634#
+ games
+END:VEVENT
+BEGIN:VEVENT
+UID:nhl-2026020652@mooneyaoife.github.io
+DTSTAMP:20260716T181958Z
+DTSTART:20270101T210000Z
+DTEND:20270102T000000Z
+SUMMARY:New Jersey Devils at Anaheim Ducks
+DESCRIPTION:Regular season. Times display in your calendar's local time. 
+ Open the NHL Tracker Game Centre for scores\, analytics and game details
+ .
+LOCATION:Honda Center
+URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2026020652#
+ games
+END:VEVENT
+BEGIN:VEVENT
+UID:nhl-2026020665@mooneyaoife.github.io
+DTSTAMP:20260716T181958Z
+DTSTART:20270103T020000Z
+DTEND:20270103T050000Z
+SUMMARY:New Jersey Devils at Los Angeles Kings
+DESCRIPTION:Regular season. Times display in your calendar's local time. 
+ Open the NHL Tracker Game Centre for scores\, analytics and game details
+ .
+LOCATION:Crypto.com Arena
+URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2026020665#
+ games
+END:VEVENT
+BEGIN:VEVENT
+UID:nhl-2026020680@mooneyaoife.github.io
+DTSTAMP:20260716T181958Z
+DTSTART:20270105T030000Z
+DTEND:20270105T060000Z
+SUMMARY:New Jersey Devils at San Jose Sharks
+DESCRIPTION:Regular season. Times display in your calendar's local time. 
+ Open the NHL Tracker Game Centre for scores\, analytics and game details
+ .
+LOCATION:SAP Center at San Jose
+URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2026020680#
+ games
+END:VEVENT
+BEGIN:VEVENT
+UID:nhl-2026020695@mooneyaoife.github.io
+DTSTAMP:20260716T181958Z
+DTSTART:20270108T000000Z
+DTEND:20270108T030000Z
+SUMMARY:Columbus Blue Jackets at New Jersey Devils
+DESCRIPTION:Regular season. Times display in your calendar's local time. 
+ Open the NHL Tracker Game Centre for scores\, analytics and game details
+ .
+LOCATION:Prudential Center
+URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2026020695#
+ games
+END:VEVENT
+BEGIN:VEVENT
+UID:nhl-2026020709@mooneyaoife.github.io
+DTSTAMP:20260716T181958Z
+DTSTART:20270109T170000Z
+DTEND:20270109T200000Z
+SUMMARY:Chicago Blackhawks at New Jersey Devils
+DESCRIPTION:Regular season. Times display in your calendar's local time. 
+ Open the NHL Tracker Game Centre for scores\, analytics and game details
+ .
+LOCATION:Prudential Center
+URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2026020709#
+ games
+END:VEVENT
+BEGIN:VEVENT
+UID:nhl-2026020729@mooneyaoife.github.io
+DTSTAMP:20260716T181958Z
+DTSTART:20270113T000000Z
+DTEND:20270113T030000Z
+SUMMARY:New Jersey Devils at Buffalo Sabres
+DESCRIPTION:Regular season. Times display in your calendar's local time. 
+ Open the NHL Tracker Game Centre for scores\, analytics and game details
+ .
+LOCATION:KeyBank Center
+URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2026020729#
+ games
+END:VEVENT
+BEGIN:VEVENT
+UID:nhl-2026020738@mooneyaoife.github.io
+DTSTAMP:20260716T181958Z
+DTSTART:20270114T000000Z
+DTEND:20270114T030000Z
+SUMMARY:New Jersey Devils at Montréal Canadiens
+DESCRIPTION:Regular season. Times display in your calendar's local time. 
+ Open the NHL Tracker Game Centre for scores\, analytics and game details
+ .
+LOCATION:Centre Bell
+URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2026020738#
+ games
+END:VEVENT
+BEGIN:VEVENT
+UID:nhl-2026020763@mooneyaoife.github.io
+DTSTAMP:20260716T181958Z
+DTSTART:20270117T000000Z
+DTEND:20270117T030000Z
+SUMMARY:New York Islanders at New Jersey Devils
+DESCRIPTION:Regular season. Times display in your calendar's local time. 
+ Open the NHL Tracker Game Centre for scores\, analytics and game details
+ .
+LOCATION:Prudential Center
+URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2026020763#
+ games
+END:VEVENT
+BEGIN:VEVENT
+UID:nhl-2026020787@mooneyaoife.github.io
+DTSTAMP:20260716T181958Z
+DTSTART:20270120T000000Z
+DTEND:20270120T030000Z
+SUMMARY:Dallas Stars at New Jersey Devils
+DESCRIPTION:Regular season. Times display in your calendar's local time. 
+ Open the NHL Tracker Game Centre for scores\, analytics and game details
+ .
+LOCATION:Prudential Center
+URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2026020787#
+ games
+END:VEVENT
+BEGIN:VEVENT
+UID:nhl-2026020801@mooneyaoife.github.io
+DTSTAMP:20260716T181958Z
+DTSTART:20270122T000000Z
+DTEND:20270122T030000Z
+SUMMARY:Tampa Bay Lightning at New Jersey Devils
+DESCRIPTION:Regular season. Times display in your calendar's local time. 
+ Open the NHL Tracker Game Centre for scores\, analytics and game details
+ .
+LOCATION:Prudential Center
+URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2026020801#
+ games
+END:VEVENT
+BEGIN:VEVENT
+UID:nhl-2026020820@mooneyaoife.github.io
+DTSTAMP:20260716T181958Z
+DTSTART:20270124T003000Z
+DTEND:20270124T033000Z
+SUMMARY:New Jersey Devils at Philadelphia Flyers
+DESCRIPTION:Regular season. Times display in your calendar's local time. 
+ Open the NHL Tracker Game Centre for scores\, analytics and game details
+ .
+LOCATION:Xfinity Mobile Arena
+URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2026020820#
+ games
+END:VEVENT
+BEGIN:VEVENT
+UID:nhl-2026020828@mooneyaoife.github.io
+DTSTAMP:20260716T181958Z
+DTSTART:20270125T000000Z
+DTEND:20270125T030000Z
+SUMMARY:Washington Capitals at New Jersey Devils
+DESCRIPTION:Regular season. Times display in your calendar's local time. 
+ Open the NHL Tracker Game Centre for scores\, analytics and game details
+ .
+LOCATION:Prudential Center
+URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2026020828#
+ games
+END:VEVENT
+BEGIN:VEVENT
+UID:nhl-2026020838@mooneyaoife.github.io
+DTSTAMP:20260716T181958Z
+DTSTART:20270127T000000Z
+DTEND:20270127T030000Z
+SUMMARY:Seattle Kraken at New Jersey Devils
+DESCRIPTION:Regular season. Times display in your calendar's local time. 
+ Open the NHL Tracker Game Centre for scores\, analytics and game details
+ .
+LOCATION:Prudential Center
+URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2026020838#
+ games
+END:VEVENT
+BEGIN:VEVENT
+UID:nhl-2026020856@mooneyaoife.github.io
+DTSTAMP:20260716T181958Z
+DTSTART:20270129T010000Z
+DTEND:20270129T040000Z
+SUMMARY:New Jersey Devils at Edmonton Oilers
+DESCRIPTION:Regular season. Times display in your calendar's local time. 
+ Open the NHL Tracker Game Centre for scores\, analytics and game details
+ .
+LOCATION:Rogers Place
+URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2026020856#
+ games
+END:VEVENT
+BEGIN:VEVENT
+UID:nhl-2026020866@mooneyaoife.github.io
+DTSTAMP:20260716T181958Z
+DTSTART:20270130T203000Z
+DTEND:20270130T233000Z
+SUMMARY:New Jersey Devils at Calgary Flames
+DESCRIPTION:Regular season. Times display in your calendar's local time. 
+ Open the NHL Tracker Game Centre for scores\, analytics and game details
+ .
+LOCATION:Scotiabank Saddledome
+URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2026020866#
+ games
+END:VEVENT
+BEGIN:VEVENT
+UID:nhl-2026020879@mooneyaoife.github.io
+DTSTAMP:20260716T181958Z
+DTSTART:20270131T210000Z
+DTEND:20270201T000000Z
+SUMMARY:New Jersey Devils at Seattle Kraken
+DESCRIPTION:Regular season. Times display in your calendar's local time. 
+ Open the NHL Tracker Game Centre for scores\, analytics and game details
+ .
+LOCATION:Climate Pledge Arena
+URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2026020879#
+ games
+END:VEVENT
+BEGIN:VEVENT
+UID:nhl-2026020893@mooneyaoife.github.io
+DTSTAMP:20260716T181958Z
+DTSTART:20270204T020000Z
+DTEND:20270204T050000Z
+SUMMARY:New Jersey Devils at Vancouver Canucks
+DESCRIPTION:Regular season. Times display in your calendar's local time. 
+ Open the NHL Tracker Game Centre for scores\, analytics and game details
+ .
+LOCATION:Rogers Arena
+URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2026020893#
+ games
+END:VEVENT
+BEGIN:VEVENT
+UID:nhl-2026020923@mooneyaoife.github.io
+DTSTAMP:20260716T181958Z
+DTSTART:20270214T003000Z
+DTEND:20270214T033000Z
+SUMMARY:New Jersey Devils at Philadelphia Flyers
+DESCRIPTION:Regular season. Times display in your calendar's local time. 
+ Open the NHL Tracker Game Centre for scores\, analytics and game details
+ .
+LOCATION:Xfinity Mobile Arena
+URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2026020923#
+ games
+END:VEVENT
+BEGIN:VEVENT
+UID:nhl-2026020942@mooneyaoife.github.io
+DTSTAMP:20260716T181958Z
+DTSTART:20270217T010000Z
+DTEND:20270217T040000Z
+SUMMARY:New Jersey Devils at Nashville Predators
+DESCRIPTION:Regular season. Times display in your calendar's local time. 
+ Open the NHL Tracker Game Centre for scores\, analytics and game details
+ .
+LOCATION:Bridgestone Arena
+URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2026020942#
+ games
+END:VEVENT
+BEGIN:VEVENT
+UID:nhl-2026020954@mooneyaoife.github.io
+DTSTAMP:20260716T181958Z
+DTSTART:20270219T000000Z
+DTEND:20270219T030000Z
+SUMMARY:New Jersey Devils at Florida Panthers
+DESCRIPTION:Regular season. Times display in your calendar's local time. 
+ Open the NHL Tracker Game Centre for scores\, analytics and game details
+ .
+LOCATION:Amerant Bank Arena
+URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2026020954#
+ games
+END:VEVENT
+BEGIN:VEVENT
+UID:nhl-2026020968@mooneyaoife.github.io
+DTSTAMP:20260716T181958Z
+DTSTART:20270220T200000Z
+DTEND:20270220T230000Z
+SUMMARY:Buffalo Sabres at New Jersey Devils
+DESCRIPTION:Regular season. Times display in your calendar's local time. 
+ Open the NHL Tracker Game Centre for scores\, analytics and game details
+ .
+LOCATION:Prudential Center
+URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2026020968#
+ games
+END:VEVENT
+BEGIN:VEVENT
+UID:nhl-2026020979@mooneyaoife.github.io
+DTSTAMP:20260716T181958Z
+DTSTART:20270221T203000Z
+DTEND:20270221T233000Z
+SUMMARY:New Jersey Devils at Chicago Blackhawks
+DESCRIPTION:Regular season. Times display in your calendar's local time. 
+ Open the NHL Tracker Game Centre for scores\, analytics and game details
+ .
+LOCATION:United Center
+URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2026020979#
+ games
+END:VEVENT
+BEGIN:VEVENT
+UID:nhl-2026020993@mooneyaoife.github.io
+DTSTAMP:20260716T181958Z
+DTSTART:20270224T000000Z
+DTEND:20270224T030000Z
+SUMMARY:Carolina Hurricanes at New Jersey Devils
+DESCRIPTION:Regular season. Times display in your calendar's local time. 
+ Open the NHL Tracker Game Centre for scores\, analytics and game details
+ .
+LOCATION:Prudential Center
+URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2026020993#
+ games
+END:VEVENT
+BEGIN:VEVENT
+UID:nhl-2026021015@mooneyaoife.github.io
+DTSTAMP:20260716T181958Z
+DTSTART:20270227T000000Z
+DTEND:20270227T030000Z
+SUMMARY:New Jersey Devils at Columbus Blue Jackets
+DESCRIPTION:Regular season. Times display in your calendar's local time. 
+ Open the NHL Tracker Game Centre for scores\, analytics and game details
+ .
+LOCATION:Nationwide Arena
+URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2026021015#
+ games
+END:VEVENT
+BEGIN:VEVENT
+UID:nhl-2026021032@mooneyaoife.github.io
+DTSTAMP:20260716T181958Z
+DTSTART:20270228T203000Z
+DTEND:20270228T233000Z
+SUMMARY:New Jersey Devils at Minnesota Wild
+DESCRIPTION:Regular season. Times display in your calendar's local time. 
+ Open the NHL Tracker Game Centre for scores\, analytics and game details
+ .
+LOCATION:Grand Casino Arena
+URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2026021032#
+ games
+END:VEVENT
+BEGIN:VEVENT
+UID:nhl-2026021045@mooneyaoife.github.io
+DTSTAMP:20260716T181958Z
+DTSTART:20270303T000000Z
+DTEND:20270303T030000Z
+SUMMARY:Ottawa Senators at New Jersey Devils
+DESCRIPTION:Regular season. Times display in your calendar's local time. 
+ Open the NHL Tracker Game Centre for scores\, analytics and game details
+ .
+LOCATION:Prudential Center
+URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2026021045#
+ games
+END:VEVENT
+BEGIN:VEVENT
+UID:nhl-2026021059@mooneyaoife.github.io
+DTSTAMP:20260716T181958Z
+DTSTART:20270305T000000Z
+DTEND:20270305T030000Z
+SUMMARY:New Jersey Devils at Detroit Red Wings
+DESCRIPTION:Regular season. Times display in your calendar's local time. 
+ Open the NHL Tracker Game Centre for scores\, analytics and game details
+ .
+LOCATION:Little Caesars Arena
+URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2026021059#
+ games
+END:VEVENT
+BEGIN:VEVENT
+UID:nhl-2026021063@mooneyaoife.github.io
+DTSTAMP:20260716T181958Z
+DTSTART:20270306T000000Z
+DTEND:20270306T030000Z
+SUMMARY:Vegas Golden Knights at New Jersey Devils
+DESCRIPTION:Regular season. Times display in your calendar's local time. 
+ Open the NHL Tracker Game Centre for scores\, analytics and game details
+ .
+LOCATION:Prudential Center
+URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2026021063#
+ games
+END:VEVENT
+BEGIN:VEVENT
+UID:nhl-2026021093@mooneyaoife.github.io
+DTSTAMP:20260716T181958Z
+DTSTART:20270310T000000Z
+DTEND:20270310T030000Z
+SUMMARY:New Jersey Devils at Florida Panthers
+DESCRIPTION:Regular season. Times display in your calendar's local time. 
+ Open the NHL Tracker Game Centre for scores\, analytics and game details
+ .
+LOCATION:Amerant Bank Arena
+URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2026021093#
+ games
+END:VEVENT
+BEGIN:VEVENT
+UID:nhl-2026021108@mooneyaoife.github.io
+DTSTAMP:20260716T181958Z
+DTSTART:20270312T000000Z
+DTEND:20270312T030000Z
+SUMMARY:New Jersey Devils at Tampa Bay Lightning
+DESCRIPTION:Regular season. Times display in your calendar's local time. 
+ Open the NHL Tracker Game Centre for scores\, analytics and game details
+ .
+LOCATION:Benchmark International Arena
+URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2026021108#
+ games
+END:VEVENT
+BEGIN:VEVENT
+UID:nhl-2026021128@mooneyaoife.github.io
+DTSTAMP:20260716T181958Z
+DTSTART:20270314T000000Z
+DTEND:20270314T030000Z
+SUMMARY:New Jersey Devils at Carolina Hurricanes
+DESCRIPTION:Regular season. Times display in your calendar's local time. 
+ Open the NHL Tracker Game Centre for scores\, analytics and game details
+ .
+LOCATION:Lenovo Center
+URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2026021128#
+ games
+END:VEVENT
+BEGIN:VEVENT
+UID:nhl-2026021164@mooneyaoife.github.io
+DTSTAMP:20260716T181958Z
+DTSTART:20270318T230000Z
+DTEND:20270319T020000Z
+SUMMARY:Pittsburgh Penguins at New Jersey Devils
+DESCRIPTION:Regular season. Times display in your calendar's local time. 
+ Open the NHL Tracker Game Centre for scores\, analytics and game details
+ .
+LOCATION:Prudential Center
+URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2026021164#
+ games
+END:VEVENT
+BEGIN:VEVENT
+UID:nhl-2026021180@mooneyaoife.github.io
+DTSTAMP:20260716T181958Z
+DTSTART:20270320T230000Z
+DTEND:20270321T020000Z
+SUMMARY:Toronto Maple Leafs at New Jersey Devils
+DESCRIPTION:Regular season. Times display in your calendar's local time. 
+ Open the NHL Tracker Game Centre for scores\, analytics and game details
+ .
+LOCATION:Prudential Center
+URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2026021180#
+ games
+END:VEVENT
+BEGIN:VEVENT
+UID:nhl-2026021198@mooneyaoife.github.io
+DTSTAMP:20260716T181958Z
+DTSTART:20270323T230000Z
+DTEND:20270324T020000Z
+SUMMARY:Philadelphia Flyers at New Jersey Devils
+DESCRIPTION:Regular season. Times display in your calendar's local time. 
+ Open the NHL Tracker Game Centre for scores\, analytics and game details
+ .
+LOCATION:Prudential Center
+URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2026021198#
+ games
+END:VEVENT
+BEGIN:VEVENT
+UID:nhl-2026021215@mooneyaoife.github.io
+DTSTAMP:20260716T181958Z
+DTSTART:20270325T230000Z
+DTEND:20270326T020000Z
+SUMMARY:New Jersey Devils at Pittsburgh Penguins
+DESCRIPTION:Regular season. Times display in your calendar's local time. 
+ Open the NHL Tracker Game Centre for scores\, analytics and game details
+ .
+LOCATION:PPG Paints Arena
+URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2026021215#
+ games
+END:VEVENT
+BEGIN:VEVENT
+UID:nhl-2026021232@mooneyaoife.github.io
+DTSTAMP:20260716T181958Z
+DTSTART:20270327T230000Z
+DTEND:20270328T020000Z
+SUMMARY:New Jersey Devils at Montréal Canadiens
+DESCRIPTION:Regular season. Times display in your calendar's local time. 
+ Open the NHL Tracker Game Centre for scores\, analytics and game details
+ .
+LOCATION:Centre Bell
+URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2026021232#
+ games
+END:VEVENT
+BEGIN:VEVENT
+UID:nhl-2026021244@mooneyaoife.github.io
+DTSTAMP:20260716T181958Z
+DTSTART:20270329T230000Z
+DTEND:20270330T020000Z
+SUMMARY:Carolina Hurricanes at New Jersey Devils
+DESCRIPTION:Regular season. Times display in your calendar's local time. 
+ Open the NHL Tracker Game Centre for scores\, analytics and game details
+ .
+LOCATION:Prudential Center
+URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2026021244#
+ games
+END:VEVENT
+BEGIN:VEVENT
+UID:nhl-2026021259@mooneyaoife.github.io
+DTSTAMP:20260716T181958Z
+DTSTART:20270331T233000Z
+DTEND:20270401T023000Z
+SUMMARY:Minnesota Wild at New Jersey Devils
+DESCRIPTION:Regular season. Times display in your calendar's local time. 
+ Open the NHL Tracker Game Centre for scores\, analytics and game details
+ .
+LOCATION:Prudential Center
+URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2026021259#
+ games
+END:VEVENT
+BEGIN:VEVENT
+UID:nhl-2026021281@mooneyaoife.github.io
+DTSTAMP:20260716T181958Z
+DTSTART:20270403T210000Z
+DTEND:20270404T000000Z
+SUMMARY:New Jersey Devils at Carolina Hurricanes
+DESCRIPTION:Regular season. Times display in your calendar's local time. 
+ Open the NHL Tracker Game Centre for scores\, analytics and game details
+ .
+LOCATION:Lenovo Center
+URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2026021281#
+ games
+END:VEVENT
+BEGIN:VEVENT
+UID:nhl-2026021291@mooneyaoife.github.io
+DTSTAMP:20260716T181958Z
+DTSTART:20270404T203000Z
+DTEND:20270404T233000Z
+SUMMARY:Florida Panthers at New Jersey Devils
+DESCRIPTION:Regular season. Times display in your calendar's local time. 
+ Open the NHL Tracker Game Centre for scores\, analytics and game details
+ .
+LOCATION:Prudential Center
+URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2026021291#
+ games
+END:VEVENT
+BEGIN:VEVENT
+UID:nhl-2026021303@mooneyaoife.github.io
+DTSTAMP:20260716T181958Z
+DTSTART:20270406T230000Z
+DTEND:20270407T020000Z
+SUMMARY:Tampa Bay Lightning at New Jersey Devils
+DESCRIPTION:Regular season. Times display in your calendar's local time. 
+ Open the NHL Tracker Game Centre for scores\, analytics and game details
+ .
+LOCATION:Prudential Center
+URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2026021303#
+ games
+END:VEVENT
+BEGIN:VEVENT
+UID:nhl-2026021318@mooneyaoife.github.io
+DTSTAMP:20260716T181958Z
+DTSTART:20270408T230000Z
+DTEND:20270409T020000Z
+SUMMARY:New York Islanders at New Jersey Devils
+DESCRIPTION:Regular season. Times display in your calendar's local time. 
+ Open the NHL Tracker Game Centre for scores\, analytics and game details
+ .
+LOCATION:Prudential Center
+URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2026021318#
+ games
+END:VEVENT
+BEGIN:VEVENT
+UID:nhl-2026021335@mooneyaoife.github.io
+DTSTAMP:20260716T181958Z
+DTSTART:20270410T220000Z
+DTEND:20270411T010000Z
+SUMMARY:Pittsburgh Penguins at New Jersey Devils
+DESCRIPTION:Regular season. Times display in your calendar's local time. 
+ Open the NHL Tracker Game Centre for scores\, analytics and game details
+ .
+LOCATION:Prudential Center
+URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2026021335#
  games
 END:VEVENT
 END:VCALENDAR

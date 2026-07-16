@@ -10,1201 +10,1095 @@ COLOR:#111111
 REFRESH-INTERVAL;VALUE=DURATION:PT6H
 X-PUBLISHED-TTL:PT6H
 BEGIN:VEVENT
-UID:nhl-2025010001@mooneyaoife.github.io
-DTSTAMP:20260716T125159Z
-DTSTART:20250921T220000Z
-DTEND:20250922T010000Z
-SUMMARY:Final: Anaheim Ducks 1 - 3 Los Angeles Kings
-DESCRIPTION:Preseason. Times display in your calendar's local time. Open 
- the NHL Tracker Game Centre for scores\, analytics and game details.
-LOCATION:Toyota Arena
-URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2025010001#
- games
-END:VEVENT
-BEGIN:VEVENT
-UID:nhl-2025010023@mooneyaoife.github.io
-DTSTAMP:20260716T125159Z
-DTSTART:20250924T020000Z
-DTEND:20250924T050000Z
-SUMMARY:Final: Los Angeles Kings 3 - 1 Vegas Golden Knights
-DESCRIPTION:Preseason. Times display in your calendar's local time. Open 
- the NHL Tracker Game Centre for scores\, analytics and game details.
-LOCATION:T-Mobile Arena
-URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2025010023#
- games
-END:VEVENT
-BEGIN:VEVENT
-UID:nhl-2025010031@mooneyaoife.github.io
-DTSTAMP:20260716T125159Z
-DTSTART:20250925T020000Z
-DTEND:20250925T050000Z
-SUMMARY:Final: Los Angeles Kings 3 - 0 Anaheim Ducks
-DESCRIPTION:Preseason. Times display in your calendar's local time. Open 
- the NHL Tracker Game Centre for scores\, analytics and game details.
-LOCATION:Honda Center
-URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2025010031#
- games
-END:VEVENT
-BEGIN:VEVENT
-UID:nhl-2025010046@mooneyaoife.github.io
-DTSTAMP:20260716T125159Z
-DTSTART:20250927T220000Z
-DTEND:20250928T010000Z
-SUMMARY:Final: Anaheim Ducks 5 - 3 Los Angeles Kings
-DESCRIPTION:Preseason. Times display in your calendar's local time. Open 
- the NHL Tracker Game Centre for scores\, analytics and game details.
-LOCATION:Dignity Health Arena
-URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2025010046#
- games
-END:VEVENT
-BEGIN:VEVENT
-UID:nhl-2025010068@mooneyaoife.github.io
-DTSTAMP:20260716T125159Z
-DTSTART:20251001T010000Z
-DTEND:20251001T040000Z
-SUMMARY:Final: Los Angeles Kings 3 - 2 Utah Mammoth
-DESCRIPTION:Preseason. Times display in your calendar's local time. Open 
- the NHL Tracker Game Centre for scores\, analytics and game details.
-LOCATION:Idaho Central Arena
-URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2025010068#
- games
-END:VEVENT
-BEGIN:VEVENT
-UID:nhl-2025010081@mooneyaoife.github.io
-DTSTAMP:20260716T125159Z
-DTSTART:20251003T010000Z
-DTEND:20251003T040000Z
-SUMMARY:Final: Los Angeles Kings 1 - 2 Utah Mammoth
-DESCRIPTION:Preseason. Times display in your calendar's local time. Open 
- the NHL Tracker Game Centre for scores\, analytics and game details.
-LOCATION:Delta Center
-URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2025010081#
- games
-END:VEVENT
-BEGIN:VEVENT
-UID:nhl-2025010090@mooneyaoife.github.io
-DTSTAMP:20260716T125159Z
-DTSTART:20251004T200000Z
-DTEND:20251004T230000Z
-SUMMARY:Final: Anaheim Ducks 4 - 5 Los Angeles Kings
-DESCRIPTION:Preseason. Times display in your calendar's local time. Open 
- the NHL Tracker Game Centre for scores\, analytics and game details.
-LOCATION:Crypto.com Arena
-URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2025010090#
- games
-END:VEVENT
-BEGIN:VEVENT
-UID:nhl-2025020003@mooneyaoife.github.io
-DTSTAMP:20260716T125159Z
-DTSTART:20251008T023000Z
-DTEND:20251008T053000Z
-SUMMARY:Final: Colorado Avalanche 4 - 1 Los Angeles Kings
+UID:nhl-2026020007@mooneyaoife.github.io
+DTSTAMP:20260716T181958Z
+DTSTART:20261001T020000Z
+DTEND:20261001T050000Z
+SUMMARY:Los Angeles Kings at Colorado Avalanche
 DESCRIPTION:Regular season. Times display in your calendar's local time. 
  Open the NHL Tracker Game Centre for scores\, analytics and game details
  .
-LOCATION:Crypto.com Arena
-URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2025020003#
+LOCATION:Ball Arena
+URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2026020007#
  games
 END:VEVENT
 BEGIN:VEVENT
-UID:nhl-2025020007@mooneyaoife.github.io
-DTSTAMP:20260716T125159Z
-DTSTART:20251009T020000Z
-DTEND:20251009T050000Z
-SUMMARY:Final: Los Angeles Kings 6 - 5 Vegas Golden Knights
-DESCRIPTION:Regular season. Times display in your calendar's local time. 
- Open the NHL Tracker Game Centre for scores\, analytics and game details
- .
-LOCATION:T-Mobile Arena
-URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2025020007#
- games
-END:VEVENT
-BEGIN:VEVENT
-UID:nhl-2025020022@mooneyaoife.github.io
-DTSTAMP:20260716T125159Z
-DTSTART:20251011T173000Z
-DTEND:20251011T203000Z
-SUMMARY:Final: Los Angeles Kings 2 - 3 Winnipeg Jets
-DESCRIPTION:Regular season. Times display in your calendar's local time. 
- Open the NHL Tracker Game Centre for scores\, analytics and game details
- .
-LOCATION:Canada Life Centre
-URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2025020022#
- games
-END:VEVENT
-BEGIN:VEVENT
-UID:nhl-2025020047@mooneyaoife.github.io
-DTSTAMP:20260716T125159Z
-DTSTART:20251014T000000Z
-DTEND:20251014T030000Z
-SUMMARY:Final: Los Angeles Kings 3 - 4 Minnesota Wild
-DESCRIPTION:Regular season. Times display in your calendar's local time. 
- Open the NHL Tracker Game Centre for scores\, analytics and game details
- .
-LOCATION:Grand Casino Arena
-URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2025020047#
- games
-END:VEVENT
-BEGIN:VEVENT
-UID:nhl-2025020071@mooneyaoife.github.io
-DTSTAMP:20260716T125159Z
-DTSTART:20251017T020000Z
-DTEND:20251017T050000Z
-SUMMARY:Final: Pittsburgh Penguins 4 - 2 Los Angeles Kings
-DESCRIPTION:Regular season. Times display in your calendar's local time. 
- Open the NHL Tracker Game Centre for scores\, analytics and game details
- .
-LOCATION:Crypto.com Arena
-URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2025020071#
- games
-END:VEVENT
-BEGIN:VEVENT
-UID:nhl-2025020086@mooneyaoife.github.io
-DTSTAMP:20260716T125159Z
-DTSTART:20251019T010000Z
-DTEND:20251019T040000Z
-SUMMARY:Final: Carolina Hurricanes 4 - 3 Los Angeles Kings
-DESCRIPTION:Regular season. Times display in your calendar's local time. 
- Open the NHL Tracker Game Centre for scores\, analytics and game details
- .
-LOCATION:Crypto.com Arena
-URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2025020086#
- games
-END:VEVENT
-BEGIN:VEVENT
-UID:nhl-2025020104@mooneyaoife.github.io
-DTSTAMP:20260716T125159Z
-DTSTART:20251022T000000Z
-DTEND:20251022T030000Z
-SUMMARY:Final: Los Angeles Kings 2 - 1 St. Louis Blues
-DESCRIPTION:Regular season. Times display in your calendar's local time. 
- Open the NHL Tracker Game Centre for scores\, analytics and game details
- .
-LOCATION:Enterprise Center
-URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2025020104#
- games
-END:VEVENT
-BEGIN:VEVENT
-UID:nhl-2025020119@mooneyaoife.github.io
-DTSTAMP:20260716T125159Z
-DTSTART:20251024T010000Z
-DTEND:20251024T040000Z
-SUMMARY:Final: Los Angeles Kings 3 - 2 Dallas Stars
-DESCRIPTION:Regular season. Times display in your calendar's local time. 
- Open the NHL Tracker Game Centre for scores\, analytics and game details
- .
-LOCATION:American Airlines Center
-URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2025020119#
- games
-END:VEVENT
-BEGIN:VEVENT
-UID:nhl-2025020137@mooneyaoife.github.io
-DTSTAMP:20260716T125159Z
-DTSTART:20251026T000000Z
-DTEND:20251026T030000Z
-SUMMARY:Final: Los Angeles Kings 4 - 5 Nashville Predators
-DESCRIPTION:Regular season. Times display in your calendar's local time. 
- Open the NHL Tracker Game Centre for scores\, analytics and game details
- .
-LOCATION:Bridgestone Arena
-URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2025020137#
- games
-END:VEVENT
-BEGIN:VEVENT
-UID:nhl-2025020144@mooneyaoife.github.io
-DTSTAMP:20260716T125159Z
-DTSTART:20251026T230000Z
-DTEND:20251027T020000Z
-SUMMARY:Final: Los Angeles Kings 3 - 1 Chicago Blackhawks
-DESCRIPTION:Regular season. Times display in your calendar's local time. 
- Open the NHL Tracker Game Centre for scores\, analytics and game details
- .
-LOCATION:United Center
-URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2025020144#
- games
-END:VEVENT
-BEGIN:VEVENT
-UID:nhl-2025020165@mooneyaoife.github.io
-DTSTAMP:20260716T125159Z
-DTSTART:20251029T030000Z
-DTEND:20251029T060000Z
-SUMMARY:Final: Los Angeles Kings 4 - 3 San Jose Sharks
+UID:nhl-2026020034@mooneyaoife.github.io
+DTSTAMP:20260716T181958Z
+DTSTART:20261004T020000Z
+DTEND:20261004T050000Z
+SUMMARY:Los Angeles Kings at San Jose Sharks
 DESCRIPTION:Regular season. Times display in your calendar's local time. 
  Open the NHL Tracker Game Centre for scores\, analytics and game details
  .
 LOCATION:SAP Center at San Jose
-URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2025020165#
+URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2026020034#
  games
 END:VEVENT
 BEGIN:VEVENT
-UID:nhl-2025020177@mooneyaoife.github.io
-DTSTAMP:20260716T125159Z
-DTSTART:20251031T023000Z
-DTEND:20251031T053000Z
-SUMMARY:Final: Detroit Red Wings 4 - 3 Los Angeles Kings
+UID:nhl-2026020052@mooneyaoife.github.io
+DTSTAMP:20260716T181958Z
+DTSTART:20261007T023000Z
+DTEND:20261007T053000Z
+SUMMARY:Florida Panthers at Los Angeles Kings
 DESCRIPTION:Regular season. Times display in your calendar's local time. 
  Open the NHL Tracker Game Centre for scores\, analytics and game details
  .
 LOCATION:Crypto.com Arena
-URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2025020177#
+URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2026020052#
  games
 END:VEVENT
 BEGIN:VEVENT
-UID:nhl-2025020191@mooneyaoife.github.io
-DTSTAMP:20260716T125159Z
-DTSTART:20251102T010000Z
-DTEND:20251102T040000Z
-SUMMARY:Final: New Jersey Devils 4 - 1 Los Angeles Kings
+UID:nhl-2026020083@mooneyaoife.github.io
+DTSTAMP:20260716T181958Z
+DTSTART:20261011T020000Z
+DTEND:20261011T050000Z
+SUMMARY:Los Angeles Kings at Vegas Golden Knights
+DESCRIPTION:Regular season. Times display in your calendar's local time. 
+ Open the NHL Tracker Game Centre for scores\, analytics and game details
+ .
+LOCATION:T-Mobile Arena
+URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2026020083#
+ games
+END:VEVENT
+BEGIN:VEVENT
+UID:nhl-2026020104@mooneyaoife.github.io
+DTSTAMP:20260716T181958Z
+DTSTART:20261014T023000Z
+DTEND:20261014T053000Z
+SUMMARY:Edmonton Oilers at Los Angeles Kings
 DESCRIPTION:Regular season. Times display in your calendar's local time. 
  Open the NHL Tracker Game Centre for scores\, analytics and game details
  .
 LOCATION:Crypto.com Arena
-URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2025020191#
+URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2026020104#
  games
 END:VEVENT
 BEGIN:VEVENT
-UID:nhl-2025020212@mooneyaoife.github.io
-DTSTAMP:20260716T125159Z
-DTSTART:20251105T033000Z
-DTEND:20251105T063000Z
-SUMMARY:Final: Winnipeg Jets 0 - 3 Los Angeles Kings
+UID:nhl-2026020132@mooneyaoife.github.io
+DTSTAMP:20260716T181958Z
+DTSTART:20261018T010000Z
+DTEND:20261018T040000Z
+SUMMARY:Boston Bruins at Los Angeles Kings
 DESCRIPTION:Regular season. Times display in your calendar's local time. 
  Open the NHL Tracker Game Centre for scores\, analytics and game details
  .
 LOCATION:Crypto.com Arena
-URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2025020212#
+URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2026020132#
  games
 END:VEVENT
 BEGIN:VEVENT
-UID:nhl-2025020226@mooneyaoife.github.io
-DTSTAMP:20260716T125159Z
-DTSTART:20251107T030000Z
-DTEND:20251107T060000Z
-SUMMARY:Final: Florida Panthers 5 - 2 Los Angeles Kings
-DESCRIPTION:Regular season. Times display in your calendar's local time. 
- Open the NHL Tracker Game Centre for scores\, analytics and game details
- .
-LOCATION:Crypto.com Arena
-URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2025020226#
- games
-END:VEVENT
-BEGIN:VEVENT
-UID:nhl-2025020245@mooneyaoife.github.io
-DTSTAMP:20260716T125159Z
-DTSTART:20251109T190000Z
-DTEND:20251109T220000Z
-SUMMARY:Final: Los Angeles Kings 3 - 2 Pittsburgh Penguins
-DESCRIPTION:Regular season. Times display in your calendar's local time. 
- Open the NHL Tracker Game Centre for scores\, analytics and game details
- .
-LOCATION:PPG Paints Arena
-URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2025020245#
- games
-END:VEVENT
-BEGIN:VEVENT
-UID:nhl-2025020257@mooneyaoife.github.io
-DTSTAMP:20260716T125159Z
-DTSTART:20251112T000000Z
-DTEND:20251112T030000Z
-SUMMARY:Final: Los Angeles Kings 5 - 1 Montréal Canadiens
-DESCRIPTION:Regular season. Times display in your calendar's local time. 
- Open the NHL Tracker Game Centre for scores\, analytics and game details
- .
-LOCATION:Centre Bell
-URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2025020257#
- games
-END:VEVENT
-BEGIN:VEVENT
-UID:nhl-2025020269@mooneyaoife.github.io
-DTSTAMP:20260716T125159Z
-DTSTART:20251114T000000Z
-DTEND:20251114T030000Z
-SUMMARY:Final: Los Angeles Kings 4 - 3 Toronto Maple Leafs
-DESCRIPTION:Regular season. Times display in your calendar's local time. 
- Open the NHL Tracker Game Centre for scores\, analytics and game details
- .
-LOCATION:Scotiabank Arena
-URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2025020269#
- games
-END:VEVENT
-BEGIN:VEVENT
-UID:nhl-2025020286@mooneyaoife.github.io
-DTSTAMP:20260716T125159Z
-DTSTART:20251116T000000Z
-DTEND:20251116T030000Z
-SUMMARY:Final: Los Angeles Kings 1 - 0 Ottawa Senators
-DESCRIPTION:Regular season. Times display in your calendar's local time. 
- Open the NHL Tracker Game Centre for scores\, analytics and game details
- .
-LOCATION:Canadian Tire Centre
-URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2025020286#
- games
-END:VEVENT
-BEGIN:VEVENT
-UID:nhl-2025020304@mooneyaoife.github.io
-DTSTAMP:20260716T125159Z
-DTSTART:20251118T000000Z
-DTEND:20251118T030000Z
-SUMMARY:Final: Los Angeles Kings 1 - 2 Washington Capitals
+UID:nhl-2026020144@mooneyaoife.github.io
+DTSTAMP:20260716T181958Z
+DTSTART:20261020T230000Z
+DTEND:20261021T020000Z
+SUMMARY:Los Angeles Kings at Washington Capitals
 DESCRIPTION:Regular season. Times display in your calendar's local time. 
  Open the NHL Tracker Game Centre for scores\, analytics and game details
  .
 LOCATION:Capital One Arena
-URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2025020304#
+URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2026020144#
  games
 END:VEVENT
 BEGIN:VEVENT
-UID:nhl-2025020330@mooneyaoife.github.io
-DTSTAMP:20260716T125159Z
-DTSTART:20251121T030000Z
-DTEND:20251121T060000Z
-SUMMARY:Final: Los Angeles Kings 3 - 4 San Jose Sharks
-DESCRIPTION:Regular season. Times display in your calendar's local time. 
- Open the NHL Tracker Game Centre for scores\, analytics and game details
- .
-LOCATION:SAP Center at San Jose
-URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2025020330#
- games
-END:VEVENT
-BEGIN:VEVENT
-UID:nhl-2025020334@mooneyaoife.github.io
-DTSTAMP:20260716T125159Z
-DTSTART:20251122T033000Z
-DTEND:20251122T063000Z
-SUMMARY:Final: Boston Bruins 2 - 1 Los Angeles Kings
-DESCRIPTION:Regular season. Times display in your calendar's local time. 
- Open the NHL Tracker Game Centre for scores\, analytics and game details
- .
-LOCATION:Crypto.com Arena
-URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2025020334#
- games
-END:VEVENT
-BEGIN:VEVENT
-UID:nhl-2025020359@mooneyaoife.github.io
-DTSTAMP:20260716T125159Z
-DTSTART:20251125T020000Z
-DTEND:20251125T050000Z
-SUMMARY:Final: Ottawa Senators 1 - 2 Los Angeles Kings
-DESCRIPTION:Regular season. Times display in your calendar's local time. 
- Open the NHL Tracker Game Centre for scores\, analytics and game details
- .
-LOCATION:Crypto.com Arena
-URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2025020359#
- games
-END:VEVENT
-BEGIN:VEVENT
-UID:nhl-2025020384@mooneyaoife.github.io
-DTSTAMP:20260716T125159Z
-DTSTART:20251128T210000Z
-DTEND:20251129T000000Z
-SUMMARY:Final: Los Angeles Kings 4 - 5 Anaheim Ducks
-DESCRIPTION:Regular season. Times display in your calendar's local time. 
- Open the NHL Tracker Game Centre for scores\, analytics and game details
- .
-LOCATION:Honda Center
-URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2025020384#
- games
-END:VEVENT
-BEGIN:VEVENT
-UID:nhl-2025020401@mooneyaoife.github.io
-DTSTAMP:20260716T125159Z
-DTSTART:20251130T030000Z
-DTEND:20251130T060000Z
-SUMMARY:Final: Vancouver Canucks 1 - 2 Los Angeles Kings
-DESCRIPTION:Regular season. Times display in your calendar's local time. 
- Open the NHL Tracker Game Centre for scores\, analytics and game details
- .
-LOCATION:Crypto.com Arena
-URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2025020401#
- games
-END:VEVENT
-BEGIN:VEVENT
-UID:nhl-2025020420@mooneyaoife.github.io
-DTSTAMP:20260716T125159Z
-DTSTART:20251203T033000Z
-DTEND:20251203T063000Z
-SUMMARY:Final: Washington Capitals 3 - 1 Los Angeles Kings
-DESCRIPTION:Regular season. Times display in your calendar's local time. 
- Open the NHL Tracker Game Centre for scores\, analytics and game details
- .
-LOCATION:Crypto.com Arena
-URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2025020420#
- games
-END:VEVENT
-BEGIN:VEVENT
-UID:nhl-2025020435@mooneyaoife.github.io
-DTSTAMP:20260716T125159Z
-DTSTART:20251205T030000Z
-DTEND:20251205T060000Z
-SUMMARY:Final: Chicago Blackhawks 2 - 1 Los Angeles Kings
-DESCRIPTION:Regular season. Times display in your calendar's local time. 
- Open the NHL Tracker Game Centre for scores\, analytics and game details
- .
-LOCATION:Crypto.com Arena
-URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2025020435#
- games
-END:VEVENT
-BEGIN:VEVENT
-UID:nhl-2025020449@mooneyaoife.github.io
-DTSTAMP:20260716T125159Z
-DTSTART:20251207T020000Z
-DTEND:20251207T050000Z
-SUMMARY:Final: Chicago Blackhawks 0 - 6 Los Angeles Kings
-DESCRIPTION:Regular season. Times display in your calendar's local time. 
- Open the NHL Tracker Game Centre for scores\, analytics and game details
- .
-LOCATION:Crypto.com Arena
-URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2025020449#
- games
-END:VEVENT
-BEGIN:VEVENT
-UID:nhl-2025020462@mooneyaoife.github.io
-DTSTAMP:20260716T125159Z
-DTSTART:20251209T020000Z
-DTEND:20251209T050000Z
-SUMMARY:Final: Los Angeles Kings 4 - 2 Utah Mammoth
-DESCRIPTION:Regular season. Times display in your calendar's local time. 
- Open the NHL Tracker Game Centre for scores\, analytics and game details
- .
-LOCATION:Delta Center
-URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2025020462#
- games
-END:VEVENT
-BEGIN:VEVENT
-UID:nhl-2025020479@mooneyaoife.github.io
-DTSTAMP:20260716T125159Z
-DTSTART:20251211T030000Z
-DTEND:20251211T060000Z
-SUMMARY:Final: Los Angeles Kings 2 - 3 Seattle Kraken
-DESCRIPTION:Regular season. Times display in your calendar's local time. 
- Open the NHL Tracker Game Centre for scores\, analytics and game details
- .
-LOCATION:Climate Pledge Arena
-URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2025020479#
- games
-END:VEVENT
-BEGIN:VEVENT
-UID:nhl-2025020507@mooneyaoife.github.io
-DTSTAMP:20260716T125159Z
-DTSTART:20251214T030000Z
-DTEND:20251214T060000Z
-SUMMARY:Final: Calgary Flames 2 - 1 Los Angeles Kings
-DESCRIPTION:Regular season. Times display in your calendar's local time. 
- Open the NHL Tracker Game Centre for scores\, analytics and game details
- .
-LOCATION:Crypto.com Arena
-URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2025020507#
- games
-END:VEVENT
-BEGIN:VEVENT
-UID:nhl-2025020518@mooneyaoife.github.io
-DTSTAMP:20260716T125159Z
-DTSTART:20251216T010000Z
-DTEND:20251216T040000Z
-SUMMARY:Final: Los Angeles Kings 1 - 4 Dallas Stars
-DESCRIPTION:Regular season. Times display in your calendar's local time. 
- Open the NHL Tracker Game Centre for scores\, analytics and game details
- .
-LOCATION:American Airlines Center
-URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2025020518#
- games
-END:VEVENT
-BEGIN:VEVENT
-UID:nhl-2025020529@mooneyaoife.github.io
-DTSTAMP:20260716T125159Z
-DTSTART:20251218T000000Z
-DTEND:20251218T030000Z
-SUMMARY:Final: Los Angeles Kings 2 - 3 Florida Panthers
-DESCRIPTION:Regular season. Times display in your calendar's local time. 
- Open the NHL Tracker Game Centre for scores\, analytics and game details
- .
-LOCATION:Amerant Bank Arena
-URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2025020529#
- games
-END:VEVENT
-BEGIN:VEVENT
-UID:nhl-2025020538@mooneyaoife.github.io
-DTSTAMP:20260716T125159Z
-DTSTART:20251219T000000Z
-DTEND:20251219T030000Z
-SUMMARY:Final: Los Angeles Kings 2 - 1 Tampa Bay Lightning
-DESCRIPTION:Regular season. Times display in your calendar's local time. 
- Open the NHL Tracker Game Centre for scores\, analytics and game details
- .
-LOCATION:Benchmark International Arena
-URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2025020538#
- games
-END:VEVENT
-BEGIN:VEVENT
-UID:nhl-2025020574@mooneyaoife.github.io
-DTSTAMP:20260716T125159Z
-DTSTART:20251223T030000Z
-DTEND:20251223T060000Z
-SUMMARY:Final: Columbus Blue Jackets 3 - 1 Los Angeles Kings
-DESCRIPTION:Regular season. Times display in your calendar's local time. 
- Open the NHL Tracker Game Centre for scores\, analytics and game details
- .
-LOCATION:Crypto.com Arena
-URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2025020574#
- games
-END:VEVENT
-BEGIN:VEVENT
-UID:nhl-2025020587@mooneyaoife.github.io
-DTSTAMP:20260716T125159Z
-DTSTART:20251224T030000Z
-DTEND:20251224T060000Z
-SUMMARY:Final: Seattle Kraken 3 - 2 Los Angeles Kings
-DESCRIPTION:Regular season. Times display in your calendar's local time. 
- Open the NHL Tracker Game Centre for scores\, analytics and game details
- .
-LOCATION:Crypto.com Arena
-URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2025020587#
- games
-END:VEVENT
-BEGIN:VEVENT
-UID:nhl-2025020597@mooneyaoife.github.io
-DTSTAMP:20260716T125159Z
-DTSTART:20251228T020000Z
-DTEND:20251228T050000Z
-SUMMARY:Final: Anaheim Ducks 1 - 6 Los Angeles Kings
-DESCRIPTION:Regular season. Times display in your calendar's local time. 
- Open the NHL Tracker Game Centre for scores\, analytics and game details
- .
-LOCATION:Crypto.com Arena
-URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2025020597#
- games
-END:VEVENT
-BEGIN:VEVENT
-UID:nhl-2025020611@mooneyaoife.github.io
-DTSTAMP:20260716T125159Z
-DTSTART:20251230T020000Z
-DTEND:20251230T050000Z
-SUMMARY:Final: Los Angeles Kings 2 - 5 Colorado Avalanche
-DESCRIPTION:Regular season. Times display in your calendar's local time. 
- Open the NHL Tracker Game Centre for scores\, analytics and game details
- .
-LOCATION:Ball Arena
-URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2025020611#
- games
-END:VEVENT
-BEGIN:VEVENT
-UID:nhl-2025020639@mooneyaoife.github.io
-DTSTAMP:20260716T125159Z
-DTSTART:20260102T000000Z
-DTEND:20260102T030000Z
-SUMMARY:Final: Tampa Bay Lightning 5 - 3 Los Angeles Kings
-DESCRIPTION:Regular season. Times display in your calendar's local time. 
- Open the NHL Tracker Game Centre for scores\, analytics and game details
- .
-LOCATION:Crypto.com Arena
-URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2025020639#
- games
-END:VEVENT
-BEGIN:VEVENT
-UID:nhl-2025020655@mooneyaoife.github.io
-DTSTAMP:20260716T125159Z
-DTSTART:20260104T020000Z
-DTEND:20260104T050000Z
-SUMMARY:Final: Minnesota Wild 4 - 5 Los Angeles Kings
-DESCRIPTION:Regular season. Times display in your calendar's local time. 
- Open the NHL Tracker Game Centre for scores\, analytics and game details
- .
-LOCATION:Crypto.com Arena
-URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2025020655#
- games
-END:VEVENT
-BEGIN:VEVENT
-UID:nhl-2025020666@mooneyaoife.github.io
-DTSTAMP:20260716T125159Z
-DTSTART:20260106T033000Z
-DTEND:20260106T063000Z
-SUMMARY:Final: Minnesota Wild 2 - 4 Los Angeles Kings
-DESCRIPTION:Regular season. Times display in your calendar's local time. 
- Open the NHL Tracker Game Centre for scores\, analytics and game details
- .
-LOCATION:Crypto.com Arena
-URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2025020666#
- games
-END:VEVENT
-BEGIN:VEVENT
-UID:nhl-2025020681@mooneyaoife.github.io
-DTSTAMP:20260716T125159Z
-DTSTART:20260108T033000Z
-DTEND:20260108T063000Z
-SUMMARY:Final: San Jose Sharks 4 - 3 Los Angeles Kings
-DESCRIPTION:Regular season. Times display in your calendar's local time. 
- Open the NHL Tracker Game Centre for scores\, analytics and game details
- .
-LOCATION:Crypto.com Arena
-URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2025020681#
- games
-END:VEVENT
-BEGIN:VEVENT
-UID:nhl-2025020695@mooneyaoife.github.io
-DTSTAMP:20260716T125159Z
-DTSTART:20260110T010000Z
-DTEND:20260110T040000Z
-SUMMARY:Final: Los Angeles Kings 1 - 5 Winnipeg Jets
-DESCRIPTION:Regular season. Times display in your calendar's local time. 
- Open the NHL Tracker Game Centre for scores\, analytics and game details
- .
-LOCATION:Canada Life Centre
-URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2025020695#
- games
-END:VEVENT
-BEGIN:VEVENT
-UID:nhl-2025020709@mooneyaoife.github.io
-DTSTAMP:20260716T125159Z
-DTSTART:20260111T030000Z
-DTEND:20260111T060000Z
-SUMMARY:Final: Los Angeles Kings 4 - 3 Edmonton Oilers
-DESCRIPTION:Regular season. Times display in your calendar's local time. 
- Open the NHL Tracker Game Centre for scores\, analytics and game details
- .
-LOCATION:Rogers Place
-URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2025020709#
- games
-END:VEVENT
-BEGIN:VEVENT
-UID:nhl-2025020724@mooneyaoife.github.io
-DTSTAMP:20260716T125159Z
-DTSTART:20260113T030000Z
-DTEND:20260113T060000Z
-SUMMARY:Final: Dallas Stars 3 - 1 Los Angeles Kings
-DESCRIPTION:Regular season. Times display in your calendar's local time. 
- Open the NHL Tracker Game Centre for scores\, analytics and game details
- .
-LOCATION:Crypto.com Arena
-URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2025020724#
- games
-END:VEVENT
-BEGIN:VEVENT
-UID:nhl-2025020738@mooneyaoife.github.io
-DTSTAMP:20260716T125159Z
-DTSTART:20260115T030000Z
-DTEND:20260115T060000Z
-SUMMARY:Final: Vegas Golden Knights 3 - 2 Los Angeles Kings
-DESCRIPTION:Regular season. Times display in your calendar's local time. 
- Open the NHL Tracker Game Centre for scores\, analytics and game details
- .
-LOCATION:Crypto.com Arena
-URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2025020738#
- games
-END:VEVENT
-BEGIN:VEVENT
-UID:nhl-2025020753@mooneyaoife.github.io
-DTSTAMP:20260716T125159Z
-DTSTART:20260117T033000Z
-DTEND:20260117T063000Z
-SUMMARY:Final: Anaheim Ducks 3 - 2 Los Angeles Kings
-DESCRIPTION:Regular season. Times display in your calendar's local time. 
- Open the NHL Tracker Game Centre for scores\, analytics and game details
- .
-LOCATION:Crypto.com Arena
-URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2025020753#
- games
-END:VEVENT
-BEGIN:VEVENT
-UID:nhl-2025020766@mooneyaoife.github.io
-DTSTAMP:20260716T125159Z
-DTSTART:20260118T030000Z
-DTEND:20260118T060000Z
-SUMMARY:Final: Los Angeles Kings 1 - 2 Anaheim Ducks
-DESCRIPTION:Regular season. Times display in your calendar's local time. 
- Open the NHL Tracker Game Centre for scores\, analytics and game details
- .
-LOCATION:Honda Center
-URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2025020766#
- games
-END:VEVENT
-BEGIN:VEVENT
-UID:nhl-2025020787@mooneyaoife.github.io
-DTSTAMP:20260716T125159Z
-DTSTART:20260121T030000Z
-DTEND:20260121T060000Z
-SUMMARY:Final: New York Rangers 3 - 4 Los Angeles Kings
-DESCRIPTION:Regular season. Times display in your calendar's local time. 
- Open the NHL Tracker Game Centre for scores\, analytics and game details
- .
-LOCATION:Crypto.com Arena
-URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2025020787#
- games
-END:VEVENT
-BEGIN:VEVENT
-UID:nhl-2025020816@mooneyaoife.github.io
-DTSTAMP:20260716T125159Z
-DTSTART:20260125T010000Z
-DTEND:20260125T040000Z
-SUMMARY:Final: Los Angeles Kings 5 - 4 St. Louis Blues
-DESCRIPTION:Regular season. Times display in your calendar's local time. 
- Open the NHL Tracker Game Centre for scores\, analytics and game details
- .
-LOCATION:Enterprise Center
-URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2025020816#
- games
-END:VEVENT
-BEGIN:VEVENT
-UID:nhl-2025020833@mooneyaoife.github.io
-DTSTAMP:20260716T125159Z
-DTSTART:20260128T000000Z
-DTEND:20260128T030000Z
-SUMMARY:Final: Los Angeles Kings 3 - 1 Detroit Red Wings
-DESCRIPTION:Regular season. Times display in your calendar's local time. 
- Open the NHL Tracker Game Centre for scores\, analytics and game details
- .
-LOCATION:Little Caesars Arena
-URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2025020833#
- games
-END:VEVENT
-BEGIN:VEVENT
-UID:nhl-2025020844@mooneyaoife.github.io
-DTSTAMP:20260716T125159Z
-DTSTART:20260130T000000Z
-DTEND:20260130T030000Z
-SUMMARY:Final: Los Angeles Kings 1 - 4 Buffalo Sabres
-DESCRIPTION:Regular season. Times display in your calendar's local time. 
- Open the NHL Tracker Game Centre for scores\, analytics and game details
- .
-LOCATION:KeyBank Center
-URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2025020844#
- games
-END:VEVENT
-BEGIN:VEVENT
-UID:nhl-2025020859@mooneyaoife.github.io
-DTSTAMP:20260716T125159Z
-DTSTART:20260131T173000Z
-DTEND:20260131T203000Z
-SUMMARY:Final: Los Angeles Kings 3 - 2 Philadelphia Flyers
-DESCRIPTION:Regular season. Times display in your calendar's local time. 
- Open the NHL Tracker Game Centre for scores\, analytics and game details
- .
-LOCATION:Xfinity Mobile Arena
-URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2025020859#
- games
-END:VEVENT
-BEGIN:VEVENT
-UID:nhl-2025020874@mooneyaoife.github.io
-DTSTAMP:20260716T125159Z
-DTSTART:20260201T200000Z
-DTEND:20260201T230000Z
-SUMMARY:Final: Los Angeles Kings 2 - 3 Carolina Hurricanes
-DESCRIPTION:Regular season. Times display in your calendar's local time. 
- Open the NHL Tracker Game Centre for scores\, analytics and game details
- .
-LOCATION:Lenovo Center
-URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2025020874#
- games
-END:VEVENT
-BEGIN:VEVENT
-UID:nhl-2025020902@mooneyaoife.github.io
-DTSTAMP:20260716T125159Z
-DTSTART:20260205T030000Z
-DTEND:20260205T060000Z
-SUMMARY:Final: Seattle Kraken 4 - 2 Los Angeles Kings
-DESCRIPTION:Regular season. Times display in your calendar's local time. 
- Open the NHL Tracker Game Centre for scores\, analytics and game details
- .
-LOCATION:Crypto.com Arena
-URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2025020902#
- games
-END:VEVENT
-BEGIN:VEVENT
-UID:nhl-2025020909@mooneyaoife.github.io
-DTSTAMP:20260716T125159Z
-DTSTART:20260206T030000Z
-DTEND:20260206T060000Z
-SUMMARY:Final: Los Angeles Kings 1 - 4 Vegas Golden Knights
-DESCRIPTION:Regular season. Times display in your calendar's local time. 
- Open the NHL Tracker Game Centre for scores\, analytics and game details
- .
-LOCATION:T-Mobile Arena
-URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2025020909#
- games
-END:VEVENT
-BEGIN:VEVENT
-UID:nhl-2025020916@mooneyaoife.github.io
-DTSTAMP:20260716T125159Z
-DTSTART:20260226T030000Z
-DTEND:20260226T060000Z
-SUMMARY:Final: Vegas Golden Knights 6 - 4 Los Angeles Kings
-DESCRIPTION:Regular season. Times display in your calendar's local time. 
- Open the NHL Tracker Game Centre for scores\, analytics and game details
- .
-LOCATION:Crypto.com Arena
-URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2025020916#
- games
-END:VEVENT
-BEGIN:VEVENT
-UID:nhl-2025020929@mooneyaoife.github.io
-DTSTAMP:20260716T125159Z
-DTSTART:20260227T033000Z
-DTEND:20260227T063000Z
-SUMMARY:Final: Edmonton Oilers 8 - 1 Los Angeles Kings
-DESCRIPTION:Regular season. Times display in your calendar's local time. 
- Open the NHL Tracker Game Centre for scores\, analytics and game details
- .
-LOCATION:Crypto.com Arena
-URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2025020929#
- games
-END:VEVENT
-BEGIN:VEVENT
-UID:nhl-2025020944@mooneyaoife.github.io
-DTSTAMP:20260716T125159Z
-DTSTART:20260301T000000Z
-DTEND:20260301T030000Z
-SUMMARY:Final: Calgary Flames 0 - 2 Los Angeles Kings
-DESCRIPTION:Regular season. Times display in your calendar's local time. 
- Open the NHL Tracker Game Centre for scores\, analytics and game details
- .
-LOCATION:Crypto.com Arena
-URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2025020944#
- games
-END:VEVENT
-BEGIN:VEVENT
-UID:nhl-2025020958@mooneyaoife.github.io
-DTSTAMP:20260716T125159Z
-DTSTART:20260303T033000Z
-DTEND:20260303T063000Z
-SUMMARY:Final: Colorado Avalanche 4 - 2 Los Angeles Kings
-DESCRIPTION:Regular season. Times display in your calendar's local time. 
- Open the NHL Tracker Game Centre for scores\, analytics and game details
- .
-LOCATION:Crypto.com Arena
-URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2025020958#
- games
-END:VEVENT
-BEGIN:VEVENT
-UID:nhl-2025020982@mooneyaoife.github.io
-DTSTAMP:20260716T125159Z
-DTSTART:20260306T023000Z
-DTEND:20260306T053000Z
-SUMMARY:Final: New York Islanders 3 - 5 Los Angeles Kings
-DESCRIPTION:Regular season. Times display in your calendar's local time. 
- Open the NHL Tracker Game Centre for scores\, analytics and game details
- .
-LOCATION:Crypto.com Arena
-URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2025020982#
- games
-END:VEVENT
-BEGIN:VEVENT
-UID:nhl-2025020997@mooneyaoife.github.io
-DTSTAMP:20260716T125159Z
-DTSTART:20260308T000000Z
-DTEND:20260308T030000Z
-SUMMARY:Final: Montréal Canadiens 4 - 3 Los Angeles Kings
-DESCRIPTION:Regular season. Times display in your calendar's local time. 
- Open the NHL Tracker Game Centre for scores\, analytics and game details
- .
-LOCATION:Crypto.com Arena
-URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2025020997#
- games
-END:VEVENT
-BEGIN:VEVENT
-UID:nhl-2025020828@mooneyaoife.github.io
-DTSTAMP:20260716T125159Z
-DTSTART:20260309T200000Z
-DTEND:20260309T230000Z
-SUMMARY:Final: Los Angeles Kings 5 - 4 Columbus Blue Jackets
-DESCRIPTION:Regular season. Times display in your calendar's local time. 
- Open the NHL Tracker Game Centre for scores\, analytics and game details
- .
-LOCATION:Nationwide Arena
-URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2025020828#
- games
-END:VEVENT
-BEGIN:VEVENT
-UID:nhl-2025021012@mooneyaoife.github.io
-DTSTAMP:20260716T125159Z
-DTSTART:20260310T230000Z
-DTEND:20260311T020000Z
-SUMMARY:Final: Los Angeles Kings 1 - 2 Boston Bruins
-DESCRIPTION:Regular season. Times display in your calendar's local time. 
- Open the NHL Tracker Game Centre for scores\, analytics and game details
- .
-LOCATION:TD Garden
-URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2025021012#
- games
-END:VEVENT
-BEGIN:VEVENT
-UID:nhl-2025021041@mooneyaoife.github.io
-DTSTAMP:20260716T125159Z
-DTSTART:20260313T230000Z
-DTEND:20260314T020000Z
-SUMMARY:Final: Los Angeles Kings 3 - 2 New York Islanders
+UID:nhl-2026020159@mooneyaoife.github.io
+DTSTAMP:20260716T181958Z
+DTSTART:20261022T233000Z
+DTEND:20261023T023000Z
+SUMMARY:Los Angeles Kings at New York Islanders
 DESCRIPTION:Regular season. Times display in your calendar's local time. 
  Open the NHL Tracker Game Centre for scores\, analytics and game details
  .
 LOCATION:UBS Arena
-URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2025021041#
+URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2026020159#
  games
 END:VEVENT
 BEGIN:VEVENT
-UID:nhl-2025021050@mooneyaoife.github.io
-DTSTAMP:20260716T125159Z
-DTSTART:20260314T230000Z
-DTEND:20260315T020000Z
-SUMMARY:Final: Los Angeles Kings 4 - 6 New Jersey Devils
+UID:nhl-2026020169@mooneyaoife.github.io
+DTSTAMP:20260716T181958Z
+DTSTART:20261024T193000Z
+DTEND:20261024T223000Z
+SUMMARY:Los Angeles Kings at New Jersey Devils
 DESCRIPTION:Regular season. Times display in your calendar's local time. 
  Open the NHL Tracker Game Centre for scores\, analytics and game details
  .
 LOCATION:Prudential Center
-URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2025021050#
+URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2026020169#
  games
 END:VEVENT
 BEGIN:VEVENT
-UID:nhl-2025021065@mooneyaoife.github.io
-DTSTAMP:20260716T125159Z
-DTSTART:20260316T230000Z
-DTEND:20260317T020000Z
-SUMMARY:Final: Los Angeles Kings 4 - 1 New York Rangers
+UID:nhl-2026020185@mooneyaoife.github.io
+DTSTAMP:20260716T181958Z
+DTSTART:20261026T230000Z
+DTEND:20261027T020000Z
+SUMMARY:Los Angeles Kings at New York Rangers
 DESCRIPTION:Regular season. Times display in your calendar's local time. 
  Open the NHL Tracker Game Centre for scores\, analytics and game details
  .
 LOCATION:Madison Square Garden
-URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2025021065#
+URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2026020185#
  games
 END:VEVENT
 BEGIN:VEVENT
-UID:nhl-2025021093@mooneyaoife.github.io
-DTSTAMP:20260716T125159Z
-DTSTART:20260320T023000Z
-DTEND:20260320T053000Z
-SUMMARY:Final: Philadelphia Flyers 4 - 3 Los Angeles Kings
+UID:nhl-2026020190@mooneyaoife.github.io
+DTSTAMP:20260716T181958Z
+DTSTART:20261028T000000Z
+DTEND:20261028T030000Z
+SUMMARY:Los Angeles Kings at Chicago Blackhawks
+DESCRIPTION:Regular season. Times display in your calendar's local time. 
+ Open the NHL Tracker Game Centre for scores\, analytics and game details
+ .
+LOCATION:United Center
+URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2026020190#
+ games
+END:VEVENT
+BEGIN:VEVENT
+UID:nhl-2026020212@mooneyaoife.github.io
+DTSTAMP:20260716T181958Z
+DTSTART:20261030T020000Z
+DTEND:20261030T050000Z
+SUMMARY:Ottawa Senators at Los Angeles Kings
 DESCRIPTION:Regular season. Times display in your calendar's local time. 
  Open the NHL Tracker Game Centre for scores\, analytics and game details
  .
 LOCATION:Crypto.com Arena
-URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2025021093#
+URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2026020212#
  games
 END:VEVENT
 BEGIN:VEVENT
-UID:nhl-2025021102@mooneyaoife.github.io
-DTSTAMP:20260716T125159Z
-DTSTART:20260321T200000Z
-DTEND:20260321T230000Z
-SUMMARY:Final: Buffalo Sabres 4 - 1 Los Angeles Kings
+UID:nhl-2026020221@mooneyaoife.github.io
+DTSTAMP:20260716T181958Z
+DTSTART:20261031T200000Z
+DTEND:20261031T230000Z
+SUMMARY:Buffalo Sabres at Los Angeles Kings
 DESCRIPTION:Regular season. Times display in your calendar's local time. 
  Open the NHL Tracker Game Centre for scores\, analytics and game details
  .
 LOCATION:Crypto.com Arena
-URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2025021102#
+URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2026020221#
  games
 END:VEVENT
 BEGIN:VEVENT
-UID:nhl-2025021118@mooneyaoife.github.io
-DTSTAMP:20260716T125159Z
-DTSTART:20260323T010000Z
-DTEND:20260323T040000Z
-SUMMARY:Final: Los Angeles Kings 3 - 4 Utah Mammoth
+UID:nhl-2026020249@mooneyaoife.github.io
+DTSTAMP:20260716T181958Z
+DTSTART:20261105T030000Z
+DTEND:20261105T060000Z
+SUMMARY:San Jose Sharks at Los Angeles Kings
+DESCRIPTION:Regular season. Times display in your calendar's local time. 
+ Open the NHL Tracker Game Centre for scores\, analytics and game details
+ .
+LOCATION:Crypto.com Arena
+URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2026020249#
+ games
+END:VEVENT
+BEGIN:VEVENT
+UID:nhl-2026020275@mooneyaoife.github.io
+DTSTAMP:20260716T181958Z
+DTSTART:20261108T020000Z
+DTEND:20261108T050000Z
+SUMMARY:Pittsburgh Penguins at Los Angeles Kings
+DESCRIPTION:Regular season. Times display in your calendar's local time. 
+ Open the NHL Tracker Game Centre for scores\, analytics and game details
+ .
+LOCATION:Crypto.com Arena
+URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2026020275#
+ games
+END:VEVENT
+BEGIN:VEVENT
+UID:nhl-2026020292@mooneyaoife.github.io
+DTSTAMP:20260716T181958Z
+DTSTART:20261111T030000Z
+DTEND:20261111T060000Z
+SUMMARY:Nashville Predators at Los Angeles Kings
+DESCRIPTION:Regular season. Times display in your calendar's local time. 
+ Open the NHL Tracker Game Centre for scores\, analytics and game details
+ .
+LOCATION:Crypto.com Arena
+URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2026020292#
+ games
+END:VEVENT
+BEGIN:VEVENT
+UID:nhl-2026020308@mooneyaoife.github.io
+DTSTAMP:20260716T181958Z
+DTSTART:20261113T030000Z
+DTEND:20261113T060000Z
+SUMMARY:New York Islanders at Los Angeles Kings
+DESCRIPTION:Regular season. Times display in your calendar's local time. 
+ Open the NHL Tracker Game Centre for scores\, analytics and game details
+ .
+LOCATION:Crypto.com Arena
+URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2026020308#
+ games
+END:VEVENT
+BEGIN:VEVENT
+UID:nhl-2026020325@mooneyaoife.github.io
+DTSTAMP:20260716T181958Z
+DTSTART:20261115T030000Z
+DTEND:20261115T060000Z
+SUMMARY:Calgary Flames at Los Angeles Kings
+DESCRIPTION:Regular season. Times display in your calendar's local time. 
+ Open the NHL Tracker Game Centre for scores\, analytics and game details
+ .
+LOCATION:Crypto.com Arena
+URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2026020325#
+ games
+END:VEVENT
+BEGIN:VEVENT
+UID:nhl-2026020333@mooneyaoife.github.io
+DTSTAMP:20260716T181958Z
+DTSTART:20261118T000000Z
+DTEND:20261118T030000Z
+SUMMARY:Los Angeles Kings at Boston Bruins
+DESCRIPTION:Regular season. Times display in your calendar's local time. 
+ Open the NHL Tracker Game Centre for scores\, analytics and game details
+ .
+LOCATION:TD Garden
+URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2026020333#
+ games
+END:VEVENT
+BEGIN:VEVENT
+UID:nhl-2026020347@mooneyaoife.github.io
+DTSTAMP:20260716T181958Z
+DTSTART:20261120T000000Z
+DTEND:20261120T030000Z
+SUMMARY:Los Angeles Kings at Toronto Maple Leafs
+DESCRIPTION:Regular season. Times display in your calendar's local time. 
+ Open the NHL Tracker Game Centre for scores\, analytics and game details
+ .
+LOCATION:Scotiabank Arena
+URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2026020347#
+ games
+END:VEVENT
+BEGIN:VEVENT
+UID:nhl-2026020366@mooneyaoife.github.io
+DTSTAMP:20260716T181958Z
+DTSTART:20261122T000000Z
+DTEND:20261122T030000Z
+SUMMARY:Los Angeles Kings at Ottawa Senators
+DESCRIPTION:Regular season. Times display in your calendar's local time. 
+ Open the NHL Tracker Game Centre for scores\, analytics and game details
+ .
+LOCATION:Canadian Tire Centre
+URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2026020366#
+ games
+END:VEVENT
+BEGIN:VEVENT
+UID:nhl-2026020379@mooneyaoife.github.io
+DTSTAMP:20260716T181958Z
+DTSTART:20261124T003000Z
+DTEND:20261124T033000Z
+SUMMARY:Los Angeles Kings at Montréal Canadiens
+DESCRIPTION:Regular season. Times display in your calendar's local time. 
+ Open the NHL Tracker Game Centre for scores\, analytics and game details
+ .
+LOCATION:Centre Bell
+URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2026020379#
+ games
+END:VEVENT
+BEGIN:VEVENT
+UID:nhl-2026020409@mooneyaoife.github.io
+DTSTAMP:20260716T181958Z
+DTSTART:20261127T210000Z
+DTEND:20261128T000000Z
+SUMMARY:Los Angeles Kings at Anaheim Ducks
+DESCRIPTION:Regular season. Times display in your calendar's local time. 
+ Open the NHL Tracker Game Centre for scores\, analytics and game details
+ .
+LOCATION:Honda Center
+URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2026020409#
+ games
+END:VEVENT
+BEGIN:VEVENT
+UID:nhl-2026020426@mooneyaoife.github.io
+DTSTAMP:20260716T181958Z
+DTSTART:20261129T020000Z
+DTEND:20261129T050000Z
+SUMMARY:Anaheim Ducks at Los Angeles Kings
+DESCRIPTION:Regular season. Times display in your calendar's local time. 
+ Open the NHL Tracker Game Centre for scores\, analytics and game details
+ .
+LOCATION:Crypto.com Arena
+URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2026020426#
+ games
+END:VEVENT
+BEGIN:VEVENT
+UID:nhl-2026020444@mooneyaoife.github.io
+DTSTAMP:20260716T181958Z
+DTSTART:20261202T030000Z
+DTEND:20261202T060000Z
+SUMMARY:Vegas Golden Knights at Los Angeles Kings
+DESCRIPTION:Regular season. Times display in your calendar's local time. 
+ Open the NHL Tracker Game Centre for scores\, analytics and game details
+ .
+LOCATION:Crypto.com Arena
+URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2026020444#
+ games
+END:VEVENT
+BEGIN:VEVENT
+UID:nhl-2026020459@mooneyaoife.github.io
+DTSTAMP:20260716T181958Z
+DTSTART:20261204T030000Z
+DTEND:20261204T060000Z
+SUMMARY:Minnesota Wild at Los Angeles Kings
+DESCRIPTION:Regular season. Times display in your calendar's local time. 
+ Open the NHL Tracker Game Centre for scores\, analytics and game details
+ .
+LOCATION:Crypto.com Arena
+URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2026020459#
+ games
+END:VEVENT
+BEGIN:VEVENT
+UID:nhl-2026020474@mooneyaoife.github.io
+DTSTAMP:20260716T181958Z
+DTSTART:20261206T030000Z
+DTEND:20261206T060000Z
+SUMMARY:Utah Mammoth at Los Angeles Kings
+DESCRIPTION:Regular season. Times display in your calendar's local time. 
+ Open the NHL Tracker Game Centre for scores\, analytics and game details
+ .
+LOCATION:Crypto.com Arena
+URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2026020474#
+ games
+END:VEVENT
+BEGIN:VEVENT
+UID:nhl-2026020498@mooneyaoife.github.io
+DTSTAMP:20260716T181958Z
+DTSTART:20261210T030000Z
+DTEND:20261210T060000Z
+SUMMARY:San Jose Sharks at Los Angeles Kings
+DESCRIPTION:Regular season. Times display in your calendar's local time. 
+ Open the NHL Tracker Game Centre for scores\, analytics and game details
+ .
+LOCATION:Crypto.com Arena
+URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2026020498#
+ games
+END:VEVENT
+BEGIN:VEVENT
+UID:nhl-2026020513@mooneyaoife.github.io
+DTSTAMP:20260716T181958Z
+DTSTART:20261212T030000Z
+DTEND:20261212T060000Z
+SUMMARY:Los Angeles Kings at San Jose Sharks
+DESCRIPTION:Regular season. Times display in your calendar's local time. 
+ Open the NHL Tracker Game Centre for scores\, analytics and game details
+ .
+LOCATION:SAP Center at San Jose
+URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2026020513#
+ games
+END:VEVENT
+BEGIN:VEVENT
+UID:nhl-2026020525@mooneyaoife.github.io
+DTSTAMP:20260716T181958Z
+DTSTART:20261213T030000Z
+DTEND:20261213T060000Z
+SUMMARY:Vancouver Canucks at Los Angeles Kings
+DESCRIPTION:Regular season. Times display in your calendar's local time. 
+ Open the NHL Tracker Game Centre for scores\, analytics and game details
+ .
+LOCATION:Crypto.com Arena
+URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2026020525#
+ games
+END:VEVENT
+BEGIN:VEVENT
+UID:nhl-2026020538@mooneyaoife.github.io
+DTSTAMP:20260716T181958Z
+DTSTART:20261216T000000Z
+DTEND:20261216T030000Z
+SUMMARY:Los Angeles Kings at Detroit Red Wings
+DESCRIPTION:Regular season. Times display in your calendar's local time. 
+ Open the NHL Tracker Game Centre for scores\, analytics and game details
+ .
+LOCATION:Little Caesars Arena
+URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2026020538#
+ games
+END:VEVENT
+BEGIN:VEVENT
+UID:nhl-2026020554@mooneyaoife.github.io
+DTSTAMP:20260716T181958Z
+DTSTART:20261218T000000Z
+DTEND:20261218T030000Z
+SUMMARY:Los Angeles Kings at Pittsburgh Penguins
+DESCRIPTION:Regular season. Times display in your calendar's local time. 
+ Open the NHL Tracker Game Centre for scores\, analytics and game details
+ .
+LOCATION:PPG Paints Arena
+URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2026020554#
+ games
+END:VEVENT
+BEGIN:VEVENT
+UID:nhl-2026020572@mooneyaoife.github.io
+DTSTAMP:20260716T181958Z
+DTSTART:20261220T000000Z
+DTEND:20261220T030000Z
+SUMMARY:Los Angeles Kings at Columbus Blue Jackets
+DESCRIPTION:Regular season. Times display in your calendar's local time. 
+ Open the NHL Tracker Game Centre for scores\, analytics and game details
+ .
+LOCATION:Nationwide Arena
+URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2026020572#
+ games
+END:VEVENT
+BEGIN:VEVENT
+UID:nhl-2026020579@mooneyaoife.github.io
+DTSTAMP:20260716T181958Z
+DTSTART:20261220T230000Z
+DTEND:20261221T020000Z
+SUMMARY:Los Angeles Kings at Buffalo Sabres
+DESCRIPTION:Regular season. Times display in your calendar's local time. 
+ Open the NHL Tracker Game Centre for scores\, analytics and game details
+ .
+LOCATION:KeyBank Center
+URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2026020579#
+ games
+END:VEVENT
+BEGIN:VEVENT
+UID:nhl-2026020598@mooneyaoife.github.io
+DTSTAMP:20260716T181958Z
+DTSTART:20261223T010000Z
+DTEND:20261223T040000Z
+SUMMARY:Los Angeles Kings at Minnesota Wild
+DESCRIPTION:Regular season. Times display in your calendar's local time. 
+ Open the NHL Tracker Game Centre for scores\, analytics and game details
+ .
+LOCATION:Grand Casino Arena
+URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2026020598#
+ games
+END:VEVENT
+BEGIN:VEVENT
+UID:nhl-2026020610@mooneyaoife.github.io
+DTSTAMP:20260716T181958Z
+DTSTART:20261227T030000Z
+DTEND:20261227T060000Z
+SUMMARY:Utah Mammoth at Los Angeles Kings
+DESCRIPTION:Regular season. Times display in your calendar's local time. 
+ Open the NHL Tracker Game Centre for scores\, analytics and game details
+ .
+LOCATION:Crypto.com Arena
+URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2026020610#
+ games
+END:VEVENT
+BEGIN:VEVENT
+UID:nhl-2026020625@mooneyaoife.github.io
+DTSTAMP:20260716T181958Z
+DTSTART:20261229T023000Z
+DTEND:20261229T053000Z
+SUMMARY:Los Angeles Kings at Vancouver Canucks
+DESCRIPTION:Regular season. Times display in your calendar's local time. 
+ Open the NHL Tracker Game Centre for scores\, analytics and game details
+ .
+LOCATION:Rogers Arena
+URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2026020625#
+ games
+END:VEVENT
+BEGIN:VEVENT
+UID:nhl-2026020641@mooneyaoife.github.io
+DTSTAMP:20260716T181958Z
+DTSTART:20261231T030000Z
+DTEND:20261231T060000Z
+SUMMARY:Toronto Maple Leafs at Los Angeles Kings
+DESCRIPTION:Regular season. Times display in your calendar's local time. 
+ Open the NHL Tracker Game Centre for scores\, analytics and game details
+ .
+LOCATION:Crypto.com Arena
+URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2026020641#
+ games
+END:VEVENT
+BEGIN:VEVENT
+UID:nhl-2026020665@mooneyaoife.github.io
+DTSTAMP:20260716T181958Z
+DTSTART:20270103T020000Z
+DTEND:20270103T050000Z
+SUMMARY:New Jersey Devils at Los Angeles Kings
+DESCRIPTION:Regular season. Times display in your calendar's local time. 
+ Open the NHL Tracker Game Centre for scores\, analytics and game details
+ .
+LOCATION:Crypto.com Arena
+URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2026020665#
+ games
+END:VEVENT
+BEGIN:VEVENT
+UID:nhl-2026020679@mooneyaoife.github.io
+DTSTAMP:20260716T181958Z
+DTSTART:20270105T030000Z
+DTEND:20270105T060000Z
+SUMMARY:Philadelphia Flyers at Los Angeles Kings
+DESCRIPTION:Regular season. Times display in your calendar's local time. 
+ Open the NHL Tracker Game Centre for scores\, analytics and game details
+ .
+LOCATION:Crypto.com Arena
+URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2026020679#
+ games
+END:VEVENT
+BEGIN:VEVENT
+UID:nhl-2026020692@mooneyaoife.github.io
+DTSTAMP:20260716T181958Z
+DTSTART:20270107T030000Z
+DTEND:20270107T060000Z
+SUMMARY:Washington Capitals at Los Angeles Kings
+DESCRIPTION:Regular season. Times display in your calendar's local time. 
+ Open the NHL Tracker Game Centre for scores\, analytics and game details
+ .
+LOCATION:Crypto.com Arena
+URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2026020692#
+ games
+END:VEVENT
+BEGIN:VEVENT
+UID:nhl-2026020718@mooneyaoife.github.io
+DTSTAMP:20260716T181958Z
+DTSTART:20270110T020000Z
+DTEND:20270110T050000Z
+SUMMARY:Dallas Stars at Los Angeles Kings
+DESCRIPTION:Regular season. Times display in your calendar's local time. 
+ Open the NHL Tracker Game Centre for scores\, analytics and game details
+ .
+LOCATION:Crypto.com Arena
+URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2026020718#
+ games
+END:VEVENT
+BEGIN:VEVENT
+UID:nhl-2026020727@mooneyaoife.github.io
+DTSTAMP:20260716T181958Z
+DTSTART:20270112T030000Z
+DTEND:20270112T060000Z
+SUMMARY:New York Rangers at Los Angeles Kings
+DESCRIPTION:Regular season. Times display in your calendar's local time. 
+ Open the NHL Tracker Game Centre for scores\, analytics and game details
+ .
+LOCATION:Crypto.com Arena
+URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2026020727#
+ games
+END:VEVENT
+BEGIN:VEVENT
+UID:nhl-2026020742@mooneyaoife.github.io
+DTSTAMP:20260716T181958Z
+DTSTART:20270114T030000Z
+DTEND:20270114T060000Z
+SUMMARY:St. Louis Blues at Los Angeles Kings
+DESCRIPTION:Regular season. Times display in your calendar's local time. 
+ Open the NHL Tracker Game Centre for scores\, analytics and game details
+ .
+LOCATION:Crypto.com Arena
+URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2026020742#
+ games
+END:VEVENT
+BEGIN:VEVENT
+UID:nhl-2026020757@mooneyaoife.github.io
+DTSTAMP:20260716T181958Z
+DTSTART:20270116T020000Z
+DTEND:20270116T050000Z
+SUMMARY:Los Angeles Kings at Utah Mammoth
 DESCRIPTION:Regular season. Times display in your calendar's local time. 
  Open the NHL Tracker Game Centre for scores\, analytics and game details
  .
 LOCATION:Delta Center
-URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2025021118#
+URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2026020757#
  games
 END:VEVENT
 BEGIN:VEVENT
-UID:nhl-2025021133@mooneyaoife.github.io
-DTSTAMP:20260716T125159Z
-DTSTART:20260325T010000Z
-DTEND:20260325T040000Z
-SUMMARY:Final: Los Angeles Kings 2 - 3 Calgary Flames
+UID:nhl-2026020769@mooneyaoife.github.io
+DTSTAMP:20260716T181958Z
+DTSTART:20270117T030000Z
+DTEND:20270117T060000Z
+SUMMARY:Los Angeles Kings at Calgary Flames
 DESCRIPTION:Regular season. Times display in your calendar's local time. 
  Open the NHL Tracker Game Centre for scores\, analytics and game details
  .
 LOCATION:Scotiabank Saddledome
-URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2025021133#
+URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2026020769#
  games
 END:VEVENT
 BEGIN:VEVENT
-UID:nhl-2025021149@mooneyaoife.github.io
-DTSTAMP:20260716T125159Z
-DTSTART:20260327T020000Z
-DTEND:20260327T050000Z
-SUMMARY:Final: Los Angeles Kings 4 - 0 Vancouver Canucks
-DESCRIPTION:Regular season. Times display in your calendar's local time. 
- Open the NHL Tracker Game Centre for scores\, analytics and game details
- .
-LOCATION:Rogers Arena
-URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2025021149#
- games
-END:VEVENT
-BEGIN:VEVENT
-UID:nhl-2025021164@mooneyaoife.github.io
-DTSTAMP:20260716T125159Z
-DTSTART:20260329T010000Z
-DTEND:20260329T040000Z
-SUMMARY:Final: Utah Mammoth 6 - 2 Los Angeles Kings
+UID:nhl-2026020791@mooneyaoife.github.io
+DTSTAMP:20260716T181958Z
+DTSTART:20270120T030000Z
+DTEND:20270120T060000Z
+SUMMARY:Seattle Kraken at Los Angeles Kings
 DESCRIPTION:Regular season. Times display in your calendar's local time. 
  Open the NHL Tracker Game Centre for scores\, analytics and game details
  .
 LOCATION:Crypto.com Arena
-URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2025021164#
+URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2026020791#
  games
 END:VEVENT
 BEGIN:VEVENT
-UID:nhl-2025021189@mooneyaoife.github.io
-DTSTAMP:20260716T125159Z
-DTSTART:20260402T010000Z
-DTEND:20260402T040000Z
-SUMMARY:Final: St. Louis Blues 1 - 2 Los Angeles Kings
+UID:nhl-2026020807@mooneyaoife.github.io
+DTSTAMP:20260716T181958Z
+DTSTART:20270122T030000Z
+DTEND:20270122T060000Z
+SUMMARY:Edmonton Oilers at Los Angeles Kings
 DESCRIPTION:Regular season. Times display in your calendar's local time. 
  Open the NHL Tracker Game Centre for scores\, analytics and game details
  .
 LOCATION:Crypto.com Arena
-URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2025021189#
+URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2026020807#
  games
 END:VEVENT
 BEGIN:VEVENT
-UID:nhl-2025021204@mooneyaoife.github.io
-DTSTAMP:20260716T125159Z
-DTSTART:20260403T023000Z
-DTEND:20260403T053000Z
-SUMMARY:Final: Nashville Predators 5 - 4 Los Angeles Kings
+UID:nhl-2026020814@mooneyaoife.github.io
+DTSTAMP:20260716T181958Z
+DTSTART:20270123T220000Z
+DTEND:20270124T010000Z
+SUMMARY:Los Angeles Kings at Nashville Predators
+DESCRIPTION:Regular season. Times display in your calendar's local time. 
+ Open the NHL Tracker Game Centre for scores\, analytics and game details
+ .
+LOCATION:Bridgestone Arena
+URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2026020814#
+ games
+END:VEVENT
+BEGIN:VEVENT
+UID:nhl-2026020827@mooneyaoife.github.io
+DTSTAMP:20260716T181958Z
+DTSTART:20270124T230000Z
+DTEND:20270125T020000Z
+SUMMARY:Los Angeles Kings at Florida Panthers
+DESCRIPTION:Regular season. Times display in your calendar's local time. 
+ Open the NHL Tracker Game Centre for scores\, analytics and game details
+ .
+LOCATION:Amerant Bank Arena
+URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2026020827#
+ games
+END:VEVENT
+BEGIN:VEVENT
+UID:nhl-2026020837@mooneyaoife.github.io
+DTSTAMP:20260716T181958Z
+DTSTART:20270127T000000Z
+DTEND:20270127T030000Z
+SUMMARY:Los Angeles Kings at Tampa Bay Lightning
+DESCRIPTION:Regular season. Times display in your calendar's local time. 
+ Open the NHL Tracker Game Centre for scores\, analytics and game details
+ .
+LOCATION:Benchmark International Arena
+URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2026020837#
+ games
+END:VEVENT
+BEGIN:VEVENT
+UID:nhl-2026020850@mooneyaoife.github.io
+DTSTAMP:20260716T181958Z
+DTSTART:20270129T000000Z
+DTEND:20270129T030000Z
+SUMMARY:Los Angeles Kings at Philadelphia Flyers
+DESCRIPTION:Regular season. Times display in your calendar's local time. 
+ Open the NHL Tracker Game Centre for scores\, analytics and game details
+ .
+LOCATION:Xfinity Mobile Arena
+URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2026020850#
+ games
+END:VEVENT
+BEGIN:VEVENT
+UID:nhl-2026020872@mooneyaoife.github.io
+DTSTAMP:20260716T181958Z
+DTSTART:20270131T000000Z
+DTEND:20270131T030000Z
+SUMMARY:Los Angeles Kings at Carolina Hurricanes
+DESCRIPTION:Regular season. Times display in your calendar's local time. 
+ Open the NHL Tracker Game Centre for scores\, analytics and game details
+ .
+LOCATION:Lenovo Center
+URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2026020872#
+ games
+END:VEVENT
+BEGIN:VEVENT
+UID:nhl-2026020896@mooneyaoife.github.io
+DTSTAMP:20260716T181958Z
+DTSTART:20270209T010000Z
+DTEND:20270209T040000Z
+SUMMARY:Los Angeles Kings at Dallas Stars
+DESCRIPTION:Regular season. Times display in your calendar's local time. 
+ Open the NHL Tracker Game Centre for scores\, analytics and game details
+ .
+LOCATION:American Airlines Center
+URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2026020896#
+ games
+END:VEVENT
+BEGIN:VEVENT
+UID:nhl-2026020899@mooneyaoife.github.io
+DTSTAMP:20260716T181958Z
+DTSTART:20270210T010000Z
+DTEND:20270210T040000Z
+SUMMARY:Los Angeles Kings at St. Louis Blues
+DESCRIPTION:Regular season. Times display in your calendar's local time. 
+ Open the NHL Tracker Game Centre for scores\, analytics and game details
+ .
+LOCATION:Enterprise Center
+URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2026020899#
+ games
+END:VEVENT
+BEGIN:VEVENT
+UID:nhl-2026020906@mooneyaoife.github.io
+DTSTAMP:20260716T181958Z
+DTSTART:20270212T030000Z
+DTEND:20270212T060000Z
+SUMMARY:Detroit Red Wings at Los Angeles Kings
 DESCRIPTION:Regular season. Times display in your calendar's local time. 
  Open the NHL Tracker Game Centre for scores\, analytics and game details
  .
 LOCATION:Crypto.com Arena
-URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2025021204#
+URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2026020906#
  games
 END:VEVENT
 BEGIN:VEVENT
-UID:nhl-2025021217@mooneyaoife.github.io
-DTSTAMP:20260716T125159Z
-DTSTART:20260404T230000Z
-DTEND:20260405T020000Z
-SUMMARY:Final: Toronto Maple Leafs 6 - 7 Los Angeles Kings
+UID:nhl-2026020916@mooneyaoife.github.io
+DTSTAMP:20260716T181958Z
+DTSTART:20270213T230000Z
+DTEND:20270214T020000Z
+SUMMARY:Chicago Blackhawks at Los Angeles Kings
 DESCRIPTION:Regular season. Times display in your calendar's local time. 
  Open the NHL Tracker Game Centre for scores\, analytics and game details
  .
 LOCATION:Crypto.com Arena
-URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2025021217#
+URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2026020916#
  games
 END:VEVENT
 BEGIN:VEVENT
-UID:nhl-2025021232@mooneyaoife.github.io
-DTSTAMP:20260716T125159Z
-DTSTART:20260407T023000Z
-DTEND:20260407T053000Z
-SUMMARY:Final: Nashville Predators 2 - 3 Los Angeles Kings
+UID:nhl-2026020938@mooneyaoife.github.io
+DTSTAMP:20260716T181958Z
+DTSTART:20270216T030000Z
+DTEND:20270216T060000Z
+SUMMARY:Calgary Flames at Los Angeles Kings
 DESCRIPTION:Regular season. Times display in your calendar's local time. 
  Open the NHL Tracker Game Centre for scores\, analytics and game details
  .
 LOCATION:Crypto.com Arena
-URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2025021232#
+URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2026020938#
  games
 END:VEVENT
 BEGIN:VEVENT
-UID:nhl-2025021260@mooneyaoife.github.io
-DTSTAMP:20260716T125159Z
-DTSTART:20260410T023000Z
-DTEND:20260410T053000Z
-SUMMARY:Final: Vancouver Canucks 1 - 4 Los Angeles Kings
+UID:nhl-2026020946@mooneyaoife.github.io
+DTSTAMP:20260716T181958Z
+DTSTART:20270218T003000Z
+DTEND:20270218T033000Z
+SUMMARY:Los Angeles Kings at Winnipeg Jets
+DESCRIPTION:Regular season. Times display in your calendar's local time. 
+ Open the NHL Tracker Game Centre for scores\, analytics and game details
+ .
+LOCATION:Canada Life Centre
+URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2026020946#
+ games
+END:VEVENT
+BEGIN:VEVENT
+UID:nhl-2026020958@mooneyaoife.github.io
+DTSTAMP:20260716T181958Z
+DTSTART:20270219T010000Z
+DTEND:20270219T040000Z
+SUMMARY:Los Angeles Kings at Minnesota Wild
+DESCRIPTION:Regular season. Times display in your calendar's local time. 
+ Open the NHL Tracker Game Centre for scores\, analytics and game details
+ .
+LOCATION:Grand Casino Arena
+URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2026020958#
+ games
+END:VEVENT
+BEGIN:VEVENT
+UID:nhl-2026020976@mooneyaoife.github.io
+DTSTAMP:20260716T181958Z
+DTSTART:20270221T033000Z
+DTEND:20270221T063000Z
+SUMMARY:Seattle Kraken at Los Angeles Kings
 DESCRIPTION:Regular season. Times display in your calendar's local time. 
  Open the NHL Tracker Game Centre for scores\, analytics and game details
  .
 LOCATION:Crypto.com Arena
-URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2025021260#
+URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2026020976#
  games
 END:VEVENT
 BEGIN:VEVENT
-UID:nhl-2025021264@mooneyaoife.github.io
-DTSTAMP:20260716T125159Z
-DTSTART:20260411T200000Z
-DTEND:20260411T230000Z
-SUMMARY:Final: Edmonton Oilers 0 - 1 Los Angeles Kings
+UID:nhl-2026021003@mooneyaoife.github.io
+DTSTAMP:20260716T181958Z
+DTSTART:20270225T030000Z
+DTEND:20270225T060000Z
+SUMMARY:Montréal Canadiens at Los Angeles Kings
 DESCRIPTION:Regular season. Times display in your calendar's local time. 
  Open the NHL Tracker Game Centre for scores\, analytics and game details
  .
 LOCATION:Crypto.com Arena
-URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2025021264#
+URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2026021003#
  games
 END:VEVENT
 BEGIN:VEVENT
-UID:nhl-2025021291@mooneyaoife.github.io
-DTSTAMP:20260716T125159Z
-DTSTART:20260414T013000Z
-DTEND:20260414T043000Z
-SUMMARY:Final: Los Angeles Kings 5 - 3 Seattle Kraken
+UID:nhl-2026021016@mooneyaoife.github.io
+DTSTAMP:20260716T181958Z
+DTSTART:20270227T010000Z
+DTEND:20270227T040000Z
+SUMMARY:Los Angeles Kings at Chicago Blackhawks
+DESCRIPTION:Regular season. Times display in your calendar's local time. 
+ Open the NHL Tracker Game Centre for scores\, analytics and game details
+ .
+LOCATION:United Center
+URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2026021016#
+ games
+END:VEVENT
+BEGIN:VEVENT
+UID:nhl-2026021029@mooneyaoife.github.io
+DTSTAMP:20260716T181958Z
+DTSTART:20270228T010000Z
+DTEND:20270228T040000Z
+SUMMARY:Los Angeles Kings at Nashville Predators
+DESCRIPTION:Regular season. Times display in your calendar's local time. 
+ Open the NHL Tracker Game Centre for scores\, analytics and game details
+ .
+LOCATION:Bridgestone Arena
+URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2026021029#
+ games
+END:VEVENT
+BEGIN:VEVENT
+UID:nhl-2026021041@mooneyaoife.github.io
+DTSTAMP:20260716T181958Z
+DTSTART:20270302T030000Z
+DTEND:20270302T060000Z
+SUMMARY:Anaheim Ducks at Los Angeles Kings
+DESCRIPTION:Regular season. Times display in your calendar's local time. 
+ Open the NHL Tracker Game Centre for scores\, analytics and game details
+ .
+LOCATION:Crypto.com Arena
+URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2026021041#
+ games
+END:VEVENT
+BEGIN:VEVENT
+UID:nhl-2026021054@mooneyaoife.github.io
+DTSTAMP:20260716T181958Z
+DTSTART:20270304T030000Z
+DTEND:20270304T060000Z
+SUMMARY:Tampa Bay Lightning at Los Angeles Kings
+DESCRIPTION:Regular season. Times display in your calendar's local time. 
+ Open the NHL Tracker Game Centre for scores\, analytics and game details
+ .
+LOCATION:Crypto.com Arena
+URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2026021054#
+ games
+END:VEVENT
+BEGIN:VEVENT
+UID:nhl-2026021069@mooneyaoife.github.io
+DTSTAMP:20260716T181958Z
+DTSTART:20270306T030000Z
+DTEND:20270306T060000Z
+SUMMARY:Columbus Blue Jackets at Los Angeles Kings
+DESCRIPTION:Regular season. Times display in your calendar's local time. 
+ Open the NHL Tracker Game Centre for scores\, analytics and game details
+ .
+LOCATION:Crypto.com Arena
+URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2026021069#
+ games
+END:VEVENT
+BEGIN:VEVENT
+UID:nhl-2026021084@mooneyaoife.github.io
+DTSTAMP:20260716T181958Z
+DTSTART:20270307T203000Z
+DTEND:20270307T233000Z
+SUMMARY:Colorado Avalanche at Los Angeles Kings
+DESCRIPTION:Regular season. Times display in your calendar's local time. 
+ Open the NHL Tracker Game Centre for scores\, analytics and game details
+ .
+LOCATION:Crypto.com Arena
+URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2026021084#
+ games
+END:VEVENT
+BEGIN:VEVENT
+UID:nhl-2026021100@mooneyaoife.github.io
+DTSTAMP:20260716T181958Z
+DTSTART:20270310T010000Z
+DTEND:20270310T040000Z
+SUMMARY:Los Angeles Kings at Edmonton Oilers
+DESCRIPTION:Regular season. Times display in your calendar's local time. 
+ Open the NHL Tracker Game Centre for scores\, analytics and game details
+ .
+LOCATION:Rogers Place
+URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2026021100#
+ games
+END:VEVENT
+BEGIN:VEVENT
+UID:nhl-2026021115@mooneyaoife.github.io
+DTSTAMP:20260716T181958Z
+DTSTART:20270312T024000Z
+DTEND:20270312T054000Z
+SUMMARY:Los Angeles Kings at Seattle Kraken
 DESCRIPTION:Regular season. Times display in your calendar's local time. 
  Open the NHL Tracker Game Centre for scores\, analytics and game details
  .
 LOCATION:Climate Pledge Arena
-URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2025021291#
+URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2026021115#
  games
 END:VEVENT
 BEGIN:VEVENT
-UID:nhl-2025021300@mooneyaoife.github.io
-DTSTAMP:20260716T125159Z
-DTSTART:20260415T020000Z
-DTEND:20260415T050000Z
-SUMMARY:Final: Los Angeles Kings 3 - 4 Vancouver Canucks
+UID:nhl-2026021131@mooneyaoife.github.io
+DTSTAMP:20260716T181958Z
+DTSTART:20270314T020000Z
+DTEND:20270314T050000Z
+SUMMARY:Dallas Stars at Los Angeles Kings
+DESCRIPTION:Regular season. Times display in your calendar's local time. 
+ Open the NHL Tracker Game Centre for scores\, analytics and game details
+ .
+LOCATION:Crypto.com Arena
+URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2026021131#
+ games
+END:VEVENT
+BEGIN:VEVENT
+UID:nhl-2026021153@mooneyaoife.github.io
+DTSTAMP:20260716T181958Z
+DTSTART:20270317T020000Z
+DTEND:20270317T050000Z
+SUMMARY:Winnipeg Jets at Los Angeles Kings
+DESCRIPTION:Regular season. Times display in your calendar's local time. 
+ Open the NHL Tracker Game Centre for scores\, analytics and game details
+ .
+LOCATION:Crypto.com Arena
+URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2026021153#
+ games
+END:VEVENT
+BEGIN:VEVENT
+UID:nhl-2026021170@mooneyaoife.github.io
+DTSTAMP:20260716T181958Z
+DTSTART:20270319T020000Z
+DTEND:20270319T050000Z
+SUMMARY:Carolina Hurricanes at Los Angeles Kings
+DESCRIPTION:Regular season. Times display in your calendar's local time. 
+ Open the NHL Tracker Game Centre for scores\, analytics and game details
+ .
+LOCATION:Crypto.com Arena
+URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2026021170#
+ games
+END:VEVENT
+BEGIN:VEVENT
+UID:nhl-2026021191@mooneyaoife.github.io
+DTSTAMP:20260716T181958Z
+DTSTART:20270322T000000Z
+DTEND:20270322T030000Z
+SUMMARY:Los Angeles Kings at Seattle Kraken
+DESCRIPTION:Regular season. Times display in your calendar's local time. 
+ Open the NHL Tracker Game Centre for scores\, analytics and game details
+ .
+LOCATION:Climate Pledge Arena
+URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2026021191#
+ games
+END:VEVENT
+BEGIN:VEVENT
+UID:nhl-2026021207@mooneyaoife.github.io
+DTSTAMP:20260716T181958Z
+DTSTART:20270324T020000Z
+DTEND:20270324T050000Z
+SUMMARY:Los Angeles Kings at Vancouver Canucks
 DESCRIPTION:Regular season. Times display in your calendar's local time. 
  Open the NHL Tracker Game Centre for scores\, analytics and game details
  .
 LOCATION:Rogers Arena
-URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2025021300#
+URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2026021207#
  games
 END:VEVENT
 BEGIN:VEVENT
-UID:nhl-2025021310@mooneyaoife.github.io
-DTSTAMP:20260716T125159Z
-DTSTART:20260417T010000Z
-DTEND:20260417T040000Z
-SUMMARY:Final: Los Angeles Kings 1 - 3 Calgary Flames
+UID:nhl-2026021221@mooneyaoife.github.io
+DTSTAMP:20260716T181958Z
+DTSTART:20270326T010000Z
+DTEND:20270326T040000Z
+SUMMARY:Los Angeles Kings at Calgary Flames
 DESCRIPTION:Regular season. Times display in your calendar's local time. 
  Open the NHL Tracker Game Centre for scores\, analytics and game details
  .
 LOCATION:Scotiabank Saddledome
-URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2025021310#
+URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2026021221#
  games
 END:VEVENT
 BEGIN:VEVENT
-UID:nhl-2025030151@mooneyaoife.github.io
-DTSTAMP:20260716T125159Z
-DTSTART:20260419T190000Z
-DTEND:20260419T220000Z
-SUMMARY:Final: Los Angeles Kings 1 - 2 Colorado Avalanche
-DESCRIPTION:Playoffs. Times display in your calendar's local time. Open t
- he NHL Tracker Game Centre for scores\, analytics and game details.
-LOCATION:Ball Arena
-URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2025030151#
+UID:nhl-2026021227@mooneyaoife.github.io
+DTSTAMP:20260716T181958Z
+DTSTART:20270327T193000Z
+DTEND:20270327T223000Z
+SUMMARY:Los Angeles Kings at Edmonton Oilers
+DESCRIPTION:Regular season. Times display in your calendar's local time. 
+ Open the NHL Tracker Game Centre for scores\, analytics and game details
+ .
+LOCATION:Rogers Place
+URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2026021227#
  games
 END:VEVENT
 BEGIN:VEVENT
-UID:nhl-2025030152@mooneyaoife.github.io
-DTSTAMP:20260716T125159Z
-DTSTART:20260422T020000Z
-DTEND:20260422T050000Z
-SUMMARY:Final: Los Angeles Kings 1 - 2 Colorado Avalanche
-DESCRIPTION:Playoffs. Times display in your calendar's local time. Open t
- he NHL Tracker Game Centre for scores\, analytics and game details.
-LOCATION:Ball Arena
-URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2025030152#
- games
-END:VEVENT
-BEGIN:VEVENT
-UID:nhl-2025030153@mooneyaoife.github.io
-DTSTAMP:20260716T125159Z
-DTSTART:20260424T020000Z
-DTEND:20260424T050000Z
-SUMMARY:Final: Colorado Avalanche 4 - 2 Los Angeles Kings
-DESCRIPTION:Playoffs. Times display in your calendar's local time. Open t
- he NHL Tracker Game Centre for scores\, analytics and game details.
+UID:nhl-2026021246@mooneyaoife.github.io
+DTSTAMP:20260716T181958Z
+DTSTART:20270330T013000Z
+DTEND:20270330T043000Z
+SUMMARY:Vancouver Canucks at Los Angeles Kings
+DESCRIPTION:Regular season. Times display in your calendar's local time. 
+ Open the NHL Tracker Game Centre for scores\, analytics and game details
+ .
 LOCATION:Crypto.com Arena
-URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2025030153#
+URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2026021246#
  games
 END:VEVENT
 BEGIN:VEVENT
-UID:nhl-2025030154@mooneyaoife.github.io
-DTSTAMP:20260716T125159Z
-DTSTART:20260426T203000Z
-DTEND:20260426T233000Z
-SUMMARY:Final: Colorado Avalanche 5 - 1 Los Angeles Kings
-DESCRIPTION:Playoffs. Times display in your calendar's local time. Open t
- he NHL Tracker Game Centre for scores\, analytics and game details.
+UID:nhl-2026021261@mooneyaoife.github.io
+DTSTAMP:20260716T181958Z
+DTSTART:20270401T020000Z
+DTEND:20270401T050000Z
+SUMMARY:Winnipeg Jets at Los Angeles Kings
+DESCRIPTION:Regular season. Times display in your calendar's local time. 
+ Open the NHL Tracker Game Centre for scores\, analytics and game details
+ .
 LOCATION:Crypto.com Arena
-URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2025030154#
+URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2026021261#
+ games
+END:VEVENT
+BEGIN:VEVENT
+UID:nhl-2026021275@mooneyaoife.github.io
+DTSTAMP:20260716T181958Z
+DTSTART:20270403T010000Z
+DTEND:20270403T040000Z
+SUMMARY:Los Angeles Kings at Colorado Avalanche
+DESCRIPTION:Regular season. Times display in your calendar's local time. 
+ Open the NHL Tracker Game Centre for scores\, analytics and game details
+ .
+LOCATION:Ball Arena
+URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2026021275#
+ games
+END:VEVENT
+BEGIN:VEVENT
+UID:nhl-2026021289@mooneyaoife.github.io
+DTSTAMP:20260716T181958Z
+DTSTART:20270404T023000Z
+DTEND:20270404T053000Z
+SUMMARY:St. Louis Blues at Los Angeles Kings
+DESCRIPTION:Regular season. Times display in your calendar's local time. 
+ Open the NHL Tracker Game Centre for scores\, analytics and game details
+ .
+LOCATION:Crypto.com Arena
+URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2026021289#
+ games
+END:VEVENT
+BEGIN:VEVENT
+UID:nhl-2026021311@mooneyaoife.github.io
+DTSTAMP:20260716T181958Z
+DTSTART:20270407T020000Z
+DTEND:20270407T050000Z
+SUMMARY:Los Angeles Kings at Anaheim Ducks
+DESCRIPTION:Regular season. Times display in your calendar's local time. 
+ Open the NHL Tracker Game Centre for scores\, analytics and game details
+ .
+LOCATION:Honda Center
+URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2026021311#
+ games
+END:VEVENT
+BEGIN:VEVENT
+UID:nhl-2026021324@mooneyaoife.github.io
+DTSTAMP:20260716T181958Z
+DTSTART:20270409T020000Z
+DTEND:20270409T050000Z
+SUMMARY:Vegas Golden Knights at Los Angeles Kings
+DESCRIPTION:Regular season. Times display in your calendar's local time. 
+ Open the NHL Tracker Game Centre for scores\, analytics and game details
+ .
+LOCATION:Crypto.com Arena
+URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2026021324#
+ games
+END:VEVENT
+BEGIN:VEVENT
+UID:nhl-2026021344@mooneyaoife.github.io
+DTSTAMP:20260716T181958Z
+DTSTART:20270411T023000Z
+DTEND:20270411T053000Z
+SUMMARY:Los Angeles Kings at Vegas Golden Knights
+DESCRIPTION:Regular season. Times display in your calendar's local time. 
+ Open the NHL Tracker Game Centre for scores\, analytics and game details
+ .
+LOCATION:T-Mobile Arena
+URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2026021344#
  games
 END:VEVENT
 END:VCALENDAR

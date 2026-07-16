@@ -10,1165 +10,1095 @@ COLOR:#CE1126
 REFRESH-INTERVAL;VALUE=DURATION:PT6H
 X-PUBLISHED-TTL:PT6H
 BEGIN:VEVENT
-UID:nhl-2025010019@mooneyaoife.github.io
-DTSTAMP:20260716T125159Z
-DTSTART:20250923T230000Z
-DTEND:20250924T020000Z
-SUMMARY:Final: Chicago Blackhawks 2 - 3 Detroit Red Wings
-DESCRIPTION:Preseason. Times display in your calendar's local time. Open 
- the NHL Tracker Game Centre for scores\, analytics and game details.
-LOCATION:Little Caesars Arena
-URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2025010019#
- games
-END:VEVENT
-BEGIN:VEVENT
-UID:nhl-2025010034@mooneyaoife.github.io
-DTSTAMP:20260716T125159Z
-DTSTART:20250925T230000Z
-DTEND:20250926T020000Z
-SUMMARY:Final: Buffalo Sabres 2 - 5 Detroit Red Wings
-DESCRIPTION:Preseason. Times display in your calendar's local time. Open 
- the NHL Tracker Game Centre for scores\, analytics and game details.
-LOCATION:Little Caesars Arena
-URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2025010034#
- games
-END:VEVENT
-BEGIN:VEVENT
-UID:nhl-2025010041@mooneyaoife.github.io
-DTSTAMP:20260716T125159Z
-DTSTART:20250926T230000Z
-DTEND:20250927T020000Z
-SUMMARY:Final: Detroit Red Wings 2 - 3 Pittsburgh Penguins
-DESCRIPTION:Preseason. Times display in your calendar's local time. Open 
- the NHL Tracker Game Centre for scores\, analytics and game details.
-LOCATION:PPG Paints Arena
-URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2025010041#
- games
-END:VEVENT
-BEGIN:VEVENT
-UID:nhl-2025010052@mooneyaoife.github.io
-DTSTAMP:20260716T125159Z
-DTSTART:20250927T190000Z
-DTEND:20250927T220000Z
-SUMMARY:Final: Detroit Red Wings 2 - 5 Buffalo Sabres
-DESCRIPTION:Preseason. Times display in your calendar's local time. Open 
- the NHL Tracker Game Centre for scores\, analytics and game details.
-LOCATION:KeyBank Center
-URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2025010052#
- games
-END:VEVENT
-BEGIN:VEVENT
-UID:nhl-2025010064@mooneyaoife.github.io
-DTSTAMP:20260716T125159Z
-DTSTART:20250929T230000Z
-DTEND:20250930T020000Z
-SUMMARY:Final: Pittsburgh Penguins 2 - 1 Detroit Red Wings
-DESCRIPTION:Preseason. Times display in your calendar's local time. Open 
- the NHL Tracker Game Centre for scores\, analytics and game details.
-LOCATION:Little Caesars Arena
-URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2025010064#
- games
-END:VEVENT
-BEGIN:VEVENT
-UID:nhl-2025010066@mooneyaoife.github.io
-DTSTAMP:20260716T125159Z
-DTSTART:20251001T000000Z
-DTEND:20251001T030000Z
-SUMMARY:Final: Detroit Red Wings 3 - 1 Chicago Blackhawks
-DESCRIPTION:Preseason. Times display in your calendar's local time. Open 
- the NHL Tracker Game Centre for scores\, analytics and game details.
-LOCATION:United Center
-URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2025010066#
- games
-END:VEVENT
-BEGIN:VEVENT
-UID:nhl-2025010079@mooneyaoife.github.io
-DTSTAMP:20260716T125159Z
-DTSTART:20251002T230000Z
-DTEND:20251003T020000Z
-SUMMARY:Final: Detroit Red Wings 3 - 1 Toronto Maple Leafs
-DESCRIPTION:Preseason. Times display in your calendar's local time. Open 
- the NHL Tracker Game Centre for scores\, analytics and game details.
-LOCATION:Scotiabank Arena
-URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2025010079#
- games
-END:VEVENT
-BEGIN:VEVENT
-UID:nhl-2025010100@mooneyaoife.github.io
-DTSTAMP:20260716T125159Z
-DTSTART:20251004T230000Z
-DTEND:20251005T020000Z
-SUMMARY:Final: Toronto Maple Leafs 5 - 6 Detroit Red Wings
-DESCRIPTION:Preseason. Times display in your calendar's local time. Open 
- the NHL Tracker Game Centre for scores\, analytics and game details.
-LOCATION:Little Caesars Arena
-URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2025010100#
- games
-END:VEVENT
-BEGIN:VEVENT
-UID:nhl-2025020010@mooneyaoife.github.io
-DTSTAMP:20260716T125159Z
-DTSTART:20251009T230000Z
-DTEND:20251010T020000Z
-SUMMARY:Final: Montréal Canadiens 5 - 1 Detroit Red Wings
+UID:nhl-2026020017@mooneyaoife.github.io
+DTSTAMP:20260716T181958Z
+DTSTART:20261002T223000Z
+DTEND:20261003T013000Z
+SUMMARY:New York Rangers at Detroit Red Wings
 DESCRIPTION:Regular season. Times display in your calendar's local time. 
  Open the NHL Tracker Game Centre for scores\, analytics and game details
  .
 LOCATION:Little Caesars Arena
-URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2025020010#
+URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2026020017#
  games
 END:VEVENT
 BEGIN:VEVENT
-UID:nhl-2025020025@mooneyaoife.github.io
-DTSTAMP:20260716T125159Z
-DTSTART:20251011T230000Z
-DTEND:20251012T020000Z
-SUMMARY:Final: Toronto Maple Leafs 3 - 6 Detroit Red Wings
+UID:nhl-2026020035@mooneyaoife.github.io
+DTSTAMP:20260716T181958Z
+DTSTART:20261004T170000Z
+DTEND:20261004T200000Z
+SUMMARY:Winnipeg Jets at Detroit Red Wings
 DESCRIPTION:Regular season. Times display in your calendar's local time. 
  Open the NHL Tracker Game Centre for scores\, analytics and game details
  .
 LOCATION:Little Caesars Arena
-URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2025020025#
+URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2026020035#
  games
 END:VEVENT
 BEGIN:VEVENT
-UID:nhl-2025020043@mooneyaoife.github.io
-DTSTAMP:20260716T125159Z
-DTSTART:20251013T180000Z
-DTEND:20251013T210000Z
-SUMMARY:Final: Detroit Red Wings 3 - 2 Toronto Maple Leafs
-DESCRIPTION:Regular season. Times display in your calendar's local time. 
- Open the NHL Tracker Game Centre for scores\, analytics and game details
- .
-LOCATION:Scotiabank Arena
-URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2025020043#
- games
-END:VEVENT
-BEGIN:VEVENT
-UID:nhl-2025020058@mooneyaoife.github.io
-DTSTAMP:20260716T125159Z
-DTSTART:20251015T230000Z
-DTEND:20251016T020000Z
-SUMMARY:Final: Florida Panthers 1 - 4 Detroit Red Wings
+UID:nhl-2026020046@mooneyaoife.github.io
+DTSTAMP:20260716T181958Z
+DTSTART:20261006T230000Z
+DTEND:20261007T020000Z
+SUMMARY:Ottawa Senators at Detroit Red Wings
 DESCRIPTION:Regular season. Times display in your calendar's local time. 
  Open the NHL Tracker Game Centre for scores\, analytics and game details
  .
 LOCATION:Little Caesars Arena
-URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2025020058#
+URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2026020046#
  games
 END:VEVENT
 BEGIN:VEVENT
-UID:nhl-2025020072@mooneyaoife.github.io
-DTSTAMP:20260716T125159Z
-DTSTART:20251017T230000Z
-DTEND:20251018T020000Z
-SUMMARY:Final: Tampa Bay Lightning 1 - 2 Detroit Red Wings
+UID:nhl-2026020066@mooneyaoife.github.io
+DTSTAMP:20260716T181958Z
+DTSTART:20261009T230000Z
+DTEND:20261010T020000Z
+SUMMARY:Seattle Kraken at Detroit Red Wings
 DESCRIPTION:Regular season. Times display in your calendar's local time. 
  Open the NHL Tracker Game Centre for scores\, analytics and game details
  .
 LOCATION:Little Caesars Arena
-URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2025020072#
+URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2026020066#
  games
 END:VEVENT
 BEGIN:VEVENT
-UID:nhl-2025020090@mooneyaoife.github.io
-DTSTAMP:20260716T125159Z
-DTSTART:20251019T190000Z
-DTEND:20251019T220000Z
-SUMMARY:Final: Edmonton Oilers 2 - 4 Detroit Red Wings
-DESCRIPTION:Regular season. Times display in your calendar's local time. 
- Open the NHL Tracker Game Centre for scores\, analytics and game details
- .
-LOCATION:Little Caesars Arena
-URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2025020090#
- games
-END:VEVENT
-BEGIN:VEVENT
-UID:nhl-2025020109@mooneyaoife.github.io
-DTSTAMP:20260716T125159Z
-DTSTART:20251022T233000Z
-DTEND:20251023T023000Z
-SUMMARY:Final: Detroit Red Wings 2 - 4 Buffalo Sabres
-DESCRIPTION:Regular season. Times display in your calendar's local time. 
- Open the NHL Tracker Game Centre for scores\, analytics and game details
- .
-LOCATION:KeyBank Center
-URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2025020109#
- games
-END:VEVENT
-BEGIN:VEVENT
-UID:nhl-2025020115@mooneyaoife.github.io
-DTSTAMP:20260716T125159Z
-DTSTART:20251023T230000Z
-DTEND:20251024T020000Z
-SUMMARY:Final: Detroit Red Wings 2 - 7 New York Islanders
-DESCRIPTION:Regular season. Times display in your calendar's local time. 
- Open the NHL Tracker Game Centre for scores\, analytics and game details
- .
-LOCATION:UBS Arena
-URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2025020115#
- games
-END:VEVENT
-BEGIN:VEVENT
-UID:nhl-2025020133@mooneyaoife.github.io
-DTSTAMP:20260716T125159Z
-DTSTART:20251025T230000Z
-DTEND:20251026T020000Z
-SUMMARY:Final: St. Louis Blues 4 - 6 Detroit Red Wings
-DESCRIPTION:Regular season. Times display in your calendar's local time. 
- Open the NHL Tracker Game Centre for scores\, analytics and game details
- .
-LOCATION:Little Caesars Arena
-URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2025020133#
- games
-END:VEVENT
-BEGIN:VEVENT
-UID:nhl-2025020158@mooneyaoife.github.io
-DTSTAMP:20260716T125159Z
-DTSTART:20251029T001500Z
-DTEND:20251029T031500Z
-SUMMARY:Final: Detroit Red Wings 5 - 2 St. Louis Blues
-DESCRIPTION:Regular season. Times display in your calendar's local time. 
- Open the NHL Tracker Game Centre for scores\, analytics and game details
- .
-LOCATION:Enterprise Center
-URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2025020158#
- games
-END:VEVENT
-BEGIN:VEVENT
-UID:nhl-2025020177@mooneyaoife.github.io
-DTSTAMP:20260716T125159Z
-DTSTART:20251031T023000Z
-DTEND:20251031T053000Z
-SUMMARY:Final: Detroit Red Wings 4 - 3 Los Angeles Kings
-DESCRIPTION:Regular season. Times display in your calendar's local time. 
- Open the NHL Tracker Game Centre for scores\, analytics and game details
- .
-LOCATION:Crypto.com Arena
-URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2025020177#
- games
-END:VEVENT
-BEGIN:VEVENT
-UID:nhl-2025020180@mooneyaoife.github.io
-DTSTAMP:20260716T125159Z
-DTSTART:20251101T020000Z
-DTEND:20251101T050000Z
-SUMMARY:Final: Detroit Red Wings 2 - 5 Anaheim Ducks
-DESCRIPTION:Regular season. Times display in your calendar's local time. 
- Open the NHL Tracker Game Centre for scores\, analytics and game details
- .
-LOCATION:Honda Center
-URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2025020180#
- games
-END:VEVENT
-BEGIN:VEVENT
-UID:nhl-2025020198@mooneyaoife.github.io
-DTSTAMP:20260716T125159Z
-DTSTART:20251103T010000Z
-DTEND:20251103T040000Z
-SUMMARY:Final: Detroit Red Wings 3 - 2 San Jose Sharks
-DESCRIPTION:Regular season. Times display in your calendar's local time. 
- Open the NHL Tracker Game Centre for scores\, analytics and game details
- .
-LOCATION:SAP Center at San Jose
-URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2025020198#
- games
-END:VEVENT
-BEGIN:VEVENT
-UID:nhl-2025020210@mooneyaoife.github.io
-DTSTAMP:20260716T125159Z
-DTSTART:20251105T030000Z
-DTEND:20251105T060000Z
-SUMMARY:Final: Detroit Red Wings 0 - 1 Vegas Golden Knights
-DESCRIPTION:Regular season. Times display in your calendar's local time. 
- Open the NHL Tracker Game Centre for scores\, analytics and game details
- .
-LOCATION:T-Mobile Arena
-URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2025020210#
- games
-END:VEVENT
-BEGIN:VEVENT
-UID:nhl-2025020227@mooneyaoife.github.io
-DTSTAMP:20260716T125159Z
-DTSTART:20251108T000000Z
-DTEND:20251108T030000Z
-SUMMARY:Final: New York Rangers 4 - 1 Detroit Red Wings
-DESCRIPTION:Regular season. Times display in your calendar's local time. 
- Open the NHL Tracker Game Centre for scores\, analytics and game details
- .
-LOCATION:Little Caesars Arena
-URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2025020227#
- games
-END:VEVENT
-BEGIN:VEVENT
-UID:nhl-2025020244@mooneyaoife.github.io
-DTSTAMP:20260716T125159Z
-DTSTART:20251109T180000Z
-DTEND:20251109T210000Z
-SUMMARY:Final: Chicago Blackhawks 5 - 1 Detroit Red Wings
-DESCRIPTION:Regular season. Times display in your calendar's local time. 
- Open the NHL Tracker Game Centre for scores\, analytics and game details
- .
-LOCATION:Little Caesars Arena
-URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2025020244#
- games
-END:VEVENT
-BEGIN:VEVENT
-UID:nhl-2025020272@mooneyaoife.github.io
-DTSTAMP:20260716T125159Z
-DTSTART:20251114T000000Z
-DTEND:20251114T030000Z
-SUMMARY:Final: Anaheim Ducks 3 - 6 Detroit Red Wings
-DESCRIPTION:Regular season. Times display in your calendar's local time. 
- Open the NHL Tracker Game Centre for scores\, analytics and game details
- .
-LOCATION:Little Caesars Arena
-URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2025020272#
- games
-END:VEVENT
-BEGIN:VEVENT
-UID:nhl-2025020287@mooneyaoife.github.io
-DTSTAMP:20260716T125159Z
-DTSTART:20251116T000000Z
-DTEND:20251116T030000Z
-SUMMARY:Final: Buffalo Sabres 5 - 4 Detroit Red Wings
-DESCRIPTION:Regular season. Times display in your calendar's local time. 
- Open the NHL Tracker Game Centre for scores\, analytics and game details
- .
-LOCATION:Little Caesars Arena
-URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2025020287#
- games
-END:VEVENT
-BEGIN:VEVENT
-UID:nhl-2025020299@mooneyaoife.github.io
-DTSTAMP:20260716T125159Z
-DTSTART:20251117T000000Z
-DTEND:20251117T030000Z
-SUMMARY:Final: Detroit Red Wings 2 - 1 New York Rangers
-DESCRIPTION:Regular season. Times display in your calendar's local time. 
- Open the NHL Tracker Game Centre for scores\, analytics and game details
- .
-LOCATION:Madison Square Garden
-URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2025020299#
- games
-END:VEVENT
-BEGIN:VEVENT
-UID:nhl-2025020308@mooneyaoife.github.io
-DTSTAMP:20260716T125159Z
-DTSTART:20251119T000000Z
-DTEND:20251119T030000Z
-SUMMARY:Final: Seattle Kraken 2 - 4 Detroit Red Wings
-DESCRIPTION:Regular season. Times display in your calendar's local time. 
- Open the NHL Tracker Game Centre for scores\, analytics and game details
- .
-LOCATION:Little Caesars Arena
-URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2025020308#
- games
-END:VEVENT
-BEGIN:VEVENT
-UID:nhl-2025020321@mooneyaoife.github.io
-DTSTAMP:20260716T125159Z
-DTSTART:20251121T000000Z
-DTEND:20251121T030000Z
-SUMMARY:Final: New York Islanders 5 - 0 Detroit Red Wings
-DESCRIPTION:Regular season. Times display in your calendar's local time. 
- Open the NHL Tracker Game Centre for scores\, analytics and game details
- .
-LOCATION:Little Caesars Arena
-URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2025020321#
- games
-END:VEVENT
-BEGIN:VEVENT
-UID:nhl-2025020335@mooneyaoife.github.io
-DTSTAMP:20260716T125159Z
-DTSTART:20251122T180000Z
-DTEND:20251122T210000Z
-SUMMARY:Final: Columbus Blue Jackets 3 - 4 Detroit Red Wings
-DESCRIPTION:Regular season. Times display in your calendar's local time. 
- Open the NHL Tracker Game Centre for scores\, analytics and game details
- .
-LOCATION:Little Caesars Arena
-URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2025020335#
- games
-END:VEVENT
-BEGIN:VEVENT
-UID:nhl-2025020354@mooneyaoife.github.io
-DTSTAMP:20260716T125159Z
-DTSTART:20251125T000000Z
-DTEND:20251125T030000Z
-SUMMARY:Final: Detroit Red Wings 3 - 4 New Jersey Devils
-DESCRIPTION:Regular season. Times display in your calendar's local time. 
- Open the NHL Tracker Game Centre for scores\, analytics and game details
- .
-LOCATION:Prudential Center
-URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2025020354#
- games
-END:VEVENT
-BEGIN:VEVENT
-UID:nhl-2025020361@mooneyaoife.github.io
-DTSTAMP:20260716T125159Z
-DTSTART:20251127T000000Z
-DTEND:20251127T030000Z
-SUMMARY:Final: Nashville Predators 6 - 3 Detroit Red Wings
-DESCRIPTION:Regular season. Times display in your calendar's local time. 
- Open the NHL Tracker Game Centre for scores\, analytics and game details
- .
-LOCATION:Little Caesars Arena
-URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2025020361#
- games
-END:VEVENT
-BEGIN:VEVENT
-UID:nhl-2025020377@mooneyaoife.github.io
-DTSTAMP:20260716T125159Z
-DTSTART:20251128T170000Z
-DTEND:20251128T200000Z
-SUMMARY:Final: Tampa Bay Lightning 6 - 3 Detroit Red Wings
-DESCRIPTION:Regular season. Times display in your calendar's local time. 
- Open the NHL Tracker Game Centre for scores\, analytics and game details
- .
-LOCATION:Little Caesars Arena
-URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2025020377#
- games
-END:VEVENT
-BEGIN:VEVENT
-UID:nhl-2025020394@mooneyaoife.github.io
-DTSTAMP:20260716T125159Z
-DTSTART:20251130T000000Z
-DTEND:20251130T030000Z
-SUMMARY:Final: Detroit Red Wings 2 - 3 Boston Bruins
-DESCRIPTION:Regular season. Times display in your calendar's local time. 
- Open the NHL Tracker Game Centre for scores\, analytics and game details
- .
-LOCATION:TD Garden
-URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2025020394#
- games
-END:VEVENT
-BEGIN:VEVENT
-UID:nhl-2025020412@mooneyaoife.github.io
-DTSTAMP:20260716T125159Z
-DTSTART:20251203T000000Z
-DTEND:20251203T030000Z
-SUMMARY:Final: Boston Bruins 4 - 5 Detroit Red Wings
-DESCRIPTION:Regular season. Times display in your calendar's local time. 
- Open the NHL Tracker Game Centre for scores\, analytics and game details
- .
-LOCATION:Little Caesars Arena
-URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2025020412#
- games
-END:VEVENT
-BEGIN:VEVENT
-UID:nhl-2025020432@mooneyaoife.github.io
-DTSTAMP:20260716T125159Z
-DTSTART:20251205T003000Z
-DTEND:20251205T033000Z
-SUMMARY:Final: Detroit Red Wings 5 - 6 Columbus Blue Jackets
-DESCRIPTION:Regular season. Times display in your calendar's local time. 
- Open the NHL Tracker Game Centre for scores\, analytics and game details
- .
-LOCATION:Nationwide Arena
-URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2025020432#
- games
-END:VEVENT
-BEGIN:VEVENT
-UID:nhl-2025020452@mooneyaoife.github.io
-DTSTAMP:20260716T125159Z
-DTSTART:20251207T030000Z
-DTEND:20251207T060000Z
-SUMMARY:Final: Detroit Red Wings 4 - 3 Seattle Kraken
-DESCRIPTION:Regular season. Times display in your calendar's local time. 
- Open the NHL Tracker Game Centre for scores\, analytics and game details
- .
-LOCATION:Climate Pledge Arena
-URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2025020452#
- games
-END:VEVENT
-BEGIN:VEVENT
-UID:nhl-2025020464@mooneyaoife.github.io
-DTSTAMP:20260716T125159Z
-DTSTART:20251209T030000Z
-DTEND:20251209T060000Z
-SUMMARY:Final: Detroit Red Wings 4 - 0 Vancouver Canucks
-DESCRIPTION:Regular season. Times display in your calendar's local time. 
- Open the NHL Tracker Game Centre for scores\, analytics and game details
- .
-LOCATION:Rogers Arena
-URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2025020464#
- games
-END:VEVENT
-BEGIN:VEVENT
-UID:nhl-2025020477@mooneyaoife.github.io
-DTSTAMP:20260716T125159Z
-DTSTART:20251211T013000Z
-DTEND:20251211T043000Z
-SUMMARY:Final: Detroit Red Wings 4 - 3 Calgary Flames
-DESCRIPTION:Regular season. Times display in your calendar's local time. 
- Open the NHL Tracker Game Centre for scores\, analytics and game details
- .
-LOCATION:Scotiabank Saddledome
-URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2025020477#
- games
-END:VEVENT
-BEGIN:VEVENT
-UID:nhl-2025020491@mooneyaoife.github.io
-DTSTAMP:20260716T125159Z
-DTSTART:20251212T020000Z
-DTEND:20251212T050000Z
-SUMMARY:Final: Detroit Red Wings 1 - 4 Edmonton Oilers
-DESCRIPTION:Regular season. Times display in your calendar's local time. 
- Open the NHL Tracker Game Centre for scores\, analytics and game details
- .
-LOCATION:Rogers Place
-URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2025020491#
- games
-END:VEVENT
-BEGIN:VEVENT
-UID:nhl-2025020504@mooneyaoife.github.io
-DTSTAMP:20260716T125159Z
-DTSTART:20251214T010000Z
-DTEND:20251214T040000Z
-SUMMARY:Final: Detroit Red Wings 4 - 0 Chicago Blackhawks
-DESCRIPTION:Regular season. Times display in your calendar's local time. 
- Open the NHL Tracker Game Centre for scores\, analytics and game details
- .
-LOCATION:United Center
-URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2025020504#
- games
-END:VEVENT
-BEGIN:VEVENT
-UID:nhl-2025020522@mooneyaoife.github.io
-DTSTAMP:20260716T125159Z
-DTSTART:20251217T000000Z
-DTEND:20251217T030000Z
-SUMMARY:Final: New York Islanders 2 - 3 Detroit Red Wings
-DESCRIPTION:Regular season. Times display in your calendar's local time. 
- Open the NHL Tracker Game Centre for scores\, analytics and game details
- .
-LOCATION:Little Caesars Arena
-URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2025020522#
- games
-END:VEVENT
-BEGIN:VEVENT
-UID:nhl-2025020530@mooneyaoife.github.io
-DTSTAMP:20260716T125159Z
-DTSTART:20251218T003000Z
-DTEND:20251218T033000Z
-SUMMARY:Final: Utah Mammoth 4 - 1 Detroit Red Wings
-DESCRIPTION:Regular season. Times display in your calendar's local time. 
- Open the NHL Tracker Game Centre for scores\, analytics and game details
- .
-LOCATION:Little Caesars Arena
-URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2025020530#
- games
-END:VEVENT
-BEGIN:VEVENT
-UID:nhl-2025020550@mooneyaoife.github.io
-DTSTAMP:20260716T125159Z
-DTSTART:20251220T173000Z
-DTEND:20251220T203000Z
-SUMMARY:Final: Detroit Red Wings 5 - 2 Washington Capitals
-DESCRIPTION:Regular season. Times display in your calendar's local time. 
- Open the NHL Tracker Game Centre for scores\, analytics and game details
- .
-LOCATION:Capital One Arena
-URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2025020550#
- games
-END:VEVENT
-BEGIN:VEVENT
-UID:nhl-2025020562@mooneyaoife.github.io
-DTSTAMP:20260716T125159Z
-DTSTART:20251221T180000Z
-DTEND:20251221T210000Z
-SUMMARY:Final: Washington Capitals 2 - 3 Detroit Red Wings
-DESCRIPTION:Regular season. Times display in your calendar's local time. 
- Open the NHL Tracker Game Centre for scores\, analytics and game details
- .
-LOCATION:Little Caesars Arena
-URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2025020562#
- games
-END:VEVENT
-BEGIN:VEVENT
-UID:nhl-2025020579@mooneyaoife.github.io
-DTSTAMP:20260716T125159Z
-DTSTART:20251223T233000Z
-DTEND:20251224T023000Z
-SUMMARY:Final: Dallas Stars 3 - 4 Detroit Red Wings
-DESCRIPTION:Regular season. Times display in your calendar's local time. 
- Open the NHL Tracker Game Centre for scores\, analytics and game details
- .
-LOCATION:Little Caesars Arena
-URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2025020579#
- games
-END:VEVENT
-BEGIN:VEVENT
-UID:nhl-2025020593@mooneyaoife.github.io
-DTSTAMP:20260716T125159Z
-DTSTART:20251228T000000Z
-DTEND:20251228T030000Z
-SUMMARY:Final: Detroit Red Wings 2 - 5 Carolina Hurricanes
-DESCRIPTION:Regular season. Times display in your calendar's local time. 
- Open the NHL Tracker Game Centre for scores\, analytics and game details
- .
-LOCATION:Lenovo Center
-URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2025020593#
- games
-END:VEVENT
-BEGIN:VEVENT
-UID:nhl-2025020601@mooneyaoife.github.io
-DTSTAMP:20260716T125159Z
-DTSTART:20251229T000000Z
-DTEND:20251229T030000Z
-SUMMARY:Final: Toronto Maple Leafs 2 - 3 Detroit Red Wings
-DESCRIPTION:Regular season. Times display in your calendar's local time. 
- Open the NHL Tracker Game Centre for scores\, analytics and game details
- .
-LOCATION:Little Caesars Arena
-URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2025020601#
- games
-END:VEVENT
-BEGIN:VEVENT
-UID:nhl-2025020626@mooneyaoife.github.io
-DTSTAMP:20260716T125159Z
-DTSTART:20251231T233000Z
-DTEND:20260101T023000Z
-SUMMARY:Final: Winnipeg Jets 1 - 2 Detroit Red Wings
-DESCRIPTION:Regular season. Times display in your calendar's local time. 
- Open the NHL Tracker Game Centre for scores\, analytics and game details
- .
-LOCATION:Little Caesars Arena
-URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2025020626#
- games
-END:VEVENT
-BEGIN:VEVENT
-UID:nhl-2025020635@mooneyaoife.github.io
-DTSTAMP:20260716T125159Z
-DTSTART:20260102T000000Z
-DTEND:20260102T030000Z
-SUMMARY:Final: Detroit Red Wings 3 - 4 Pittsburgh Penguins
-DESCRIPTION:Regular season. Times display in your calendar's local time. 
- Open the NHL Tracker Game Centre for scores\, analytics and game details
- .
-LOCATION:PPG Paints Arena
-URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2025020635#
- games
-END:VEVENT
-BEGIN:VEVENT
-UID:nhl-2025020644@mooneyaoife.github.io
-DTSTAMP:20260716T125159Z
-DTSTART:20260103T170000Z
-DTEND:20260103T200000Z
-SUMMARY:Final: Pittsburgh Penguins 4 - 1 Detroit Red Wings
-DESCRIPTION:Regular season. Times display in your calendar's local time. 
- Open the NHL Tracker Game Centre for scores\, analytics and game details
- .
-LOCATION:Little Caesars Arena
-URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2025020644#
- games
-END:VEVENT
-BEGIN:VEVENT
-UID:nhl-2025020664@mooneyaoife.github.io
-DTSTAMP:20260716T125159Z
-DTSTART:20260106T003000Z
-DTEND:20260106T033000Z
-SUMMARY:Final: Detroit Red Wings 5 - 3 Ottawa Senators
-DESCRIPTION:Regular season. Times display in your calendar's local time. 
- Open the NHL Tracker Game Centre for scores\, analytics and game details
- .
-LOCATION:Canadian Tire Centre
-URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2025020664#
- games
-END:VEVENT
-BEGIN:VEVENT
-UID:nhl-2025020684@mooneyaoife.github.io
-DTSTAMP:20260716T125159Z
-DTSTART:20260109T000000Z
-DTEND:20260109T030000Z
-SUMMARY:Final: Vancouver Canucks 1 - 5 Detroit Red Wings
-DESCRIPTION:Regular season. Times display in your calendar's local time. 
- Open the NHL Tracker Game Centre for scores\, analytics and game details
- .
-LOCATION:Little Caesars Arena
-URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2025020684#
- games
-END:VEVENT
-BEGIN:VEVENT
-UID:nhl-2025020703@mooneyaoife.github.io
-DTSTAMP:20260716T125159Z
-DTSTART:20260111T000000Z
-DTEND:20260111T030000Z
-SUMMARY:Final: Detroit Red Wings 4 - 0 Montréal Canadiens
+UID:nhl-2026020075@mooneyaoife.github.io
+DTSTAMP:20260716T181958Z
+DTSTART:20261010T230000Z
+DTEND:20261011T020000Z
+SUMMARY:Detroit Red Wings at Montréal Canadiens
 DESCRIPTION:Regular season. Times display in your calendar's local time. 
  Open the NHL Tracker Game Centre for scores\, analytics and game details
  .
 LOCATION:Centre Bell
-URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2025020703#
+URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2026020075#
  games
 END:VEVENT
 BEGIN:VEVENT
-UID:nhl-2025020717@mooneyaoife.github.io
-DTSTAMP:20260716T125159Z
-DTSTART:20260113T000000Z
-DTEND:20260113T030000Z
-SUMMARY:Final: Carolina Hurricanes 3 - 4 Detroit Red Wings
+UID:nhl-2026020090@mooneyaoife.github.io
+DTSTAMP:20260716T181958Z
+DTSTART:20261013T220000Z
+DTEND:20261014T010000Z
+SUMMARY:New Jersey Devils at Detroit Red Wings
 DESCRIPTION:Regular season. Times display in your calendar's local time. 
  Open the NHL Tracker Game Centre for scores\, analytics and game details
  .
 LOCATION:Little Caesars Arena
-URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2025020717#
+URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2026020090#
  games
 END:VEVENT
 BEGIN:VEVENT
-UID:nhl-2025020729@mooneyaoife.github.io
-DTSTAMP:20260716T125159Z
-DTSTART:20260114T003000Z
-DTEND:20260114T033000Z
-SUMMARY:Final: Detroit Red Wings 0 - 3 Boston Bruins
-DESCRIPTION:Regular season. Times display in your calendar's local time. 
- Open the NHL Tracker Game Centre for scores\, analytics and game details
- .
-LOCATION:TD Garden
-URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2025020729#
- games
-END:VEVENT
-BEGIN:VEVENT
-UID:nhl-2025020749@mooneyaoife.github.io
-DTSTAMP:20260716T125159Z
-DTSTART:20260117T000000Z
-DTEND:20260117T030000Z
-SUMMARY:Final: San Jose Sharks 2 - 4 Detroit Red Wings
+UID:nhl-2026020110@mooneyaoife.github.io
+DTSTAMP:20260716T181958Z
+DTSTART:20261015T230000Z
+DTEND:20261016T020000Z
+SUMMARY:Philadelphia Flyers at Detroit Red Wings
 DESCRIPTION:Regular season. Times display in your calendar's local time. 
  Open the NHL Tracker Game Centre for scores\, analytics and game details
  .
 LOCATION:Little Caesars Arena
-URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2025020749#
+URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2026020110#
  games
 END:VEVENT
 BEGIN:VEVENT
-UID:nhl-2025020768@mooneyaoife.github.io
-DTSTAMP:20260716T125159Z
-DTSTART:20260118T220000Z
-DTEND:20260119T010000Z
-SUMMARY:Final: Ottawa Senators 3 - 4 Detroit Red Wings
+UID:nhl-2026020127@mooneyaoife.github.io
+DTSTAMP:20260716T181958Z
+DTSTART:20261017T230000Z
+DTEND:20261018T020000Z
+SUMMARY:San Jose Sharks at Detroit Red Wings
 DESCRIPTION:Regular season. Times display in your calendar's local time. 
  Open the NHL Tracker Game Centre for scores\, analytics and game details
  .
 LOCATION:Little Caesars Arena
-URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2025020768#
+URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2026020127#
  games
 END:VEVENT
 BEGIN:VEVENT
-UID:nhl-2025020788@mooneyaoife.github.io
-DTSTAMP:20260716T125159Z
-DTSTART:20260122T000000Z
-DTEND:20260122T030000Z
-SUMMARY:Final: Detroit Red Wings 2 - 1 Toronto Maple Leafs
+UID:nhl-2026020149@mooneyaoife.github.io
+DTSTAMP:20260716T181958Z
+DTSTART:20261021T014000Z
+DTEND:20261021T044000Z
+SUMMARY:Detroit Red Wings at Seattle Kraken
 DESCRIPTION:Regular season. Times display in your calendar's local time. 
  Open the NHL Tracker Game Centre for scores\, analytics and game details
  .
-LOCATION:Scotiabank Arena
-URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2025020788#
+LOCATION:Climate Pledge Arena
+URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2026020149#
  games
 END:VEVENT
 BEGIN:VEVENT
-UID:nhl-2025020801@mooneyaoife.github.io
-DTSTAMP:20260716T125159Z
-DTSTART:20260123T023000Z
-DTEND:20260123T053000Z
-SUMMARY:Final: Detroit Red Wings 3 - 4 Minnesota Wild
+UID:nhl-2026020165@mooneyaoife.github.io
+DTSTAMP:20260716T181958Z
+DTSTART:20261023T020000Z
+DTEND:20261023T050000Z
+SUMMARY:Detroit Red Wings at Vancouver Canucks
 DESCRIPTION:Regular season. Times display in your calendar's local time. 
  Open the NHL Tracker Game Centre for scores\, analytics and game details
  .
-LOCATION:Grand Casino Arena
-URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2025020801#
+LOCATION:Rogers Arena
+URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2026020165#
  games
 END:VEVENT
 BEGIN:VEVENT
-UID:nhl-2025020815@mooneyaoife.github.io
-DTSTAMP:20260716T125159Z
-DTSTART:20260125T000000Z
-DTEND:20260125T030000Z
-SUMMARY:Final: Detroit Red Wings 5 - 1 Winnipeg Jets
+UID:nhl-2026020178@mooneyaoife.github.io
+DTSTAMP:20260716T181958Z
+DTSTART:20261025T020000Z
+DTEND:20261025T050000Z
+SUMMARY:Detroit Red Wings at Calgary Flames
 DESCRIPTION:Regular season. Times display in your calendar's local time. 
  Open the NHL Tracker Game Centre for scores\, analytics and game details
  .
-LOCATION:Canada Life Centre
-URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2025020815#
+LOCATION:Scotiabank Saddledome
+URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2026020178#
  games
 END:VEVENT
 BEGIN:VEVENT
-UID:nhl-2025020833@mooneyaoife.github.io
-DTSTAMP:20260716T125159Z
-DTSTART:20260128T000000Z
-DTEND:20260128T030000Z
-SUMMARY:Final: Los Angeles Kings 3 - 1 Detroit Red Wings
+UID:nhl-2026020187@mooneyaoife.github.io
+DTSTAMP:20260716T181958Z
+DTSTART:20261027T013000Z
+DTEND:20261027T043000Z
+SUMMARY:Detroit Red Wings at Edmonton Oilers
 DESCRIPTION:Regular season. Times display in your calendar's local time. 
  Open the NHL Tracker Game Centre for scores\, analytics and game details
  .
-LOCATION:Little Caesars Arena
-URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2025020833#
+LOCATION:Rogers Place
+URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2026020187#
  games
 END:VEVENT
 BEGIN:VEVENT
-UID:nhl-2025020846@mooneyaoife.github.io
-DTSTAMP:20260716T125159Z
-DTSTART:20260130T003000Z
-DTEND:20260130T033000Z
-SUMMARY:Final: Washington Capitals 4 - 3 Detroit Red Wings
-DESCRIPTION:Regular season. Times display in your calendar's local time. 
- Open the NHL Tracker Game Centre for scores\, analytics and game details
- .
-LOCATION:Little Caesars Arena
-URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2025020846#
- games
-END:VEVENT
-BEGIN:VEVENT
-UID:nhl-2025020860@mooneyaoife.github.io
-DTSTAMP:20260716T125159Z
-DTSTART:20260131T180000Z
-DTEND:20260131T210000Z
-SUMMARY:Final: Colorado Avalanche 5 - 0 Detroit Red Wings
+UID:nhl-2026020203@mooneyaoife.github.io
+DTSTAMP:20260716T181958Z
+DTSTART:20261029T230000Z
+DTEND:20261030T020000Z
+SUMMARY:Chicago Blackhawks at Detroit Red Wings
 DESCRIPTION:Regular season. Times display in your calendar's local time. 
  Open the NHL Tracker Game Centre for scores\, analytics and game details
  .
 LOCATION:Little Caesars Arena
-URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2025020860#
+URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2026020203#
  games
 END:VEVENT
 BEGIN:VEVENT
-UID:nhl-2025020883@mooneyaoife.github.io
-DTSTAMP:20260716T125159Z
-DTSTART:20260203T020000Z
-DTEND:20260203T050000Z
-SUMMARY:Final: Detroit Red Wings 2 - 0 Colorado Avalanche
+UID:nhl-2026020218@mooneyaoife.github.io
+DTSTAMP:20260716T181958Z
+DTSTART:20261031T170000Z
+DTEND:20261031T200000Z
+SUMMARY:St. Louis Blues at Detroit Red Wings
+DESCRIPTION:Regular season. Times display in your calendar's local time. 
+ Open the NHL Tracker Game Centre for scores\, analytics and game details
+ .
+LOCATION:Little Caesars Arena
+URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2026020218#
+ games
+END:VEVENT
+BEGIN:VEVENT
+UID:nhl-2026020233@mooneyaoife.github.io
+DTSTAMP:20260716T181958Z
+DTSTART:20261103T000000Z
+DTEND:20261103T030000Z
+SUMMARY:Detroit Red Wings at Florida Panthers
+DESCRIPTION:Regular season. Times display in your calendar's local time. 
+ Open the NHL Tracker Game Centre for scores\, analytics and game details
+ .
+LOCATION:Amerant Bank Arena
+URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2026020233#
+ games
+END:VEVENT
+BEGIN:VEVENT
+UID:nhl-2026020238@mooneyaoife.github.io
+DTSTAMP:20260716T181958Z
+DTSTART:20261104T000000Z
+DTEND:20261104T030000Z
+SUMMARY:Detroit Red Wings at Tampa Bay Lightning
+DESCRIPTION:Regular season. Times display in your calendar's local time. 
+ Open the NHL Tracker Game Centre for scores\, analytics and game details
+ .
+LOCATION:Benchmark International Arena
+URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2026020238#
+ games
+END:VEVENT
+BEGIN:VEVENT
+UID:nhl-2026020252@mooneyaoife.github.io
+DTSTAMP:20260716T181958Z
+DTSTART:20261106T000000Z
+DTEND:20261106T030000Z
+SUMMARY:Vegas Golden Knights at Detroit Red Wings
+DESCRIPTION:Regular season. Times display in your calendar's local time. 
+ Open the NHL Tracker Game Centre for scores\, analytics and game details
+ .
+LOCATION:Little Caesars Arena
+URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2026020252#
+ games
+END:VEVENT
+BEGIN:VEVENT
+UID:nhl-2026020274@mooneyaoife.github.io
+DTSTAMP:20260716T181958Z
+DTSTART:20261108T020000Z
+DTEND:20261108T050000Z
+SUMMARY:Detroit Red Wings at Colorado Avalanche
 DESCRIPTION:Regular season. Times display in your calendar's local time. 
  Open the NHL Tracker Game Centre for scores\, analytics and game details
  .
 LOCATION:Ball Arena
-URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2025020883#
+URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2026020274#
  games
 END:VEVENT
 BEGIN:VEVENT
-UID:nhl-2025020898@mooneyaoife.github.io
-DTSTAMP:20260716T125159Z
-DTSTART:20260205T020000Z
-DTEND:20260205T050000Z
-SUMMARY:Final: Detroit Red Wings 1 - 4 Utah Mammoth
+UID:nhl-2026020290@mooneyaoife.github.io
+DTSTAMP:20260716T181958Z
+DTSTART:20261111T010000Z
+DTEND:20261111T040000Z
+SUMMARY:Detroit Red Wings at St. Louis Blues
 DESCRIPTION:Regular season. Times display in your calendar's local time. 
  Open the NHL Tracker Game Centre for scores\, analytics and game details
  .
-LOCATION:Delta Center
-URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2025020898#
+LOCATION:Enterprise Center
+URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2026020290#
  games
 END:VEVENT
 BEGIN:VEVENT
-UID:nhl-2025020920@mooneyaoife.github.io
-DTSTAMP:20260716T125159Z
-DTSTART:20260227T000000Z
-DTEND:20260227T030000Z
-SUMMARY:Final: Detroit Red Wings 2 - 1 Ottawa Senators
+UID:nhl-2026020302@mooneyaoife.github.io
+DTSTAMP:20260716T181958Z
+DTSTART:20261113T000000Z
+DTEND:20261113T030000Z
+SUMMARY:Detroit Red Wings at Florida Panthers
 DESCRIPTION:Regular season. Times display in your calendar's local time. 
  Open the NHL Tracker Game Centre for scores\, analytics and game details
  .
-LOCATION:Canadian Tire Centre
-URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2025020920#
+LOCATION:Amerant Bank Arena
+URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2026020302#
  games
 END:VEVENT
 BEGIN:VEVENT
-UID:nhl-2025020942@mooneyaoife.github.io
-DTSTAMP:20260716T125159Z
-DTSTART:20260301T000000Z
-DTEND:20260301T030000Z
-SUMMARY:Final: Detroit Red Wings 2 - 5 Carolina Hurricanes
+UID:nhl-2026020316@mooneyaoife.github.io
+DTSTAMP:20260716T181958Z
+DTSTART:20261115T000000Z
+DTEND:20261115T030000Z
+SUMMARY:Detroit Red Wings at Tampa Bay Lightning
 DESCRIPTION:Regular season. Times display in your calendar's local time. 
  Open the NHL Tracker Game Centre for scores\, analytics and game details
  .
-LOCATION:Lenovo Center
-URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2025020942#
+LOCATION:Benchmark International Arena
+URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2026020316#
  games
 END:VEVENT
 BEGIN:VEVENT
-UID:nhl-2025020955@mooneyaoife.github.io
-DTSTAMP:20260716T125159Z
-DTSTART:20260302T190000Z
-DTEND:20260302T220000Z
-SUMMARY:Final: Detroit Red Wings 4 - 2 Nashville Predators
-DESCRIPTION:Regular season. Times display in your calendar's local time. 
- Open the NHL Tracker Game Centre for scores\, analytics and game details
- .
-LOCATION:Bridgestone Arena
-URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2025020955#
- games
-END:VEVENT
-BEGIN:VEVENT
-UID:nhl-2025020970@mooneyaoife.github.io
-DTSTAMP:20260716T125159Z
-DTSTART:20260305T000000Z
-DTEND:20260305T030000Z
-SUMMARY:Final: Vegas Golden Knights 4 - 3 Detroit Red Wings
+UID:nhl-2026020344@mooneyaoife.github.io
+DTSTAMP:20260716T181958Z
+DTSTART:20261119T003000Z
+DTEND:20261119T033000Z
+SUMMARY:Boston Bruins at Detroit Red Wings
 DESCRIPTION:Regular season. Times display in your calendar's local time. 
  Open the NHL Tracker Game Centre for scores\, analytics and game details
  .
 LOCATION:Little Caesars Arena
-URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2025020970#
+URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2026020344#
  games
 END:VEVENT
 BEGIN:VEVENT
-UID:nhl-2025020983@mooneyaoife.github.io
-DTSTAMP:20260716T125159Z
-DTSTART:20260307T000000Z
-DTEND:20260307T030000Z
-SUMMARY:Final: Florida Panthers 3 - 1 Detroit Red Wings
+UID:nhl-2026020367@mooneyaoife.github.io
+DTSTAMP:20260716T181958Z
+DTSTART:20261122T000000Z
+DTEND:20261122T030000Z
+SUMMARY:New York Islanders at Detroit Red Wings
 DESCRIPTION:Regular season. Times display in your calendar's local time. 
  Open the NHL Tracker Game Centre for scores\, analytics and game details
  .
 LOCATION:Little Caesars Arena
-URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2025020983#
+URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2026020367#
  games
 END:VEVENT
 BEGIN:VEVENT
-UID:nhl-2025021005@mooneyaoife.github.io
-DTSTAMP:20260716T125159Z
-DTSTART:20260308T230000Z
-DTEND:20260309T020000Z
-SUMMARY:Final: Detroit Red Wings 3 - 0 New Jersey Devils
+UID:nhl-2026020394@mooneyaoife.github.io
+DTSTAMP:20260716T181958Z
+DTSTART:20261126T003000Z
+DTEND:20261126T033000Z
+SUMMARY:Vancouver Canucks at Detroit Red Wings
+DESCRIPTION:Regular season. Times display in your calendar's local time. 
+ Open the NHL Tracker Game Centre for scores\, analytics and game details
+ .
+LOCATION:Little Caesars Arena
+URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2026020394#
+ games
+END:VEVENT
+BEGIN:VEVENT
+UID:nhl-2026020407@mooneyaoife.github.io
+DTSTAMP:20260716T181958Z
+DTSTART:20261127T200000Z
+DTEND:20261127T230000Z
+SUMMARY:Detroit Red Wings at Columbus Blue Jackets
+DESCRIPTION:Regular season. Times display in your calendar's local time. 
+ Open the NHL Tracker Game Centre for scores\, analytics and game details
+ .
+LOCATION:Nationwide Arena
+URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2026020407#
+ games
+END:VEVENT
+BEGIN:VEVENT
+UID:nhl-2026020417@mooneyaoife.github.io
+DTSTAMP:20260716T181958Z
+DTSTART:20261129T000000Z
+DTEND:20261129T030000Z
+SUMMARY:Nashville Predators at Detroit Red Wings
+DESCRIPTION:Regular season. Times display in your calendar's local time. 
+ Open the NHL Tracker Game Centre for scores\, analytics and game details
+ .
+LOCATION:Little Caesars Arena
+URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2026020417#
+ games
+END:VEVENT
+BEGIN:VEVENT
+UID:nhl-2026020436@mooneyaoife.github.io
+DTSTAMP:20260716T181958Z
+DTSTART:20261202T000000Z
+DTEND:20261202T030000Z
+SUMMARY:Calgary Flames at Detroit Red Wings
+DESCRIPTION:Regular season. Times display in your calendar's local time. 
+ Open the NHL Tracker Game Centre for scores\, analytics and game details
+ .
+LOCATION:Little Caesars Arena
+URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2026020436#
+ games
+END:VEVENT
+BEGIN:VEVENT
+UID:nhl-2026020450@mooneyaoife.github.io
+DTSTAMP:20260716T181958Z
+DTSTART:20261204T000000Z
+DTEND:20261204T030000Z
+SUMMARY:Colorado Avalanche at Detroit Red Wings
+DESCRIPTION:Regular season. Times display in your calendar's local time. 
+ Open the NHL Tracker Game Centre for scores\, analytics and game details
+ .
+LOCATION:Little Caesars Arena
+URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2026020450#
+ games
+END:VEVENT
+BEGIN:VEVENT
+UID:nhl-2026020464@mooneyaoife.github.io
+DTSTAMP:20260716T181958Z
+DTSTART:20261205T180000Z
+DTEND:20261205T210000Z
+SUMMARY:Detroit Red Wings at Boston Bruins
+DESCRIPTION:Regular season. Times display in your calendar's local time. 
+ Open the NHL Tracker Game Centre for scores\, analytics and game details
+ .
+LOCATION:TD Garden
+URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2026020464#
+ games
+END:VEVENT
+BEGIN:VEVENT
+UID:nhl-2026020496@mooneyaoife.github.io
+DTSTAMP:20260716T181958Z
+DTSTART:20261210T003000Z
+DTEND:20261210T033000Z
+SUMMARY:Detroit Red Wings at New Jersey Devils
 DESCRIPTION:Regular season. Times display in your calendar's local time. 
  Open the NHL Tracker Game Centre for scores\, analytics and game details
  .
 LOCATION:Prudential Center
-URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2025021005#
+URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2026020496#
  games
 END:VEVENT
 BEGIN:VEVENT
-UID:nhl-2025021016@mooneyaoife.github.io
-DTSTAMP:20260716T125159Z
-DTSTART:20260310T230000Z
-DTEND:20260311T020000Z
-SUMMARY:Final: Detroit Red Wings 3 - 4 Florida Panthers
-DESCRIPTION:Regular season. Times display in your calendar's local time. 
- Open the NHL Tracker Game Centre for scores\, analytics and game details
- .
-LOCATION:Amerant Bank Arena
-URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2025021016#
- games
-END:VEVENT
-BEGIN:VEVENT
-UID:nhl-2025021030@mooneyaoife.github.io
-DTSTAMP:20260716T125159Z
-DTSTART:20260312T230000Z
-DTEND:20260313T020000Z
-SUMMARY:Final: Detroit Red Wings 1 - 4 Tampa Bay Lightning
-DESCRIPTION:Regular season. Times display in your calendar's local time. 
- Open the NHL Tracker Game Centre for scores\, analytics and game details
- .
-LOCATION:Benchmark International Arena
-URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2025021030#
- games
-END:VEVENT
-BEGIN:VEVENT
-UID:nhl-2025021053@mooneyaoife.github.io
-DTSTAMP:20260716T125159Z
-DTSTART:20260315T000000Z
-DTEND:20260315T030000Z
-SUMMARY:Final: Detroit Red Wings 2 - 3 Dallas Stars
-DESCRIPTION:Regular season. Times display in your calendar's local time. 
- Open the NHL Tracker Game Centre for scores\, analytics and game details
- .
-LOCATION:American Airlines Center
-URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2025021053#
- games
-END:VEVENT
-BEGIN:VEVENT
-UID:nhl-2025021063@mooneyaoife.github.io
-DTSTAMP:20260716T125159Z
-DTSTART:20260316T230000Z
-DTEND:20260317T020000Z
-SUMMARY:Final: Calgary Flames 2 - 5 Detroit Red Wings
+UID:nhl-2026020510@mooneyaoife.github.io
+DTSTAMP:20260716T181958Z
+DTSTART:20261212T000000Z
+DTEND:20261212T030000Z
+SUMMARY:New York Rangers at Detroit Red Wings
 DESCRIPTION:Regular season. Times display in your calendar's local time. 
  Open the NHL Tracker Game Centre for scores\, analytics and game details
  .
 LOCATION:Little Caesars Arena
-URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2025021063#
+URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2026020510#
  games
 END:VEVENT
 BEGIN:VEVENT
-UID:nhl-2025021085@mooneyaoife.github.io
-DTSTAMP:20260716T125159Z
-DTSTART:20260319T230000Z
-DTEND:20260320T020000Z
-SUMMARY:Final: Montréal Canadiens 1 - 3 Detroit Red Wings
+UID:nhl-2026020521@mooneyaoife.github.io
+DTSTAMP:20260716T181958Z
+DTSTART:20261213T000000Z
+DTEND:20261213T030000Z
+SUMMARY:Florida Panthers at Detroit Red Wings
 DESCRIPTION:Regular season. Times display in your calendar's local time. 
  Open the NHL Tracker Game Centre for scores\, analytics and game details
  .
 LOCATION:Little Caesars Arena
-URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2025021085#
+URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2026020521#
  games
 END:VEVENT
 BEGIN:VEVENT
-UID:nhl-2025021108@mooneyaoife.github.io
-DTSTAMP:20260716T125159Z
-DTSTART:20260322T000000Z
-DTEND:20260322T030000Z
-SUMMARY:Final: Boston Bruins 4 - 2 Detroit Red Wings
+UID:nhl-2026020538@mooneyaoife.github.io
+DTSTAMP:20260716T181958Z
+DTSTART:20261216T000000Z
+DTEND:20261216T030000Z
+SUMMARY:Los Angeles Kings at Detroit Red Wings
 DESCRIPTION:Regular season. Times display in your calendar's local time. 
  Open the NHL Tracker Game Centre for scores\, analytics and game details
  .
 LOCATION:Little Caesars Arena
-URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2025021108#
+URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2026020538#
  games
 END:VEVENT
 BEGIN:VEVENT
-UID:nhl-2025021122@mooneyaoife.github.io
-DTSTAMP:20260716T125159Z
-DTSTART:20260324T230000Z
-DTEND:20260325T020000Z
-SUMMARY:Final: Ottawa Senators 3 - 2 Detroit Red Wings
+UID:nhl-2026020555@mooneyaoife.github.io
+DTSTAMP:20260716T181958Z
+DTSTART:20261218T000000Z
+DTEND:20261218T030000Z
+SUMMARY:Detroit Red Wings at Washington Capitals
 DESCRIPTION:Regular season. Times display in your calendar's local time. 
  Open the NHL Tracker Game Centre for scores\, analytics and game details
  .
-LOCATION:Little Caesars Arena
-URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2025021122#
+LOCATION:Capital One Arena
+URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2026020555#
  games
 END:VEVENT
 BEGIN:VEVENT
-UID:nhl-2025021150@mooneyaoife.github.io
-DTSTAMP:20260716T125159Z
-DTSTART:20260327T230000Z
-DTEND:20260328T020000Z
-SUMMARY:Final: Detroit Red Wings 5 - 2 Buffalo Sabres
-DESCRIPTION:Regular season. Times display in your calendar's local time. 
- Open the NHL Tracker Game Centre for scores\, analytics and game details
- .
-LOCATION:KeyBank Center
-URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2025021150#
- games
-END:VEVENT
-BEGIN:VEVENT
-UID:nhl-2025021163@mooneyaoife.github.io
-DTSTAMP:20260716T125159Z
-DTSTART:20260329T000000Z
-DTEND:20260329T030000Z
-SUMMARY:Final: Philadelphia Flyers 5 - 3 Detroit Red Wings
-DESCRIPTION:Regular season. Times display in your calendar's local time. 
- Open the NHL Tracker Game Centre for scores\, analytics and game details
- .
-LOCATION:Little Caesars Arena
-URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2025021163#
- games
-END:VEVENT
-BEGIN:VEVENT
-UID:nhl-2025021183@mooneyaoife.github.io
-DTSTAMP:20260716T125159Z
-DTSTART:20260331T230000Z
-DTEND:20260401T020000Z
-SUMMARY:Final: Detroit Red Wings 1 - 5 Pittsburgh Penguins
-DESCRIPTION:Regular season. Times display in your calendar's local time. 
- Open the NHL Tracker Game Centre for scores\, analytics and game details
- .
-LOCATION:PPG Paints Arena
-URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2025021183#
- games
-END:VEVENT
-BEGIN:VEVENT
-UID:nhl-2025021196@mooneyaoife.github.io
-DTSTAMP:20260716T125159Z
-DTSTART:20260402T230000Z
-DTEND:20260403T020000Z
-SUMMARY:Final: Detroit Red Wings 4 - 2 Philadelphia Flyers
+UID:nhl-2026020562@mooneyaoife.github.io
+DTSTAMP:20260716T181958Z
+DTSTART:20261219T000000Z
+DTEND:20261219T030000Z
+SUMMARY:Detroit Red Wings at Philadelphia Flyers
 DESCRIPTION:Regular season. Times display in your calendar's local time. 
  Open the NHL Tracker Game Centre for scores\, analytics and game details
  .
 LOCATION:Xfinity Mobile Arena
-URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2025021196#
+URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2026020562#
  games
 END:VEVENT
 BEGIN:VEVENT
-UID:nhl-2025021207@mooneyaoife.github.io
-DTSTAMP:20260716T125159Z
-DTSTART:20260404T163000Z
-DTEND:20260404T193000Z
-SUMMARY:Final: Detroit Red Wings 1 - 4 New York Rangers
+UID:nhl-2026020578@mooneyaoife.github.io
+DTSTAMP:20260716T181958Z
+DTSTART:20261220T220000Z
+DTEND:20261221T010000Z
+SUMMARY:Tampa Bay Lightning at Detroit Red Wings
+DESCRIPTION:Regular season. Times display in your calendar's local time. 
+ Open the NHL Tracker Game Centre for scores\, analytics and game details
+ .
+LOCATION:Little Caesars Arena
+URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2026020578#
+ games
+END:VEVENT
+BEGIN:VEVENT
+UID:nhl-2026020595@mooneyaoife.github.io
+DTSTAMP:20260716T181958Z
+DTSTART:20261223T003000Z
+DTEND:20261223T033000Z
+SUMMARY:Toronto Maple Leafs at Detroit Red Wings
+DESCRIPTION:Regular season. Times display in your calendar's local time. 
+ Open the NHL Tracker Game Centre for scores\, analytics and game details
+ .
+LOCATION:Little Caesars Arena
+URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2026020595#
+ games
+END:VEVENT
+BEGIN:VEVENT
+UID:nhl-2026020607@mooneyaoife.github.io
+DTSTAMP:20260716T181958Z
+DTSTART:20261227T000000Z
+DTEND:20261227T030000Z
+SUMMARY:Detroit Red Wings at Nashville Predators
+DESCRIPTION:Regular season. Times display in your calendar's local time. 
+ Open the NHL Tracker Game Centre for scores\, analytics and game details
+ .
+LOCATION:Bridgestone Arena
+URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2026020607#
+ games
+END:VEVENT
+BEGIN:VEVENT
+UID:nhl-2026020620@mooneyaoife.github.io
+DTSTAMP:20260716T181958Z
+DTSTART:20261229T000000Z
+DTEND:20261229T030000Z
+SUMMARY:Detroit Red Wings at Buffalo Sabres
+DESCRIPTION:Regular season. Times display in your calendar's local time. 
+ Open the NHL Tracker Game Centre for scores\, analytics and game details
+ .
+LOCATION:KeyBank Center
+URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2026020620#
+ games
+END:VEVENT
+BEGIN:VEVENT
+UID:nhl-2026020629@mooneyaoife.github.io
+DTSTAMP:20260716T181958Z
+DTSTART:20261230T000000Z
+DTEND:20261230T030000Z
+SUMMARY:Detroit Red Wings at New York Rangers
 DESCRIPTION:Regular season. Times display in your calendar's local time. 
  Open the NHL Tracker Game Centre for scores\, analytics and game details
  .
 LOCATION:Madison Square Garden
-URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2025021207#
+URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2026020629#
  games
 END:VEVENT
 BEGIN:VEVENT
-UID:nhl-2025021222@mooneyaoife.github.io
-DTSTAMP:20260716T125159Z
-DTSTART:20260405T170000Z
-DTEND:20260405T200000Z
-SUMMARY:Final: Minnesota Wild 5 - 4 Detroit Red Wings
+UID:nhl-2026020643@mooneyaoife.github.io
+DTSTAMP:20260716T181958Z
+DTSTART:20261231T190000Z
+DTEND:20261231T220000Z
+SUMMARY:Carolina Hurricanes at Detroit Red Wings
 DESCRIPTION:Regular season. Times display in your calendar's local time. 
  Open the NHL Tracker Game Centre for scores\, analytics and game details
  .
 LOCATION:Little Caesars Arena
-URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2025021222#
+URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2026020643#
  games
 END:VEVENT
 BEGIN:VEVENT
-UID:nhl-2025021235@mooneyaoife.github.io
-DTSTAMP:20260716T125159Z
-DTSTART:20260407T230000Z
-DTEND:20260408T020000Z
-SUMMARY:Final: Columbus Blue Jackets 4 - 3 Detroit Red Wings
+UID:nhl-2026020655@mooneyaoife.github.io
+DTSTAMP:20260716T181958Z
+DTSTART:20270102T180000Z
+DTEND:20270102T210000Z
+SUMMARY:Edmonton Oilers at Detroit Red Wings
 DESCRIPTION:Regular season. Times display in your calendar's local time. 
  Open the NHL Tracker Game Centre for scores\, analytics and game details
  .
 LOCATION:Little Caesars Arena
-URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2025021235#
+URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2026020655#
  games
 END:VEVENT
 BEGIN:VEVENT
-UID:nhl-2025021250@mooneyaoife.github.io
-DTSTAMP:20260716T125159Z
-DTSTART:20260409T230000Z
-DTEND:20260410T020000Z
-SUMMARY:Final: Philadelphia Flyers 3 - 6 Detroit Red Wings
+UID:nhl-2026020677@mooneyaoife.github.io
+DTSTAMP:20260716T181958Z
+DTSTART:20270105T010000Z
+DTEND:20270105T040000Z
+SUMMARY:Detroit Red Wings at Dallas Stars
+DESCRIPTION:Regular season. Times display in your calendar's local time. 
+ Open the NHL Tracker Game Centre for scores\, analytics and game details
+ .
+LOCATION:American Airlines Center
+URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2026020677#
+ games
+END:VEVENT
+BEGIN:VEVENT
+UID:nhl-2026020694@mooneyaoife.github.io
+DTSTAMP:20260716T181958Z
+DTSTART:20270108T000000Z
+DTEND:20270108T030000Z
+SUMMARY:Utah Mammoth at Detroit Red Wings
 DESCRIPTION:Regular season. Times display in your calendar's local time. 
  Open the NHL Tracker Game Centre for scores\, analytics and game details
  .
 LOCATION:Little Caesars Arena
-URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2025021250#
+URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2026020694#
  games
 END:VEVENT
 BEGIN:VEVENT
-UID:nhl-2025021265@mooneyaoife.github.io
-DTSTAMP:20260716T125159Z
-DTSTART:20260411T210000Z
-DTEND:20260412T000000Z
-SUMMARY:Final: New Jersey Devils 5 - 3 Detroit Red Wings
+UID:nhl-2026020715@mooneyaoife.github.io
+DTSTAMP:20260716T181958Z
+DTSTART:20270110T000000Z
+DTEND:20270110T030000Z
+SUMMARY:Boston Bruins at Detroit Red Wings
 DESCRIPTION:Regular season. Times display in your calendar's local time. 
  Open the NHL Tracker Game Centre for scores\, analytics and game details
  .
 LOCATION:Little Caesars Arena
-URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2025021265#
+URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2026020715#
  games
 END:VEVENT
 BEGIN:VEVENT
-UID:nhl-2025021282@mooneyaoife.github.io
-DTSTAMP:20260716T125159Z
-DTSTART:20260413T230000Z
-DTEND:20260414T020000Z
-SUMMARY:Final: Detroit Red Wings 3 - 4 Tampa Bay Lightning
+UID:nhl-2026020740@mooneyaoife.github.io
+DTSTAMP:20260716T181958Z
+DTSTART:20270114T020000Z
+DTEND:20270114T050000Z
+SUMMARY:Detroit Red Wings at Utah Mammoth
 DESCRIPTION:Regular season. Times display in your calendar's local time. 
  Open the NHL Tracker Game Centre for scores\, analytics and game details
  .
-LOCATION:Benchmark International Arena
-URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2025021282#
+LOCATION:Delta Center
+URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2026020740#
  games
 END:VEVENT
 BEGIN:VEVENT
-UID:nhl-2025021303@mooneyaoife.github.io
-DTSTAMP:20260716T125159Z
-DTSTART:20260415T230000Z
-DTEND:20260416T020000Z
-SUMMARY:Final: Detroit Red Wings 1 - 8 Florida Panthers
+UID:nhl-2026020766@mooneyaoife.github.io
+DTSTAMP:20260716T181958Z
+DTSTART:20270117T000000Z
+DTEND:20270117T030000Z
+SUMMARY:Detroit Red Wings at Chicago Blackhawks
 DESCRIPTION:Regular season. Times display in your calendar's local time. 
  Open the NHL Tracker Game Centre for scores\, analytics and game details
  .
-LOCATION:Amerant Bank Arena
-URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2025021303#
+LOCATION:United Center
+URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2026020766#
+ games
+END:VEVENT
+BEGIN:VEVENT
+UID:nhl-2026020772@mooneyaoife.github.io
+DTSTAMP:20260716T181958Z
+DTSTART:20270117T220000Z
+DTEND:20270118T010000Z
+SUMMARY:Minnesota Wild at Detroit Red Wings
+DESCRIPTION:Regular season. Times display in your calendar's local time. 
+ Open the NHL Tracker Game Centre for scores\, analytics and game details
+ .
+LOCATION:Little Caesars Arena
+URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2026020772#
+ games
+END:VEVENT
+BEGIN:VEVENT
+UID:nhl-2026020786@mooneyaoife.github.io
+DTSTAMP:20260716T181958Z
+DTSTART:20270120T000000Z
+DTEND:20270120T030000Z
+SUMMARY:Anaheim Ducks at Detroit Red Wings
+DESCRIPTION:Regular season. Times display in your calendar's local time. 
+ Open the NHL Tracker Game Centre for scores\, analytics and game details
+ .
+LOCATION:Little Caesars Arena
+URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2026020786#
+ games
+END:VEVENT
+BEGIN:VEVENT
+UID:nhl-2026020806@mooneyaoife.github.io
+DTSTAMP:20260716T181958Z
+DTSTART:20270122T020000Z
+DTEND:20270122T050000Z
+SUMMARY:Detroit Red Wings at Minnesota Wild
+DESCRIPTION:Regular season. Times display in your calendar's local time. 
+ Open the NHL Tracker Game Centre for scores\, analytics and game details
+ .
+LOCATION:Grand Casino Arena
+URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2026020806#
+ games
+END:VEVENT
+BEGIN:VEVENT
+UID:nhl-2026020812@mooneyaoife.github.io
+DTSTAMP:20260716T181958Z
+DTSTART:20270123T180000Z
+DTEND:20270123T210000Z
+SUMMARY:Tampa Bay Lightning at Detroit Red Wings
+DESCRIPTION:Regular season. Times display in your calendar's local time. 
+ Open the NHL Tracker Game Centre for scores\, analytics and game details
+ .
+LOCATION:Little Caesars Arena
+URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2026020812#
+ games
+END:VEVENT
+BEGIN:VEVENT
+UID:nhl-2026020830@mooneyaoife.github.io
+DTSTAMP:20260716T181958Z
+DTSTART:20270126T000000Z
+DTEND:20270126T030000Z
+SUMMARY:Pittsburgh Penguins at Detroit Red Wings
+DESCRIPTION:Regular season. Times display in your calendar's local time. 
+ Open the NHL Tracker Game Centre for scores\, analytics and game details
+ .
+LOCATION:Little Caesars Arena
+URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2026020830#
+ games
+END:VEVENT
+BEGIN:VEVENT
+UID:nhl-2026020846@mooneyaoife.github.io
+DTSTAMP:20260716T181958Z
+DTSTART:20270128T003000Z
+DTEND:20270128T033000Z
+SUMMARY:Toronto Maple Leafs at Detroit Red Wings
+DESCRIPTION:Regular season. Times display in your calendar's local time. 
+ Open the NHL Tracker Game Centre for scores\, analytics and game details
+ .
+LOCATION:Little Caesars Arena
+URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2026020846#
+ games
+END:VEVENT
+BEGIN:VEVENT
+UID:nhl-2026020861@mooneyaoife.github.io
+DTSTAMP:20260716T181958Z
+DTSTART:20270130T000000Z
+DTEND:20270130T030000Z
+SUMMARY:Florida Panthers at Detroit Red Wings
+DESCRIPTION:Regular season. Times display in your calendar's local time. 
+ Open the NHL Tracker Game Centre for scores\, analytics and game details
+ .
+LOCATION:Little Caesars Arena
+URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2026020861#
+ games
+END:VEVENT
+BEGIN:VEVENT
+UID:nhl-2026020873@mooneyaoife.github.io
+DTSTAMP:20260716T181958Z
+DTSTART:20270131T000000Z
+DTEND:20270131T030000Z
+SUMMARY:Detroit Red Wings at Columbus Blue Jackets
+DESCRIPTION:Regular season. Times display in your calendar's local time. 
+ Open the NHL Tracker Game Centre for scores\, analytics and game details
+ .
+LOCATION:Nationwide Arena
+URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2026020873#
+ games
+END:VEVENT
+BEGIN:VEVENT
+UID:nhl-2026020900@mooneyaoife.github.io
+DTSTAMP:20260716T181958Z
+DTSTART:20270210T030000Z
+DTEND:20270210T060000Z
+SUMMARY:Detroit Red Wings at Anaheim Ducks
+DESCRIPTION:Regular season. Times display in your calendar's local time. 
+ Open the NHL Tracker Game Centre for scores\, analytics and game details
+ .
+LOCATION:Honda Center
+URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2026020900#
+ games
+END:VEVENT
+BEGIN:VEVENT
+UID:nhl-2026020906@mooneyaoife.github.io
+DTSTAMP:20260716T181958Z
+DTSTART:20270212T030000Z
+DTEND:20270212T060000Z
+SUMMARY:Detroit Red Wings at Los Angeles Kings
+DESCRIPTION:Regular season. Times display in your calendar's local time. 
+ Open the NHL Tracker Game Centre for scores\, analytics and game details
+ .
+LOCATION:Crypto.com Arena
+URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2026020906#
+ games
+END:VEVENT
+BEGIN:VEVENT
+UID:nhl-2026020914@mooneyaoife.github.io
+DTSTAMP:20260716T181958Z
+DTSTART:20270213T210000Z
+DTEND:20270214T000000Z
+SUMMARY:Detroit Red Wings at San Jose Sharks
+DESCRIPTION:Regular season. Times display in your calendar's local time. 
+ Open the NHL Tracker Game Centre for scores\, analytics and game details
+ .
+LOCATION:SAP Center at San Jose
+URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2026020914#
+ games
+END:VEVENT
+BEGIN:VEVENT
+UID:nhl-2026020937@mooneyaoife.github.io
+DTSTAMP:20260716T181958Z
+DTSTART:20270216T030000Z
+DTEND:20270216T060000Z
+SUMMARY:Detroit Red Wings at Vegas Golden Knights
+DESCRIPTION:Regular season. Times display in your calendar's local time. 
+ Open the NHL Tracker Game Centre for scores\, analytics and game details
+ .
+LOCATION:T-Mobile Arena
+URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2026020937#
+ games
+END:VEVENT
+BEGIN:VEVENT
+UID:nhl-2026020952@mooneyaoife.github.io
+DTSTAMP:20260716T181958Z
+DTSTART:20270219T000000Z
+DTEND:20270219T030000Z
+SUMMARY:Montréal Canadiens at Detroit Red Wings
+DESCRIPTION:Regular season. Times display in your calendar's local time. 
+ Open the NHL Tracker Game Centre for scores\, analytics and game details
+ .
+LOCATION:Little Caesars Arena
+URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2026020952#
+ games
+END:VEVENT
+BEGIN:VEVENT
+UID:nhl-2026020962@mooneyaoife.github.io
+DTSTAMP:20260716T181958Z
+DTSTART:20270220T000000Z
+DTEND:20270220T030000Z
+SUMMARY:Detroit Red Wings at Carolina Hurricanes
+DESCRIPTION:Regular season. Times display in your calendar's local time. 
+ Open the NHL Tracker Game Centre for scores\, analytics and game details
+ .
+LOCATION:Lenovo Center
+URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2026020962#
+ games
+END:VEVENT
+BEGIN:VEVENT
+UID:nhl-2026020978@mooneyaoife.github.io
+DTSTAMP:20260716T181958Z
+DTSTART:20270221T203000Z
+DTEND:20270221T233000Z
+SUMMARY:Buffalo Sabres at Detroit Red Wings
+DESCRIPTION:Regular season. Times display in your calendar's local time. 
+ Open the NHL Tracker Game Centre for scores\, analytics and game details
+ .
+LOCATION:Little Caesars Arena
+URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2026020978#
+ games
+END:VEVENT
+BEGIN:VEVENT
+UID:nhl-2026020991@mooneyaoife.github.io
+DTSTAMP:20260716T181958Z
+DTSTART:20270224T000000Z
+DTEND:20270224T030000Z
+SUMMARY:Detroit Red Wings at Toronto Maple Leafs
+DESCRIPTION:Regular season. Times display in your calendar's local time. 
+ Open the NHL Tracker Game Centre for scores\, analytics and game details
+ .
+LOCATION:Scotiabank Arena
+URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2026020991#
+ games
+END:VEVENT
+BEGIN:VEVENT
+UID:nhl-2026021004@mooneyaoife.github.io
+DTSTAMP:20260716T181958Z
+DTSTART:20270226T000000Z
+DTEND:20270226T030000Z
+SUMMARY:Detroit Red Wings at Ottawa Senators
+DESCRIPTION:Regular season. Times display in your calendar's local time. 
+ Open the NHL Tracker Game Centre for scores\, analytics and game details
+ .
+LOCATION:Canadian Tire Centre
+URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2026021004#
+ games
+END:VEVENT
+BEGIN:VEVENT
+UID:nhl-2026021019@mooneyaoife.github.io
+DTSTAMP:20260716T181958Z
+DTSTART:20270227T170000Z
+DTEND:20270227T200000Z
+SUMMARY:Detroit Red Wings at Boston Bruins
+DESCRIPTION:Regular season. Times display in your calendar's local time. 
+ Open the NHL Tracker Game Centre for scores\, analytics and game details
+ .
+LOCATION:TD Garden
+URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2026021019#
+ games
+END:VEVENT
+BEGIN:VEVENT
+UID:nhl-2026021036@mooneyaoife.github.io
+DTSTAMP:20260716T181958Z
+DTSTART:20270302T000000Z
+DTEND:20270302T030000Z
+SUMMARY:Detroit Red Wings at Toronto Maple Leafs
+DESCRIPTION:Regular season. Times display in your calendar's local time. 
+ Open the NHL Tracker Game Centre for scores\, analytics and game details
+ .
+LOCATION:Scotiabank Arena
+URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2026021036#
+ games
+END:VEVENT
+BEGIN:VEVENT
+UID:nhl-2026021059@mooneyaoife.github.io
+DTSTAMP:20260716T181958Z
+DTSTART:20270305T000000Z
+DTEND:20270305T030000Z
+SUMMARY:New Jersey Devils at Detroit Red Wings
+DESCRIPTION:Regular season. Times display in your calendar's local time. 
+ Open the NHL Tracker Game Centre for scores\, analytics and game details
+ .
+LOCATION:Little Caesars Arena
+URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2026021059#
+ games
+END:VEVENT
+BEGIN:VEVENT
+UID:nhl-2026021075@mooneyaoife.github.io
+DTSTAMP:20260716T181958Z
+DTSTART:20270307T000000Z
+DTEND:20270307T030000Z
+SUMMARY:Dallas Stars at Detroit Red Wings
+DESCRIPTION:Regular season. Times display in your calendar's local time. 
+ Open the NHL Tracker Game Centre for scores\, analytics and game details
+ .
+LOCATION:Little Caesars Arena
+URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2026021075#
+ games
+END:VEVENT
+BEGIN:VEVENT
+UID:nhl-2026021099@mooneyaoife.github.io
+DTSTAMP:20260716T181958Z
+DTSTART:20270310T010000Z
+DTEND:20270310T040000Z
+SUMMARY:Detroit Red Wings at Winnipeg Jets
+DESCRIPTION:Regular season. Times display in your calendar's local time. 
+ Open the NHL Tracker Game Centre for scores\, analytics and game details
+ .
+LOCATION:Canada Life Centre
+URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2026021099#
+ games
+END:VEVENT
+BEGIN:VEVENT
+UID:nhl-2026021117@mooneyaoife.github.io
+DTSTAMP:20260716T181958Z
+DTSTART:20270313T000000Z
+DTEND:20270313T030000Z
+SUMMARY:Buffalo Sabres at Detroit Red Wings
+DESCRIPTION:Regular season. Times display in your calendar's local time. 
+ Open the NHL Tracker Game Centre for scores\, analytics and game details
+ .
+LOCATION:Little Caesars Arena
+URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2026021117#
+ games
+END:VEVENT
+BEGIN:VEVENT
+UID:nhl-2026021134@mooneyaoife.github.io
+DTSTAMP:20260716T181958Z
+DTSTART:20270314T180000Z
+DTEND:20270314T210000Z
+SUMMARY:Detroit Red Wings at Pittsburgh Penguins
+DESCRIPTION:Regular season. Times display in your calendar's local time. 
+ Open the NHL Tracker Game Centre for scores\, analytics and game details
+ .
+LOCATION:PPG Paints Arena
+URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2026021134#
+ games
+END:VEVENT
+BEGIN:VEVENT
+UID:nhl-2026021149@mooneyaoife.github.io
+DTSTAMP:20260716T181958Z
+DTSTART:20270316T230000Z
+DTEND:20270317T020000Z
+SUMMARY:Detroit Red Wings at Philadelphia Flyers
+DESCRIPTION:Regular season. Times display in your calendar's local time. 
+ Open the NHL Tracker Game Centre for scores\, analytics and game details
+ .
+LOCATION:Xfinity Mobile Arena
+URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2026021149#
+ games
+END:VEVENT
+BEGIN:VEVENT
+UID:nhl-2026021163@mooneyaoife.github.io
+DTSTAMP:20260716T181958Z
+DTSTART:20270318T230000Z
+DTEND:20270319T020000Z
+SUMMARY:Columbus Blue Jackets at Detroit Red Wings
+DESCRIPTION:Regular season. Times display in your calendar's local time. 
+ Open the NHL Tracker Game Centre for scores\, analytics and game details
+ .
+LOCATION:Little Caesars Arena
+URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2026021163#
+ games
+END:VEVENT
+BEGIN:VEVENT
+UID:nhl-2026021175@mooneyaoife.github.io
+DTSTAMP:20260716T181958Z
+DTSTART:20270320T170000Z
+DTEND:20270320T200000Z
+SUMMARY:Montréal Canadiens at Detroit Red Wings
+DESCRIPTION:Regular season. Times display in your calendar's local time. 
+ Open the NHL Tracker Game Centre for scores\, analytics and game details
+ .
+LOCATION:Little Caesars Arena
+URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2026021175#
+ games
+END:VEVENT
+BEGIN:VEVENT
+UID:nhl-2026021199@mooneyaoife.github.io
+DTSTAMP:20260716T181958Z
+DTSTART:20270323T230000Z
+DTEND:20270324T020000Z
+SUMMARY:Detroit Red Wings at Washington Capitals
+DESCRIPTION:Regular season. Times display in your calendar's local time. 
+ Open the NHL Tracker Game Centre for scores\, analytics and game details
+ .
+LOCATION:Capital One Arena
+URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2026021199#
+ games
+END:VEVENT
+BEGIN:VEVENT
+UID:nhl-2026021209@mooneyaoife.github.io
+DTSTAMP:20260716T181958Z
+DTSTART:20270324T233000Z
+DTEND:20270325T023000Z
+SUMMARY:Washington Capitals at Detroit Red Wings
+DESCRIPTION:Regular season. Times display in your calendar's local time. 
+ Open the NHL Tracker Game Centre for scores\, analytics and game details
+ .
+LOCATION:Little Caesars Arena
+URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2026021209#
+ games
+END:VEVENT
+BEGIN:VEVENT
+UID:nhl-2026021237@mooneyaoife.github.io
+DTSTAMP:20260716T181958Z
+DTSTART:20270327T233000Z
+DTEND:20270328T023000Z
+SUMMARY:Detroit Red Wings at New York Islanders
+DESCRIPTION:Regular season. Times display in your calendar's local time. 
+ Open the NHL Tracker Game Centre for scores\, analytics and game details
+ .
+LOCATION:UBS Arena
+URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2026021237#
+ games
+END:VEVENT
+BEGIN:VEVENT
+UID:nhl-2026021242@mooneyaoife.github.io
+DTSTAMP:20260716T181958Z
+DTSTART:20270328T230000Z
+DTEND:20270329T020000Z
+SUMMARY:Detroit Red Wings at Montréal Canadiens
+DESCRIPTION:Regular season. Times display in your calendar's local time. 
+ Open the NHL Tracker Game Centre for scores\, analytics and game details
+ .
+LOCATION:Centre Bell
+URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2026021242#
+ games
+END:VEVENT
+BEGIN:VEVENT
+UID:nhl-2026021249@mooneyaoife.github.io
+DTSTAMP:20260716T181958Z
+DTSTART:20270330T230000Z
+DTEND:20270331T020000Z
+SUMMARY:Ottawa Senators at Detroit Red Wings
+DESCRIPTION:Regular season. Times display in your calendar's local time. 
+ Open the NHL Tracker Game Centre for scores\, analytics and game details
+ .
+LOCATION:Little Caesars Arena
+URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2026021249#
+ games
+END:VEVENT
+BEGIN:VEVENT
+UID:nhl-2026021272@mooneyaoife.github.io
+DTSTAMP:20260716T181958Z
+DTSTART:20270402T230000Z
+DTEND:20270403T020000Z
+SUMMARY:Carolina Hurricanes at Detroit Red Wings
+DESCRIPTION:Regular season. Times display in your calendar's local time. 
+ Open the NHL Tracker Game Centre for scores\, analytics and game details
+ .
+LOCATION:Little Caesars Arena
+URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2026021272#
+ games
+END:VEVENT
+BEGIN:VEVENT
+UID:nhl-2026021292@mooneyaoife.github.io
+DTSTAMP:20260716T181958Z
+DTSTART:20270404T210000Z
+DTEND:20270405T000000Z
+SUMMARY:Detroit Red Wings at Ottawa Senators
+DESCRIPTION:Regular season. Times display in your calendar's local time. 
+ Open the NHL Tracker Game Centre for scores\, analytics and game details
+ .
+LOCATION:Canadian Tire Centre
+URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2026021292#
+ games
+END:VEVENT
+BEGIN:VEVENT
+UID:nhl-2026021305@mooneyaoife.github.io
+DTSTAMP:20260716T181958Z
+DTSTART:20270406T233000Z
+DTEND:20270407T023000Z
+SUMMARY:Detroit Red Wings at New York Islanders
+DESCRIPTION:Regular season. Times display in your calendar's local time. 
+ Open the NHL Tracker Game Centre for scores\, analytics and game details
+ .
+LOCATION:UBS Arena
+URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2026021305#
+ games
+END:VEVENT
+BEGIN:VEVENT
+UID:nhl-2026021325@mooneyaoife.github.io
+DTSTAMP:20260716T181958Z
+DTSTART:20270409T230000Z
+DTEND:20270410T020000Z
+SUMMARY:Pittsburgh Penguins at Detroit Red Wings
+DESCRIPTION:Regular season. Times display in your calendar's local time. 
+ Open the NHL Tracker Game Centre for scores\, analytics and game details
+ .
+LOCATION:Little Caesars Arena
+URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2026021325#
+ games
+END:VEVENT
+BEGIN:VEVENT
+UID:nhl-2026021333@mooneyaoife.github.io
+DTSTAMP:20260716T181958Z
+DTSTART:20270410T220000Z
+DTEND:20270411T010000Z
+SUMMARY:Detroit Red Wings at Buffalo Sabres
+DESCRIPTION:Regular season. Times display in your calendar's local time. 
+ Open the NHL Tracker Game Centre for scores\, analytics and game details
+ .
+LOCATION:KeyBank Center
+URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2026021333#
  games
 END:VEVENT
 END:VCALENDAR

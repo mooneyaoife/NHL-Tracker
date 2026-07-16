@@ -10,1189 +10,1095 @@ COLOR:#C52032
 REFRESH-INTERVAL;VALUE=DURATION:PT6H
 X-PUBLISHED-TTL:PT6H
 BEGIN:VEVENT
-UID:nhl-2025010010@mooneyaoife.github.io
-DTSTAMP:20260716T125159Z
-DTSTART:20250921T190000Z
-DTEND:20250921T220000Z
-SUMMARY:Final: Toronto Maple Leafs 4 - 3 Ottawa Senators
-DESCRIPTION:Preseason. Times display in your calendar's local time. Open 
- the NHL Tracker Game Centre for scores\, analytics and game details.
-LOCATION:Canadian Tire Centre
-URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2025010010#
- games
-END:VEVENT
-BEGIN:VEVENT
-UID:nhl-2025010025@mooneyaoife.github.io
-DTSTAMP:20260716T125159Z
-DTSTART:20250923T230000Z
-DTEND:20250924T020000Z
-SUMMARY:Final: Ottawa Senators 3 - 2 Toronto Maple Leafs
-DESCRIPTION:Preseason. Times display in your calendar's local time. Open 
- the NHL Tracker Game Centre for scores\, analytics and game details.
+UID:nhl-2026020023@mooneyaoife.github.io
+DTSTAMP:20260716T181958Z
+DTSTART:20261003T230000Z
+DTEND:20261004T020000Z
+SUMMARY:Ottawa Senators at Toronto Maple Leafs
+DESCRIPTION:Regular season. Times display in your calendar's local time. 
+ Open the NHL Tracker Game Centre for scores\, analytics and game details
+ .
 LOCATION:Scotiabank Arena
-URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2025010025#
+URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2026020023#
  games
 END:VEVENT
 BEGIN:VEVENT
-UID:nhl-2025010056@mooneyaoife.github.io
-DTSTAMP:20260716T125159Z
-DTSTART:20250928T190000Z
-DTEND:20250928T220000Z
-SUMMARY:Final: New Jersey Devils 0 - 2 Ottawa Senators
-DESCRIPTION:Preseason. Times display in your calendar's local time. Open 
- the NHL Tracker Game Centre for scores\, analytics and game details.
-LOCATION:Centre Videotron
-URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2025010056#
- games
-END:VEVENT
-BEGIN:VEVENT
-UID:nhl-2025010069@mooneyaoife.github.io
-DTSTAMP:20260716T125159Z
-DTSTART:20250930T230000Z
-DTEND:20251001T020000Z
-SUMMARY:Final: Montréal Canadiens 5 - 0 Ottawa Senators
-DESCRIPTION:Preseason. Times display in your calendar's local time. Open 
- the NHL Tracker Game Centre for scores\, analytics and game details.
-LOCATION:Centre Videotron
-URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2025010069#
- games
-END:VEVENT
-BEGIN:VEVENT
-UID:nhl-2025010084@mooneyaoife.github.io
-DTSTAMP:20260716T125159Z
-DTSTART:20251003T000000Z
-DTEND:20251003T030000Z
-SUMMARY:Final: Ottawa Senators 1 - 7 St. Louis Blues
-DESCRIPTION:Preseason. Times display in your calendar's local time. Open 
- the NHL Tracker Game Centre for scores\, analytics and game details.
-LOCATION:Enterprise Center
-URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2025010084#
- games
-END:VEVENT
-BEGIN:VEVENT
-UID:nhl-2025010096@mooneyaoife.github.io
-DTSTAMP:20260716T125159Z
-DTSTART:20251004T230000Z
-DTEND:20251005T020000Z
-SUMMARY:Final: Ottawa Senators 3 - 1 Montréal Canadiens
-DESCRIPTION:Preseason. Times display in your calendar's local time. Open 
- the NHL Tracker Game Centre for scores\, analytics and game details.
-LOCATION:Centre Bell
-URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2025010096#
- games
-END:VEVENT
-BEGIN:VEVENT
-UID:nhl-2025020011@mooneyaoife.github.io
-DTSTAMP:20260716T125159Z
-DTSTART:20251009T230000Z
-DTEND:20251010T020000Z
-SUMMARY:Final: Ottawa Senators 5 - 4 Tampa Bay Lightning
-DESCRIPTION:Regular season. Times display in your calendar's local time. 
- Open the NHL Tracker Game Centre for scores\, analytics and game details
- .
-LOCATION:Benchmark International Arena
-URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2025020011#
- games
-END:VEVENT
-BEGIN:VEVENT
-UID:nhl-2025020027@mooneyaoife.github.io
-DTSTAMP:20260716T125159Z
-DTSTART:20251011T230000Z
-DTEND:20251012T020000Z
-SUMMARY:Final: Ottawa Senators 2 - 6 Florida Panthers
-DESCRIPTION:Regular season. Times display in your calendar's local time. 
- Open the NHL Tracker Game Centre for scores\, analytics and game details
- .
-LOCATION:Amerant Bank Arena
-URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2025020027#
- games
-END:VEVENT
-BEGIN:VEVENT
-UID:nhl-2025020041@mooneyaoife.github.io
-DTSTAMP:20260716T125159Z
-DTSTART:20251013T170000Z
-DTEND:20251013T200000Z
-SUMMARY:Final: Nashville Predators 4 - 1 Ottawa Senators
-DESCRIPTION:Regular season. Times display in your calendar's local time. 
- Open the NHL Tracker Game Centre for scores\, analytics and game details
- .
-LOCATION:Canadian Tire Centre
-URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2025020041#
- games
-END:VEVENT
-BEGIN:VEVENT
-UID:nhl-2025020057@mooneyaoife.github.io
-DTSTAMP:20260716T125159Z
-DTSTART:20251015T230000Z
-DTEND:20251016T020000Z
-SUMMARY:Final: Ottawa Senators 4 - 8 Buffalo Sabres
-DESCRIPTION:Regular season. Times display in your calendar's local time. 
- Open the NHL Tracker Game Centre for scores\, analytics and game details
- .
-LOCATION:KeyBank Center
-URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2025020057#
- games
-END:VEVENT
-BEGIN:VEVENT
-UID:nhl-2025020063@mooneyaoife.github.io
-DTSTAMP:20260716T125159Z
-DTSTART:20251016T230000Z
-DTEND:20251017T020000Z
-SUMMARY:Final: Seattle Kraken 3 - 4 Ottawa Senators
-DESCRIPTION:Regular season. Times display in your calendar's local time. 
- Open the NHL Tracker Game Centre for scores\, analytics and game details
- .
-LOCATION:Canadian Tire Centre
-URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2025020063#
- games
-END:VEVENT
-BEGIN:VEVENT
-UID:nhl-2025020077@mooneyaoife.github.io
-DTSTAMP:20260716T125159Z
-DTSTART:20251018T190000Z
-DTEND:20251018T220000Z
-SUMMARY:Final: New York Islanders 5 - 4 Ottawa Senators
-DESCRIPTION:Regular season. Times display in your calendar's local time. 
- Open the NHL Tracker Game Centre for scores\, analytics and game details
- .
-LOCATION:Canadian Tire Centre
-URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2025020077#
- games
-END:VEVENT
-BEGIN:VEVENT
-UID:nhl-2025020099@mooneyaoife.github.io
-DTSTAMP:20260716T125159Z
-DTSTART:20251021T230000Z
-DTEND:20251022T020000Z
-SUMMARY:Final: Edmonton Oilers 3 - 2 Ottawa Senators
-DESCRIPTION:Regular season. Times display in your calendar's local time. 
- Open the NHL Tracker Game Centre for scores\, analytics and game details
- .
-LOCATION:Canadian Tire Centre
-URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2025020099#
- games
-END:VEVENT
-BEGIN:VEVENT
-UID:nhl-2025020112@mooneyaoife.github.io
-DTSTAMP:20260716T125159Z
-DTSTART:20251023T230000Z
-DTEND:20251024T020000Z
-SUMMARY:Final: Philadelphia Flyers 1 - 2 Ottawa Senators
-DESCRIPTION:Regular season. Times display in your calendar's local time. 
- Open the NHL Tracker Game Centre for scores\, analytics and game details
- .
-LOCATION:Canadian Tire Centre
-URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2025020112#
- games
-END:VEVENT
-BEGIN:VEVENT
-UID:nhl-2025020135@mooneyaoife.github.io
-DTSTAMP:20260716T125159Z
-DTSTART:20251025T230000Z
-DTEND:20251026T020000Z
-SUMMARY:Final: Ottawa Senators 7 - 1 Washington Capitals
-DESCRIPTION:Regular season. Times display in your calendar's local time. 
- Open the NHL Tracker Game Centre for scores\, analytics and game details
- .
-LOCATION:Capital One Arena
-URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2025020135#
- games
-END:VEVENT
-BEGIN:VEVENT
-UID:nhl-2025020149@mooneyaoife.github.io
-DTSTAMP:20260716T125159Z
-DTSTART:20251027T233000Z
-DTEND:20251028T023000Z
-SUMMARY:Final: Boston Bruins 2 - 7 Ottawa Senators
-DESCRIPTION:Regular season. Times display in your calendar's local time. 
- Open the NHL Tracker Game Centre for scores\, analytics and game details
- .
-LOCATION:Canadian Tire Centre
-URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2025020149#
- games
-END:VEVENT
-BEGIN:VEVENT
-UID:nhl-2025020160@mooneyaoife.github.io
-DTSTAMP:20260716T125159Z
-DTSTART:20251029T004500Z
-DTEND:20251029T034500Z
-SUMMARY:Final: Ottawa Senators 3 - 7 Chicago Blackhawks
-DESCRIPTION:Regular season. Times display in your calendar's local time. 
- Open the NHL Tracker Game Centre for scores\, analytics and game details
- .
-LOCATION:United Center
-URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2025020160#
- games
-END:VEVENT
-BEGIN:VEVENT
-UID:nhl-2025020168@mooneyaoife.github.io
-DTSTAMP:20260716T125159Z
-DTSTART:20251030T230000Z
-DTEND:20251031T020000Z
-SUMMARY:Final: Calgary Flames 3 - 4 Ottawa Senators
-DESCRIPTION:Regular season. Times display in your calendar's local time. 
- Open the NHL Tracker Game Centre for scores\, analytics and game details
- .
-LOCATION:Canadian Tire Centre
-URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2025020168#
- games
-END:VEVENT
-BEGIN:VEVENT
-UID:nhl-2025020187@mooneyaoife.github.io
-DTSTAMP:20260716T125159Z
-DTSTART:20251101T230000Z
-DTEND:20251102T020000Z
-SUMMARY:Final: Ottawa Senators 3 - 4 Montréal Canadiens
-DESCRIPTION:Regular season. Times display in your calendar's local time. 
- Open the NHL Tracker Game Centre for scores\, analytics and game details
- .
-LOCATION:Centre Bell
-URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2025020187#
- games
-END:VEVENT
-BEGIN:VEVENT
-UID:nhl-2025020218@mooneyaoife.github.io
-DTSTAMP:20260716T125159Z
-DTSTART:20251107T000000Z
-DTEND:20251107T030000Z
-SUMMARY:Final: Ottawa Senators 2 - 3 Boston Bruins
+UID:nhl-2026020041@mooneyaoife.github.io
+DTSTAMP:20260716T181958Z
+DTSTART:20261005T233000Z
+DTEND:20261006T023000Z
+SUMMARY:Ottawa Senators at Boston Bruins
 DESCRIPTION:Regular season. Times display in your calendar's local time. 
  Open the NHL Tracker Game Centre for scores\, analytics and game details
  .
 LOCATION:TD Garden
-URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2025020218#
+URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2026020041#
  games
 END:VEVENT
 BEGIN:VEVENT
-UID:nhl-2025020232@mooneyaoife.github.io
-DTSTAMP:20260716T125159Z
-DTSTART:20251108T180000Z
-DTEND:20251108T210000Z
-SUMMARY:Final: Ottawa Senators 3 - 2 Philadelphia Flyers
-DESCRIPTION:Regular season. Times display in your calendar's local time. 
- Open the NHL Tracker Game Centre for scores\, analytics and game details
- .
-LOCATION:Xfinity Mobile Arena
-URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2025020232#
- games
-END:VEVENT
-BEGIN:VEVENT
-UID:nhl-2025020247@mooneyaoife.github.io
-DTSTAMP:20260716T125159Z
-DTSTART:20251110T000000Z
-DTEND:20251110T030000Z
-SUMMARY:Final: Utah Mammoth 2 - 4 Ottawa Senators
-DESCRIPTION:Regular season. Times display in your calendar's local time. 
- Open the NHL Tracker Game Centre for scores\, analytics and game details
- .
-LOCATION:Canadian Tire Centre
-URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2025020247#
- games
-END:VEVENT
-BEGIN:VEVENT
-UID:nhl-2025020258@mooneyaoife.github.io
-DTSTAMP:20260716T125159Z
-DTSTART:20251112T000000Z
-DTEND:20251112T030000Z
-SUMMARY:Final: Dallas Stars 3 - 2 Ottawa Senators
-DESCRIPTION:Regular season. Times display in your calendar's local time. 
- Open the NHL Tracker Game Centre for scores\, analytics and game details
- .
-LOCATION:Canadian Tire Centre
-URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2025020258#
- games
-END:VEVENT
-BEGIN:VEVENT
-UID:nhl-2025020271@mooneyaoife.github.io
-DTSTAMP:20260716T125159Z
-DTSTART:20251114T000000Z
-DTEND:20251114T030000Z
-SUMMARY:Final: Boston Bruins 3 - 5 Ottawa Senators
-DESCRIPTION:Regular season. Times display in your calendar's local time. 
- Open the NHL Tracker Game Centre for scores\, analytics and game details
- .
-LOCATION:Canadian Tire Centre
-URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2025020271#
- games
-END:VEVENT
-BEGIN:VEVENT
-UID:nhl-2025020286@mooneyaoife.github.io
-DTSTAMP:20260716T125159Z
-DTSTART:20251116T000000Z
-DTEND:20251116T030000Z
-SUMMARY:Final: Los Angeles Kings 1 - 0 Ottawa Senators
-DESCRIPTION:Regular season. Times display in your calendar's local time. 
- Open the NHL Tracker Game Centre for scores\, analytics and game details
- .
-LOCATION:Canadian Tire Centre
-URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2025020286#
- games
-END:VEVENT
-BEGIN:VEVENT
-UID:nhl-2025020329@mooneyaoife.github.io
-DTSTAMP:20260716T125159Z
-DTSTART:20251121T030000Z
-DTEND:20251121T060000Z
-SUMMARY:Final: Ottawa Senators 3 - 2 Anaheim Ducks
-DESCRIPTION:Regular season. Times display in your calendar's local time. 
- Open the NHL Tracker Game Centre for scores\, analytics and game details
- .
-LOCATION:Honda Center
-URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2025020329#
- games
-END:VEVENT
-BEGIN:VEVENT
-UID:nhl-2025020342@mooneyaoife.github.io
-DTSTAMP:20260716T125159Z
-DTSTART:20251123T000000Z
-DTEND:20251123T030000Z
-SUMMARY:Final: Ottawa Senators 3 - 2 San Jose Sharks
-DESCRIPTION:Regular season. Times display in your calendar's local time. 
- Open the NHL Tracker Game Centre for scores\, analytics and game details
- .
-LOCATION:SAP Center at San Jose
-URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2025020342#
- games
-END:VEVENT
-BEGIN:VEVENT
-UID:nhl-2025020359@mooneyaoife.github.io
-DTSTAMP:20260716T125159Z
-DTSTART:20251125T020000Z
-DTEND:20251125T050000Z
-SUMMARY:Final: Ottawa Senators 1 - 2 Los Angeles Kings
-DESCRIPTION:Regular season. Times display in your calendar's local time. 
- Open the NHL Tracker Game Centre for scores\, analytics and game details
- .
-LOCATION:Crypto.com Arena
-URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2025020359#
- games
-END:VEVENT
-BEGIN:VEVENT
-UID:nhl-2025020373@mooneyaoife.github.io
-DTSTAMP:20260716T125159Z
-DTSTART:20251127T030000Z
-DTEND:20251127T060000Z
-SUMMARY:Final: Ottawa Senators 4 - 3 Vegas Golden Knights
-DESCRIPTION:Regular season. Times display in your calendar's local time. 
- Open the NHL Tracker Game Centre for scores\, analytics and game details
- .
-LOCATION:T-Mobile Arena
-URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2025020373#
- games
-END:VEVENT
-BEGIN:VEVENT
-UID:nhl-2025020382@mooneyaoife.github.io
-DTSTAMP:20260716T125159Z
-DTSTART:20251128T210000Z
-DTEND:20251129T000000Z
-SUMMARY:Final: Ottawa Senators 3 - 4 St. Louis Blues
-DESCRIPTION:Regular season. Times display in your calendar's local time. 
- Open the NHL Tracker Game Centre for scores\, analytics and game details
- .
-LOCATION:Enterprise Center
-URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2025020382#
- games
-END:VEVENT
-BEGIN:VEVENT
-UID:nhl-2025020405@mooneyaoife.github.io
-DTSTAMP:20260716T125159Z
-DTSTART:20251130T230000Z
-DTEND:20251201T020000Z
-SUMMARY:Final: Ottawa Senators 1 - 6 Dallas Stars
-DESCRIPTION:Regular season. Times display in your calendar's local time. 
- Open the NHL Tracker Game Centre for scores\, analytics and game details
- .
-LOCATION:American Airlines Center
-URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2025020405#
- games
-END:VEVENT
-BEGIN:VEVENT
-UID:nhl-2025020411@mooneyaoife.github.io
-DTSTAMP:20260716T125159Z
-DTSTART:20251203T000000Z
-DTEND:20251203T030000Z
-SUMMARY:Final: Ottawa Senators 5 - 2 Montréal Canadiens
-DESCRIPTION:Regular season. Times display in your calendar's local time. 
- Open the NHL Tracker Game Centre for scores\, analytics and game details
- .
-LOCATION:Centre Bell
-URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2025020411#
- games
-END:VEVENT
-BEGIN:VEVENT
-UID:nhl-2025020427@mooneyaoife.github.io
-DTSTAMP:20260716T125159Z
-DTSTART:20251205T000000Z
-DTEND:20251205T030000Z
-SUMMARY:Final: New York Rangers 4 - 2 Ottawa Senators
-DESCRIPTION:Regular season. Times display in your calendar's local time. 
- Open the NHL Tracker Game Centre for scores\, analytics and game details
- .
-LOCATION:Canadian Tire Centre
-URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2025020427#
- games
-END:VEVENT
-BEGIN:VEVENT
-UID:nhl-2025020445@mooneyaoife.github.io
-DTSTAMP:20260716T125159Z
-DTSTART:20251207T000000Z
-DTEND:20251207T030000Z
-SUMMARY:Final: St. Louis Blues 2 - 1 Ottawa Senators
-DESCRIPTION:Regular season. Times display in your calendar's local time. 
- Open the NHL Tracker Game Centre for scores\, analytics and game details
- .
-LOCATION:Canadian Tire Centre
-URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2025020445#
- games
-END:VEVENT
-BEGIN:VEVENT
-UID:nhl-2025020467@mooneyaoife.github.io
-DTSTAMP:20260716T125159Z
-DTSTART:20251210T000000Z
-DTEND:20251210T030000Z
-SUMMARY:Final: New Jersey Devils 4 - 3 Ottawa Senators
-DESCRIPTION:Regular season. Times display in your calendar's local time. 
- Open the NHL Tracker Game Centre for scores\, analytics and game details
- .
-LOCATION:Canadian Tire Centre
-URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2025020467#
- games
-END:VEVENT
-BEGIN:VEVENT
-UID:nhl-2025020486@mooneyaoife.github.io
-DTSTAMP:20260716T125159Z
-DTSTART:20251212T000000Z
-DTEND:20251212T030000Z
-SUMMARY:Final: Ottawa Senators 6 - 3 Columbus Blue Jackets
-DESCRIPTION:Regular season. Times display in your calendar's local time. 
- Open the NHL Tracker Game Centre for scores\, analytics and game details
- .
-LOCATION:Nationwide Arena
-URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2025020486#
- games
-END:VEVENT
-BEGIN:VEVENT
-UID:nhl-2025020496@mooneyaoife.github.io
-DTSTAMP:20260716T125159Z
-DTSTART:20251213T190000Z
-DTEND:20251213T220000Z
-SUMMARY:Final: Ottawa Senators 2 - 3 Minnesota Wild
-DESCRIPTION:Regular season. Times display in your calendar's local time. 
- Open the NHL Tracker Game Centre for scores\, analytics and game details
- .
-LOCATION:Grand Casino Arena
-URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2025020496#
- games
-END:VEVENT
-BEGIN:VEVENT
-UID:nhl-2025020516@mooneyaoife.github.io
-DTSTAMP:20260716T125159Z
-DTSTART:20251216T003000Z
-DTEND:20251216T033000Z
-SUMMARY:Final: Ottawa Senators 3 - 2 Winnipeg Jets
-DESCRIPTION:Regular season. Times display in your calendar's local time. 
- Open the NHL Tracker Game Centre for scores\, analytics and game details
- .
-LOCATION:Canada Life Centre
-URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2025020516#
- games
-END:VEVENT
-BEGIN:VEVENT
-UID:nhl-2025020537@mooneyaoife.github.io
-DTSTAMP:20260716T125159Z
-DTSTART:20251219T000000Z
-DTEND:20251219T030000Z
-SUMMARY:Final: Pittsburgh Penguins 0 - 4 Ottawa Senators
-DESCRIPTION:Regular season. Times display in your calendar's local time. 
- Open the NHL Tracker Game Centre for scores\, analytics and game details
- .
-LOCATION:Canadian Tire Centre
-URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2025020537#
- games
-END:VEVENT
-BEGIN:VEVENT
-UID:nhl-2025020551@mooneyaoife.github.io
-DTSTAMP:20260716T125159Z
-DTSTART:20251220T200000Z
-DTEND:20251220T230000Z
-SUMMARY:Final: Chicago Blackhawks 4 - 6 Ottawa Senators
-DESCRIPTION:Regular season. Times display in your calendar's local time. 
- Open the NHL Tracker Game Centre for scores\, analytics and game details
- .
-LOCATION:Canadian Tire Centre
-URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2025020551#
- games
-END:VEVENT
-BEGIN:VEVENT
-UID:nhl-2025020564@mooneyaoife.github.io
-DTSTAMP:20260716T125159Z
-DTSTART:20251222T000000Z
-DTEND:20251222T030000Z
-SUMMARY:Final: Ottawa Senators 6 - 2 Boston Bruins
-DESCRIPTION:Regular season. Times display in your calendar's local time. 
- Open the NHL Tracker Game Centre for scores\, analytics and game details
- .
-LOCATION:TD Garden
-URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2025020564#
- games
-END:VEVENT
-BEGIN:VEVENT
-UID:nhl-2025020578@mooneyaoife.github.io
-DTSTAMP:20260716T125159Z
-DTSTART:20251224T000000Z
-DTEND:20251224T030000Z
-SUMMARY:Final: Buffalo Sabres 3 - 2 Ottawa Senators
-DESCRIPTION:Regular season. Times display in your calendar's local time. 
- Open the NHL Tracker Game Centre for scores\, analytics and game details
- .
-LOCATION:Canadian Tire Centre
-URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2025020578#
- games
-END:VEVENT
-BEGIN:VEVENT
-UID:nhl-2025020590@mooneyaoife.github.io
-DTSTAMP:20260716T125159Z
-DTSTART:20251228T000000Z
-DTEND:20251228T030000Z
-SUMMARY:Final: Ottawa Senators 5 - 7 Toronto Maple Leafs
-DESCRIPTION:Regular season. Times display in your calendar's local time. 
- Open the NHL Tracker Game Centre for scores\, analytics and game details
- .
-LOCATION:Scotiabank Arena
-URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2025020590#
- games
-END:VEVENT
-BEGIN:VEVENT
-UID:nhl-2025020606@mooneyaoife.github.io
-DTSTAMP:20260716T125159Z
-DTSTART:20251230T003000Z
-DTEND:20251230T033000Z
-SUMMARY:Final: Columbus Blue Jackets 4 - 1 Ottawa Senators
-DESCRIPTION:Regular season. Times display in your calendar's local time. 
- Open the NHL Tracker Game Centre for scores\, analytics and game details
- .
-LOCATION:Canadian Tire Centre
-URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2025020606#
- games
-END:VEVENT
-BEGIN:VEVENT
-UID:nhl-2025020632@mooneyaoife.github.io
-DTSTAMP:20260716T125159Z
-DTSTART:20260101T180000Z
-DTEND:20260101T210000Z
-SUMMARY:Final: Washington Capitals 3 - 4 Ottawa Senators
-DESCRIPTION:Regular season. Times display in your calendar's local time. 
- Open the NHL Tracker Game Centre for scores\, analytics and game details
- .
-LOCATION:Canadian Tire Centre
-URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2025020632#
- games
-END:VEVENT
-BEGIN:VEVENT
-UID:nhl-2025020650@mooneyaoife.github.io
-DTSTAMP:20260716T125159Z
-DTSTART:20260104T000000Z
-DTEND:20260104T030000Z
-SUMMARY:Final: Winnipeg Jets 2 - 4 Ottawa Senators
-DESCRIPTION:Regular season. Times display in your calendar's local time. 
- Open the NHL Tracker Game Centre for scores\, analytics and game details
- .
-LOCATION:Canadian Tire Centre
-URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2025020650#
- games
-END:VEVENT
-BEGIN:VEVENT
-UID:nhl-2025020664@mooneyaoife.github.io
-DTSTAMP:20260716T125159Z
-DTSTART:20260106T003000Z
-DTEND:20260106T033000Z
-SUMMARY:Final: Detroit Red Wings 5 - 3 Ottawa Senators
-DESCRIPTION:Regular season. Times display in your calendar's local time. 
- Open the NHL Tracker Game Centre for scores\, analytics and game details
- .
-LOCATION:Canadian Tire Centre
-URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2025020664#
- games
-END:VEVENT
-BEGIN:VEVENT
-UID:nhl-2025020680@mooneyaoife.github.io
-DTSTAMP:20260716T125159Z
-DTSTART:20260108T023000Z
-DTEND:20260108T053000Z
-SUMMARY:Final: Ottawa Senators 1 - 3 Utah Mammoth
-DESCRIPTION:Regular season. Times display in your calendar's local time. 
- Open the NHL Tracker Game Centre for scores\, analytics and game details
- .
-LOCATION:Delta Center
-URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2025020680#
- games
-END:VEVENT
-BEGIN:VEVENT
-UID:nhl-2025020691@mooneyaoife.github.io
-DTSTAMP:20260716T125159Z
-DTSTART:20260109T020000Z
-DTEND:20260109T050000Z
-SUMMARY:Final: Ottawa Senators 2 - 8 Colorado Avalanche
-DESCRIPTION:Regular season. Times display in your calendar's local time. 
- Open the NHL Tracker Game Centre for scores\, analytics and game details
- .
-LOCATION:Ball Arena
-URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2025020691#
- games
-END:VEVENT
-BEGIN:VEVENT
-UID:nhl-2025020704@mooneyaoife.github.io
-DTSTAMP:20260716T125159Z
-DTSTART:20260111T000000Z
-DTEND:20260111T030000Z
-SUMMARY:Final: Florida Panthers 3 - 2 Ottawa Senators
-DESCRIPTION:Regular season. Times display in your calendar's local time. 
- Open the NHL Tracker Game Centre for scores\, analytics and game details
- .
-LOCATION:Canadian Tire Centre
-URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2025020704#
- games
-END:VEVENT
-BEGIN:VEVENT
-UID:nhl-2025020725@mooneyaoife.github.io
-DTSTAMP:20260716T125159Z
-DTSTART:20260114T000000Z
-DTEND:20260114T030000Z
-SUMMARY:Final: Vancouver Canucks 1 - 2 Ottawa Senators
-DESCRIPTION:Regular season. Times display in your calendar's local time. 
- Open the NHL Tracker Game Centre for scores\, analytics and game details
- .
-LOCATION:Canadian Tire Centre
-URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2025020725#
- games
-END:VEVENT
-BEGIN:VEVENT
-UID:nhl-2025020737@mooneyaoife.github.io
-DTSTAMP:20260716T125159Z
-DTSTART:20260115T003000Z
-DTEND:20260115T033000Z
-SUMMARY:Final: Ottawa Senators 8 - 4 New York Rangers
-DESCRIPTION:Regular season. Times display in your calendar's local time. 
- Open the NHL Tracker Game Centre for scores\, analytics and game details
- .
-LOCATION:Madison Square Garden
-URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2025020737#
- games
-END:VEVENT
-BEGIN:VEVENT
-UID:nhl-2025020758@mooneyaoife.github.io
-DTSTAMP:20260716T125159Z
-DTSTART:20260118T000000Z
-DTEND:20260118T030000Z
-SUMMARY:Final: Montréal Canadiens 6 - 5 Ottawa Senators
-DESCRIPTION:Regular season. Times display in your calendar's local time. 
- Open the NHL Tracker Game Centre for scores\, analytics and game details
- .
-LOCATION:Canadian Tire Centre
-URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2025020758#
- games
-END:VEVENT
-BEGIN:VEVENT
-UID:nhl-2025020768@mooneyaoife.github.io
-DTSTAMP:20260716T125159Z
-DTSTART:20260118T220000Z
-DTEND:20260119T010000Z
-SUMMARY:Final: Ottawa Senators 3 - 4 Detroit Red Wings
+UID:nhl-2026020046@mooneyaoife.github.io
+DTSTAMP:20260716T181958Z
+DTSTART:20261006T230000Z
+DTEND:20261007T020000Z
+SUMMARY:Ottawa Senators at Detroit Red Wings
 DESCRIPTION:Regular season. Times display in your calendar's local time. 
  Open the NHL Tracker Game Centre for scores\, analytics and game details
  .
 LOCATION:Little Caesars Arena
-URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2025020768#
+URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2026020046#
  games
 END:VEVENT
 BEGIN:VEVENT
-UID:nhl-2025020782@mooneyaoife.github.io
-DTSTAMP:20260716T125159Z
-DTSTART:20260121T000000Z
-DTEND:20260121T030000Z
-SUMMARY:Final: Ottawa Senators 4 - 1 Columbus Blue Jackets
-DESCRIPTION:Regular season. Times display in your calendar's local time. 
- Open the NHL Tracker Game Centre for scores\, analytics and game details
- .
-LOCATION:Nationwide Arena
-URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2025020782#
- games
-END:VEVENT
-BEGIN:VEVENT
-UID:nhl-2025020798@mooneyaoife.github.io
-DTSTAMP:20260716T125159Z
-DTSTART:20260123T010000Z
-DTEND:20260123T040000Z
-SUMMARY:Final: Ottawa Senators 3 - 5 Nashville Predators
-DESCRIPTION:Regular season. Times display in your calendar's local time. 
- Open the NHL Tracker Game Centre for scores\, analytics and game details
- .
-LOCATION:Bridgestone Arena
-URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2025020798#
- games
-END:VEVENT
-BEGIN:VEVENT
-UID:nhl-2025020813@mooneyaoife.github.io
-DTSTAMP:20260716T125159Z
-DTSTART:20260125T000000Z
-DTEND:20260125T030000Z
-SUMMARY:Final: Carolina Hurricanes 4 - 1 Ottawa Senators
+UID:nhl-2026020059@mooneyaoife.github.io
+DTSTAMP:20260716T181958Z
+DTSTART:20261008T230000Z
+DTEND:20261009T020000Z
+SUMMARY:Philadelphia Flyers at Ottawa Senators
 DESCRIPTION:Regular season. Times display in your calendar's local time. 
  Open the NHL Tracker Game Centre for scores\, analytics and game details
  .
 LOCATION:Canadian Tire Centre
-URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2025020813#
+URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2026020059#
  games
 END:VEVENT
 BEGIN:VEVENT
-UID:nhl-2025020821@mooneyaoife.github.io
-DTSTAMP:20260716T125159Z
-DTSTART:20260125T220000Z
-DTEND:20260126T010000Z
-SUMMARY:Final: Vegas Golden Knights 1 - 7 Ottawa Senators
+UID:nhl-2026020076@mooneyaoife.github.io
+DTSTAMP:20260716T181958Z
+DTSTART:20261010T230000Z
+DTEND:20261011T020000Z
+SUMMARY:Nashville Predators at Ottawa Senators
 DESCRIPTION:Regular season. Times display in your calendar's local time. 
  Open the NHL Tracker Game Centre for scores\, analytics and game details
  .
 LOCATION:Canadian Tire Centre
-URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2025020821#
+URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2026020076#
  games
 END:VEVENT
 BEGIN:VEVENT
-UID:nhl-2025020841@mooneyaoife.github.io
-DTSTAMP:20260716T125159Z
-DTSTART:20260129T003000Z
-DTEND:20260129T033000Z
-SUMMARY:Final: Colorado Avalanche 2 - 5 Ottawa Senators
-DESCRIPTION:Regular season. Times display in your calendar's local time. 
- Open the NHL Tracker Game Centre for scores\, analytics and game details
- .
-LOCATION:Canadian Tire Centre
-URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2025020841#
- games
-END:VEVENT
-BEGIN:VEVENT
-UID:nhl-2025020866@mooneyaoife.github.io
-DTSTAMP:20260716T125159Z
-DTSTART:20260201T000000Z
-DTEND:20260201T030000Z
-SUMMARY:Final: New Jersey Devils 1 - 4 Ottawa Senators
-DESCRIPTION:Regular season. Times display in your calendar's local time. 
- Open the NHL Tracker Game Centre for scores\, analytics and game details
- .
-LOCATION:Canadian Tire Centre
-URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2025020866#
- games
-END:VEVENT
-BEGIN:VEVENT
-UID:nhl-2025020877@mooneyaoife.github.io
-DTSTAMP:20260716T125159Z
-DTSTART:20260203T000000Z
-DTEND:20260203T030000Z
-SUMMARY:Final: Ottawa Senators 3 - 2 Pittsburgh Penguins
-DESCRIPTION:Regular season. Times display in your calendar's local time. 
- Open the NHL Tracker Game Centre for scores\, analytics and game details
- .
-LOCATION:PPG Paints Arena
-URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2025020877#
- games
-END:VEVENT
-BEGIN:VEVENT
-UID:nhl-2025020890@mooneyaoife.github.io
-DTSTAMP:20260716T125159Z
-DTSTART:20260204T000000Z
-DTEND:20260204T030000Z
-SUMMARY:Final: Ottawa Senators 3 - 4 Carolina Hurricanes
-DESCRIPTION:Regular season. Times display in your calendar's local time. 
- Open the NHL Tracker Game Centre for scores\, analytics and game details
- .
-LOCATION:Lenovo Center
-URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2025020890#
- games
-END:VEVENT
-BEGIN:VEVENT
-UID:nhl-2025020907@mooneyaoife.github.io
-DTSTAMP:20260716T125159Z
-DTSTART:20260206T000000Z
-DTEND:20260206T030000Z
-SUMMARY:Final: Ottawa Senators 2 - 1 Philadelphia Flyers
-DESCRIPTION:Regular season. Times display in your calendar's local time. 
- Open the NHL Tracker Game Centre for scores\, analytics and game details
- .
-LOCATION:Xfinity Mobile Arena
-URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2025020907#
- games
-END:VEVENT
-BEGIN:VEVENT
-UID:nhl-2025020920@mooneyaoife.github.io
-DTSTAMP:20260716T125159Z
-DTSTART:20260227T000000Z
-DTEND:20260227T030000Z
-SUMMARY:Final: Detroit Red Wings 2 - 1 Ottawa Senators
-DESCRIPTION:Regular season. Times display in your calendar's local time. 
- Open the NHL Tracker Game Centre for scores\, analytics and game details
- .
-LOCATION:Canadian Tire Centre
-URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2025020920#
- games
-END:VEVENT
-BEGIN:VEVENT
-UID:nhl-2025020939@mooneyaoife.github.io
-DTSTAMP:20260716T125159Z
-DTSTART:20260301T000000Z
-DTEND:20260301T030000Z
-SUMMARY:Final: Ottawa Senators 5 - 2 Toronto Maple Leafs
-DESCRIPTION:Regular season. Times display in your calendar's local time. 
- Open the NHL Tracker Game Centre for scores\, analytics and game details
- .
-LOCATION:Scotiabank Arena
-URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2025020939#
- games
-END:VEVENT
-BEGIN:VEVENT
-UID:nhl-2025020966@mooneyaoife.github.io
-DTSTAMP:20260716T125159Z
-DTSTART:20260304T020000Z
-DTEND:20260304T050000Z
-SUMMARY:Final: Ottawa Senators 4 - 5 Edmonton Oilers
-DESCRIPTION:Regular season. Times display in your calendar's local time. 
- Open the NHL Tracker Game Centre for scores\, analytics and game details
- .
-LOCATION:Rogers Place
-URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2025020966#
- games
-END:VEVENT
-BEGIN:VEVENT
-UID:nhl-2025020981@mooneyaoife.github.io
-DTSTAMP:20260716T125159Z
-DTSTART:20260306T020000Z
-DTEND:20260306T050000Z
-SUMMARY:Final: Ottawa Senators 4 - 1 Calgary Flames
-DESCRIPTION:Regular season. Times display in your calendar's local time. 
- Open the NHL Tracker Game Centre for scores\, analytics and game details
- .
-LOCATION:Scotiabank Saddledome
-URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2025020981#
- games
-END:VEVENT
-BEGIN:VEVENT
-UID:nhl-2025021000@mooneyaoife.github.io
-DTSTAMP:20260716T125159Z
-DTSTART:20260308T030000Z
-DTEND:20260308T060000Z
-SUMMARY:Final: Ottawa Senators 7 - 4 Seattle Kraken
-DESCRIPTION:Regular season. Times display in your calendar's local time. 
- Open the NHL Tracker Game Centre for scores\, analytics and game details
- .
-LOCATION:Climate Pledge Arena
-URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2025021000#
- games
-END:VEVENT
-BEGIN:VEVENT
-UID:nhl-2025021011@mooneyaoife.github.io
-DTSTAMP:20260716T125159Z
-DTSTART:20260310T010000Z
-DTEND:20260310T040000Z
-SUMMARY:Final: Ottawa Senators 2 - 0 Vancouver Canucks
-DESCRIPTION:Regular season. Times display in your calendar's local time. 
- Open the NHL Tracker Game Centre for scores\, analytics and game details
- .
-LOCATION:Rogers Arena
-URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2025021011#
- games
-END:VEVENT
-BEGIN:VEVENT
-UID:nhl-2025021025@mooneyaoife.github.io
-DTSTAMP:20260716T125159Z
-DTSTART:20260311T233000Z
-DTEND:20260312T023000Z
-SUMMARY:Final: Montréal Canadiens 3 - 2 Ottawa Senators
-DESCRIPTION:Regular season. Times display in your calendar's local time. 
- Open the NHL Tracker Game Centre for scores\, analytics and game details
- .
-LOCATION:Canadian Tire Centre
-URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2025021025#
- games
-END:VEVENT
-BEGIN:VEVENT
-UID:nhl-2025021043@mooneyaoife.github.io
-DTSTAMP:20260716T125159Z
-DTSTART:20260314T170000Z
-DTEND:20260314T200000Z
-SUMMARY:Final: Anaheim Ducks 0 - 2 Ottawa Senators
-DESCRIPTION:Regular season. Times display in your calendar's local time. 
- Open the NHL Tracker Game Centre for scores\, analytics and game details
- .
-LOCATION:Canadian Tire Centre
-URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2025021043#
- games
-END:VEVENT
-BEGIN:VEVENT
-UID:nhl-2025021058@mooneyaoife.github.io
-DTSTAMP:20260716T125159Z
-DTSTART:20260315T210000Z
-DTEND:20260316T000000Z
-SUMMARY:Final: San Jose Sharks 4 - 7 Ottawa Senators
-DESCRIPTION:Regular season. Times display in your calendar's local time. 
- Open the NHL Tracker Game Centre for scores\, analytics and game details
- .
-LOCATION:Canadian Tire Centre
-URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2025021058#
- games
-END:VEVENT
-BEGIN:VEVENT
-UID:nhl-2025021079@mooneyaoife.github.io
-DTSTAMP:20260716T125159Z
-DTSTART:20260318T233000Z
-DTEND:20260319T023000Z
-SUMMARY:Final: Ottawa Senators 1 - 4 Washington Capitals
-DESCRIPTION:Regular season. Times display in your calendar's local time. 
- Open the NHL Tracker Game Centre for scores\, analytics and game details
- .
-LOCATION:Capital One Arena
-URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2025021079#
- games
-END:VEVENT
-BEGIN:VEVENT
-UID:nhl-2025021084@mooneyaoife.github.io
-DTSTAMP:20260716T125159Z
-DTSTART:20260319T230000Z
-DTEND:20260320T020000Z
-SUMMARY:Final: New York Islanders 2 - 3 Ottawa Senators
-DESCRIPTION:Regular season. Times display in your calendar's local time. 
- Open the NHL Tracker Game Centre for scores\, analytics and game details
- .
-LOCATION:Canadian Tire Centre
-URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2025021084#
- games
-END:VEVENT
-BEGIN:VEVENT
-UID:nhl-2025021106@mooneyaoife.github.io
-DTSTAMP:20260716T125159Z
-DTSTART:20260321T230000Z
-DTEND:20260322T020000Z
-SUMMARY:Final: Toronto Maple Leafs 2 - 5 Ottawa Senators
-DESCRIPTION:Regular season. Times display in your calendar's local time. 
- Open the NHL Tracker Game Centre for scores\, analytics and game details
- .
-LOCATION:Canadian Tire Centre
-URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2025021106#
- games
-END:VEVENT
-BEGIN:VEVENT
-UID:nhl-2025021119@mooneyaoife.github.io
-DTSTAMP:20260716T125159Z
-DTSTART:20260323T233000Z
-DTEND:20260324T023000Z
-SUMMARY:Final: Ottawa Senators 2 - 1 New York Rangers
-DESCRIPTION:Regular season. Times display in your calendar's local time. 
- Open the NHL Tracker Game Centre for scores\, analytics and game details
- .
-LOCATION:Madison Square Garden
-URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2025021119#
- games
-END:VEVENT
-BEGIN:VEVENT
-UID:nhl-2025021122@mooneyaoife.github.io
-DTSTAMP:20260716T125159Z
-DTSTART:20260324T230000Z
-DTEND:20260325T020000Z
-SUMMARY:Final: Ottawa Senators 3 - 2 Detroit Red Wings
-DESCRIPTION:Regular season. Times display in your calendar's local time. 
- Open the NHL Tracker Game Centre for scores\, analytics and game details
- .
-LOCATION:Little Caesars Arena
-URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2025021122#
- games
-END:VEVENT
-BEGIN:VEVENT
-UID:nhl-2025021138@mooneyaoife.github.io
-DTSTAMP:20260716T125159Z
-DTSTART:20260326T230000Z
-DTEND:20260327T020000Z
-SUMMARY:Final: Pittsburgh Penguins 4 - 3 Ottawa Senators
-DESCRIPTION:Regular season. Times display in your calendar's local time. 
- Open the NHL Tracker Game Centre for scores\, analytics and game details
- .
-LOCATION:Canadian Tire Centre
-URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2025021138#
- games
-END:VEVENT
-BEGIN:VEVENT
-UID:nhl-2025021152@mooneyaoife.github.io
-DTSTAMP:20260716T125159Z
-DTSTART:20260328T170000Z
-DTEND:20260328T200000Z
-SUMMARY:Final: Ottawa Senators 2 - 4 Tampa Bay Lightning
-DESCRIPTION:Regular season. Times display in your calendar's local time. 
- Open the NHL Tracker Game Centre for scores\, analytics and game details
- .
-LOCATION:Benchmark International Arena
-URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2025021152#
- games
-END:VEVENT
-BEGIN:VEVENT
-UID:nhl-2025021181@mooneyaoife.github.io
-DTSTAMP:20260716T125159Z
-DTSTART:20260331T230000Z
-DTEND:20260401T020000Z
-SUMMARY:Final: Ottawa Senators 3 - 6 Florida Panthers
-DESCRIPTION:Regular season. Times display in your calendar's local time. 
- Open the NHL Tracker Game Centre for scores\, analytics and game details
- .
-LOCATION:Amerant Bank Arena
-URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2025021181#
- games
-END:VEVENT
-BEGIN:VEVENT
-UID:nhl-2025021191@mooneyaoife.github.io
-DTSTAMP:20260716T125159Z
-DTSTART:20260402T230000Z
-DTEND:20260403T020000Z
-SUMMARY:Final: Buffalo Sabres 1 - 4 Ottawa Senators
-DESCRIPTION:Regular season. Times display in your calendar's local time. 
- Open the NHL Tracker Game Centre for scores\, analytics and game details
- .
-LOCATION:Canadian Tire Centre
-URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2025021191#
- games
-END:VEVENT
-BEGIN:VEVENT
-UID:nhl-2025021208@mooneyaoife.github.io
-DTSTAMP:20260716T125159Z
-DTSTART:20260404T170000Z
-DTEND:20260404T200000Z
-SUMMARY:Final: Minnesota Wild 4 - 1 Ottawa Senators
-DESCRIPTION:Regular season. Times display in your calendar's local time. 
- Open the NHL Tracker Game Centre for scores\, analytics and game details
- .
-LOCATION:Canadian Tire Centre
-URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2025021208#
- games
-END:VEVENT
-BEGIN:VEVENT
-UID:nhl-2025021225@mooneyaoife.github.io
-DTSTAMP:20260716T125159Z
-DTSTART:20260405T210000Z
-DTEND:20260406T000000Z
-SUMMARY:Final: Carolina Hurricanes 3 - 6 Ottawa Senators
-DESCRIPTION:Regular season. Times display in your calendar's local time. 
- Open the NHL Tracker Game Centre for scores\, analytics and game details
- .
-LOCATION:Canadian Tire Centre
-URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2025021225#
- games
-END:VEVENT
-BEGIN:VEVENT
-UID:nhl-2025021234@mooneyaoife.github.io
-DTSTAMP:20260716T125159Z
-DTSTART:20260407T230000Z
-DTEND:20260408T020000Z
-SUMMARY:Final: Tampa Bay Lightning 2 - 6 Ottawa Senators
-DESCRIPTION:Regular season. Times display in your calendar's local time. 
- Open the NHL Tracker Game Centre for scores\, analytics and game details
- .
-LOCATION:Canadian Tire Centre
-URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2025021234#
- games
-END:VEVENT
-BEGIN:VEVENT
-UID:nhl-2025021249@mooneyaoife.github.io
-DTSTAMP:20260716T125159Z
-DTSTART:20260409T230000Z
-DTEND:20260410T020000Z
-SUMMARY:Final: Florida Panthers 1 - 5 Ottawa Senators
-DESCRIPTION:Regular season. Times display in your calendar's local time. 
- Open the NHL Tracker Game Centre for scores\, analytics and game details
- .
-LOCATION:Canadian Tire Centre
-URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2025021249#
- games
-END:VEVENT
-BEGIN:VEVENT
-UID:nhl-2025021262@mooneyaoife.github.io
-DTSTAMP:20260716T125159Z
-DTSTART:20260411T170000Z
-DTEND:20260411T200000Z
-SUMMARY:Final: Ottawa Senators 3 - 0 New York Islanders
-DESCRIPTION:Regular season. Times display in your calendar's local time. 
- Open the NHL Tracker Game Centre for scores\, analytics and game details
- .
-LOCATION:UBS Arena
-URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2025021262#
- games
-END:VEVENT
-BEGIN:VEVENT
-UID:nhl-2025021279@mooneyaoife.github.io
-DTSTAMP:20260716T125159Z
-DTSTART:20260412T230000Z
-DTEND:20260413T020000Z
-SUMMARY:Final: Ottawa Senators 3 - 4 New Jersey Devils
+UID:nhl-2026020088@mooneyaoife.github.io
+DTSTAMP:20260716T181958Z
+DTSTART:20261012T230000Z
+DTEND:20261013T020000Z
+SUMMARY:Ottawa Senators at New Jersey Devils
 DESCRIPTION:Regular season. Times display in your calendar's local time. 
  Open the NHL Tracker Game Centre for scores\, analytics and game details
  .
 LOCATION:Prudential Center
-URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2025021279#
+URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2026020088#
  games
 END:VEVENT
 BEGIN:VEVENT
-UID:nhl-2025021304@mooneyaoife.github.io
-DTSTAMP:20260716T125159Z
-DTSTART:20260415T233000Z
-DTEND:20260416T023000Z
-SUMMARY:Final: Toronto Maple Leafs 1 - 3 Ottawa Senators
+UID:nhl-2026020096@mooneyaoife.github.io
+DTSTAMP:20260716T181958Z
+DTSTART:20261013T233000Z
+DTEND:20261014T023000Z
+SUMMARY:St. Louis Blues at Ottawa Senators
 DESCRIPTION:Regular season. Times display in your calendar's local time. 
  Open the NHL Tracker Game Centre for scores\, analytics and game details
  .
 LOCATION:Canadian Tire Centre
-URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2025021304#
+URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2026020096#
  games
 END:VEVENT
 BEGIN:VEVENT
-UID:nhl-2025030131@mooneyaoife.github.io
-DTSTAMP:20260716T125159Z
-DTSTART:20260418T190000Z
-DTEND:20260418T220000Z
-SUMMARY:Final: Ottawa Senators 0 - 2 Carolina Hurricanes
-DESCRIPTION:Playoffs. Times display in your calendar's local time. Open t
- he NHL Tracker Game Centre for scores\, analytics and game details.
-LOCATION:Lenovo Center
-URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2025030131#
- games
-END:VEVENT
-BEGIN:VEVENT
-UID:nhl-2025030132@mooneyaoife.github.io
-DTSTAMP:20260716T125159Z
-DTSTART:20260420T233000Z
-DTEND:20260421T023000Z
-SUMMARY:Final: Ottawa Senators 2 - 3 Carolina Hurricanes
-DESCRIPTION:Playoffs. Times display in your calendar's local time. Open t
- he NHL Tracker Game Centre for scores\, analytics and game details.
-LOCATION:Lenovo Center
-URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2025030132#
- games
-END:VEVENT
-BEGIN:VEVENT
-UID:nhl-2025030133@mooneyaoife.github.io
-DTSTAMP:20260716T125159Z
-DTSTART:20260423T233000Z
-DTEND:20260424T023000Z
-SUMMARY:Final: Carolina Hurricanes 2 - 1 Ottawa Senators
-DESCRIPTION:Playoffs. Times display in your calendar's local time. Open t
- he NHL Tracker Game Centre for scores\, analytics and game details.
+UID:nhl-2026020109@mooneyaoife.github.io
+DTSTAMP:20260716T181958Z
+DTSTART:20261015T230000Z
+DTEND:20261016T020000Z
+SUMMARY:New York Islanders at Ottawa Senators
+DESCRIPTION:Regular season. Times display in your calendar's local time. 
+ Open the NHL Tracker Game Centre for scores\, analytics and game details
+ .
 LOCATION:Canadian Tire Centre
-URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2025030133#
+URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2026020109#
  games
 END:VEVENT
 BEGIN:VEVENT
-UID:nhl-2025030134@mooneyaoife.github.io
-DTSTAMP:20260716T125159Z
-DTSTART:20260425T190000Z
-DTEND:20260425T220000Z
-SUMMARY:Final: Carolina Hurricanes 4 - 2 Ottawa Senators
-DESCRIPTION:Playoffs. Times display in your calendar's local time. Open t
- he NHL Tracker Game Centre for scores\, analytics and game details.
+UID:nhl-2026020128@mooneyaoife.github.io
+DTSTAMP:20260716T181958Z
+DTSTART:20261017T230000Z
+DTEND:20261018T020000Z
+SUMMARY:Ottawa Senators at Philadelphia Flyers
+DESCRIPTION:Regular season. Times display in your calendar's local time. 
+ Open the NHL Tracker Game Centre for scores\, analytics and game details
+ .
+LOCATION:Xfinity Mobile Arena
+URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2026020128#
+ games
+END:VEVENT
+BEGIN:VEVENT
+UID:nhl-2026020153@mooneyaoife.github.io
+DTSTAMP:20260716T181958Z
+DTSTART:20261021T233000Z
+DTEND:20261022T023000Z
+SUMMARY:Florida Panthers at Ottawa Senators
+DESCRIPTION:Regular season. Times display in your calendar's local time. 
+ Open the NHL Tracker Game Centre for scores\, analytics and game details
+ .
 LOCATION:Canadian Tire Centre
-URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2025030134#
+URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2026020153#
+ games
+END:VEVENT
+BEGIN:VEVENT
+UID:nhl-2026020156@mooneyaoife.github.io
+DTSTAMP:20260716T181958Z
+DTSTART:20261022T230000Z
+DTEND:20261023T020000Z
+SUMMARY:San Jose Sharks at Ottawa Senators
+DESCRIPTION:Regular season. Times display in your calendar's local time. 
+ Open the NHL Tracker Game Centre for scores\, analytics and game details
+ .
+LOCATION:Canadian Tire Centre
+URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2026020156#
+ games
+END:VEVENT
+BEGIN:VEVENT
+UID:nhl-2026020171@mooneyaoife.github.io
+DTSTAMP:20260716T181958Z
+DTSTART:20261024T230000Z
+DTEND:20261025T020000Z
+SUMMARY:New York Rangers at Ottawa Senators
+DESCRIPTION:Regular season. Times display in your calendar's local time. 
+ Open the NHL Tracker Game Centre for scores\, analytics and game details
+ .
+LOCATION:Canadian Tire Centre
+URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2026020171#
+ games
+END:VEVENT
+BEGIN:VEVENT
+UID:nhl-2026020196@mooneyaoife.github.io
+DTSTAMP:20260716T181958Z
+DTSTART:20261028T020000Z
+DTEND:20261028T050000Z
+SUMMARY:Ottawa Senators at Vegas Golden Knights
+DESCRIPTION:Regular season. Times display in your calendar's local time. 
+ Open the NHL Tracker Game Centre for scores\, analytics and game details
+ .
+LOCATION:T-Mobile Arena
+URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2026020196#
+ games
+END:VEVENT
+BEGIN:VEVENT
+UID:nhl-2026020212@mooneyaoife.github.io
+DTSTAMP:20260716T181958Z
+DTSTART:20261030T020000Z
+DTEND:20261030T050000Z
+SUMMARY:Ottawa Senators at Los Angeles Kings
+DESCRIPTION:Regular season. Times display in your calendar's local time. 
+ Open the NHL Tracker Game Centre for scores\, analytics and game details
+ .
+LOCATION:Crypto.com Arena
+URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2026020212#
+ games
+END:VEVENT
+BEGIN:VEVENT
+UID:nhl-2026020222@mooneyaoife.github.io
+DTSTAMP:20260716T181958Z
+DTSTART:20261031T200000Z
+DTEND:20261031T230000Z
+SUMMARY:Ottawa Senators at San Jose Sharks
+DESCRIPTION:Regular season. Times display in your calendar's local time. 
+ Open the NHL Tracker Game Centre for scores\, analytics and game details
+ .
+LOCATION:SAP Center at San Jose
+URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2026020222#
+ games
+END:VEVENT
+BEGIN:VEVENT
+UID:nhl-2026020231@mooneyaoife.github.io
+DTSTAMP:20260716T181958Z
+DTSTART:20261102T010000Z
+DTEND:20261102T040000Z
+SUMMARY:Ottawa Senators at Anaheim Ducks
+DESCRIPTION:Regular season. Times display in your calendar's local time. 
+ Open the NHL Tracker Game Centre for scores\, analytics and game details
+ .
+LOCATION:Honda Center
+URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2026020231#
+ games
+END:VEVENT
+BEGIN:VEVENT
+UID:nhl-2026020247@mooneyaoife.github.io
+DTSTAMP:20260716T181958Z
+DTSTART:20261105T003000Z
+DTEND:20261105T033000Z
+SUMMARY:Ottawa Senators at Buffalo Sabres
+DESCRIPTION:Regular season. Times display in your calendar's local time. 
+ Open the NHL Tracker Game Centre for scores\, analytics and game details
+ .
+LOCATION:KeyBank Center
+URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2026020247#
+ games
+END:VEVENT
+BEGIN:VEVENT
+UID:nhl-2026020269@mooneyaoife.github.io
+DTSTAMP:20260716T181958Z
+DTSTART:20261108T000000Z
+DTEND:20261108T030000Z
+SUMMARY:Utah Mammoth at Ottawa Senators
+DESCRIPTION:Regular season. Times display in your calendar's local time. 
+ Open the NHL Tracker Game Centre for scores\, analytics and game details
+ .
+LOCATION:Canadian Tire Centre
+URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2026020269#
+ games
+END:VEVENT
+BEGIN:VEVENT
+UID:nhl-2026020288@mooneyaoife.github.io
+DTSTAMP:20260716T181958Z
+DTSTART:20261111T000000Z
+DTEND:20261111T030000Z
+SUMMARY:Washington Capitals at Ottawa Senators
+DESCRIPTION:Regular season. Times display in your calendar's local time. 
+ Open the NHL Tracker Game Centre for scores\, analytics and game details
+ .
+LOCATION:Canadian Tire Centre
+URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2026020288#
+ games
+END:VEVENT
+BEGIN:VEVENT
+UID:nhl-2026020301@mooneyaoife.github.io
+DTSTAMP:20260716T181958Z
+DTSTART:20261113T000000Z
+DTEND:20261113T030000Z
+SUMMARY:Colorado Avalanche at Ottawa Senators
+DESCRIPTION:Regular season. Times display in your calendar's local time. 
+ Open the NHL Tracker Game Centre for scores\, analytics and game details
+ .
+LOCATION:Canadian Tire Centre
+URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2026020301#
+ games
+END:VEVENT
+BEGIN:VEVENT
+UID:nhl-2026020317@mooneyaoife.github.io
+DTSTAMP:20260716T181958Z
+DTSTART:20261115T000000Z
+DTEND:20261115T030000Z
+SUMMARY:Ottawa Senators at Pittsburgh Penguins
+DESCRIPTION:Regular season. Times display in your calendar's local time. 
+ Open the NHL Tracker Game Centre for scores\, analytics and game details
+ .
+LOCATION:PPG Paints Arena
+URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2026020317#
+ games
+END:VEVENT
+BEGIN:VEVENT
+UID:nhl-2026020341@mooneyaoife.github.io
+DTSTAMP:20260716T181958Z
+DTSTART:20261118T010000Z
+DTEND:20261118T040000Z
+SUMMARY:Ottawa Senators at Winnipeg Jets
+DESCRIPTION:Regular season. Times display in your calendar's local time. 
+ Open the NHL Tracker Game Centre for scores\, analytics and game details
+ .
+LOCATION:Canada Life Centre
+URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2026020341#
+ games
+END:VEVENT
+BEGIN:VEVENT
+UID:nhl-2026020348@mooneyaoife.github.io
+DTSTAMP:20260716T181958Z
+DTSTART:20261120T000000Z
+DTEND:20261120T030000Z
+SUMMARY:Philadelphia Flyers at Ottawa Senators
+DESCRIPTION:Regular season. Times display in your calendar's local time. 
+ Open the NHL Tracker Game Centre for scores\, analytics and game details
+ .
+LOCATION:Canadian Tire Centre
+URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2026020348#
+ games
+END:VEVENT
+BEGIN:VEVENT
+UID:nhl-2026020366@mooneyaoife.github.io
+DTSTAMP:20260716T181958Z
+DTSTART:20261122T000000Z
+DTEND:20261122T030000Z
+SUMMARY:Los Angeles Kings at Ottawa Senators
+DESCRIPTION:Regular season. Times display in your calendar's local time. 
+ Open the NHL Tracker Game Centre for scores\, analytics and game details
+ .
+LOCATION:Canadian Tire Centre
+URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2026020366#
+ games
+END:VEVENT
+BEGIN:VEVENT
+UID:nhl-2026020380@mooneyaoife.github.io
+DTSTAMP:20260716T181958Z
+DTSTART:20261124T003000Z
+DTEND:20261124T033000Z
+SUMMARY:Calgary Flames at Ottawa Senators
+DESCRIPTION:Regular season. Times display in your calendar's local time. 
+ Open the NHL Tracker Game Centre for scores\, analytics and game details
+ .
+LOCATION:Canadian Tire Centre
+URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2026020380#
+ games
+END:VEVENT
+BEGIN:VEVENT
+UID:nhl-2026020389@mooneyaoife.github.io
+DTSTAMP:20260716T181958Z
+DTSTART:20261126T000000Z
+DTEND:20261126T030000Z
+SUMMARY:Ottawa Senators at Florida Panthers
+DESCRIPTION:Regular season. Times display in your calendar's local time. 
+ Open the NHL Tracker Game Centre for scores\, analytics and game details
+ .
+LOCATION:Amerant Bank Arena
+URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2026020389#
+ games
+END:VEVENT
+BEGIN:VEVENT
+UID:nhl-2026020404@mooneyaoife.github.io
+DTSTAMP:20260716T181958Z
+DTSTART:20261127T200000Z
+DTEND:20261127T230000Z
+SUMMARY:Ottawa Senators at Tampa Bay Lightning
+DESCRIPTION:Regular season. Times display in your calendar's local time. 
+ Open the NHL Tracker Game Centre for scores\, analytics and game details
+ .
+LOCATION:Benchmark International Arena
+URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2026020404#
+ games
+END:VEVENT
+BEGIN:VEVENT
+UID:nhl-2026020421@mooneyaoife.github.io
+DTSTAMP:20260716T181958Z
+DTSTART:20261129T000000Z
+DTEND:20261129T030000Z
+SUMMARY:Ottawa Senators at Carolina Hurricanes
+DESCRIPTION:Regular season. Times display in your calendar's local time. 
+ Open the NHL Tracker Game Centre for scores\, analytics and game details
+ .
+LOCATION:Lenovo Center
+URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2026020421#
+ games
+END:VEVENT
+BEGIN:VEVENT
+UID:nhl-2026020430@mooneyaoife.github.io
+DTSTAMP:20260716T181958Z
+DTSTART:20261130T180000Z
+DTEND:20261130T210000Z
+SUMMARY:Ottawa Senators at Nashville Predators
+DESCRIPTION:Regular season. Times display in your calendar's local time. 
+ Open the NHL Tracker Game Centre for scores\, analytics and game details
+ .
+LOCATION:Bridgestone Arena
+URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2026020430#
+ games
+END:VEVENT
+BEGIN:VEVENT
+UID:nhl-2026020449@mooneyaoife.github.io
+DTSTAMP:20260716T181958Z
+DTSTART:20261204T000000Z
+DTEND:20261204T030000Z
+SUMMARY:New Jersey Devils at Ottawa Senators
+DESCRIPTION:Regular season. Times display in your calendar's local time. 
+ Open the NHL Tracker Game Centre for scores\, analytics and game details
+ .
+LOCATION:Canadian Tire Centre
+URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2026020449#
+ games
+END:VEVENT
+BEGIN:VEVENT
+UID:nhl-2026020469@mooneyaoife.github.io
+DTSTAMP:20260716T181958Z
+DTSTART:20261206T000000Z
+DTEND:20261206T030000Z
+SUMMARY:Tampa Bay Lightning at Ottawa Senators
+DESCRIPTION:Regular season. Times display in your calendar's local time. 
+ Open the NHL Tracker Game Centre for scores\, analytics and game details
+ .
+LOCATION:Canadian Tire Centre
+URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2026020469#
+ games
+END:VEVENT
+BEGIN:VEVENT
+UID:nhl-2026020478@mooneyaoife.github.io
+DTSTAMP:20260716T181958Z
+DTSTART:20261207T000000Z
+DTEND:20261207T030000Z
+SUMMARY:Ottawa Senators at Montréal Canadiens
+DESCRIPTION:Regular season. Times display in your calendar's local time. 
+ Open the NHL Tracker Game Centre for scores\, analytics and game details
+ .
+LOCATION:Centre Bell
+URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2026020478#
+ games
+END:VEVENT
+BEGIN:VEVENT
+UID:nhl-2026020487@mooneyaoife.github.io
+DTSTAMP:20260716T181958Z
+DTSTART:20261209T000000Z
+DTEND:20261209T030000Z
+SUMMARY:Anaheim Ducks at Ottawa Senators
+DESCRIPTION:Regular season. Times display in your calendar's local time. 
+ Open the NHL Tracker Game Centre for scores\, analytics and game details
+ .
+LOCATION:Canadian Tire Centre
+URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2026020487#
+ games
+END:VEVENT
+BEGIN:VEVENT
+UID:nhl-2026020501@mooneyaoife.github.io
+DTSTAMP:20260716T181958Z
+DTSTART:20261211T000000Z
+DTEND:20261211T030000Z
+SUMMARY:Vegas Golden Knights at Ottawa Senators
+DESCRIPTION:Regular season. Times display in your calendar's local time. 
+ Open the NHL Tracker Game Centre for scores\, analytics and game details
+ .
+LOCATION:Canadian Tire Centre
+URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2026020501#
+ games
+END:VEVENT
+BEGIN:VEVENT
+UID:nhl-2026020520@mooneyaoife.github.io
+DTSTAMP:20260716T181958Z
+DTSTART:20261213T000000Z
+DTEND:20261213T030000Z
+SUMMARY:Edmonton Oilers at Ottawa Senators
+DESCRIPTION:Regular season. Times display in your calendar's local time. 
+ Open the NHL Tracker Game Centre for scores\, analytics and game details
+ .
+LOCATION:Canadian Tire Centre
+URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2026020520#
+ games
+END:VEVENT
+BEGIN:VEVENT
+UID:nhl-2026020531@mooneyaoife.github.io
+DTSTAMP:20260716T181958Z
+DTSTART:20261214T190000Z
+DTEND:20261214T220000Z
+SUMMARY:Buffalo Sabres at Ottawa Senators
+DESCRIPTION:Regular season. Times display in your calendar's local time. 
+ Open the NHL Tracker Game Centre for scores\, analytics and game details
+ .
+LOCATION:Canadian Tire Centre
+URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2026020531#
+ games
+END:VEVENT
+BEGIN:VEVENT
+UID:nhl-2026020560@mooneyaoife.github.io
+DTSTAMP:20260716T181958Z
+DTSTART:20261218T180000Z
+DTEND:20261218T210000Z
+SUMMARY:Chicago Blackhawks at Ottawa Senators
+DESCRIPTION:Regular season. Times display in your calendar's local time. 
+ Open the NHL Tracker Game Centre for scores\, analytics and game details
+ .
+LOCATION:PSD Bank Dome
+URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2026020560#
+ games
+END:VEVENT
+BEGIN:VEVENT
+UID:nhl-2026020577@mooneyaoife.github.io
+DTSTAMP:20260716T181958Z
+DTSTART:20261220T130000Z
+DTEND:20261220T160000Z
+SUMMARY:Ottawa Senators at Chicago Blackhawks
+DESCRIPTION:Regular season. Times display in your calendar's local time. 
+ Open the NHL Tracker Game Centre for scores\, analytics and game details
+ .
+LOCATION:PSD Bank Dome
+URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2026020577#
+ games
+END:VEVENT
+BEGIN:VEVENT
+UID:nhl-2026020617@mooneyaoife.github.io
+DTSTAMP:20260716T181958Z
+DTSTART:20261228T000000Z
+DTEND:20261228T030000Z
+SUMMARY:Ottawa Senators at New York Islanders
+DESCRIPTION:Regular season. Times display in your calendar's local time. 
+ Open the NHL Tracker Game Centre for scores\, analytics and game details
+ .
+LOCATION:UBS Arena
+URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2026020617#
+ games
+END:VEVENT
+BEGIN:VEVENT
+UID:nhl-2026020627@mooneyaoife.github.io
+DTSTAMP:20260716T181958Z
+DTSTART:20261230T000000Z
+DTEND:20261230T030000Z
+SUMMARY:Dallas Stars at Ottawa Senators
+DESCRIPTION:Regular season. Times display in your calendar's local time. 
+ Open the NHL Tracker Game Centre for scores\, analytics and game details
+ .
+LOCATION:Canadian Tire Centre
+URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2026020627#
+ games
+END:VEVENT
+BEGIN:VEVENT
+UID:nhl-2026020642@mooneyaoife.github.io
+DTSTAMP:20260716T181958Z
+DTSTART:20261231T190000Z
+DTEND:20261231T220000Z
+SUMMARY:Pittsburgh Penguins at Ottawa Senators
+DESCRIPTION:Regular season. Times display in your calendar's local time. 
+ Open the NHL Tracker Game Centre for scores\, analytics and game details
+ .
+LOCATION:Canadian Tire Centre
+URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2026020642#
+ games
+END:VEVENT
+BEGIN:VEVENT
+UID:nhl-2026020658@mooneyaoife.github.io
+DTSTAMP:20260716T181958Z
+DTSTART:20270103T000000Z
+DTEND:20270103T030000Z
+SUMMARY:Ottawa Senators at Washington Capitals
+DESCRIPTION:Regular season. Times display in your calendar's local time. 
+ Open the NHL Tracker Game Centre for scores\, analytics and game details
+ .
+LOCATION:Capital One Arena
+URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2026020658#
+ games
+END:VEVENT
+BEGIN:VEVENT
+UID:nhl-2026020686@mooneyaoife.github.io
+DTSTAMP:20260716T181958Z
+DTSTART:20270106T020000Z
+DTEND:20270106T050000Z
+SUMMARY:Ottawa Senators at Utah Mammoth
+DESCRIPTION:Regular season. Times display in your calendar's local time. 
+ Open the NHL Tracker Game Centre for scores\, analytics and game details
+ .
+LOCATION:Delta Center
+URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2026020686#
+ games
+END:VEVENT
+BEGIN:VEVENT
+UID:nhl-2026020691@mooneyaoife.github.io
+DTSTAMP:20260716T181958Z
+DTSTART:20270107T023000Z
+DTEND:20270107T053000Z
+SUMMARY:Ottawa Senators at Colorado Avalanche
+DESCRIPTION:Regular season. Times display in your calendar's local time. 
+ Open the NHL Tracker Game Centre for scores\, analytics and game details
+ .
+LOCATION:Ball Arena
+URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2026020691#
+ games
+END:VEVENT
+BEGIN:VEVENT
+UID:nhl-2026020705@mooneyaoife.github.io
+DTSTAMP:20260716T181958Z
+DTSTART:20270109T010000Z
+DTEND:20270109T040000Z
+SUMMARY:Ottawa Senators at St. Louis Blues
+DESCRIPTION:Regular season. Times display in your calendar's local time. 
+ Open the NHL Tracker Game Centre for scores\, analytics and game details
+ .
+LOCATION:Enterprise Center
+URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2026020705#
+ games
+END:VEVENT
+BEGIN:VEVENT
+UID:nhl-2026020734@mooneyaoife.github.io
+DTSTAMP:20260716T181958Z
+DTSTART:20270113T010000Z
+DTEND:20270113T040000Z
+SUMMARY:Ottawa Senators at Dallas Stars
+DESCRIPTION:Regular season. Times display in your calendar's local time. 
+ Open the NHL Tracker Game Centre for scores\, analytics and game details
+ .
+LOCATION:American Airlines Center
+URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2026020734#
+ games
+END:VEVENT
+BEGIN:VEVENT
+UID:nhl-2026020746@mooneyaoife.github.io
+DTSTAMP:20260716T181958Z
+DTSTART:20270115T000000Z
+DTEND:20270115T030000Z
+SUMMARY:Winnipeg Jets at Ottawa Senators
+DESCRIPTION:Regular season. Times display in your calendar's local time. 
+ Open the NHL Tracker Game Centre for scores\, analytics and game details
+ .
+LOCATION:Canadian Tire Centre
+URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2026020746#
+ games
+END:VEVENT
+BEGIN:VEVENT
+UID:nhl-2026020759@mooneyaoife.github.io
+DTSTAMP:20260716T181958Z
+DTSTART:20270116T203000Z
+DTEND:20270116T233000Z
+SUMMARY:Ottawa Senators at Tampa Bay Lightning
+DESCRIPTION:Regular season. Times display in your calendar's local time. 
+ Open the NHL Tracker Game Centre for scores\, analytics and game details
+ .
+LOCATION:Benchmark International Arena
+URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2026020759#
+ games
+END:VEVENT
+BEGIN:VEVENT
+UID:nhl-2026020784@mooneyaoife.github.io
+DTSTAMP:20260716T181958Z
+DTSTART:20270119T003000Z
+DTEND:20270119T033000Z
+SUMMARY:Ottawa Senators at Florida Panthers
+DESCRIPTION:Regular season. Times display in your calendar's local time. 
+ Open the NHL Tracker Game Centre for scores\, analytics and game details
+ .
+LOCATION:Amerant Bank Arena
+URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2026020784#
+ games
+END:VEVENT
+BEGIN:VEVENT
+UID:nhl-2026020794@mooneyaoife.github.io
+DTSTAMP:20260716T181958Z
+DTSTART:20270121T003000Z
+DTEND:20270121T033000Z
+SUMMARY:Toronto Maple Leafs at Ottawa Senators
+DESCRIPTION:Regular season. Times display in your calendar's local time. 
+ Open the NHL Tracker Game Centre for scores\, analytics and game details
+ .
+LOCATION:Canadian Tire Centre
+URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2026020794#
+ games
+END:VEVENT
+BEGIN:VEVENT
+UID:nhl-2026020813@mooneyaoife.github.io
+DTSTAMP:20260716T181958Z
+DTSTART:20270123T203000Z
+DTEND:20270123T233000Z
+SUMMARY:Columbus Blue Jackets at Ottawa Senators
+DESCRIPTION:Regular season. Times display in your calendar's local time. 
+ Open the NHL Tracker Game Centre for scores\, analytics and game details
+ .
+LOCATION:Canadian Tire Centre
+URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2026020813#
+ games
+END:VEVENT
+BEGIN:VEVENT
+UID:nhl-2026020832@mooneyaoife.github.io
+DTSTAMP:20260716T181958Z
+DTSTART:20270126T003000Z
+DTEND:20270126T033000Z
+SUMMARY:Carolina Hurricanes at Ottawa Senators
+DESCRIPTION:Regular season. Times display in your calendar's local time. 
+ Open the NHL Tracker Game Centre for scores\, analytics and game details
+ .
+LOCATION:Canadian Tire Centre
+URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2026020832#
+ games
+END:VEVENT
+BEGIN:VEVENT
+UID:nhl-2026020849@mooneyaoife.github.io
+DTSTAMP:20260716T181958Z
+DTSTART:20270129T000000Z
+DTEND:20270129T030000Z
+SUMMARY:Boston Bruins at Ottawa Senators
+DESCRIPTION:Regular season. Times display in your calendar's local time. 
+ Open the NHL Tracker Game Centre for scores\, analytics and game details
+ .
+LOCATION:Canadian Tire Centre
+URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2026020849#
+ games
+END:VEVENT
+BEGIN:VEVENT
+UID:nhl-2026020870@mooneyaoife.github.io
+DTSTAMP:20260716T181958Z
+DTSTART:20270131T000000Z
+DTEND:20270131T030000Z
+SUMMARY:New York Rangers at Ottawa Senators
+DESCRIPTION:Regular season. Times display in your calendar's local time. 
+ Open the NHL Tracker Game Centre for scores\, analytics and game details
+ .
+LOCATION:Canadian Tire Centre
+URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2026020870#
+ games
+END:VEVENT
+BEGIN:VEVENT
+UID:nhl-2026020897@mooneyaoife.github.io
+DTSTAMP:20260716T181958Z
+DTSTART:20270210T000000Z
+DTEND:20270210T030000Z
+SUMMARY:Columbus Blue Jackets at Ottawa Senators
+DESCRIPTION:Regular season. Times display in your calendar's local time. 
+ Open the NHL Tracker Game Centre for scores\, analytics and game details
+ .
+LOCATION:Canadian Tire Centre
+URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2026020897#
+ games
+END:VEVENT
+BEGIN:VEVENT
+UID:nhl-2026020903@mooneyaoife.github.io
+DTSTAMP:20260716T181958Z
+DTSTART:20270212T000000Z
+DTEND:20270212T030000Z
+SUMMARY:Ottawa Senators at Columbus Blue Jackets
+DESCRIPTION:Regular season. Times display in your calendar's local time. 
+ Open the NHL Tracker Game Centre for scores\, analytics and game details
+ .
+LOCATION:Nationwide Arena
+URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2026020903#
+ games
+END:VEVENT
+BEGIN:VEVENT
+UID:nhl-2026020918@mooneyaoife.github.io
+DTSTAMP:20260716T181958Z
+DTSTART:20270214T000000Z
+DTEND:20270214T030000Z
+SUMMARY:Toronto Maple Leafs at Ottawa Senators
+DESCRIPTION:Regular season. Times display in your calendar's local time. 
+ Open the NHL Tracker Game Centre for scores\, analytics and game details
+ .
+LOCATION:Canadian Tire Centre
+URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2026020918#
+ games
+END:VEVENT
+BEGIN:VEVENT
+UID:nhl-2026020934@mooneyaoife.github.io
+DTSTAMP:20260716T181958Z
+DTSTART:20270216T003000Z
+DTEND:20270216T033000Z
+SUMMARY:Ottawa Senators at Minnesota Wild
+DESCRIPTION:Regular season. Times display in your calendar's local time. 
+ Open the NHL Tracker Game Centre for scores\, analytics and game details
+ .
+LOCATION:Grand Casino Arena
+URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2026020934#
+ games
+END:VEVENT
+BEGIN:VEVENT
+UID:nhl-2026020950@mooneyaoife.github.io
+DTSTAMP:20260716T181958Z
+DTSTART:20270218T024000Z
+DTEND:20270218T054000Z
+SUMMARY:Ottawa Senators at Seattle Kraken
+DESCRIPTION:Regular season. Times display in your calendar's local time. 
+ Open the NHL Tracker Game Centre for scores\, analytics and game details
+ .
+LOCATION:Climate Pledge Arena
+URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2026020950#
+ games
+END:VEVENT
+BEGIN:VEVENT
+UID:nhl-2026020959@mooneyaoife.github.io
+DTSTAMP:20260716T181958Z
+DTSTART:20270219T020000Z
+DTEND:20270219T050000Z
+SUMMARY:Ottawa Senators at Vancouver Canucks
+DESCRIPTION:Regular season. Times display in your calendar's local time. 
+ Open the NHL Tracker Game Centre for scores\, analytics and game details
+ .
+LOCATION:Rogers Arena
+URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2026020959#
+ games
+END:VEVENT
+BEGIN:VEVENT
+UID:nhl-2026020984@mooneyaoife.github.io
+DTSTAMP:20260716T181958Z
+DTSTART:20270222T000000Z
+DTEND:20270222T030000Z
+SUMMARY:Ottawa Senators at Calgary Flames
+DESCRIPTION:Regular season. Times display in your calendar's local time. 
+ Open the NHL Tracker Game Centre for scores\, analytics and game details
+ .
+LOCATION:Scotiabank Saddledome
+URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2026020984#
+ games
+END:VEVENT
+BEGIN:VEVENT
+UID:nhl-2026020988@mooneyaoife.github.io
+DTSTAMP:20260716T181958Z
+DTSTART:20270223T003000Z
+DTEND:20270223T033000Z
+SUMMARY:Ottawa Senators at Edmonton Oilers
+DESCRIPTION:Regular season. Times display in your calendar's local time. 
+ Open the NHL Tracker Game Centre for scores\, analytics and game details
+ .
+LOCATION:Rogers Place
+URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2026020988#
+ games
+END:VEVENT
+BEGIN:VEVENT
+UID:nhl-2026021004@mooneyaoife.github.io
+DTSTAMP:20260716T181958Z
+DTSTART:20270226T000000Z
+DTEND:20270226T030000Z
+SUMMARY:Detroit Red Wings at Ottawa Senators
+DESCRIPTION:Regular season. Times display in your calendar's local time. 
+ Open the NHL Tracker Game Centre for scores\, analytics and game details
+ .
+LOCATION:Canadian Tire Centre
+URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2026021004#
+ games
+END:VEVENT
+BEGIN:VEVENT
+UID:nhl-2026021012@mooneyaoife.github.io
+DTSTAMP:20260716T181958Z
+DTSTART:20270227T003000Z
+DTEND:20270227T033000Z
+SUMMARY:Ottawa Senators at Buffalo Sabres
+DESCRIPTION:Regular season. Times display in your calendar's local time. 
+ Open the NHL Tracker Game Centre for scores\, analytics and game details
+ .
+LOCATION:KeyBank Center
+URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2026021012#
+ games
+END:VEVENT
+BEGIN:VEVENT
+UID:nhl-2026021045@mooneyaoife.github.io
+DTSTAMP:20260716T181958Z
+DTSTART:20270303T000000Z
+DTEND:20270303T030000Z
+SUMMARY:Ottawa Senators at New Jersey Devils
+DESCRIPTION:Regular season. Times display in your calendar's local time. 
+ Open the NHL Tracker Game Centre for scores\, analytics and game details
+ .
+LOCATION:Prudential Center
+URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2026021045#
+ games
+END:VEVENT
+BEGIN:VEVENT
+UID:nhl-2026021058@mooneyaoife.github.io
+DTSTAMP:20260716T181958Z
+DTSTART:20270305T000000Z
+DTEND:20270305T030000Z
+SUMMARY:Boston Bruins at Ottawa Senators
+DESCRIPTION:Regular season. Times display in your calendar's local time. 
+ Open the NHL Tracker Game Centre for scores\, analytics and game details
+ .
+LOCATION:Canadian Tire Centre
+URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2026021058#
+ games
+END:VEVENT
+BEGIN:VEVENT
+UID:nhl-2026021073@mooneyaoife.github.io
+DTSTAMP:20260716T181958Z
+DTSTART:20270306T203000Z
+DTEND:20270306T233000Z
+SUMMARY:Seattle Kraken at Ottawa Senators
+DESCRIPTION:Regular season. Times display in your calendar's local time. 
+ Open the NHL Tracker Game Centre for scores\, analytics and game details
+ .
+LOCATION:Canadian Tire Centre
+URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2026021073#
+ games
+END:VEVENT
+BEGIN:VEVENT
+UID:nhl-2026021085@mooneyaoife.github.io
+DTSTAMP:20260716T181958Z
+DTSTART:20270307T220000Z
+DTEND:20270308T010000Z
+SUMMARY:Buffalo Sabres at Ottawa Senators
+DESCRIPTION:Regular season. Times display in your calendar's local time. 
+ Open the NHL Tracker Game Centre for scores\, analytics and game details
+ .
+LOCATION:Canadian Tire Centre
+URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2026021085#
+ games
+END:VEVENT
+BEGIN:VEVENT
+UID:nhl-2026021095@mooneyaoife.github.io
+DTSTAMP:20260716T181958Z
+DTSTART:20270310T000000Z
+DTEND:20270310T030000Z
+SUMMARY:Ottawa Senators at Pittsburgh Penguins
+DESCRIPTION:Regular season. Times display in your calendar's local time. 
+ Open the NHL Tracker Game Centre for scores\, analytics and game details
+ .
+LOCATION:PPG Paints Arena
+URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2026021095#
+ games
+END:VEVENT
+BEGIN:VEVENT
+UID:nhl-2026021107@mooneyaoife.github.io
+DTSTAMP:20260716T181958Z
+DTSTART:20270312T000000Z
+DTEND:20270312T030000Z
+SUMMARY:Minnesota Wild at Ottawa Senators
+DESCRIPTION:Regular season. Times display in your calendar's local time. 
+ Open the NHL Tracker Game Centre for scores\, analytics and game details
+ .
+LOCATION:Canadian Tire Centre
+URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2026021107#
+ games
+END:VEVENT
+BEGIN:VEVENT
+UID:nhl-2026021126@mooneyaoife.github.io
+DTSTAMP:20260716T181958Z
+DTSTART:20270314T000000Z
+DTEND:20270314T030000Z
+SUMMARY:Montréal Canadiens at Ottawa Senators
+DESCRIPTION:Regular season. Times display in your calendar's local time. 
+ Open the NHL Tracker Game Centre for scores\, analytics and game details
+ .
+LOCATION:Canadian Tire Centre
+URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2026021126#
+ games
+END:VEVENT
+BEGIN:VEVENT
+UID:nhl-2026021136@mooneyaoife.github.io
+DTSTAMP:20260716T181958Z
+DTSTART:20270314T210000Z
+DTEND:20270315T000000Z
+SUMMARY:Vancouver Canucks at Ottawa Senators
+DESCRIPTION:Regular season. Times display in your calendar's local time. 
+ Open the NHL Tracker Game Centre for scores\, analytics and game details
+ .
+LOCATION:Canadian Tire Centre
+URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2026021136#
+ games
+END:VEVENT
+BEGIN:VEVENT
+UID:nhl-2026021148@mooneyaoife.github.io
+DTSTAMP:20260716T181958Z
+DTSTART:20270316T230000Z
+DTEND:20270317T020000Z
+SUMMARY:Ottawa Senators at New York Rangers
+DESCRIPTION:Regular season. Times display in your calendar's local time. 
+ Open the NHL Tracker Game Centre for scores\, analytics and game details
+ .
+LOCATION:Madison Square Garden
+URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2026021148#
+ games
+END:VEVENT
+BEGIN:VEVENT
+UID:nhl-2026021162@mooneyaoife.github.io
+DTSTAMP:20260716T181958Z
+DTSTART:20270318T230000Z
+DTEND:20270319T020000Z
+SUMMARY:Florida Panthers at Ottawa Senators
+DESCRIPTION:Regular season. Times display in your calendar's local time. 
+ Open the NHL Tracker Game Centre for scores\, analytics and game details
+ .
+LOCATION:Canadian Tire Centre
+URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2026021162#
+ games
+END:VEVENT
+BEGIN:VEVENT
+UID:nhl-2026021179@mooneyaoife.github.io
+DTSTAMP:20260716T181958Z
+DTSTART:20270320T230000Z
+DTEND:20270321T020000Z
+SUMMARY:Tampa Bay Lightning at Ottawa Senators
+DESCRIPTION:Regular season. Times display in your calendar's local time. 
+ Open the NHL Tracker Game Centre for scores\, analytics and game details
+ .
+LOCATION:Canadian Tire Centre
+URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2026021179#
+ games
+END:VEVENT
+BEGIN:VEVENT
+UID:nhl-2026021208@mooneyaoife.github.io
+DTSTAMP:20260716T181958Z
+DTSTART:20270324T233000Z
+DTEND:20270325T023000Z
+SUMMARY:Ottawa Senators at Montréal Canadiens
+DESCRIPTION:Regular season. Times display in your calendar's local time. 
+ Open the NHL Tracker Game Centre for scores\, analytics and game details
+ .
+LOCATION:Centre Bell
+URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2026021208#
+ games
+END:VEVENT
+BEGIN:VEVENT
+UID:nhl-2026021211@mooneyaoife.github.io
+DTSTAMP:20260716T181958Z
+DTSTART:20270325T230000Z
+DTEND:20270326T020000Z
+SUMMARY:Ottawa Senators at Boston Bruins
+DESCRIPTION:Regular season. Times display in your calendar's local time. 
+ Open the NHL Tracker Game Centre for scores\, analytics and game details
+ .
+LOCATION:TD Garden
+URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2026021211#
+ games
+END:VEVENT
+BEGIN:VEVENT
+UID:nhl-2026021231@mooneyaoife.github.io
+DTSTAMP:20260716T181958Z
+DTSTART:20270327T230000Z
+DTEND:20270328T020000Z
+SUMMARY:Ottawa Senators at Toronto Maple Leafs
+DESCRIPTION:Regular season. Times display in your calendar's local time. 
+ Open the NHL Tracker Game Centre for scores\, analytics and game details
+ .
+LOCATION:Scotiabank Arena
+URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2026021231#
+ games
+END:VEVENT
+BEGIN:VEVENT
+UID:nhl-2026021249@mooneyaoife.github.io
+DTSTAMP:20260716T181958Z
+DTSTART:20270330T230000Z
+DTEND:20270331T020000Z
+SUMMARY:Ottawa Senators at Detroit Red Wings
+DESCRIPTION:Regular season. Times display in your calendar's local time. 
+ Open the NHL Tracker Game Centre for scores\, analytics and game details
+ .
+LOCATION:Little Caesars Arena
+URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2026021249#
+ games
+END:VEVENT
+BEGIN:VEVENT
+UID:nhl-2026021273@mooneyaoife.github.io
+DTSTAMP:20260716T181958Z
+DTSTART:20270402T230000Z
+DTEND:20270403T020000Z
+SUMMARY:Ottawa Senators at New York Islanders
+DESCRIPTION:Regular season. Times display in your calendar's local time. 
+ Open the NHL Tracker Game Centre for scores\, analytics and game details
+ .
+LOCATION:UBS Arena
+URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2026021273#
+ games
+END:VEVENT
+BEGIN:VEVENT
+UID:nhl-2026021292@mooneyaoife.github.io
+DTSTAMP:20260716T181958Z
+DTSTART:20270404T210000Z
+DTEND:20270405T000000Z
+SUMMARY:Detroit Red Wings at Ottawa Senators
+DESCRIPTION:Regular season. Times display in your calendar's local time. 
+ Open the NHL Tracker Game Centre for scores\, analytics and game details
+ .
+LOCATION:Canadian Tire Centre
+URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2026021292#
+ games
+END:VEVENT
+BEGIN:VEVENT
+UID:nhl-2026021313@mooneyaoife.github.io
+DTSTAMP:20260716T181958Z
+DTSTART:20270407T230000Z
+DTEND:20270408T020000Z
+SUMMARY:Ottawa Senators at Carolina Hurricanes
+DESCRIPTION:Regular season. Times display in your calendar's local time. 
+ Open the NHL Tracker Game Centre for scores\, analytics and game details
+ .
+LOCATION:Lenovo Center
+URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2026021313#
+ games
+END:VEVENT
+BEGIN:VEVENT
+UID:nhl-2026021316@mooneyaoife.github.io
+DTSTAMP:20260716T181958Z
+DTSTART:20270408T230000Z
+DTEND:20270409T020000Z
+SUMMARY:Washington Capitals at Ottawa Senators
+DESCRIPTION:Regular season. Times display in your calendar's local time. 
+ Open the NHL Tracker Game Centre for scores\, analytics and game details
+ .
+LOCATION:Canadian Tire Centre
+URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2026021316#
+ games
+END:VEVENT
+BEGIN:VEVENT
+UID:nhl-2026021338@mooneyaoife.github.io
+DTSTAMP:20260716T181958Z
+DTSTART:20270410T230000Z
+DTEND:20270411T020000Z
+SUMMARY:Montréal Canadiens at Ottawa Senators
+DESCRIPTION:Regular season. Times display in your calendar's local time. 
+ Open the NHL Tracker Game Centre for scores\, analytics and game details
+ .
+LOCATION:Canadian Tire Centre
+URL;VALUE=URI:https://mooneyaoife.github.io/NHL-Tracker/?game=2026021338#
  games
 END:VEVENT
 END:VCALENDAR
