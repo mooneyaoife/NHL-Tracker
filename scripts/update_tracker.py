@@ -672,16 +672,32 @@ def load_special_teams(standings: list[dict], previous: list[dict] | None = None
     return sorted(result, key=lambda row: row["team"])
 
 
+def select_daily_slate(games: list[dict], requested_date: str | None) -> tuple[str | None, list[dict]]:
+    """Select one authoritative NHL date from the multi-date schedule window."""
+    dates = sorted({str(game.get("date") or "") for game in games if game.get("date")})
+    if not dates:
+        return requested_date, []
+    if requested_date in dates:
+        selected_date = requested_date
+    elif requested_date:
+        future_dates = [date for date in dates if date >= requested_date]
+        selected_date = future_dates[0] if future_dates else dates[-1]
+    else:
+        selected_date = dates[0]
+    return selected_date, [game for game in games if game.get("date") == selected_date]
+
+
 def load_daily() -> dict:
-    """Current league-wide scoreboard/schedule, including broadcasters when supplied."""
+    """One league-wide NHL slate, including broadcasters when supplied."""
     score = fetch_json(f"{API}/score/now")
     schedule = fetch_json(f"{API}/schedule/now")
     games = []
     for game in schedule.get("gameWeek", []):
+        slate_date = game.get("date")
         for g in game.get("games", []):
             start_time = g.get("startTimeUTC", "")
             games.append({
-                "id": g.get("id"), "date": g.get("gameDate") or (start_time[:10] if start_time else ""), "startTimeUTC": start_time,
+                "id": g.get("id"), "date": g.get("gameDate") or slate_date or (start_time[:10] if start_time else ""), "startTimeUTC": start_time,
                 "state": g.get("gameState", ""), "type": g.get("gameType", 0),
                 "venue": localised(g.get("venue")),
                 "home": localised(g.get("homeTeam", {}).get("abbrev")).upper(),
@@ -690,7 +706,10 @@ def load_daily() -> dict:
                 "period": g.get("periodDescriptor", {}).get("number"),
                 "broadcasts": [b.get("network") for b in g.get("tvBroadcasts", []) if b.get("network")]
             })
-    return {"currentDate": score.get("currentDate"), "games": games}
+    requested_date = score.get("currentDate")
+    selected_date, slate = select_daily_slate(games, requested_date)
+    return {"currentDate": selected_date, "requestedDate": requested_date,
+        "fallback": bool(selected_date and requested_date and selected_date != requested_date), "games": slate}
 
 
 def load_rosters(team_codes: list[str]) -> dict:

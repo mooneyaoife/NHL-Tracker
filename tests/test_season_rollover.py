@@ -119,6 +119,38 @@ class SeasonRolloverTests(unittest.TestCase):
         self.assertIn("Preseason", feed)
         self.assertIn("Regular season", feed)
 
+    def test_daily_slate_keeps_only_the_scoreboard_date(self):
+        games = [
+            {"id": 1, "date": "2026-09-29"},
+            {"id": 2, "date": "2026-09-29"},
+            {"id": 3, "date": "2026-09-30"},
+        ]
+        date, slate = TRACKER.select_daily_slate(games, "2026-09-29")
+        self.assertEqual(date, "2026-09-29")
+        self.assertEqual([game["id"] for game in slate], [1, 2])
+
+    def test_daily_slate_falls_forward_to_the_next_playable_date(self):
+        games = [
+            {"id": 1, "date": "2026-10-01"},
+            {"id": 2, "date": "2026-10-03"},
+            {"id": 3, "date": "2026-10-03"},
+        ]
+        date, slate = TRACKER.select_daily_slate(games, "2026-10-02")
+        self.assertEqual(date, "2026-10-03")
+        self.assertEqual([game["id"] for game in slate], [2, 3])
+
+    def test_daily_loader_preserves_nhl_slate_date_after_utc_midnight(self):
+        score = {"currentDate": "2026-09-29"}
+        schedule = {"gameWeek": [{"date": "2026-09-29", "games": [{
+            "id": 7, "startTimeUTC": "2026-09-30T02:30:00Z", "awayTeam": {"abbrev": "CHI"},
+            "homeTeam": {"abbrev": "VGK"}, "venue": {"default": "Arena"}
+        }]}]}
+        with patch.object(TRACKER, "fetch_json", side_effect=[score, schedule]):
+            daily = TRACKER.load_daily()
+        self.assertEqual(daily["currentDate"], "2026-09-29")
+        self.assertEqual(len(daily["games"]), 1)
+        self.assertEqual(daily["games"][0]["date"], "2026-09-29")
+
     def test_season_index_preserves_old_archive_and_marks_new_current(self):
         with tempfile.TemporaryDirectory() as directory:
             output = Path(directory) / "data" / "tracker.json"
