@@ -625,6 +625,10 @@ html[data-theme="dark"] .workspace-command>aside{background:#294b3d}html[data-th
 @media(max-width:760px){.player-heading>.selectors{display:grid;grid-template-columns:1fr 1fr;width:100%}.player-heading>.selectors #player-save-toggle{grid-column:1/-1}.player-intelligence-card>header{grid-template-columns:46px minmax(0,1fr)}.player-intelligence-card>header img{width:44px;height:44px}.player-intelligence-card>header label{grid-column:1/-1}.player-intelligence-readout{grid-template-columns:1fr}.player-intelligence-intro{display:grid}.player-intelligence-card h4{font-size:20px}}
 @media(prefers-reduced-motion:reduce){.player-intelligence-card{animation:none}.player-intelligence-readout>i b{transition:none}}
 
+/* 6.16 · Explicit current/archive season switch. */
+.season-archive-toggle{min-height:36px!important;border:1px solid var(--brand)!important;border-radius:999px!important;background:var(--brand-soft)!important;color:var(--brand-strong)!important;padding:7px 12px!important;font-family:var(--font-data)!important;font-size:8px!important;letter-spacing:.055em;text-transform:uppercase;white-space:nowrap}.season-archive-toggle:hover,.season-archive-toggle:focus-visible{background:var(--brand)!important;color:#fff!important}.season-archive-toggle[hidden]{display:none!important}
+@media(max-width:640px){.season-archive-toggle{grid-column:1/-1;grid-row:3;justify-self:end;min-height:34px!important}.header-tools .season-switcher{justify-self:end}}
+
 /* 6.10 · Tonight is a navigable game story: orient, move through the slate, then open evidence. */
 .tonight-command{display:grid;grid-template-columns:minmax(0,1fr) minmax(420px,.72fr);align-items:stretch;margin-bottom:12px;border-top:1px solid var(--ink);border-bottom:1px solid var(--ink)}
 #tonight .tonight-command .title-bar{display:flex!important;align-items:end;justify-content:space-between;gap:24px;min-height:0!important;margin:0!important;padding:24px 28px 20px 0!important;border-bottom:0!important}

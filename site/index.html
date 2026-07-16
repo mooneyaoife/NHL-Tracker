@@ -14,7 +14,7 @@
   <script>document.documentElement.dataset.theme=localStorage.getItem("nhl-theme")||"light"</script>
   <link rel="stylesheet" href="styles.css?v=6.0.0">
   <link rel="stylesheet" href="theme-569.css?v=6.0.0">
-  <link rel="stylesheet" href="design-system.css?v=6.15.0">
+  <link rel="stylesheet" href="design-system.css?v=6.16.0">
   <script defer src="vendor/plotly-2.35.2.min.js"></script>
 </head>
 <body>
@@ -22,7 +22,7 @@
 <div id="route-announcer" class="visually-hidden" role="status" aria-live="polite" aria-atomic="true"></div>
 <header>
   <div class="brand"><img src="icons/icon.svg?v=5.70.0" alt="" aria-hidden="true"><div><h1>NHL Tracker</h1><small>Hockey intelligence</small></div></div>
-  <div class="header-tools"><label class="season-switcher">Season <select id="season-select" aria-label="Choose season"></select></label><div id="updated" class="status">Loading data…</div><button id="global-search-button" class="icon-button global-search-button" aria-label="Find anything" title="Find anything"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="10.5" cy="10.5" r="6.5"></circle><path d="m15.5 15.5 5 5"></path></svg></button><button id="theme-button" class="icon-button" aria-label="Switch colour theme">☾</button></div>
+  <div class="header-tools"><label class="season-switcher">Season <select id="season-select" aria-label="Choose season"></select></label><button id="season-archive-toggle" class="season-archive-toggle" type="button" hidden></button><div id="updated" class="status">Loading data…</div><button id="global-search-button" class="icon-button global-search-button" aria-label="Find anything" title="Find anything"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="10.5" cy="10.5" r="6.5"></circle><path d="m15.5 15.5 5 5"></path></svg></button><button id="theme-button" class="icon-button" aria-label="Switch colour theme">☾</button></div>
 </header>
 <div id="global-search-overlay" class="global-search-overlay" hidden><section class="global-search-dialog" role="dialog" aria-modal="true" aria-labelledby="global-search-title"><div class="global-search-head"><div><span class="section-kicker">NHL Tracker</span><h2 id="global-search-title">Find anything</h2></div><button id="global-search-close" type="button" aria-label="Close search">×</button></div><label class="global-search-input"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="10.5" cy="10.5" r="6.5"></circle><path d="m15.5 15.5 5 5"></path></svg><input id="global-search-input" type="search" aria-label="Search the entire tracker" autocomplete="off" placeholder="Search players, teams, games, stats or pages"></label><div id="global-search-results" class="global-search-results"></div><div class="global-search-hint"><span>Type to search the entire tracker</span><span><kbd>/</kbd> opens search · <kbd>Esc</kbd> closes</span></div></section></div>
 <nav id="nav" aria-label="Primary navigation">
@@ -250,5 +250,5 @@
 <footer><div class="footer-links"><button data-page="watchlist" id="footer-install-link">Install app</button><button data-page="watchlist">Settings</button><button data-page="guide">Stat Guide</button><a href="https://moneypuck.com/data.htm" target="_blank" rel="noopener">Data sources</a><button data-page="status">Status</button></div><p>NHL Tracker · Unofficial, non-commercial fan project using public NHL data</p></footer>
 <aside id="app-update" class="app-update" role="status" hidden><span>A fresh version of NHL Tracker is ready.</span><button id="app-update-button" type="button">Update now</button></aside>
 <div id="chart-help-overlay" class="chart-help-overlay" hidden><section role="dialog" aria-modal="true" aria-labelledby="chart-help-title"><header><div><span class="section-kicker">How to use this view</span><h2 id="chart-help-title">Chart guide</h2></div><button id="chart-help-close" type="button" aria-label="Close chart guide">×</button></header><div id="chart-help-body"></div></section></div>
-  <script defer src="app.js?v=6.15.0"></script>
+  <script defer src="app.js?v=6.16.0"></script>
 </body></html>
