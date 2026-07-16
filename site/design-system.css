@@ -40,6 +40,11 @@ main{max-width:var(--content-width);padding:var(--space-7) 28px var(--space-8)}.
 .game-centre-subnav{margin-bottom:var(--space-5)!important}.game-centre-controls{margin-bottom:var(--space-4)}
 .game-centre-controls p{color:var(--ink-faint)}
 .matchup-intelligence-header>span{border:1px solid color-mix(in srgb,var(--brand) 30%,var(--rule));border-radius:999px;padding:7px 10px;color:var(--brand);font-size:9px}
+.matchup-intelligence-controls{display:grid;grid-template-columns:minmax(240px,1.5fr) minmax(190px,.8fr) auto;gap:12px;align-items:end;margin-bottom:var(--space-4)}
+.matchup-intelligence-controls label{display:grid}.matchup-intelligence-controls select{width:100%}
+.matchup-evidence-loading,.matchup-evidence-state{display:flex;align-items:center;gap:10px;margin:0 0 var(--space-4);padding:13px 15px;border:1px solid var(--rule);border-radius:var(--radius-m);background:var(--surface-subtle);color:var(--ink-faint);font-size:12px}
+.matchup-evidence-loading strong,.matchup-evidence-state strong{color:var(--ink);white-space:nowrap}.matchup-evidence-state.cross-season{border-left:4px solid var(--brand);background:var(--brand-soft)}
+@media(max-width:720px){.matchup-intelligence-controls{grid-template-columns:1fr}.matchup-intelligence-controls button{width:100%}.matchup-evidence-loading,.matchup-evidence-state{align-items:flex-start;flex-direction:column}.matchup-evidence-loading strong,.matchup-evidence-state strong{white-space:normal}}
 .game-story-header,.game-card-section-head{background:var(--brand-strong)!important;color:#fff!important;border-radius:var(--radius-m) var(--radius-m) 0 0}
 .game-story-header h3,.game-card-section-head h3{color:#fff!important}
 .turning-points{border-left:3px solid var(--brand);background:var(--surface-subtle)}
