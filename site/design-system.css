@@ -801,8 +801,8 @@ html[data-theme="dark"] body[data-navigation-group="explore"] .context-nav-level
 .puckpedia-update-actions button,.puckpedia-mail-card span,.puckpedia-mail-card b,.offseason-counts span,.offseason-team-head span,.shelf-heading span,.podcast-card strong{font-size:11px!important;line-height:1.4!important}
 .trend-story span,.saved-views-panel span,.game-lineup-centre span{font-size:11px!important;line-height:1.4!important}
 @media(max-width:760px){
-  #teams .section-subnav button,.edge-profile span,.edge-vs,.edge-stat-values span,.news-card .news-meta time,.news-card .news-teams strong,.story-chapter em{font-size:11px!important;line-height:1.35!important}
-  .js-plotly-plot text,.js-plotly-plot .xtitle,.js-plotly-plot .ytitle{font-size:11px!important}
+  #teams .section-subnav button,.edge-profile span,.edge-vs,.edge-stat-values span,.news-card .news-meta time,.news-card .news-teams strong,.story-chapter em{font-size:var(--type-caption)!important;line-height:1.35!important}
+  .js-plotly-plot text,.js-plotly-plot .xtitle,.js-plotly-plot .ytitle{font-size:var(--type-caption)!important}
 }
 html[data-theme="dark"] #game-refresh,html[data-theme="dark"] #save-tracked-teams,html[data-theme="dark"] #nst-prepare-refresh,html[data-theme="dark"] #install-button{background:var(--brand-strong)!important;border-color:var(--brand-strong)!important;color:var(--canvas)!important}
 html[data-theme="dark"] .pill.L{color:var(--live)!important}
@@ -1531,4 +1531,138 @@ tbody tr:hover{background:color-mix(in srgb,var(--brand-soft) 45%,transparent)!i
     justify-self:end;
     margin:0!important;
   }
+}
+
+/* 7.8.1 · Readable small type.
+   Compact evidence remains visually secondary, but no meaningful interface
+   copy should depend on 9–11px text. */
+:root{
+  --type-caption:12px;
+  --type-small:13px;
+}
+.section-kicker,.section-label,.eyebrow,.metric .label,.label,label,th,
+.source-tag,.update-state,.refresh-badge,.change-tag,.availability-state,
+.pregame-state,.table-sort{
+  font-size:var(--type-caption)!important;
+  line-height:1.4!important;
+}
+.page small,.page .detail-note,.page .sort-indicator,.page .reset-view-button,
+.page .mp-credit,.page .mp-credit a,.page .guide-card-meta{
+  font-size:var(--type-small)!important;
+  line-height:1.45!important;
+}
+button,select,input,summary{font-size:var(--type-small)}
+th{font-size:var(--type-caption)!important}
+td{font-size:14px!important}
+.context-nav-level button,
+body[data-navigation-group="explore"] .context-nav-level button{
+  font-size:13px!important;
+}
+.tonight-summary .metric .detail,.tonight-slate-rail button span,
+.tonight-slate-rail button strong,.tonight-slate-rail button small,
+.tonight-card-head,.tonight-card-head>strong,.tonight-evidence>summary strong,
+.tonight-evidence>summary small,.tonight-context span,.tonight-context strong,
+.tonight-open,.tonight-compare,#tonight .notice,
+.schedule-command>aside span,.schedule-command>aside small,
+#schedule .schedule-story-rail button,#schedule .schedule-story-rail button small,
+#schedule .schedule-chapter-purpose,#schedule .calendar-controls p,
+.season-roadmap-file>summary small,.season-roadmap-file>summary em,
+#schedule .chapter-return,.explore-lens p,.explore-lens aside span,
+.explore-lens>button,body[data-navigation-group="explore"] .context-nav-level button:before,
+.workspace-command>aside span,.workspace-command>aside small,
+.analysis-journey>summary small,.analysis-journey>summary em,
+#analysis-journey-nav button>span,#analysis-journey-nav button small,
+.analysis-journey-heading>span,.analysis-journey-teams span,
+.analysis-journey-teams small,.analysis-journey-teams p,
+.pregame-lean div,.pregame-lean span,.pregame-lean b,
+.pregame-comparison span,.pregame-comparison strong,.pregame-personnel span,
+.pregame-personnel small,.pregame-availability-head span,.pregame-scratches span,
+.calendar-subscribe em,.calendar-feed span,.calendar-feed a,.calendar-feed button,
+.identity-actions button,.edge-stat-values span,.defined-stat-heading,
+.trend-story>span,.workspace-story-rail button,.saved-views-panel>span,
+.guide-deep-dive span,.guide-deep-dive strong,.pregame-lead>div>span,
+.pregame-personnel-team strong,.pregame-personnel-team b,.pregame-scratches strong,
+.pregame-brief>footer,.pregame-brief>footer span,.pregame-open-intelligence,
+.game-context-stats span,.lineup-links span,.lineup-team-head span,
+.lineup-shared-links span,.official-availability-team span,
+.official-officiating span,.official-officiating strong,.official-officiating h4,
+.availability-legend,.availability-card-head strong,.availability-matchup b,
+.availability-official-status span,.availability-official-status strong,
+.availability-next-foot,.availability-next-foot span,.availability-next-foot button,
+.availability-panel-head span,.availability-roster-heading span,
+.availability-player strong,.availability-move span,.availability-goalie-profile span,
+.availability-goalie-profile button,.availability-combination span,
+.game-special-teams header span,.game-special-teams>div span,
+.game-special-teams>div strong,.game-special-teams button,
+.puckpedia-update-actions button,.puckpedia-mail-card span,.puckpedia-mail-card b,
+.offseason-counts span,.offseason-team-head span,.shelf-heading span,
+.podcast-card strong,.trend-story span,.saved-views-panel span,
+.game-lineup-centre span{
+  font-size:var(--type-caption)!important;
+  line-height:1.4!important;
+}
+#dashboard small,#dashboard .home-dossier-meta span,
+#dashboard .home-tonight>header strong,#dashboard .home-tonight>header>button,
+#dashboard .season-state-nav button span,#dashboard .season-state-heading span,
+#dashboard .season-state-teams span,#dashboard .season-state-teams p,
+#dashboard .season-file-footer,#dashboard .analysis-desk-head>button,
+#dashboard .home-module-head span,#dashboard .context-link,
+#dashboard .metric .label,.home-file-tabs button{
+  font-size:var(--type-caption)!important;
+}
+@media(max-width:760px){
+  #nav>button{font-size:12px!important}
+  #teams .section-subnav button,.edge-profile span,.edge-vs,
+  .edge-stat-values span,.news-card .news-meta time,
+  .news-card .news-teams strong,.story-chapter em,
+  .js-plotly-plot text,.js-plotly-plot .xtitle,.js-plotly-plot .ytitle{
+    font-size:var(--type-caption)!important;
+  }
+}
+
+/* Specific component rules declared earlier in the cascade must resolve to the
+   same readable caption size. Symbols such as help icons keep their optical
+   sizing; the text that carries meaning does not fall below 12px. */
+body .section-kicker,body .section-label,body .eyebrow,
+body main small,body .story-chapter span,body .identity-traits span,
+body .identity-measure span,body .identity-measure strong,
+body .visit-panel small,body .visit-panel p,
+body .tonight-card-head span,body .tonight-card-head strong,
+body .game-flow-state,body .game-flow dt,body .game-flow dd,
+body .availability-legend span,body .availability-legend strong,
+body .trend-insight span,body .playoff-path span,body .news-meta,
+body .news-teams span,body .media-type,
+body .guide-card-meta span:last-child{
+  font-size:var(--type-caption)!important;
+  line-height:1.4!important;
+}
+body .sheet-header-split>.tonight-toolbar .section-kicker{
+  font-size:var(--type-caption)!important;
+}
+body .page small{
+  font-size:var(--type-small)!important;
+  line-height:1.45!important;
+}
+body .home-matchup-clubs strong,body .home-matchup-clubs em,
+body .home-matchup footer strong,body .home-matchup footer b,
+body .visit-panel-head p,body .visit-panel-head button,
+body .tonight-card-head>span,body .tonight-card-head>strong,
+body .tonight-state,body #schedule .schedule-story-rail button strong,
+body .workspace-story-rail button strong,
+body .calendar-weekdays span,body .calendar-game,
+body .calendar-game time,body .calendar-game strong,body .calendar-game span,
+body .identity-traits span,body .identity-measure span,
+body .identity-measure strong,body .identity-measure small{
+  font-size:var(--type-caption)!important;
+  line-height:1.4!important;
+}
+body .js-plotly-plot text,body .js-plotly-plot .xtitle,
+body .js-plotly-plot .ytitle{
+  font-size:12px!important;
+}
+body #dashboard .js-plotly-plot text{
+  font-size:12px!important;
+}
+body .tonight-summary .metric .label{
+  font-size:var(--type-caption)!important;
 }
