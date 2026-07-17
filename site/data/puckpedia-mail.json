@@ -1,7 +1,21 @@
 {
   "schema": 1,
-  "updatedAt": "2026-07-16T23:40:12.971Z",
+  "updatedAt": "2026-07-17T05:40:20.442Z",
   "items": [
+    {
+      "id": "4180e752f4c0cd0dc649",
+      "title": "Viktor Neuchev Signs a 1-Year, $850K Contract with the Carolina Hurricanes",
+      "publishedAt": "2026-07-17T04:02:10.000Z",
+      "category": "Contract",
+      "url": "https://puckpedia.com/signing/10745?utm_source=email&utm_medium=email&utm_campaign=signing&utm_content=primary"
+    },
+    {
+      "id": "18108467a4ffefe112cb",
+      "title": "Henrik Tikkanen Signs a 1-Year, $850K Contract with the New York Islanders",
+      "publishedAt": "2026-07-17T01:28:08.000Z",
+      "category": "Contract",
+      "url": "https://puckpedia.com/signing/10744?utm_source=email&utm_medium=email&utm_campaign=signing&utm_content=primary"
+    },
     {
       "id": "69a444dbb7621ae88ba0",
       "title": "Kirby Dach Signs a 1-Year, $3.60M Contract with the Montreal Canadiens",
@@ -197,20 +211,6 @@
       "publishedAt": "2026-07-10T18:14:10.000Z",
       "category": "Contract",
       "url": "https://puckpedia.com/signing/10717?utm_source=email&utm_medium=email&utm_campaign=signing&utm_content=primary"
-    },
-    {
-      "id": "ce8e2dcca979c961efe5",
-      "title": "Tyler Boucher Signs a 1-Year, $850K Contract with the Ottawa Senators",
-      "publishedAt": "2026-07-10T17:09:09.000Z",
-      "category": "Contract",
-      "url": "https://puckpedia.com/signing/10716?utm_source=email&utm_medium=email&utm_campaign=signing&utm_content=primary"
-    },
-    {
-      "id": "49c917bdb62ae7b96cc8",
-      "title": "Tomas Galvas Signs a 3-Year, $3.02M Contract with the Pittsburgh Penguins",
-      "publishedAt": "2026-07-09T23:53:07.000Z",
-      "category": "Contract",
-      "url": "https://puckpedia.com/signing/10715?utm_source=email&utm_medium=email&utm_campaign=signing&utm_content=primary"
     }
   ]
 }
