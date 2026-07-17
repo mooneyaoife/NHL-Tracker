@@ -795,3 +795,46 @@ button:not(.icon-button):not(.table-sort):not([data-group]):not([data-hover-page
 }
 
 @media(prefers-reduced-motion:reduce){.home-file-tabs button{transition:none!important}}
+
+/* 7.2 · Cohesion correction.
+   Keep the established system; remove only the four differences that made the
+   Dashboard, Season and Explore sheets feel as though they came from separate
+   products: folder containment, folder hue, header rhythm and tab typography. */
+:root{--manila:#e6dfcf;--manila-deep:#cdbfa3;--sheet-header-height:126px}
+html[data-theme="dark"]{--manila:#303830;--manila-deep:#242b26}
+.sheet-header{padding:0!important}
+
+/* The folder is a warm version of the same paper system, not a second palette. */
+#dashboard{box-shadow:0 24px 58px color-mix(in srgb,var(--ink) 10%,transparent),0 4px 12px color-mix(in srgb,var(--ink) 6%,transparent)}
+.home-tonight,.season-file,.analysis-desk{border-color:var(--sheet-rule)!important}
+.season-file-head,.season-state-nav,.season-file-footer,.analysis-desk-head{border-color:var(--sheet-rule)!important}
+
+/* File and view rails use sans labels with mono metadata everywhere. */
+.season-state-nav button strong,.workspace-story-rail button strong,#schedule .schedule-story-rail button strong{font-family:var(--font-sans)!important;font-weight:700!important}
+.season-state-nav button small,.workspace-story-rail button small,#schedule .schedule-story-rail button small{font-family:var(--font-data)!important;font-style:normal!important;letter-spacing:0!important}
+
+/* Explore numbering repeated the context navigation and competed with titles. */
+.sheet-header-flow>div .section-kicker{display:none!important}
+
+@media(min-width:641px){
+  #schedule .story-chapter{grid-template-columns:150px minmax(0,1fr)!important;min-height:58px!important;padding:11px 18px 10px!important}
+  #schedule .story-chapter em{display:none!important}
+}
+
+@media(min-width:761px){
+  .sheet-header{min-height:var(--sheet-header-height)!important}
+  .title-bar.sheet-header,.guide-hero.sheet-header{min-height:var(--sheet-header-height)!important;padding:24px 0 20px!important}
+  .sheet-header-split{min-height:var(--sheet-header-height)!important}
+  #tonight .sheet-header>.title-bar,#schedule .sheet-header>.title-bar,.sheet-header-split>.title-bar,.sheet-header-split>div:first-child{min-height:124px!important;padding:24px 26px 20px 0!important}
+  #tonight .sheet-header>.tonight-toolbar{grid-template-columns:minmax(0,1fr) minmax(145px,.7fr)!important;gap:4px!important;padding:18px 22px!important}
+  .sheet-header-flow{min-height:var(--sheet-header-height)!important}
+  .sheet-header-flow>div{display:flex!important;align-items:flex-end!important;padding:24px 24px 20px 0!important}
+}
+
+@media(min-width:1280px){
+  /* Reserve the rail inside main, extend the master folder beneath it and fix
+     both edges explicitly so the tabs never create horizontal overflow. */
+  #dashboard:before{right:-188px!important}
+  .home-file-tabs{left:100%!important;right:auto!important;width:166px!important;min-width:166px!important;max-width:166px!important;padding:0!important;justify-content:flex-start!important}
+  .home-file-tabs button{width:166px!important;min-width:166px!important;max-width:166px!important}
+}
