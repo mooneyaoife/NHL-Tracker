@@ -1,9 +1,7 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" role="img" aria-labelledby="title desc">
-  <title id="title">NHL Tracker</title>
-  <desc id="desc">A tracked N monogram ending in a moving puck.</desc>
-  <rect width="512" height="512" fill="#294b42"/>
-  <path d="M150 352V160l212 192V160" fill="none" stroke="#f3f1ea" stroke-width="42" stroke-linecap="round" stroke-linejoin="round"/>
-  <circle cx="302" cy="298" r="10" fill="#294b42" opacity=".45"/>
-  <circle cx="328" cy="322" r="14" fill="#294b42" opacity=".72"/>
-  <circle cx="362" cy="352" r="27" fill="#d57963"/>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-label="NHL Tracker">
+  <mask id="stick-cut" maskUnits="userSpaceOnUse" x="0" y="0" width="64" height="64">
+    <rect width="64" height="64" fill="#fff"/>
+    <path d="M18 15l18 24c2 3 5 5 9 5h3" fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="4.5"/>
+  </mask>
+  <path d="M32 8C48.2 8 58 13.7 58 22v19c0 9.1-10.8 15-27 15C15 56 6 50.2 6 42V22C6 13.7 15.8 8 32 8Z" fill="#17201c" mask="url(#stick-cut)"/>
 </svg>

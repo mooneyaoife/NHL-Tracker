@@ -1,36 +1,26 @@
 # NHL Tracker
 
-An automatically updated, interactive NHL dashboard for the Buffalo Sabres, San Jose Sharks, Minnesota Wild and Carolina Hurricanes.
+A personal NHL companion for scores, schedules, game context, team and player analysis, league reporting and reference material. The interface favours followed teams while keeping the full league available. It does not include betting odds.
 
-## What it includes
+## Product
 
-- Four-team-first dashboard with progressive Home, Games, Explore and News navigation
-- UK-time schedule calendar and dedicated Game Centre
-- Game Night Centre with official scoring, penalties, player leaders, three stars, play-by-play and shot maps
-- Live game-day lineup, injury and starting-goalie links for every selected matchup
-- Team dashboards with rolling form, schedule-rhythm, division-race and season trend graphs
-- Player and goalie centres with full names, official roster images and rolling contribution views
-- Official NHL standings and tracked-team ranks
-- Confirmed updates, roster-change detection and clearly separated rumour sources
-- Automatic official NHL headlines, curated insider timelines, current podcast episodes and recent hockey videos
-- Power rankings using approved MoneyPuck downloads with visible credit
-- Phase-aware playoff information
-- Automatic season rollover with selectable per-season archives
-- One compact daily history snapshot for standings, power index, expected-goal share and playoff forecasts
-- Cached boxscores for fast incremental updates
-- Scheduled updates through GitHub Actions
-- Game-night snapshots approximately every 15 minutes while a tracked team is active
-- An in-site Natural Stat Trick Refresh Centre with stale-data reminders and a one-file upload helper
-- Free hosting through GitHub Pages
+- **Home** — a personal command desk for Tonight, the season, saved players and pinned analysis
+- **Tonight** — every NHL game in UK time, with followed teams first and expandable matchup evidence
+- **Season** — calendar, schedule shape, key dates, demanding stretches and playoff context
+- **Game Centre** — pregame briefing, official live or final reporting, lineups, shot maps and a searchable game library
+- **Teams and Players** — results, form, expected goals, special teams, player impact, goaltending and game logs
+- **League** — standings, rankings, trends, power index, playoff forecasts and comparison tools
+- **Movement** — official news, transactions, contracts, cap links, rosters, podcasts and video
+- **Workspace** — followed teams, saved players, saved analytical views, display preferences and installation
+- **Reference** — sourced definitions, formulas, interpretations and cautions for statistics used by the tracker
 
-## First deployment
+The site supports light and dark themes, keyboard navigation, reduced motion, responsive layouts and installation as a progressive web app.
 
-1. Open **Settings → Pages** in this repository.
-2. Under **Build and deployment**, select **GitHub Actions** as the source.
-3. Open **Actions**, select **Update NHL Tracker and deploy**, and choose **Run workflow**.
-4. When it finishes, the site will be available at `https://mooneyaoife.github.io/NHL-Tracker/`.
+## Data
 
-The workflow also runs automatically four times per day. In automatic mode, the tracker checks the NHL's next-season schedule and rolls forward only after a substantial regular-season schedule is published. Every refresh preserves the active season under `site/data/seasons/`, and the website's Season menu makes completed seasons selectable. NHL and MoneyPuck feeds resume automatically; Natural Stat Trick remains a clearly labelled manual CSV import.
+The scheduled updater combines official NHL data with approved MoneyPuck downloads. Natural Stat Trick CSV imports remain manual and are handled through the in-site refresh helper. PuckPedia contract and cap actions open the current live source rather than storing a duplicate.
+
+Automatic season rollover waits for a substantial new regular-season schedule, preserves completed seasons under `site/data/seasons/`, and uses the latest complete season as context while current-season samples are empty.
 
 ## Run locally
 
@@ -39,6 +29,26 @@ python scripts/update_tracker.py
 python -m http.server 8000 --directory site
 ```
 
-Then open `http://localhost:8000`.
+Open `http://localhost:8000`.
 
-This is an unofficial fan project and is not affiliated with the NHL.
+To inspect the existing generated site without refreshing external data, run only the second command.
+
+## Validate
+
+```bash
+python -m py_compile scripts/update_tracker.py scripts/train_tracker_models.py
+python -m unittest discover -s tests -p "test_*.py"
+node --check site/app.js
+```
+
+The deployment and live-game workflows run these checks before publishing.
+
+## Deploy
+
+1. In GitHub, open **Settings → Pages** and select **GitHub Actions** as the source.
+2. Open **Actions → Update NHL Tracker and deploy**.
+3. Choose **Run workflow**.
+
+The main workflow refreshes and deploys four times per day. A separate game-night workflow checks for active tracked games every 15 minutes during likely NHL hours.
+
+NHL Tracker is an unofficial, non-commercial fan project and is not affiliated with the NHL.

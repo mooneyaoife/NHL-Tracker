@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://mooneyaoife.github.io/NHL-Tracker/sitemap.xml

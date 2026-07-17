@@ -1,7 +1,8 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
-  <rect width="512" height="512" fill="#10233f"/>
-  <rect x="98" y="82" width="316" height="348" rx="142" fill="none" stroke="#f8fafc" stroke-width="24"/>
-  <path d="M256 94v324" stroke="#a56b72" stroke-width="14"/>
-  <circle cx="256" cy="256" r="58" fill="#10233f" stroke="#f8fafc" stroke-width="18"/>
-  <circle cx="256" cy="256" r="15" fill="#b4975a"/>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" role="img" aria-label="NHL Tracker">
+  <rect width="512" height="512" rx="112" fill="#f3efe4"/>
+  <mask id="stick-cut" maskUnits="userSpaceOnUse" x="96" y="96" width="320" height="320">
+    <rect x="96" y="96" width="320" height="320" fill="#fff"/>
+    <path d="M187 171l91 121c12 17 27 26 48 26h25" fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="25"/>
+  </mask>
+  <path d="M256 128c93 0 149 33 149 81v109c0 52-62 86-155 86-92 0-143-33-143-81V209c0-48 56-81 149-81Z" fill="#17201c" mask="url(#stick-cut)"/>
 </svg>
