@@ -838,3 +838,90 @@ html[data-theme="dark"]{--manila:#303830;--manila-deep:#242b26}
   .home-file-tabs{left:100%!important;right:auto!important;width:166px!important;min-width:166px!important;max-width:166px!important;padding:0!important;justify-content:flex-start!important}
   .home-file-tabs button{width:166px!important;min-width:166px!important;max-width:166px!important}
 }
+
+/* 7.3 · Final convergence.
+   Home is an overview sheet, Tonight owns the full slate, and every analytical
+   destination now follows the same spacious paper-and-rule hierarchy. */
+body[data-navigation-group="home"] main{padding-top:42px!important}
+#dashboard{isolation:auto!important;max-width:none!important;margin:0!important;padding:0!important;border:0!important;border-radius:0!important;background:transparent!important;box-shadow:none!important}
+#dashboard:before,#dashboard:after{display:none!important;content:none!important}
+.home-file-tabs{display:none!important}
+.home-masthead{grid-template-columns:minmax(0,1fr) minmax(280px,340px)!important;align-items:stretch!important;min-height:var(--sheet-header-height)!important;margin:0 0 20px!important;padding:0!important;border-color:var(--sheet-rule)!important;border-radius:0!important;background:color-mix(in srgb,var(--surface) 78%,transparent)!important}
+.home-masthead-copy{display:flex!important;align-items:flex-end!important;min-height:124px!important;padding:24px 26px 20px 0!important}
+.home-masthead-copy h1{margin:0!important;font-family:var(--font-editorial)!important;font-size:clamp(48px,5.2vw,70px)!important;font-weight:400!important;line-height:.92!important;letter-spacing:-.058em!important;color:var(--ink)!important}
+.home-dossier-meta{display:grid!important;align-content:center!important;gap:4px!important;margin:0!important;padding:18px 22px!important;border:0!important;border-left:1px solid var(--rule)!important;background:color-mix(in srgb,var(--surface-subtle) 66%,transparent)!important}
+.home-dossier-meta span,.home-dossier-meta small{font-family:var(--font-data)!important;font-size:11px!important;line-height:1.35!important;letter-spacing:.08em!important;text-transform:uppercase!important;color:var(--ink-soft)!important}
+.home-dossier-meta strong{font-family:var(--font-editorial)!important;font-size:22px!important;font-weight:500!important;line-height:1.1!important;color:var(--ink)!important}
+.home-team-marks{display:none!important}
+
+.home-tonight,.season-file,.analysis-desk{margin:0 0 24px!important;border:1px solid var(--sheet-rule)!important;border-radius:var(--sheet-radius)!important;background:color-mix(in srgb,var(--surface) 92%,transparent)!important;box-shadow:inset 0 1px color-mix(in srgb,#fff 56%,transparent)!important;overflow:hidden!important}
+.home-matchup{grid-template-columns:minmax(0,1fr)!important}
+.home-matchup>*{min-width:0!important;max-width:100%!important;box-sizing:border-box!important}
+.home-tonight>header,.season-file-head,.analysis-desk-head{border-color:var(--sheet-rule)!important;background:transparent!important}
+.home-tonight h2,.season-file-head h2,.analysis-desk-head h2{font-family:var(--font-editorial)!important;font-weight:500!important;letter-spacing:-.035em!important}
+.season-file:before,.season-file:after,.analysis-desk:after{display:none!important;content:none!important}
+.season-state-stage{background:transparent!important}
+.current-season-chapter{display:none!important}
+
+.analysis-desk{margin-top:32px!important}
+.analysis-desk-grid{display:grid!important;grid-template-columns:repeat(2,minmax(0,1fr))!important;gap:1px!important;background:var(--rule)!important}
+.analysis-desk-grid>.home-module{min-height:410px!important;border:0!important;border-radius:0!important;background:var(--surface)!important;padding:22px 20px 16px!important}
+.home-module .chart{height:320px!important;min-height:320px!important}
+.home-module-head{min-height:62px!important}
+.home-module-head h3{font-size:21px!important}
+.context-link{left:20px!important;right:20px!important;width:calc(100% - 40px)!important}
+
+/* Teams and Players use a clean identity face; editorial type remains reserved
+   for page and section titles. */
+#teams #team-title,#players #player-title{font-family:var(--font-sans)!important;font-size:clamp(40px,4.3vw,62px)!important;font-weight:620!important;line-height:.98!important;letter-spacing:-.052em!important}
+
+/* One lead story, then a quiet dense reading grid. */
+.news-feed{display:grid!important;grid-template-columns:repeat(2,minmax(0,1fr))!important;gap:1px!important;border-top:1px solid var(--rule)!important;background:var(--rule)!important;overflow:hidden!important}
+.news-card,.news-card.brief,.news-card.stream{grid-column:auto!important;display:grid!important;grid-template-columns:150px minmax(0,1fr)!important;min-height:172px!important;border:0!important;background:var(--surface)!important}
+.news-card img,.news-card.brief img,.news-card.stream img{width:150px!important;height:100%!important;min-height:172px!important;object-fit:cover!important}
+.news-card>div,.news-card.brief>div,.news-card.stream>div{padding:18px 20px!important}
+.news-card h3,.news-card.brief h3,.news-card.stream h3{margin:6px 0 10px!important;font-family:var(--font-sans)!important;font-size:18px!important;font-weight:650!important;line-height:1.2!important;letter-spacing:-.025em!important}
+.news-card.lead{grid-column:1/-1!important;display:grid!important;grid-template-columns:minmax(0,1.15fr) minmax(360px,.85fr)!important;min-height:360px!important;border:0!important;background:var(--surface)!important}
+.news-card.lead img{width:100%!important;height:360px!important;min-height:360px!important;object-fit:cover!important}
+.news-card.lead>div{justify-content:center!important;padding:32px 36px!important}
+.news-card.lead h3{max-width:20ch!important;margin:9px 0 14px!important;font-family:var(--font-editorial)!important;font-size:clamp(31px,2.7vw,44px)!important;font-weight:500!important;line-height:1.04!important;letter-spacing:-.046em!important}
+.news-card.lead p{display:-webkit-box!important;max-width:60ch!important;margin:0 0 18px!important;overflow:hidden!important;-webkit-box-orient:vertical!important;-webkit-line-clamp:3!important}
+.news-card.media-image-missing:before,.news-card.brief.media-image-missing:before,.news-card.stream.media-image-missing:before{width:150px!important;min-height:172px!important}
+.news-card.lead.media-image-missing:before{width:100%!important;height:360px!important;min-height:360px!important}
+
+/* Analytical marks must never be the smallest object in their panel. */
+@media(min-width:761px){
+  .page:not(#dashboard) .grid.two>.panel>.chart{min-height:410px!important;height:410px!important}
+  #trends .trend-chart-grid .chart,#compare .comparison-analysis .chart,#game-shot-map,#playoffs .playoff-pie{min-height:470px!important;height:470px!important}
+  #power .chart.tall{min-height:620px!important;height:620px!important}
+}
+
+@media(max-width:1050px){
+  .news-card,.news-card.brief,.news-card.stream{grid-column:1/-1!important}
+}
+
+@media(max-width:760px){
+  body[data-navigation-group="home"] main{padding-top:24px!important}
+  .home-masthead{grid-template-columns:1fr!important;min-height:0!important}
+  .home-masthead-copy{min-height:96px!important;padding:20px 0 15px!important}
+  .home-masthead-copy h1{font-size:46px!important}
+  .home-dossier-meta{border-top:1px solid var(--rule)!important;border-left:0!important;padding:13px!important}
+  .analysis-desk-grid{grid-template-columns:1fr!important}
+  .analysis-desk-grid>.home-module{min-height:400px!important}
+  .home-module .chart{height:300px!important;min-height:300px!important}
+  .home-matchup-clubs{grid-template-columns:minmax(0,1fr) 50px minmax(0,1fr)!important;padding:14px 8px 9px 10px!important}
+  .home-matchup-clubs>div{grid-template-columns:32px minmax(0,1fr)!important;gap:5px!important}
+  .home-matchup-clubs img{width:32px!important;height:32px!important}
+  #teams #team-title,#players #player-title{font-size:40px!important;letter-spacing:-.045em!important}
+  .news-feed{grid-template-columns:1fr!important}
+  .news-card,.news-card.brief,.news-card.stream{grid-column:1/-1!important;grid-template-columns:96px minmax(0,1fr)!important;min-height:128px!important}
+  .news-card img,.news-card.brief img,.news-card.stream img{width:96px!important;min-height:128px!important}
+  .news-card>div,.news-card.brief>div,.news-card.stream>div{padding:13px 14px!important}
+  .news-card h3,.news-card.brief h3,.news-card.stream h3{font-size:15px!important}
+  .news-card.lead{display:flex!important;min-height:0!important}
+  .news-card.lead img{height:210px!important;min-height:210px!important}
+  .news-card.lead>div{padding:18px 16px 19px!important}
+  .news-card.lead h3{font-size:28px!important}
+  .news-card.media-image-missing:before,.news-card.brief.media-image-missing:before,.news-card.stream.media-image-missing:before{width:96px!important;min-height:128px!important}
+  .news-card.lead.media-image-missing:before{width:100%!important;height:210px!important;min-height:210px!important}
+}

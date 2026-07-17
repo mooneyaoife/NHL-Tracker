@@ -22,7 +22,7 @@
   <script>document.documentElement.dataset.theme=localStorage.getItem("nhl-theme")||"light"</script>
   <link rel="stylesheet" href="styles.css?v=6.0.0">
   <link rel="stylesheet" href="theme-569.css?v=6.0.0">
-  <link rel="stylesheet" href="design-system.css?v=7.2.1">
+  <link rel="stylesheet" href="design-system.css?v=7.3.1">
 </head>
 <body>
 <a class="skip-link" href="#main-content">Skip to content</a>
@@ -43,13 +43,12 @@
 <main id="main-content" tabindex="-1">
 
   <section id="dashboard" class="page active">
-    <section class="home-masthead">
-      <aside class="home-dossier-meta" aria-label="Season dossier"><span>Dossier</span><strong id="home-dossier-season">Current season</strong><small>Live tracker</small><small id="home-dossier-updated">Loading update</small></aside>
-      <div class="home-masthead-copy"><h1>Tonight, then the season.</h1></div>
-      <div id="dashboard-hero-logos" class="hero-logos home-team-marks"></div>
+    <section class="home-masthead sheet-header sheet-header-split">
+      <div class="home-masthead-copy"><h1>Overview</h1></div>
+      <aside class="home-dossier-meta" aria-label="Current season"><span>Current season</span><strong id="home-dossier-season">Loading</strong><small id="home-dossier-updated">Loading update</small></aside>
     </section>
-    <nav class="home-file-tabs" aria-label="Open a folder"><button type="button" data-home-page="tonight">Tonight</button><button type="button" data-home-page="schedule">Season</button><button type="button" data-home-page="teams">Teams</button><button type="button" data-home-page="players">Players</button><button type="button" data-home-page="league">Metrics</button><button type="button" data-home-page="guide">Reference</button></nav>
-    <section class="home-tonight" aria-labelledby="home-tonight-title"><header><div><h2 id="home-tonight-title">Tonight</h2><strong id="today-date">Latest NHL update</strong></div><button type="button" data-home-page="tonight">All games →</button></header><div id="today-games" class="today-games"></div></section>
+    <div id="dashboard-hero-logos" class="hero-logos home-team-marks" hidden></div>
+    <section class="home-tonight" aria-labelledby="home-tonight-title"><header><div><h2 id="home-tonight-title">Next up</h2><strong id="today-date">Latest NHL update</strong></div><button type="button" data-home-page="tonight">Open Tonight →</button></header><div id="today-games" class="today-games"></div></section>
     <section id="game-day-mode" class="game-day-mode" hidden></section>
     <div class="story-chapter current-season-chapter"><span>Season file</span><strong id="dashboard-season-label">Current season</strong><em>Record, form, process and path</em></div>
     <section id="season-file" class="season-file" aria-labelledby="season-file-title">
@@ -252,5 +251,5 @@
 <footer><div class="footer-links"><button data-page="watchlist" id="footer-install-link">Install app</button><button data-page="watchlist">Settings</button><button data-page="guide">Reference</button><a href="https://moneypuck.com/data.htm" target="_blank" rel="noopener">Data sources</a><button data-page="status">Status</button></div><p>NHL Tracker · Unofficial, non-commercial fan project using public NHL data</p></footer>
 <aside id="app-update" class="app-update" role="status" hidden><span>A fresh version of NHL Tracker is ready.</span><button id="app-update-button" type="button">Update now</button></aside>
 <div id="chart-help-overlay" class="chart-help-overlay" hidden><section role="dialog" aria-modal="true" aria-labelledby="chart-help-title"><header><div><span class="section-kicker">How to use this view</span><h2 id="chart-help-title">Chart guide</h2></div><button id="chart-help-close" type="button" aria-label="Close chart guide">×</button></header><div id="chart-help-body"></div></section></div>
-  <script defer src="app.js?v=7.2.1"></script>
+  <script defer src="app.js?v=7.3.1"></script>
 </body></html>
