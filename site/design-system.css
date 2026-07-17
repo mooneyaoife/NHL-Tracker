@@ -1533,6 +1533,68 @@ tbody tr:hover{background:color-mix(in srgb,var(--brand-soft) 45%,transparent)!i
   }
 }
 
+/* 7.9 · Analytics Centre. One responsive evidence grid gives each chart a
+   stable reading area; wide seasonal narratives are never compressed into a
+   dashboard tile. */
+.analytics-visual-suite{margin:var(--space-7) 0 var(--space-6)}
+.analytics-visual-suite>header{
+  display:grid;
+  grid-template-columns:auto minmax(0,1fr) auto;
+  align-items:end;
+  gap:var(--space-3);
+  margin-bottom:var(--space-4);
+  border-bottom:1px solid var(--ink);
+  padding:0 var(--heading-inset) var(--space-4);
+}
+.analytics-visual-suite>header .section-kicker{align-self:center}
+.analytics-visual-suite>header h3{
+  margin:0;
+  font-family:var(--font-editorial);
+  font-size:clamp(28px,3vw,38px);
+  font-weight:550;
+  letter-spacing:-.035em;
+}
+#analytics-coverage{
+  color:var(--ink-soft);
+  font-family:var(--font-data);
+  font-size:11px;
+  letter-spacing:.04em;
+  text-align:right;
+  text-transform:uppercase;
+}
+.analytics-chart-grid{
+  display:grid;
+  grid-template-columns:repeat(2,minmax(0,1fr));
+  gap:var(--space-5);
+}
+.analytics-chart-grid>.panel{
+  min-width:0;
+  margin:0;
+  border:0!important;
+  border-top:1px solid var(--ink)!important;
+  border-radius:0!important;
+  background:transparent!important;
+  box-shadow:none!important;
+  padding:var(--panel-padding) 0 0!important;
+}
+.analytics-chart-grid>.panel>h3{margin:0;font-size:20px}
+.analytics-chart-wide{grid-column:1/-1}
+.analytics-deep-chart{height:410px!important;min-height:410px!important}
+.analytics-chart-wide .analytics-deep-chart{height:440px!important;min-height:440px!important}
+@media(max-width:860px){
+  .analytics-chart-grid{grid-template-columns:1fr;gap:var(--space-6)}
+  .analytics-chart-wide{grid-column:auto}
+  .analytics-visual-suite>header{grid-template-columns:auto 1fr}
+  #analytics-coverage{grid-column:1/-1;text-align:left}
+}
+@media(max-width:560px){
+  .analytics-visual-suite{margin-top:var(--space-6)}
+  .analytics-visual-suite>header{grid-template-columns:1fr;gap:4px;padding-inline:var(--heading-inset)}
+  .analytics-visual-suite>header .section-kicker{align-self:auto}
+  #analytics-coverage{grid-column:auto}
+  .analytics-deep-chart,.analytics-chart-wide .analytics-deep-chart{height:350px!important;min-height:350px!important}
+}
+
 /* 7.8.1 · Readable small type.
    Compact evidence remains visually secondary, but no meaningful interface
    copy should depend on 9–11px text. */
