@@ -1,7 +1,14 @@
 {
   "schema": 1,
-  "updatedAt": "2026-07-17T17:40:14.910Z",
+  "updatedAt": "2026-07-17T23:40:17.758Z",
   "items": [
+    {
+      "id": "c190a52ab55edce7a5a3",
+      "title": "Jamie Drysdale Signs a 4-Year, $26.00M Contract with the Philadelphia Flyers",
+      "publishedAt": "2026-07-17T18:36:10.000Z",
+      "category": "Contract",
+      "url": "https://puckpedia.com/signing/10746?utm_source=email&utm_medium=email&utm_campaign=signing&utm_content=primary"
+    },
     {
       "id": "4180e752f4c0cd0dc649",
       "title": "Viktor Neuchev Signs a 1-Year, $850K Contract with the Carolina Hurricanes",
@@ -204,13 +211,6 @@
       "publishedAt": "2026-07-10T19:04:08.000Z",
       "category": "Contract",
       "url": "https://puckpedia.com/signing/10718?utm_source=email&utm_medium=email&utm_campaign=signing&utm_content=primary"
-    },
-    {
-      "id": "386ff5f6590d62be9ba4",
-      "title": "Victor Ostman Signs a 1-Year, $850K Contract with the Seattle Kraken",
-      "publishedAt": "2026-07-10T18:14:10.000Z",
-      "category": "Contract",
-      "url": "https://puckpedia.com/signing/10717?utm_source=email&utm_medium=email&utm_campaign=signing&utm_content=primary"
     }
   ]
 }
