@@ -1666,3 +1666,185 @@ body #dashboard .js-plotly-plot text{
 body .tonight-summary .metric .label{
   font-size:var(--type-caption)!important;
 }
+
+/* 7.8.2 · Game Centre alignment and hierarchy. */
+@media(min-width:901px){
+  #tonight .sheet-header-split>.tonight-toolbar{
+    grid-template-columns:1fr!important;
+    align-content:center!important;
+    align-items:stretch!important;
+    gap:8px!important;
+    background:color-mix(in srgb,var(--surface-subtle) 66%,transparent)!important;
+  }
+  #tonight .sheet-header-split>.tonight-toolbar>div{
+    display:grid!important;
+    gap:4px!important;
+  }
+  #tonight .sheet-header-split>.tonight-toolbar>div strong{
+    font-size:22px!important;
+    line-height:1.1!important;
+  }
+  #tonight .sheet-header-split>.tonight-toolbar label{
+    display:grid!important;
+    grid-template-columns:auto minmax(0,1fr)!important;
+    align-items:center!important;
+    gap:12px!important;
+    margin-top:2px!important;
+  }
+}
+
+.game-special-teams header{
+  align-content:center!important;
+}
+.game-special-teams header span{
+  font-size:var(--type-caption)!important;
+  line-height:1.35!important;
+}
+.game-special-teams>div{
+  grid-template-areas:"label label" "away home"!important;
+  grid-template-rows:auto auto!important;
+  align-content:center!important;
+  align-items:baseline!important;
+  row-gap:5px!important;
+}
+.game-special-teams>div>span{
+  grid-area:label;
+  font-size:var(--type-caption)!important;
+  line-height:1.35!important;
+}
+.game-special-teams>div>strong:first-of-type{grid-area:away}
+.game-special-teams>div>strong:last-of-type{grid-area:home}
+.game-special-teams>div>strong{
+  font-size:13px!important;
+  line-height:1.3!important;
+  text-align:left!important;
+}
+.game-special-teams>div>strong:last-of-type{text-align:right!important}
+.game-special-teams button{
+  min-width:190px;
+  border:0!important;
+  border-left:1px solid var(--rule)!important;
+  border-radius:0!important;
+  background:var(--surface-subtle)!important;
+  color:var(--brand-strong)!important;
+  padding-inline:16px!important;
+  font-size:13px!important;
+  line-height:1.3!important;
+}
+.game-special-teams button:hover,.game-special-teams button:focus-visible{
+  background:var(--brand-soft)!important;
+  color:var(--brand-strong)!important;
+}
+
+.game-turning-points{padding:16px 18px!important}
+.game-turning-points>h3{margin-bottom:12px!important}
+.game-flow-moments time{
+  font-size:var(--type-caption)!important;
+  line-height:1.35!important;
+}
+.game-flow-moments strong{
+  font-size:13px!important;
+  line-height:1.35!important;
+}
+.game-flow-moments span{
+  font-size:var(--type-caption)!important;
+  line-height:1.4!important;
+}
+.game-flow-periods article{padding:14px 14px 13px 17px!important}
+.game-flow-periods article>div strong,
+.game-flow-periods p b{
+  font-size:13px!important;
+  line-height:1.35!important;
+}
+.game-flow-periods article>div span,
+.game-flow-periods p span{
+  font-size:var(--type-caption)!important;
+  line-height:1.4!important;
+}
+.game-flow-periods p{
+  grid-template-columns:44px minmax(0,1fr)!important;
+  gap:8px!important;
+  margin:7px 0!important;
+}
+.game-flow>footer{
+  gap:12px 22px!important;
+  font-size:var(--type-caption)!important;
+  line-height:1.4!important;
+}
+
+.official-resources{
+  grid-template-columns:minmax(220px,.46fr) minmax(0,1.54fr)!important;
+  align-items:stretch!important;
+  gap:0!important;
+  overflow:hidden!important;
+  border:1px solid var(--rule)!important;
+  border-left:4px solid var(--brand)!important;
+  border-radius:var(--sheet-radius)!important;
+  background:var(--surface-subtle)!important;
+  padding:0!important;
+}
+.official-resources>div{
+  align-content:center!important;
+  padding:16px 18px!important;
+  border-right:1px solid var(--rule)!important;
+}
+.official-resources>div>strong{
+  font-size:18px!important;
+  line-height:1.25!important;
+}
+.official-resources nav{
+  align-self:stretch!important;
+  gap:1px!important;
+  padding:1px!important;
+  background:var(--rule)!important;
+}
+.official-resources a{
+  min-height:48px!important;
+  border:0!important;
+  border-radius:0!important;
+  background:var(--surface)!important;
+  padding:11px 13px!important;
+  font-size:13px!important;
+  line-height:1.3!important;
+}
+.official-resources a:hover,.official-resources a:focus-visible{
+  background:var(--brand-soft)!important;
+  color:var(--brand-strong)!important;
+}
+.official-resources a span{font-size:16px!important}
+
+.official-officiating{
+  grid-template-columns:repeat(2,minmax(0,1fr))!important;
+  align-items:stretch!important;
+  gap:8px!important;
+  padding-top:14px!important;
+}
+.official-officiating h4{
+  grid-column:1/-1;
+  font-size:13px!important;
+  line-height:1.35!important;
+}
+.official-officiating>div{
+  align-content:center;
+  min-height:58px;
+  padding:10px 12px!important;
+}
+.official-officiating span{
+  font-size:var(--type-caption)!important;
+  line-height:1.35!important;
+}
+.official-officiating strong{
+  font-size:13px!important;
+  line-height:1.4!important;
+}
+
+@media(max-width:760px){
+  .game-special-teams>div{grid-template-areas:"label" "away" "home"!important}
+  .game-special-teams>div>strong:last-of-type{text-align:left!important}
+  .game-special-teams button{min-width:0;border-top:1px solid var(--rule)!important;border-left:0!important}
+  .official-resources{grid-template-columns:1fr!important}
+  .official-resources>div{border-right:0!important;border-bottom:1px solid var(--rule)!important}
+  .official-resources nav{grid-template-columns:1fr!important}
+  .official-officiating{grid-template-columns:1fr!important}
+  .official-officiating h4{grid-column:auto}
+}
