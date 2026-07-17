@@ -1098,6 +1098,7 @@ body[data-navigation-group="explore"] .context-nav-level button{
   box-shadow:inset 0 -3px var(--brand)!important;
 }
 .workspace-story-rail,#schedule .schedule-story-rail{margin-bottom:20px!important;box-shadow:none!important}
+#schedule .schedule-story-rail{grid-template-columns:repeat(3,minmax(0,1fr))!important}
 
 /* Forms and filters use a single 42px control and an eight-pixel field. */
 .page select,.page input[type="search"],.page input[type="text"],.page input:not([type]){
@@ -1216,6 +1217,34 @@ tbody tr:hover{background:color-mix(in srgb,var(--brand-soft) 45%,transparent)!i
   .chart{min-height:330px}
   .home-module .chart{height:330px!important;min-height:330px!important}
   .analysis-desk-grid>.home-module{min-height:420px!important}
+}
+
+/* Keep the global route finder available on touch devices. It uses the same
+   compact icon-button treatment as the existing theme control. */
+@media(max-width:640px){
+  body>header{grid-template-columns:minmax(145px,1fr) auto!important}
+  body>header .header-tools{grid-template-columns:78px 36px 36px!important;gap:6px!important}
+  body>header .season-archive-toggle{width:78px!important}
+  body>header .global-search-button{
+    display:flex!important;
+    grid-column:2;
+    grid-row:1;
+    align-items:center;
+    justify-content:center;
+    width:36px!important;
+    height:36px!important;
+    padding:0!important;
+  }
+  body>header .global-search-button:after{display:none!important;content:none!important}
+  body>header .global-search-button svg{width:17px!important;height:17px!important}
+  body>header .header-tools #theme-button{grid-column:3!important;grid-row:1!important;width:36px!important;height:36px!important}
+  #schedule .schedule-story-rail button,
+  #league .league-subnav button{flex:1 1 0!important;min-width:0!important}
+}
+@media(max-width:360px){
+  body>header{grid-template-columns:44px auto!important}
+  body>header .brand{min-width:44px!important}
+  body>header .brand-name{display:none}
 }
 
 @media(min-width:901px){
