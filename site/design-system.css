@@ -925,3 +925,389 @@ body[data-navigation-group="home"] main{padding-top:42px!important}
   .news-card.media-image-missing:before,.news-card.brief.media-image-missing:before,.news-card.stream.media-image-missing:before{width:96px!important;min-height:128px!important}
   .news-card.lead.media-image-missing:before{width:100%!important;height:210px!important;min-height:210px!important}
 }
+
+/* 7.4 · Canonical component contracts.
+   Season supplies the editorial grid; these rules are the final shared layer
+   for navigation, headers, controls, cards, tables, charts and responsive
+   spacing. Page-specific rules below this line must describe function, not a
+   competing visual language. */
+:root{
+  --layout-gutter:28px;
+  --section-gap:24px;
+  --panel-padding:24px;
+  --control-height:42px;
+  --tab-height:50px;
+  --card-radius:8px;
+  --page-title-size:clamp(52px,5vw,72px);
+  --section-title-size:26px;
+  --card-title-size:20px;
+  --type-body:16px;
+  --type-small:11px;
+}
+
+/* One page frame and one horizontal datum. */
+main,
+body[data-navigation-group="home"] main,
+body[data-navigation-group="tonight"] main,
+body[data-navigation-group="season"] main,
+body[data-navigation-group="explore"] main,
+body[data-navigation-group="workspace"] main{
+  max-width:var(--content-width)!important;
+  padding:42px var(--layout-gutter) 72px!important;
+}
+.page{min-width:0}
+.grid{gap:var(--section-gap)!important}
+.page>.panel+.panel{margin-top:var(--section-gap)!important}
+.page>.notice,.page>.source-notice,.page>.mp-credit{margin-top:var(--section-gap)}
+
+/* Primary groups and secondary destinations no longer duplicate one another. */
+body>#nav{grid-template-columns:repeat(5,minmax(0,1fr))!important}
+body>#nav{display:grid!important}
+#nav>button{width:100%;min-width:0!important}
+#nav>button:last-child{border-right:0!important}
+.context-nav{padding-inline:var(--layout-gutter)!important}
+.context-nav-level,
+body[data-navigation-group="explore"] .context-nav-level{
+  width:100%!important;
+  max-width:var(--content-width)!important;
+  min-height:var(--tab-height)!important;
+  margin:0 auto!important;
+}
+.context-nav-level button,
+body[data-navigation-group="explore"] .context-nav-level button{
+  min-height:48px!important;
+  font-family:var(--font-sans)!important;
+  font-size:12px!important;
+  font-weight:700!important;
+}
+
+/* The same ruled page header opens every destination. */
+#teams>[data-explore-header],
+#players>[data-explore-header],
+#league>[data-explore-header],
+#power>[data-explore-header],
+#compare>[data-explore-header],
+#news>[data-explore-header]{display:flex!important}
+.sheet-header,.home-masthead{
+  min-height:126px!important;
+  margin:0 0 20px!important;
+  border:0!important;
+  border-top:1px solid var(--sheet-rule)!important;
+  border-bottom:1px solid var(--sheet-rule)!important;
+  border-radius:0!important;
+  background:color-mix(in srgb,var(--surface) 78%,transparent)!important;
+  box-shadow:none!important;
+}
+.title-bar.sheet-header,.guide-hero.sheet-header{
+  display:flex!important;
+  align-items:flex-end!important;
+  min-height:126px!important;
+  padding:24px 0 20px!important;
+}
+.sheet-header h1,.sheet-header h2,
+.home-masthead-copy h1,
+#schedule .sheet-header h2,#watchlist .sheet-header h2{
+  margin:0!important;
+  font-family:var(--font-editorial)!important;
+  font-size:var(--page-title-size)!important;
+  font-weight:400!important;
+  line-height:.92!important;
+  letter-spacing:-.058em!important;
+  color:var(--ink)!important;
+}
+.sheet-header:before,.sheet-header .title-bar:before,
+[data-explore-header]:before{display:none!important;content:none!important}
+.sheet-header-split>.title-bar,.sheet-header-split>div:first-child,
+.home-masthead-copy{min-height:124px!important;padding:24px 26px 20px 0!important}
+.sheet-header-split>aside,.sheet-header-split>.tonight-toolbar,
+.home-dossier-meta{
+  border-left:1px solid var(--rule)!important;
+  background:color-mix(in srgb,var(--surface-subtle) 66%,transparent)!important;
+  padding:18px 22px!important;
+}
+
+/* Typography has three jobs: editorial titles, sans interface, mono data. */
+.panel h3,.panel h4,
+.home-module-head h3,
+.news-desk-head h3,
+.story-chapter strong,
+.section-head h3{
+  font-family:var(--font-sans)!important;
+  font-weight:650!important;
+  letter-spacing:-.032em!important;
+}
+.panel h3,.home-module-head h3{font-size:var(--card-title-size)!important;line-height:1.2!important}
+.news-desk-head h3,.section-head h3{font-size:var(--section-title-size)!important;line-height:1.12!important}
+.section-kicker,.section-label,.label,label,th,.source-tag,.update-state,.refresh-badge,.change-tag{
+  font-family:var(--font-data)!important;
+  font-size:var(--type-small)!important;
+  line-height:1.35!important;
+  letter-spacing:.08em!important;
+}
+.page p,.page li,.page td{font-size:var(--type-body);line-height:1.55}
+.page small,.page .detail-note,.page .mp-credit{font-size:var(--type-small)!important;line-height:1.45!important}
+
+/* Local tabs share one geometry; numbered chapter rails remain the deliberate
+   two-line variant used by Season and Workspace. */
+.subnav,.analysis-hub-rail{
+  display:flex!important;
+  width:100%!important;
+  max-width:100%!important;
+  min-height:var(--tab-height)!important;
+  margin:0 0 20px!important;
+  padding:1px!important;
+  gap:1px!important;
+  overflow-x:auto!important;
+  border:1px solid var(--sheet-rule)!important;
+  border-radius:0!important;
+  background:var(--rule)!important;
+  box-shadow:none!important;
+  scrollbar-width:none;
+}
+.subnav button,.analysis-hub-rail button,.analysis-hub-rail strong{
+  display:flex!important;
+  flex:1 1 0!important;
+  align-items:center!important;
+  justify-content:center!important;
+  min-width:116px!important;
+  min-height:48px!important;
+  margin:0!important;
+  border:0!important;
+  border-radius:0!important;
+  background:var(--surface)!important;
+  color:var(--ink-soft)!important;
+  padding:10px 13px!important;
+  font-family:var(--font-sans)!important;
+  font-size:12px!important;
+  font-weight:700!important;
+  line-height:1.2!important;
+  text-align:center!important;
+  white-space:nowrap;
+  box-shadow:none!important;
+}
+.subnav button:hover,.analysis-hub-rail button:hover{background:var(--surface-subtle)!important;color:var(--ink)!important}
+.subnav button.active,.analysis-hub-rail strong{
+  background:var(--brand-soft)!important;
+  color:var(--brand-strong)!important;
+  box-shadow:inset 0 -3px var(--brand)!important;
+}
+.workspace-story-rail,#schedule .schedule-story-rail{margin-bottom:20px!important;box-shadow:none!important}
+
+/* Forms and filters use a single 42px control and an eight-pixel field. */
+.page select,.page input[type="search"],.page input[type="text"],.page input:not([type]){
+  width:auto;
+  min-height:var(--control-height)!important;
+  height:var(--control-height)!important;
+  border:1px solid var(--rule)!important;
+  border-radius:6px!important;
+  background-color:var(--surface)!important;
+  color:var(--ink)!important;
+  padding-block:9px!important;
+  font:600 13px/1.2 var(--font-sans)!important;
+  box-shadow:none!important;
+}
+#schedule .calendar-controls select{min-height:var(--control-height)!important;height:var(--control-height)!important}
+.control-row,.guide-tools,.trends-toolbar,.leader-controls,.team-ranking-controls,
+.game-library-controls,.matchup-intelligence-controls,.news-controls,.cap-controls{
+  gap:12px!important;
+  border:1px solid var(--rule)!important;
+  border-radius:var(--card-radius)!important;
+  background:color-mix(in srgb,var(--surface-subtle) 70%,transparent)!important;
+  padding:16px!important;
+  box-shadow:none!important;
+}
+.control-row button,.selectors button,.identity-actions button,.tracked-team-actions button,
+.leader-controls button,.team-ranking-controls button,.game-library-controls button,
+.matchup-intelligence-controls button,.context-link,#game-refresh,#save-tracked-teams,
+#nst-prepare-refresh,#install-button{
+  min-height:var(--control-height)!important;
+  border-radius:6px!important;
+  padding:9px 14px!important;
+  font-size:13px!important;
+  line-height:1.2!important;
+  box-shadow:none!important;
+}
+
+/* Cards, tables, messages and badges use the same edge language. */
+.page .panel,.identity-card,.compare-workspace,.edge-comparison,.availability-roster-panel,
+.news-desk,.team-card,.schedule-release-centre,.schedule-intelligence{
+  border:1px solid var(--rule)!important;
+  border-radius:var(--card-radius)!important;
+  background:color-mix(in srgb,var(--surface) 92%,transparent)!important;
+  box-shadow:none!important;
+}
+#dashboard .analysis-desk-grid>.panel{border:0!important;border-radius:0!important}
+.table-wrap{border:1px solid var(--rule)!important;border-radius:var(--card-radius)!important;background:var(--surface)!important;box-shadow:none!important}
+table{width:100%;border-collapse:collapse;font-variant-numeric:tabular-nums}
+th,td{padding:13px 14px!important;border-bottom:1px solid var(--rule)!important;text-align:left}
+th{background:var(--surface-subtle)!important;color:var(--ink-soft)!important;font-size:11px!important}
+td{color:var(--ink)!important;font-size:13px!important}
+tbody tr:hover{background:color-mix(in srgb,var(--brand-soft) 45%,transparent)!important}
+.notice,.source-notice,.rumour-warning,.schedule-intelligence-status{
+  border:0!important;
+  border-left:3px solid var(--brand)!important;
+  border-radius:6px!important;
+  background:var(--surface-subtle)!important;
+  padding:14px 16px!important;
+  box-shadow:none!important;
+}
+.update-state,.refresh-badge,.change-tag,.source-tag{
+  display:inline-flex;
+  align-items:center;
+  min-height:26px;
+  border-radius:999px!important;
+  padding:5px 9px!important;
+}
+
+/* Visual evidence is given a stable, readable stage. */
+.chart{min-height:380px;max-width:100%;overflow:hidden}
+.panel>.chart{margin-top:16px}
+.modebar{opacity:.12;transition:opacity .15s ease}
+.chart:hover .modebar,.chart:focus-within .modebar{opacity:.68}
+.home-module .chart{height:360px!important;min-height:360px!important}
+.analysis-desk-grid>.home-module{min-height:450px!important}
+@media(min-width:761px){
+  .page:not(#dashboard) .grid.two>.panel>.chart{height:420px!important;min-height:420px!important}
+  #trends .trend-chart-grid .chart,#compare .comparison-analysis .chart,
+  #game-shot-map,#playoffs .playoff-pie{height:480px!important;min-height:480px!important}
+}
+
+/* Compact and touch layouts preserve the same rules at a smaller scale. */
+@media(max-width:1050px){
+  :root{--layout-gutter:20px}
+}
+@media(max-width:760px){
+  :root{--layout-gutter:14px;--section-gap:18px;--panel-padding:18px;--page-title-size:46px}
+  main,
+  body[data-navigation-group="home"] main,
+  body[data-navigation-group="tonight"] main,
+  body[data-navigation-group="season"] main,
+  body[data-navigation-group="explore"] main,
+  body[data-navigation-group="workspace"] main{padding:24px var(--layout-gutter) 92px!important}
+  body>#nav{grid-template-columns:repeat(5,minmax(0,1fr))!important;min-height:54px!important}
+  #nav>button{min-height:54px!important;padding:12px 2px 10px!important;font-size:10px!important}
+  #nav>button:before,#nav>button:after{display:none!important;content:none!important}
+  .context-nav{padding-inline:0!important}
+  .context-nav-level button,body[data-navigation-group="explore"] .context-nav-level button{flex:0 0 124px!important;min-width:124px!important}
+  .sheet-header,.home-masthead{min-height:0!important;margin-bottom:14px!important}
+  .title-bar.sheet-header,.guide-hero.sheet-header{min-height:102px!important;padding:20px 0 15px!important}
+  .sheet-header h1,.sheet-header h2,.home-masthead-copy h1,
+  #schedule .sheet-header h2,#watchlist .sheet-header h2{font-size:var(--page-title-size)!important}
+  .sheet-header-split>.title-bar,.sheet-header-split>div:first-child,.home-masthead-copy{min-height:96px!important;padding:20px 0 15px!important}
+  .sheet-header-split>aside,.sheet-header-split>.tonight-toolbar,.home-dossier-meta{border-top:1px solid var(--rule)!important;border-left:0!important;padding:13px!important}
+  .subnav button,.analysis-hub-rail button,.analysis-hub-rail strong{flex:0 0 132px!important}
+  .page .panel{padding:18px}
+  .control-row,.guide-tools,.trends-toolbar,.leader-controls,.team-ranking-controls,
+  .game-library-controls,.matchup-intelligence-controls,.news-controls,.cap-controls{padding:14px!important}
+  th,td{padding:11px 12px!important}
+  .chart{min-height:330px}
+  .home-module .chart{height:330px!important;min-height:330px!important}
+  .analysis-desk-grid>.home-module{min-height:420px!important}
+}
+
+@media(min-width:901px){
+  #schedule .calendar-controls{
+    grid-template-columns:124px minmax(250px,1fr) 56px minmax(165px,.45fr) auto!important;
+  }
+}
+
+@media(min-width:761px) and (max-width:1099px){
+  body>#nav{
+    width:min(560px,calc(100% - 32px))!important;
+    max-width:calc(100% - 32px)!important;
+  }
+}
+
+@media(max-width:760px){
+  .page .news-desk,.page .cap-timeline-panel{padding:0!important}
+}
+
+/* Movement uses the same page-opening contract as every other destination. */
+#news>.title-bar.sheet-header{
+  min-height:126px!important;
+  padding:24px 0 20px!important;
+}
+#news>.sheet-header h2{
+  max-width:none!important;
+  font-size:var(--page-title-size)!important;
+}
+#tonight .tonight-command.sheet-header .title-bar h2,
+#schedule .schedule-command.sheet-header .title-bar h2{
+  letter-spacing:-.058em!important;
+}
+.reveal-item{
+  transform:translateY(6px);
+  transition:opacity .28s ease,transform .28s ease;
+}
+@media(max-width:760px){
+  #news>.title-bar.sheet-header{min-height:102px!important;padding:20px 0 15px!important}
+  #tonight .tonight-command.sheet-header .title-bar h2,
+  #schedule .schedule-command.sheet-header .title-bar h2{font-size:var(--page-title-size)!important}
+}
+
+/* Schedule evidence uses the same restrained evidence language at every depth. */
+.tonight-schedule-flags{
+  display:flex;
+  flex-wrap:wrap;
+  gap:8px 14px;
+  padding:10px 18px 12px;
+  border-top:1px solid var(--rule);
+  background:var(--surface-subtle);
+}
+.tonight-schedule-flags>span{
+  display:flex;
+  flex-wrap:wrap;
+  align-items:center;
+  gap:6px;
+  min-width:0;
+}
+.tonight-schedule-flags strong{
+  color:var(--ink);
+  font-family:var(--font-data);
+  font-size:11px;
+  letter-spacing:.08em;
+}
+.tonight-schedule-flags b{
+  display:inline-flex;
+  min-height:24px;
+  align-items:center;
+  border:1px solid var(--rule);
+  border-radius:999px;
+  padding:4px 8px;
+  color:var(--ink-soft);
+  background:var(--surface);
+  font-size:12px;
+  font-weight:650;
+}
+.game-schedule-evidence{
+  margin:0 18px 18px;
+  border:1px solid var(--rule);
+  border-radius:var(--radius-m);
+  overflow:hidden;
+  background:var(--surface-subtle);
+}
+.game-schedule-evidence>.section-label{padding:11px 14px;border-bottom:1px solid var(--rule)}
+.game-schedule-evidence>div:last-child{display:grid;grid-template-columns:repeat(2,minmax(0,1fr))}
+.game-schedule-evidence article{
+  display:grid;
+  gap:4px;
+  min-width:0;
+  border-left:3px solid var(--team-colour,var(--accent));
+  padding:14px 16px;
+}
+.game-schedule-evidence article+article{border-top:0;border-left:1px solid var(--rule)}
+.game-schedule-evidence article strong{font-size:15px}
+.game-schedule-evidence article span{color:var(--ink);font-size:13px;font-weight:650}
+.game-schedule-evidence article small{color:var(--ink-soft);font-size:12px;line-height:1.45}
+#schedule-difficulty-chart{height:400px!important;min-height:400px!important}
+.chart[data-accessible-chart="true"]:focus-visible{
+  outline:3px solid color-mix(in srgb,var(--brand) 42%,transparent);
+  outline-offset:3px;
+}
+@media(max-width:760px){
+  .tonight-schedule-flags{padding:10px 14px 12px}
+  .game-schedule-evidence{margin:0 14px 14px}
+  .game-schedule-evidence>div:last-child{grid-template-columns:1fr}
+  .game-schedule-evidence article+article{border-top:1px solid var(--rule);border-left:3px solid var(--team-colour,var(--accent))}
+  #schedule-difficulty-chart{height:340px!important;min-height:340px!important}
+}

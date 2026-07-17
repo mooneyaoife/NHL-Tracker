@@ -21,10 +21,11 @@ from concurrent.futures import ThreadPoolExecutor, as_completed
 from datetime import datetime, timedelta, timezone
 from email.utils import parsedate_to_datetime
 from pathlib import Path
+from zoneinfo import ZoneInfo
 
 ROOT = Path(__file__).resolve().parents[1]
 CONFIG = json.loads((ROOT / "config.json").read_text())
-VERSION = "5.70.0"
+VERSION = "5.71.0"
 SEASON = str(CONFIG["season"])
 TRACKED = [str(t).upper() for t in CONFIG["teams"]]
 API = "https://api-web.nhle.com/v1"
@@ -38,6 +39,26 @@ NST_FILE = ROOT / "data" / "naturalstattrick" / f"team_{SEASON}_regular_5v5_sva.
 NST_PLAYER_FILE = ROOT / "data" / "naturalstattrick" / f"player_{SEASON}_regular_5v5.csv"
 NST_GOALIE_FILE = ROOT / "data" / "naturalstattrick" / f"goalie_{SEASON}_regular_5v5.csv"
 NST_REFRESH_FILE = ROOT / "data" / "naturalstattrick" / "naturalstattrick-refresh.json"
+SCHEDULE_VENUE_FILE = ROOT / "data" / "schedule_venues.json"
+SCHEDULE_MODEL_VERSION = "workbook-2026-07-17"
+SCHEDULE_WEIGHTS = {
+    "opponentStrength": 0.28,
+    "travelDistance": 0.14,
+    "backToBacks": 0.10,
+    "congestion": 0.10,
+    "restBurden": 0.10,
+    "roadFrequency": 0.07,
+    "roadTripBurden": 0.08,
+    "timeZoneChanges": 0.05,
+    "congestedOpponentStrength": 0.05,
+    "timingAndEvents": 0.03,
+}
+SCHEDULE_EXPECTATIONS = {
+    "20262027": {"earliestDate": "2026-09-29", "latestDate": "2027-04-10"},
+}
+SCHEDULE_WORKBOOK_BENCHMARKS = {
+    "20262027": {"SEA": 66.7, "BUF": 45.6, "VGK": 27.8},
+}
 TEAM_NICKNAMES = {
     "ANA":"ducks","BOS":"bruins","BUF":"sabres","CAR":"hurricanes","CBJ":"blue jackets","CGY":"flames","CHI":"blackhawks","COL":"avalanche",
     "DAL":"stars","DET":"red wings","EDM":"oilers","FLA":"panthers","LAK":"kings","MIN":"wild","MTL":"canadiens","NJD":"devils","NSH":"predators",
@@ -573,6 +594,317 @@ def localised(value) -> str:
     return str(value or "")
 
 
+def normalise_venue_name(value: str) -> str:
+    return re.sub(r"[^a-z0-9]+", " ", str(value or "").casefold()).strip()
+
+
+def load_schedule_venues() -> dict:
+    """Load the analyst-maintained arena coordinates and time zones used by the workbook."""
+    payload = json.loads(SCHEDULE_VENUE_FILE.read_text())
+    required = {"name", "latitude", "longitude", "timeZone"}
+    malformed = [row.get("name", "unnamed venue") for row in payload.get("venues", []) if not required <= row.keys()]
+    if malformed:
+        raise RuntimeError(f"Schedule venue reference is incomplete: {', '.join(malformed)}")
+    payload["byName"] = {normalise_venue_name(row["name"]): row for row in payload.get("venues", [])}
+    aliases = {
+        "amalie arena": "Benchmark International Arena",
+        "bell centre": "Centre Bell",
+        "sap center": "SAP Center at San Jose",
+        "wells fargo center": "Xfinity Mobile Arena",
+        "xcel energy center": "Grand Casino Arena",
+    }
+    for alias, canonical in aliases.items():
+        match = payload["byName"].get(normalise_venue_name(canonical))
+        if match:
+            payload["byName"][normalise_venue_name(alias)] = match
+    return payload
+
+
+def parse_utc(value: str) -> datetime | None:
+    if not value:
+        return None
+    try:
+        parsed = datetime.fromisoformat(str(value).replace("Z", "+00:00"))
+        return parsed if parsed.tzinfo else parsed.replace(tzinfo=timezone.utc)
+    except ValueError:
+        return None
+
+
+def venue_offset_hours(venue: dict | None, when: datetime | None) -> float:
+    if not venue or not when:
+        return 0.0
+    try:
+        offset = when.astimezone(ZoneInfo(venue["timeZone"])).utcoffset()
+        return round((offset.total_seconds() if offset else 0) / 3600, 2)
+    except (KeyError, ValueError):
+        return 0.0
+
+
+def scheduled_offset_hours(value) -> float | None:
+    match = re.fullmatch(r"([+-]?)(\d{1,2})(?::?(\d{2}))?", str(value or "").strip())
+    if not match:
+        return None
+    sign = -1 if match.group(1) == "-" else 1
+    return sign * (int(match.group(2)) + int(match.group(3) or 0) / 60)
+
+
+def haversine_km(origin: dict | None, destination: dict | None, radius: float = 6371) -> float:
+    if not origin or not destination:
+        return 0.0
+    lat1, lon1 = math.radians(float(origin["latitude"])), math.radians(float(origin["longitude"]))
+    lat2, lon2 = math.radians(float(destination["latitude"])), math.radians(float(destination["longitude"]))
+    dlat, dlon = lat2 - lat1, lon2 - lon1
+    value = math.sin(dlat / 2) ** 2 + math.cos(lat1) * math.cos(lat2) * math.sin(dlon / 2) ** 2
+    return radius * 2 * math.asin(min(1, math.sqrt(value)))
+
+
+def standings_points_percentage(rows: list[dict]) -> dict[str, float]:
+    output = {}
+    for row in rows or []:
+        games = int(row.get("gp") or 0)
+        if row.get("team") and games:
+            output[str(row["team"]).upper()] = float(row.get("points") or 0) / (games * 2)
+    return output
+
+
+def schedule_game_identity(game: dict) -> tuple[str, str, str]:
+    return (
+        str(game.get("id") or ""),
+        localised(game.get("awayTeam", {}).get("abbrev")).upper(),
+        localised(game.get("homeTeam", {}).get("abbrev")).upper(),
+    )
+
+
+def schedule_reconciliation(games: list[dict], rows: list[dict], teams: list[str], venues: dict,
+        standings_strength: dict[str, float], season: str) -> dict:
+    """Reproduce the workbook Data Quality sheet and make a published schedule fail closed."""
+    regular = [game for game in games if int(game.get("gameType") or 0) == 2]
+    ids = [str(game.get("id") or "") for game in regular]
+    unique_games = len(set(ids))
+    expected_per_team = regular_season_games(season)
+    expected_games = len(teams) * expected_per_team // 2
+    counts = defaultdict(int); home = defaultdict(int); away = defaultdict(int)
+    for row in rows:
+        counts[row["team"]] += 1
+        if row.get("officialHome"):
+            home[row["team"]] += 1
+        else:
+            away[row["team"]] += 1
+    dates = sorted(str(game.get("gameDate") or "") for game in regular if game.get("gameDate"))
+    expectations = SCHEDULE_EXPECTATIONS.get(str(season), {})
+    missing_venues = sorted({row["venue"] for row in rows if row.get("venueMissing")})
+    missing_standings = sorted(set(teams) - set(standings_strength))
+    checks = []
+
+    def check(name: str, actual, expected, passed: bool | None = None):
+        checks.append({"name": name, "actual": actual, "expected": expected,
+            "status": "pass" if (actual == expected if passed is None else passed) else "fail"})
+
+    check("Unique regular-season games", unique_games, expected_games)
+    check("Duplicate game IDs", len(ids) - unique_games, 0)
+    check("Team-game rows", len(rows), len(teams) * expected_per_team)
+    check("League teams", len(teams), 32)
+    check("Games per team", min(counts.values(), default=0), expected_per_team,
+        bool(teams) and all(counts[team] == expected_per_team for team in teams))
+    check("Home assignments per team", min(home.values(), default=0), expected_per_team // 2,
+        bool(teams) and all(home[team] == expected_per_team // 2 for team in teams))
+    check("Away assignments per team", min(away.values(), default=0), expected_per_team // 2,
+        bool(teams) and all(away[team] == expected_per_team // 2 for team in teams))
+    if expectations.get("earliestDate"):
+        check("Earliest game date", dates[0] if dates else None, expectations["earliestDate"])
+    if expectations.get("latestDate"):
+        check("Latest game date", dates[-1] if dates else None, expectations["latestDate"])
+    check("Missing venue coordinates", len(missing_venues), 0)
+    check("Missing previous standings", len(missing_standings), 0)
+    check("Methodology weights", round(sum(SCHEDULE_WEIGHTS.values()), 6), 1.0)
+    complete = unique_games >= expected_games
+    failures = [row for row in checks if row["status"] == "fail"]
+    result = {"status": "pass" if complete and not failures else "fail" if complete else "pending",
+        "enforced": complete, "checks": checks, "failures": len(failures),
+        "missingVenues": missing_venues, "missingStandings": missing_standings}
+    if complete and failures:
+        detail = "; ".join(f"{row['name']}: {row['actual']} (expected {row['expected']})" for row in failures)
+        raise RuntimeError(f"Schedule reconciliation failed: {detail}")
+    return result
+
+
+def build_schedule_model(games: list[dict], teams: list[str], previous_standings: list[dict], season: str) -> tuple[dict, dict]:
+    """Port the workbook's venue-aware schedule model into one canonical team-game dataset."""
+    venue_reference = load_schedule_venues()
+    venue_by_name = venue_reference["byName"]
+    home_venues = {team: venue_by_name.get(normalise_venue_name(name))
+        for team, name in venue_reference.get("homeVenues", {}).items()}
+    strength = standings_points_percentage(previous_standings)
+    team_rows = defaultdict(list)
+    regular = [game for game in games if int(game.get("gameType") or 0) == 2]
+    for game in regular:
+        game_id, away, home = schedule_game_identity(game)
+        if not game_id or not away or not home:
+            continue
+        venue_name = localised(game.get("venue"))
+        venue = venue_by_name.get(normalise_venue_name(venue_name))
+        neutral = bool(game.get("neutralSite")) or bool(venue and venue.get("neutral"))
+        start = parse_utc(str(game.get("startTimeUTC") or ""))
+        game_date = str(game.get("gameDate") or (start.date().isoformat() if start else ""))
+        local_start = start.astimezone(ZoneInfo(venue["timeZone"])) if start and venue else None
+        matinee = bool(local_start and local_start.hour < 17)
+        unusual = None
+        if matinee:
+            unusual = "Matinee"
+        elif venue and venue.get("timeZone", "").startswith("Europe/"):
+            unusual = "International start"
+        elif local_start and (local_start.hour + local_start.minute / 60) >= 21:
+            unusual = "Late local start"
+        for team, opponent, official_home in ((away, home, False), (home, away, True)):
+            team_rows[team].append({
+                "id": game_id, "team": team, "opponent": opponent, "date": game_date,
+                "startTimeUTC": str(game.get("startTimeUTC") or ""), "start": start,
+                "venue": venue_name, "venueData": venue, "venueMissing": venue is None,
+                "officialHome": official_home, "neutral": neutral,
+                "roadLike": neutral or not official_home,
+                "localStart": local_start.isoformat() if local_start else None,
+                "localStartLabel": local_start.strftime("%-I:%M %p") if local_start else None,
+                "matinee": matinee, "scheduledOffset": scheduled_offset_hours(game.get("venueUTCOffset")),
+                "unusualTiming": unusual, "specialEvent": venue.get("specialEvent") if venue else None,
+                "opponentPointsPct": strength.get(opponent),
+            })
+    earth_radius = float(venue_reference.get("earthRadiusKm") or 6371)
+    for team, rows in team_rows.items():
+        rows.sort(key=lambda row: (row["date"], row["startTimeUTC"], row["id"]))
+        prior_date = None
+        prior_venue = home_venues.get(team)
+        prior_offset = venue_offset_hours(prior_venue, rows[0]["start"]) if rows else 0
+        for index, row in enumerate(rows):
+            row["gameNumber"] = index + 1
+            current_date = datetime.fromisoformat(row["date"]).date() if row["date"] else None
+            row["restDays"] = 0 if prior_date is None or current_date is None else max(0, (current_date - prior_date).days - 1)
+            row["backToBack"] = index > 0 and row["restDays"] == 0
+            row["threeInFour"] = index >= 2 and (current_date - datetime.fromisoformat(rows[index - 2]["date"]).date()).days <= 3
+            row["fourInSix"] = index >= 3 and (current_date - datetime.fromisoformat(rows[index - 3]["date"]).date()).days <= 5
+            row["travelKm"] = haversine_km(prior_venue, row["venueData"], earth_radius)
+            current_offset = row["scheduledOffset"] if row["scheduledOffset"] is not None else venue_offset_hours(row["venueData"], row["start"])
+            row["timeZoneChange"] = abs(current_offset - prior_offset)
+            row["utcOffset"] = current_offset
+            prior_date = current_date
+            prior_venue = row["venueData"] or prior_venue
+            prior_offset = current_offset
+        start = 0
+        while start < len(rows):
+            road_like = rows[start]["roadLike"]
+            end = start + 1
+            while end < len(rows) and rows[end]["roadLike"] == road_like:
+                end += 1
+            length = end - start
+            for position, row in enumerate(rows[start:end], 1):
+                row["segmentLength"] = length
+                row["segmentGame"] = position
+            start = end
+    by_game_team = {(row["id"], row["team"]): row for rows in team_rows.values() for row in rows}
+    for rows in team_rows.values():
+        for row in rows:
+            opponent = by_game_team.get((row["id"], row["opponent"]), {})
+            row["opponentRestDays"] = int(opponent.get("restDays") or 0)
+            row["restDifferential"] = (0 if row["gameNumber"] == 1 or opponent.get("gameNumber") == 1
+                else row["restDays"] - row["opponentRestDays"])
+            row["burden"] = (
+                45 * float(row.get("opponentPointsPct") or 0)
+                + 9 * int(row["roadLike"])
+                + 9 * int(row["backToBack"])
+                + 5 * int(row["threeInFour"])
+                + 7 * int(row["fourInSix"])
+                + 5 * max(0, -row["restDifferential"])
+                + 7 * min(row["travelKm"] / 2500, 1)
+                + 3 * min(row["timeZoneChange"] / 3, 1)
+                + 2 * int(bool(row["unusualTiming"]))
+                + 2 * int(bool(row["specialEvent"]))
+            )
+    summaries = []
+    factor_names = list(SCHEDULE_WEIGHTS)
+    for team in teams:
+        rows = team_rows.get(team, [])
+        congested = [row for row in rows if row["backToBack"] or row["threeInFour"] or row["fourInSix"]]
+        road = [row for row in rows if row["roadLike"]]
+        opponent_values = [row["opponentPointsPct"] for row in rows if row.get("opponentPointsPct") is not None]
+        congested_values = [row["opponentPointsPct"] for row in congested if row.get("opponentPointsPct") is not None]
+        rest_disadvantage_days = sum(max(0, -row["restDifferential"]) for row in rows)
+        rest_advantage_days = sum(max(0, row["restDifferential"]) for row in rows)
+        max_road_trip = max((row["segmentLength"] for row in road), default=0)
+        long_road_games = sum(1 for row in road if row["segmentLength"] >= 4)
+        spring_road_games = sum(1 for row in road if row["date"][5:7] in {"03", "04"})
+        raw = {
+            "opponentStrength": sum(opponent_values) / len(opponent_values) * 100 if opponent_values else 0,
+            "travelDistance": sum(row["travelKm"] for row in rows),
+            "backToBacks": sum(row["backToBack"] for row in rows),
+            "congestion": sum(row["backToBack"] + .75 * row["threeInFour"] + row["fourInSix"] for row in rows),
+            "restBurden": rest_disadvantage_days + .5 * sum(row["restDifferential"] < 0 for row in rows) - .25 * rest_advantage_days,
+            "roadFrequency": len(road),
+            "roadTripBurden": long_road_games + 2 * max_road_trip + spring_road_games,
+            "timeZoneChanges": sum(row["timeZoneChange"] for row in rows),
+            "congestedOpponentStrength": sum(congested_values) / len(congested_values) * 100 if congested_values else 0,
+            "timingAndEvents": sum(bool(row["unusualTiming"]) for row in rows) + sum(bool(row["specialEvent"]) for row in rows) + .25 * spring_road_games,
+        }
+        windows = []
+        for index in range(max(0, len(rows) - 5)):
+            group = rows[index:index + 6]
+            windows.append({"startDate": group[0]["date"], "endDate": group[-1]["date"],
+                "averageBurden": round(sum(row["burden"] for row in group) / 6, 1),
+                "opponents": [row["opponent"] for row in group]})
+        summaries.append({"team": team, "raw": raw, "games": len(rows),
+            "travelKm": round(raw["travelDistance"]), "backToBacks": int(raw["backToBacks"]),
+            "threeInFour": sum(row["threeInFour"] for row in rows), "fourInSix": sum(row["fourInSix"] for row in rows),
+            "restAdvantages": sum(row["restDifferential"] > 0 for row in rows),
+            "restDisadvantages": sum(row["restDifferential"] < 0 for row in rows),
+            "maxRoadTrip": max_road_trip, "roadLikeGames": len(road),
+            "timeZoneHours": round(raw["timeZoneChanges"], 1),
+            "easiestStretch": min(windows, key=lambda row: row["averageBurden"]) if windows else None,
+            "hardestStretch": max(windows, key=lambda row: row["averageBurden"]) if windows else None})
+    ranges = {name: (min((row["raw"][name] for row in summaries), default=0),
+        max((row["raw"][name] for row in summaries), default=0)) for name in factor_names}
+    for summary in summaries:
+        summary["normalised"] = {}
+        summary["contributions"] = {}
+        for name in factor_names:
+            low, high = ranges[name]
+            value = .5 if high == low else (summary["raw"][name] - low) / (high - low)
+            summary["normalised"][name] = round(value, 4)
+            summary["contributions"][name] = round(value * SCHEDULE_WEIGHTS[name] * 100, 2)
+        summary["score"] = round(sum(summary["normalised"][name] * SCHEDULE_WEIGHTS[name] for name in factor_names) * 100, 1)
+    ordered = sorted(summaries, key=lambda row: (-row["score"], row["team"]))
+    for rank, summary in enumerate(ordered, 1):
+        summary["rank"] = rank
+    reconciliation_rows = []
+    for rows in team_rows.values():
+        reconciliation_rows.extend(rows)
+    reconciliation = schedule_reconciliation(regular, reconciliation_rows, teams, venue_reference, strength, season)
+    summary_by_team = {row["team"]: row for row in summaries}
+    benchmark = [{"team": team, "expected": expected, "actual": summary_by_team.get(team, {}).get("score"),
+        "delta": round(summary_by_team.get(team, {}).get("score", 0) - expected, 1),
+        "status": "pass" if abs(summary_by_team.get(team, {}).get("score", 0) - expected) <= .1 else "review"}
+        for team, expected in SCHEDULE_WORKBOOK_BENCHMARKS.get(str(season), {}).items()]
+    evidence = {}
+    for rows in team_rows.values():
+        for row in rows:
+            evidence[(row["id"], row["team"])] = {
+                "venue": row["venue"], "neutral": row["neutral"], "roadLike": row["roadLike"],
+                "localStart": row["localStart"], "localStartLabel": row["localStartLabel"], "matinee": row["matinee"],
+                "travelKm": round(row["travelKm"]), "restDays": row["restDays"],
+                "opponentRestDays": row["opponentRestDays"], "restDifferential": row["restDifferential"],
+                "backToBack": row["backToBack"], "threeInFour": row["threeInFour"], "fourInSix": row["fourInSix"],
+                "roadTripLength": row["segmentLength"] if row["roadLike"] else 0,
+                "roadTripGame": row["segmentGame"] if row["roadLike"] else 0,
+                "timeZoneChange": row["timeZoneChange"], "opponentPointsPct": round(float(row.get("opponentPointsPct") or 0) * 100, 1),
+                "unusualTiming": row["unusualTiming"], "specialEvent": row["specialEvent"], "burden": round(row["burden"], 1),
+            }
+    model = {
+        "version": SCHEDULE_MODEL_VERSION, "season": str(season), "sourceSeason": str(int(str(season)[:4]) - 1) + str(season)[:4],
+        "venueReference": {"source": venue_reference.get("source"), "accessedAt": venue_reference.get("accessedAt"),
+            "venueCount": len(venue_reference.get("venues", [])), "earthRadiusKm": earth_radius},
+        "weights": SCHEDULE_WEIGHTS, "teams": sorted(summaries, key=lambda row: row["rank"]),
+        "reconciliation": reconciliation, "benchmarkComparison": benchmark,
+    }
+    return model, evidence
+
+
 def load_schedules(team_codes: list[str]) -> list[dict]:
     """Load league schedules in parallel so division race histories are complete."""
     games = {}
@@ -736,8 +1068,10 @@ def load_rosters(team_codes: list[str]) -> dict:
     return output
 
 
-def tracked_game_rows(games: list[dict], team_codes: list[str] | None = None) -> list[dict]:
+def tracked_game_rows(games: list[dict], team_codes: list[str] | None = None,
+        schedule_evidence: dict[tuple[str, str], dict] | None = None) -> list[dict]:
     team_codes = team_codes or TRACKED
+    schedule_evidence = schedule_evidence or {}
     rows = []
     for game in games:
         if int(game.get("gameType", 0)) not in (2, 3):
@@ -763,7 +1097,9 @@ def tracked_game_rows(games: list[dict], team_codes: list[str] | None = None) ->
                 "team": team, "opponent": away if is_home else home, "location": "Home" if is_home else "Away",
                 "finished": finished, "gf": gf if finished else None, "ga": ga if finished else None,
                 "gd": gf - ga if finished else None, "result": result, "points": points,
-                "startTimeUTC": game.get("startTimeUTC", "")
+                "startTimeUTC": game.get("startTimeUTC", ""),
+                **({"schedule": schedule_evidence[(str(game.get("id")), team)]}
+                    if (str(game.get("id")), team) in schedule_evidence else {})
             })
     return rows
 
@@ -954,8 +1290,10 @@ def enrich_players(players: dict, rosters: dict) -> dict:
     return players
 
 
-def build_game_library(games: list[dict], rosters: dict, moneypuck: dict, previous: dict | None = None) -> list[dict]:
+def build_game_library(games: list[dict], rosters: dict, moneypuck: dict, previous: dict | None = None,
+        schedule_evidence: dict[tuple[str, str], dict] | None = None) -> list[dict]:
     """Store a compact, durable summary for every completed tracked game."""
+    schedule_evidence = schedule_evidence or {}
     completed = [g for g in games if int(g.get("gameType", 0)) in (2, 3)
         and str(g.get("gameState", "")).upper() in {"OFF", "FINAL"}]
     relevant = [g for g in completed if localised(g.get("homeTeam", {}).get("abbrev")).upper() in TRACKED
@@ -1031,6 +1369,8 @@ def build_game_library(games: list[dict], rosters: dict, moneypuck: dict, previo
             "teams": team_stats, "players": all_skaters, "leaders": all_skaters[:3], "goalies": goalies,
             "xg": {away: compact_number(mp_away.get("xgf") if mp_away else mp_home.get("xga") if mp_home else None, 2),
                    home: compact_number(mp_home.get("xgf") if mp_home else mp_away.get("xga") if mp_away else None, 2)},
+            "schedule": {team: schedule_evidence[(game_id, team)] for team in (away, home)
+                if (game_id, team) in schedule_evidence},
             "officialUrl": f"https://www.nhl.com/gamecenter/{away.lower()}-vs-{home.lower()}/{str(data.get('gameDate') or game.get('gameDate') or '').replace('-', '/')}/{game_id}"
         })
     return sorted(output, key=lambda row: (row.get("date") or "", row.get("id") or ""))
@@ -1316,11 +1656,18 @@ def main() -> None:
         special_teams = previous_same_season.get("specialTeams", [])
     schedules = load_schedules([r["team"] for r in standings])
     league_teams = [r["team"] for r in standings]
-    rows = tracked_game_rows(schedules, league_teams)
+    previous_standings = (previous.get("standings", []) if previous.get("meta", {}).get("season") != SEASON
+        else previous.get("previousSeasonStandings", []))
+    schedule_difficulty, schedule_evidence = build_schedule_model(schedules, league_teams, previous_standings, SEASON)
+    rows = tracked_game_rows(schedules, league_teams, schedule_evidence)
     preseason = preseason_schedule_rows(schedules)
     players = build_players(schedules)
     game_centres = load_game_centres(schedules, previous_same_season)
     daily = load_daily()
+    for game in daily.get("games", []):
+        game_id = str(game.get("id") or "")
+        game["schedule"] = {team: schedule_evidence[(game_id, team)] for team in (game.get("away"), game.get("home"))
+            if (game_id, team) in schedule_evidence}
     rosters = load_rosters([r["team"] for r in standings])
     players = enrich_players(players, rosters)
     news = load_official_news(standings, rosters, previous)
@@ -1332,7 +1679,7 @@ def main() -> None:
     except Exception as exc:
         print(f"warning: MoneyPuck data unavailable: {exc}", file=sys.stderr)
         moneypuck = previous_same_season.get("moneypuck") or {"credit":"Data: MoneyPuck.com","season":SEASON,"updatedAt":None,"status":"Awaiting new-season data","teams":[],"specialTeams":[],"skaters":[],"goalies":[],"lines":[],"simulations":[],"teamGames":[],"specialTeamGames":[]}
-    game_library = build_game_library(schedules, rosters, moneypuck, previous_same_season)
+    game_library = build_game_library(schedules, rosters, moneypuck, previous_same_season, schedule_evidence)
     natural_stat_trick = load_natural_stat_trick(standings)
     changes = roster_changes(previous_same_season, rosters)
     change_history = roster_change_history(previous_same_season, changes)
@@ -1341,8 +1688,9 @@ def main() -> None:
     payload = {
         "meta": {"version": VERSION, "season": SEASON, "seasonMode": CONFIG.get("seasonMode", "manual"), "seasonDecision": rollover_reason, "gamesPerTeam": regular_season_games(SEASON), "trackedTeams": TRACKED, "updatedAt": datetime.now(timezone.utc).isoformat(), "elapsedSeconds": round(time.time()-started, 1), "scheduleGames": len(schedules), "historyDays": len(history)},
         "standings": standings, "specialTeams": special_teams, "games": rows, "preseasonGames": preseason, "teams": team_summaries(rows, league_teams), "players": players, "gameCentre": game_centres,
-        "previousSeasonStandings": previous.get("standings", []) if previous.get("meta", {}).get("season") != SEASON else previous.get("previousSeasonStandings", []),
+        "previousSeasonStandings": previous_standings,
         "scheduleRelease": schedule_release, "nextSeasonPreview": preview,
+        "scheduleDifficulty": schedule_difficulty,
         "daily": daily, "rosters": rosters, "rosterChanges": changes, "rosterChangeHistory": change_history, "news": news, "transactions": transactions, "podcasts": podcasts, "videos": videos,
         "gameLibrary": game_library,
         "divisionHistory": division_histories(schedules, standings), "history": history, "moneypuck": moneypuck,
