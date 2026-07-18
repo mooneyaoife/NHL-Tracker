@@ -92,6 +92,7 @@ class PlayerPipelineTests(unittest.TestCase):
         backup = next(row for row in players["CAR"] if row["id"] == "21")
         self.assertEqual(len(starter["games"]), 2)
         self.assertEqual(starter["totals"]["gp"], 2)
+        self.assertTrue(all(game["starter"] is True for game in starter["games"]))
         self.assertEqual(backup["games"], [])
         self.assertEqual(backup["totals"]["gp"], 0)
         dressed = next(row for row in players["BUF"] if row["id"] == "12")

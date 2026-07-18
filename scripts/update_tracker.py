@@ -26,7 +26,7 @@ from zoneinfo import ZoneInfo
 
 ROOT = Path(__file__).resolve().parents[1]
 CONFIG = json.loads((ROOT / "config.json").read_text())
-VERSION = "5.72.0"
+VERSION = "5.73.0"
 SEASON = str(CONFIG["season"])
 TRACKED = [str(t).upper() for t in CONFIG["teams"]]
 API = "https://api-web.nhle.com/v1"
@@ -1373,12 +1373,15 @@ def build_players(games: list[dict], team_codes: list[str] | None = None, offici
                     entry = players.setdefault(pid, {"id": pid, "name": name, "position": p.get("position") or ("G" if group == "goalies" else ""), "teams": [], "games": []})
                     if team not in entry["teams"]:
                         entry["teams"].append(team)
-                    entry["games"].append({
+                    game_row = {
                         "date": game.get("gameDate"), "team": team, "opponent": opponent, "location": "Home" if side == "homeTeam" else "Away",
                         "goals": p.get("goals", 0), "assists": p.get("assists", 0), "points": p.get("points", 0),
                         "shots": p.get("sog", 0), "hits": p.get("hits", 0), "toi": p.get("toi", ""),
                         "saves": p.get("saves", 0), "shotsAgainst": p.get("shotsAgainst", 0), "savePct": p.get("savePctg", 0)
-                    })
+                    }
+                    if group == "goalies":
+                        game_row["starter"] = bool(p.get("starter"))
+                    entry["games"].append(game_row)
     output = {team: [] for team in team_codes}
     for p in players.values():
         p["games"].sort(key=lambda x: (x.get("date") or "", str(x.get("team") or "")))

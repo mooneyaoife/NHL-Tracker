@@ -1973,3 +1973,31 @@ body .tonight-summary .metric .label{
   scrollbar-gutter:stable;
 }
 #status-coverage table{min-width:480px}
+
+/* 7.13.1 · Lineups keeps its primary team control usable at phone widths. */
+@media(max-width:760px){
+  #availability .availability-heading.title-bar{
+    display:grid!important;
+    grid-template-columns:minmax(0,1fr)!important;
+    align-items:stretch!important;
+    gap:14px!important;
+  }
+  #availability .availability-heading.title-bar h2{padding-right:96px;text-align:left!important}
+  #availability .availability-heading.title-bar label{
+    display:grid!important;
+    grid-template-columns:auto minmax(0,1fr)!important;
+    width:100%!important;
+    min-width:0!important;
+    gap:10px!important;
+  }
+  #availability .availability-heading.title-bar select{
+    width:100%!important;
+    min-width:0!important;
+  }
+  #availability .availability-heading.title-bar>.reset-view-button{
+    position:absolute;
+    top:18px;
+    right:var(--heading-inset);
+    margin:0!important;
+  }
+}

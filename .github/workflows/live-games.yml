@@ -26,9 +26,20 @@ jobs:
       - uses: actions/setup-python@v5
         with:
           python-version: "3.12"
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "22"
       - id: live
         name: Check for and refresh active tracked games
         run: python scripts/update_tracker.py --live-only
+      - if: steps.live.outputs.active == 'true'
+        name: Validate live data and application contracts
+        run: |
+          node --check site/app.js
+          node --check site/statistics.js
+          node --check site/sw.js
+          node tests/data_integrity.test.js
+          node tests/site_contract.test.js
       - if: steps.live.outputs.active == 'true'
         uses: actions/configure-pages@v5
       - if: steps.live.outputs.active == 'true'

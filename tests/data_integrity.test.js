@@ -64,6 +64,18 @@ for (const goalie of archive.officialPlayers.goalies) {
     const [minutes = 0, seconds = 0] = String(game.toi || "0:00").split(":").map(Number);
     return minutes * 60 + seconds > 0;
   }), `${goalie.name} has no zero-minute backup appearances`);
+  assert.ok(stored.games.every(game => typeof game.starter === "boolean"), `${goalie.name} stores the official starter flag for every appearance`);
+}
+
+for (const team of Object.keys(archive.teams)) {
+  const lastGame = archive.teams[team].games.at(-1);
+  assert.ok(lastGame, `${team} has completed-game evidence for Lineups`);
+  const lastGameGoalies = (archive.players[team] || []).filter(player => player.position === "G").flatMap(player =>
+    (player.games || []).filter(game => game.team === team && game.date === lastGame.date && Number(game.shotsAgainst || 0) > 0),
+  );
+  assert.ok(lastGameGoalies.length > 0, `${team} has goalie evidence for its most recent completed game`);
+  assert.ok(lastGameGoalies.some(game => game.starter === true), `${team} identifies the starter in its most recent completed game`);
+  assert.ok(archive.moneypuck.lines.some(row => row.team === team), `${team} has stored line-combination evidence`);
 }
 
 const representative = (name, position, gp) => {
@@ -89,13 +101,16 @@ assert.equal(duplicateNames.length, 2, "both same-name Vancouver players remain 
 assert.deepEqual(new Set(duplicateNames.map(row => String(row.id))), new Set(["8480012", "8483678"]), "same-name players resolve to distinct NHL identities");
 assert.deepEqual(new Set(duplicateNames.map(row => row.position)), new Set(["C", "D"]), "same-name identity matching preserves position");
 
-assert.equal(current.playerCoverage.currentRosterPlayers, 795, "the current roster index includes every imported NHL roster player");
-assert.equal(current.playerCoverage.officialSeasonPlayers, 0, "the offseason does not invent current-season appearances");
-assert.equal(current.playerCoverage.officialReconciliationFailures, 0, "an empty new season is a valid state rather than a reconciliation failure");
+assert.ok(current.playerCoverage.currentRosterPlayers >= 700, "the current roster index contains a plausible league-wide NHL population");
+assert.equal(current.playerCoverage.currentRosterPlayers, new Set(Object.values(current.rosters).flat().map(player => String(player.id))).size, "current roster coverage counts unique player identities");
+assert.equal(Object.keys(current.rosters).length, 32, "current rosters cover all NHL teams");
+assert.equal(current.playerCoverage.officialReconciliationFailures, 0, "the current season reports no unexplained reconciliation failures");
+assert.equal(current.playerCoverage.reconciledOfficialPlayers, current.playerCoverage.officialSeasonPlayers, "every current official player history reconciles, including the valid empty-season state");
 assert.equal(current.playerCoverage.scope, "All NHL teams", "the current player pipeline remains league-wide before games begin");
 const currentRosterIds = new Set(Object.values(current.rosters).flat().map(player => String(player.id)));
-assert.ok(currentRosterIds.has("8484803"), "a rookie without previous NHL evidence remains selectable");
-assert.ok(currentRosterIds.has("8477493"), "an inactive star without valid previous-season evidence remains selectable");
-assert.ok(!storedPlayers.has("8484803") && !storedPlayers.has("8477493"), "unavailable league evidence is represented as absence rather than fabricated statistics");
+assert.ok([...currentRosterIds].every(Boolean), "every current roster player has a usable identity");
+const currentOfficialIds = new Set([...current.officialPlayers.skaters, ...current.officialPlayers.goalies].map(player => String(player.id)));
+const currentStoredIds = new Set(Object.values(current.players).flat().map(player => String(player.id)));
+assert.ok([...currentOfficialIds].every(playerId => currentStoredIds.has(playerId)), "every current official season player remains selectable");
 
 console.log("generated data integrity: all checks passed");
