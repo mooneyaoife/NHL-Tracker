@@ -1,7 +1,14 @@
 {
   "schema": 1,
-  "updatedAt": "2026-07-18T17:41:51.507Z",
+  "updatedAt": "2026-07-18T23:40:12.738Z",
   "items": [
+    {
+      "id": "e50b76f943dcb6ed4b44",
+      "title": "Connor Bedard Signs a 5-Year, $75.00M Contract with the Chicago Blackhawks",
+      "publishedAt": "2026-07-18T20:34:10.000Z",
+      "category": "Contract",
+      "url": "https://puckpedia.com/signing/10747?utm_source=email&utm_medium=email&utm_campaign=signing&utm_content=primary"
+    },
     {
       "id": "c190a52ab55edce7a5a3",
       "title": "Jamie Drysdale Signs a 4-Year, $26.00M Contract with the Philadelphia Flyers",
@@ -204,13 +211,6 @@
       "publishedAt": "2026-07-11T00:12:08.000Z",
       "category": "Contract",
       "url": "https://puckpedia.com/signing/10719?utm_source=email&utm_medium=email&utm_campaign=signing&utm_content=primary"
-    },
-    {
-      "id": "1d1791dcc1e152c4f981",
-      "title": "Bogdan Konyushkov Signs a 2-Year, $2.03M Contract with the Montreal Canadiens",
-      "publishedAt": "2026-07-10T19:04:08.000Z",
-      "category": "Contract",
-      "url": "https://puckpedia.com/signing/10718?utm_source=email&utm_medium=email&utm_campaign=signing&utm_content=primary"
     }
   ]
 }
