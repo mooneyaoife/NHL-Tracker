@@ -1,4 +1,4 @@
-const UI_VERSION="7.15.0";
+const UI_VERSION="7.16.0";
 const {
   mean: benchmarkAverage,
   weightedAverage: benchmarkWeightedAverage,
