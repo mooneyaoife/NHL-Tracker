@@ -42,6 +42,18 @@ for (const standing of archive.standings) {
   assert.ok(eligible.length <= 40, `${standing.team} player comparison remains a manageable team-sized list`);
 }
 
+const comparisonRecords = stats.seasonComparisonRecords(archive);
+assert.equal(comparisonRecords.length, 1038, "the comparison index contains every archived skater and goalie season participant");
+assert.equal(new Set(comparisonRecords.map(row => `${row.comparisonType}:${row.id}`)).size, comparisonRecords.length, "comparison identities are unique within player type");
+assert.ok(comparisonRecords.some(row => row.comparisonType === "goalie"), "goalies are available in the same season-aware selection flow");
+assert.ok(comparisonRecords.some(row => row.comparisonType === "skater" && !stats.comparisonEligibility(row).eligible), "small-sample skaters remain selectable rather than disappearing");
+assert.ok(comparisonRecords.some(row => row.comparisonType === "goalie" && stats.comparisonEligibility(row).eligible), "eligible goalies can produce comparison charts");
+for (const standing of archive.standings) assert.ok(stats.filterPlayersByTeam(comparisonRecords, standing.team).length, `${standing.team} has season-specific comparison participants`);
+const comparedTraded = comparisonRecords.filter(row => row.name === "Quinn Hughes");
+assert.equal(comparedTraded.length, 1, "a traded player has one combined-season comparison identity");
+assert.deepEqual(comparedTraded[0].teams, ["MIN", "VAN"], "that identity remains discoverable through both season teams");
+assert.deepEqual(stats.seasonComparisonRecords(current), [], "the empty future season does not borrow archived players");
+
 const officialPlayers = [...archive.officialPlayers.skaters, ...archive.officialPlayers.goalies];
 const storedPlayers = new Map();
 for (const rows of Object.values(archive.players)) {

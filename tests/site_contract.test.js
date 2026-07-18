@@ -44,7 +44,12 @@ for (const side of ["a", "b"]) {
   assert.ok(idSet.has(`player-comparison-options-${side}`), `player comparison side ${side} has a team-scoped search list`);
   assert.ok(index.indexOf(`id="player-compare-team-${side}"`) < index.indexOf(`id="player-compare-${side}"`), `team ${side} is chosen before player ${side}`);
 }
+assert.ok(idSet.has("player-comparison-season"), "player comparison exposes a season selector");
+assert.ok(index.indexOf('id="player-comparison-season"') < index.indexOf('id="player-compare-team-a"'), "season is chosen before team and player");
+assert.ok(idSet.has("player-comparison-context") && idSet.has("player-comparison-announcer"), "comparison evidence and selection changes have accessible live regions");
 assert.match(app, /comparisonPlayersForTeam=team=>filterComparisonPlayersByTeam/, "player comparison options are filtered by the selected team");
-assert.match(app, /"aTeam","bTeam"/, "player comparison team choices survive direct links and browser history");
+assert.match(app, /"comparisonSeason","aTeam","bTeam","aScope","bScope"/, "season, team and scope choices survive direct links and browser history");
+assert.match(app, /seasonComparisonRecords\(playerComparisonData\(\)\)/, "comparison participants come from the selected season evidence");
+assert.doesNotMatch(app, /eligibleComparisonPlayers/, "selection is not silently restricted to chart-eligible skaters");
 
 console.log("site contracts: all checks passed");

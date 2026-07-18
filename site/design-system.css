@@ -1456,6 +1456,61 @@ tbody tr:hover{background:color-mix(in srgb,var(--brand-soft) 45%,transparent)!i
   padding-left:var(--heading-inset)!important;
 }
 
+/* 7.15 · Season-aware comparison controls. Season is the parent choice;
+   teams and players remain paired beneath it, with evidence stated in place. */
+.comparison-season-control{
+  display:grid;
+  grid-template-columns:minmax(220px,340px) minmax(0,1fr);
+  align-items:end;
+  gap:var(--space-4);
+  border-bottom:1px solid var(--rule);
+  padding:var(--space-4) 0;
+}
+.comparison-season-control label{
+  display:grid;
+  gap:6px;
+  color:var(--muted);
+  font-size:11px;
+  font-weight:900;
+  text-transform:uppercase;
+}
+.comparison-season-control select{width:100%}
+.comparison-season-control p,.comparison-picker-context,.comparison-evidence-context{
+  color:var(--muted);
+  font-size:12px;
+  line-height:1.5;
+  margin:0;
+}
+.comparison-picker-context{
+  border-top:1px solid var(--rule);
+  padding-top:10px;
+}
+.comparison-evidence-context{
+  border-left:3px solid var(--brand);
+  background:var(--surface-subtle);
+  padding:12px 14px;
+  margin:0 0 var(--space-4);
+}
+.comparison-state{
+  display:grid;
+  gap:4px;
+  border-left:3px solid var(--brand);
+  background:var(--surface);
+  color:var(--muted);
+  font-size:12px;
+  line-height:1.5;
+  padding:12px 14px;
+  margin:16px 0 0;
+}
+.comparison-state strong{color:var(--ink);font-size:13px}
+#compare-players[aria-busy="true"] .comparison-season-control,
+#compare-players[aria-busy="true"] .player-comparison-controls{opacity:.72}
+@media(max-width:760px){
+  .comparison-season-control{grid-template-columns:1fr;align-items:start}
+  .comparison-season-control p{max-width:44ch}
+  .comparison-picker-context,.comparison-evidence-context,.comparison-state{font-size:11px}
+}
+
 /* 7.6.1 · The spacing scale now governs every repeated surface. Containers
    with their own internal rows stay edge-to-edge; visual and content cards use
    the shared panel inset. Dense data cells retain the smaller table inset. */
