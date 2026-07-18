@@ -36,6 +36,11 @@ for (const field of ["gf", "xgf", "ga", "xga"]) {
 }
 
 assert.equal(archive.naturalStatTrick.teams.length, 32, "Natural Stat Trick team evidence covers the full league");
+for (const standing of archive.standings) {
+  const eligible = stats.filterPlayersByTeam(archive.naturalStatTrick.players, standing.team).filter(player => Number(player.toi || 0) >= 200);
+  assert.ok(eligible.length >= 1, `${standing.team} has eligible player-comparison choices`);
+  assert.ok(eligible.length <= 40, `${standing.team} player comparison remains a manageable team-sized list`);
+}
 
 const officialPlayers = [...archive.officialPlayers.skaters, ...archive.officialPlayers.goalies];
 const storedPlayers = new Map();

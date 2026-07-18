@@ -38,4 +38,13 @@ assert.ok(idSet.has("availability-lines-source") && idSet.has("availability-pair
 assert.match(app, /if\(page==="availability"\)void ensureAvailabilityEvidence/, "direct Lineups routes load completed-season evidence");
 assert.doesNotMatch(app, /Tracked team-games|Detailed tracked players/, "Status does not describe league-wide data as a followed-team subset");
 
+for (const side of ["a", "b"]) {
+  assert.ok(idSet.has(`player-compare-team-${side}`), `player comparison side ${side} has a team selector`);
+  assert.ok(idSet.has(`player-compare-${side}`), `player comparison side ${side} has a player selector`);
+  assert.ok(idSet.has(`player-comparison-options-${side}`), `player comparison side ${side} has a team-scoped search list`);
+  assert.ok(index.indexOf(`id="player-compare-team-${side}"`) < index.indexOf(`id="player-compare-${side}"`), `team ${side} is chosen before player ${side}`);
+}
+assert.match(app, /comparisonPlayersForTeam=team=>filterComparisonPlayersByTeam/, "player comparison options are filtered by the selected team");
+assert.match(app, /"aTeam","bTeam"/, "player comparison team choices survive direct links and browser history");
+
 console.log("site contracts: all checks passed");

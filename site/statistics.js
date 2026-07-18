@@ -55,6 +55,11 @@
 
   const opportunityPercentage = (rows, success, opportunities) => ratio(rows, success, opportunities, 100);
 
+  const filterPlayersByTeam = (rows, team) => (rows || []).filter(row => {
+    const affiliations = Array.isArray(row?.teams) ? row.teams : row?.team ? [row.team] : [];
+    return affiliations.includes(team);
+  });
+
   return {
     mean,
     weightedAverage,
@@ -63,6 +68,7 @@
     sharePercentage,
     ratePer60,
     opportunityPercentage,
+    filterPlayersByTeam,
     sum,
   };
 });

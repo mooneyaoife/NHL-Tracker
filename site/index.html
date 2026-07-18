@@ -22,7 +22,7 @@
   <script>document.documentElement.dataset.theme=localStorage.getItem("nhl-theme")||"light"</script>
   <link rel="stylesheet" href="styles.css?v=6.0.0">
   <link rel="stylesheet" href="theme-569.css?v=6.0.0">
-  <link rel="stylesheet" href="design-system.css?v=7.13.1">
+  <link rel="stylesheet" href="design-system.css?v=7.14.0">
 </head>
 <body>
 <a class="skip-link" href="#main-content">Skip to content</a>
@@ -168,7 +168,7 @@
     </article>
     <article id="compare-players" class="compare-workspace comparison-pane">
       <div class="compare-heading"><div><span id="player-comparison-evidence" class="section-kicker" role="status">Player profiles</span><h3>Player Comparison</h3></div><button id="copy-player-comparison" class="comparison-share" type="button">Copy link</button></div>
-      <div class="comparison-controls player-comparison-controls"><div class="comparison-picker"><strong>First player</strong><label>Find player<input id="player-compare-search-a" list="player-comparison-options" autocomplete="off" placeholder="Type a player name"></label><label>Or choose from list<select id="player-compare-a"></select></label></div><button id="swap-player-comparison" class="comparison-swap" type="button" aria-label="Swap compared players">⇄</button><div class="comparison-picker"><strong>Second player</strong><label>Find player<input id="player-compare-search-b" list="player-comparison-options" autocomplete="off" placeholder="Type a player name"></label><label>Or choose from list<select id="player-compare-b"></select></label></div><datalist id="player-comparison-options"></datalist></div>
+      <div class="comparison-controls player-comparison-controls"><div class="comparison-picker"><strong>First player</strong><label>Team<select id="player-compare-team-a"></select></label><label>Find player<input id="player-compare-search-a" list="player-comparison-options-a" autocomplete="off" placeholder="Type a player name"></label><label>Player<select id="player-compare-a"></select></label><datalist id="player-comparison-options-a"></datalist></div><button id="swap-player-comparison" class="comparison-swap" type="button" aria-label="Swap compared players">⇄</button><div class="comparison-picker"><strong>Second player</strong><label>Team<select id="player-compare-team-b"></select></label><label>Find player<input id="player-compare-search-b" list="player-comparison-options-b" autocomplete="off" placeholder="Type a player name"></label><label>Player<select id="player-compare-b"></select></label><datalist id="player-comparison-options-b"></datalist></div></div>
       <div id="player-comparison-edge" class="edge-comparison"></div>
       <div class="grid two comparison-analysis"><article class="panel"><h3>Position-adjusted percentile profile</h3><div id="player-comparison-chart" class="chart comparison-radar"></div></article><article class="panel"><h3>Performance matrix</h3><div id="player-comparison-table" class="table-wrap"></div></article></div>
     </article>
@@ -250,6 +250,6 @@
 <footer><div class="footer-links"><button data-page="watchlist" data-workspace-chapter="workspace-app" id="footer-install-link">Install app</button><button data-page="watchlist" data-workspace-chapter="workspace-preferences">Settings</button><button data-page="guide">Reference</button><a href="https://moneypuck.com/data.htm" target="_blank" rel="noopener">Data sources</a><button data-page="status">Status</button></div><p>NHL Tracker · Unofficial, non-commercial fan project using public NHL data</p></footer>
 <aside id="app-update" class="app-update" role="status" hidden><span>A fresh version of NHL Tracker is ready.</span><button id="app-update-button" type="button">Update now</button></aside>
 <div id="chart-help-overlay" class="chart-help-overlay" hidden><section role="dialog" aria-modal="true" aria-labelledby="chart-help-title"><header><div><span class="section-kicker">How to use this view</span><h2 id="chart-help-title">Chart guide</h2></div><button id="chart-help-close" type="button" aria-label="Close chart guide">×</button></header><div id="chart-help-body"></div></section></div>
-  <script defer src="statistics.js?v=7.13.1"></script>
-  <script defer src="app.js?v=7.13.1"></script>
+  <script defer src="statistics.js?v=7.14.0"></script>
+  <script defer src="app.js?v=7.14.0"></script>
 </body></html>

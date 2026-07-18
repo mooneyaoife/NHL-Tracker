@@ -44,4 +44,13 @@ close(stats.weightedAverage([
 assert.equal(stats.pointsPercentage([{ gp: 0, points: 0 }]), null, "empty samples do not become misleading zeroes");
 assert.equal(stats.ratePer60([{ minutes: 0, xgf: 0 }], "xgf"), null, "zero-minute samples remain unavailable");
 
+const comparisonPlayers = [
+  { id: "1", name: "One Team", teams: ["BUF"] },
+  { id: "2", name: "Traded Player", teams: ["VAN", "MIN"] },
+  { id: "3", name: "Scalar Team", team: "MIN" },
+];
+assert.deepEqual(stats.filterPlayersByTeam(comparisonPlayers, "BUF").map(player => player.id), ["1"], "team filtering limits comparison options to the chosen club");
+assert.deepEqual(stats.filterPlayersByTeam(comparisonPlayers, "MIN").map(player => player.id), ["2", "3"], "team filtering preserves traded and scalar-affiliation records");
+assert.deepEqual(stats.filterPlayersByTeam(comparisonPlayers, "CAR"), [], "teams without eligible players return an honest empty list");
+
 console.log("frontend statistics: all checks passed");
