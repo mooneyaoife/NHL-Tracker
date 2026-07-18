@@ -1458,6 +1458,11 @@ def daily_history(previous: dict, standings: list[dict], moneypuck: dict, specia
     """Append one durable league snapshot per UTC day for future trend views."""
     same_season = str(previous.get("meta", {}).get("season")) == SEASON
     history = list(previous.get("history", [])) if same_season else []
+    # Before the regular season starts, zeros describe an absent sample rather
+    # than poor performance. Do not create synthetic standings or power-index
+    # history that would later appear as a real ranking movement.
+    if not any((compact_number(row.get("gp"), 0) or 0) > 0 for row in standings):
+        return []
     mp_teams = {str(row.get("team", "")).upper(): row for row in moneypuck.get("teams", [])}
     special_by_team = {str(row.get("team", "")).upper(): row for row in (special_teams or [])}
 

@@ -222,6 +222,11 @@ main{padding-top:52px}.page{max-width:var(--content-width);margin-inline:auto}.b
   .news-subnav{display:flex!important;grid-template-columns:none!important;overflow-x:auto!important}.news-subnav button{min-width:max-content!important;padding:10px 13px!important;font-size:11px!important;white-space:nowrap}
   button,a,select,input,summary{touch-action:manipulation}.metric-help{min-width:32px;min-height:32px}
 }
+@media(max-width:820px){
+  #games .game-context-grid,#games .game-summary-grid,#games .game-people{
+    grid-template-columns:1fr!important;
+  }
+}
 
 /* Context survives a visit to Reference; direct visits remain clean. */
 #guide .guide-hero-actions{
@@ -631,7 +636,8 @@ html[data-theme="dark"] .home-masthead,html[data-theme="dark"] .home-tonight,htm
 .analysis-hub-rail{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:1px;margin:-8px 0 var(--space-5);overflow:hidden;border:1px solid var(--rule);border-radius:var(--radius-m);background:var(--rule)}
 .analysis-hub-rail button,.analysis-hub-rail strong{display:grid;place-items:center;min-height:44px;border:0!important;border-radius:0!important;background:var(--surface)!important;color:var(--ink-soft)!important;padding:9px 12px!important;font-size:11px;font-weight:700;text-align:center}
 .analysis-hub-rail button:hover{background:var(--surface-subtle)!important;color:var(--brand)!important}.analysis-hub-rail strong{background:var(--brand-soft)!important;color:var(--brand-strong)!important}
-.view-pin-button{display:inline-grid!important;place-items:center!important;width:25px!important;height:25px!important;min-height:25px!important;margin-left:6px!important;border:1px solid var(--rule)!important;border-radius:50%!important;background:transparent!important;color:var(--ink-soft)!important;padding:0!important;font-size:14px!important;line-height:1!important;vertical-align:middle;cursor:pointer}
+.view-pin-button{position:relative!important;display:inline-grid!important;place-items:center!important;width:25px!important;height:25px!important;min-height:25px!important;margin-left:6px!important;border:1px solid var(--rule)!important;border-radius:50%!important;background:transparent!important;color:var(--ink-soft)!important;padding:0!important;font-size:14px!important;line-height:1!important;vertical-align:middle;overflow:visible!important;cursor:pointer}
+.view-pin-button:after{content:"";position:absolute;inset:-8px;border-radius:50%}
 .view-pin-button:hover,.view-pin-button:focus-visible,.view-pin-button.pinned{border-color:var(--brand)!important;color:var(--brand)!important;background:var(--brand-soft)!important}
 .reset-view-button{min-height:32px!important;margin-top:12px;padding:6px 10px!important;border-style:dashed!important;background:transparent!important;color:var(--ink-soft)!important;font-family:var(--font-data)!important;font-size:9px!important;letter-spacing:.08em;text-transform:uppercase}
 .section-head>.reset-view-button{margin:0 0 0 8px}.home-player-signal span small{line-height:1.35}.home-player-signal b small{color:var(--brand)!important}
@@ -1595,6 +1601,26 @@ tbody tr:hover{background:color-mix(in srgb,var(--brand-soft) 45%,transparent)!i
   .analytics-deep-chart,.analytics-chart-wide .analytics-deep-chart{height:350px!important;min-height:350px!important}
 }
 
+/* Compact icon controls keep their optical size while their invisible pointer
+   target reaches beyond the circle. This avoids reintroducing the oversized,
+   off-centre help buttons that the visual system deliberately removed. */
+.page button.metric-help,.page button.chart-help-button{position:relative!important;overflow:visible!important}
+.page button.metric-help:after,.page button.chart-help-button:after{
+  content:"";position:absolute;inset:-7px;border-radius:50%;
+}
+@media(pointer:coarse){
+  .page .reset-view-button,.page .pregame-open-intelligence,
+  .page .tonight-open,.page .tonight-compare,.page .chapter-return,
+  #dashboard .home-tonight>header>button,#dashboard #edit-home{
+    min-height:44px!important;
+  }
+  .page .table-sort{min-height:36px!important;padding-block:8px!important}
+  .page .modebar-btn{
+    display:grid!important;place-items:center!important;
+    width:36px!important;height:36px!important;padding:7px!important;
+  }
+}
+
 /* 7.8.1 · Readable small type.
    Compact evidence remains visually secondary, but no meaningful interface
    copy should depend on 9–11px text. */
@@ -1661,6 +1687,18 @@ body[data-navigation-group="explore"] .context-nav-level button{
 .podcast-card strong,.trend-story span,.saved-views-panel span,
 .game-lineup-centre span{
   font-size:var(--type-caption)!important;
+  line-height:1.4!important;
+}
+.schedule-intelligence-status span,
+.schedule-key-date time,.schedule-key-date small,
+.schedule-stretch span,.schedule-stretch small,
+.schedule-window-card>div strong,.schedule-window-card p span,
+.schedule-window-card p small{
+  font-size:var(--type-caption)!important;
+  line-height:1.4!important;
+}
+.schedule-key-date strong,.schedule-stretch strong,.schedule-window-card p b{
+  font-size:var(--type-small)!important;
   line-height:1.4!important;
 }
 #dashboard small,#dashboard .home-dossier-meta span,
@@ -1910,3 +1948,27 @@ body .tonight-summary .metric .label{
   .official-officiating{grid-template-columns:1fr!important}
   .official-officiating h4{grid-column:auto}
 }
+
+/* 7.11.3 · Final readability and narrow-screen containment.
+   These are semantic captions, not decorative microtype: keep them on the
+   shared 12/13px scale and contain the one intrinsically wide status table. */
+.home-matchup footer,
+.identity-meta,
+#analytics-coverage,
+.source-state>span,
+#nst-team-file-state,#nst-player-file-state,#nst-goalie-file-state{
+  font-size:var(--type-caption)!important;
+  line-height:1.4!important;
+}
+.lineup-links strong,
+.offseason-actions button,.offseason-actions a{
+  font-size:var(--type-small)!important;
+  line-height:1.4!important;
+}
+#status-coverage{
+  max-width:100%;
+  overflow-x:auto;
+  overscroll-behavior-inline:contain;
+  scrollbar-gutter:stable;
+}
+#status-coverage table{min-width:480px}

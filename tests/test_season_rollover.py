@@ -205,6 +205,20 @@ class SeasonRolloverTests(unittest.TestCase):
         self.assertEqual(buffalo["ranks"]["defence"], 1)
         self.assertAlmostEqual(buffalo["specialIndex"], 7)
 
+    def test_daily_history_does_not_rank_teams_before_games_are_played(self):
+        standings = [
+            {"team": "BUF", "gp": 0, "points": 0, "gf": 0, "ga": 0, "gd": 0},
+            {"team": "BOS", "gp": 0, "points": 0, "gf": 0, "ga": 0, "gd": 0},
+        ]
+        previous = {
+            "meta": {"season": TRACKER.SEASON},
+            "history": [{"date": "2026-07-17", "teams": [
+                {"team": "BUF", "gp": 0, "pointsPct": 0, "powerIndex": -22.5,
+                    "ranks": {"overall": 1, "results": 1}},
+            ]}],
+        }
+        self.assertEqual(TRACKER.daily_history(previous, standings, {"teams": []}, []), [])
+
 
 if __name__ == "__main__":
     unittest.main()
