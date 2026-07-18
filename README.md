@@ -51,4 +51,6 @@ The deployment and live-game workflows run these checks before publishing.
 
 The main workflow refreshes and deploys four times per day. A separate game-night workflow checks for active tracked games every 15 minutes during likely NHL hours.
 
+GitHub Pages remains the primary deployment. An optional, access-controlled Cloudflare Pages deployment can run alongside it; see [Parallel hosting](docs/parallel-hosting.md).
+
 NHL Tracker is an unofficial, non-commercial fan project and is not affiliated with the NHL.
