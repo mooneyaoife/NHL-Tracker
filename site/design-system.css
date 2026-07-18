@@ -866,6 +866,7 @@ html[data-theme="dark"] .context-nav-level button.active,html[data-theme="dark"]
 .panel,.identity-card,.compare-workspace,.edge-comparison,.availability-roster-panel,.news-desk{border-color:var(--rule)!important;border-radius:var(--sheet-radius)!important;background:color-mix(in srgb,var(--surface) 92%,transparent)!important;box-shadow:inset 0 1px color-mix(in srgb,#fff 56%,transparent)!important}
 .control-row,.guide-tools,.trends-toolbar,.leader-controls,.team-ranking-controls,.game-library-controls,.matchup-intelligence-controls{border:1px solid var(--rule)!important;border-radius:var(--sheet-radius)!important;background:color-mix(in srgb,var(--surface-subtle) 70%,transparent)!important;box-shadow:none!important}
 .section-head{border-top:1px solid var(--sheet-rule)!important;border-bottom:1px solid var(--rule)!important;padding:16px 0!important;margin:0 0 20px!important}.section-head h2,.section-head h3,.identity-heading h2{font-family:var(--font-display)!important;font-weight:610!important;letter-spacing:-.045em!important}
+.player-evidence-note{margin:7px 0 0;color:var(--ink-soft);font-family:var(--font-mono);font-size:12px;font-weight:650;letter-spacing:.055em;line-height:1.35;text-transform:uppercase}
 button:not(.icon-button):not(.table-sort):not([data-group]):not([data-hover-page]):not([data-context-page]):not(.metric-help):not(.chart-help-button){border-radius:6px!important;box-shadow:none}
 
 /* The Dashboard tabs belong to the master folder, not to the viewport. */

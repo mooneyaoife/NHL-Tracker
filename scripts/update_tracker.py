@@ -13,6 +13,7 @@ import re
 import subprocess
 import sys
 import time
+import unicodedata
 import urllib.error
 import urllib.request
 import xml.etree.ElementTree as ET
@@ -25,7 +26,7 @@ from zoneinfo import ZoneInfo
 
 ROOT = Path(__file__).resolve().parents[1]
 CONFIG = json.loads((ROOT / "config.json").read_text())
-VERSION = "5.71.0"
+VERSION = "5.72.0"
 SEASON = str(CONFIG["season"])
 TRACKED = [str(t).upper() for t in CONFIG["teams"]]
 API = "https://api-web.nhle.com/v1"
@@ -493,7 +494,13 @@ def load_moneypuck(previous: dict | None = None) -> dict:
     return {"credit":"Data: MoneyPuck.com","updatedAt":datetime.now(timezone.utc).isoformat(),"season":SEASON,"status":"Ready","teams":teams,"specialTeams":special_teams,"skaters":skaters,"goalies":goalies,"lines":lines,"simulations":simulations,"teamGames":team_games,"specialTeamGames":special_team_games}
 
 
-def load_natural_stat_trick(standings: list[dict]) -> dict:
+def normalise_player_name(value: str) -> str:
+    """Create a stable comparison key without discarding position or team identity."""
+    decomposed = unicodedata.normalize("NFD", str(value or ""))
+    return re.sub(r"[^a-z0-9]", "", "".join(char for char in decomposed if not unicodedata.combining(char)).casefold())
+
+
+def load_natural_stat_trick(standings: list[dict], rosters: dict | None = None) -> dict:
     """Load the user's permitted Natural Stat Trick CSV export without scraping the site."""
     refresh = {}
     if NST_REFRESH_FILE.exists():
@@ -551,11 +558,31 @@ def load_natural_stat_trick(standings: list[dict]) -> dict:
         "Faceoffs Lost":"faceoffsLost", "Faceoffs %":"faceoffsPct"
     }
     team_aliases = {"T.B":"TBL", "S.J":"SJS", "L.A":"LAK", "N.J":"NJD"}
+    roster_candidates = defaultdict(list)
+    for team_rows in (rosters or {}).values():
+        for roster_player in team_rows:
+            roster_candidates[normalise_player_name(roster_player.get("name", ""))].append(roster_player)
+
+    def official_id(name: str, teams: list[str], position: str = "") -> str:
+        candidates = roster_candidates.get(normalise_player_name(name), [])
+        if teams:
+            team_matches = [row for row in candidates if row.get("team") in teams]
+            if team_matches:
+                candidates = team_matches
+        if position:
+            position_matches = [row for row in candidates if row.get("position") == position]
+            if position_matches:
+                candidates = position_matches
+        ids = {str(row.get("id")) for row in candidates if row.get("id") not in (None, "")}
+        return next(iter(ids)) if len(ids) == 1 else ""
+
     players = []
     if player_csv or NST_PLAYER_FILE.exists():
         for row in rows_from(player_csv, NST_PLAYER_FILE):
             player_teams = [team_aliases.get(code.strip(), code.strip()) for code in row.get("Team", "").split(",") if code.strip()]
-            players.append({"name": row.get("Player", ""), "teams": player_teams, "position": row.get("Position", ""),
+            player_name, position = row.get("Player", ""), row.get("Position", "")
+            players.append({"id": official_id(player_name, player_teams, position), "name": player_name,
+                "teams": player_teams, "position": position,
                 **{target: value(row, source) for source, target in player_fields.items()}})
     goalie_fields = {
         "GP":"gp", "TOI":"toi", "Shots Against":"shotsAgainst", "Saves":"saves",
@@ -571,7 +598,8 @@ def load_natural_stat_trick(standings: list[dict]) -> dict:
     if goalie_csv or NST_GOALIE_FILE.exists():
         for row in rows_from(goalie_csv, NST_GOALIE_FILE):
             goalie_teams = [team_aliases.get(code.strip(), code.strip()) for code in row.get("Team", "").split(",") if code.strip()]
-            goalies.append({"name": row.get("Player", ""), "teams": goalie_teams,
+            goalie_name = row.get("Player", "")
+            goalies.append({"id": official_id(goalie_name, goalie_teams, "G"), "name": goalie_name, "teams": goalie_teams,
                 **{target: value(row, source) for source, target in goalie_fields.items()}})
     source_mtimes = [path.stat().st_mtime for path in (NST_FILE, NST_PLAYER_FILE, NST_GOALIE_FILE) if path.exists()]
     updated_at = refresh.get("preparedAt") or (datetime.fromtimestamp(max(source_mtimes), timezone.utc).isoformat() if source_mtimes else datetime.now(timezone.utc).isoformat())
@@ -1229,9 +1257,86 @@ def refresh_live_games_only() -> None:
     print(f"Refreshed {len(game_ids)} active tracked game(s)")
 
 
-def build_players(games: list[dict]) -> dict:
+def load_official_players(previous: dict | None = None) -> dict:
+    """Load league-wide official season totals for every player with an NHL appearance."""
+    previous = previous or {}
+    reports = {
+        "skaters": ("skater", "skaterFullName", "positionCode"),
+        "goalies": ("goalie", "goalieFullName", "G"),
+    }
+    output = {"season": SEASON, "updatedAt": datetime.now(timezone.utc).isoformat(), "status": "Ready", "skaters": [], "goalies": []}
+    errors = []
+    for target, (report, name_key, position_key) in reports.items():
+        url = (f"{STATS_API}/{report}/summary?isAggregate=false&isGame=false&start=0&limit=-1"
+            f"&cayenneExp=seasonId={SEASON}%20and%20gameTypeId=2")
+        try:
+            rows = fetch_json(url).get("data", [])
+        except Exception as exc:
+            errors.append(f"{report}: {exc}")
+            rows = previous.get(target, [])
+        normalised = []
+        for row in rows:
+            player_id = str(row.get("playerId") or row.get("id") or "")
+            if not player_id:
+                continue
+            name = row.get(name_key) or row.get("name") or "Unknown player"
+            raw_teams = row.get("teamAbbrevs") or row.get("teams") or []
+            teams = ([str(team).strip() for team in raw_teams if str(team).strip()] if isinstance(raw_teams, list)
+                else [team.strip() for team in str(raw_teams).split(",") if team.strip()])
+            goalie = target == "goalies"
+            totals = {
+                "gp": int(row.get("gamesPlayed") or row.get("totals", {}).get("gp") or 0),
+                "goals": int(row.get("goals") or row.get("totals", {}).get("goals") or 0),
+                "assists": int(row.get("assists") or row.get("totals", {}).get("assists") or 0),
+                "points": int(row.get("points") or row.get("totals", {}).get("points") or 0),
+                "shots": int(row.get("shots") or row.get("totals", {}).get("shots") or 0),
+                "saves": int(row.get("saves") or row.get("totals", {}).get("saves") or 0),
+            }
+            if goalie:
+                totals.update({
+                    "starts": int(row.get("gamesStarted") or row.get("totals", {}).get("starts") or 0),
+                    "wins": int(row.get("wins") or row.get("totals", {}).get("wins") or 0),
+                    "losses": int(row.get("losses") or row.get("totals", {}).get("losses") or 0),
+                    "otl": int(row.get("otLosses") or row.get("totals", {}).get("otl") or 0),
+                    "shotsAgainst": int(row.get("shotsAgainst") or row.get("totals", {}).get("shotsAgainst") or 0),
+                    "goalsAgainst": int(row.get("goalsAgainst") or row.get("totals", {}).get("goalsAgainst") or 0),
+                    "savePct": row.get("savePct") if row.get("savePct") is not None else row.get("totals", {}).get("savePct"),
+                    "shutouts": int(row.get("shutouts") or row.get("totals", {}).get("shutouts") or 0),
+                })
+            normalised.append({
+                "id": player_id, "name": name, "position": "G" if goalie else row.get(position_key, row.get("position", "")),
+                "shoots": row.get("shootsCatches", row.get("shoots", "")), "teams": teams,
+                "totals": totals, "source": "NHL",
+            })
+        output[target] = normalised
+    if errors:
+        output["status"] = "Partial" if output["skaters"] or output["goalies"] else "Temporarily unavailable"
+        print(f"warning: official player summaries unavailable ({'; '.join(errors)})", file=sys.stderr)
+    elif not output["skaters"] and not output["goalies"]:
+        output["status"] = "Awaiting regular-season games"
+    return output
+
+
+def toi_seconds(value: str | int | float | None) -> int:
+    if isinstance(value, (int, float)):
+        return max(0, int(value))
+    parts = str(value or "").split(":")
+    try:
+        if len(parts) == 2:
+            return int(parts[0]) * 60 + int(parts[1])
+        return int(float(value or 0))
+    except (TypeError, ValueError):
+        return 0
+
+
+def build_players(games: list[dict], team_codes: list[str] | None = None, official: dict | None = None) -> dict:
+    """Build complete league player histories, using official totals as the reconciliation source."""
+    team_codes = team_codes or TRACKED
+    team_set = set(team_codes)
+    official = official or {"skaters": [], "goalies": []}
     completed = [g for g in games if int(g.get("gameType", 0)) == 2 and str(g.get("gameState", "")).upper() in {"OFF", "FINAL"}]
-    relevant = [g for g in completed if localised(g.get("homeTeam", {}).get("abbrev")).upper() in TRACKED or localised(g.get("awayTeam", {}).get("abbrev")).upper() in TRACKED]
+    relevant = [g for g in completed if {localised(g.get("homeTeam", {}).get("abbrev")).upper(),
+        localised(g.get("awayTeam", {}).get("abbrev")).upper()} & team_set]
     boxes = {}
     with ThreadPoolExecutor(max_workers=8) as pool:
         futures = {pool.submit(boxscore, int(g["id"])): g for g in relevant}
@@ -1242,39 +1347,52 @@ def build_players(games: list[dict]) -> dict:
             except Exception as exc:
                 print(f"warning: boxscore {game['id']}: {exc}", file=sys.stderr)
 
-    players = {team: {} for team in TRACKED}
+    players = {}
+    for row in [*official.get("skaters", []), *official.get("goalies", [])]:
+        player_id = str(row.get("id") or "")
+        if not player_id:
+            continue
+        players[player_id] = {**row, "id": player_id, "teams": list(row.get("teams", [])), "games": []}
     for game in relevant:
         data = boxes.get(str(game["id"]), {})
         home = localised(game.get("homeTeam", {}).get("abbrev")).upper()
         away = localised(game.get("awayTeam", {}).get("abbrev")).upper()
         stats = data.get("playerByGameStats", {})
         for side, team in (("homeTeam", home), ("awayTeam", away)):
-            if team not in players:
+            if team not in team_set:
                 continue
             opponent = away if side == "homeTeam" else home
             for group in ("forwards", "defense", "goalies"):
                 for p in stats.get(side, {}).get(group, []) or []:
+                    # NHL boxscores can list dressed players who never entered the game.
+                    # The season summary correctly excludes them from GP, so the game log must too.
+                    if toi_seconds(p.get("toi")) <= 0:
+                        continue
                     pid = str(p.get("playerId") or localised(p.get("name")))
                     name = localised(p.get("name")) or " ".join(filter(None, [localised(p.get("firstName")), localised(p.get("lastName"))]))
-                    entry = players[team].setdefault(pid, {"id": pid, "name": name, "position": p.get("position") or ("G" if group == "goalies" else ""), "games": []})
+                    entry = players.setdefault(pid, {"id": pid, "name": name, "position": p.get("position") or ("G" if group == "goalies" else ""), "teams": [], "games": []})
+                    if team not in entry["teams"]:
+                        entry["teams"].append(team)
                     entry["games"].append({
-                        "date": game.get("gameDate"), "opponent": opponent, "location": "Home" if side == "homeTeam" else "Away",
+                        "date": game.get("gameDate"), "team": team, "opponent": opponent, "location": "Home" if side == "homeTeam" else "Away",
                         "goals": p.get("goals", 0), "assists": p.get("assists", 0), "points": p.get("points", 0),
                         "shots": p.get("sog", 0), "hits": p.get("hits", 0), "toi": p.get("toi", ""),
                         "saves": p.get("saves", 0), "shotsAgainst": p.get("shotsAgainst", 0), "savePct": p.get("savePctg", 0)
                     })
-    output = {}
-    for team, team_players in players.items():
-        output[team] = []
-        for p in team_players.values():
-            p["games"].sort(key=lambda x: x["date"] or "")
-            p["totals"] = {
-                "gp": len(p["games"]), "goals": sum(x["goals"] or 0 for x in p["games"]),
-                "assists": sum(x["assists"] or 0 for x in p["games"]), "points": sum(x["points"] or 0 for x in p["games"]),
-                "shots": sum(x["shots"] or 0 for x in p["games"]), "saves": sum(x["saves"] or 0 for x in p["games"])
-            }
+    output = {team: [] for team in team_codes}
+    for p in players.values():
+        p["games"].sort(key=lambda x: (x.get("date") or "", str(x.get("team") or "")))
+        derived = {
+            "gp": len(p["games"]), "goals": sum(x.get("goals") or 0 for x in p["games"]),
+            "assists": sum(x.get("assists") or 0 for x in p["games"]), "points": sum(x.get("points") or 0 for x in p["games"]),
+            "shots": sum(x.get("shots") or 0 for x in p["games"]), "saves": sum(x.get("saves") or 0 for x in p["games"]),
+        }
+        p["totals"] = {**derived, **(p.get("totals") or {})}
+        affiliations = [team for team in p.get("teams", []) if team in output]
+        for team in affiliations:
             output[team].append(p)
-        output[team].sort(key=lambda p: (-p["totals"]["points"], p["name"]))
+    for rows in output.values():
+        rows.sort(key=lambda p: (-p["totals"]["points"], -p["totals"]["gp"], p["name"]))
     return output
 
 
@@ -1288,6 +1406,47 @@ def enrich_players(players: dict, rosters: dict) -> dict:
                 player["name"] = roster.get("name") or player.get("name")
                 player["headshot"] = roster.get("headshot", "")
     return players
+
+
+def player_data_coverage(rosters: dict, players: dict, official: dict, moneypuck: dict, natural_stat_trick: dict) -> dict:
+    """Describe provider coverage explicitly so absence is never confused with a parsing failure."""
+    roster_rows = [row for rows in rosters.values() for row in rows]
+    detailed_rows = [row for rows in players.values() for row in rows]
+    unique = lambda rows: {str(row.get("id")) for row in rows if row.get("id") not in (None, "")}
+    roster_ids, detailed_ids = unique(roster_rows), unique(detailed_rows)
+    official_ids = unique([*official.get("skaters", []), *official.get("goalies", [])])
+    moneypuck_ids = unique([*moneypuck.get("skaters", []), *moneypuck.get("goalies", [])])
+    nst_ids = unique([*natural_stat_trick.get("players", []), *natural_stat_trick.get("goalies", [])])
+    game_log_ids = {str(row.get("id")) for row in detailed_rows if row.get("games")}
+    official_by_id = {
+        str(row.get("id")): row
+        for row in [*official.get("skaters", []), *official.get("goalies", [])]
+        if row.get("id") not in (None, "")
+    }
+    detailed_by_id = {
+        str(row.get("id")): row
+        for row in detailed_rows
+        if row.get("id") not in (None, "")
+    }
+    reconciled_ids = {
+        player_id for player_id, row in official_by_id.items()
+        if len(detailed_by_id.get(player_id, {}).get("games", [])) == int(row.get("totals", {}).get("gp") or 0)
+    }
+    return {
+        "season": SEASON,
+        "currentRosterPlayers": len(roster_ids),
+        "officialSeasonPlayers": len(official_ids),
+        "officialGameLogs": len(game_log_ids),
+        "reconciledOfficialPlayers": len(reconciled_ids),
+        "officialReconciliationFailures": len(official_ids - reconciled_ids),
+        "moneypuckPlayers": len(moneypuck_ids),
+        "naturalStatTrickMatchedIds": len(nst_ids),
+        "rosterWithOfficialTotals": len(roster_ids & official_ids),
+        "rosterWithGameLogs": len(roster_ids & game_log_ids),
+        "rosterWithMoneypuck": len(roster_ids & moneypuck_ids),
+        "rosterWithNaturalStatTrickId": len(roster_ids & nst_ids),
+        "scope": "All NHL teams",
+    }
 
 
 def build_game_library(games: list[dict], rosters: dict, moneypuck: dict, previous: dict | None = None,
@@ -1666,7 +1825,8 @@ def main() -> None:
     schedule_difficulty, schedule_evidence = build_schedule_model(schedules, league_teams, previous_standings, SEASON)
     rows = tracked_game_rows(schedules, league_teams, schedule_evidence)
     preseason = preseason_schedule_rows(schedules)
-    players = build_players(schedules)
+    official_players = load_official_players(previous_same_season.get("officialPlayers", {}))
+    players = build_players(schedules, league_teams, official_players)
     game_centres = load_game_centres(schedules, previous_same_season)
     daily = load_daily()
     for game in daily.get("games", []):
@@ -1685,14 +1845,20 @@ def main() -> None:
         print(f"warning: MoneyPuck data unavailable: {exc}", file=sys.stderr)
         moneypuck = previous_same_season.get("moneypuck") or {"credit":"Data: MoneyPuck.com","season":SEASON,"updatedAt":None,"status":"Awaiting new-season data","teams":[],"specialTeams":[],"skaters":[],"goalies":[],"lines":[],"simulations":[],"teamGames":[],"specialTeamGames":[]}
     game_library = build_game_library(schedules, rosters, moneypuck, previous_same_season, schedule_evidence)
-    natural_stat_trick = load_natural_stat_trick(standings)
+    natural_stat_trick = load_natural_stat_trick(standings, rosters)
+    player_coverage = player_data_coverage(rosters, players, official_players, moneypuck, natural_stat_trick)
+    if player_coverage["officialSeasonPlayers"] and player_coverage["officialReconciliationFailures"]:
+        raise RuntimeError(
+            "Player archive reconciliation failed: "
+            f"{player_coverage['officialReconciliationFailures']} official player records do not match their game logs"
+        )
     changes = roster_changes(previous_same_season, rosters)
     change_history = roster_change_history(previous_same_season, changes)
     history = daily_history(previous_same_season, standings, moneypuck, special_teams)
     schedule_release = schedule_release_state(SEASON, schedules, previous_same_season.get("scheduleRelease"))
     payload = {
         "meta": {"version": VERSION, "season": SEASON, "seasonMode": CONFIG.get("seasonMode", "manual"), "seasonDecision": rollover_reason, "gamesPerTeam": regular_season_games(SEASON), "trackedTeams": TRACKED, "updatedAt": datetime.now(timezone.utc).isoformat(), "elapsedSeconds": round(time.time()-started, 1), "scheduleGames": len(schedules), "historyDays": len(history)},
-        "standings": standings, "specialTeams": special_teams, "games": rows, "preseasonGames": preseason, "teams": team_summaries(rows, league_teams), "players": players, "gameCentre": game_centres,
+        "standings": standings, "specialTeams": special_teams, "games": rows, "preseasonGames": preseason, "teams": team_summaries(rows, league_teams), "players": players, "officialPlayers": official_players, "playerCoverage": player_coverage, "gameCentre": game_centres,
         "previousSeasonStandings": previous_standings,
         "scheduleRelease": schedule_release, "nextSeasonPreview": preview,
         "scheduleDifficulty": schedule_difficulty,
