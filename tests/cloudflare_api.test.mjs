@@ -127,6 +127,16 @@ test("Access JWT validation checks signature, issuer, audience, and expiry", asy
     async () => jsonResponse({ keys: [publicJwk] }));
   assert.deepEqual(result, { mode: "access", subject: "owner" });
 
+  const cookieRequest = new Request("https://private-live.nhl-tracker-private.pages.dev/api/health", {
+    headers: { cookie: `unrelated=value; CF_Authorization=${token}; theme=dark` },
+  });
+  const cookieResult = await authenticateAccess(
+    cookieRequest,
+    { AUTH_MODE: "access", TEAM_DOMAIN: teamDomain, POLICY_AUD: audience },
+    async () => jsonResponse({ keys: [publicJwk] }),
+  );
+  assert.deepEqual(cookieResult, { mode: "access", subject: "owner" });
+
   await assert.rejects(
     authenticateAccess(request, { AUTH_MODE: "access", TEAM_DOMAIN: teamDomain, POLICY_AUD: "wrong-audience" },
       async () => jsonResponse({ keys: [publicJwk] })),
