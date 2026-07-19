@@ -11,10 +11,22 @@ export async function onRequest(context) {
     context.data.requestId = requestId;
   } catch (error) {
     const configurationError = error.message.includes("not configured");
+    const signingKeysUnavailable = error.message.includes("signing keys");
+    const tokenMissing = error.message.includes("required");
+    const errorCode = configurationError
+      ? "access_not_configured"
+      : signingKeysUnavailable
+        ? "access_keys_unavailable"
+        : tokenMissing
+          ? "access_token_missing"
+          : "access_token_invalid";
+    console.warn(JSON.stringify({ event: "access_denied", requestId, reason: errorCode }));
     const response = errorResponse(
-      configurationError ? "access_not_configured" : "access_denied",
-      configurationError ? "Cloudflare Access validation is not configured" : "Cloudflare Access authentication is required",
-      configurationError ? 503 : 401,
+      errorCode,
+      configurationError || signingKeysUnavailable
+        ? "Cloudflare Access validation is temporarily unavailable"
+        : "Cloudflare Access authentication is required",
+      configurationError || signingKeysUnavailable ? 503 : 401,
       requestId,
     );
     return secureResponse(response, context.request, requestId);
