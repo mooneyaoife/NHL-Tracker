@@ -16,6 +16,11 @@ export async function onRequest(context) {
     const invalidSignature = error.message.includes("signature");
     const invalidIssuer = error.message.includes("issuer");
     const invalidAudience = error.message.includes("audience");
+    const malformedToken = error.message.includes("malformed");
+    const invalidClaims = error.message.includes("claims");
+    const invalidHeader = error.message.includes("header");
+    const invalidKey = error.message.includes(" key ");
+    const expiredToken = error.message.includes("expired");
     const errorCode = configurationError
       ? "access_not_configured"
       : signingKeysUnavailable
@@ -28,7 +33,17 @@ export async function onRequest(context) {
               ? "access_token_issuer_invalid"
               : invalidAudience
                 ? "access_token_audience_invalid"
-                : "access_token_invalid";
+                : malformedToken
+                  ? "access_token_malformed"
+                  : invalidClaims
+                    ? "access_token_claims_invalid"
+                    : invalidHeader
+                      ? "access_token_header_invalid"
+                      : invalidKey
+                        ? "access_token_key_invalid"
+                        : expiredToken
+                          ? "access_token_expired"
+                          : "access_token_invalid";
     console.warn(JSON.stringify({ event: "access_denied", requestId, reason: errorCode }));
     const response = errorResponse(
       errorCode,
