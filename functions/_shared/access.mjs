@@ -40,12 +40,17 @@ async function fetchKeys(teamDomain, fetchImpl) {
   if (cached && cached.expiresAt > now) return cached.keys;
 
   const controller = new AbortController();
-  const timer = setTimeout(() => controller.abort(), 2500);
+  const timer = setTimeout(() => controller.abort(), 5000);
   try {
-    const response = await fetchImpl(
-      `https://${teamDomain}.cloudflareaccess.com/cdn-cgi/access/certs`,
-      { headers: { accept: "application/json" }, redirect: "error", signal: controller.signal },
-    );
+    let response;
+    try {
+      response = await fetchImpl(
+        `https://${teamDomain}.cloudflareaccess.com/cdn-cgi/access/certs`,
+        { headers: { accept: "application/json" }, redirect: "follow", signal: controller.signal },
+      );
+    } catch {
+      throw new Error("Access signing keys are unavailable");
+    }
     if (!response.ok) throw new Error("Access signing keys are unavailable");
     const payload = await response.json();
     if (!Array.isArray(payload.keys) || !payload.keys.length) throw new Error("Access signing keys are invalid");
