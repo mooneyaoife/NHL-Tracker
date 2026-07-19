@@ -39,6 +39,8 @@ To inspect the existing generated site without refreshing external data, run onl
 python -m py_compile scripts/update_tracker.py scripts/train_tracker_models.py
 python -m unittest discover -s tests -p "test_*.py"
 node --check site/app.js
+node tests/cloudflare_live_overlay.test.js
+node --test tests/cloudflare_api.test.mjs
 ```
 
 The deployment and live-game workflows run these checks before publishing.
@@ -52,5 +54,7 @@ The deployment and live-game workflows run these checks before publishing.
 The main workflow refreshes and deploys four times per day. A separate game-night workflow checks for active tracked games every 15 minutes during likely NHL hours.
 
 GitHub Pages remains the primary deployment. An optional, access-controlled Cloudflare Pages deployment can run alongside it; see [Parallel hosting](docs/parallel-hosting.md).
+
+The Cloudflare build adds a small authenticated, allowlisted NHL API with state-aware caching and stale fallback. The GitHub Pages build remains entirely static and does not make requests to the Cloudflare API.
 
 NHL Tracker is an unofficial, non-commercial fan project and is not affiliated with the NHL.

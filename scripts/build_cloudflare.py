@@ -41,8 +41,22 @@ def build(output: Path, production_url: str) -> None:
     manifest.update({"id": "/", "start_url": "/", "scope": "/"})
     manifest_path.write_text(json.dumps(manifest, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
 
+    index_path = output / "index.html"
+    index = index_path.read_text(encoding="utf-8")
+    marker = '  <meta name="nhl-cloudflare-api" content="/api">\n'
+    if marker not in index:
+        theme = '  <meta name="theme-color" content="#f3f1ea">\n'
+        if theme in index:
+            index = index.replace(theme, theme + marker, 1)
+        elif "</head>" in index:
+            index = index.replace("</head>", marker + "</head>", 1)
+        else:
+            index = marker + index
+    index_path.write_text(index, encoding="utf-8")
+
     (output / "robots.txt").write_text("User-agent: *\nDisallow: /\n", encoding="utf-8")
     shutil.copy2(ROOT / "deployment" / "cloudflare-pages" / "_headers", output / "_headers")
+    shutil.copy2(ROOT / "deployment" / "cloudflare-pages" / "_routes.json", output / "_routes.json")
 
 
 def main() -> None:
