@@ -52,7 +52,12 @@ async function fetchKeys(teamDomain, fetchImpl) {
       throw new Error("Access signing keys are unavailable");
     }
     if (!response.ok) throw new Error("Access signing keys are unavailable");
-    const payload = await response.json();
+    let payload;
+    try {
+      payload = await response.json();
+    } catch {
+      throw new Error("Access signing keys are invalid");
+    }
     if (!Array.isArray(payload.keys) || !payload.keys.length) throw new Error("Access signing keys are invalid");
     keyCache.set(teamDomain, { keys: payload.keys, expiresAt: now + CERT_CACHE_MS });
     return payload.keys;
@@ -85,7 +90,13 @@ export async function authenticateAccess(request, env, fetchImpl = fetch) {
   }
   if (header.alg !== "RS256" || !header.kid) throw new Error("Access authentication header is invalid");
 
-  const keys = await fetchKeys(teamDomain, fetchImpl);
+  let keys;
+  try {
+    keys = await fetchKeys(teamDomain, fetchImpl);
+  } catch (error) {
+    if (error.message.includes("signing keys")) throw error;
+    throw new Error("Access signing keys are unavailable");
+  }
   const jwk = keys.find(candidate => candidate.kid === header.kid && candidate.kty === "RSA");
   if (!jwk) throw new Error("Access authentication key is invalid");
   let validSignature;
