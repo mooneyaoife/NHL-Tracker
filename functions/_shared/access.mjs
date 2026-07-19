@@ -68,7 +68,7 @@ export async function authenticateAccess(request, env, fetchImpl = fetch) {
   const token = accessTokenFor(request);
   if (!token) throw new Error("Access authentication is required");
   const parts = token.split(".");
-  if (parts.length !== 3) throw new Error("Access authentication is invalid");
+  if (parts.length !== 3) throw new Error("Access authentication token is malformed");
 
   let header;
   let payload;
@@ -76,13 +76,13 @@ export async function authenticateAccess(request, env, fetchImpl = fetch) {
     header = decodeJsonSegment(parts[0]);
     payload = decodeJsonSegment(parts[1]);
   } catch {
-    throw new Error("Access authentication is invalid");
+    throw new Error("Access authentication claims are invalid");
   }
-  if (header.alg !== "RS256" || !header.kid) throw new Error("Access authentication is invalid");
+  if (header.alg !== "RS256" || !header.kid) throw new Error("Access authentication header is invalid");
 
   const keys = await fetchKeys(teamDomain, fetchImpl);
   const jwk = keys.find(candidate => candidate.kid === header.kid && candidate.kty === "RSA");
-  if (!jwk) throw new Error("Access authentication is invalid");
+  if (!jwk) throw new Error("Access authentication key is invalid");
   const key = await crypto.subtle.importKey(
     "jwk",
     jwk,
