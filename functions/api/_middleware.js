@@ -7,7 +7,9 @@ export async function onRequest(context) {
   if (invalid) return secureResponse(invalid, context.request, requestId);
 
   try {
-    context.data.access = await authenticateAccess(context.request, context.env);
+    const access = await authenticateAccess(context.request, context.env);
+    if (!context.data) throw new Error("Access middleware context is invalid");
+    context.data.access = access;
     context.data.requestId = requestId;
   } catch (error) {
     const configurationError = error.message.includes("not configured");
@@ -22,6 +24,7 @@ export async function onRequest(context) {
     const invalidKey = error.message.includes(" key ");
     const expiredToken = error.message.includes("expired");
     const invalidCryptography = error.message.includes("cryptography");
+    const invalidContext = error.message.includes("middleware context");
     const errorCode = configurationError
       ? "access_not_configured"
       : signingKeysUnavailable
@@ -46,7 +49,9 @@ export async function onRequest(context) {
                           ? "access_token_expired"
                           : invalidCryptography
                             ? "access_token_crypto_invalid"
-                            : "access_token_invalid";
+                            : invalidContext
+                              ? "access_context_invalid"
+                              : "access_token_invalid";
     console.warn(JSON.stringify({ event: "access_denied", requestId, reason: errorCode }));
     const response = errorResponse(
       errorCode,
