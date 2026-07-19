@@ -21,6 +21,7 @@ export async function onRequest(context) {
     const invalidHeader = error.message.includes("header");
     const invalidKey = error.message.includes(" key ");
     const expiredToken = error.message.includes("expired");
+    const invalidCryptography = error.message.includes("cryptography");
     const errorCode = configurationError
       ? "access_not_configured"
       : signingKeysUnavailable
@@ -43,7 +44,9 @@ export async function onRequest(context) {
                         ? "access_token_key_invalid"
                         : expiredToken
                           ? "access_token_expired"
-                          : "access_token_invalid";
+                          : invalidCryptography
+                            ? "access_token_crypto_invalid"
+                            : "access_token_invalid";
     console.warn(JSON.stringify({ event: "access_denied", requestId, reason: errorCode }));
     const response = errorResponse(
       errorCode,
