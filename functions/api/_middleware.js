@@ -53,7 +53,7 @@ export async function onRequest(context) {
                               ? "access_context_invalid"
                               : "access_token_invalid";
     console.warn(JSON.stringify({ event: "access_denied", requestId, reason: errorCode }));
-    const response = errorResponse(
+    let response = errorResponse(
       errorCode,
       configurationError || signingKeysUnavailable
         ? "Cloudflare Access validation is temporarily unavailable"
@@ -64,6 +64,15 @@ export async function onRequest(context) {
     if (errorCode === "access_token_audience_invalid" && error.receivedAudience && error.expectedAudience) {
       response.headers.set("x-access-received-audience", error.receivedAudience);
       response.headers.set("x-access-expected-audience", error.expectedAudience);
+      response = new Response(JSON.stringify({
+        ok: false,
+        error: { code: errorCode, message: "Cloudflare Access authentication is required" },
+        meta: {
+          requestId,
+          receivedAudience: error.receivedAudience,
+          expectedAudience: error.expectedAudience,
+        },
+      }), { status: response.status, headers: response.headers });
     }
     return secureResponse(response, context.request, requestId);
   }
