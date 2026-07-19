@@ -140,7 +140,7 @@ test("Access JWT validation checks signature, issuer, audience, and expiry", asy
   await assert.rejects(
     authenticateAccess(request, { AUTH_MODE: "access", TEAM_DOMAIN: teamDomain, POLICY_AUD: "wrong-audience" },
       async () => jsonResponse({ keys: [publicJwk] })),
-    /invalid/,
+    /audience is invalid/,
   );
 });
 
