@@ -83,19 +83,24 @@ export async function authenticateAccess(request, env, fetchImpl = fetch) {
   const keys = await fetchKeys(teamDomain, fetchImpl);
   const jwk = keys.find(candidate => candidate.kid === header.kid && candidate.kty === "RSA");
   if (!jwk) throw new Error("Access authentication key is invalid");
-  const key = await crypto.subtle.importKey(
-    "jwk",
-    jwk,
-    { name: "RSASSA-PKCS1-v1_5", hash: "SHA-256" },
-    false,
-    ["verify"],
-  );
-  const validSignature = await crypto.subtle.verify(
-    "RSASSA-PKCS1-v1_5",
-    key,
-    decodeBase64Url(parts[2]),
-    encoder.encode(`${parts[0]}.${parts[1]}`),
-  );
+  let validSignature;
+  try {
+    const key = await crypto.subtle.importKey(
+      "jwk",
+      jwk,
+      { name: "RSASSA-PKCS1-v1_5", hash: "SHA-256" },
+      false,
+      ["verify"],
+    );
+    validSignature = await crypto.subtle.verify(
+      "RSASSA-PKCS1-v1_5",
+      key,
+      decodeBase64Url(parts[2]),
+      encoder.encode(`${parts[0]}.${parts[1]}`),
+    );
+  } catch {
+    throw new Error("Access authentication cryptography is invalid");
+  }
   const now = Math.floor(Date.now() / 1000);
   const issuer = `https://${teamDomain}.cloudflareaccess.com`;
   if (!validSignature) throw new Error("Access authentication signature is invalid");
