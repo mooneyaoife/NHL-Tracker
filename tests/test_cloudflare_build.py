@@ -18,6 +18,7 @@ class CloudflareBuildTests(unittest.TestCase):
             encoding="utf-8",
         )
         (self.source / "app.js").write_text("const base = 'https://mooneyaoife.github.io/NHL-Tracker/';", encoding="utf-8")
+        (self.source / "cloudflare-live.js").write_text("window.NHLCloudflareLive = {};", encoding="utf-8")
         (self.source / "manifest.webmanifest").write_text(
             json.dumps({"id": "/NHL-Tracker/", "start_url": "./", "scope": "./"}), encoding="utf-8"
         )
@@ -27,6 +28,9 @@ class CloudflareBuildTests(unittest.TestCase):
         (self.headers / "_headers").write_text(
             "/*\n  X-Robots-Tag: noindex\n  X-Frame-Options: DENY\n  X-Content-Type-Options: nosniff\n",
             encoding="utf-8",
+        )
+        (self.headers / "_routes.json").write_text(
+            json.dumps({"version": 1, "include": ["/api/*"], "exclude": []}), encoding="utf-8"
         )
         self.old_source = build_cloudflare.SOURCE
         self.old_root = build_cloudflare.ROOT
@@ -43,6 +47,7 @@ class CloudflareBuildTests(unittest.TestCase):
         build_cloudflare.build(output, "https://nhl-tracker-private.pages.dev")
         self.assertEqual([], verify_cloudflare_build.failures_for(output, "https://nhl-tracker-private.pages.dev/"))
         self.assertNotIn(build_cloudflare.GITHUB_PAGES_URL, (output / "app.js").read_text(encoding="utf-8"))
+        self.assertIn('name="nhl-cloudflare-api"', (output / "index.html").read_text(encoding="utf-8"))
 
     def test_rejects_insecure_or_credential_bearing_urls(self):
         for value in ("http://example.com", "https://example.com/?token=secret"):

@@ -1,0 +1,12 @@
+name = "nhl-tracker-private"
+pages_build_output_dir = ".cloudflare-build"
+compatibility_date = "2026-07-18"
+
+[vars]
+AUTH_MODE = "access"
+TEAM_DOMAIN = "nhl-tracker-private-pages"
+
+[[kv_namespaces]]
+binding = "NHL_CACHE"
+id = "3a6e013aef394896acf645c4a1633e4f"
+preview_id = "4593242b7e31438baf3ed549eae26f17"

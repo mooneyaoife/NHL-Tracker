@@ -9,7 +9,7 @@ const worker = fs.readFileSync(path.join(root, "site/sw.js"), "utf8");
 
 const uiVersion = app.match(/^const UI_VERSION="([^"]+)";/)?.[1];
 assert.ok(uiVersion, "the application exposes a UI version");
-for (const asset of ["design-system.css", "statistics.js", "app.js"]) {
+for (const asset of ["design-system.css", "statistics.js", "cloudflare-live.js", "app.js"]) {
   assert.match(index, new RegExp(`${asset.replace(".", "\\.")}\\?v=${uiVersion.replaceAll(".", "\\.")}`), `${asset} uses the current UI cache key`);
   assert.match(worker, new RegExp(`${asset.replace(".", "\\.")}\\?v=${uiVersion.replaceAll(".", "\\.")}`), `${asset} is cached with the current UI version`);
 }
