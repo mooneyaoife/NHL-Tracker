@@ -21,6 +21,19 @@ function isLocalRequest(request) {
   return hostname === "localhost" || hostname === "127.0.0.1" || hostname === "::1";
 }
 
+function accessTokenFor(request) {
+  const assertion = request.headers.get("cf-access-jwt-assertion");
+  if (assertion) return assertion;
+
+  const cookieHeader = request.headers.get("cookie") || "";
+  for (const cookie of cookieHeader.split(";")) {
+    const separator = cookie.indexOf("=");
+    if (separator < 0 || cookie.slice(0, separator).trim() !== "CF_Authorization") continue;
+    return cookie.slice(separator + 1).trim();
+  }
+  return "";
+}
+
 async function fetchKeys(teamDomain, fetchImpl) {
   const now = Date.now();
   const cached = keyCache.get(teamDomain);
@@ -52,7 +65,7 @@ export async function authenticateAccess(request, env, fetchImpl = fetch) {
   const expectedAudience = String(env.POLICY_AUD || "").trim();
   if (!teamDomain || !expectedAudience) throw new Error("Access authentication is not configured");
 
-  const token = request.headers.get("cf-access-jwt-assertion");
+  const token = accessTokenFor(request);
   if (!token) throw new Error("Access authentication is required");
   const parts = token.split(".");
   if (parts.length !== 3) throw new Error("Access authentication is invalid");
