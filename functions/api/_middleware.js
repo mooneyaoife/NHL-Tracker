@@ -61,6 +61,10 @@ export async function onRequest(context) {
       configurationError || signingKeysUnavailable ? 503 : 401,
       requestId,
     );
+    if (errorCode === "access_token_audience_invalid" && error.receivedAudience && error.expectedAudience) {
+      response.headers.set("x-access-received-audience", error.receivedAudience);
+      response.headers.set("x-access-expected-audience", error.expectedAudience);
+    }
     return secureResponse(response, context.request, requestId);
   }
 
