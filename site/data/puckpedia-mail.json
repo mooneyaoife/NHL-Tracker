@@ -1,7 +1,21 @@
 {
   "schema": 1,
-  "updatedAt": "2026-07-20T11:40:15.489Z",
+  "updatedAt": "2026-07-20T17:40:12.048Z",
   "items": [
+    {
+      "id": "2d6bde33c4fd2d1728a4",
+      "title": "Jared Davidson Signs a 1-Year, $850K Contract with the Montreal Canadiens",
+      "publishedAt": "2026-07-20T17:15:11.000Z",
+      "category": "Contract",
+      "url": "https://puckpedia.com/signing/10749?utm_source=email&utm_medium=email&utm_campaign=signing&utm_content=primary"
+    },
+    {
+      "id": "4416dc7a995b318f3758",
+      "title": "Hunter McKown Signs a 1-Year, $850K Contract with the Montreal Canadiens",
+      "publishedAt": "2026-07-20T16:11:10.000Z",
+      "category": "Contract",
+      "url": "https://puckpedia.com/signing/10748?utm_source=email&utm_medium=email&utm_campaign=signing&utm_content=primary"
+    },
     {
       "id": "e50b76f943dcb6ed4b44",
       "title": "Connor Bedard Signs a 5-Year, $75.00M Contract with the Chicago Blackhawks",
@@ -197,20 +211,6 @@
       "publishedAt": "2026-07-11T00:21:06.000Z",
       "category": "Contract",
       "url": "https://puckpedia.com/signing/10721?utm_source=email&utm_medium=email&utm_campaign=signing&utm_content=primary"
-    },
-    {
-      "id": "d1532d532a232959912e",
-      "title": "Ville Ottavainen Signs a 1-Year, $850K Contract with the Seattle Kraken",
-      "publishedAt": "2026-07-11T00:16:07.000Z",
-      "category": "Contract",
-      "url": "https://puckpedia.com/signing/10720?utm_source=email&utm_medium=email&utm_campaign=signing&utm_content=primary"
-    },
-    {
-      "id": "b68cb2e9fe239c7f827a",
-      "title": "Carson Lambos Signs a 1-Year, $850K Contract with the Minnesota Wild",
-      "publishedAt": "2026-07-11T00:12:08.000Z",
-      "category": "Contract",
-      "url": "https://puckpedia.com/signing/10719?utm_source=email&utm_medium=email&utm_campaign=signing&utm_content=primary"
     }
   ]
 }
