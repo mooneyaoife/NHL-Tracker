@@ -1036,7 +1036,7 @@ body[data-navigation-group="home"] main{padding-top:42px!important}
   --control-padding:16px;
   --table-cell-block:13px;
   --table-cell-inline:14px;
-  --control-height:42px;
+  --control-height:44px;
   --tab-height:50px;
   --card-radius:8px;
   --page-title-size:clamp(52px,5vw,72px);
@@ -1197,7 +1197,7 @@ body[data-navigation-group="explore"] .context-nav-level button{
 .workspace-story-rail,#schedule .schedule-story-rail{margin-bottom:20px!important;box-shadow:none!important}
 #schedule .schedule-story-rail{grid-template-columns:repeat(3,minmax(0,1fr))!important}
 
-/* Forms and filters use a single 42px control and an eight-pixel field. */
+/* Forms and filters use a single accessible 44px control and an eight-pixel field. */
 .page select,.page input[type="search"],.page input[type="text"],.page input:not([type]){
   width:auto;
   min-height:var(--control-height)!important;
@@ -1249,7 +1249,7 @@ th,td{padding:var(--table-cell-block) var(--table-cell-inline)!important;border-
 th{background:var(--surface-subtle)!important;color:var(--ink-soft)!important;font-size:11px!important}
 td{color:var(--ink)!important;font-size:13px!important}
 tbody tr:hover{background:color-mix(in srgb,var(--brand-soft) 45%,transparent)!important}
-.table-sort{display:inline-flex;align-items:center;min-height:24px!important;padding-block:2px!important}
+.table-sort{display:inline-flex;align-items:center;min-height:44px!important;padding-block:8px!important}
 .notice,.source-notice,.rumour-warning,.schedule-intelligence-status{
   border:0!important;
   border-left:3px solid var(--brand)!important;
@@ -1320,7 +1320,7 @@ tbody tr:hover{background:color-mix(in srgb,var(--brand-soft) 45%,transparent)!i
    compact icon-button treatment as the existing theme control. */
 @media(max-width:640px){
   body>header{grid-template-columns:minmax(145px,1fr) auto!important}
-  body>header .header-tools{grid-template-columns:78px 36px 36px!important;gap:6px!important}
+  body>header .header-tools{grid-template-columns:78px 44px 44px!important;gap:6px!important}
   body>header .season-archive-toggle{width:78px!important}
   body>header .global-search-button{
     display:flex!important;
@@ -1328,13 +1328,13 @@ tbody tr:hover{background:color-mix(in srgb,var(--brand-soft) 45%,transparent)!i
     grid-row:1;
     align-items:center;
     justify-content:center;
-    width:36px!important;
-    height:36px!important;
+    width:44px!important;
+    height:44px!important;
     padding:0!important;
   }
   body>header .global-search-button:after{display:none!important;content:none!important}
   body>header .global-search-button svg{width:17px!important;height:17px!important}
-  body>header .header-tools #theme-button{grid-column:3!important;grid-row:1!important;width:36px!important;height:36px!important}
+  body>header .header-tools #theme-button{grid-column:3!important;grid-row:1!important;width:44px!important;height:44px!important}
   #schedule .schedule-story-rail button,
   #league .league-subnav button{flex:1 1 0!important;min-width:0!important}
 }
@@ -1670,12 +1670,31 @@ tbody tr:hover{background:color-mix(in srgb,var(--brand-soft) 45%,transparent)!i
   #dashboard .home-tonight>header>button,#dashboard #edit-home{
     min-height:44px!important;
   }
-  .page .table-sort{min-height:36px!important;padding-block:8px!important}
+  .page .table-sort{min-height:44px!important;padding-block:10px!important}
   .page .modebar-btn{
     display:grid!important;place-items:center!important;
-    width:36px!important;height:36px!important;padding:7px!important;
+    width:44px!important;height:44px!important;padding:10px!important;
   }
 }
+
+/* Wide paired charts become a single reading column before labels and
+   controls can collide at tablet widths. */
+@media(max-width:1024px){
+  .schedule-intelligence-charts,
+  .schedule-roadmap-lower{grid-template-columns:minmax(0,1fr)!important}
+}
+
+/* Essential explanatory copy is never dependent on sub-12px rendering. */
+.tonight-evidence>summary small,.tonight-context span,
+.schedule-command>aside span,.schedule-command>aside small,
+#schedule .schedule-story-rail button small,#schedule .schedule-chapter-purpose,
+#schedule .calendar-controls p,.season-roadmap-file>summary small,
+.chart-data-context,.chart-data-view summary span{font-size:12px!important;line-height:1.4!important}
+
+.chart-data-view{margin:12px 0 0;border-top:1px solid var(--rule);padding-top:10px}
+.chart-data-view>summary{min-height:44px;display:flex;align-items:center;justify-content:space-between;gap:12px;cursor:pointer;font-weight:750}
+.chart-data-context{display:flex;flex-wrap:wrap;gap:8px 16px;color:var(--ink-soft);margin:4px 0 10px}
+.chart-data-download{min-height:44px!important;margin-top:10px}
 
 /* 7.8.1 · Readable small type.
    Compact evidence remains visually secondary, but no meaningful interface
@@ -2212,4 +2231,28 @@ body .tonight-summary .metric .label{
   #guide .guide-card,
   #guide .guide-card:nth-child(2n){padding:20px var(--heading-inset) 22px!important}
   #guide .guide-card-meta{align-items:flex-start}
+}
+
+/* Final responsive invariant: these evidence pairs must not return to the
+   generic two-column grid at tablet widths through a later cascade rule. */
+@media screen and (max-width:1024px){
+  #schedule .grid.two.schedule-intelligence-charts,
+  #schedule .grid.two.schedule-roadmap-lower{
+    display:grid!important;
+    grid-template-columns:minmax(0,1fr)!important;
+  }
+}
+
+/* Publication policy content prioritises readable measures over density. */
+.policy-intro{max-width:72ch;margin:0 0 var(--section-gap);font-size:16px;line-height:1.55}
+.policy-grid{align-items:start}
+#corrections-log{display:grid;gap:0;border-top:1px solid var(--rule);margin-top:16px}
+#corrections-log>article{display:grid;grid-template-columns:max-content minmax(0,1fr);gap:4px 10px;border-bottom:1px solid var(--rule);padding:13px 0}
+#corrections-log time,#corrections-log>article>span{font:700 12px/1.4 var(--font-data);color:var(--ink-soft)}
+#corrections-log strong{grid-column:1/-1;font-size:14px;line-height:1.35}
+#corrections-log p{grid-column:1/-1;margin:2px 0 0;font-size:13px;line-height:1.5}
+@media(max-width:1100px){.policy-grid.grid.two{grid-template-columns:minmax(0,1fr)!important}}
+@media(max-width:560px){
+  #corrections-log>article{grid-template-columns:1fr}
+  #corrections-log p{grid-column:auto}
 }
