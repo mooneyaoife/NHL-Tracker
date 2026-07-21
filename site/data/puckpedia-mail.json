@@ -1,7 +1,14 @@
 {
   "schema": 1,
-  "updatedAt": "2026-07-21T11:40:22.046Z",
+  "updatedAt": "2026-07-21T17:40:17.322Z",
   "items": [
+    {
+      "id": "fcc2dcb9af28f1cb2c15",
+      "title": "John Marino Signs an 8-Year, $54.00M Contract with the Utah Mammoth",
+      "publishedAt": "2026-07-21T15:39:10.000Z",
+      "category": "Contract",
+      "url": "https://puckpedia.com/signing/10751?utm_source=email&utm_medium=email&utm_campaign=signing&utm_content=primary"
+    },
     {
       "id": "0da0b7c3b9fb04449a3e",
       "title": "Georgii Merkulov Signs a 1-Year, $850K Contract with the Colorado Avalanche",
@@ -204,13 +211,6 @@
       "publishedAt": "2026-07-13T14:53:11.000Z",
       "category": "Contract",
       "url": "https://puckpedia.com/signing/10723?utm_source=email&utm_medium=email&utm_campaign=signing&utm_content=primary"
-    },
-    {
-      "id": "35963ce48ac0dd1856ce",
-      "title": "Colton Dach Signs a 2-Year, $2.40M Contract with the Edmonton Oilers",
-      "publishedAt": "2026-07-12T18:37:09.000Z",
-      "category": "Contract",
-      "url": "https://puckpedia.com/signing/10722?utm_source=email&utm_medium=email&utm_campaign=signing&utm_content=primary"
     }
   ]
 }
