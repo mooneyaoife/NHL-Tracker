@@ -1,7 +1,14 @@
 {
   "schema": 1,
-  "updatedAt": "2026-07-20T23:40:47.969Z",
+  "updatedAt": "2026-07-21T05:40:16.114Z",
   "items": [
+    {
+      "id": "0da0b7c3b9fb04449a3e",
+      "title": "Georgii Merkulov Signs a 1-Year, $850K Contract with the Colorado Avalanche",
+      "publishedAt": "2026-07-20T23:44:09.000Z",
+      "category": "Contract",
+      "url": "https://puckpedia.com/signing/10750?utm_source=email&utm_medium=email&utm_campaign=signing&utm_content=primary"
+    },
     {
       "id": "2d6bde33c4fd2d1728a4",
       "title": "Jared Davidson Signs a 1-Year, $850K Contract with the Montreal Canadiens",
@@ -204,13 +211,6 @@
       "publishedAt": "2026-07-12T18:37:09.000Z",
       "category": "Contract",
       "url": "https://puckpedia.com/signing/10722?utm_source=email&utm_medium=email&utm_campaign=signing&utm_content=primary"
-    },
-    {
-      "id": "9a3fa9660e919b621867",
-      "title": "Oskar Sundqvist Signs a 1-Year, $850K Contract with the St. Louis Blues",
-      "publishedAt": "2026-07-11T00:21:06.000Z",
-      "category": "Contract",
-      "url": "https://puckpedia.com/signing/10721?utm_source=email&utm_medium=email&utm_campaign=signing&utm_content=primary"
     }
   ]
 }
