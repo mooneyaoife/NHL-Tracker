@@ -1,7 +1,21 @@
 {
   "schema": 1,
-  "updatedAt": "2026-07-21T23:40:13.902Z",
+  "updatedAt": "2026-07-22T05:40:15.182Z",
   "items": [
+    {
+      "id": "b396d234bff1b6395347",
+      "title": "Jason Robertson Signs a 1-Year, $12.00M Contract with the Dallas Stars",
+      "publishedAt": "2026-07-22T00:12:08.000Z",
+      "category": "Contract",
+      "url": "https://puckpedia.com/signing/10753?utm_source=email&utm_medium=email&utm_campaign=signing&utm_content=primary"
+    },
+    {
+      "id": "b3c2ae22f134817f806f",
+      "title": "Mikulas Hovorka Signs a 1-Year, $850K Contract with the Florida Panthers",
+      "publishedAt": "2026-07-21T23:44:10.000Z",
+      "category": "Contract",
+      "url": "https://puckpedia.com/signing/10752?utm_source=email&utm_medium=email&utm_campaign=signing&utm_content=primary"
+    },
     {
       "id": "fcc2dcb9af28f1cb2c15",
       "title": "John Marino Signs an 8-Year, $54.00M Contract with the Utah Mammoth",
@@ -197,20 +211,6 @@
       "publishedAt": "2026-07-13T20:04:08.000Z",
       "category": "Contract",
       "url": "https://puckpedia.com/signing/10725?utm_source=email&utm_medium=email&utm_campaign=signing&utm_content=primary"
-    },
-    {
-      "id": "d63bfbe432b0590d4995",
-      "title": "Viggo Bj?rck Signs a 3-Year, $3.23M Contract with the Winnipeg Jets",
-      "publishedAt": "2026-07-13T17:35:09.000Z",
-      "category": "Contract",
-      "url": "https://puckpedia.com/signing/10724?utm_source=email&utm_medium=email&utm_campaign=signing&utm_content=primary"
-    },
-    {
-      "id": "f110f78f1165d5df518d",
-      "title": "Peyton Krebs Signs a 4-Year, $14.00M Contract with the Buffalo Sabres",
-      "publishedAt": "2026-07-13T14:53:11.000Z",
-      "category": "Contract",
-      "url": "https://puckpedia.com/signing/10723?utm_source=email&utm_medium=email&utm_campaign=signing&utm_content=primary"
     }
   ]
 }
