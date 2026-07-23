@@ -1,7 +1,20 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-  <url>
-    <loc>https://mooneyaoife.github.io/NHL-Tracker/</loc>
-    <lastmod>2026-07-17</lastmod>
-  </url>
+  <url><loc>https://mooneyaoife.github.io/NHL-Tracker/</loc><lastmod>2026-07-18</lastmod></url>
+  <url><loc>https://mooneyaoife.github.io/NHL-Tracker/tonight/</loc><lastmod>2026-07-18</lastmod></url>
+  <url><loc>https://mooneyaoife.github.io/NHL-Tracker/games/</loc><lastmod>2026-07-18</lastmod></url>
+  <url><loc>https://mooneyaoife.github.io/NHL-Tracker/lineups/</loc><lastmod>2026-07-18</lastmod></url>
+  <url><loc>https://mooneyaoife.github.io/NHL-Tracker/season/</loc><lastmod>2026-07-18</lastmod></url>
+  <url><loc>https://mooneyaoife.github.io/NHL-Tracker/trends/</loc><lastmod>2026-07-18</lastmod></url>
+  <url><loc>https://mooneyaoife.github.io/NHL-Tracker/playoffs/</loc><lastmod>2026-07-18</lastmod></url>
+  <url><loc>https://mooneyaoife.github.io/NHL-Tracker/teams/</loc><lastmod>2026-07-18</lastmod></url>
+  <url><loc>https://mooneyaoife.github.io/NHL-Tracker/players/</loc><lastmod>2026-07-18</lastmod></url>
+  <url><loc>https://mooneyaoife.github.io/NHL-Tracker/compare/</loc><lastmod>2026-07-18</lastmod></url>
+  <url><loc>https://mooneyaoife.github.io/NHL-Tracker/league/</loc><lastmod>2026-07-18</lastmod></url>
+  <url><loc>https://mooneyaoife.github.io/NHL-Tracker/power/</loc><lastmod>2026-07-18</lastmod></url>
+  <url><loc>https://mooneyaoife.github.io/NHL-Tracker/movement/</loc><lastmod>2026-07-18</lastmod></url>
+  <url><loc>https://mooneyaoife.github.io/NHL-Tracker/workspace/</loc><lastmod>2026-07-18</lastmod></url>
+  <url><loc>https://mooneyaoife.github.io/NHL-Tracker/reference/</loc><lastmod>2026-07-18</lastmod></url>
+  <url><loc>https://mooneyaoife.github.io/NHL-Tracker/status/</loc><lastmod>2026-07-18</lastmod></url>
+  <url><loc>https://mooneyaoife.github.io/NHL-Tracker/policies/</loc><lastmod>2026-07-18</lastmod></url>
 </urlset>

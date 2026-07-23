@@ -1,28 +1,21 @@
-name: Update NHL Tracker and deploy
+name: Generate scheduled NHL data
 
 on:
   workflow_dispatch:
   schedule:
+    # GitHub cron is UTC. Data is rendered for Europe/London in the application.
     - cron: "20 7,12,18,23 * * *"
-      timezone: "Europe/London"
-  push:
-    branches: [main]
 
 permissions:
   contents: write
-  pages: write
-  id-token: write
 
 concurrency:
-  group: nhl-tracker
+  group: nhl-tracker-data
   cancel-in-progress: false
 
 jobs:
   update:
     runs-on: ubuntu-latest
-    environment:
-      name: github-pages
-      url: ${{ steps.deployment.outputs.page_url }}
     steps:
       - uses: actions/checkout@v7
       - uses: actions/setup-python@v6
@@ -35,45 +28,25 @@ jobs:
         run: python scripts/update_tracker.py
       - name: Validate generated data and application contracts
         run: |
+          python scripts/generate_build_metadata.py
           python -m unittest discover -s tests -p 'test_*.py'
           node --check site/app.js
+          node --check site/game-state.js
+          node --check site/cloudflare-live.js
           node --check site/statistics.js
+          node tests/game_state.test.js
+          node tests/cloudflare_live_overlay.test.js
+          node tests/live_updates.test.js
           node --check site/sw.js
           node tests/frontend_statistics.test.js
           node tests/data_integrity.test.js
           node tests/site_contract.test.js
+          node tests/workflow_contract.test.js
+          python scripts/validate_mail_feed.py
       - name: Save generated data
-        if: github.event_name != 'push'
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
           git add site/data data/cache
           git diff --cached --quiet || git commit -m "Update NHL data"
           git push
-      - uses: actions/configure-pages@v6
-      - uses: actions/upload-pages-artifact@v5
-        with:
-          path: site
-      - id: deployment
-        uses: actions/deploy-pages@v5
-      - name: Build parallel Cloudflare Pages artifact
-        if: vars.CLOUDFLARE_DEPLOY_ENABLED == 'true'
-        env:
-          CLOUDFLARE_PAGES_URL: ${{ vars.CLOUDFLARE_PAGES_URL }}
-        run: |
-          test -n "$CLOUDFLARE_PAGES_URL"
-          python scripts/build_cloudflare.py --production-url "$CLOUDFLARE_PAGES_URL"
-          python scripts/verify_cloudflare_build.py --production-url "$CLOUDFLARE_PAGES_URL"
-      - name: Deploy parallel Cloudflare Pages site
-        if: vars.CLOUDFLARE_DEPLOY_ENABLED == 'true'
-        env:
-          CLOUDFLARE_ACCOUNT_ID: ${{ vars.CLOUDFLARE_ACCOUNT_ID }}
-          CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
-          CLOUDFLARE_PAGES_PROJECT: ${{ vars.CLOUDFLARE_PAGES_PROJECT }}
-        run: |
-          test -n "$CLOUDFLARE_ACCOUNT_ID"
-          test -n "$CLOUDFLARE_API_TOKEN"
-          test -n "$CLOUDFLARE_PAGES_PROJECT"
-          npx --yes wrangler@4.110.0 pages deploy .cloudflare-build \
-            --project-name "$CLOUDFLARE_PAGES_PROJECT" \
-            --branch main

@@ -4,6 +4,7 @@
   const marker = document.querySelector('meta[name="nhl-cloudflare-api"]');
   const base = marker?.content?.replace(/\/$/, "") || "";
   const enabled = base.startsWith("/") && !base.startsWith("//");
+  const lastGood = { score: null, schedule: null };
 
   const officialValue = value => {
     if (value == null) return "";
@@ -14,7 +15,7 @@
   async function apiGet(path) {
     if (!enabled || !path.startsWith("/")) throw new Error("Cloudflare live data is not enabled");
     const controller = new AbortController();
-    const timer = setTimeout(() => controller.abort(), 9500);
+    const timer = setTimeout(() => controller.abort(), 4500);
     try {
       const response = await fetch(`${base}${path}`, {
         method: "GET",
@@ -34,7 +35,33 @@
     }
   }
 
-  function normaliseDaily(score, schedule) {
+  function gameRow(game, fallbackDate = "") {
+    const startTimeUTC = game.startTimeUTC || "";
+    const slateDate = game.gameDate || fallbackDate || startTimeUTC.slice(0, 10);
+    const baseRow = {
+      id: game.id,
+      date: slateDate,
+      slateDate,
+      startTimeUTC,
+      state: game.gameState || game.state || "",
+      scheduleState: game.gameScheduleState || game.scheduleState || "",
+      type: game.gameType || game.type || 0,
+      venue: officialValue(game.venue),
+      home: officialValue(game.homeTeam?.abbrev || game.home).toUpperCase(),
+      away: officialValue(game.awayTeam?.abbrev || game.away).toUpperCase(),
+      homeScore: game.homeTeam?.score ?? game.homeScore,
+      awayScore: game.awayTeam?.score ?? game.awayScore,
+      period: game.periodDescriptor?.number ?? game.period,
+      periodDescriptor: game.periodDescriptor,
+      gameOutcome: game.gameOutcome,
+      clock: game.clock,
+      broadcasts: (game.tvBroadcasts || game.broadcasts || []).map(row => row.network || row).filter(Boolean),
+    };
+    const normalized = window.NHLTrackerGameState?.normalizeGameState(baseRow);
+    return normalized ? { ...baseRow, londonDate: normalized.londonDate, status: normalized } : baseRow;
+  }
+
+  function normaliseDaily(score = {}, schedule = {}) {
     const scheduledGames = [];
     (schedule?.gameWeek || []).forEach(day => (day.games || []).forEach(game => {
       scheduledGames.push({ ...game, gameDate: game.gameDate || day.date });
@@ -54,44 +81,37 @@
     scoreGames.forEach(game => {
       if (!seen.has(String(game.id))) sourceGames.push(game);
     });
-    const games = sourceGames.map(game => {
-      const startTimeUTC = game.startTimeUTC || "";
-      return {
-        id: game.id,
-        date: game.gameDate || startTimeUTC.slice(0, 10),
-        startTimeUTC,
-        state: game.gameState || "",
-        type: game.gameType || 0,
-        venue: officialValue(game.venue),
-        home: officialValue(game.homeTeam?.abbrev).toUpperCase(),
-        away: officialValue(game.awayTeam?.abbrev).toUpperCase(),
-        homeScore: game.homeTeam?.score,
-        awayScore: game.awayTeam?.score,
-        period: game.periodDescriptor?.number,
-        broadcasts: (game.tvBroadcasts || []).map(row => row.network).filter(Boolean),
-      };
-    });
-    const dates = [...new Set(games.map(game => game.date).filter(Boolean))].sort();
+    const games = sourceGames.map(game => gameRow(game));
+    const dates = [...new Set(games.map(game => game.slateDate).filter(Boolean))].sort();
     const requestedDate = score?.currentDate || null;
     const selectedDate = dates.includes(requestedDate)
       ? requestedDate
       : dates.find(date => requestedDate && date >= requestedDate) || dates.at(-1) || requestedDate;
     return {
       currentDate: selectedDate,
+      slateDate: selectedDate,
       requestedDate,
       fallback: Boolean(selectedDate && requestedDate && selectedDate !== requestedDate),
-      games: games.filter(game => game.date === selectedDate),
+      games: games.filter(game => game.slateDate === selectedDate),
     };
   }
 
-  function overlayMeta(responses) {
+  function overlayMeta(components, partial) {
+    const responses = Object.values(components).filter(Boolean);
     const metas = responses.map(response => response.meta || {});
     const fetchedAt = metas.map(meta => meta.fetchedAt).filter(Boolean).sort().at(-1) || new Date().toISOString();
     const stale = metas.some(meta => meta.stale);
+    const cached = !stale && metas.length > 0 && metas.every(meta => meta.cache === "hit");
+    const status = stale ? "stale" : partial ? (cached ? "partial-cached" : "partial-live") : cached ? "cached" : "live";
     return {
-      status: stale ? "stale" : "live",
+      status,
       fetchedAt,
       stale,
+      partial,
+      components: {
+        score: components.score ? (components.score.meta?.stale ? "stale" : components.score.meta?.cache === "hit" ? "cached" : "live") : "unavailable",
+        schedule: components.schedule ? (components.schedule.meta?.stale ? "stale" : components.schedule.meta?.cache === "hit" ? "cached" : "live") : "unavailable",
+      },
       states: [...new Set(metas.map(meta => meta.state).filter(Boolean))],
       cache: metas.map(meta => meta.cache).filter(Boolean),
     };
@@ -99,25 +119,37 @@
 
   async function hydrate(data) {
     if (!enabled) return data;
-    try {
-      const [score, schedule] = await Promise.all([
-        apiGet("/nhl/score/now"),
-        apiGet("/nhl/schedule/now"),
-      ]);
-      return {
-        ...data,
-        daily: normaliseDaily(score.data, schedule.data),
-        meta: { ...data.meta, cloudflareLive: overlayMeta([score, schedule]) },
-      };
-    } catch {
+    const [scoreResult, scheduleResult] = await Promise.allSettled([
+      apiGet("/nhl/score/now"),
+      apiGet("/nhl/schedule/now"),
+    ]);
+    if (scoreResult.status === "fulfilled") lastGood.score = scoreResult.value;
+    if (scheduleResult.status === "fulfilled") lastGood.schedule = scheduleResult.value;
+    const components = {
+      score: scoreResult.status === "fulfilled" ? scoreResult.value : lastGood.score,
+      schedule: scheduleResult.status === "fulfilled" ? scheduleResult.value : lastGood.schedule,
+    };
+    if (!components.score && !components.schedule) {
       return {
         ...data,
         meta: {
           ...data.meta,
-          cloudflareLive: { status: "static-fallback", fetchedAt: data.meta?.liveGameUpdateAt || data.meta?.updatedAt || null, stale: true },
+          cloudflareLive: {
+            status: "static-fallback",
+            fetchedAt: data.meta?.liveGameUpdateAt || data.meta?.updatedAt || null,
+            stale: true,
+            partial: false,
+            components: { score: "unavailable", schedule: "unavailable" },
+          },
         },
       };
     }
+    const partial = !components.score || !components.schedule || scoreResult.status === "rejected" || scheduleResult.status === "rejected";
+    return {
+      ...data,
+      daily: normaliseDaily(components.score?.data || {}, components.schedule?.data || {}),
+      meta: { ...data.meta, cloudflareLive: overlayMeta(components, partial) },
+    };
   }
 
   async function game(gameId, fallback = null) {

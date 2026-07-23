@@ -1,0 +1,18 @@
+[
+  {"name":"scheduled","game":{"state":"FUT","startTimeUTC":"2026-10-18T18:00:00Z","date":"2026-10-18"},"code":"scheduled","label":"Scheduled","londonDate":"2026-10-18"},
+  {"name":"pregame","game":{"state":"PRE","startTimeUTC":"2026-10-18T18:00:00Z"},"code":"pregame","label":"Pregame"},
+  {"name":"live","game":{"state":"LIVE"},"code":"live","label":"Live"},
+  {"name":"intermission","game":{"state":"LIVE","clock":{"inIntermission":true}},"code":"intermission","label":"Intermission"},
+  {"name":"delayed","game":{"state":"DELAYED","startTimeUTC":"2026-10-18T18:00:00Z"},"code":"delayed","label":"Delayed"},
+  {"name":"postponed","game":{"state":"POSTPONED","startTimeUTC":"2026-10-18T18:00:00Z"},"code":"postponed","label":"Postponed"},
+  {"name":"schedule-postponed","game":{"state":"FUT","gameScheduleState":"PPD","startTimeUTC":"2026-10-18T18:00:00Z"},"code":"postponed","label":"Postponed"},
+  {"name":"suspended","game":{"state":"SUSPENDED"},"code":"suspended","label":"Suspended"},
+  {"name":"cancelled","game":{"state":"CANCELLED"},"code":"cancelled","label":"Cancelled"},
+  {"name":"final","game":{"state":"FINAL","gameOutcome":{"lastPeriodType":"REG"}},"code":"final","label":"Final"},
+  {"name":"final-ot","game":{"state":"OFF","gameOutcome":{"lastPeriodType":"OT"}},"code":"final-ot","label":"Final/OT"},
+  {"name":"final-so","game":{"state":"FINAL","gameOutcome":{"lastPeriodType":"SO"}},"code":"final-so","label":"Final/SO"},
+  {"name":"before-bst","game":{"state":"FUT","startTimeUTC":"2026-03-29T00:30:00Z","date":"2026-03-28"},"code":"scheduled","londonDate":"2026-03-29"},
+  {"name":"after-bst","game":{"state":"FUT","startTimeUTC":"2026-03-29T01:30:00Z","date":"2026-03-28"},"code":"scheduled","londonDate":"2026-03-29"},
+  {"name":"bst-midnight","game":{"state":"FUT","startTimeUTC":"2026-09-30T23:30:00Z","date":"2026-09-30"},"code":"scheduled","londonDate":"2026-10-01"},
+  {"name":"after-bst-end","game":{"state":"FUT","startTimeUTC":"2026-10-25T01:30:00Z","date":"2026-10-24"},"code":"scheduled","londonDate":"2026-10-25"}
+]

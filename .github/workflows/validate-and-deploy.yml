@@ -1,11 +1,16 @@
-name: Refresh active NHL games
+name: Validate and deploy existing artifact
 
 on:
   workflow_dispatch:
-  schedule:
-    # Hourly during likely NHL game hours. The Cloudflare overlay supplies
-    # minute-level live views without rebuilding the whole static site.
-    - cron: "7 0-10,16-23 * 1-6,9-12 *"
+  push:
+    branches: [main]
+    paths:
+      - "site/**"
+      - "deployment/**"
+      - "scripts/build_cloudflare.py"
+      - "scripts/verify_cloudflare_build.py"
+      - "tests/**"
+      - ".github/workflows/validate-and-deploy.yml"
 
 permissions:
   contents: read
@@ -13,15 +18,15 @@ permissions:
   id-token: write
 
 concurrency:
-  group: nhl-tracker
+  group: nhl-tracker-deploy
   cancel-in-progress: false
 
 jobs:
-  refresh:
+  validate-and-deploy:
     runs-on: ubuntu-latest
     environment:
       name: github-pages
-      url: ${{ steps.deployment.outputs.page_url }}
+      url: ${{ steps.pages.outputs.page_url }}
     steps:
       - uses: actions/checkout@v7
       - uses: actions/setup-python@v6
@@ -30,43 +35,38 @@ jobs:
       - uses: actions/setup-node@v7
         with:
           node-version: "22"
-      - id: live
-        name: Check for and refresh active tracked games
-        run: python scripts/update_tracker.py --live-only
-      - if: steps.live.outputs.active == 'true'
-        name: Validate live data and application contracts
+      - name: Validate committed artifact without refreshing upstream data
         run: |
           python scripts/generate_build_metadata.py
+          python -m unittest discover -s tests -p 'test_*.py'
           node --check site/app.js
           node --check site/game-state.js
           node --check site/cloudflare-live.js
+          node --check site/sw.js
           node tests/game_state.test.js
+          node tests/frontend_statistics.test.js
           node tests/cloudflare_live_overlay.test.js
           node tests/live_updates.test.js
-          node --check site/statistics.js
-          node --check site/sw.js
           node tests/data_integrity.test.js
           node tests/site_contract.test.js
           node tests/workflow_contract.test.js
-      - if: steps.live.outputs.active == 'true'
-        uses: actions/configure-pages@v6
-      - if: steps.live.outputs.active == 'true'
-        uses: actions/upload-pages-artifact@v5
+          python scripts/validate_mail_feed.py
+      - uses: actions/configure-pages@v6
+      - uses: actions/upload-pages-artifact@v5
         with:
           path: site
-      - if: steps.live.outputs.active == 'true'
-        id: deployment
+      - id: pages
         uses: actions/deploy-pages@v5
-      - if: steps.live.outputs.active == 'true' && vars.CLOUDFLARE_DEPLOY_ENABLED == 'true'
-        name: Build parallel Cloudflare Pages artifact
+      - name: Build and verify private Cloudflare artifact
+        if: vars.CLOUDFLARE_DEPLOY_ENABLED == 'true'
         env:
           CLOUDFLARE_PAGES_URL: ${{ vars.CLOUDFLARE_PAGES_URL }}
         run: |
           test -n "$CLOUDFLARE_PAGES_URL"
           python scripts/build_cloudflare.py --production-url "$CLOUDFLARE_PAGES_URL"
           python scripts/verify_cloudflare_build.py --production-url "$CLOUDFLARE_PAGES_URL"
-      - if: steps.live.outputs.active == 'true' && vars.CLOUDFLARE_DEPLOY_ENABLED == 'true'
-        name: Deploy parallel Cloudflare Pages site
+      - name: Deploy private Cloudflare artifact
+        if: vars.CLOUDFLARE_DEPLOY_ENABLED == 'true'
         env:
           CLOUDFLARE_ACCOUNT_ID: ${{ vars.CLOUDFLARE_ACCOUNT_ID }}
           CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
@@ -78,3 +78,19 @@ jobs:
           npx --yes wrangler@4.110.0 pages deploy .cloudflare-build \
             --project-name "$CLOUDFLARE_PAGES_PROJECT" \
             --branch main
+      - name: Authenticated Cloudflare smoke check
+        if: vars.CLOUDFLARE_DEPLOY_ENABLED == 'true'
+        env:
+          PRIVATE_URL: ${{ vars.CLOUDFLARE_PAGES_URL }}
+          ACCESS_ID: ${{ secrets.CLOUDFLARE_ACCESS_CLIENT_ID }}
+          ACCESS_SECRET: ${{ secrets.CLOUDFLARE_ACCESS_CLIENT_SECRET }}
+        run: |
+          test -n "$PRIVATE_URL"
+          test -n "$ACCESS_ID"
+          test -n "$ACCESS_SECRET"
+          for path in / /data/tracker.json /api/health; do
+            curl --fail --silent --show-error --output /dev/null \
+              --header "CF-Access-Client-Id: $ACCESS_ID" \
+              --header "CF-Access-Client-Secret: $ACCESS_SECRET" \
+              "${PRIVATE_URL%/}$path"
+          done

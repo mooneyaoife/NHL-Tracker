@@ -13,7 +13,7 @@ ROOT = Path(__file__).resolve().parents[1]
 def failures_for(output: Path, production_url: str) -> list[str]:
     production_url = production_url.rstrip("/") + "/"
     failures: list[str] = []
-    required = ("index.html", "app.js", "cloudflare-live.js", "manifest.webmanifest", "robots.txt", "_headers", "_routes.json")
+    required = ("index.html", "app.js", "cloudflare-live.js", "build-meta.json", "manifest.webmanifest", "robots.txt", "_headers", "_routes.json")
     for relative in required:
         if not (output / relative).is_file():
             failures.append(f"missing {relative}")
@@ -25,9 +25,15 @@ def failures_for(output: Path, production_url: str) -> list[str]:
         failures.append("root canonical and Open Graph URLs must use the Cloudflare origin")
     if '<meta name="nhl-cloudflare-api" content="/api">' not in index:
         failures.append("Cloudflare live API marker is missing")
+    if '<meta name="robots" content="noindex,nofollow,noarchive">' not in index:
+        failures.append("private deployment must include page-level noindex metadata")
     manifest = json.loads((output / "manifest.webmanifest").read_text(encoding="utf-8"))
     if any(manifest.get(key) != "/" for key in ("id", "start_url", "scope")):
         failures.append("manifest id, start_url and scope must be root-hosted")
+    build_meta = json.loads((output / "build-meta.json").read_text(encoding="utf-8"))
+    for field in ("sourceCommit", "artifactGeneratedAt", "dataGeneratedAt", "dataHash"):
+        if not build_meta.get(field):
+            failures.append(f"build metadata missing {field}")
     if (output / "robots.txt").read_text(encoding="utf-8") != "User-agent: *\nDisallow: /\n":
         failures.append("private deployment must deny crawler indexing")
     headers = (output / "_headers").read_text(encoding="utf-8").lower()

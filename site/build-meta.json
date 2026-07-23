@@ -1,0 +1,13 @@
+{
+  "schema": 1,
+  "sourceCommit": "1956f779a6cc774284c671f29c8e6cea6d13236b",
+  "artifactGeneratedAt": "2026-07-21T20:54:39.136841+00:00",
+  "dataGeneratedAt": "2026-07-20T23:15:11.480117+00:00",
+  "dataHash": "sha256:393108de3d3c8c2b557d9ece1c39ecc3e2d575c5f09583de29b9fbdc07246271",
+  "season": "20262027",
+  "version": "5.73.0",
+  "freshness": {
+    "status": "static",
+    "lastSuccessfulAt": "2026-07-20T23:15:11.480117+00:00"
+  }
+}

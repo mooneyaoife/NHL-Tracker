@@ -1,0 +1,6 @@
+{
+  "initialJavaScriptBytes": 20000,
+  "initialDataBytes": 100000,
+  "offlineCacheBytes": 4000000,
+  "mobileLcpMilliseconds": 2500
+}
