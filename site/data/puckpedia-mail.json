@@ -1,7 +1,14 @@
 {
   "schema": 1,
-  "updatedAt": "2026-07-22T23:40:14.088Z",
+  "updatedAt": "2026-07-23T05:40:19.770Z",
   "items": [
+    {
+      "id": "39d15363e227f3287b87",
+      "title": "Joey Larson Signs a 2-Year, $1.75M Contract with the New York Islanders",
+      "publishedAt": "2026-07-22T23:46:08.000Z",
+      "category": "Contract",
+      "url": "https://puckpedia.com/signing/10755?utm_source=email&utm_medium=email&utm_campaign=signing&utm_content=primary"
+    },
     {
       "id": "65b0f463fd60b0482a10",
       "title": "Danton Heinen Signs a 1-Year, $1.00M Contract with the Columbus Blue Jackets",
@@ -204,13 +211,6 @@
       "publishedAt": "2026-07-14T00:37:09.000Z",
       "category": "Contract",
       "url": "https://puckpedia.com/signing/10726?utm_source=email&utm_medium=email&utm_campaign=signing&utm_content=primary"
-    },
-    {
-      "id": "04789ff9e5b51fabb356",
-      "title": "The Buffalo Sabres acquire Zac Funk from the Washington Capitals for Tyler Kopff",
-      "publishedAt": "2026-07-13T20:09:11.000Z",
-      "category": "Trade",
-      "url": "https://puckpedia.com/trade/1199?utm_source=email&utm_medium=email&utm_campaign=trade&utm_content=primary"
     }
   ]
 }
