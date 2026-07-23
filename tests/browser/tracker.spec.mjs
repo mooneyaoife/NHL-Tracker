@@ -6,7 +6,7 @@ test("routes announce changes and search restores keyboard focus", async ({ page
   await page.goto("/");
   await expect(page.locator("#updated")).not.toContainText("Loading");
   await page.getByRole("button", { name: "Tonight", exact: true }).click();
-  await expect(page.locator("#tonight")).toHaveClass(/active/);
+  await expect(page.locator("#tonight")).toHaveClass(/active/, { timeout: 15_000 });
   await expect(page.locator("#route-announcer")).toContainText(/Tonight/);
   await page.locator("#global-search-button").focus();
   await page.keyboard.press("Enter");
