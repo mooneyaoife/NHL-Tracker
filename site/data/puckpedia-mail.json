@@ -1,7 +1,21 @@
 {
   "schema": 1,
-  "updatedAt": "2026-07-23T11:40:16.772Z",
+  "updatedAt": "2026-07-23T17:40:21.472Z",
   "items": [
+    {
+      "id": "9668da3f35591de81008",
+      "title": "Jet Greaves Signs a 3-Year, $15.00M Contract with the Columbus Blue Jackets",
+      "publishedAt": "2026-07-23T13:43:09.000Z",
+      "category": "Contract",
+      "url": "https://puckpedia.com/signing/10757?utm_source=email&utm_medium=email&utm_campaign=signing&utm_content=primary"
+    },
+    {
+      "id": "fab204a943417bdb2af7",
+      "title": "Patrick Kane Signs a 2-Year, $16.00M Contract with the Chicago Blackhawks",
+      "publishedAt": "2026-07-23T13:09:10.000Z",
+      "category": "Contract",
+      "url": "https://puckpedia.com/signing/10756?utm_source=email&utm_medium=email&utm_campaign=signing&utm_content=primary"
+    },
     {
       "id": "39d15363e227f3287b87",
       "title": "Joey Larson Signs a 2-Year, $1.75M Contract with the New York Islanders",
@@ -197,20 +211,6 @@
       "publishedAt": "2026-07-14T16:23:06.000Z",
       "category": "Contract",
       "url": "https://puckpedia.com/signing/10728?utm_source=email&utm_medium=email&utm_campaign=signing&utm_content=primary"
-    },
-    {
-      "id": "719a59f4631b7a27e0c9",
-      "title": "Filip Ruzicka Signs a 3-Year, $2.96M Contract with the Minnesota Wild",
-      "publishedAt": "2026-07-14T00:40:07.000Z",
-      "category": "Contract",
-      "url": "https://puckpedia.com/signing/10727?utm_source=email&utm_medium=email&utm_campaign=signing&utm_content=primary"
-    },
-    {
-      "id": "6b685f4cb8e9f99debcf",
-      "title": "Fabian Lysell Signs a 1-Year, $850K Contract with the Colorado Avalanche",
-      "publishedAt": "2026-07-14T00:37:09.000Z",
-      "category": "Contract",
-      "url": "https://puckpedia.com/signing/10726?utm_source=email&utm_medium=email&utm_campaign=signing&utm_content=primary"
     }
   ]
 }
