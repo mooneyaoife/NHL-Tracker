@@ -1,7 +1,21 @@
 {
   "schema": 1,
-  "updatedAt": "2026-07-23T17:40:21.472Z",
+  "updatedAt": "2026-07-23T23:40:23.944Z",
   "items": [
+    {
+      "id": "8767ec4bb842335d78da",
+      "title": "Max Psenicka Signs a 3-Year, $2.99M Contract with the Utah Mammoth",
+      "publishedAt": "2026-07-23T21:32:10.000Z",
+      "category": "Contract",
+      "url": "https://puckpedia.com/signing/10759?utm_source=email&utm_medium=email&utm_campaign=signing&utm_content=primary"
+    },
+    {
+      "id": "dd95ac736e4bdd62ab42",
+      "title": "Ronan Seeley Signs a 1-Year, $850K Contract with the Carolina Hurricanes",
+      "publishedAt": "2026-07-23T20:30:11.000Z",
+      "category": "Contract",
+      "url": "https://puckpedia.com/signing/10758?utm_source=email&utm_medium=email&utm_campaign=signing&utm_content=primary"
+    },
     {
       "id": "9668da3f35591de81008",
       "title": "Jet Greaves Signs a 3-Year, $15.00M Contract with the Columbus Blue Jackets",
@@ -197,20 +211,6 @@
       "publishedAt": "2026-07-14T16:23:37.000Z",
       "category": "Contract",
       "url": "https://puckpedia.com/signing/10729?utm_source=email&utm_medium=email&utm_campaign=signing&utm_content=primary"
-    },
-    {
-      "id": "7fab61a0c39fd718f2f5",
-      "title": "Nicholas Robertson Signs a 2-Year, $6.50M Contract with the Pittsburgh Penguins",
-      "publishedAt": "2026-07-14T16:23:15.000Z",
-      "category": "Contract",
-      "url": "https://puckpedia.com/signing/10730?utm_source=email&utm_medium=email&utm_campaign=signing&utm_content=primary"
-    },
-    {
-      "id": "1e76e656a871b4538071",
-      "title": "Ronald Attard Signs a 1-Year, $850K Contract with the Detroit Red Wings",
-      "publishedAt": "2026-07-14T16:23:06.000Z",
-      "category": "Contract",
-      "url": "https://puckpedia.com/signing/10728?utm_source=email&utm_medium=email&utm_campaign=signing&utm_content=primary"
     }
   ]
 }
