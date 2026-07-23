@@ -4,3 +4,8 @@ __pycache__/
 .cloudflare-build/
 .dev.vars
 .wrangler/
+node_modules/
+playwright-report/
+test-results/
+.lighthouse-results/
+.lighthouseci/

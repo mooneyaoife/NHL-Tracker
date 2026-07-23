@@ -1,7 +1,9 @@
-const CACHE="nhl-tracker-7.17.0";
-const SHELL=["./","./index.html","./styles.css?v=6.0.0","./theme-569.css?v=6.0.0","./design-system.css?v=7.17.0","./statistics.js?v=7.17.0","./cloudflare-live.js?v=7.17.0","./app.js?v=7.17.0","./manifest.webmanifest","./icons/icon.svg?v=7.0.1","./icons/icon-192.png","./icons/icon-512.png","./data/tracker.json","./data/tracker-models.json","./data/puckpedia-mail.json","./data/seasons/index.json","./vendor/plotly-2.35.2.min.js"];
+const CACHE="nhl-tracker-7.18.0";
+// Historical archives, auxiliary models and Plotly are deliberately fetched
+// only when an online view needs them, keeping offline Home/Tonight dependable.
+const SHELL=["./","./index.html","./critical.css?v=7.18.0","./styles.css?v=6.0.0","./theme-569.css?v=6.0.0","./design-system.css?v=7.18.0","./statistics.js?v=7.18.0","./shell.js?v=7.18.0","./game-state.js?v=7.18.0","./data-contracts.js?v=7.18.0","./router.js?v=7.18.0","./live-updates.js?v=7.18.0","./observability.js?v=7.18.0","./cloudflare-live.js?v=7.18.0","./app.js?v=7.18.0","./manifest.webmanifest","./icons/icon.svg?v=7.0.1","./icons/icon-192.png","./icons/icon-512.png","./build-meta.json","./data/home.json","./data/tracker.json"];
 
-self.addEventListener("install",event=>event.waitUntil(caches.open(CACHE).then(cache=>Promise.allSettled(SHELL.map(url=>cache.add(url))))));
+self.addEventListener("install",event=>event.waitUntil(caches.open(CACHE).then(cache=>cache.addAll(SHELL))));
 self.addEventListener("activate",event=>event.waitUntil(caches.keys().then(keys=>Promise.all(keys.filter(key=>key!==CACHE).map(key=>caches.delete(key)))).then(()=>self.clients.claim())));
 self.addEventListener("message",event=>{if(event.data?.type==="SKIP_WAITING")self.skipWaiting()});
 

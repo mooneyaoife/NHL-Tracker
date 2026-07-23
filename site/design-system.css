@@ -2256,3 +2256,4 @@ body .tonight-summary .metric .label{
   #corrections-log>article{grid-template-columns:1fr}
   #corrections-log p{grid-column:auto}
 }
+#dashboard{animation:none!important}#dashboard .home-module-head span,#dashboard .season-file-footer{color:#505752!important}html[data-theme="dark"] #dashboard .home-module-head span,html[data-theme="dark"] #dashboard .season-file-footer{color:#d3d8d3!important}

@@ -61,6 +61,25 @@ class SeasonRolloverTests(unittest.TestCase):
         self.assertEqual(state["counts"]["BUF"], 1)
         self.assertFalse(state["complete"])
 
+    def test_schedule_completeness_identifies_undercovered_teams(self):
+        games = [self.schedule_game(index, away="BUF", home="BOS") for index in range(83)]
+        status = TRACKER.schedule_completeness(games, ["BUF", "BOS"], "20262027")
+        self.assertFalse(status["complete"])
+        self.assertEqual(status["failedTeams"], ["BOS", "BUF"])
+        self.assertEqual(status["expectedGamesPerTeam"], 84)
+
+    def test_incomplete_schedule_retains_and_labels_complete_fallback(self):
+        previous = {"meta": {"updatedAt": "2026-07-20T12:00:00+00:00"},
+            "scheduleRelease": {"complete": True}, "sources": {"nhl": {"status": "Ready"}}}
+        fallback = TRACKER.stale_schedule_fallback(previous, {"failedTeams": ["BUF"]})
+        self.assertEqual(fallback["meta"]["freshness"]["status"], "stale")
+        self.assertEqual(fallback["meta"]["freshness"]["failedTeams"], ["BUF"])
+        self.assertEqual(fallback["sources"]["nhl"]["status"], "Stale fallback")
+
+    def test_incomplete_schedule_without_fallback_fails_safely(self):
+        with self.assertRaises(RuntimeError):
+            TRACKER.stale_schedule_fallback({}, {"failedTeams": ["BUF"]})
+
     def test_release_state_detects_time_changes_without_duplicate_history(self):
         first = TRACKER.schedule_release_state("20262027", [self.schedule_game(1)])
         changed = TRACKER.schedule_release_state("20262027", [self.schedule_game(1, start="2026-10-07T00:00:00Z")], first)
@@ -150,6 +169,22 @@ class SeasonRolloverTests(unittest.TestCase):
         self.assertEqual(daily["currentDate"], "2026-09-29")
         self.assertEqual(len(daily["games"]), 1)
         self.assertEqual(daily["games"][0]["date"], "2026-09-29")
+        self.assertEqual(daily["games"][0]["londonDate"], "2026-09-30")
+
+    def test_live_refresh_only_selects_followed_team_games(self):
+        now = TRACKER.datetime(2026, 10, 6, 23, 0, tzinfo=TRACKER.timezone.utc)
+        daily = {"games": [
+            {"id": 1, "away": "BUF", "home": "BOS", "state": "LIVE", "startTimeUTC": "2026-10-06T23:00:00Z"},
+            {"id": 2, "away": "NYR", "home": "NJD", "state": "LIVE", "startTimeUTC": "2026-10-06T23:00:00Z"},
+        ]}
+        self.assertEqual(TRACKER.active_game_ids(daily, now, ["BUF"]), ["1"])
+
+    def test_exceptional_games_do_not_trigger_live_refresh(self):
+        now = TRACKER.datetime(2026, 10, 6, 23, 0, tzinfo=TRACKER.timezone.utc)
+        games = [{"id": index, "away": "BUF", "home": "BOS", "state": state,
+            "startTimeUTC": "2026-10-06T23:00:00Z"}
+            for index, state in enumerate(("POSTPONED", "DELAYED", "SUSPENDED", "CANCELLED"), 1)]
+        self.assertEqual(TRACKER.active_game_ids({"games": games}, now, ["BUF"]), [])
 
     def test_season_index_preserves_old_archive_and_marks_new_current(self):
         with tempfile.TemporaryDirectory() as directory:

@@ -5,9 +5,13 @@
 }(typeof globalThis !== "undefined" ? globalThis : this, function createLiveUpdates() {
   "use strict";
 
-  const LIVE_STATES = new Set(["LIVE", "CRIT"]);
-  const FINAL_STATES = new Set(["OFF", "FINAL"]);
-  const stateLabel = state => FINAL_STATES.has(state) ? "Final" : LIVE_STATES.has(state) ? "Live" : state || "Scheduled";
+  const gameState = typeof globalThis !== "undefined" ? globalThis.NHLTrackerGameState : null;
+  const normalise = game => gameState?.normalizeGameState?.(game) || {
+    code: String(game?.state || "").toUpperCase(),
+    label: String(game?.state || "Scheduled"),
+    active: new Set(["LIVE", "CRIT"]).has(String(game?.state || "").toUpperCase()),
+  };
+  const LIVE_STATES = new Set(["LIVE", "CRIT", "INTERMISSION"]);
 
   const gameRows = payload => payload?.daily?.games || [];
   const snapshot = payload => new Map(gameRows(payload).map(game => [String(game.id), {
@@ -16,7 +20,8 @@
     home: game.home,
     awayScore: game.awayScore,
     homeScore: game.homeScore,
-    state: String(game.state || "").toUpperCase(),
+    state: normalise(game).code,
+    stateLabel: normalise(game).label,
   }]));
 
   const meaningfulChanges = (beforePayload, afterPayload) => {
@@ -31,13 +36,13 @@
       changes.push({
         ...game,
         key: `${game.id}|${game.state}|${game.awayScore ?? "-"}|${game.homeScore ?? "-"}`,
-        message: `${game.away} ${game.awayScore ?? 0}, ${game.home} ${game.homeScore ?? 0}. ${stateLabel(game.state)}.`,
+        message: `${game.away} ${game.awayScore ?? 0}, ${game.home} ${game.homeScore ?? 0}. ${game.stateLabel}.`,
       });
     }
     return changes;
   };
 
-  const hasActiveGame = payload => gameRows(payload).some(game => LIVE_STATES.has(String(game.state || "").toUpperCase()));
+  const hasActiveGame = payload => gameRows(payload).some(game => normalise(game).active);
 
   const pollingEligible = ({payloadSeason, currentSeason, visibilityState, route, payload}) => (
     String(payloadSeason || "") === String(currentSeason || "") &&

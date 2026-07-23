@@ -6,14 +6,30 @@ const root = path.resolve(__dirname, "..");
 const index = fs.readFileSync(path.join(root, "site/index.html"), "utf8");
 const app = fs.readFileSync(path.join(root, "site/app.js"), "utf8");
 const worker = fs.readFileSync(path.join(root, "site/sw.js"), "utf8");
+const buildMeta = JSON.parse(fs.readFileSync(path.join(root, "site/build-meta.json"), "utf8"));
 
 const uiVersion = app.match(/^const UI_VERSION="([^"]+)";/)?.[1];
 assert.ok(uiVersion, "the application exposes a UI version");
-for (const asset of ["design-system.css", "statistics.js", "cloudflare-live.js", "app.js"]) {
+for (const asset of ["critical.css", "design-system.css", "shell.js"]) {
   assert.match(index, new RegExp(`${asset.replace(".", "\\.")}\\?v=${uiVersion.replaceAll(".", "\\.")}`), `${asset} uses the current UI cache key`);
   assert.match(worker, new RegExp(`${asset.replace(".", "\\.")}\\?v=${uiVersion.replaceAll(".", "\\.")}`), `${asset} is cached with the current UI version`);
 }
+for (const asset of ["statistics.js", "game-state.js", "data-contracts.js", "router.js", "live-updates.js", "observability.js", "cloudflare-live.js", "app.js"]) {
+  assert.match(worker, new RegExp(`${asset.replace(".", "\\.")}\\?v=${uiVersion.replaceAll(".", "\\.")}`), `${asset} is available offline`);
+  assert.match(fs.readFileSync(path.join(root,"site/shell.js"),"utf8"),new RegExp(asset.replace(".","\\.")),`${asset} is loaded by the progressive shell`);
+}
 assert.match(worker, new RegExp(`const CACHE="nhl-tracker-${uiVersion.replaceAll(".", "\\.")}"`), "the service-worker cache matches the UI version");
+const shell = worker.match(/const SHELL=(\[[^;]+\]);/)?.[1] || "";
+assert.doesNotMatch(shell, /plotly|seasons\/\d+\.json|tracker-models|puckpedia-mail/i, "offline installation excludes charts, archives and auxiliary data");
+assert.ok(app.indexOf('initialisePage("dashboard")') < app.indexOf("hydrateLiveInBackground(archived)"), "static Home renders before live enhancement starts");
+const initialisation = app.slice(app.indexOf("async function init"), app.indexOf("function renderFatalError"));
+assert.doesNotMatch(initialisation, /await\s+window\.NHLCloudflareLive\.hydrate/, "live enhancement never blocks initial rendering");
+assert.match(index, /styles\.css\?v=6\.0\.0" media="print"/, "non-critical styles do not block the first paint");
+assert.doesNotMatch(index, /<script defer src="app\.js/, "the analytical application is not parsed before first paint");
+assert.match(index, /property="og:image"/);
+assert.match(index, /name="twitter:card" content="summary_large_image"/);
+assert.equal(buildMeta.schema, 1);
+for (const field of ["sourceCommit", "artifactGeneratedAt", "dataGeneratedAt", "dataHash"]) assert.ok(buildMeta[field], `build metadata includes ${field}`);
 
 const ids = [...index.matchAll(/\bid="([^"]+)"/g)].map(match => match[1]);
 const duplicates = ids.filter((id, position) => ids.indexOf(id) !== position);

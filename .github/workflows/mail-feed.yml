@@ -1,0 +1,27 @@
+name: Validate isolated mail-feed artifact
+
+on:
+  workflow_dispatch:
+  push:
+    branches: [main]
+    paths:
+      - "site/data/puckpedia-mail.json"
+      - "scripts/validate_mail_feed.py"
+      - "tests/test_mail_feed.py"
+      - ".github/workflows/mail-feed.yml"
+
+permissions:
+  contents: read
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v7
+      - uses: actions/setup-python@v6
+        with:
+          python-version: "3.12"
+      - name: Confirm the exported feed is valid and metadata-only
+        run: |
+          python scripts/validate_mail_feed.py
+          python -m unittest tests.test_mail_feed

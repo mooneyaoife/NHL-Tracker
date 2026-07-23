@@ -43,7 +43,8 @@ def build(output: Path, production_url: str) -> None:
 
     index_path = output / "index.html"
     index = index_path.read_text(encoding="utf-8")
-    marker = '  <meta name="nhl-cloudflare-api" content="/api">\n'
+    marker = ('  <meta name="robots" content="noindex,nofollow,noarchive">\n'
+        '  <meta name="nhl-cloudflare-api" content="/api">\n')
     if marker not in index:
         theme = '  <meta name="theme-color" content="#f3f1ea">\n'
         if theme in index:

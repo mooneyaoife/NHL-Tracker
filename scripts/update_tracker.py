@@ -6,6 +6,7 @@ from __future__ import annotations
 import json
 import csv
 import html
+import hashlib
 import io
 import math
 import os
@@ -24,9 +25,14 @@ from email.utils import parsedate_to_datetime
 from pathlib import Path
 from zoneinfo import ZoneInfo
 
+try:
+    from scripts.game_state import london_date, normalize_game_state
+except ModuleNotFoundError:  # Direct execution places scripts/ on sys.path.
+    from game_state import london_date, normalize_game_state
+
 ROOT = Path(__file__).resolve().parents[1]
 CONFIG = json.loads((ROOT / "config.json").read_text())
-VERSION = "5.73.0"
+VERSION = "5.74.0"
 SEASON = str(CONFIG["season"])
 TRACKED = [str(t).upper() for t in CONFIG["teams"]]
 API = "https://api-web.nhle.com/v1"
@@ -933,9 +939,25 @@ def build_schedule_model(games: list[dict], teams: list[str], previous_standings
     return model, evidence
 
 
-def load_schedules(team_codes: list[str]) -> list[dict]:
+def schedule_completeness(games: list[dict], team_codes: list[str], season: str) -> dict:
+    """Verify that every requested club has its full regular-season schedule."""
+    expected = regular_season_games(season)
+    counts = {team: 0 for team in team_codes}
+    for game in games:
+        if int(game.get("gameType") or 0) != 2:
+            continue
+        clubs = {localised(game.get("awayTeam", {}).get("abbrev")).upper(),
+            localised(game.get("homeTeam", {}).get("abbrev")).upper()}
+        for team in clubs & counts.keys():
+            counts[team] += 1
+    failed = sorted(team for team, count in counts.items() if count < expected)
+    return {"complete": not failed and bool(counts), "expectedGamesPerTeam": expected,
+        "counts": counts, "failedTeams": failed}
+
+
+def load_schedules(team_codes: list[str], with_status: bool = False):
     """Load league schedules in parallel so division race histories are complete."""
-    games = {}
+    games, fetch_failures = {}, []
     def one(team):
         return fetch_json(f"{API}/club-schedule-season/{team}/{SEASON}").get("games", [])
     with ThreadPoolExecutor(max_workers=8) as pool:
@@ -944,12 +966,19 @@ def load_schedules(team_codes: list[str]) -> list[dict]:
             try:
                 team_games = future.result()
             except Exception as exc:
-                print(f"warning: schedule {futures[future]}: {exc}", file=sys.stderr)
+                team = futures[future]
+                fetch_failures.append(team)
+                print(f"warning: schedule {team}: {exc}", file=sys.stderr)
                 continue
             for game in team_games:
                 if game.get("id") is not None:
                     games[str(game["id"])] = game
-    return sorted(games.values(), key=lambda g: (g.get("gameDate") or str(g.get("startTimeUTC", ""))[:10], g.get("id", 0)))
+    rows = sorted(games.values(), key=lambda g: (g.get("gameDate") or str(g.get("startTimeUTC", ""))[:10], g.get("id", 0)))
+    status = schedule_completeness(rows, team_codes, SEASON)
+    status["fetchFailures"] = sorted(fetch_failures)
+    status["failedTeams"] = sorted(set(status["failedTeams"]) | set(fetch_failures))
+    status["complete"] = not status["failedTeams"]
+    return (rows, status) if with_status else rows
 
 
 def load_standings(previous: dict | None = None) -> list[dict]:
@@ -1056,9 +1085,13 @@ def load_daily() -> dict:
         slate_date = game.get("date")
         for g in game.get("games", []):
             start_time = g.get("startTimeUTC", "")
+            state = normalize_game_state({**g, "slateDate": g.get("gameDate") or slate_date})
             games.append({
-                "id": g.get("id"), "date": g.get("gameDate") or slate_date or (start_time[:10] if start_time else ""), "startTimeUTC": start_time,
-                "state": g.get("gameState", ""), "type": g.get("gameType", 0),
+                "id": g.get("id"), "date": state["slateDate"], "slateDate": state["slateDate"],
+                "londonDate": state["londonDate"], "startTimeUTC": start_time,
+                "state": g.get("gameState", ""), "status": state["code"], "statusLabel": state["label"],
+                "scheduleState": g.get("gameScheduleState", ""), "gameOutcome": g.get("gameOutcome") or {},
+                "type": g.get("gameType", 0),
                 "venue": localised(g.get("venue")),
                 "home": localised(g.get("homeTeam", {}).get("abbrev")).upper(),
                 "away": localised(g.get("awayTeam", {}).get("abbrev")).upper(),
@@ -1072,7 +1105,7 @@ def load_daily() -> dict:
         "fallback": bool(selected_date and requested_date and selected_date != requested_date), "games": slate}
 
 
-def load_rosters(team_codes: list[str]) -> dict:
+def load_rosters(team_codes: list[str], previous: dict | None = None, with_status: bool = False):
     def one(team):
         data = fetch_json(f"{API}/roster/{team}/current")
         rows = []
@@ -1085,15 +1118,27 @@ def load_rosters(team_codes: list[str]) -> dict:
                     "country": p.get("birthCountry", ""), "heightCm": p.get("heightInCentimeters"),
                     "weightKg": p.get("weightInKilograms"), "headshot": p.get("headshot", "")})
         return team, rows
-    output = {}
+    output, failed = {}, []
     with ThreadPoolExecutor(max_workers=8) as pool:
-        futures = [pool.submit(one, t) for t in team_codes]
+        futures = {pool.submit(one, team): team for team in team_codes}
         for future in as_completed(futures):
             try:
                 team, rows = future.result(); output[team] = rows
             except Exception as exc:
-                print(f"warning: roster: {exc}", file=sys.stderr)
-    return output
+                failed.append(futures[future])
+                print(f"warning: roster {futures[future]}: {exc}", file=sys.stderr)
+    missing = [team for team in team_codes if not output.get(team)]
+    fallback = []
+    for team in missing:
+        if previous and previous.get(team):
+            output[team] = previous[team]
+            fallback.append(team)
+    unavailable = sorted(team for team in team_codes if not output.get(team))
+    if unavailable:
+        raise RuntimeError(f"Roster snapshot incomplete with no fallback for: {', '.join(unavailable)}")
+    status = {"status": "stale" if fallback else "fresh", "complete": not unavailable,
+        "failedTeams": sorted(set(failed) | set(missing)), "fallbackTeams": sorted(fallback)}
+    return (output, status) if with_status else output
 
 
 def tracked_game_rows(games: list[dict], team_codes: list[str] | None = None,
@@ -1106,7 +1151,8 @@ def tracked_game_rows(games: list[dict], team_codes: list[str] | None = None,
             continue
         home = localised(game.get("homeTeam", {}).get("abbrev")).upper()
         away = localised(game.get("awayTeam", {}).get("abbrev")).upper()
-        finished = str(game.get("gameState", "")).upper() in {"OFF", "FINAL"}
+        state = normalize_game_state(game)
+        finished = state["final"]
         for team in team_codes:
             if team not in {home, away}:
                 continue
@@ -1121,7 +1167,10 @@ def tracked_game_rows(games: list[dict], team_codes: list[str] | None = None,
                 elif period in {"OT", "SO"}: result, points = "OTL", 1
                 else: result = "L"
             rows.append({
-                "id": game.get("id"), "date": game.get("gameDate"), "type": "Playoffs" if int(game.get("gameType", 0)) == 3 else "Regular Season",
+                "id": game.get("id"), "date": state["slateDate"], "slateDate": state["slateDate"],
+                "londonDate": state["londonDate"], "state": state["raw"], "status": state["code"],
+                "statusLabel": state["label"], "scheduleState": state["scheduleState"],
+                "outcome": state["periodType"], "type": "Playoffs" if int(game.get("gameType", 0)) == 3 else "Regular Season",
                 "team": team, "opponent": away if is_home else home, "location": "Home" if is_home else "Away",
                 "finished": finished, "gf": gf if finished else None, "ga": ga if finished else None,
                 "gd": gf - ga if finished else None, "result": result, "points": points,
@@ -1140,11 +1189,13 @@ def preseason_schedule_rows(games: list[dict]) -> list[dict]:
             continue
         home = localised(game.get("homeTeam", {}).get("abbrev")).upper()
         away = localised(game.get("awayTeam", {}).get("abbrev")).upper()
-        state = str(game.get("gameState") or "").upper()
-        finished = state in {"OFF", "FINAL"}
+        state = normalize_game_state(game)
+        finished = state["final"]
         rows.append({
-            "id": str(game["id"]), "date": str(game.get("gameDate") or ""),
-            "startTimeUTC": str(game.get("startTimeUTC") or ""), "type": "Preseason", "state": state or "FUT",
+            "id": str(game["id"]), "date": state["slateDate"], "slateDate": state["slateDate"],
+            "londonDate": state["londonDate"], "startTimeUTC": str(game.get("startTimeUTC") or ""),
+            "type": "Preseason", "state": state["raw"] or "FUT", "status": state["code"],
+            "statusLabel": state["label"], "scheduleState": state["scheduleState"], "outcome": state["periodType"],
             "away": away, "home": home, "venue": localised(game.get("venue")),
             "awayScore": game.get("awayTeam", {}).get("score") if finished else None,
             "homeScore": game.get("homeTeam", {}).get("score") if finished else None,
@@ -1200,17 +1251,22 @@ def load_game_centres(games: list[dict], previous: dict | None = None) -> dict:
     return output
 
 
-def active_game_ids(daily: dict, now: datetime | None = None) -> list[str]:
-    """Return every NHL game inside the pregame-to-postgame refresh window."""
+def active_game_ids(daily: dict, now: datetime | None = None,
+        tracked_teams: list[str] | None = None) -> list[str]:
+    """Return followed-team games inside the pregame/live refresh window."""
     now = now or datetime.now(timezone.utc)
+    followed = {str(team).upper() for team in (tracked_teams or TRACKED)}
     active = []
     for game in daily.get("games", []):
-        state = str(game.get("state", "")).upper()
+        if not followed.intersection({str(game.get("away", "")).upper(), str(game.get("home", "")).upper()}):
+            continue
+        state = normalize_game_state(game)
         try:
             start = datetime.fromisoformat(str(game.get("startTimeUTC", "")).replace("Z", "+00:00"))
         except ValueError:
             start = None
-        if state in {"LIVE", "CRIT"} or start and start - timedelta(minutes=90) <= now <= start + timedelta(hours=6):
+        pregame_window = state["scheduled"] and start and start - timedelta(minutes=90) <= now <= start + timedelta(minutes=30)
+        if state["active"] or pregame_window:
             active.append(str(game["id"]))
     return active
 
@@ -1250,10 +1306,7 @@ def refresh_live_games_only() -> None:
     payload["gameCentre"] = details
     payload.setdefault("meta", {}).update({"version": VERSION, "updatedAt": now,
         "liveGameUpdateAt": now, "elapsedSeconds": round(time.time() - started, 1)})
-    temporary = OUTPUT.with_suffix(".tmp")
-    temporary.write_text(json.dumps(payload, separators=(",", ":"), ensure_ascii=False))
-    json.loads(temporary.read_text())
-    temporary.replace(OUTPUT)
+    write_payload(payload, archive=False)
     print(f"Refreshed {len(game_ids)} active tracked game(s)")
 
 
@@ -1759,12 +1812,12 @@ def calendar_feed(name: str, games: list[dict], team_names: dict[str, str], colo
         if not game_id or not away_code or not home_code:
             continue
         away, home = team_names.get(away_code, away_code), team_names.get(home_code, home_code)
-        state = str(game.get("gameState") or "").upper()
-        finished = state in {"OFF", "FINAL"}
+        state = normalize_game_state(game)
+        finished = state["final"]
         away_score, home_score = game.get("awayTeam", {}).get("score"), game.get("homeTeam", {}).get("score")
         summary = f"{away} at {home}"
         if finished and away_score is not None and home_score is not None:
-            summary = f"Final: {away} {away_score} - {home_score} {home}"
+            summary = f"{state['label']}: {away} {away_score} - {home_score} {home}"
         game_type = {1: "Preseason", 2: "Regular season", 3: "Playoffs"}.get(int(game.get("gameType") or 0), "NHL game")
         venue = localised(game.get("venue"))
         tracker_url = f"https://mooneyaoife.github.io/NHL-Tracker/?game={game_id}#games"
@@ -1781,7 +1834,7 @@ def calendar_feed(name: str, games: list[dict], team_names: dict[str, str], colo
                 event.extend([f"DTSTART;VALUE=DATE:{date}", f"DTEND;VALUE=DATE:{next_date}"])
         event.extend([f"SUMMARY:{ical_escape(summary)}", f"DESCRIPTION:{ical_escape(description)}",
             f"LOCATION:{ical_escape(venue)}", f"URL;VALUE=URI:{tracker_url}"])
-        if str(game.get("gameScheduleState") or "").upper() in {"PPD", "CANCELLED"}:
+        if state["code"] == "cancelled":
             event.append("STATUS:CANCELLED")
         event.append("END:VEVENT")
         lines.extend(event)
@@ -1803,6 +1856,63 @@ def write_calendar_feeds(schedules: list[dict], standings: list[dict]) -> None:
     (CALENDAR_DIR / "NHL.ics").write_text(calendar_feed("NHL Schedule - NHL Tracker", eligible, team_names), encoding="utf-8", newline="")
 
 
+def source_commit() -> str:
+    configured = str(os.environ.get("GITHUB_SHA") or "").strip()
+    if configured:
+        return configured
+    result = subprocess.run(["git", "rev-parse", "HEAD"], cwd=ROOT, text=True,
+        stdout=subprocess.PIPE, stderr=subprocess.DEVNULL, check=False)
+    return result.stdout.strip() or "unknown"
+
+
+def stamp_artifact(payload: dict, freshness: dict | None = None) -> dict:
+    """Attach reproducibility and freshness data, then hash the canonical payload."""
+    now = datetime.now(timezone.utc).isoformat()
+    meta = payload.setdefault("meta", {})
+    meta.update({"sourceCommit": source_commit(), "artifactGeneratedAt": now,
+        "dataGeneratedAt": meta.get("updatedAt") or now})
+    if freshness:
+        meta["freshness"] = freshness
+    meta.pop("dataHash", None)
+    canonical = json.dumps(payload, sort_keys=True, separators=(",", ":"), ensure_ascii=False).encode()
+    meta["dataHash"] = f"sha256:{hashlib.sha256(canonical).hexdigest()}"
+    return payload
+
+
+def write_payload(payload: dict, archive: bool = True) -> None:
+    stamp_artifact(payload)
+    OUTPUT.parent.mkdir(parents=True, exist_ok=True)
+    temporary = OUTPUT.with_suffix(".tmp")
+    temporary.write_text(json.dumps(payload, separators=(",", ":"), ensure_ascii=False))
+    json.loads(temporary.read_text())
+    temporary.replace(OUTPUT)
+    if archive:
+        season_archive = OUTPUT.parent / "seasons" / f"{SEASON}.json"
+        season_archive.parent.mkdir(parents=True, exist_ok=True)
+        season_archive.write_text(json.dumps(payload, separators=(",", ":"), ensure_ascii=False))
+        write_season_index(SEASON)
+
+
+def stale_schedule_fallback(previous: dict, status: dict) -> dict:
+    if not previous or not previous.get("scheduleRelease", {}).get("complete"):
+        failed = ", ".join(status.get("failedTeams") or []) or "unknown coverage"
+        raise RuntimeError(f"Schedule snapshot incomplete and no complete fallback exists ({failed})")
+    payload = json.loads(json.dumps(previous))
+    now = datetime.now(timezone.utc)
+    last = str(previous.get("meta", {}).get("freshness", {}).get("lastSuccessfulAt")
+        or previous.get("meta", {}).get("updatedAt") or "")
+    try:
+        age = max(0, int((now - datetime.fromisoformat(last.replace("Z", "+00:00"))).total_seconds()))
+    except ValueError:
+        age = None
+    payload.setdefault("meta", {})["freshness"] = {"status": "stale", "checkedAt": now.isoformat(),
+        "lastSuccessfulAt": last or None, "ageSeconds": age,
+        "failedTeams": status.get("failedTeams", []), "reason": "Incomplete schedule update; retained last complete snapshot"}
+    payload.setdefault("sources", {}).setdefault("nhl", {}).update({"status": "Stale fallback",
+        "failedTeams": status.get("failedTeams", []), "lastSuccessfulAt": last or None, "ageSeconds": age})
+    return payload
+
+
 def main() -> None:
     started = time.time()
     active_season, rollover_reason = resolve_active_season()
@@ -1821,8 +1931,13 @@ def main() -> None:
     except Exception as exc:
         print(f"warning: official special-teams data unavailable: {exc}", file=sys.stderr)
         special_teams = previous_same_season.get("specialTeams", [])
-    schedules = load_schedules([r["team"] for r in standings])
     league_teams = [r["team"] for r in standings]
+    schedules, schedule_status = load_schedules(league_teams, with_status=True)
+    if not schedule_status["complete"]:
+        fallback = stale_schedule_fallback(previous_same_season, schedule_status)
+        write_payload(fallback, archive=False)
+        print("Schedule update incomplete; retained and labelled the last complete snapshot", file=sys.stderr)
+        return
     previous_standings = (previous.get("standings", []) if previous.get("meta", {}).get("season") != SEASON
         else previous.get("previousSeasonStandings", []))
     schedule_difficulty, schedule_evidence = build_schedule_model(schedules, league_teams, previous_standings, SEASON)
@@ -1836,7 +1951,7 @@ def main() -> None:
         game_id = str(game.get("id") or "")
         game["schedule"] = {team: schedule_evidence[(game_id, team)] for team in (game.get("away"), game.get("home"))
             if (game_id, team) in schedule_evidence}
-    rosters = load_rosters([r["team"] for r in standings])
+    rosters, roster_status = load_rosters(league_teams, previous_same_season.get("rosters"), with_status=True)
     players = enrich_players(players, rosters)
     news = load_official_news(standings, rosters, previous)
     transactions = load_reported_transactions(standings, rosters, previous)
@@ -1860,7 +1975,7 @@ def main() -> None:
     history = daily_history(previous_same_season, standings, moneypuck, special_teams)
     schedule_release = schedule_release_state(SEASON, schedules, previous_same_season.get("scheduleRelease"))
     payload = {
-        "meta": {"version": VERSION, "season": SEASON, "seasonMode": CONFIG.get("seasonMode", "manual"), "seasonDecision": rollover_reason, "gamesPerTeam": regular_season_games(SEASON), "trackedTeams": TRACKED, "updatedAt": datetime.now(timezone.utc).isoformat(), "elapsedSeconds": round(time.time()-started, 1), "scheduleGames": len(schedules), "historyDays": len(history)},
+        "meta": {"version": VERSION, "season": SEASON, "seasonMode": CONFIG.get("seasonMode", "manual"), "seasonDecision": rollover_reason, "gamesPerTeam": regular_season_games(SEASON), "trackedTeams": TRACKED, "updatedAt": datetime.now(timezone.utc).isoformat(), "elapsedSeconds": round(time.time()-started, 1), "scheduleGames": len(schedules), "historyDays": len(history), "freshness": {"status": "fresh" if roster_status["status"] == "fresh" else "partial-stale", "checkedAt": datetime.now(timezone.utc).isoformat(), "lastSuccessfulAt": datetime.now(timezone.utc).isoformat(), "ageSeconds": 0, "failedTeams": roster_status["failedTeams"], "schedule": schedule_status, "rosters": roster_status}},
         "standings": standings, "specialTeams": special_teams, "games": rows, "preseasonGames": preseason, "teams": team_summaries(rows, league_teams), "players": players, "officialPlayers": official_players, "playerCoverage": player_coverage, "gameCentre": game_centres,
         "previousSeasonStandings": previous_standings,
         "scheduleRelease": schedule_release, "nextSeasonPreview": preview,
@@ -1875,15 +1990,7 @@ def main() -> None:
             "naturalStatTrick": {"status": natural_stat_trick.get("status", "Ready"), "season": natural_stat_trick.get("season", SEASON), "updatedAt": natural_stat_trick.get("updatedAt")}
         }
     }
-    OUTPUT.parent.mkdir(parents=True, exist_ok=True)
-    temporary = OUTPUT.with_suffix(".tmp")
-    temporary.write_text(json.dumps(payload, separators=(",", ":"), ensure_ascii=False))
-    json.loads(temporary.read_text())
-    temporary.replace(OUTPUT)
-    archive = OUTPUT.parent / "seasons" / f"{SEASON}.json"
-    archive.parent.mkdir(parents=True, exist_ok=True)
-    archive.write_text(json.dumps(payload, separators=(",", ":"), ensure_ascii=False))
-    write_season_index(SEASON)
+    write_payload(payload)
     write_calendar_feeds(schedules, standings)
     model_update = subprocess.run(
         [sys.executable, str(ROOT / "scripts" / "train_tracker_models.py"), "--max-games", "45"],
@@ -1907,11 +2014,7 @@ def refresh_natural_stat_trick_only() -> None:
         "status": nst.get("status", "Ready"), "season": nst.get("season", SEASON),
         "updatedAt": nst.get("updatedAt")
     }
-    OUTPUT.write_text(json.dumps(payload, separators=(",", ":"), ensure_ascii=False))
-    archive = OUTPUT.parent / "seasons" / f"{SEASON}.json"
-    archive.parent.mkdir(parents=True, exist_ok=True)
-    archive.write_text(json.dumps(payload, separators=(",", ":"), ensure_ascii=False))
-    write_season_index(SEASON)
+    write_payload(payload)
     print(f"Imported {len(payload['naturalStatTrick']['teams'])} Natural Stat Trick teams")
 
 
