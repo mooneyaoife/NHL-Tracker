@@ -15,8 +15,6 @@ import subprocess
 import sys
 import time
 import unicodedata
-import urllib.error
-import urllib.request
 import xml.etree.ElementTree as ET
 from collections import defaultdict
 from concurrent.futures import ThreadPoolExecutor, as_completed
@@ -27,8 +25,12 @@ from zoneinfo import ZoneInfo
 
 try:
     from scripts.game_state import london_date, normalize_game_state
+    from scripts.source_adapters import fetch_csv, fetch_json, fetch_text
+    from scripts.split_tracker_data import write_capability_artifacts
 except ModuleNotFoundError:  # Direct execution places scripts/ on sys.path.
     from game_state import london_date, normalize_game_state
+    from source_adapters import fetch_csv, fetch_json, fetch_text
+    from split_tracker_data import write_capability_artifacts
 
 ROOT = Path(__file__).resolve().parents[1]
 CONFIG = json.loads((ROOT / "config.json").read_text())
@@ -216,32 +218,6 @@ def resolve_active_season() -> tuple[str, str]:
     return configured, f"Waiting for the complete NHL schedule ({games} games found for the least-complete tracked team)"
 
 
-def fetch_json(url: str, attempts: int = 4) -> dict:
-    last_error = None
-    for attempt in range(attempts):
-        try:
-            request = urllib.request.Request(url, headers={"Accept": "application/json", "User-Agent": "NHL-Tracker/1.0"})
-            with urllib.request.urlopen(request, timeout=30) as response:
-                return json.loads(response.read().decode("utf-8"))
-        except (urllib.error.URLError, TimeoutError, json.JSONDecodeError) as exc:
-            last_error = exc
-            time.sleep(min(8, 2 ** attempt))
-    raise RuntimeError(f"Unable to fetch {url}: {last_error}")
-
-
-def fetch_text(url: str, attempts: int = 3) -> str:
-    last_error = None
-    for attempt in range(attempts):
-        try:
-            request = urllib.request.Request(url, headers={"Accept": "text/html,application/rss+xml", "User-Agent": "NHL-Tracker/5.20"})
-            with urllib.request.urlopen(request, timeout=30) as response:
-                return response.read().decode("utf-8", errors="replace")
-        except (urllib.error.URLError, TimeoutError, UnicodeDecodeError) as exc:
-            last_error = exc
-            time.sleep(min(4, 2 ** attempt))
-    raise RuntimeError(f"Unable to fetch {url}: {last_error}")
-
-
 def clean_markup(value: str) -> str:
     value = re.sub(r"<[^>]+>", " ", value or "")
     return re.sub(r"\s+", " ", html.unescape(value)).strip()
@@ -359,24 +335,6 @@ def load_videos(standings: list[dict], previous: dict) -> dict:
             print(f"warning: YouTube channel {channel} unavailable: {exc}", file=sys.stderr)
     videos.sort(key=lambda x: x.get("publishedAt", ""), reverse=True)
     return {"updatedAt": datetime.now(timezone.utc).isoformat(), "videos": videos[:18]} if videos else previous.get("videos", {"updatedAt": None, "videos": []})
-
-
-def fetch_csv(url: str, attempts: int = 4) -> list[dict]:
-    last_error = None
-    for attempt in range(attempts):
-        try:
-            request = urllib.request.Request(url, headers={"User-Agent": "NHL-Tracker/3.0"})
-            with urllib.request.urlopen(request, timeout=45) as response:
-                text = response.read().decode("utf-8-sig")
-                if text.lstrip().lower().startswith(("<!doctype html", "<html")):
-                    raise ValueError("download returned an HTML page rather than CSV data")
-                rows = list(csv.DictReader(io.StringIO(text)))
-                if not rows or len(rows[0]) < 2:
-                    raise ValueError("download did not contain a usable CSV table")
-                return rows
-        except (urllib.error.URLError, TimeoutError, UnicodeDecodeError, csv.Error, ValueError) as exc:
-            last_error = exc; time.sleep(min(8, 2 ** attempt))
-    raise RuntimeError(f"Unable to fetch {url}: {last_error}")
 
 
 def mp_value(row: dict, *names, default=""):
@@ -1886,6 +1844,7 @@ def write_payload(payload: dict, archive: bool = True) -> None:
     temporary.write_text(json.dumps(payload, separators=(",", ":"), ensure_ascii=False))
     json.loads(temporary.read_text())
     temporary.replace(OUTPUT)
+    write_capability_artifacts(OUTPUT)
     if archive:
         season_archive = OUTPUT.parent / "seasons" / f"{SEASON}.json"
         season_archive.parent.mkdir(parents=True, exist_ok=True)

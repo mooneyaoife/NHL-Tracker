@@ -41,6 +41,11 @@ class ArtifactHealthTests(unittest.TestCase):
         self.assertTrue(report["passed"])
         self.assertEqual(report["ageLimitHours"], 24)
 
+    def test_recent_static_artifact_uses_the_strict_window(self):
+        report = self.assess(status="static", age_hours=2)
+        self.assertTrue(report["passed"])
+        self.assertEqual(report["ageLimitHours"], 24)
+
     def test_complete_stale_fallback_has_bounded_longer_window(self):
         report = self.assess(status="stale", age_hours=48, failed_teams=["BUF"])
         self.assertTrue(report["passed"])

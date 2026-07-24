@@ -8,6 +8,7 @@ const live = read("live-games.yml");
 const scheduled = read("update-and-deploy.yml");
 const deploy = read("validate-and-deploy.yml");
 const mail = read("mail-feed.yml");
+const production = read("production-verify.yml");
 
 assert.match(live, /cron: "7 0-10,16-23/, "live checks run hourly rather than every 15 minutes");
 assert.match(live, /if: steps\.live\.outputs\.active == 'true'[\s\S]{0,100}uses: actions\/deploy-pages/,
@@ -37,8 +38,14 @@ for (const workflow of [deploy, scheduled, live]) {
 assert.match(deploy, /GITHUB_STEP_SUMMARY/);
 assert.match(live, /GITHUB_STEP_SUMMARY/);
 assert.match(deploy, /CLOUDFLARE_ACCESS_CLIENT_ID/);
-assert.match(deploy, /\/data\/tracker\.json \/api\/health/,
-  "authenticated post-deployment smoke coverage includes data and health");
+assert.match(deploy, /verify_production\.py/,
+  "post-deployment verification checks deployed artifacts and authenticated health");
+assert.match(production, /cron: "17 6 \* \* \*"/,
+  "production verification runs once daily");
+assert.match(production, /verify_production\.py/);
+assert.match(production, /CLOUDFLARE_ACCESS_CLIENT_ID/);
+assert.doesNotMatch(production, /update_tracker|api-web\.nhle|moneypuck/,
+  "production verification never refreshes upstream provider data");
 assert.match(mail, /site\/data\/puckpedia-mail\.json/);
 assert.doesNotMatch(mail, /update_tracker|deploy-pages|wrangler/,
   "mail-feed validation is isolated from full NHL refreshes and deployments");

@@ -134,7 +134,7 @@ html[data-theme="dark"] body:after{opacity:.026;mix-blend-mode:soft-light}html[d
 /* 6.1 — Editorial system: a warm field, a precise grotesque and a quiet book voice. */
 :root{
   --canvas:#f2eee3;--surface:#fbfaf5;--surface-subtle:#e8eee8;--surface-strong:#dce6df;
-  --ink:#17201c;--ink-soft:#53605a;--ink-faint:#626b64;--muted:#626b64;--rule:#cfd7d0;
+  --ink:#17201c;--ink-soft:#4d5953;--ink-faint:#5b655f;--muted:#5b655f;--rule:#cfd7d0;
   --brand:#1f5b4d;--brand-strong:#163d34;--brand-soft:#dce9e2;
   --ochre:#bd7927;--terracotta:#b84334;--mineral:#4d8890;--midnight:#21344e;
   --manila:#d9cdb5;--manila-deep:#c8b994;
@@ -754,7 +754,7 @@ html[data-theme="dark"] .workspace-command>aside{background:#294b3d}html[data-th
 .tonight-evidence{margin:0;border-top:1px solid var(--rule);background:color-mix(in srgb,var(--surface-subtle) 42%,transparent)}.tonight-card.tracked .tonight-evidence{border-top:0}.tonight-evidence>summary{display:flex;align-items:center;justify-content:space-between;gap:14px;min-height:49px;padding:9px 13px;cursor:pointer;list-style:none}.tonight-evidence>summary::-webkit-details-marker{display:none}.tonight-evidence>summary span{display:grid}.tonight-evidence>summary strong{font-size:10px}.tonight-evidence>summary small{font-family:var(--font-data);font-size:7px!important;color:var(--ink-soft)}.tonight-evidence>summary>b{font-size:16px;font-weight:400;color:var(--brand)}.tonight-evidence[open]>summary{border-bottom:1px solid var(--rule)}.tonight-evidence[open]>summary>b{transform:rotate(45deg)}.tonight-context{border:0!important;padding:4px 13px 6px!important}.tonight-context>div{padding:5px 0!important}.tonight-open{min-height:36px!important;padding:8px 13px!important;font-size:10px}.tonight-card:not(.tracked) .tonight-open{border-top:1px solid var(--rule)}
 .tonight-card-actions{display:grid;grid-template-columns:1fr}.tonight-card-actions:has(.tonight-compare){grid-template-columns:1fr 1fr}.tonight-card-actions>button{border-radius:0!important}.tonight-compare{display:flex;align-items:center;justify-content:space-between;min-height:36px!important;border:0!important;border-left:1px solid var(--rule)!important;background:var(--brand-soft)!important;color:var(--brand)!important;padding:8px 13px!important;font-size:10px}.tonight-compare:hover,.tonight-compare:focus-visible{background:var(--brand)!important;color:#fff!important}.pregame-open-intelligence{margin-left:auto;min-height:32px!important;padding:6px 10px!important;border-color:var(--brand)!important;color:var(--brand)!important;font-size:8px!important;text-transform:uppercase}.pregame-open-intelligence:hover,.pregame-open-intelligence:focus-visible{background:var(--brand)!important;color:#fff!important}
 @media(max-width:640px){.tonight-card-actions:has(.tonight-compare){grid-template-columns:1fr}.tonight-compare{border-left:0!important;border-top:1px solid var(--rule)!important}.pregame-open-intelligence{grid-column:1/-1;margin:3px 0 0;width:100%}}
-@keyframes slate-item-in{from{opacity:0;transform:translateY(4px)}to{opacity:1;transform:none}}@keyframes slate-card-focus{0%{box-shadow:0 0 0 0 color-mix(in srgb,var(--brand) 38%,transparent)}40%{box-shadow:0 0 0 6px color-mix(in srgb,var(--brand) 16%,transparent)}100%{box-shadow:none}}
+@keyframes slate-item-in{from{transform:translateY(4px)}to{transform:none}}@keyframes slate-card-focus{0%{box-shadow:0 0 0 0 color-mix(in srgb,var(--brand) 38%,transparent)}40%{box-shadow:0 0 0 6px color-mix(in srgb,var(--brand) 16%,transparent)}100%{box-shadow:none}}
 html[data-theme="dark"] .tonight-command,html[data-theme="dark"] .tonight-slate-rail,html[data-theme="dark"] .tonight-card.tracked{border-color:var(--rule)!important}html[data-theme="dark"] .tonight-toolbar{background:color-mix(in srgb,var(--surface) 80%,var(--brand) 20%)!important}
 @media(max-width:900px){.tonight-command{grid-template-columns:1fr}.tonight-command .tonight-toolbar{border-top:1px solid var(--rule)!important;border-left:0!important}.tonight-card.tracked{display:block}.tonight-card.tracked .tonight-matchup{border-right:0}.tonight-card.tracked .tonight-evidence{border-top:1px solid var(--rule)}}
 @media(max-width:640px){#tonight .tonight-command .title-bar{display:grid!important;gap:4px;padding:20px 0 12px!important}#tonight .tonight-command .title-bar:before{top:13px!important}#tonight .tonight-command .title-bar h2{margin-top:14px;font-size:50px!important}#tonight .tonight-command .title-bar p{display:none}#tonight .tonight-command .reset-view-button{right:0;top:6px}.tonight-command .tonight-toolbar{grid-template-columns:minmax(0,1fr) 140px!important;align-items:end!important;padding:10px!important}.tonight-command .tonight-toolbar>div strong{font-size:15px}.tonight-command .tonight-toolbar label{min-width:0}.tonight-command .tonight-toolbar select{min-width:0;padding-left:8px;font-size:10px}.tonight-summary{grid-template-columns:repeat(4,minmax(0,1fr))!important}.tonight-summary .metric{min-height:78px!important;border-right:1px solid var(--rule)!important;padding:8px 6px!important}.tonight-summary .metric:last-child{border-right:0!important}.tonight-summary .metric .label{font-size:6px!important}.tonight-summary .metric .value{font-size:20px}.tonight-summary .metric .detail{display:none}.tonight-slate-rail{display:flex;overflow-x:auto;scroll-snap-type:x proximity;padding-top:13px}.tonight-slate-rail>i{display:none}.tonight-slate-rail button{flex:0 0 118px;scroll-snap-align:start}.tonight-card.tracked{box-shadow:4px 4px 0 color-mix(in srgb,var(--ink) 8%,transparent)}.tonight-evidence>summary small{white-space:normal}}
@@ -1342,6 +1342,13 @@ tbody tr:hover{background:color-mix(in srgb,var(--brand-soft) 45%,transparent)!i
   body>header{grid-template-columns:44px auto!important}
   body>header .brand{min-width:44px!important}
   body>header .brand-name{display:none}
+}
+
+/* The freshness label remains a compact disclosure even on the wide command
+   header, where the older layout hid all status text. */
+@media(min-width:761px){
+  body>header .header-tools .freshness-control{display:block!important}
+  body>header .header-tools .freshness-control .status{display:block!important;max-width:172px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
 }
 
 @media(min-width:901px){
@@ -2257,3 +2264,4 @@ body .tonight-summary .metric .label{
   #corrections-log p{grid-column:auto}
 }
 #dashboard{animation:none!important}#dashboard .home-module-head span,#dashboard .season-file-footer{color:#505752!important}html[data-theme="dark"] #dashboard .home-module-head span,html[data-theme="dark"] #dashboard .season-file-footer{color:#d3d8d3!important}
+.quick-game-hero,.quick-game-hero h3,.quick-game-hero p{color:#f5f7f4!important}.quick-game-hero>span{color:#d9e5df!important}.quick-game-hero button{border:1px solid #f5f7f4;background:transparent;color:#fff;padding:10px 14px;font-weight:800}

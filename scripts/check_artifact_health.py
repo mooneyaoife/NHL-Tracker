@@ -14,6 +14,7 @@ from pathlib import Path
 ROOT = Path(__file__).resolve().parents[1]
 DEFAULT_METADATA = ROOT / "site" / "build-meta.json"
 DEFAULT_TRACKER = ROOT / "site" / "data" / "tracker.json"
+CURRENT_STATUSES = {"fresh", "static"}
 FALLBACK_STATUSES = {"stale", "partial-stale"}
 
 
@@ -31,11 +32,15 @@ def digest(path: Path) -> str:
     return f"sha256:{hashlib.sha256(path.read_bytes()).hexdigest()}"
 
 
+def digest_bytes(value: bytes) -> str:
+    return f"sha256:{hashlib.sha256(value).hexdigest()}"
+
+
 def clean(value: object) -> str:
     return str(value if value is not None else "").replace("\n", " ").replace("\r", " ").replace("|", "\\|")
 
 
-def assess_artifact(metadata: dict, tracker: dict, tracker_path: Path,
+def assess_payload(metadata: dict, tracker: dict, actual_hash: str,
         now: datetime | None = None, max_fresh_age_hours: float = 24,
         max_fallback_age_hours: float = 72) -> dict:
     now = (now or datetime.now(timezone.utc)).astimezone(timezone.utc)
@@ -55,7 +60,6 @@ def assess_artifact(metadata: dict, tracker: dict, tracker_path: Path,
         errors.append(str(exc))
 
     expected_hash = str(metadata.get("dataHash") or "")
-    actual_hash = digest(tracker_path)
     if not expected_hash:
         errors.append("data hash is missing")
     elif expected_hash != actual_hash:
@@ -79,10 +83,10 @@ def assess_artifact(metadata: dict, tracker: dict, tracker_path: Path,
         (freshness.get("failedTeams") if isinstance(freshness.get("failedTeams"), list) else [])
         + schedule_failed + roster_failed) if clean(team)})
 
-    if status == "fresh":
+    if status in CURRENT_STATUSES:
         age_limit = max_fresh_age_hours
         if failed_teams:
-            errors.append("fresh data reports failed teams")
+            errors.append(f"{status} data reports failed teams")
     elif status in FALLBACK_STATUSES:
         age_limit = max_fallback_age_hours
     else:
@@ -116,6 +120,13 @@ def assess_artifact(metadata: dict, tracker: dict, tracker_path: Path,
         "rosters": "complete" if rosters_complete else "incomplete",
         "failedTeams": failed_teams,
     }
+
+
+def assess_artifact(metadata: dict, tracker: dict, tracker_path: Path,
+        now: datetime | None = None, max_fresh_age_hours: float = 24,
+        max_fallback_age_hours: float = 72) -> dict:
+    return assess_payload(metadata, tracker, digest(tracker_path), now,
+        max_fresh_age_hours, max_fallback_age_hours)
 
 
 def markdown(report: dict) -> str:

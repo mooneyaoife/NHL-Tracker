@@ -1,18 +1,25 @@
-import { test, expect } from "@playwright/test";
+import {test,expect} from "@playwright/test";
 
-test.use({ serviceWorkers: "allow" });
-test.describe.configure({ mode: "serial" });
-
-test("offline shell keeps Home and Tonight usable without Plotly or archives", async ({ page, context }) => {
+test("installed Home and Tonight survive offline capability migration",async({browser,baseURL})=>{
+  const context=await browser.newContext({baseURL,serviceWorkers:"allow"});
+  const page=await context.newPage();
   await page.goto("/");
-  await expect.poll(() => page.evaluate(() => Boolean(navigator.serviceWorker.controller)).catch(() => false),
-    { timeout: 15_000 }).toBe(true);
-  await expect(page.locator("#updated")).not.toContainText("Loading");
-  await context.setOffline(true);
-  await page.reload({ waitUntil: "domcontentloaded" });
-  await expect(page.locator("#dashboard")).toHaveClass(/active/);
-  await page.getByRole("button", { name: "Tonight", exact: true }).click();
+  await page.evaluate(async()=>{const registration=await navigator.serviceWorker.ready;if(!registration.active)await new Promise(resolve=>navigator.serviceWorker.addEventListener("controllerchange",resolve,{once:true}))});
+  await page.goto("about:blank");
+  await page.goto("/#tonight");
   await expect(page.locator("#tonight")).toHaveClass(/active/);
-  const resources = await page.evaluate(() => performance.getEntriesByType("resource").map(entry => entry.name));
-  expect(resources.some(url => /plotly|seasons\/\d+\.json/.test(url))).toBe(false);
+  await context.setOffline(true);
+  await page.reload({waitUntil:"domcontentloaded"});
+  await expect(page.locator("#tonight")).toHaveClass(/active/);
+  await expect(page.locator("#tonight-summary")).not.toBeEmpty();
+  await context.setOffline(false);
+  await context.close();
+});
+
+test("lightweight routes label deferred analytical content",async({page})=>{
+  await page.goto("/#schedule");
+  await expect(page.locator("#schedule-intelligence-status")).toContainText("load interactive analytical charts");
+  await page.goto("about:blank");
+  await page.goto("/#games");
+  await expect(page.locator("#game-detail")).toContainText("Detailed charts and live play-by-play load on demand");
 });

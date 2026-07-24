@@ -1,0 +1,10 @@
+const assert=require("node:assert/strict");
+const contracts=require("../site/data-contracts.js");
+const valid={schema:1,capabilities:Object.fromEntries(["core","schedule","players","analytics"].map(name=>[name,{url:`data/tracker-${name}.json`,bytes:100,sha256:"a".repeat(64)}]))};
+assert.deepEqual(contracts.validateCapabilityManifest(valid),[]);
+assert.match(contracts.validateCapabilityManifest({schema:2,capabilities:{}})[0],/schema/);
+assert.deepEqual(contracts.validateCapabilityData("core",{meta:{season:"20262027"},standings:[],teams:{}}),[]);
+assert.deepEqual(contracts.validateCapabilityData("schedule",{games:[]}),[]);
+assert.match(contracts.validateCapabilityData("players",{})[0],/rosters/);
+assert.match(contracts.validateCapabilityData("analytics",{})[0],/gameCentre/);
+console.log("capability contract tests passed");

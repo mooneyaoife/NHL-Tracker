@@ -8,6 +8,7 @@ export default defineConfig({
     baseURL: "http://127.0.0.1:4173",
     serviceWorkers: "block",
     trace: "retain-on-failure",
+    timezoneId: "Europe/London",
   },
   webServer: {
     command: "python3 -m http.server 4173 --directory site",

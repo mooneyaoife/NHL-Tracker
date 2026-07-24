@@ -1,11 +1,18 @@
 const assert = require("node:assert/strict");
 const fs = require("node:fs");
 const path = require("node:path");
+const crypto = require("node:crypto");
 const stats = require("../site/statistics.js");
 
 const root = path.resolve(__dirname, "..");
 const archive = JSON.parse(fs.readFileSync(path.join(root, "site/data/seasons/20252026.json"), "utf8"));
 const current = JSON.parse(fs.readFileSync(path.join(root, "site/data/tracker.json"), "utf8"));
+const capabilityManifest = JSON.parse(fs.readFileSync(path.join(root, "site/data/tracker-manifest.json"), "utf8"));
+for (const [name, entry] of Object.entries(capabilityManifest.capabilities)) {
+  const body = fs.readFileSync(path.join(root, "site", entry.url));
+  assert.equal(body.length, entry.bytes, `${name} capability byte count matches its manifest`);
+  assert.equal(crypto.createHash("sha256").update(body).digest("hex"), entry.sha256, `${name} capability hash matches its manifest`);
+}
 
 assert.equal(archive.standings.length, 32, "the archived league contains all NHL teams");
 assert.equal(

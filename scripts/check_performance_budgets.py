@@ -31,13 +31,20 @@ def main() -> int:
     initial_js = total(scripts)
     initial_data = total([SITE / "data" / "home.json", SITE / "build-meta.json"])
     worker = (SITE / "sw.js").read_text()
+    shell_source = (SITE / "shell.js").read_text()
+    quick_match = re.search(r"const QUICK_SCRIPTS=(\[[^;]+\]);", shell_source)
+    if not quick_match:
+        raise RuntimeError("Could not read the quick-route scripts")
+    quick_scripts = json.loads(quick_match.group(1))
+    non_analytical_js = initial_js + total([SITE / value for value in quick_scripts])
     shell_match = re.search(r"const SHELL=(\[[^;]+\]);", worker)
     if not shell_match:
         raise RuntimeError("Could not read the service-worker shell")
     shell = json.loads(shell_match.group(1))
     offline_cache = total(list(dict.fromkeys(local_path(value) for value in shell)))
     measurements = {"initialJavaScriptBytes": initial_js, "initialDataBytes": initial_data,
-        "offlineCacheBytes": offline_cache}
+        "offlineCacheBytes": offline_cache, "nonAnalyticalJavaScriptBytes": non_analytical_js,
+        "seasonRouteDataBytes": total([SITE / "data" / "tracker-core.json", SITE / "data" / "tracker-schedule.json"])}
     failures = [f"{name}: {value} > {BUDGETS[name]}" for name, value in measurements.items()
         if value > BUDGETS[name]]
     for name, value in measurements.items():

@@ -1,0 +1,13 @@
+const assert=require("node:assert/strict");
+global.document={createElement:()=>({}),body:{appendChild(){}}};
+const routes=require("../site/route-loader.js");
+assert.equal(routes.groupFor("tonight"),"night");
+assert.equal(routes.groupFor("schedule"),"season");
+assert.equal(routes.groupFor("players"),"people");
+assert.equal(routes.groupFor("league"),"explore");
+assert.equal(routes.groupFor("dashboard"),null);
+routes.register("night",{tonight:context=>context.run()});
+let called=false;
+assert.equal(routes.initialise("tonight",{run:()=>{called=true}}),undefined);
+assert.equal(called,true);
+console.log("route loader tests passed");
