@@ -39,6 +39,7 @@ To inspect the existing generated site without refreshing external data, run onl
 
 ```bash
 python scripts/generate_build_metadata.py
+python scripts/check_artifact_health.py
 python -m py_compile scripts/*.py
 python -m unittest discover -s tests -p "test_*.py"
 node --check site/app.js

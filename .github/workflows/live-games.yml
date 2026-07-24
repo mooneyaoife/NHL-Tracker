@@ -49,6 +49,15 @@ jobs:
           node tests/site_contract.test.js
           node tests/workflow_contract.test.js
       - if: steps.live.outputs.active == 'true'
+        name: Check and summarize live artifact health
+        env:
+          MAX_FRESH_AGE_HOURS: ${{ vars.MAX_FRESH_ARTIFACT_AGE_HOURS || '24' }}
+          MAX_FALLBACK_AGE_HOURS: ${{ vars.MAX_FALLBACK_ARTIFACT_AGE_HOURS || '72' }}
+        run: >-
+          python scripts/check_artifact_health.py
+          --max-fresh-age-hours "$MAX_FRESH_AGE_HOURS"
+          --max-fallback-age-hours "$MAX_FALLBACK_AGE_HOURS"
+      - if: steps.live.outputs.active == 'true'
         uses: actions/configure-pages@v6
       - if: steps.live.outputs.active == 'true'
         uses: actions/upload-pages-artifact@v5
@@ -78,3 +87,12 @@ jobs:
           npx --yes wrangler@4.110.0 pages deploy .cloudflare-build \
             --project-name "$CLOUDFLARE_PAGES_PROJECT" \
             --branch main
+      - if: always() && steps.live.outputs.active == 'true'
+        name: Summarize live deployment destinations
+        env:
+          PUBLIC_URL: ${{ steps.deployment.outputs.page_url }}
+          PRIVATE_URL: ${{ vars.CLOUDFLARE_PAGES_URL }}
+        run: |
+          echo "### Deployment destinations" >> "$GITHUB_STEP_SUMMARY"
+          echo "- GitHub Pages: ${PUBLIC_URL:-not deployed}" >> "$GITHUB_STEP_SUMMARY"
+          echo "- Private Cloudflare: ${PRIVATE_URL:-not configured}" >> "$GITHUB_STEP_SUMMARY"

@@ -12,6 +12,7 @@ on:
       - "site/**"
       - "deployment/**"
       - "scripts/build_cloudflare.py"
+      - "scripts/check_artifact_health.py"
       - "scripts/verify_cloudflare_build.py"
       - "tests/**"
       - ".github/workflows/validate-and-deploy.yml"
@@ -60,6 +61,14 @@ jobs:
           node tests/site_contract.test.js
           node tests/workflow_contract.test.js
           python scripts/validate_mail_feed.py
+      - name: Check artifact health and freshness
+        env:
+          MAX_FRESH_AGE_HOURS: ${{ vars.MAX_FRESH_ARTIFACT_AGE_HOURS || '24' }}
+          MAX_FALLBACK_AGE_HOURS: ${{ vars.MAX_FALLBACK_ARTIFACT_AGE_HOURS || '72' }}
+        run: >-
+          python scripts/check_artifact_health.py
+          --max-fresh-age-hours "$MAX_FRESH_AGE_HOURS"
+          --max-fallback-age-hours "$MAX_FALLBACK_AGE_HOURS"
       - uses: actions/configure-pages@v6
       - uses: actions/upload-pages-artifact@v5
         with:
@@ -103,3 +112,12 @@ jobs:
               --header "CF-Access-Client-Secret: $ACCESS_SECRET" \
               "${PRIVATE_URL%/}$path"
           done
+      - name: Summarize deployment destinations
+        if: always()
+        env:
+          PUBLIC_URL: ${{ steps.pages.outputs.page_url }}
+          PRIVATE_URL: ${{ vars.CLOUDFLARE_PAGES_URL }}
+        run: |
+          echo "### Deployment destinations" >> "$GITHUB_STEP_SUMMARY"
+          echo "- GitHub Pages: ${PUBLIC_URL:-not deployed}" >> "$GITHUB_STEP_SUMMARY"
+          echo "- Private Cloudflare: ${PRIVATE_URL:-not configured}" >> "$GITHUB_STEP_SUMMARY"
