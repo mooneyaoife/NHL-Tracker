@@ -1,7 +1,21 @@
 {
   "schema": 1,
-  "updatedAt": "2026-07-24T11:40:14.450Z",
+  "updatedAt": "2026-07-24T17:40:16.823Z",
   "items": [
+    {
+      "id": "77f765f688a09f4749f0",
+      "title": "Cole Sillinger Signs a 3-Year, $13.88M Contract with the Columbus Blue Jackets",
+      "publishedAt": "2026-07-24T17:05:10.000Z",
+      "category": "Contract",
+      "url": "https://puckpedia.com/signing/10761?utm_source=email&utm_medium=email&utm_campaign=signing&utm_content=primary"
+    },
+    {
+      "id": "ff9e4431033c8d4639f9",
+      "title": "Alex Jefferies Signs a 1-Year, $850K Contract with the New York Islanders",
+      "publishedAt": "2026-07-24T14:39:09.000Z",
+      "category": "Contract",
+      "url": "https://puckpedia.com/signing/10760?utm_source=email&utm_medium=email&utm_campaign=signing&utm_content=primary"
+    },
     {
       "id": "8767ec4bb842335d78da",
       "title": "Max Psenicka Signs a 3-Year, $2.99M Contract with the Utah Mammoth",
@@ -197,20 +211,6 @@
       "publishedAt": "2026-07-15T01:15:09.000Z",
       "category": "Contract",
       "url": "https://puckpedia.com/signing/10732?utm_source=email&utm_medium=email&utm_campaign=signing&utm_content=primary"
-    },
-    {
-      "id": "8c4f78cf599dd0314e1b",
-      "title": "Malte Gustafsson Signs a 3-Year, $3.23M Contract with the New York Islanders",
-      "publishedAt": "2026-07-14T16:24:16.000Z",
-      "category": "Contract",
-      "url": "https://puckpedia.com/signing/10731?utm_source=email&utm_medium=email&utm_campaign=signing&utm_content=primary"
-    },
-    {
-      "id": "d5c73d506fd2c62690a6",
-      "title": "Nicholas Robertson Signs a 2-Year, $6.50M Contract with the Pittsburgh Penguins",
-      "publishedAt": "2026-07-14T16:23:37.000Z",
-      "category": "Contract",
-      "url": "https://puckpedia.com/signing/10729?utm_source=email&utm_medium=email&utm_campaign=signing&utm_content=primary"
     }
   ]
 }
