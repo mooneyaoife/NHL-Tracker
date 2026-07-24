@@ -6,6 +6,8 @@ const root = path.resolve(__dirname, "..");
 const index = fs.readFileSync(path.join(root, "site/index.html"), "utf8");
 const app = fs.readFileSync(path.join(root, "site/app.js"), "utf8");
 const worker = fs.readFileSync(path.join(root, "site/sw.js"), "utf8");
+const critical = fs.readFileSync(path.join(root, "site/critical.css"), "utf8");
+const designSystem = fs.readFileSync(path.join(root, "site/design-system.css"), "utf8");
 const buildMeta = JSON.parse(fs.readFileSync(path.join(root, "site/build-meta.json"), "utf8"));
 
 const uiVersion = app.match(/^const UI_VERSION="([^"]+)";/)?.[1];
@@ -20,6 +22,18 @@ assert.match(index, /id="freshness-control"[\s\S]*id="freshness-detail-copy"/, "
 assert.equal((index.match(/id="season-select"/g) || []).length, 1, "the header exposes one season control");
 assert.doesNotMatch(index, /season-archive-toggle/, "the duplicate archive shortcut is removed");
 assert.match(index, /data-group="season" data-default-page="schedule">Schedule</, "the primary route is named for its destination, not a second season control");
+const foundations = designSystem.slice(designSystem.indexOf("/* 7.20"), designSystem.indexOf("/* 7.21"));
+const localControls = designSystem.slice(designSystem.indexOf("/* 7.22"), designSystem.indexOf("/* 7.23"));
+for (const token of ["--page-title-size", "--section-title-size", "--card-title-size", "--type-body", "--type-control", "--type-caption", "--control-height", "--control-radius"]) {
+  assert.match(foundations, new RegExp(token), `${token} is owned by the canonical visual foundation`);
+}
+assert.doesNotMatch(localControls, /--page-title-size|--section-title-size|--card-title-size/, "route controls do not redefine the global type hierarchy");
+assert.match(foundations, /\.page button:not\(\.pill\)[\s\S]*font-family:var\(--font-sans\)!important/, "interactive copy uses the interface typeface");
+assert.match(foundations, /\.page \.reset-view-button,\.context-link[\s\S]*min-height:var\(--control-height\)!important/, "secondary actions preserve the canonical touch target");
+assert.doesNotMatch(index, /home-masthead-copy h1\{[^}]*Georgia/, "the inline first paint uses the canonical interface typeface");
+const criticalConsolidation = critical.slice(critical.indexOf("/* 7.20"));
+assert.doesNotMatch(criticalConsolidation, /Inter|Georgia|Times New Roman/, "critical rendering does not flash a different typeface");
+assert.match(criticalConsolidation, /font-weight:730;line-height:1;letter-spacing:-\.045em/, "critical title metrics match the canonical hierarchy");
 assert.doesNotMatch(index, /tonight-slate-rail/, "Tonight does not repeat every game in a second navigation rail");
 assert.match(index, /class="schedule-command"[\s\S]*?<h2>Schedule<\/h2>/, "the schedule page has an unambiguous title");
 for (const asset of ["statistics.js", "game-state.js", "data-contracts.js", "data-loader.js", "router.js", "route-loader.js", "route-app.js", "preferences.js", "live-updates.js", "observability.js", "cloudflare-live.js", "app.js"]) {
@@ -59,7 +73,7 @@ const shell = worker.match(/const SHELL=(\[[^;]+\]);/)?.[1] || "";
 assert.doesNotMatch(shell, /plotly|seasons\/\d+\.json|tracker-models|puckpedia-mail/i, "offline installation excludes charts, archives and auxiliary data");
 assert.doesNotMatch(shell,/data\/tracker\.json/,"new offline installs use capability artifacts instead of the monolith");
 assert.match(worker,/retaining legacy cache fallback/,"the service worker retains the prior cache during schema migration");
-assert.match(worker,/LEGACY_CACHE="nhl-tracker-7\.22\.1"/,"the migration identifies the immediately preceding cache");
+assert.match(worker,/LEGACY_CACHE="nhl-tracker-7\.23\.1"/,"the migration identifies the immediately preceding cache");
 assert.match(worker,/caches\.delete/,"older cache generations are retired after a complete capability install");
 assert.ok(app.indexOf('initialisePage("dashboard")') < app.indexOf("hydrateLiveInBackground(archived)"), "static Home renders before live enhancement starts");
 const initialisation = app.slice(app.indexOf("async function init"), app.indexOf("function renderFatalError"));

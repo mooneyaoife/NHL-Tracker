@@ -193,6 +193,39 @@ test("header controls stay distinct and the season choice is singular", async ({
   }
 });
 
+test("principal routes share one type and control hierarchy", async ({ page }) => {
+  const routes = [
+    ["dashboard", "#dashboard .home-masthead-copy h1", "#dashboard .context-link"],
+    ["schedule", "#schedule .schedule-command h2", "#schedule .schedule-story-rail button"],
+    ["watchlist", "#watchlist .workspace-command h2", "#watchlist .workspace-story-rail button"],
+    ["teams", "#teams #team-title", "#teams .section-subnav button"],
+    ["players", "#players #player-title", "#players .section-subnav button"],
+  ];
+  for (const viewport of [{ width: 375, height: 812 }, { width: 1024, height: 820 }]) {
+    await page.setViewportSize(viewport);
+    for (const [route, titleSelector, actionSelector] of routes) {
+      await page.goto(`/?visual-contract=${viewport.width}-${route}#${route}`);
+      await expect(page.locator(`#${route}`)).toHaveClass(/active/);
+      await expect(page.locator(titleSelector)).toBeVisible();
+      await expect(page.locator(actionSelector).first()).toBeVisible();
+      const visual = await page.evaluate(({ titleSelector, actionSelector }) => {
+        const title = getComputedStyle(document.querySelector(titleSelector));
+        const actionElement = document.querySelector(actionSelector);
+        const action = getComputedStyle(actionElement);
+        return {
+          titleFamily: title.fontFamily,
+          titleSize: Number.parseFloat(title.fontSize),
+          actionFamily: action.fontFamily,
+          actionHeight: actionElement.getBoundingClientRect().height,
+        };
+      }, { titleSelector, actionSelector });
+      expect(visual.actionFamily, `${route} action family at ${viewport.width}px`).toBe(visual.titleFamily);
+      expect(visual.titleSize, `${route} title size at ${viewport.width}px`).toBeGreaterThanOrEqual(34);
+      expect(visual.actionHeight, `${route} action height at ${viewport.width}px`).toBeGreaterThanOrEqual(44);
+    }
+  }
+});
+
 test("core journey avoids repeated slate, season and archive controls", async ({ page }) => {
   await page.goto("/#tonight");
   await expect(page.locator("#tonight")).toHaveClass(/active/);

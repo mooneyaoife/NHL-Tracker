@@ -1698,10 +1698,6 @@ tbody tr:hover{background:color-mix(in srgb,var(--brand-soft) 45%,transparent)!i
 /* 7.8.1 · Readable small type.
    Compact evidence remains visually secondary, but no meaningful interface
    copy should depend on 9–11px text. */
-:root{
-  --type-caption:12px;
-  --type-small:13px;
-}
 .section-kicker,.section-label,.eyebrow,.metric .label,.label,label,th,
 .source-tag,.update-state,.refresh-badge,.change-tag,.availability-state,
 .pregame-state,.table-sort{
@@ -2255,15 +2251,23 @@ body .tonight-summary .metric .label{
   #corrections-log p{grid-column:auto}
 }
 
-/* 7.20 · UI consolidation: one control hierarchy, one typographic voice. */
+/* 7.20 · Canonical foundations: typography, shell and action hierarchy. */
 :root{
-  --font-sans:Inter,ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;
+  --font-sans:ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;
   --font-display:var(--font-sans);
   --font-editorial:var(--font-sans);
   --page-title-size:clamp(42px,4.2vw,58px);
   --section-title-size:clamp(23px,2.2vw,30px);
+  --card-title-size:18px;
+  --type-body:15px;
+  --type-control:13px;
+  --type-small:13px;
+  --type-caption:12px;
+  --control-height:44px;
+  --control-radius:7px;
 }
-body{font-family:var(--font-sans)!important;font-size:15px;line-height:1.5}
+body{font-family:var(--font-sans)!important;font-size:var(--type-body);line-height:1.5}
+button,select,input,summary{font-family:var(--font-sans)}
 body>header{
   position:relative!important;
   z-index:80!important;
@@ -2366,12 +2370,31 @@ main{padding-top:34px!important}
 .title-bar h1,.title-bar h2,.sheet-header h1,.sheet-header h2,
 #tonight .tonight-command .title-bar h2,
 #schedule .schedule-command .title-bar h2,
+.guide-hero.sheet-header h2,
 .home-masthead-copy h1{
   font-family:var(--font-sans)!important;
   font-size:var(--page-title-size)!important;
-  font-weight:760!important;
+  font-weight:730!important;
   line-height:1!important;
-  letter-spacing:-.052em!important;
+  letter-spacing:-.045em!important;
+}
+.page h3,.panel h3,.expandable>summary{
+  font-family:var(--font-sans)!important;
+  letter-spacing:-.025em!important;
+}
+.page h3,.panel h3{font-size:var(--card-title-size)!important;line-height:1.22!important}
+/* Data type is reserved for labels and values; interactive language uses the
+   same face throughout the application. */
+.page button:not(.pill):not(.metric-help):not(.chart-help-button):not(.view-pin-button),
+.page summary,.context-link{
+  font-family:var(--font-sans)!important;
+}
+.page .reset-view-button,.context-link{
+  min-height:var(--control-height)!important;
+  border-radius:var(--control-radius)!important;
+  font-size:var(--type-control)!important;
+  letter-spacing:0!important;
+  text-transform:none!important;
 }
 .home-masthead{
   display:grid!important;
@@ -2405,7 +2428,7 @@ main{padding-top:34px!important}
 }
 
 @media(max-width:760px){
-  :root{--page-title-size:clamp(38px,11.5vw,48px);--section-title-size:23px}
+  :root{--page-title-size:40px;--section-title-size:22px;--card-title-size:17px}
   body>header{
     grid-template-columns:40px minmax(0,1fr) 40px 40px 40px!important;
     gap:6px!important;
@@ -2537,26 +2560,7 @@ main{padding-top:34px!important}
   .quick-game-hero button{width:100%!important}
 }
 
-/* 7.22 · Whole-site hierarchy and a true grouped schedule calendar. */
-:root{
-  --page-title-size:clamp(42px,4.8vw,58px);
-  --section-title-size:clamp(22px,2.2vw,28px);
-  --control-height:44px;
-}
-.sheet-header h1,.sheet-header h2,.home-masthead-copy h1,
-#schedule .sheet-header h2,#watchlist .sheet-header h2,
-.guide-hero.sheet-header h2{
-  font-family:var(--font-sans)!important;
-  font-size:var(--page-title-size)!important;
-  font-weight:730!important;
-  line-height:1!important;
-  letter-spacing:-.045em!important;
-}
-.page h3,.panel h3,.expandable>summary{
-  font-family:var(--font-sans)!important;
-  letter-spacing:-.025em!important;
-}
-.page h3,.panel h3{font-size:18px!important;line-height:1.22!important}
+/* 7.22 · Canonical local controls and grouped schedule calendar. */
 .section-kicker,.page th,.sheet-header aside span,.sheet-header aside small{
   font-family:var(--font-data)!important;
   letter-spacing:.065em!important;
@@ -2662,6 +2666,7 @@ main{padding-top:34px!important}
   min-width:0!important;
   min-height:58px!important;
   padding:9px 10px!important;
+  font-family:var(--font-sans)!important;
 }
 .workspace-story-rail button strong{font-size:13px!important;line-height:1.25!important}
 .workspace-story-rail button small{font-size:10px!important;color:var(--ink-soft)!important}
@@ -2731,8 +2736,6 @@ main{padding-top:34px!important}
 }
 
 @media(max-width:640px){
-  :root{--page-title-size:40px;--section-title-size:22px}
-  .page h3,.panel h3{font-size:17px!important}
   .workspace-story-rail{
     display:flex!important;
     overflow-x:auto!important;

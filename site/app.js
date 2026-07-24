@@ -1,4 +1,4 @@
-const UI_VERSION="7.23.1";
+const UI_VERSION="7.24.0";
 const PREFERENCES=window.NHLTrackerPreferences.create(localStorage);
 const {
   mean: benchmarkAverage,
