@@ -1244,12 +1244,19 @@ td{color:var(--ink)!important;font-size:13px!important}
 tbody tr:hover{background:color-mix(in srgb,var(--brand-soft) 45%,transparent)!important}
 .table-sort{display:inline-flex;align-items:center;min-height:44px!important;padding-block:8px!important}
 .notice,.source-notice,.rumour-warning,.schedule-intelligence-status{
-  border:0!important;
-  border-left:3px solid var(--brand)!important;
+  border:1px solid var(--rule)!important;
+  border-left:4px solid var(--state-accent,var(--brand))!important;
   border-radius:6px!important;
   background:var(--surface-subtle)!important;
   padding:14px 16px!important;
   box-shadow:none!important;
+}
+.rumour-warning{--state-accent:var(--warning)}
+.home-empty-state,.saved-view-empty,.player-intelligence-empty{
+  border:1px dashed var(--rule)!important;
+  border-radius:var(--control-radius)!important;
+  background:color-mix(in srgb,var(--surface-subtle) 72%,transparent)!important;
+  padding:20px!important;
 }
 .update-state,.refresh-badge,.change-tag,.source-tag{
   display:inline-flex;
@@ -2385,10 +2392,15 @@ main{padding-top:34px!important}
 .page h3,.panel h3{font-size:var(--card-title-size)!important;line-height:1.22!important}
 /* Data type is reserved for labels and values; interactive language uses the
    same face throughout the application. */
-.page button:not(.pill):not(.metric-help):not(.chart-help-button):not(.view-pin-button),
+.page button:not(.pill):not(.metric-help):not(.chart-help-button):not(.view-pin-button):not(.table-sort):not(.modebar-btn),
 .page summary,.context-link{
   font-family:var(--font-sans)!important;
 }
+.page button:not(.pill):not(.metric-help):not(.chart-help-button):not(.view-pin-button):not(.table-sort):not(.modebar-btn),
+.page input[type="file"],.page summary{
+  min-height:var(--control-height)!important;
+}
+.expandable>summary{display:flex;align-items:center;justify-content:space-between}
 .page .reset-view-button,.context-link{
   min-height:var(--control-height)!important;
   border-radius:var(--control-radius)!important;
@@ -2566,6 +2578,16 @@ main{padding-top:34px!important}
   letter-spacing:.065em!important;
 }
 
+/* The chapter tabs already identify the active workspace section, so the
+   header keeps only the useful personal summary. */
+.workspace-command{grid-template-columns:minmax(0,1fr)!important}
+.workspace-command>div{min-height:124px!important;padding:24px 30px 22px 36px!important}
+.workspace-command p{
+  margin-top:7px!important;
+  color:var(--ink-soft)!important;
+  font:650 var(--type-small)/1.4 var(--font-sans)!important;
+}
+
 /* Local tabs are one predictable control family. */
 .subnav,.section-subnav,.game-centre-subnav,.compare-subnav,.league-subnav,.news-subnav{
   display:grid!important;
@@ -2728,7 +2750,7 @@ main{padding-top:34px!important}
     grid-template-columns:repeat(2,minmax(0,1fr))!important;
   }
   .control-row>p,.leader-controls>.leader-search{grid-column:1/-1!important;text-align:left!important}
-  .workspace-command{grid-template-columns:minmax(0,1fr) minmax(240px,300px)!important}
+  .workspace-command{grid-template-columns:minmax(0,1fr)!important}
   #players>.player-heading{grid-template-columns:minmax(0,1fr)!important}
   #players>.player-heading>.selectors{max-width:760px!important}
   #schedule .calendar-day{min-height:122px!important;padding:6px!important}
@@ -2736,6 +2758,7 @@ main{padding-top:34px!important}
 }
 
 @media(max-width:640px){
+  .workspace-command>div{min-height:104px!important;padding:20px 18px 18px 25px!important}
   .workspace-story-rail{
     display:flex!important;
     overflow-x:auto!important;

@@ -29,6 +29,7 @@ for (const token of ["--page-title-size", "--section-title-size", "--card-title-
 }
 assert.doesNotMatch(localControls, /--page-title-size|--section-title-size|--card-title-size/, "route controls do not redefine the global type hierarchy");
 assert.match(foundations, /\.page button:not\(\.pill\)[\s\S]*font-family:var\(--font-sans\)!important/, "interactive copy uses the interface typeface");
+assert.match(foundations, /\.page button:not\(\.pill\)[\s\S]*min-height:var\(--control-height\)!important/, "non-icon page actions preserve the canonical touch target");
 assert.match(foundations, /\.page \.reset-view-button,\.context-link[\s\S]*min-height:var\(--control-height\)!important/, "secondary actions preserve the canonical touch target");
 assert.doesNotMatch(index, /home-masthead-copy h1\{[^}]*Georgia/, "the inline first paint uses the canonical interface typeface");
 const criticalConsolidation = critical.slice(critical.indexOf("/* 7.20"));
@@ -60,6 +61,10 @@ assert.match(progressiveShell,/NHLTrackerQuickRoutes\?\.ready/,
   "direct lightweight routes do not race the capability loader");
 assert.doesNotMatch(quickRoutes,/class="calendar-item"/, "the lightweight Schedule does not fall back to one tile per game");
 assert.doesNotMatch(index,/data-workspace-target="workspace-saved">01/, "Workspace sections are not presented as duplicate numbered files");
+assert.doesNotMatch(index,/workspace-command-state/, "Workspace does not repeat its selected chapter in the page header");
+assert.match(index,/class="workspace-command"><div><h2>Workspace<\/h2><p id="workspace-command-counts"/, "Workspace keeps useful personal counts beside its heading");
+assert.doesNotMatch(index,/data-section-pane="player-profile" open><summary>(?:Player charts and recent form|Team rankings and complete game log)/, "secondary player evidence is collapsed on first view");
+assert.doesNotMatch(index,/class="expandable analytics-section" open|class="expandable" open><summary>Standings by division/, "deep league evidence is collapsed on first view");
 assert.match(app,/\["Schedule","Calendar and UK game times"/, "global search names the destination Schedule consistently");
 assert.match(progressiveShell,/NHLTrackerLoadCompleteApp/,"deeper destinations can promote safely to the complete application");
 for(const group of ["night","season","people","explore"])assert.ok(fs.existsSync(path.join(root,`site/routes/${group}.js`)),`${group} has a native lazy route module`);
@@ -73,7 +78,7 @@ const shell = worker.match(/const SHELL=(\[[^;]+\]);/)?.[1] || "";
 assert.doesNotMatch(shell, /plotly|seasons\/\d+\.json|tracker-models|puckpedia-mail/i, "offline installation excludes charts, archives and auxiliary data");
 assert.doesNotMatch(shell,/data\/tracker\.json/,"new offline installs use capability artifacts instead of the monolith");
 assert.match(worker,/retaining legacy cache fallback/,"the service worker retains the prior cache during schema migration");
-assert.match(worker,/LEGACY_CACHE="nhl-tracker-7\.23\.1"/,"the migration identifies the immediately preceding cache");
+assert.match(worker,/LEGACY_CACHE="nhl-tracker-7\.24\.0"/,"the migration identifies the immediately preceding cache");
 assert.match(worker,/caches\.delete/,"older cache generations are retired after a complete capability install");
 assert.ok(app.indexOf('initialisePage("dashboard")') < app.indexOf("hydrateLiveInBackground(archived)"), "static Home renders before live enhancement starts");
 const initialisation = app.slice(app.indexOf("async function init"), app.indexOf("function renderFatalError"));

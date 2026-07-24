@@ -265,7 +265,39 @@ test("workspace sections use concise labels without filing numbers", async ({ pa
   await expect(page.locator("#watchlist")).toHaveClass(/active/);
   await expect(page.locator("#workspace-chapter-nav button")).toHaveCount(5);
   await expect(page.locator("#workspace-chapter-nav")).not.toContainText(/\b0[1-5]\b/);
-  await expect(page.locator("#workspace-command-state")).toHaveText("Saved views");
+  await expect(page.locator("#workspace-command-state")).toHaveCount(0);
+  await expect(page.locator("#workspace-command-counts")).toContainText(/saved views · \d+ players · \d+ teams/);
+  await expect(page.locator('[data-workspace-target="workspace-saved"]')).toHaveAttribute("aria-pressed", "true");
+});
+
+test("dense secondary evidence starts collapsed and common actions meet the touch target", async ({ page }) => {
+  for (const viewport of [{ width: 375, height: 812 }, { width: 1024, height: 820 }]) {
+    await page.setViewportSize(viewport);
+
+    await page.goto(`/?round6=${viewport.width}-players#players`);
+    const playerEvidence = page.locator('#players details[data-section-pane="player-profile"]');
+    await expect(playerEvidence).toHaveCount(2);
+    expect(await playerEvidence.evaluateAll(details => details.every(detail => !detail.open))).toBe(true);
+
+    await page.goto(`/?round6=${viewport.width}-league#league`);
+    await expect(page.locator("#league .analytics-section")).not.toHaveAttribute("open", "");
+    await expect(page.getByText("Standings by division", { exact: true }).locator("..")).not.toHaveAttribute("open", "");
+
+    for (const [route, selector] of [
+      ["tonight", "#tonight .tonight-open"],
+      ["compare", "#compare .comparison-share"],
+      ["news", "#news .offseason-actions button"],
+      ["guide", "#guide .guide-deep-dive summary"],
+      ["status", "#status #open-nst-refresh"],
+      ["status", "#status #nst-refresh-files"],
+    ]) {
+      await page.goto(`/?round6=${viewport.width}-${route}-${selector.length}#${route}`);
+      if (route === "news") await page.getByText("Roster Pulse", { exact: true }).click();
+      const action = page.locator(selector).first();
+      await expect(action).toBeVisible();
+      expect(await action.evaluate(element => Math.round(element.getBoundingClientRect().height)), `${route} ${selector} at ${viewport.width}px`).toBeGreaterThanOrEqual(44);
+    }
+  }
 });
 
 test("remaining fan and utility routes stay inside mobile and intermediate viewports", async ({ page }) => {
@@ -279,8 +311,8 @@ test("remaining fan and utility routes stay inside mobile and intermediate viewp
   }
 });
 
-test("principal journeys have no serious automated accessibility violations", async ({ page }) => {
-  for (const route of ["dashboard", "tonight", "schedule", "games"]) {
+test("principal and redesigned journeys have no serious automated accessibility violations", async ({ page }) => {
+  for (const route of ["dashboard", "tonight", "schedule", "games", "players", "league", "watchlist"]) {
     await page.goto("/");
     await page.evaluate(() => localStorage.removeItem("nhl-last-route-v1"));
     await page.goto("about:blank");
