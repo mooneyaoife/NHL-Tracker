@@ -43,6 +43,14 @@ jobs:
           node tests/site_contract.test.js
           node tests/workflow_contract.test.js
           python scripts/validate_mail_feed.py
+      - name: Check and summarize generated artifact
+        env:
+          MAX_FRESH_AGE_HOURS: ${{ vars.MAX_FRESH_ARTIFACT_AGE_HOURS || '24' }}
+          MAX_FALLBACK_AGE_HOURS: ${{ vars.MAX_FALLBACK_ARTIFACT_AGE_HOURS || '72' }}
+        run: >-
+          python scripts/check_artifact_health.py
+          --max-fresh-age-hours "$MAX_FRESH_AGE_HOURS"
+          --max-fallback-age-hours "$MAX_FALLBACK_AGE_HOURS"
       - name: Save generated data
         run: |
           git config user.name "github-actions[bot]"

@@ -24,6 +24,18 @@ assert.match(deploy, /github\.event\.repository\.default_branch/,
   "scheduled handoff deploys the generator's newly committed default-branch artifact");
 assert.match(deploy, /Validate committed artifact without refreshing upstream data/,
   "code/artifact deployment does not perform a full NHL refresh");
+assert.match(deploy, /check_artifact_health\.py/,
+  "committed artifacts pass the freshness and completeness gate before deployment");
+assert.match(scheduled, /check_artifact_health\.py/,
+  "scheduled generation records artifact health before committing data");
+assert.match(live, /check_artifact_health\.py/,
+  "live deployments use the same artifact health gate");
+for (const workflow of [deploy, scheduled, live]) {
+  assert.match(workflow, /MAX_FRESH_ARTIFACT_AGE_HOURS/);
+  assert.match(workflow, /MAX_FALLBACK_ARTIFACT_AGE_HOURS/);
+}
+assert.match(deploy, /GITHUB_STEP_SUMMARY/);
+assert.match(live, /GITHUB_STEP_SUMMARY/);
 assert.match(deploy, /CLOUDFLARE_ACCESS_CLIENT_ID/);
 assert.match(deploy, /\/data\/tracker\.json \/api\/health/,
   "authenticated post-deployment smoke coverage includes data and health");

@@ -16,6 +16,8 @@ A current regular season is complete only when every NHL team has the season-spe
 
 `site/build-meta.json` records the source commit, artifact time, underlying data time and SHA-256 tracker hash. Deployment workflows regenerate it from the exact checked-out commit before upload. Generated tracker payloads also include source and data provenance when produced by the updater.
 
+Before any scheduled, committed or live artifact is published, `scripts/check_artifact_health.py` verifies the tracker hash, provenance, complete schedule/roster coverage and data age. GitHub Actions summaries record the source commit, timestamp, age, hash, failed teams and deployment destinations. Fresh artifacts may be at most 24 hours old by default. An explicitly labelled complete `stale` or `partial-stale` fallback may be at most 72 hours old; incomplete, expired or unknown-status artifacts always fail closed.
+
 ## Workflow boundaries
 
 - `update-and-deploy.yml` generates and commits scheduled data; it does not contain deployment logic. A successful run triggers `validate-and-deploy.yml`, which checks out the newly committed default-branch artifact before validating and publishing it. Failed generation never triggers a deployment.
@@ -37,5 +39,9 @@ No workflow, DNS, Cloudflare Access policy or production setting should be chang
 5. Confirm secrets `CLOUDFLARE_API_TOKEN`, `CLOUDFLARE_ACCESS_CLIENT_ID` and `CLOUDFLARE_ACCESS_CLIENT_SECRET` are present and scoped narrowly.
 6. Manually run **Validate and deploy existing artifact** and verify its authenticated root, tracker-data and health smoke checks.
 7. From an unauthenticated session, confirm the private Cloudflare origin still redirects to Access and remains noindexed.
+
+### Artifact-age thresholds
+
+Repository variables `MAX_FRESH_ARTIFACT_AGE_HOURS` and `MAX_FALLBACK_ARTIFACT_AGE_HOURS` may raise or lower the default 24-hour and 72-hour limits without changing code. This is the emergency adjustment mechanism, not a bypass: hashes, provenance, recognised freshness status and complete safe snapshots remain mandatory. Record the reason and intended expiry when changing either variable, restore the defaults after recovery, and rerun **Validate and deploy existing artifact**. Never use a threshold change to label incomplete data as fresh.
 
 Do not log secret values or place service tokens in client-side JavaScript. Rotating credentials or changing Access/DNS remains a separate, explicitly approved infrastructure operation.
