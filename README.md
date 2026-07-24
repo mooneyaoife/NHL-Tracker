@@ -61,7 +61,7 @@ The deployment and live-game workflows run the relevant fast checks before publi
 
 Generation and deployment are intentionally separate:
 
-- **Generate scheduled NHL data** refreshes and commits generated artifacts four times per day. It never deploys.
+- **Generate scheduled NHL data** refreshes and commits generated artifacts four times per day. It never deploys directly; a successful completion hands the new default-branch artifact to the separate validation/deployment workflow.
 - **Refresh active NHL games** checks hourly during likely game windows and deploys only when a followed-team game is active or in its pregame window.
 - **Validate and deploy existing artifact** deploys an already committed artifact without an upstream refresh.
 - **Validate isolated mail-feed artifact** checks metadata-only mail changes without refreshing NHL data or deploying.
