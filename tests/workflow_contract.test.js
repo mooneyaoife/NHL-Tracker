@@ -16,6 +16,12 @@ assert.match(live, /if: steps\.live\.outputs\.active == 'true' && vars\.CLOUDFLA
   "Cloudflare work also requires an active followed-team game");
 assert.doesNotMatch(scheduled, /^\s+push:/m, "scheduled data generation is not triggered by unrelated pushes");
 assert.doesNotMatch(scheduled, /deploy-pages|wrangler/, "scheduled generation does not deploy directly");
+assert.match(deploy, /workflow_run:[\s\S]{0,160}workflows: \["Generate scheduled NHL data"\]/,
+  "successful scheduled generation hands off to the separate deployment workflow");
+assert.match(deploy, /github\.event\.workflow_run\.conclusion == 'success'/,
+  "a failed scheduled generation cannot trigger deployment");
+assert.match(deploy, /github\.event\.repository\.default_branch/,
+  "scheduled handoff deploys the generator's newly committed default-branch artifact");
 assert.match(deploy, /Validate committed artifact without refreshing upstream data/,
   "code/artifact deployment does not perform a full NHL refresh");
 assert.match(deploy, /CLOUDFLARE_ACCESS_CLIENT_ID/);

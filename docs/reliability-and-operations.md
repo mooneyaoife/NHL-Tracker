@@ -18,7 +18,7 @@ A current regular season is complete only when every NHL team has the season-spe
 
 ## Workflow boundaries
 
-- `update-and-deploy.yml` generates and commits scheduled data; it does not deploy.
+- `update-and-deploy.yml` generates and commits scheduled data; it does not contain deployment logic. A successful run triggers `validate-and-deploy.yml`, which checks out the newly committed default-branch artifact before validating and publishing it. Failed generation never triggers a deployment.
 - `live-games.yml` checks hourly during likely game windows and deploys only for followed-team active/pregame games.
 - `validate-and-deploy.yml` validates and deploys existing committed data without contacting upstream NHL sources.
 - `mail-feed.yml` validates metadata-only PuckPedia exports without an NHL refresh or deployment.

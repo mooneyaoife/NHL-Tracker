@@ -2,6 +2,10 @@ name: Validate and deploy existing artifact
 
 on:
   workflow_dispatch:
+  workflow_run:
+    workflows: ["Generate scheduled NHL data"]
+    types: [completed]
+    branches: [main]
   push:
     branches: [main]
     paths:
@@ -23,12 +27,17 @@ concurrency:
 
 jobs:
   validate-and-deploy:
+    if: github.event_name != 'workflow_run' || github.event.workflow_run.conclusion == 'success'
     runs-on: ubuntu-latest
     environment:
       name: github-pages
       url: ${{ steps.pages.outputs.page_url }}
     steps:
       - uses: actions/checkout@v7
+        with:
+          # A scheduled generator commits after its run starts. Deploy the latest
+          # default-branch commit rather than the generator's original head SHA.
+          ref: ${{ github.event_name == 'workflow_run' && github.event.repository.default_branch || github.ref }}
       - uses: actions/setup-python@v6
         with:
           python-version: "3.12"
