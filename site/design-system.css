@@ -2491,26 +2491,6 @@ main{padding-top:34px!important}
   font-size:13px!important;
 }
 #schedule .schedule-story-rail button small{font-size:11px!important}
-#schedule .calendar-grid.quick-calendar-list{
-  display:grid!important;
-  grid-template-columns:repeat(3,minmax(0,1fr))!important;
-  gap:1px!important;
-  border:1px solid var(--rule)!important;
-  background:var(--rule)!important;
-}
-#schedule .calendar-weekdays[hidden]{display:none!important}
-#schedule .quick-calendar-list .calendar-item{
-  display:grid!important;
-  align-content:start!important;
-  gap:5px!important;
-  min-height:104px!important;
-  border:0!important;
-  background:var(--surface)!important;
-  padding:14px!important;
-}
-#schedule .quick-calendar-list .calendar-item time{margin:0!important;font:650 12px/1.35 var(--font-data)!important;color:var(--ink-soft)!important}
-#schedule .quick-calendar-list .calendar-item strong{font-size:16px!important;line-height:1.3!important}
-#schedule .quick-calendar-list .calendar-item span{font-size:12px!important;color:var(--brand)!important}
 #schedule .calendar-game{
   display:grid!important;
   gap:3px!important;
@@ -2543,9 +2523,6 @@ main{padding-top:34px!important}
 .quick-game-hero p{grid-column:2!important;grid-row:2!important;margin:0!important;max-width:62ch!important}
 .quick-game-hero button{grid-column:3!important;grid-row:1/3!important;min-height:44px!important}
 
-@media(max-width:900px){
-  #schedule .calendar-grid.quick-calendar-list{grid-template-columns:repeat(2,minmax(0,1fr))!important}
-}
 @media(max-width:640px){
   #tonight .tonight-summary{grid-template-columns:repeat(3,minmax(0,1fr))!important}
   #schedule .schedule-story-rail{
@@ -2556,12 +2533,235 @@ main{padding-top:34px!important}
   #schedule .schedule-story-rail button{width:auto!important;min-width:0!important;min-height:58px!important;padding:8px 6px!important}
   #schedule .schedule-story-rail button strong{font-size:12px!important}
   #schedule .schedule-story-rail button small{font-size:10px!important}
-  #schedule .calendar-grid.quick-calendar-list{grid-template-columns:minmax(0,1fr)!important}
-  #schedule .quick-calendar-list .calendar-item{min-height:0!important}
   #games .game-centre-subnav{display:grid!important;grid-template-columns:repeat(3,minmax(0,1fr))!important;overflow:visible!important}
   #games .game-centre-subnav button{font-size:12px!important;white-space:normal!important}
   #games .game-centre-controls{padding:12px!important}
   .quick-game-hero{grid-template-columns:minmax(0,1fr)!important;grid-template-rows:auto!important;gap:12px!important;padding:20px!important}
   .quick-game-hero>span,.quick-game-hero h3,.quick-game-hero p,.quick-game-hero button{grid-column:1!important;grid-row:auto!important}
   .quick-game-hero button{width:100%!important}
+}
+
+/* 7.22 · Whole-site hierarchy and a true grouped schedule calendar. */
+:root{
+  --page-title-size:clamp(42px,4.8vw,58px);
+  --section-title-size:clamp(22px,2.2vw,28px);
+  --control-height:44px;
+}
+.sheet-header h1,.sheet-header h2,.home-masthead-copy h1,
+#schedule .sheet-header h2,#watchlist .sheet-header h2,
+.guide-hero.sheet-header h2{
+  font-family:var(--font-sans)!important;
+  font-size:var(--page-title-size)!important;
+  font-weight:730!important;
+  line-height:1!important;
+  letter-spacing:-.045em!important;
+}
+.page h3,.panel h3,.expandable>summary{
+  font-family:var(--font-sans)!important;
+  letter-spacing:-.025em!important;
+}
+.page h3,.panel h3{font-size:18px!important;line-height:1.22!important}
+.section-kicker,.page th,.sheet-header aside span,.sheet-header aside small{
+  font-family:var(--font-data)!important;
+  letter-spacing:.065em!important;
+}
+
+/* Local tabs are one predictable control family. */
+.subnav,.section-subnav,.game-centre-subnav,.compare-subnav,.league-subnav,.news-subnav{
+  display:grid!important;
+  grid-auto-flow:column!important;
+  grid-auto-columns:minmax(118px,1fr)!important;
+  gap:1px!important;
+  overflow-x:auto!important;
+  border:1px solid var(--rule)!important;
+  background:var(--rule)!important;
+  scrollbar-width:none!important;
+}
+.subnav::-webkit-scrollbar{display:none}
+.subnav button{
+  min-width:118px!important;
+  min-height:48px!important;
+  border:0!important;
+  border-radius:0!important;
+  background:var(--surface)!important;
+  color:var(--ink-soft)!important;
+  padding:9px 12px!important;
+  font-family:var(--font-sans)!important;
+  font-size:12px!important;
+  font-weight:700!important;
+  line-height:1.25!important;
+  white-space:normal!important;
+}
+.subnav button.active,.subnav button[aria-pressed="true"]{
+  background:var(--brand-soft)!important;
+  color:var(--brand-strong)!important;
+  box-shadow:inset 0 -3px var(--brand)!important;
+}
+
+/* Filters, selectors and actions share the same rhythm. */
+.control-row,.comparison-controls,.guide-tools,.trends-toolbar,.leader-controls,
+.team-ranking-controls,.game-library-controls,.matchup-intelligence-controls,
+.news-controls,.cap-controls,.data-lab-controls{
+  gap:12px!important;
+  padding:14px!important;
+}
+.control-row label,.comparison-controls label,.guide-tools label,.trends-toolbar label,
+.leader-controls label,.team-ranking-controls label,.game-library-controls label,
+.matchup-intelligence-controls label,.news-controls label,.cap-controls label,
+.data-lab-controls label,.selectors label,.player-heading label,.playoff-path-head label,
+.tracked-team-search{
+  display:grid!important;
+  align-content:start!important;
+  gap:6px!important;
+  color:var(--ink-soft)!important;
+  font-family:var(--font-data)!important;
+  font-size:10px!important;
+  font-weight:750!important;
+  letter-spacing:.065em!important;
+  text-transform:uppercase!important;
+}
+.page select,.page input[type="text"],.page input[type="search"]{
+  width:100%!important;
+  min-width:0!important;
+  min-height:var(--control-height)!important;
+  border-radius:7px!important;
+  font-family:var(--font-sans)!important;
+  font-size:13px!important;
+  text-transform:none!important;
+}
+.selectors{flex-wrap:wrap!important;align-items:end!important}
+.selectors>*{min-height:var(--control-height)!important}
+#teams>.section-head{
+  display:grid!important;
+  grid-template-columns:minmax(0,1fr) minmax(240px,340px)!important;
+  align-items:center!important;
+  gap:24px!important;
+}
+#teams>.section-head .identity-heading,#players>.player-heading .identity-heading{min-width:0!important}
+#teams #team-title{font-size:clamp(34px,4vw,54px)!important;line-height:1!important;overflow-wrap:normal!important}
+#teams #team-select{justify-self:end!important;width:100%!important;max-width:340px!important}
+#players>.player-heading{
+  display:grid!important;
+  grid-template-columns:minmax(0,1fr) minmax(480px,.95fr)!important;
+  align-items:center!important;
+  gap:24px!important;
+}
+#players>.player-heading>.selectors{
+  display:grid!important;
+  grid-template-columns:repeat(3,minmax(0,1fr))!important;
+  width:100%!important;
+}
+
+/* Workspace is a small set of sections, not a numbered filing system. */
+.workspace-story-rail{
+  display:grid!important;
+  grid-template-columns:repeat(5,minmax(0,1fr))!important;
+  overflow:visible!important;
+}
+.workspace-story-rail button{
+  display:grid!important;
+  grid-template-columns:1fr!important;
+  align-content:center!important;
+  gap:2px!important;
+  min-width:0!important;
+  min-height:58px!important;
+  padding:9px 10px!important;
+}
+.workspace-story-rail button strong{font-size:13px!important;line-height:1.25!important}
+.workspace-story-rail button small{font-size:10px!important;color:var(--ink-soft)!important}
+
+/* Preserve the familiar month grid and group every day's games together. */
+#schedule .calendar-weekdays,#schedule .calendar-grid{
+  display:grid!important;
+  grid-template-columns:repeat(7,minmax(0,1fr))!important;
+  gap:1px!important;
+  border-color:var(--rule)!important;
+  background:var(--rule)!important;
+}
+#schedule .calendar-weekdays span{
+  min-width:0!important;
+  background:var(--surface-subtle)!important;
+  color:var(--ink-soft)!important;
+  padding:9px 4px!important;
+  font-family:var(--font-data)!important;
+  font-size:10px!important;
+  letter-spacing:.065em!important;
+}
+#schedule .calendar-day{
+  min-width:0!important;
+  min-height:142px!important;
+  background:var(--surface)!important;
+  padding:8px!important;
+}
+#schedule .calendar-day.outside{background:color-mix(in srgb,var(--surface-subtle) 74%,transparent)!important}
+#schedule .calendar-day-number{margin:0 0 7px!important;color:var(--ink-soft)!important;font:750 11px/1 var(--font-data)!important}
+#schedule .calendar-game{
+  width:100%!important;
+  min-height:0!important;
+  margin:0 0 5px!important;
+  border:0!important;
+  border-left:3px solid var(--game-team-color,var(--brand))!important;
+  border-radius:4px!important;
+  background:var(--surface-subtle)!important;
+  color:var(--ink)!important;
+  padding:7px!important;
+  text-align:left!important;
+}
+#schedule .calendar-game:hover{background:var(--brand-soft)!important}
+#schedule .calendar-game time{font:750 10px/1.2 var(--font-data)!important;color:var(--brand-strong)!important}
+#schedule .calendar-game strong{font:700 11px/1.3 var(--font-sans)!important;overflow-wrap:anywhere!important}
+#schedule .calendar-game span{font:600 10px/1.25 var(--font-sans)!important;color:var(--ink-soft)!important}
+
+/* Dense data remains readable and safely scrollable. */
+.table-wrap{max-width:100%!important;overflow:auto!important;overscroll-behavior-inline:contain!important}
+.table-wrap table{min-width:620px!important}
+.table-wrap thead th{position:sticky!important;top:0!important;z-index:2!important;background:var(--surface-subtle)!important}
+.table-wrap tbody tr:hover{background:color-mix(in srgb,var(--brand-soft) 42%,transparent)!important}
+#status .data-update-row{min-width:0!important}
+#status .data-update-row>div{min-width:0!important}
+#status .data-update-row span{overflow-wrap:anywhere!important}
+
+@media(max-width:1100px) and (min-width:641px){
+  .control-row,.leader-controls,.team-ranking-controls,.game-library-controls,
+  .matchup-intelligence-controls,.news-controls,.cap-controls,.data-lab-controls{
+    grid-template-columns:repeat(2,minmax(0,1fr))!important;
+  }
+  .control-row>p,.leader-controls>.leader-search{grid-column:1/-1!important;text-align:left!important}
+  .workspace-command{grid-template-columns:minmax(0,1fr) minmax(240px,300px)!important}
+  #players>.player-heading{grid-template-columns:minmax(0,1fr)!important}
+  #players>.player-heading>.selectors{max-width:760px!important}
+  #schedule .calendar-day{min-height:122px!important;padding:6px!important}
+  #schedule .calendar-game{padding:6px!important}
+}
+
+@media(max-width:640px){
+  :root{--page-title-size:40px;--section-title-size:22px}
+  .page h3,.panel h3{font-size:17px!important}
+  .workspace-story-rail{
+    display:flex!important;
+    overflow-x:auto!important;
+    scroll-snap-type:x proximity!important;
+  }
+  .workspace-story-rail button{flex:0 0 132px!important;scroll-snap-align:start!important}
+  #teams>.section-head,#players>.player-heading{grid-template-columns:minmax(0,1fr)!important;align-items:start!important;gap:14px!important}
+  #teams #team-title{font-size:34px!important;overflow-wrap:anywhere!important}
+  #teams #team-select{justify-self:stretch!important;max-width:none!important}
+  #players>.player-heading>.selectors{grid-template-columns:minmax(0,1fr) minmax(0,1fr)!important}
+  #players>.player-heading>.selectors #player-save-toggle{grid-column:1/-1!important}
+  .control-row,.comparison-controls,.guide-tools,.trends-toolbar,.leader-controls,
+  .team-ranking-controls,.game-library-controls,.matchup-intelligence-controls,
+  .news-controls,.cap-controls,.data-lab-controls{grid-template-columns:minmax(0,1fr)!important}
+  #schedule .calendar-weekdays{display:none!important}
+  #schedule .calendar-grid{display:block!important;border:0!important;background:transparent!important}
+  #schedule .calendar-day{display:none!important;min-height:0!important;margin:0 0 10px!important;border:1px solid var(--rule)!important;padding:0!important}
+  #schedule .calendar-day.has-games{display:block!important}
+  #schedule .calendar-day.outside{display:none!important}
+  #schedule .calendar-day-number{margin:0!important;border-bottom:1px solid var(--rule)!important;background:var(--surface-subtle)!important;padding:10px 12px!important;font-size:0!important}
+  #schedule .calendar-day-number:before{content:attr(data-full-date)!important;font:750 12px/1.3 var(--font-data)!important;color:var(--ink)!important}
+  #schedule .calendar-game{margin:0!important;border-left-width:4px!important;border-bottom:1px solid var(--rule)!important;border-radius:0!important;padding:11px 12px!important}
+  #schedule .calendar-game:last-child{border-bottom:0!important}
+  #schedule .calendar-game time{font-size:11px!important}
+  #schedule .calendar-game strong{font-size:13px!important}
+  #schedule .calendar-game span{font-size:11px!important}
+  .table-wrap table{min-width:560px!important}
 }

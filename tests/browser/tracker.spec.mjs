@@ -198,12 +198,36 @@ test("core journey avoids repeated slate, season and archive controls", async ({
   await expect(page.locator("#schedule .schedule-command h2")).toHaveText("Schedule");
   await expect(page.locator("#schedule-intelligence-chapter")).toBeHidden();
   await expect(page.locator("#schedule-release-chapter")).toBeHidden();
-  await expect(page.locator("#calendar-list")).toHaveClass(/quick-calendar-list/);
-  await expect(page.locator("#schedule .calendar-weekdays")).toBeHidden();
+  await expect(page.locator("#calendar-list")).not.toHaveClass(/quick-calendar-list/);
+  expect(await page.locator("#calendar-list .calendar-day").count()).toBeGreaterThanOrEqual(28);
+  expect(await page.locator("#calendar-list .calendar-day.has-games").count()).toBeGreaterThan(0);
+  await expect(page.locator("#calendar-list .calendar-item")).toHaveCount(0);
+  expect(await page.locator("#calendar-list .calendar-game").evaluateAll(games => games.every(game => Boolean(game.closest(".calendar-day"))))).toBe(true);
+  if ((page.viewportSize()?.width || 0) > 640) await expect(page.locator("#schedule .calendar-weekdays")).toBeVisible();
+  else await expect(page.locator("#schedule .calendar-weekdays")).toBeHidden();
   const shapeButton = page.locator('[data-schedule-target="schedule-intelligence-chapter"]');
   await expect(shapeButton).toHaveCount(1);
   await shapeButton.click();
   await expect(page.locator("#schedule-intelligence-chapter")).toBeVisible({ timeout: 15_000 });
+});
+
+test("workspace sections use concise labels without filing numbers", async ({ page }) => {
+  await page.goto("/#watchlist");
+  await expect(page.locator("#watchlist")).toHaveClass(/active/);
+  await expect(page.locator("#workspace-chapter-nav button")).toHaveCount(5);
+  await expect(page.locator("#workspace-chapter-nav")).not.toContainText(/\b0[1-5]\b/);
+  await expect(page.locator("#workspace-command-state")).toHaveText("Saved views");
+});
+
+test("remaining fan and utility routes stay inside mobile and intermediate viewports", async ({ page }) => {
+  for (const viewport of [{ width: 375, height: 812 }, { width: 1024, height: 820 }]) {
+    await page.setViewportSize(viewport);
+    for (const route of ["teams", "players", "league", "compare", "news", "watchlist", "guide", "status"]) {
+      await page.goto(`/?round3=${viewport.width}-${route}#${route}`);
+      await expect(page.locator(`#${route}`)).toHaveClass(/active/);
+      expect(await page.evaluate(() => document.documentElement.scrollWidth <= document.documentElement.clientWidth + 1), `${route} at ${viewport.width}px`).toBe(true);
+    }
+  }
 });
 
 test("principal journeys have no serious automated accessibility violations", async ({ page }) => {
