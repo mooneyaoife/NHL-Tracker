@@ -117,6 +117,27 @@
     return errors;
   };
 
+  const validateCapabilityManifest = manifest => {
+    const errors = [];
+    if (manifest?.schema !== 1) errors.push("capability manifest schema must be 1");
+    for (const name of ["core", "schedule", "players", "analytics"]) {
+      const entry = manifest?.capabilities?.[name];
+      if (!entry?.url) errors.push(`${name} capability requires a URL`);
+      if (entry?.bytes != null && (!Number.isInteger(entry.bytes) || entry.bytes < 2)) errors.push(`${name} capability bytes must be positive`);
+      if (entry?.sha256 != null && !/^[a-f0-9]{64}$/.test(entry.sha256)) errors.push(`${name} capability hash must be SHA-256`);
+    }
+    return errors;
+  };
+
+  const validateCapabilityData = (name, payload) => {
+    if (!payload || typeof payload !== "object" || Array.isArray(payload)) return [`${name} capability must be an object`];
+    if (name === "core") return validateTrackerData({ ...payload, games: payload.games || [] });
+    if (name === "schedule" && !Array.isArray(payload.games)) return ["schedule capability games must be an array"];
+    if (name === "players" && (payload.rosters == null || typeof payload.rosters !== "object")) return ["players capability rosters must be an object"];
+    if (name === "analytics" && (payload.gameCentre == null || typeof payload.gameCentre !== "object")) return ["analytics capability gameCentre must be an object"];
+    return [];
+  };
+
   return Object.freeze({
     expectedGoalsShare,
     normaliseExpectedGoalsRows,
@@ -124,5 +145,7 @@
     seasonEvidenceLabel,
     normaliseGameView,
     validateTrackerData,
+    validateCapabilityManifest,
+    validateCapabilityData,
   });
 }));

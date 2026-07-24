@@ -19,6 +19,12 @@ class CloudflareBuildTests(unittest.TestCase):
         )
         (self.source / "app.js").write_text("const base = 'https://mooneyaoife.github.io/NHL-Tracker/';", encoding="utf-8")
         (self.source / "cloudflare-live.js").write_text("window.NHLCloudflareLive = {};", encoding="utf-8")
+        for name in ("route-app.js", "data-loader.js", "route-loader.js"):
+            (self.source / name).write_text("", encoding="utf-8")
+        data = self.source / "data"
+        data.mkdir()
+        for name in ("tracker-manifest.json", "tracker-core.json", "tracker-schedule.json", "tracker-players.json", "tracker-analytics.json"):
+            (data / name).write_text("{}", encoding="utf-8")
         (self.source / "build-meta.json").write_text(json.dumps({
             "sourceCommit": "abc123", "artifactGeneratedAt": "2026-07-21T10:00:00+00:00",
             "dataGeneratedAt": "2026-07-21T09:00:00+00:00", "dataHash": "sha256:abc",

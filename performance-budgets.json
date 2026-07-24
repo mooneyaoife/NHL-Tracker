@@ -2,5 +2,7 @@
   "initialJavaScriptBytes": 20000,
   "initialDataBytes": 100000,
   "offlineCacheBytes": 4000000,
-  "mobileLcpMilliseconds": 2500
+  "mobileLcpMilliseconds": 2500,
+  "nonAnalyticalJavaScriptBytes": 438000,
+  "seasonRouteDataBytes": 1554682
 }

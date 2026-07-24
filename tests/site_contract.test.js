@@ -14,13 +14,30 @@ for (const asset of ["critical.css", "design-system.css", "shell.js"]) {
   assert.match(index, new RegExp(`${asset.replace(".", "\\.")}\\?v=${uiVersion.replaceAll(".", "\\.")}`), `${asset} uses the current UI cache key`);
   assert.match(worker, new RegExp(`${asset.replace(".", "\\.")}\\?v=${uiVersion.replaceAll(".", "\\.")}`), `${asset} is cached with the current UI version`);
 }
-for (const asset of ["statistics.js", "game-state.js", "data-contracts.js", "router.js", "live-updates.js", "observability.js", "cloudflare-live.js", "app.js"]) {
+assert.match(index, new RegExp(`freshness-status\\.js\\?v=${uiVersion.replaceAll(".", "\\.")}`), "freshness detail logic loads with the initial shell");
+assert.match(worker, new RegExp(`freshness-status\\.js\\?v=${uiVersion.replaceAll(".", "\\.")}`), "freshness details remain available offline");
+assert.match(index, /id="freshness-control"[\s\S]*id="freshness-detail-copy"/, "the compact status exposes accessible recovery details");
+for (const asset of ["statistics.js", "game-state.js", "data-contracts.js", "data-loader.js", "router.js", "route-loader.js", "route-app.js", "preferences.js", "live-updates.js", "observability.js", "cloudflare-live.js", "app.js"]) {
   assert.match(worker, new RegExp(`${asset.replace(".", "\\.")}\\?v=${uiVersion.replaceAll(".", "\\.")}`), `${asset} is available offline`);
   assert.match(fs.readFileSync(path.join(root,"site/shell.js"),"utf8"),new RegExp(asset.replace(".","\\.")),`${asset} is loaded by the progressive shell`);
 }
+assert.match(app, /NHLTrackerPreferences\.create/, "stored preferences are owned by the extracted module");
+const progressiveShell=fs.readFileSync(path.join(root,"site/shell.js"),"utf8");
+assert.match(progressiveShell,/QUICK_PAGES=new Set\(\["tonight","games","schedule"\]\)/,"Tonight, Game Centre and Season use the lightweight route runtime");
+assert.match(progressiveShell,/NHLTrackerLoadCompleteApp/,"deeper destinations can promote safely to the complete application");
+for(const group of ["night","season","people","explore"])assert.ok(fs.existsSync(path.join(root,`site/routes/${group}.js`)),`${group} has a native lazy route module`);
+const capabilityManifest=JSON.parse(fs.readFileSync(path.join(root,"site/data/tracker-manifest.json"),"utf8"));
+assert.deepEqual(Object.keys(capabilityManifest.capabilities).sort(),["analytics","core","players","schedule"]);
+const legacyBytes=fs.statSync(path.join(root,"site/data/tracker.json")).size;
+const seasonBytes=capabilityManifest.capabilities.core.bytes+capabilityManifest.capabilities.schedule.bytes;
+assert.ok(seasonBytes<=legacyBytes*.6,`Season capability data is at least 40% smaller (${seasonBytes} <= ${Math.floor(legacyBytes*.6)})`);
 assert.match(worker, new RegExp(`const CACHE="nhl-tracker-${uiVersion.replaceAll(".", "\\.")}"`), "the service-worker cache matches the UI version");
 const shell = worker.match(/const SHELL=(\[[^;]+\]);/)?.[1] || "";
 assert.doesNotMatch(shell, /plotly|seasons\/\d+\.json|tracker-models|puckpedia-mail/i, "offline installation excludes charts, archives and auxiliary data");
+assert.doesNotMatch(shell,/data\/tracker\.json/,"new offline installs use capability artifacts instead of the monolith");
+assert.match(worker,/retaining legacy cache fallback/,"the service worker retains the prior cache during schema migration");
+assert.match(worker,/LEGACY_CACHE="nhl-tracker-7\.18\.0"/,"the migration identifies the immediately preceding cache");
+assert.match(worker,/caches\.delete/,"older cache generations are retired after a complete capability install");
 assert.ok(app.indexOf('initialisePage("dashboard")') < app.indexOf("hydrateLiveInBackground(archived)"), "static Home renders before live enhancement starts");
 const initialisation = app.slice(app.indexOf("async function init"), app.indexOf("function renderFatalError"));
 assert.doesNotMatch(initialisation, /await\s+window\.NHLCloudflareLive\.hydrate/, "live enhancement never blocks initial rendering");

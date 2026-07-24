@@ -1,0 +1,36 @@
+name: Verify production deployments
+
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: "17 6 * * *"
+
+permissions:
+  contents: read
+
+concurrency:
+  group: nhl-tracker-production-verify
+  cancel-in-progress: true
+
+jobs:
+  verify-production:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v7
+      - uses: actions/setup-python@v6
+        with:
+          python-version: "3.12"
+      - name: Verify public and private production artifacts
+        env:
+          PUBLIC_URL: https://mooneyaoife.github.io/NHL-Tracker/
+          PRIVATE_URL: ${{ vars.CLOUDFLARE_DEPLOY_ENABLED == 'true' && vars.CLOUDFLARE_PAGES_URL || '' }}
+          CLOUDFLARE_ACCESS_CLIENT_ID: ${{ secrets.CLOUDFLARE_ACCESS_CLIENT_ID }}
+          CLOUDFLARE_ACCESS_CLIENT_SECRET: ${{ secrets.CLOUDFLARE_ACCESS_CLIENT_SECRET }}
+          MAX_FRESH_AGE_HOURS: ${{ vars.MAX_FRESH_ARTIFACT_AGE_HOURS || '24' }}
+          MAX_FALLBACK_AGE_HOURS: ${{ vars.MAX_FALLBACK_ARTIFACT_AGE_HOURS || '72' }}
+        run: >-
+          python scripts/verify_production.py
+          --public-url "$PUBLIC_URL"
+          ${PRIVATE_URL:+--private-url "$PRIVATE_URL"}
+          --max-fresh-age-hours "$MAX_FRESH_AGE_HOURS"
+          --max-fallback-age-hours "$MAX_FALLBACK_AGE_HOURS"

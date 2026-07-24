@@ -13,6 +13,7 @@ on:
       - "deployment/**"
       - "scripts/build_cloudflare.py"
       - "scripts/check_artifact_health.py"
+      - "scripts/verify_production.py"
       - "scripts/verify_cloudflare_build.py"
       - "tests/**"
       - ".github/workflows/validate-and-deploy.yml"
@@ -50,6 +51,7 @@ jobs:
           python scripts/generate_build_metadata.py
           python -m unittest discover -s tests -p 'test_*.py'
           node --check site/app.js
+          node --check site/route-app.js
           node --check site/game-state.js
           node --check site/cloudflare-live.js
           node --check site/sw.js
@@ -57,9 +59,15 @@ jobs:
           node tests/frontend_statistics.test.js
           node tests/cloudflare_live_overlay.test.js
           node tests/live_updates.test.js
+          node tests/capability_contracts.test.js
+          node tests/data_loader.test.js
+          node tests/route_loader.test.js
+          node tests/freshness_status.test.js
+          node tests/preferences.test.js
           node tests/data_integrity.test.js
           node tests/site_contract.test.js
           node tests/workflow_contract.test.js
+          python scripts/check_performance_budgets.py
           python scripts/validate_mail_feed.py
       - name: Check artifact health and freshness
         env:
@@ -96,22 +104,22 @@ jobs:
           npx --yes wrangler@4.110.0 pages deploy .cloudflare-build \
             --project-name "$CLOUDFLARE_PAGES_PROJECT" \
             --branch main
-      - name: Authenticated Cloudflare smoke check
-        if: vars.CLOUDFLARE_DEPLOY_ENABLED == 'true'
+      - name: Verify deployed public and private artifacts
         env:
-          PRIVATE_URL: ${{ vars.CLOUDFLARE_PAGES_URL }}
-          ACCESS_ID: ${{ secrets.CLOUDFLARE_ACCESS_CLIENT_ID }}
-          ACCESS_SECRET: ${{ secrets.CLOUDFLARE_ACCESS_CLIENT_SECRET }}
-        run: |
-          test -n "$PRIVATE_URL"
-          test -n "$ACCESS_ID"
-          test -n "$ACCESS_SECRET"
-          for path in / /data/tracker.json /api/health; do
-            curl --fail --silent --show-error --output /dev/null \
-              --header "CF-Access-Client-Id: $ACCESS_ID" \
-              --header "CF-Access-Client-Secret: $ACCESS_SECRET" \
-              "${PRIVATE_URL%/}$path"
-          done
+          PUBLIC_URL: ${{ steps.pages.outputs.page_url }}
+          PRIVATE_URL: ${{ vars.CLOUDFLARE_DEPLOY_ENABLED == 'true' && vars.CLOUDFLARE_PAGES_URL || '' }}
+          CLOUDFLARE_ACCESS_CLIENT_ID: ${{ secrets.CLOUDFLARE_ACCESS_CLIENT_ID }}
+          CLOUDFLARE_ACCESS_CLIENT_SECRET: ${{ secrets.CLOUDFLARE_ACCESS_CLIENT_SECRET }}
+          MAX_FRESH_AGE_HOURS: ${{ vars.MAX_FRESH_ARTIFACT_AGE_HOURS || '24' }}
+          MAX_FALLBACK_AGE_HOURS: ${{ vars.MAX_FALLBACK_ARTIFACT_AGE_HOURS || '72' }}
+        run: >-
+          python scripts/verify_production.py
+          --public-url "$PUBLIC_URL"
+          ${PRIVATE_URL:+--private-url "$PRIVATE_URL"}
+          --max-fresh-age-hours "$MAX_FRESH_AGE_HOURS"
+          --max-fallback-age-hours "$MAX_FALLBACK_AGE_HOURS"
+          --attempts 5
+          --retry-delay 6
       - name: Summarize deployment destinations
         if: always()
         env:
