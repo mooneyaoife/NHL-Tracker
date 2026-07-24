@@ -17,6 +17,11 @@ for (const asset of ["critical.css", "design-system.css", "shell.js"]) {
 assert.match(index, new RegExp(`freshness-status\\.js\\?v=${uiVersion.replaceAll(".", "\\.")}`), "freshness detail logic loads with the initial shell");
 assert.match(worker, new RegExp(`freshness-status\\.js\\?v=${uiVersion.replaceAll(".", "\\.")}`), "freshness details remain available offline");
 assert.match(index, /id="freshness-control"[\s\S]*id="freshness-detail-copy"/, "the compact status exposes accessible recovery details");
+assert.equal((index.match(/id="season-select"/g) || []).length, 1, "the header exposes one season control");
+assert.doesNotMatch(index, /season-archive-toggle/, "the duplicate archive shortcut is removed");
+assert.match(index, /data-group="season" data-default-page="schedule">Schedule</, "the primary route is named for its destination, not a second season control");
+assert.doesNotMatch(index, /tonight-slate-rail/, "Tonight does not repeat every game in a second navigation rail");
+assert.match(index, /class="schedule-command"[\s\S]*?<h2>Schedule<\/h2>/, "the schedule page has an unambiguous title");
 for (const asset of ["statistics.js", "game-state.js", "data-contracts.js", "data-loader.js", "router.js", "route-loader.js", "route-app.js", "preferences.js", "live-updates.js", "observability.js", "cloudflare-live.js", "app.js"]) {
   assert.match(worker, new RegExp(`${asset.replace(".", "\\.")}\\?v=${uiVersion.replaceAll(".", "\\.")}`), `${asset} is available offline`);
   assert.match(fs.readFileSync(path.join(root,"site/shell.js"),"utf8"),new RegExp(asset.replace(".","\\.")),`${asset} is loaded by the progressive shell`);
@@ -24,6 +29,10 @@ for (const asset of ["statistics.js", "game-state.js", "data-contracts.js", "dat
 assert.match(app, /NHLTrackerPreferences\.create/, "stored preferences are owned by the extracted module");
 const progressiveShell=fs.readFileSync(path.join(root,"site/shell.js"),"utf8");
 assert.match(progressiveShell,/QUICK_PAGES=new Set\(\["tonight","games","schedule"\]\)/,"Tonight, Game Centre and Season use the lightweight route runtime");
+assert.match(progressiveShell,/fetch\("data\/seasons\/index\.json"/, "the progressive shell primes the season picker before the full app loads");
+const quickRoutes=fs.readFileSync(path.join(root,"site/route-app.js"),"utf8");
+assert.match(quickRoutes,/gameWindow=selected/, "the lightweight Game Centre uses a bounded game window");
+assert.match(quickRoutes,/section\.hidden=section\.id!=="schedule-calendar-chapter"/, "the lightweight Schedule shows one chapter at a time");
 assert.match(progressiveShell,/NHLTrackerLoadCompleteApp/,"deeper destinations can promote safely to the complete application");
 for(const group of ["night","season","people","explore"])assert.ok(fs.existsSync(path.join(root,`site/routes/${group}.js`)),`${group} has a native lazy route module`);
 const capabilityManifest=JSON.parse(fs.readFileSync(path.join(root,"site/data/tracker-manifest.json"),"utf8"));
@@ -36,7 +45,7 @@ const shell = worker.match(/const SHELL=(\[[^;]+\]);/)?.[1] || "";
 assert.doesNotMatch(shell, /plotly|seasons\/\d+\.json|tracker-models|puckpedia-mail/i, "offline installation excludes charts, archives and auxiliary data");
 assert.doesNotMatch(shell,/data\/tracker\.json/,"new offline installs use capability artifacts instead of the monolith");
 assert.match(worker,/retaining legacy cache fallback/,"the service worker retains the prior cache during schema migration");
-assert.match(worker,/LEGACY_CACHE="nhl-tracker-7\.18\.0"/,"the migration identifies the immediately preceding cache");
+assert.match(worker,/LEGACY_CACHE="nhl-tracker-7\.20\.0"/,"the migration identifies the immediately preceding cache");
 assert.match(worker,/caches\.delete/,"older cache generations are retired after a complete capability install");
 assert.ok(app.indexOf('initialisePage("dashboard")') < app.indexOf("hydrateLiveInBackground(archived)"), "static Home renders before live enhancement starts");
 const initialisation = app.slice(app.indexOf("async function init"), app.indexOf("function renderFatalError"));

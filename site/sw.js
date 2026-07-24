@@ -1,8 +1,8 @@
-const CACHE="nhl-tracker-7.19.0";
-const LEGACY_CACHE="nhl-tracker-7.18.0";
+const CACHE="nhl-tracker-7.21.0";
+const LEGACY_CACHE="nhl-tracker-7.20.0";
 // Historical archives, auxiliary models and Plotly are deliberately fetched
 // only when an online view needs them, keeping offline Home/Tonight dependable.
-const SHELL=["./","./index.html","./critical.css?v=7.19.0","./styles.css?v=6.0.0","./theme-569.css?v=6.0.0","./design-system.css?v=7.19.0","./freshness-status.js?v=7.19.0","./statistics.js?v=7.19.0","./shell.js?v=7.19.0","./game-state.js?v=7.19.0","./data-contracts.js?v=7.19.0","./data-loader.js?v=7.19.0","./router.js?v=7.19.0","./route-loader.js?v=7.19.0","./route-app.js?v=7.19.0","./routes/night.js?v=7.19.0","./routes/season.js?v=7.19.0","./preferences.js?v=7.19.0","./live-updates.js?v=7.19.0","./observability.js?v=7.19.0","./cloudflare-live.js?v=7.19.0","./app.js?v=7.19.0","./manifest.webmanifest","./icons/icon.svg?v=7.0.1","./icons/icon-192.png","./icons/icon-512.png","./build-meta.json","./data/home.json","./data/tracker-manifest.json","./data/tracker-core.json","./data/tracker-schedule.json"];
+const SHELL=["./","./index.html","./critical.css?v=7.21.0","./styles.css?v=6.0.0","./theme-569.css?v=6.0.0","./design-system.css?v=7.21.0","./freshness-status.js?v=7.21.0","./statistics.js?v=7.21.0","./shell.js?v=7.21.0","./game-state.js?v=7.21.0","./data-contracts.js?v=7.21.0","./data-loader.js?v=7.21.0","./router.js?v=7.21.0","./route-loader.js?v=7.21.0","./route-app.js?v=7.21.0","./routes/night.js?v=7.21.0","./routes/season.js?v=7.21.0","./preferences.js?v=7.21.0","./live-updates.js?v=7.21.0","./observability.js?v=7.21.0","./cloudflare-live.js?v=7.21.0","./app.js?v=7.21.0","./manifest.webmanifest","./icons/icon.svg?v=7.0.1","./icons/icon-192.png","./icons/icon-512.png","./build-meta.json","./data/home.json","./data/tracker-manifest.json","./data/tracker-core.json","./data/tracker-schedule.json"];
 
 self.addEventListener("install",event=>event.waitUntil(caches.open(CACHE).then(cache=>cache.addAll(SHELL))));
 self.addEventListener("activate",event=>event.waitUntil((async()=>{

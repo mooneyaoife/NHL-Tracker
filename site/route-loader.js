@@ -3,7 +3,7 @@
   if(typeof module==="object"&&module.exports)module.exports=api;
 }(typeof globalThis!=="undefined"?globalThis:this,function createRouteLoader(root){
   "use strict";
-  const VERSION="7.19.0";
+  const VERSION="7.21.0";
   const GROUPS={night:["tonight","games"],season:["schedule"],people:["teams","players","availability","compare","news","watchlist"],explore:["league","power","trends","playoffs","guide","status"]};
   const registry=new Map(),loading=new Map();
   const groupFor=page=>Object.entries(GROUPS).find(([,pages])=>pages.includes(page))?.[0]||null;

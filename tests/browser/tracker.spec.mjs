@@ -152,6 +152,60 @@ test("mobile, tablet and desktop layouts avoid horizontal overflow", async ({ pa
   }
 });
 
+test("header controls stay distinct and the season choice is singular", async ({ page }) => {
+  for (const viewport of [{ width: 375, height: 812 }, { width: 768, height: 1024 }, { width: 1280, height: 900 }, { width: 1440, height: 900 }]) {
+    await page.setViewportSize(viewport);
+    await page.goto("/");
+    await expect(page.locator("#season-select option")).toHaveCount(2);
+    await expect(page.locator("#season-archive-toggle")).toHaveCount(0);
+    await expect(page.getByRole("button", { name: "Schedule", exact: true })).toHaveCount(1);
+    const layout = await page.evaluate(() => {
+      const rect = selector => {
+        const box = document.querySelector(selector)?.getBoundingClientRect();
+        return box ? { left: box.left, right: box.right, top: box.top, bottom: box.bottom } : null;
+      };
+      const selectors = ["body>header .brand", ".season-switcher", ".freshness-control", "#global-search-button", "#theme-button"];
+      return { header: rect("body>header"), nav: rect("body>#nav"), controls: selectors.map(rect) };
+    });
+    const overlaps = (a, b) => a.left < b.right - 1 && a.right > b.left + 1 && a.top < b.bottom - 1 && a.bottom > b.top + 1;
+    for (let a = 0; a < layout.controls.length; a += 1) {
+      for (let b = a + 1; b < layout.controls.length; b += 1) {
+        expect(overlaps(layout.controls[a], layout.controls[b]), `${viewport.width}px controls ${a} and ${b}`).toBe(false);
+      }
+    }
+    if (viewport.width > 760) expect(layout.nav.top).toBeGreaterThanOrEqual(layout.header.bottom - 1);
+  }
+});
+
+test("core journey avoids repeated slate, season and archive controls", async ({ page }) => {
+  await page.goto("/#tonight");
+  await expect(page.locator("#tonight")).toHaveClass(/active/);
+  await expect(page.locator("#tonight-slate-rail")).toHaveCount(0);
+  await expect(page.locator("#tonight-summary .metric")).toHaveCount(3);
+  const openButtons = page.getByRole("button", { name: "Open Game Centre", exact: true });
+  const openCount = await openButtons.count();
+  expect(openCount).toBeGreaterThan(0);
+  await openButtons.first().click();
+  await expect(page.locator("#games")).toHaveClass(/active/);
+  expect(await page.evaluate(() => window.scrollY)).toBe(0);
+  const windowOptionCount = await page.locator("#game-select option").count();
+  expect(windowOptionCount).toBeGreaterThan(0);
+  expect(windowOptionCount).toBeLessThanOrEqual(25);
+  await expect(page.locator(".game-centre-controls")).toContainText("Use Archive");
+
+  await page.getByRole("button", { name: "Schedule", exact: true }).click();
+  await expect(page.locator("#schedule")).toHaveClass(/active/);
+  await expect(page.locator("#schedule .schedule-command h2")).toHaveText("Schedule");
+  await expect(page.locator("#schedule-intelligence-chapter")).toBeHidden();
+  await expect(page.locator("#schedule-release-chapter")).toBeHidden();
+  await expect(page.locator("#calendar-list")).toHaveClass(/quick-calendar-list/);
+  await expect(page.locator("#schedule .calendar-weekdays")).toBeHidden();
+  const shapeButton = page.locator('[data-schedule-target="schedule-intelligence-chapter"]');
+  await expect(shapeButton).toHaveCount(1);
+  await shapeButton.click();
+  await expect(page.locator("#schedule-intelligence-chapter")).toBeVisible({ timeout: 15_000 });
+});
+
 test("principal journeys have no serious automated accessibility violations", async ({ page }) => {
   for (const route of ["dashboard", "tonight", "schedule", "games"]) {
     await page.goto("/");

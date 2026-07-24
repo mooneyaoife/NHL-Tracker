@@ -30,24 +30,24 @@
   <script>document.documentElement.dataset.theme=localStorage.getItem("nhl-theme")||"light"</script>
   <style>:root{--canvas:#f3f1ea;--surface:#fffdf7;--ink:#172033;--rule:#d7d3c8;--brand:#183a61}*{box-sizing:border-box}body{margin:0;background:var(--canvas);color:var(--ink);font:15px/1.5 system-ui,sans-serif}body>header{min-height:76px;display:flex;align-items:center;padding:12px 24px;background:var(--surface);border-bottom:1px solid var(--rule)}.brand{display:flex;align-items:center;gap:11px;color:var(--ink);text-decoration:none}.brand img{width:40px;height:40px}.brand-name{font-size:21px;font-weight:650}.header-tools{display:flex;align-items:center;gap:8px;margin-left:auto}body>#nav{display:grid;grid-template-columns:repeat(5,1fr);width:min(520px,calc(100% - 32px));margin:12px auto 0;background:var(--surface);border:1px solid var(--rule);border-radius:12px;overflow:hidden}#nav button{min-height:44px;border:0;background:transparent;color:var(--ink)}main{max-width:1400px;margin:auto;padding:52px 28px}.page{display:none}.page.active{display:block}.home-masthead{display:grid;grid-template-columns:1fr auto;border:1px solid var(--rule);background:var(--surface)}.home-masthead-copy{display:flex;align-items:center;min-height:158px;padding:28px}.home-masthead-copy h1{margin:0;font:400 clamp(58px,5vw,79px)/.91 Georgia,serif;letter-spacing:-.06em}@media(max-width:760px){body>header{min-height:58px;padding:8px 12px}.brand img{width:36px;height:36px}.season-switcher,.status,.global-search-button{display:none}body>#nav{position:fixed;inset:auto 8px 8px;z-index:100;width:auto;min-height:58px;margin:0}main{padding:30px 13px}.home-masthead{display:block}.home-masthead-copy{min-height:105px;padding:24px 13px}.home-masthead-copy h1{font-size:clamp(43px,13vw,60px)}}</style>
   <style>.home-masthead-copy{contain:layout paint;transform:translateZ(0)}</style>
-  <link rel="stylesheet" href="critical.css?v=7.19.0" media="print" onload="this.media='all'">
+  <link rel="stylesheet" href="critical.css?v=7.21.0" media="print" onload="this.media='all'">
   <link rel="stylesheet" href="styles.css?v=6.0.0" media="print" onload="this.media='all'">
   <link rel="stylesheet" href="theme-569.css?v=6.0.0" media="print" onload="this.media='all'">
-  <link rel="stylesheet" href="design-system.css?v=7.19.0" media="print" onload="this.media='all'">
-  <noscript><link rel="stylesheet" href="styles.css?v=6.0.0"><link rel="stylesheet" href="theme-569.css?v=6.0.0"><link rel="stylesheet" href="design-system.css?v=7.19.0"></noscript>
+  <link rel="stylesheet" href="design-system.css?v=7.21.0" media="print" onload="this.media='all'">
+  <noscript><link rel="stylesheet" href="styles.css?v=6.0.0"><link rel="stylesheet" href="theme-569.css?v=6.0.0"><link rel="stylesheet" href="design-system.css?v=7.21.0"></noscript>
 </head>
 <body>
 <a class="skip-link" href="#main-content">Skip to content</a>
 <div id="route-announcer" class="visually-hidden" role="status" aria-live="polite" aria-atomic="true"></div>
 <header>
   <a class="brand" href="#dashboard" data-home-page="dashboard" aria-label="NHL Tracker home"><img src="icons/icon.svg?v=7.0.1" alt="" aria-hidden="true"><span class="brand-name">NHL Tracker</span></a>
-  <div class="header-tools"><label class="season-switcher">Season <select id="season-select" aria-label="Choose season"></select></label><button id="season-archive-toggle" class="season-archive-toggle" type="button" hidden></button><details id="freshness-control" class="freshness-control"><summary id="updated" class="status">Loading data…</summary><div id="freshness-details" class="freshness-details" role="status"><strong id="freshness-detail-title">Data status</strong><span id="freshness-detail-copy">The latest snapshot is loading.</span></div></details><button id="global-search-button" class="icon-button global-search-button" aria-label="Find anything" title="Find anything"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="10.5" cy="10.5" r="6.5"></circle><path d="m15.5 15.5 5 5"></path></svg></button><button id="theme-button" class="icon-button" aria-label="Switch colour theme">☾</button></div>
+  <div class="header-tools"><label class="season-switcher">Season <select id="season-select" aria-label="Choose season"><option>Loading…</option></select></label><details id="freshness-control" class="freshness-control"><summary id="updated" class="status">Loading data…</summary><div id="freshness-details" class="freshness-details" role="status"><strong id="freshness-detail-title">Data status</strong><span id="freshness-detail-copy">The latest snapshot is loading.</span></div></details><button id="global-search-button" class="icon-button global-search-button" aria-label="Find anything" title="Find anything"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="10.5" cy="10.5" r="6.5"></circle><path d="m15.5 15.5 5 5"></path></svg></button><button id="theme-button" class="icon-button" aria-label="Switch colour theme">☾</button></div>
 </header>
 <div id="global-search-overlay" class="global-search-overlay" hidden><section class="global-search-dialog" role="dialog" aria-modal="true" aria-labelledby="global-search-title"><div class="global-search-head"><div><span class="section-kicker">NHL Tracker</span><h2 id="global-search-title">Find anything</h2></div><button id="global-search-close" type="button" aria-label="Close search">×</button></div><label class="global-search-input"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="10.5" cy="10.5" r="6.5"></circle><path d="m15.5 15.5 5 5"></path></svg><input id="global-search-input" type="search" aria-label="Search the entire tracker" autocomplete="off" placeholder="Search players, teams, games, stats or pages"></label><div id="global-search-results" class="global-search-results"></div><div class="global-search-hint"><span>Type to search the entire tracker</span><span><kbd>/</kbd> opens search · <kbd>Esc</kbd> closes</span></div></section></div>
 <nav id="nav" aria-label="Primary navigation">
   <button data-group="home" data-default-page="dashboard" class="active">Home</button>
   <button data-group="tonight" data-default-page="tonight">Tonight</button>
-  <button data-group="season" data-default-page="schedule">Season</button>
+  <button data-group="season" data-default-page="schedule">Schedule</button>
   <button data-group="explore" data-default-page="teams">Explore</button>
   <button data-group="workspace" data-default-page="watchlist">Workspace</button>
 </nav>
@@ -87,16 +87,15 @@
 
   <section id="tonight" class="page tonight-page">
     <div class="tonight-command"><div class="title-bar"><h2>Tonight</h2></div><div class="tonight-toolbar"><div><span class="section-kicker">NHL game window</span><strong id="tonight-date">Current slate</strong></div><label>Show<select id="tonight-scope"><option value="ALL">All NHL games</option><option value="TRACKED">Followed teams</option></select></label></div></div>
-    <div id="tonight-summary" class="grid four tonight-summary"></div>
-    <nav id="tonight-slate-rail" class="tonight-slate-rail" aria-label="Move through this slate"></nav>
+    <div id="tonight-summary" class="grid three tonight-summary"></div>
     <div id="tonight-notice" class="notice" hidden></div>
     <div id="tonight-games" class="tonight-games"></div>
     <div class="mp-credit">Game information: NHL · Advanced team context: <a href="https://moneypuck.com/predictions.htm" target="_blank" rel="noopener">MoneyPuck.com</a></div>
   </section>
 
   <section id="schedule" class="page">
-    <header class="schedule-command"><div class="title-bar"><h2>Season</h2></div><aside><span>Selected file</span><strong id="schedule-command-season">Current season</strong><small id="schedule-command-state">Calendar · UK time</small></aside></header>
-    <nav id="schedule-chapter-nav" class="chapter-nav schedule-story-rail" aria-label="Schedule sections"><button type="button" data-schedule-target="schedule-calendar-chapter">01 <strong>Calendar</strong><small>When</small></button><button type="button" data-schedule-target="schedule-intelligence-chapter">02 <strong>Season shape</strong><small>Workload</small></button><button type="button" data-schedule-target="schedule-release-chapter">03 <strong>Publication</strong><small>Next season</small></button></nav>
+    <header class="schedule-command"><div class="title-bar"><h2>Schedule</h2></div><aside><span>Selected season</span><strong id="schedule-command-season">Current season</strong><small id="schedule-command-state">Calendar · UK time</small></aside></header>
+    <nav id="schedule-chapter-nav" class="chapter-nav schedule-story-rail" aria-label="Schedule sections"><button type="button" data-schedule-target="schedule-calendar-chapter"><strong>Calendar</strong><small>Games</small></button><button type="button" data-schedule-target="schedule-intelligence-chapter"><strong>Season shape</strong><small>Workload</small></button><button type="button" data-schedule-target="schedule-release-chapter"><strong>Release</strong><small>Next season</small></button></nav>
     <section id="schedule-calendar-chapter" class="schedule-chapter">
       <div class="story-chapter"><span>Chapter one</span><strong>Calendar</strong><em>Every game in UK time</em></div>
     <div class="control-row calendar-controls"><label for="calendar-team">Show games for</label><select id="calendar-team"></select><label for="calendar-month">Month</label><select id="calendar-month" aria-label="Calendar month"></select><p>All times shown automatically in the UK.</p></div>
@@ -120,9 +119,9 @@
 
   <section id="games" class="page">
     <div class="title-bar"><h2>Game Centre</h2></div>
-    <div class="subnav game-centre-subnav" role="group" aria-label="Game Centre sections"><button class="active" data-game-view="featured">Selected Game</button><button data-game-view="intelligence">Matchup Intelligence</button><button data-game-view="library">Game Library</button></div>
+    <div class="subnav game-centre-subnav" role="group" aria-label="Game Centre sections"><button class="active" data-game-view="featured">Game</button><button data-game-view="intelligence">Matchup</button><button data-game-view="library">Archive</button></div>
     <div id="game-centre" class="game-centre game-centre-page">
-      <section class="game-centre-pane active" data-game-pane="featured"><div class="control-row game-centre-controls"><label for="game-select">Select game</label><select id="game-select"></select><button id="game-refresh" type="button">Refresh view</button><p>Official NHL snapshots update approximately every 15 minutes during tracked games.</p></div><div id="game-browse-nav" class="game-browse-nav"></div><div id="game-detail"></div></section>
+      <section class="game-centre-pane active" data-game-pane="featured"><div class="control-row game-centre-controls"><label for="game-select">Game window</label><select id="game-select"></select><button id="game-refresh" type="button">Check for updates</button><p>Current, nearby and followed-team games appear here. Use Archive for the complete stored season.</p></div><div id="game-browse-nav" class="game-browse-nav"></div><div id="game-detail"></div></section>
       <section class="game-centre-pane matchup-intelligence-pane" data-game-pane="intelligence"><header class="matchup-intelligence-header"><div><span class="section-kicker">Automatic pregame analysis</span><h3>Matchup</h3></div><span>Updates with the tracker</span></header><div class="matchup-intelligence-controls"><label>Choose matchup<select id="matchup-intelligence-game" aria-label="Choose matchup"></select></label><label>Stat evidence<select id="matchup-evidence-season" aria-label="Choose season used for matchup statistics"></select></label><button id="matchup-open-game" type="button">Open game</button></div><div id="matchup-intelligence-detail"></div></section>
       <section class="game-centre-pane" data-game-pane="library"><div class="game-library-intro"><div><span class="section-kicker">Season archive</span><h3>Game Library</h3></div><span id="game-library-count"></span></div><div class="game-library-controls"><label>Team<select id="game-library-team"></select></label><label>Month<select id="game-library-month"></select></label><label>Opponent<select id="game-library-opponent"></select></label><label>Result<select id="game-library-result"><option value="ALL">All results</option><option value="W">Wins</option><option value="L">Regulation losses</option><option value="OTL">Overtime losses</option></select></label></div><div id="game-library-list" class="game-library-list"></div></section>
     </div>
@@ -265,6 +264,6 @@
 <footer><div class="footer-links"><button data-page="watchlist" data-workspace-chapter="workspace-app" id="footer-install-link">Install app</button><button data-page="watchlist" data-workspace-chapter="workspace-preferences">Settings</button><button data-page="guide">Reference</button><a href="https://moneypuck.com/data.htm" target="_blank" rel="noopener">Data sources</a><button data-page="status">Status</button></div><p>NHL Tracker · Unofficial, non-commercial fan project using public NHL data</p></footer>
 <aside id="app-update" class="app-update" role="status" hidden><span>A fresh version of NHL Tracker is ready.</span><button id="app-update-button" type="button">Update now</button></aside>
 <div id="chart-help-overlay" class="chart-help-overlay" hidden><section role="dialog" aria-modal="true" aria-labelledby="chart-help-title"><header><div><span class="section-kicker">How to use this view</span><h2 id="chart-help-title">Chart guide</h2></div><button id="chart-help-close" type="button" aria-label="Close chart guide">×</button></header><div id="chart-help-body"></div></section></div>
-  <script defer src="freshness-status.js?v=7.19.0"></script>
-  <script defer src="shell.js?v=7.19.0"></script>
+  <script defer src="freshness-status.js?v=7.21.0"></script>
+  <script defer src="shell.js?v=7.21.0"></script>
 </body></html>

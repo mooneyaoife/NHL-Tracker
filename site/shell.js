@@ -1,6 +1,6 @@
 "use strict";
 (()=>{
-  const VERSION="7.19.0";
+  const VERSION="7.21.0";
   const QUICK_PAGES=new Set(["tonight","games","schedule"]);
   const QUICK_SCRIPTS=["game-state.js","data-contracts.js","data-loader.js","route-loader.js","cloudflare-live.js","route-app.js"];
   const FULL_SCRIPTS=["statistics.js","game-state.js","data-contracts.js","data-loader.js","router.js","route-loader.js","preferences.js","live-updates.js","observability.js","cloudflare-live.js","app.js"];
@@ -37,15 +37,39 @@
     });
   };
 
+  const openSeason=(season,current)=>{
+    const url=new URL(location.href);
+    if(season===current)url.searchParams.delete("season");
+    else url.searchParams.set("season",season);
+    location.href=url.toString();
+  };
+  const renderSeasonPicker=manifest=>{
+    const select=document.getElementById("season-select"),entries=Array.isArray(manifest?.seasons)?manifest.seasons:[];
+    if(!select||!entries.length)return;
+    const requested=new URLSearchParams(location.search).get("season"),selected=entries.some(row=>row.season===requested)?requested:manifest.current||entries[0].season;
+    select.replaceChildren(...entries.map(row=>{
+      const option=document.createElement("option");
+      option.value=row.season;
+      option.textContent=`${row.label||seasonLabel(row.season)}${row.season===manifest.current?" · Current":" · Archive"}`;
+      return option;
+    }));
+    select.value=selected;
+    select.onchange=event=>openSeason(event.target.value,manifest.current);
+  };
+
   fetch("data/home.json",{cache:"no-store"}).then(response=>response.ok?response.json():Promise.reject(new Error("Home snapshot unavailable"))).then(renderHome).catch(()=>{
     document.getElementById("updated").textContent="Static snapshot unavailable";
     document.getElementById("today-games").textContent="Open the full tracker to retry NHL data.";
+  });
+  fetch("data/seasons/index.json",{cache:"no-store"}).then(response=>response.ok?response.json():Promise.reject(new Error("Season list unavailable"))).then(renderSeasonPicker).catch(()=>{
+    const select=document.getElementById("season-select");
+    if(select)select.firstElementChild.textContent="Current season";
   });
   if("serviceWorker" in navigator)navigator.serviceWorker.register("sw.js").catch(()=>{});
 
   document.querySelectorAll("#nav [data-default-page]").forEach(button=>button.addEventListener("click",()=>loadFullApp(button.dataset.defaultPage),{once:true}));
   document.querySelectorAll("[data-page],[data-home-page]").forEach(button=>button.addEventListener("click",()=>loadFullApp(button.dataset.page||button.dataset.homePage),{once:true}));
-  for(const id of ["theme-button","global-search-button","season-select"])document.getElementById(id)?.addEventListener("click",()=>loadFullApp(),{once:true});
+  for(const id of ["theme-button","global-search-button"])document.getElementById(id)?.addEventListener("click",()=>loadFullApp(),{once:true});
   const loadForDashboardExploration=()=>{if(!QUICK_PAGES.has(location.hash.slice(1)))loadFullApp()};
   window.addEventListener("wheel",loadForDashboardExploration,{once:true,passive:true});
   window.addEventListener("touchmove",loadForDashboardExploration,{once:true,passive:true});
