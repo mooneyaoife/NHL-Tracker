@@ -66,6 +66,7 @@ assert.match(index,/class="workspace-command"><div><h2>Workspace<\/h2><p id="wor
 assert.doesNotMatch(index,/data-section-pane="player-profile" open><summary>(?:Player charts and recent form|Team rankings and complete game log)/, "secondary player evidence is collapsed on first view");
 assert.doesNotMatch(index,/class="expandable analytics-section" open|class="expandable" open><summary>Standings by division/, "deep league evidence is collapsed on first view");
 assert.match(app,/\["Schedule","Calendar and UK game times"/, "global search names the destination Schedule consistently");
+assert.match(app,/\["News","Moves, insiders and rosters","news"\]/, "global search names the News destination consistently");
 assert.match(progressiveShell,/NHLTrackerLoadCompleteApp/,"deeper destinations can promote safely to the complete application");
 for(const group of ["night","season","people","explore"])assert.ok(fs.existsSync(path.join(root,`site/routes/${group}.js`)),`${group} has a native lazy route module`);
 const capabilityManifest=JSON.parse(fs.readFileSync(path.join(root,"site/data/tracker-manifest.json"),"utf8"));
@@ -78,7 +79,7 @@ const shell = worker.match(/const SHELL=(\[[^;]+\]);/)?.[1] || "";
 assert.doesNotMatch(shell, /plotly|seasons\/\d+\.json|tracker-models|puckpedia-mail/i, "offline installation excludes charts, archives and auxiliary data");
 assert.doesNotMatch(shell,/data\/tracker\.json/,"new offline installs use capability artifacts instead of the monolith");
 assert.match(worker,/retaining legacy cache fallback/,"the service worker retains the prior cache during schema migration");
-assert.match(worker,/LEGACY_CACHE="nhl-tracker-7\.24\.0"/,"the migration identifies the immediately preceding cache");
+assert.match(worker,/LEGACY_CACHE="nhl-tracker-7\.25\.0"/,"the migration identifies the immediately preceding cache");
 assert.match(worker,/caches\.delete/,"older cache generations are retired after a complete capability install");
 assert.ok(app.indexOf('initialisePage("dashboard")') < app.indexOf("hydrateLiveInBackground(archived)"), "static Home renders before live enhancement starts");
 const initialisation = app.slice(app.indexOf("async function init"), app.indexOf("function renderFatalError"));
@@ -126,5 +127,20 @@ assert.match(app, /comparisonPlayersForTeam=team=>filterComparisonPlayersByTeam/
 assert.match(app, /"comparisonSeason","aTeam","bTeam","aScope","bScope"/, "season, team and scope choices survive direct links and browser history");
 assert.match(app, /seasonComparisonRecords\(playerComparisonData\(\)\)/, "comparison participants come from the selected season evidence");
 assert.doesNotMatch(app, /eligibleComparisonPlayers/, "selection is not silently restricted to chart-eligible skaters");
+
+assert.equal((app.match(/function renderGuide\(\)/g) || []).length, 1, "the reference guide has one canonical renderer");
+const latestNews = index.slice(index.indexOf('id="offseason"'), index.indexOf('id="cap-centre"'));
+assert.doesNotMatch(latestNews, /PuckPedia Updates|Roster Pulse|Offseason Resources/, "Latest does not duplicate dedicated cap, roster or transaction tools");
+const rosterNews = index.slice(index.indexOf('id="rosters"'), index.indexOf('</section>', index.indexOf('id="rosters"')));
+assert.match(rosterNews, /Roster Pulse/, "roster monitoring lives with the complete roster view");
+assert.doesNotMatch(index, /id="insider-posts"[^>]*\sopen(?:\s|>)/, "third-party insider timelines start collapsed");
+assert.match(app, /id==="rumours"&&el\("insider-posts"\)\?\.open/, "insider widgets load only after explicit disclosure");
+assert.match(app, /reset\.hidden=id!=="offseason"/, "News hides its Latest-only reset action on dedicated views");
+assert.match(app, /visible=CAP_TIMELINE_EXPANDED\?filtered:filtered\.slice\(0,10\)/, "the cap timeline starts with a bounded recent set");
+assert.match(index, /id="nst-refresh-centre" class="panel nst-refresh-centre status-disclosure"/, "manual refresh instructions use progressive disclosure");
+assert.match(index, /id="status-coverage-panel" class="panel status-disclosure"/, "coverage evidence starts as a disclosure");
+assert.match(app, /stale=active&&\(!ready\|\|age>=7\)/, "manual analytics reminders stay quiet outside the active season");
+assert.match(app, /!active\?"No action needed"/, "offseason status does not falsely request a refresh");
+assert.match(designSystem, /#news>\.news-subnav[\s\S]*overflow-x:auto!important/, "the five News destinations scroll instead of colliding on phones");
 
 console.log("site contracts: all checks passed");

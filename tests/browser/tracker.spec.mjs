@@ -292,7 +292,19 @@ test("dense secondary evidence starts collapsed and common actions meet the touc
       ["status", "#status #nst-refresh-files"],
     ]) {
       await page.goto(`/?round6=${viewport.width}-${route}-${selector.length}#${route}`);
-      if (route === "news") await page.getByText("Roster Pulse", { exact: true }).click();
+      if (route === "news") {
+        await page.locator('[data-update-tab="rosters"]').click();
+        await expect(page.locator("#rosters")).toHaveClass(/active/);
+        await page.getByText("Roster Pulse", { exact: true }).click();
+      }
+      if (route === "guide") {
+        await page.locator("#guide .guide-category-button").first().click();
+        await expect(page.locator("#guide .guide-results")).toBeVisible();
+      }
+      if (route === "status" && selector.includes("refresh-files")) {
+        await page.locator("#open-nst-refresh").click();
+        await expect(page.locator("#nst-refresh-centre")).toHaveAttribute("open", "");
+      }
       const action = page.locator(selector).first();
       await expect(action).toBeVisible();
       expect(await action.evaluate(element => Math.round(element.getBoundingClientRect().height)), `${route} ${selector} at ${viewport.width}px`).toBeGreaterThanOrEqual(44);
@@ -311,8 +323,49 @@ test("remaining fan and utility routes stay inside mobile and intermediate viewp
   }
 });
 
+test("utility routes reveal detailed evidence only when requested", async ({ page }) => {
+  for (const viewport of [{ width: 375, height: 812 }, { width: 1024, height: 820 }]) {
+    await page.setViewportSize(viewport);
+
+    await page.goto(`/?round7=${viewport.width}-guide#guide`);
+    await expect(page.locator("#guide .guide-category-button")).toHaveCount(8);
+    await expect(page.locator("#guide .guide-results")).toBeHidden();
+    await page.locator("#guide .guide-category-button").first().click();
+    await expect(page.locator("#guide .guide-results")).toBeVisible();
+    expect(await page.locator("#guide .guide-deep-dive").count()).toBeGreaterThan(0);
+
+    await page.goto(`/?round7=${viewport.width}-status#status`);
+    await expect(page.locator("#status .source-status-panel")).not.toHaveAttribute("open", "");
+    await expect(page.locator("#status-coverage-panel")).not.toHaveAttribute("open", "");
+    await expect(page.locator("#nst-refresh-centre")).not.toHaveAttribute("open", "");
+    await expect(page.locator("#nst-refresh-badge")).toHaveText("No action needed");
+    await page.locator("#open-nst-refresh").click();
+    await expect(page.locator("#nst-refresh-centre")).toHaveAttribute("open", "");
+
+    await page.goto(`/?newsView=cap-centre&round7=${viewport.width}#news`);
+    await expect(page.locator("#cap-centre")).toHaveClass(/active/);
+    await expect(page.locator('#news [data-filter-page="news"]')).toBeHidden();
+    expect(await page.locator("#news .news-subnav button").evaluateAll(buttons => buttons.every((button, index) => !buttons[index + 1] || button.getBoundingClientRect().right <= buttons[index + 1].getBoundingClientRect().left + 1))).toBe(true);
+    expect(await page.locator("#cap-timeline .cap-event").count()).toBeLessThanOrEqual(10);
+    const capToggle=page.locator("#cap-timeline-toggle");
+    await expect(capToggle).toHaveAttribute("aria-expanded", "false");
+    await capToggle.click();
+    await expect(capToggle).toHaveAttribute("aria-expanded", "true");
+    expect(await page.locator("#cap-timeline .cap-event").count()).toBeGreaterThan(10);
+
+    await page.goto(`/?newsView=rumours&round7=${viewport.width}#news`);
+    await expect(page.locator("#insider-posts")).not.toHaveAttribute("open", "");
+    await expect(page.locator('script#x-widgets[src*="platform.twitter.com"]')).toHaveCount(0);
+    await page.locator("#insider-posts summary").click();
+    await expect(page.locator("#insider-posts")).toHaveAttribute("open", "");
+    await expect(page.locator('script#x-widgets[src*="platform.twitter.com"]')).toHaveCount(1);
+
+    expect(await page.evaluate(() => document.documentElement.scrollWidth <= document.documentElement.clientWidth + 1), `utility routes at ${viewport.width}px`).toBe(true);
+  }
+});
+
 test("principal and redesigned journeys have no serious automated accessibility violations", async ({ page }) => {
-  for (const route of ["dashboard", "tonight", "schedule", "games", "players", "league", "watchlist"]) {
+  for (const route of ["dashboard", "tonight", "schedule", "games", "players", "league", "watchlist", "news", "guide", "status"]) {
     await page.goto("/");
     await page.evaluate(() => localStorage.removeItem("nhl-last-route-v1"));
     await page.goto("about:blank");
