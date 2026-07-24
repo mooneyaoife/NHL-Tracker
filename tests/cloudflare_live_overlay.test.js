@@ -81,5 +81,16 @@ const pathFor = url => new URL(url, "https://example.test").pathname;
   assert.equal(retainedResult.daily.games[0].broadcasts[0], "SN", "last good schedule survives a partial retry");
   assert.equal(retainedResult.meta.cloudflareLive.status, "partial-live");
 
+  const concurrentCalls = new Map();
+  const concurrent = contextFor({ content: "/api" }, async url => {
+    const path = pathFor(url);
+    concurrentCalls.set(path, (concurrentCalls.get(path) || 0) + 1);
+    await new Promise(resolve => setTimeout(resolve, 5));
+    return responseFor(path.includes("score") ? score : schedule);
+  });
+  await Promise.all([concurrent.hydrate(original), concurrent.hydrate(original)]);
+  assert.equal(concurrentCalls.get("/api/nhl/score/now"), 1, "concurrent hydration shares one score request");
+  assert.equal(concurrentCalls.get("/api/nhl/schedule/now"), 1, "concurrent hydration shares one schedule request");
+
   console.log("cloudflare live overlay: all checks passed");
 })().catch(error => { console.error(error); process.exitCode = 1; });

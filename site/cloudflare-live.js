@@ -5,6 +5,7 @@
   const base = marker?.content?.replace(/\/$/, "") || "";
   const enabled = base.startsWith("/") && !base.startsWith("//");
   const lastGood = { score: null, schedule: null };
+  const inFlight = new Map();
 
   const officialValue = value => {
     if (value == null) return "";
@@ -12,27 +13,32 @@
     return String(value);
   };
 
-  async function apiGet(path) {
+  function apiGet(path) {
     if (!enabled || !path.startsWith("/")) throw new Error("Cloudflare live data is not enabled");
-    const controller = new AbortController();
-    const timer = setTimeout(() => controller.abort(), 4500);
-    try {
-      const response = await fetch(`${base}${path}`, {
-        method: "GET",
-        headers: { accept: "application/json" },
-        cache: "no-store",
-        credentials: "same-origin",
-        signal: controller.signal,
-      });
-      if (!response.ok || !(response.headers.get("content-type") || "").includes("application/json")) {
-        throw new Error("Cloudflare live data is unavailable");
+    if (inFlight.has(path)) return inFlight.get(path);
+    const request = (async () => {
+      const controller = new AbortController();
+      const timer = setTimeout(() => controller.abort(), 4500);
+      try {
+        const response = await fetch(`${base}${path}`, {
+          method: "GET",
+          headers: { accept: "application/json" },
+          cache: "no-store",
+          credentials: "same-origin",
+          signal: controller.signal,
+        });
+        if (!response.ok || !(response.headers.get("content-type") || "").includes("application/json")) {
+          throw new Error("Cloudflare live data is unavailable");
+        }
+        const payload = await response.json();
+        if (!payload?.ok || !payload.data) throw new Error("Cloudflare live data is invalid");
+        return payload;
+      } finally {
+        clearTimeout(timer);
       }
-      const payload = await response.json();
-      if (!payload?.ok || !payload.data) throw new Error("Cloudflare live data is invalid");
-      return payload;
-    } finally {
-      clearTimeout(timer);
-    }
+    })().finally(() => inFlight.delete(path));
+    inFlight.set(path, request);
+    return request;
   }
 
   function gameRow(game, fallbackDate = "") {

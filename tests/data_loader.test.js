@@ -5,8 +5,9 @@ const responses={
   "data/tracker-core.json":{meta:{season:"20262027"},standings:[],teams:{},daily:{games:[]}},
   "data/tracker-players.json":{rosters:{MTL:[{id:1,name:"Player"}]}},
 };
+const calls={};
 global.structuredClone=value=>JSON.parse(JSON.stringify(value));
-global.fetch=async url=>({ok:Boolean(responses[url]),status:responses[url]?200:404,json:async()=>responses[url]});
+global.fetch=async url=>{calls[url]=(calls[url]||0)+1;await new Promise(resolve=>setTimeout(resolve,5));return{ok:Boolean(responses[url]),status:responses[url]?200:404,json:async()=>responses[url]}};
 delete require.cache[loaderPath];
 const loader=require(loaderPath);
 (async()=>{
@@ -14,8 +15,11 @@ const loader=require(loaderPath);
   assert.equal(core.meta.season,"20262027");
   assert.deepEqual(core.rosters,{});
   assert.equal(loader.hasForRoute("players"),false);
-  const players=await loader.ensure(["players"]);
+  const [players]=await Promise.all([loader.ensure(["players"]),loader.ensure(["players"])]);
   assert.equal(players.rosters.MTL[0].name,"Player");
+  assert.equal(calls["data/tracker-players.json"],1,"concurrent route hydration shares one capability request");
+  const repeated=await loader.load({capabilities:["core"]});
+  assert.equal(repeated.rosters.MTL[0].name,"Player","a repeated loader entry does not discard hydrated capabilities");
   assert.deepEqual(loader.forRoute("schedule"),["core","schedule"]);
   delete require.cache[loaderPath];
   const legacyPayload={meta:{season:"20252026"},standings:[],teams:{},games:[]};

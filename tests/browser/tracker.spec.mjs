@@ -87,14 +87,57 @@ for (const [index, fixture] of browserGameStates.entries()) {
 
 for (const fixture of [
   { name: "offseason", date: "2026-07-24", copy: "The NHL is in its offseason" },
-  { name: "empty slate", date: "2026-11-24", copy: "There are no games in the current NHL window" },
+  { name: "empty slate", date: "2026-11-24", copy: "There are no games in today's UK window" },
 ]) {
   test(`${fixture.name} has an explicit empty state`, async ({ page }) => {
+    await page.addInitScript(now => {
+      const NativeDate = Date;
+      class FixedDate extends NativeDate {
+        constructor(...args) { super(...(args.length ? args : [now])); }
+        static now() { return new NativeDate(now).getTime(); }
+      }
+      globalThis.Date = FixedDate;
+    }, `${fixture.date}T12:00:00Z`);
     await routeTracker(page, data => ({ ...data, daily: { currentDate: fixture.date, slateDate: fixture.date, games: [] } }));
     await page.goto("/#tonight");
     await expect(page.locator("#tonight-notice")).toContainText(fixture.copy);
   });
 }
+
+test("a future slate is labelled as context rather than tonight", async ({ page }) => {
+  await routeTracker(page, data => ({ ...data, daily: {
+    currentDate: "2099-09-29",
+    slateDate: "2099-09-29",
+    games: [{ id: 2099020001, date: "2099-09-29", slateDate: "2099-09-29",
+      startTimeUTC: "2099-09-29T23:00:00Z", state: "FUT", type: 2,
+      away: "BUF", home: "BOS", awayScore: null, homeScore: null }],
+  } }));
+  await page.goto("/#tonight");
+  await expect(page.locator("#tonight")).toHaveAttribute("data-slate-state", /next/);
+  await expect(page.locator("#tonight-notice")).toContainText("Showing the next published slate");
+  await expect(page.locator("#tonight-date")).toContainText("UK time");
+});
+
+test("a retained artifact is identified instead of presented as fresh static data", async ({ page }) => {
+  await routeTracker(page, data => ({ ...data, meta: { ...data.meta, freshness: {
+    status: "partial-stale", failedTeams: ["BUF"],
+  } } }));
+  await page.goto("/#tonight");
+  await expect(page.locator("#updated")).toContainText("Stored fallback");
+  await page.locator("#updated").click();
+  await expect(page.locator("#freshness-detail-copy")).toContainText("BUF");
+});
+
+test("a failed manual refresh preserves the stored Game Centre view", async ({ page }) => {
+  await page.route(/\/data\/tracker\.json\?live=/, route => route.fulfill({ status: 503, body: "unavailable" }));
+  await page.goto("/?game=2026020001#games");
+  await expect(page.locator("#game-detail")).not.toBeEmpty({ timeout: 15_000 });
+  await page.getByRole("button", { name: "Open detailed analysis", exact: true }).click();
+  await expect(page.getByRole("button", { name: "Browse library", exact: true })).toBeVisible({ timeout: 15_000 });
+  await page.locator("#game-refresh").click();
+  await expect(page.locator("#game-refresh-status")).toContainText("stored game view remains available");
+  await expect(page.locator("#game-detail")).not.toBeEmpty();
+});
 
 test("London calendar dates cover midnight and DST fixture boundaries", async ({ page }) => {
   await page.goto("/#tonight");

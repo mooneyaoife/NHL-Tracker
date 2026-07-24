@@ -1,13 +1,14 @@
 "use strict";
 (()=>{
-  const VERSION="7.27.0";
+  const VERSION="7.28.0";
   const QUICK_PAGES=new Set(["tonight","games","schedule"]);
-  const QUICK_SCRIPTS=["game-state.js","data-contracts.js","data-loader.js","route-loader.js","cloudflare-live.js","route-app.js"];
-  const FULL_SCRIPTS=["statistics.js","game-state.js","data-contracts.js","data-loader.js","router.js","route-loader.js","preferences.js","live-updates.js","observability.js","cloudflare-live.js","app.js"];
+  const QUICK_SCRIPTS=["data-contracts.js","data-loader.js","route-loader.js","cloudflare-live.js","route-app.js"];
+  const FULL_SCRIPTS=["statistics.js","data-contracts.js","data-loader.js","router.js","route-loader.js","preferences.js","live-updates.js","observability.js","cloudflare-live.js","app.js"];
   let quickLoading=null,fullLoading=null;
   const seasonLabel=value=>{const season=String(value||"");return season.length===8?`${season.slice(0,4)}–${season.slice(6)}`:"Current season"};
   const dateLabel=value=>{const date=new Date(value);return Number.isFinite(date.getTime())?date.toLocaleString("en-GB",{dateStyle:"medium",timeStyle:"short"}):"Latest artifact"};
-  const gameLabel=game=>game.status?.label||game.stateLabel||game.state||"Scheduled";
+  const gameState=window.NHLTrackerGameState;
+  const gameLabel=game=>gameState.normalizeGameState(game||{}).label;
   const loadScripts=(names,label)=>new Promise((resolve,reject)=>{let remaining=names.length;for(const name of names){const script=document.createElement("script");script.src=`${name}?v=${VERSION}`;script.async=false;script.onload=()=>{remaining-=1;if(!remaining)resolve()};script.onerror=()=>reject(new Error(`${name} could not load`));document.body.appendChild(script)}}).catch(error=>{document.getElementById("updated").textContent=`${label} unavailable`;console.error(error);throw error});
   const loadCompleteApp=target=>{
     if(target&&document.getElementById(target))history.replaceState(null,"",`${location.pathname}${location.search}#${target}`);
@@ -20,14 +21,15 @@
   window.NHLTrackerLoadCompleteApp=loadCompleteApp;
 
   const renderHome=summary=>{
-    const season=seasonLabel(summary.season),updated=dateLabel(summary.dataGeneratedAt),games=summary.daily?.games||[],teams=summary.teams||{};
+    const season=seasonLabel(summary.season),updated=dateLabel(summary.dataGeneratedAt),games=summary.daily?.games||[],teams=summary.teams||{},slate=gameState.describeSlateWindow({games,slateDate:summary.daily?.currentDate||summary.daily?.slateDate});
     document.getElementById("home-dossier-season").textContent=season;
     document.getElementById("home-dossier-updated").textContent=`Updated ${updated.split(",")[0]}`;
     document.getElementById("dashboard-season-label").textContent=season;
     window.NHLTrackerFreshnessStatus?.render({status:"static",snapshotAt:summary.dataGeneratedAt});
-    document.getElementById("today-date").textContent=summary.daily?.currentDate||"Latest NHL slate";
+    document.getElementById("today-date").textContent=slate.dateText;
     const host=document.getElementById("today-games");
     host.replaceChildren();
+    if(slate.notice){const context=document.createElement("p");context.className="notice home-slate-notice";context.textContent=slate.notice;host.appendChild(context)}
     if(!games.length){const notice=document.createElement("p");notice.className="notice";notice.textContent="No games are published in the current NHL window.";host.appendChild(notice);return}
     games.slice(0,6).forEach(game=>{
       const button=document.createElement("button");button.type="button";button.className="game-link";

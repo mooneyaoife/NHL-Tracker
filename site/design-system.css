@@ -736,7 +736,7 @@ html[data-theme="dark"] .workspace-command>aside{background:#294b3d}html[data-th
 /* 6.10 · Tonight is a navigable game story: orient, move through the slate, then open evidence. */
 .tonight-command{display:grid;grid-template-columns:minmax(0,1fr) minmax(420px,.72fr);align-items:stretch;margin-bottom:12px;border-top:1px solid var(--ink);border-bottom:1px solid var(--ink)}
 #tonight .tonight-command .title-bar{display:flex!important;align-items:end;justify-content:space-between;gap:24px;min-height:0!important;margin:0!important;padding:24px 28px 20px 0!important;border-bottom:0!important}
-#tonight .tonight-command .title-bar:before{content:"Current game window";position:absolute!important;top:21px!important;left:0!important}
+#tonight .tonight-command .title-bar:before{content:"NHL schedule window";position:absolute!important;top:21px!important;left:0!important}
 #tonight .tonight-command .title-bar h2{margin-top:18px;font-family:var(--font-editorial)!important;font-size:clamp(52px,5vw,72px)!important;font-weight:400!important;letter-spacing:-.06em!important}
 #tonight .tonight-command .title-bar p{max-width:34ch;margin:0 0 5px;font-size:11px}
 #tonight .tonight-command .reset-view-button{position:absolute;right:18px;top:12px;margin:0!important}
@@ -1428,6 +1428,13 @@ details.section-pane.active>summary{display:flex!important}
 #schedule .schedule-command.sheet-header .title-bar h2{
   letter-spacing:-.058em!important;
 }
+
+/* 7.28 · Trust states stay visible without competing with the primary task. */
+.home-slate-notice{grid-column:1/-1;margin:0!important}
+.game-refresh-status{display:block;min-height:18px;color:var(--ink-soft);font-size:var(--type-caption);line-height:1.35}
+.game-centre-controls .game-refresh-status:empty{display:none}
+#tonight[data-slate-state="offseason-next"] #tonight-notice,
+#tonight[data-slate-state="offseason-latest"] #tonight-notice{border-left-color:var(--brand)}
 .reveal-item{
   transform:translateY(6px);
   transition:opacity .28s ease,transform .28s ease;

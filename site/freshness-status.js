@@ -12,6 +12,7 @@
     "partial-cached": ["Partial cached data", "One live component is unavailable and a retained cached component remains active.", true],
     stale: ["Stale scores", "A recent cached NHL response remains visible while the upstream service recovers.", true],
     "static-fallback": ["Static snapshot", "The valid generated snapshot remains active because live enhancement is unavailable.", true],
+    "stored-fallback": ["Stored fallback", "The last complete generated snapshot remains active because part of the latest data refresh was unavailable.", true],
     static: ["Static snapshot", "This host is using the latest generated tracker snapshot.", false],
     archive: ["Archive", "This is a completed-season snapshot and does not receive live updates.", false],
   };
@@ -21,15 +22,21 @@
     return Number.isFinite(date.getTime()) ? date : null;
   };
 
-  function describe({ status = "static", snapshotAt = null, fetchedAt = null, components = null, archived = false } = {}) {
-    const code = archived ? "archive" : STATUS[status] ? status : "static";
+  function describe({ status = "static", snapshotAt = null, fetchedAt = null, components = null, archived = false,
+    artifactStatus = "fresh", failedTeams = [], timeZone = "Europe/London" } = {}) {
+    const retainedArtifact = ["stale", "partial-stale"].includes(String(artifactStatus || "").toLowerCase());
+    const code = archived ? "archive" : status === "static" && retainedArtifact ? "stored-fallback" : STATUS[status] ? status : "static";
     const [label, explanation, retryable] = STATUS[code];
     const sourceDate = validDate(fetchedAt) || validDate(snapshotAt);
     const timestamp = sourceDate
-      ? sourceDate.toLocaleString("en-GB", { dateStyle: "medium", timeStyle: "short" })
+      ? sourceDate.toLocaleString("en-GB", { timeZone, day: "numeric", month: "short", year: "numeric", hour: "2-digit", minute: "2-digit", timeZoneName: "short" })
       : "time unavailable";
     const componentText = components && !archived
       ? ` Score: ${components.score || "unavailable"}; schedule: ${components.schedule || "unavailable"}.`
+      : "";
+    const affected = [...new Set((failedTeams || []).map(String).filter(Boolean))];
+    const artifactText = retainedArtifact
+      ? ` Generated-data fallback is active${affected.length ? ` for ${affected.join(", ")}` : ""}.`
       : "";
     const retry = retryable
       ? " Reloading may restore fresher live information; the displayed static or cached content remains usable."
@@ -39,7 +46,7 @@
       label,
       timestamp,
       compact: `${label} · ${timestamp}`,
-      detail: `${explanation}${componentText}${retry}`,
+      detail: `${explanation}${componentText}${artifactText}${retry}`,
       retryable,
     });
   }

@@ -11,5 +11,9 @@ for (const code of ["live", "cached", "partial-live", "partial-cached", "stale",
 assert.equal(status.describe({ status: "partial-live", snapshotAt }).retryable, true);
 assert.equal(status.describe({ status: "static", snapshotAt }).retryable, false);
 assert.equal(status.describe({ archived: true, snapshotAt }).code, "archive");
+const fallback = status.describe({ status: "static", snapshotAt, artifactStatus: "partial-stale", failedTeams: ["BUF"] });
+assert.equal(fallback.code, "stored-fallback");
+assert.match(fallback.detail, /BUF/);
+assert.match(fallback.timestamp, /GMT|BST/);
 
 console.log("freshness status: all checks passed");

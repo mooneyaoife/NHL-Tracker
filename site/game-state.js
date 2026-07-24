@@ -29,6 +29,17 @@
     return values.year && values.month && values.day ? `${values.year}-${values.month}-${values.day}` : "";
   }
 
+  function dateLabel(value, timeZone = "Europe/London") {
+    if (!/^\d{4}-\d{2}-\d{2}$/.test(String(value || ""))) return "Date unavailable";
+    return new Date(`${value}T12:00:00Z`).toLocaleDateString("en-GB", {
+      weekday: "long",
+      day: "numeric",
+      month: "long",
+      year: "numeric",
+      timeZone,
+    });
+  }
+
   function periodTypeFor(game) {
     return upper(first(
       game?.outcome,
@@ -114,9 +125,51 @@
     });
   }
 
+  function describeSlateWindow({ games = [], slateDate = "", now = new Date(), timeZone = "Europe/London" } = {}) {
+    const today = dateInTimeZone(now, timeZone);
+    const month = Number(today.slice(5, 7));
+    const offseason = month === 7 || month === 8;
+    const gameDates = [...new Set(games.map(game => (
+      game?.londonDate || dateInTimeZone(game?.startTimeUTC, timeZone) || String(game?.slateDate || game?.date || "").slice(0, 10)
+    )).filter(Boolean))].sort();
+    const selectedDate = String(slateDate || "").slice(0, 10);
+    const dates = gameDates.length ? gameDates : selectedDate ? [selectedDate] : [];
+    const firstDate = dates[0] || "";
+    const lastDate = dates.at(-1) || firstDate;
+    const dateText = firstDate
+      ? `${dateLabel(firstDate, timeZone)}${lastDate !== firstDate ? ` – ${dateLabel(lastDate, timeZone)}` : ""} · UK time`
+      : "Date unavailable · UK time";
+
+    if (!games.length) {
+      return Object.freeze({
+        code: offseason ? "offseason" : "empty-slate",
+        label: offseason ? "Offseason" : "No games scheduled",
+        notice: offseason
+          ? "The NHL is in its offseason. The next published slate will appear automatically."
+          : "There are no games in today's UK window. The next published slate will appear automatically.",
+        dateText,
+        today,
+        dates,
+        current: false,
+      });
+    }
+
+    const current = dates.includes(today) || selectedDate === today;
+    const future = !current && Boolean(firstDate && today && firstDate > today);
+    const code = current ? "current" : offseason ? (future ? "offseason-next" : "offseason-latest") : future ? "next" : "latest";
+    const label = current ? "Today's NHL slate" : future ? "Next NHL slate" : "Latest NHL slate";
+    const notice = current ? "" : offseason
+      ? `The NHL is in its offseason. Showing the ${future ? "next" : "latest"} published slate; all start times are UK time.`
+      : future
+        ? "There are no NHL games in today's UK window. Showing the next published slate."
+        : "No current NHL games are available. Showing the most recent published slate.";
+    return Object.freeze({ code, label, notice, dateText, today, dates, current });
+  }
+
   return Object.freeze({
     normalizeGameState,
     normalizeSlateState,
+    describeSlateWindow,
     dateInTimeZone,
     LIVE_STATES: LIVE,
     FINAL_STATES: FINAL,

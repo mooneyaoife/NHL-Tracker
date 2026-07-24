@@ -11,19 +11,25 @@
     league:["core","players","analytics"],power:["core","schedule","analytics"],trends:["core","schedule","analytics"],playoffs:["core","schedule","analytics"],
     news:["core","players"],watchlist:["core","players","analytics"],status:["core","schedule","players","analytics"],guide:["core"]
   };
-  let manifest=null,payload=null,legacy=false;
+  let manifest=null,payload=null,legacy=false,manifestPromise=null,legacyPromise=null;
   const loaded=new Set();
+  const inFlight=new Map();
   const merge=(base,addition)=>Object.assign(base,addition||{});
   const responseJson=async(url)=>{const response=await fetch(url,{cache:"no-store"});if(!response.ok)throw new Error(`${url} unavailable (${response.status})`);return response.json()};
   const withDefaults=value=>merge(structuredClone(EMPTY),value);
   async function legacyLoad(url="data/tracker.json"){
-    payload=withDefaults(await responseJson(url));legacy=true;["core","schedule","players","analytics"].forEach(name=>loaded.add(name));return payload;
+    if(legacy&&payload)return payload;
+    if(legacyPromise)return legacyPromise;
+    legacyPromise=responseJson(url).then(value=>{payload=withDefaults(value);legacy=true;["core","schedule","players","analytics"].forEach(name=>loaded.add(name));return payload}).finally(()=>{legacyPromise=null});
+    return legacyPromise;
   }
   async function load({legacyUrl="data/tracker.json",capabilities=["core"]}={}){
     try{
-      manifest=await responseJson("data/tracker-manifest.json");
+      manifestPromise=manifestPromise||responseJson("data/tracker-manifest.json").catch(error=>{manifestPromise=null;throw error});
+      manifest=await manifestPromise;
       const manifestErrors=globalThis.NHLTrackerDataContracts?.validateCapabilityManifest(manifest)||[];if(manifestErrors.length)throw new Error(manifestErrors[0]);
-      payload=withDefaults({});
+      if(!payload)payload=withDefaults({});
+      if(legacy)return payload;
       await ensure(capabilities);
       return payload;
     }catch(error){
@@ -36,9 +42,8 @@
     if(legacy)return payload;
     for(const name of capabilities){
       if(loaded.has(name))continue;
-      const entry=manifest?.capabilities?.[name];
-      if(!entry?.url)return legacyLoad(manifest?.legacyUrl||"data/tracker.json");
-      const shard=await responseJson(entry.url),errors=globalThis.NHLTrackerDataContracts?.validateCapabilityData(name,shard)||[];if(errors.length)throw new Error(errors[0]);merge(payload,shard);loaded.add(name);
+      if(!inFlight.has(name))inFlight.set(name,(async()=>{const entry=manifest?.capabilities?.[name];if(!entry?.url)return legacyLoad(manifest?.legacyUrl||"data/tracker.json");const shard=await responseJson(entry.url),errors=globalThis.NHLTrackerDataContracts?.validateCapabilityData(name,shard)||[];if(errors.length)throw new Error(errors[0]);merge(payload,shard);loaded.add(name);return payload})().finally(()=>inFlight.delete(name)));
+      await inFlight.get(name);
     }
     return payload;
   }
