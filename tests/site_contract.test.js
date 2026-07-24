@@ -49,6 +49,8 @@ assert.match(progressiveShell,/NHLTrackerPendingAction=id/,
   "shell-only controls preserve the user's first action while the full app loads");
 assert.match(app,/pendingAction==="theme-button"[\s\S]{0,180}pendingAction==="global-search-button"/,
   "the complete app replays deferred theme and search actions");
+assert.match(app,/active!==document\.body&&active!==document\.documentElement\?active:el\("global-search-button"\)/,
+  "search restores focus reliably when hydration replaces the original active element");
 assert.match(index,/id="route-status" class="route-status" role="alert" hidden/,
   "recoverable route failures have a visible status surface");
 const quickRoutes=fs.readFileSync(path.join(root,"site/route-app.js"),"utf8");
@@ -65,6 +67,16 @@ assert.doesNotMatch(index,/workspace-command-state/, "Workspace does not repeat 
 assert.match(index,/class="workspace-command"><div><h2>Workspace<\/h2><p id="workspace-command-counts"/, "Workspace keeps useful personal counts beside its heading");
 assert.doesNotMatch(index,/data-section-pane="player-profile" open><summary>(?:Player charts and recent form|Team rankings and complete game log)/, "secondary player evidence is collapsed on first view");
 assert.doesNotMatch(index,/class="expandable analytics-section" open|class="expandable" open><summary>Standings by division/, "deep league evidence is collapsed on first view");
+assert.doesNotMatch(index,/id="analysis-journey"/, "League does not duplicate its tab navigation with a second guided route");
+assert.doesNotMatch(app,/ANALYSIS_JOURNEY|setupAnalysisJourney/, "the removed League journey leaves no dormant runtime behind");
+assert.equal((index.match(/class="expandable comparison-evidence"/g) || []).length, 2, "team and player comparisons reveal full evidence on demand");
+assert.match(index,/id="power-state-note"[\s\S]*id="power-visuals"[\s\S]*id="power-ranking-details"/, "Power Index separates availability, current visuals and historical rankings");
+assert.match(app,/setPowerAvailability\(false,[\s\S]{0,500}power-chart[\s\S]{0,200}power-scatter/, "Power Index suppresses unavailable charts during the offseason");
+assert.match(app,/pane\.dataset\.sectionPrimary==="true"/, "switching Explore tabs opens only their primary disclosure");
+assert.match(app,/\["team-nst-chart","team-monthly","player-nst-chart","nst-goalie-leaders"\][\s\S]{0,180}disclosure\.open=false/, "optional Explore evidence starts collapsed");
+assert.match(designSystem,/#teams>\.section-subnav[\s\S]{0,180}overflow-x:auto/, "the five Team tabs scroll instead of clipping on phones");
+assert.match(designSystem,/details\.section-pane\.active>summary\{display:flex!important\}/, "collapsed specialist evidence keeps a visible disclosure control");
+assert.match(designSystem,/#power-tracked\{grid-template-columns:repeat\(2,minmax\(0,1fr\)\)!important\}/, "followed-team Power cards use a compact phone grid");
 assert.match(app,/\["Schedule","Calendar and UK game times"/, "global search names the destination Schedule consistently");
 assert.match(app,/\["News","Moves, insiders and rosters","news"\]/, "global search names the News destination consistently");
 assert.match(progressiveShell,/NHLTrackerLoadCompleteApp/,"deeper destinations can promote safely to the complete application");
@@ -79,7 +91,7 @@ const shell = worker.match(/const SHELL=(\[[^;]+\]);/)?.[1] || "";
 assert.doesNotMatch(shell, /plotly|seasons\/\d+\.json|tracker-models|puckpedia-mail/i, "offline installation excludes charts, archives and auxiliary data");
 assert.doesNotMatch(shell,/data\/tracker\.json/,"new offline installs use capability artifacts instead of the monolith");
 assert.match(worker,/retaining legacy cache fallback/,"the service worker retains the prior cache during schema migration");
-assert.match(worker,/LEGACY_CACHE="nhl-tracker-7\.25\.0"/,"the migration identifies the immediately preceding cache");
+assert.match(worker,/LEGACY_CACHE="nhl-tracker-7\.26\.0"/,"the migration identifies the immediately preceding cache");
 assert.match(worker,/caches\.delete/,"older cache generations are retired after a complete capability install");
 assert.ok(app.indexOf('initialisePage("dashboard")') < app.indexOf("hydrateLiveInBackground(archived)"), "static Home renders before live enhancement starts");
 const initialisation = app.slice(app.indexOf("async function init"), app.indexOf("function renderFatalError"));

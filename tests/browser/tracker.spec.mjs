@@ -323,6 +323,55 @@ test("remaining fan and utility routes stay inside mobile and intermediate viewp
   }
 });
 
+test("Explore routes keep one primary task and reveal deeper evidence on demand", async ({ page }) => {
+  for (const viewport of [{ width: 375, height: 812 }, { width: 1024, height: 820 }]) {
+    await page.setViewportSize(viewport);
+
+    await page.goto(`/?round8=${viewport.width}-teams#teams`);
+    const teamTabs = page.locator('#teams [data-section-tab]');
+    await expect(teamTabs).toHaveCount(5);
+    expect(await teamTabs.evaluateAll(buttons => buttons.every((button, index) => !buttons[index + 1] || button.getBoundingClientRect().right <= buttons[index + 1].getBoundingClientRect().left + 1))).toBe(true);
+    if (viewport.width === 375) {
+      expect(await page.locator("#teams>.section-subnav").evaluate(nav => nav.scrollWidth > nav.clientWidth)).toBe(true);
+    }
+    await page.locator('[data-section-tab="team-advanced"]').click();
+    await expect(page.locator('[data-section-tab="team-advanced"]')).toHaveAttribute("aria-pressed", "true");
+    const teamStyle = page.locator("#team-nst-chart").locator("xpath=ancestor::details[1]");
+    await expect(teamStyle).not.toHaveAttribute("open", "");
+    await teamStyle.locator("summary").click();
+    await expect(teamStyle).toHaveAttribute("open", "");
+
+    await page.goto(`/?round8=${viewport.width}-league#league`);
+    await expect(page.locator("#analysis-journey")).toHaveCount(0);
+    await expect(page.locator("#league [data-league-tab]")).toHaveCount(3);
+
+    await page.goto(`/?round8=${viewport.width}-power#power`);
+    await expect(page.locator("#power-state-note")).toBeVisible();
+    await expect(page.locator("#power-visuals")).toBeHidden();
+    const powerRanking = page.locator("#power-ranking-details");
+    await expect(powerRanking).not.toHaveAttribute("open", "");
+    if (viewport.width === 375) {
+      const cards = page.locator("#power-tracked .metric");
+      await expect(cards).toHaveCount(4);
+      const tops = await cards.evaluateAll(items => items.slice(0, 2).map(item => Math.round(item.getBoundingClientRect().top)));
+      expect(tops[0]).toBe(tops[1]);
+    }
+    await powerRanking.locator("summary").click();
+    await expect(powerRanking).toHaveAttribute("open", "");
+    await expect(page.locator("#power-table table")).toBeVisible();
+
+    await page.goto(`/?round8=${viewport.width}-compare#compare`);
+    await expect(page.locator("#team-comparison-edge")).toBeVisible();
+    const comparisonEvidence = page.locator("#compare-teams .comparison-evidence");
+    await expect(comparisonEvidence).not.toHaveAttribute("open", "");
+    await comparisonEvidence.locator("summary").click();
+    await expect(comparisonEvidence).toHaveAttribute("open", "");
+    await expect(page.locator("#team-comparison-chart")).toBeVisible();
+
+    expect(await page.evaluate(() => document.documentElement.scrollWidth <= document.documentElement.clientWidth + 1), `Explore routes at ${viewport.width}px`).toBe(true);
+  }
+});
+
 test("utility routes reveal detailed evidence only when requested", async ({ page }) => {
   for (const viewport of [{ width: 375, height: 812 }, { width: 1024, height: 820 }]) {
     await page.setViewportSize(viewport);
@@ -365,7 +414,7 @@ test("utility routes reveal detailed evidence only when requested", async ({ pag
 });
 
 test("principal and redesigned journeys have no serious automated accessibility violations", async ({ page }) => {
-  for (const route of ["dashboard", "tonight", "schedule", "games", "players", "league", "watchlist", "news", "guide", "status"]) {
+  for (const route of ["dashboard", "tonight", "schedule", "games", "teams", "players", "league", "compare", "power", "watchlist", "news", "guide", "status"]) {
     await page.goto("/");
     await page.evaluate(() => localStorage.removeItem("nhl-last-route-v1"));
     await page.goto("about:blank");

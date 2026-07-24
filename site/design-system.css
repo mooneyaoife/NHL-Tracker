@@ -1356,6 +1356,58 @@ tbody tr:hover{background:color-mix(in srgb,var(--brand-soft) 45%,transparent)!i
   }
 }
 
+/* 7.27 · Explore routes lead with decisions and reveal full evidence on demand. */
+.comparison-evidence{margin:0}
+.comparison-evidence>.comparison-analysis{margin:0!important;padding:18px}
+details.section-pane.active>summary{display:flex!important}
+.power-state-note{margin:0 0 16px}
+.power-page.waiting .power-layout{grid-template-columns:minmax(0,1fr)!important}
+#power-visuals[hidden]{display:none!important}
+.power-ranking-details{
+  align-self:start;
+  padding:0!important;
+  overflow:hidden;
+}
+.power-ranking-details>summary{
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:16px;
+  min-height:76px!important;
+  padding:18px!important;
+  cursor:pointer;
+  list-style:none;
+}
+.power-ranking-details>summary::-webkit-details-marker{display:none}
+.power-ranking-details>summary span{display:grid;gap:3px}
+.power-ranking-details>summary h3{margin:0!important}
+.power-ranking-details>summary small{color:var(--ink-soft)}
+.power-ranking-details>summary:after{content:"＋";color:var(--brand);font-size:20px;font-weight:700}
+.power-ranking-details[open]>summary{border-bottom:1px solid var(--rule)}
+.power-ranking-details[open]>summary:after{content:"−"}
+.power-ranking-details>.table-wrap{padding:12px 18px 18px}
+
+@media(max-width:640px){
+  #teams>.section-subnav{
+    display:flex!important;
+    justify-content:flex-start!important;
+    overflow-x:auto!important;
+    scroll-snap-type:x proximity;
+  }
+  #teams>.section-subnav button{
+    flex:0 0 auto!important;
+    min-width:104px!important;
+    padding-inline:10px!important;
+    white-space:nowrap;
+    scroll-snap-align:start;
+  }
+  #power-tracked{grid-template-columns:repeat(2,minmax(0,1fr))!important}
+  #power-tracked .metric{min-height:104px!important;padding:14px!important}
+  #power-tracked .metric .value{font-size:25px!important}
+  .comparison-evidence>.comparison-analysis{padding:10px}
+  .power-ranking-details>summary{min-height:70px!important;padding:15px!important}
+}
+
 @media(min-width:761px) and (max-width:1099px){
   body>#nav{
     width:min(560px,calc(100% - 32px))!important;
