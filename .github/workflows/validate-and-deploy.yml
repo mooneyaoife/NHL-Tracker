@@ -80,9 +80,12 @@ jobs:
       - uses: actions/configure-pages@v6
       - uses: actions/upload-pages-artifact@v5
         with:
+          name: github-pages-${{ github.run_attempt }}
           path: site
       - id: pages
         uses: actions/deploy-pages@v5
+        with:
+          artifact_name: github-pages-${{ github.run_attempt }}
       - name: Build and verify private Cloudflare artifact
         if: vars.CLOUDFLARE_DEPLOY_ENABLED == 'true'
         env:
@@ -118,8 +121,8 @@ jobs:
           ${PRIVATE_URL:+--private-url "$PRIVATE_URL"}
           --max-fresh-age-hours "$MAX_FRESH_AGE_HOURS"
           --max-fallback-age-hours "$MAX_FALLBACK_AGE_HOURS"
-          --attempts 5
-          --retry-delay 6
+          --attempts 10
+          --retry-delay 12
       - name: Summarize deployment destinations
         if: always()
         env:

@@ -1,6 +1,6 @@
 "use strict";
 (()=>{
-  const VERSION="7.22.1";
+  const VERSION="7.23.1";
   const QUICK_PAGES=new Set(["tonight","games","schedule"]);
   const QUICK_SCRIPTS=["game-state.js","data-contracts.js","data-loader.js","route-loader.js","cloudflare-live.js","route-app.js"];
   const FULL_SCRIPTS=["statistics.js","game-state.js","data-contracts.js","data-loader.js","router.js","route-loader.js","preferences.js","live-updates.js","observability.js","cloudflare-live.js","app.js"];
@@ -15,7 +15,7 @@
     document.getElementById("updated").textContent="Opening full tracker…";
     fullLoading=loadScripts(FULL_SCRIPTS,"Full tracker");return fullLoading;
   };
-  const loadFullApp=target=>{if(target&&QUICK_PAGES.has(target)&&!fullLoading){if(target&&document.getElementById(target))history.replaceState(null,"",`${location.pathname}${location.search}#${target}`);if(!quickLoading){document.getElementById("updated").textContent="Opening tracker…";quickLoading=loadScripts(QUICK_SCRIPTS,"Tracker")}return quickLoading.then(()=>window.NHLTrackerQuickRoutes?.open(target))}return loadCompleteApp(target)};
+  const loadFullApp=target=>{if(target&&QUICK_PAGES.has(target)&&!fullLoading){if(target&&document.getElementById(target))history.replaceState(null,"",`${location.pathname}${location.search}#${target}`);if(!quickLoading){document.getElementById("updated").textContent="Opening tracker…";quickLoading=loadScripts(QUICK_SCRIPTS,"Tracker")}return quickLoading.then(()=>window.NHLTrackerQuickRoutes?.ready).then(()=>window.NHLTrackerQuickRoutes?.open(target))}return loadCompleteApp(target)};
   window.NHLTrackerLoadFullApp=loadFullApp;
   window.NHLTrackerLoadCompleteApp=loadCompleteApp;
 
@@ -69,7 +69,10 @@
 
   document.querySelectorAll("#nav [data-default-page]").forEach(button=>button.addEventListener("click",()=>loadFullApp(button.dataset.defaultPage),{once:true}));
   document.querySelectorAll("[data-page],[data-home-page]").forEach(button=>button.addEventListener("click",()=>loadFullApp(button.dataset.page||button.dataset.homePage),{once:true}));
-  for(const id of ["theme-button","global-search-button"])document.getElementById(id)?.addEventListener("click",()=>loadFullApp(),{once:true});
+  for(const id of ["theme-button","global-search-button"])document.getElementById(id)?.addEventListener("click",()=>{
+    window.NHLTrackerPendingAction=id;
+    loadCompleteApp();
+  },{once:true});
   const loadForDashboardExploration=()=>{if(!QUICK_PAGES.has(location.hash.slice(1)))loadFullApp()};
   window.addEventListener("wheel",loadForDashboardExploration,{once:true,passive:true});
   window.addEventListener("touchmove",loadForDashboardExploration,{once:true,passive:true});

@@ -30,10 +30,20 @@ assert.match(app, /NHLTrackerPreferences\.create/, "stored preferences are owned
 const progressiveShell=fs.readFileSync(path.join(root,"site/shell.js"),"utf8");
 assert.match(progressiveShell,/QUICK_PAGES=new Set\(\["tonight","games","schedule"\]\)/,"Tonight, Game Centre and Season use the lightweight route runtime");
 assert.match(progressiveShell,/fetch\("data\/seasons\/index\.json"/, "the progressive shell primes the season picker before the full app loads");
+assert.match(progressiveShell,/NHLTrackerPendingAction=id/,
+  "shell-only controls preserve the user's first action while the full app loads");
+assert.match(app,/pendingAction==="theme-button"[\s\S]{0,180}pendingAction==="global-search-button"/,
+  "the complete app replays deferred theme and search actions");
+assert.match(index,/id="route-status" class="route-status" role="alert" hidden/,
+  "recoverable route failures have a visible status surface");
 const quickRoutes=fs.readFileSync(path.join(root,"site/route-app.js"),"utf8");
 assert.match(quickRoutes,/gameWindow=selected/, "the lightweight Game Centre uses a bounded game window");
 assert.match(quickRoutes,/section\.hidden=section\.id!=="schedule-calendar-chapter"/, "the lightweight Schedule shows one chapter at a time");
 assert.match(quickRoutes,/data-quick-calendar-game/, "the lightweight Schedule renders interactive games inside grouped calendar days");
+assert.match(quickRoutes,/NHLTrackerQuickRoutes=\{open,ready\}/,
+  "the progressive shell can wait for lightweight data initialization");
+assert.match(progressiveShell,/NHLTrackerQuickRoutes\?\.ready/,
+  "direct lightweight routes do not race the capability loader");
 assert.doesNotMatch(quickRoutes,/class="calendar-item"/, "the lightweight Schedule does not fall back to one tile per game");
 assert.doesNotMatch(index,/data-workspace-target="workspace-saved">01/, "Workspace sections are not presented as duplicate numbered files");
 assert.match(app,/\["Schedule","Calendar and UK game times"/, "global search names the destination Schedule consistently");
@@ -49,7 +59,7 @@ const shell = worker.match(/const SHELL=(\[[^;]+\]);/)?.[1] || "";
 assert.doesNotMatch(shell, /plotly|seasons\/\d+\.json|tracker-models|puckpedia-mail/i, "offline installation excludes charts, archives and auxiliary data");
 assert.doesNotMatch(shell,/data\/tracker\.json/,"new offline installs use capability artifacts instead of the monolith");
 assert.match(worker,/retaining legacy cache fallback/,"the service worker retains the prior cache during schema migration");
-assert.match(worker,/LEGACY_CACHE="nhl-tracker-7\.21\.0"/,"the migration identifies the immediately preceding cache");
+assert.match(worker,/LEGACY_CACHE="nhl-tracker-7\.22\.1"/,"the migration identifies the immediately preceding cache");
 assert.match(worker,/caches\.delete/,"older cache generations are retired after a complete capability install");
 assert.ok(app.indexOf('initialisePage("dashboard")') < app.indexOf("hydrateLiveInBackground(archived)"), "static Home renders before live enhancement starts");
 const initialisation = app.slice(app.indexOf("async function init"), app.indexOf("function renderFatalError"));

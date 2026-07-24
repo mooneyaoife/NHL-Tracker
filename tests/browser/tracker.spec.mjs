@@ -43,6 +43,22 @@ test("routes announce changes and search restores keyboard focus", async ({ page
   await expect(page.locator("#global-search-button")).toBeFocused();
 });
 
+test("shell search opens on the first click", async ({ page }) => {
+  await page.goto("/");
+  await page.getByRole("button", { name: "Find anything", exact: true }).click();
+  await expect(page.locator("#global-search-overlay")).toBeVisible({ timeout: 15_000 });
+  await expect(page.locator("#global-search-input")).toBeFocused();
+});
+
+test("shell theme changes on the first click and keeps browser chrome in sync", async ({ page }) => {
+  await page.goto("/");
+  await page.evaluate(() => localStorage.removeItem("nhl-theme"));
+  await page.reload();
+  await page.getByRole("button", { name: "Switch colour theme", exact: true }).click();
+  await expect(page.locator("html")).toHaveAttribute("data-theme", "dark", { timeout: 15_000 });
+  await expect(page.locator('meta[name="theme-color"]')).toHaveAttribute("content", "#111815");
+});
+
 test("postponed games remain exceptional after their original start time", async ({ page }) => {
   await routeTracker(page, data => {
     data.daily = { currentDate: "2026-01-01", games: [{ id: 2026020999, date: "2026-01-01",
