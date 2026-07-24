@@ -1,7 +1,14 @@
 {
   "schema": 1,
-  "updatedAt": "2026-07-24T17:40:16.823Z",
+  "updatedAt": "2026-07-24T23:40:18.120Z",
   "items": [
+    {
+      "id": "900ff5e2ea16705623ed",
+      "title": "Akira Schmid Signs a 2-Year, $4.00M Contract with the Florida Panthers",
+      "publishedAt": "2026-07-24T20:07:09.000Z",
+      "category": "Contract",
+      "url": "https://puckpedia.com/signing/10762?utm_source=email&utm_medium=email&utm_campaign=signing&utm_content=primary"
+    },
     {
       "id": "77f765f688a09f4749f0",
       "title": "Cole Sillinger Signs a 3-Year, $13.88M Contract with the Columbus Blue Jackets",
@@ -204,13 +211,6 @@
       "publishedAt": "2026-07-15T12:59:09.000Z",
       "category": "Contract",
       "url": "https://puckpedia.com/signing/10733?utm_source=email&utm_medium=email&utm_campaign=signing&utm_content=primary"
-    },
-    {
-      "id": "8089a56047ad8f6e5409",
-      "title": "Oliver Suvanto Signs a 3-Year, $3.23M Contract with the Washington Capitals",
-      "publishedAt": "2026-07-15T01:15:09.000Z",
-      "category": "Contract",
-      "url": "https://puckpedia.com/signing/10732?utm_source=email&utm_medium=email&utm_campaign=signing&utm_content=primary"
     }
   ]
 }
