@@ -31,6 +31,12 @@ assert.match(scheduled, /check_artifact_health\.py/,
   "scheduled generation records artifact health before committing data");
 assert.match(live, /check_artifact_health\.py/,
   "live deployments use the same artifact health gate");
+for (const workflow of [deploy, live]) {
+  assert.match(workflow, /name: github-pages-\$\{\{ github\.run_attempt \}\}/,
+    "each deployment attempt uploads a uniquely named Pages artifact");
+  assert.match(workflow, /artifact_name: github-pages-\$\{\{ github\.run_attempt \}\}/,
+    "the Pages deployment selects the artifact from the current attempt");
+}
 for (const workflow of [deploy, scheduled, live]) {
   assert.match(workflow, /MAX_FRESH_ARTIFACT_AGE_HOURS/);
   assert.match(workflow, /MAX_FALLBACK_ARTIFACT_AGE_HOURS/);
@@ -40,6 +46,8 @@ assert.match(live, /GITHUB_STEP_SUMMARY/);
 assert.match(deploy, /CLOUDFLARE_ACCESS_CLIENT_ID/);
 assert.match(deploy, /verify_production\.py/,
   "post-deployment verification checks deployed artifacts and authenticated health");
+assert.match(deploy, /--attempts 10[\s\S]{0,80}--retry-delay 12/,
+  "deployment verification tolerates normal multi-origin propagation lag");
 assert.match(production, /cron: "17 6 \* \* \*"/,
   "production verification runs once daily");
 assert.match(production, /verify_production\.py/);

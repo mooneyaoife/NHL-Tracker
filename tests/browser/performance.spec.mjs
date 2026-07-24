@@ -11,6 +11,7 @@ test("Home mobile LCP remains within 2.5 seconds",async({page})=>{
 });
 
 test("Tonight uses the lightweight runtime and core data only",async({page})=>{
+  const errors=[];page.on("console",message=>{if(message.type()==="error")errors.push(message.text())});
   await page.goto("/#tonight");
   await expect(page.locator("#tonight")).toHaveClass(/active/);
   const rows=await resources(page),names=rows.map(row=>row.name);
@@ -22,6 +23,7 @@ test("Tonight uses the lightweight runtime and core data only",async({page})=>{
   expect((await resources(page)).map(row=>row.name)).not.toContain("/app.js");
   const javascript=rows.filter(row=>row.name.endsWith(".js")).reduce((sum,row)=>sum+row.bytes,0);
   expect(javascript).toBeLessThanOrEqual(438000);
+  expect(errors.filter(message=>message.includes("Data loader must be initialised"))).toEqual([]);
 });
 
 test("Game Centre transfers at least 40 percent less route data",async({page})=>{
