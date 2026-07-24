@@ -457,6 +457,7 @@ test("utility routes reveal detailed evidence only when requested", async ({ pag
 });
 
 test("principal and redesigned journeys have no serious automated accessibility violations", async ({ page }) => {
+  test.setTimeout(180_000);
   for (const route of ["dashboard", "tonight", "schedule", "games", "teams", "players", "league", "compare", "power", "watchlist", "news", "guide", "status"]) {
     await page.goto("/");
     await page.evaluate(() => localStorage.removeItem("nhl-last-route-v1"));

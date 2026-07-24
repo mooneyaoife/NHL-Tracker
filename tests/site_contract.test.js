@@ -38,12 +38,17 @@ assert.doesNotMatch(criticalConsolidation, /Inter|Georgia|Times New Roman/, "cri
 assert.match(criticalConsolidation, /font-weight:730;line-height:1;letter-spacing:-\.045em/, "critical title metrics match the canonical hierarchy");
 assert.doesNotMatch(index, /tonight-slate-rail/, "Tonight does not repeat every game in a second navigation rail");
 assert.match(index, /class="schedule-command"[\s\S]*?<h2>Schedule<\/h2>/, "the schedule page has an unambiguous title");
-for (const asset of ["statistics.js", "game-state.js", "data-contracts.js", "data-loader.js", "router.js", "route-loader.js", "route-app.js", "preferences.js", "live-updates.js", "observability.js", "cloudflare-live.js", "app.js"]) {
-  assert.match(worker, new RegExp(`${asset.replace(".", "\\.")}\\?v=${uiVersion.replaceAll(".", "\\.")}`), `${asset} is available offline`);
-  if (asset !== "game-state.js") assert.match(fs.readFileSync(path.join(root,"site/shell.js"),"utf8"),new RegExp(asset.replace(".","\\.")),`${asset} is loaded by the progressive shell`);
+const progressiveShell=fs.readFileSync(path.join(root,"site/shell.js"),"utf8");
+const installShellAssets=JSON.parse(worker.match(/const SHELL=(\[[^;]+\]);/)?.[1] || "[]");
+const runtimeAssets=["statistics.js", "data-contracts.js", "data-loader.js", "router.js", "route-loader.js", "route-app.js", "preferences.js", "live-updates.js", "observability.js", "cloudflare-live.js", "app.js"];
+for (const asset of runtimeAssets) assert.match(progressiveShell,new RegExp(asset.replace(".","\\.")),`${asset} is loaded by the progressive shell`);
+for (const asset of ["game-state.js", "data-contracts.js", "data-loader.js", "route-loader.js", "route-app.js", "cloudflare-live.js"]) {
+  assert.match(worker, new RegExp(`${asset.replace(".", "\\.")}\\?v=${uiVersion.replaceAll(".", "\\.")}`), `${asset} supports the dependable offline routes`);
+}
+for (const asset of ["statistics.js", "router.js", "preferences.js", "live-updates.js", "observability.js", "app.js"]) {
+  assert.ok(!installShellAssets.some(value=>value.split("?")[0]===`./${asset}`),`${asset} is cached only after explicit use`);
 }
 assert.match(app, /NHLTrackerPreferences\.create/, "stored preferences are owned by the extracted module");
-const progressiveShell=fs.readFileSync(path.join(root,"site/shell.js"),"utf8");
 assert.match(progressiveShell,/QUICK_PAGES=new Set\(\["tonight","games","schedule"\]\)/,"Tonight, Game Centre and Season use the lightweight route runtime");
 assert.match(progressiveShell,/fetch\("data\/seasons\/index\.json"/, "the progressive shell primes the season picker before the full app loads");
 assert.match(progressiveShell,/NHLTrackerPendingAction=id/,
@@ -87,6 +92,11 @@ assert.match(designSystem,/#power-tracked\{grid-template-columns:repeat\(2,minma
 assert.match(app,/\["Schedule","Calendar and UK game times"/, "global search names the destination Schedule consistently");
 assert.match(app,/\["News","Moves, insiders and rosters","news"\]/, "global search names the News destination consistently");
 assert.match(progressiveShell,/NHLTrackerLoadCompleteApp/,"deeper destinations can promote safely to the complete application");
+assert.doesNotMatch(progressiveShell,/addEventListener\("(?:wheel|touchmove)"/,"passive Home exploration never downloads the full application");
+assert.doesNotMatch(progressiveShell,/\["ArrowDown","PageDown","End"," "\]/,"ordinary page navigation keys never download the full application");
+assert.match(progressiveShell,/needs a connection the first time it is opened/,"an uncached deep route explains its offline limitation");
+assert.match(progressiveShell,/fullLoading=null;throw error/,"a failed full-route request can be retried");
+assert.match(progressiveShell,/quickLoading=null;throw error/,"a failed lightweight-route request can be retried");
 for(const group of ["night","season","people","explore"])assert.ok(fs.existsSync(path.join(root,`site/routes/${group}.js`)),`${group} has a native lazy route module`);
 const capabilityManifest=JSON.parse(fs.readFileSync(path.join(root,"site/data/tracker-manifest.json"),"utf8"));
 assert.deepEqual(Object.keys(capabilityManifest.capabilities).sort(),["analytics","core","players","schedule"]);
@@ -97,9 +107,9 @@ assert.match(worker, new RegExp(`const CACHE="nhl-tracker-${uiVersion.replaceAll
 const shell = worker.match(/const SHELL=(\[[^;]+\]);/)?.[1] || "";
 assert.doesNotMatch(shell, /plotly|seasons\/\d+\.json|tracker-models|puckpedia-mail/i, "offline installation excludes charts, archives and auxiliary data");
 assert.doesNotMatch(shell,/data\/tracker\.json/,"new offline installs use capability artifacts instead of the monolith");
-assert.match(worker,/retaining legacy cache fallback/,"the service worker retains the prior cache during schema migration");
-assert.match(worker,/LEGACY_CACHE="nhl-tracker-7\.27\.0"/,"the migration identifies the immediately preceding cache");
+assert.doesNotMatch(worker,/LEGACY_CACHE/,"a verified install does not retain a duplicate full cache generation");
 assert.match(worker,/caches\.delete/,"older cache generations are retired after a complete capability install");
+assert.match(worker,/names\.filter\(name=>name!==CACHE\)/,"every previous cache generation is retired after verification");
 assert.ok(app.indexOf('initialisePage("dashboard")') < app.indexOf("hydrateLiveInBackground(archived)"), "static Home renders before live enhancement starts");
 const initialisation = app.slice(app.indexOf("async function init"), app.indexOf("function renderFatalError"));
 assert.doesNotMatch(initialisation, /await\s+window\.NHLCloudflareLive\.hydrate/, "live enhancement never blocks initial rendering");

@@ -10,6 +10,18 @@ test("Home mobile LCP remains within 2.5 seconds",async({page})=>{
   expect(await page.evaluate(()=>window.__lcp)).toBeLessThanOrEqual(2500);
 });
 
+test("ordinary Home exploration does not download the full application",async({page})=>{
+  await page.goto("/");
+  await expect(page.locator("#dashboard")).toHaveClass(/active/);
+  await page.evaluate(()=>{
+    window.dispatchEvent(new WheelEvent("wheel",{deltaY:480}));
+    window.dispatchEvent(new Event("touchmove"));
+    window.dispatchEvent(new KeyboardEvent("keydown",{key:"PageDown"}));
+  });
+  await page.waitForTimeout(150);
+  expect((await resources(page)).map(row=>row.name)).not.toContain("/app.js");
+});
+
 test("Tonight uses the lightweight runtime and core data only",async({page})=>{
   const errors=[];page.on("console",message=>{if(message.type()==="error")errors.push(message.text())});
   await page.goto("/#tonight");

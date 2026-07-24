@@ -8,7 +8,7 @@ Current-season data is generated as four capability artifacts: `tracker-core.jso
 
 Cloudflare score and schedule requests settle independently. The overlay can retain the last good component and labels the result `live`, `partial-live`, `cached`, `partial-cached`, `stale` or `static-fallback`. The header exposes that state. API secrets remain GitHub secrets or Cloudflare environment bindings; they must never be written to `site/`.
 
-The service worker precaches Home, the core and compact schedule capabilities, the lightweight route runtime, and the application shell. Offline Home, Tonight and the Season calendar therefore remain useful. This migration release retains the preceding cache so a legacy `tracker.json` can recover an interrupted capability upgrade. Live refreshes, advanced/player capability files, Plotly charts, archived seasons, mail and model data require a connection and are labelled as unavailable without replacing stored content.
+The service worker precaches Home, the core and compact schedule capabilities, and only the lightweight runtime needed by Home, Tonight and the Season calendar. Full application code, live refreshes, advanced/player capability files, Plotly charts, archived seasons, mail and model data are cached after explicit use rather than during installation. A deep route therefore needs a connection the first time it is opened; the interface explains that limitation while the dependable offline routes remain available. Previous cache generations are retired only after the new offline shell and capability files have been verified.
 
 ## Generation safety
 
