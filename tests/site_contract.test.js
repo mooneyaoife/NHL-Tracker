@@ -171,6 +171,8 @@ for (const match of index.matchAll(/data-(?:page|default-page)="([^"]+)"/g)) ass
 assert.ok(idSet.has("availability-lines-source") && idSet.has("availability-pairings-source"), "Lineups exposes its evidence season consistently");
 assert.match(app, /if\(page==="availability"\)void ensureAvailabilityEvidence/, "direct Lineups routes load completed-season evidence");
 assert.doesNotMatch(app, /Tracked team-games|Detailed tracked players/, "Status does not describe league-wide data as a followed-team subset");
+assert.doesNotMatch(app, /renderGameLibrary\(\);renderMatchupIntelligence\(\);renderGame\(\)/, "Game Centre does not fetch hidden historical matchup evidence during initialisation");
+assert.match(app, /if\(id==="intelligence"\)\{renderMatchupIntelligence\(\)/, "Matchup Intelligence loads its evidence after explicit activation");
 
 for (const side of ["a", "b"]) {
   assert.ok(idSet.has(`player-compare-team-${side}`), `player comparison side ${side} has a team selector`);

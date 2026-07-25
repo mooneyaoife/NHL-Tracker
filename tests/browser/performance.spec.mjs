@@ -65,6 +65,21 @@ test("detailed Game Centre reuses quick-route dependencies",async({page})=>{
   }
 });
 
+test("detailed Game Centre defers historical matchup evidence",async({page})=>{
+  await page.goto("/#games");
+  await expect(page.locator("[data-open-complete-game]")).toBeVisible();
+  await page.locator("[data-open-complete-game]").click();
+  await expect(page.getByRole("button",{name:"Browse library",exact:true})).toBeVisible({timeout:15000});
+  const historical=row=>/\/data\/seasons\/\d{8}\.json$/.test(row.name);
+  expect((await resources(page)).filter(historical)).toHaveLength(0);
+  const archivedSeason=await page.locator("#matchup-evidence-season option").evaluateAll(options=>options.find(option=>!option.textContent.includes("Current"))?.value||"");
+  expect(archivedSeason).not.toBe("");
+  await page.locator("#matchup-evidence-season").evaluate((select,value)=>{select.value=value},archivedSeason);
+  await page.locator('[data-game-view="intelligence"]').click();
+  await expect.poll(async()=> (await resources(page)).some(historical),{timeout:15000}).toBe(true);
+  await expect(page.locator("#matchup-intelligence-detail")).not.toContainText("Loading",{timeout:15000});
+});
+
 test("Season transfers at least 40 percent less route data",async({page})=>{
   await page.goto("/#schedule");
   await expect(page.locator("#schedule")).toHaveClass(/active/);
