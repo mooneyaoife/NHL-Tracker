@@ -37,6 +37,15 @@
       }
       const status = normalize(game);
       detail.innerHTML = `<article class="game-hero quick-game-hero"><span>${escape(status.label)} · ${escape(londonTime(game.startTimeUTC))} UK</span><h3>${escape(teamName(game.away))} ${game.awayScore ?? ""} · ${escape(teamName(game.home))} ${game.homeScore ?? ""}</h3><p>The stored schedule and score remain available. Detailed charts and live play-by-play load on demand.</p><button type="button" data-open-complete-game>Open detailed analysis</button></article>`;
+      if (browseNavigation) {
+        browseNavigation.innerHTML = '<button type="button" disabled>← Previous game</button><button type="button" data-open-complete-view>Browse library</button><button type="button" disabled>Next game →</button>';
+        const browseButton = browseNavigation.querySelector?.("[data-open-complete-view]");
+        if (browseButton) {
+          browseButton.addEventListener("pointerenter", prefetchDetailed, { once: true });
+          browseButton.addEventListener("focus", prefetchDetailed, { once: true });
+          browseButton.onclick = openCompleteView;
+        }
+      }
       const detailedButton = detail.querySelector("[data-open-complete-game]");
       const primeDetailed = () => prefetchDetailed();
       detailedButton.addEventListener("pointerenter", primeDetailed, { once: true });
@@ -46,9 +55,17 @@
     };
 
     select.onchange = render;
-    refreshButton.onclick = () => {
+    refreshButton.onclick = async () => {
       if (refreshStatus) refreshStatus.textContent = "Checking the latest stored and live data…";
-      reload();
+      refreshButton.disabled = true;
+      try {
+        await reload();
+      } catch (error) {
+        if (refreshStatus) refreshStatus.textContent = "Refresh failed. The stored game view remains available.";
+        console.warn(error);
+      } finally {
+        refreshButton.disabled = false;
+      }
     };
     viewButtons.forEach(button => {
       if (button.dataset.gameView !== "featured") {

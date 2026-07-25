@@ -18,6 +18,7 @@ class CloudflareBuildTests(unittest.TestCase):
             encoding="utf-8",
         )
         (self.source / "app.js").write_text("const base = 'https://mooneyaoife.github.io/NHL-Tracker/';", encoding="utf-8")
+        (self.source / "core-routes.css").write_text("body { display: block; }", encoding="utf-8")
         (self.source / "cloudflare-live.js").write_text("window.NHLCloudflareLive = {};", encoding="utf-8")
         for name in ("route-app.js", "game-centre.js", "data-loader.js", "route-loader.js"):
             (self.source / name).write_text("", encoding="utf-8")

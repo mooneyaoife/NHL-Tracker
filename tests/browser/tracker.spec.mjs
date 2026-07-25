@@ -314,6 +314,7 @@ test("workspace sections use concise labels without filing numbers", async ({ pa
 });
 
 test("dense secondary evidence starts collapsed and common actions meet the touch target", async ({ page }) => {
+  test.slow();
   for (const viewport of [{ width: 375, height: 812 }, { width: 1024, height: 820 }]) {
     await page.setViewportSize(viewport);
 

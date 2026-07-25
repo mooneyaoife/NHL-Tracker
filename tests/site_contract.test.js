@@ -7,13 +7,14 @@ const index = fs.readFileSync(path.join(root, "site/index.html"), "utf8");
 const app = fs.readFileSync(path.join(root, "site/app.js"), "utf8");
 const worker = fs.readFileSync(path.join(root, "site/sw.js"), "utf8");
 const critical = fs.readFileSync(path.join(root, "site/critical.css"), "utf8");
+const coreRoutes = fs.readFileSync(path.join(root, "site/core-routes.css"), "utf8");
 const designSystem = fs.readFileSync(path.join(root, "site/design-system.css"), "utf8");
 const gameCentre = fs.readFileSync(path.join(root, "site/game-centre.js"), "utf8");
 const buildMeta = JSON.parse(fs.readFileSync(path.join(root, "site/build-meta.json"), "utf8"));
 
 const uiVersion = app.match(/^const UI_VERSION="([^"]+)";/)?.[1];
 assert.ok(uiVersion, "the application exposes a UI version");
-for (const asset of ["critical.css", "design-system.css", "shell.js"]) {
+for (const asset of ["critical.css", "core-routes.css", "shell.js"]) {
   assert.match(index, new RegExp(`${asset.replace(".", "\\.")}\\?v=${uiVersion.replaceAll(".", "\\.")}`), `${asset} uses the current UI cache key`);
   assert.match(worker, new RegExp(`${asset.replace(".", "\\.")}\\?v=${uiVersion.replaceAll(".", "\\.")}`), `${asset} is cached with the current UI version`);
 }
@@ -41,6 +42,18 @@ assert.doesNotMatch(index, /tonight-slate-rail/, "Tonight does not repeat every 
 assert.match(index, /class="schedule-command"[\s\S]*?<h2>Schedule<\/h2>/, "the schedule page has an unambiguous title");
 const progressiveShell=fs.readFileSync(path.join(root,"site/shell.js"),"utf8");
 const installShellAssets=JSON.parse(worker.match(/const SHELL=(\[[^;]+\]);/)?.[1] || "[]");
+for (const selector of [".home-masthead", ".tonight-command", ".calendar-grid", ".game-centre-controls", ".quick-game-hero"]) {
+  assert.match(coreRoutes, new RegExp(selector.replace(".", "\\.")), `${selector} remains styled by the dependable route bundle`);
+}
+assert.doesNotMatch(index, /href="(?:styles|theme-569|design-system)\.css/, "canonical deep-route styles are deferred");
+for (const asset of ["styles.css", "theme-569.css", "design-system.css"]) {
+  assert.ok(!installShellAssets.some(value=>value.split("?")[0]===`./${asset}`),`${asset} is cached only after a deep route is opened`);
+  assert.match(progressiveShell,new RegExp(asset.replace(".","\\.")),`${asset} is available to complete routes`);
+}
+assert.match(progressiveShell,/loadCompleteStyles\(\)[\s\S]{0,180}loadScripts\(FULL_SCRIPTS/, "complete styles settle before the full route runtime renders");
+assert.match(progressiveShell,/link\.rel="preload";link\.as="style"/, "explicit deep-route intent fetches complete styles at preload priority");
+assert.doesNotMatch(progressiveShell,/link\.media="not all"/, "complete styles are not deprioritized behind a non-matching media query");
+assert.match(progressiveShell,/link\.rel="stylesheet";link\.removeAttribute\("as"\);link\.media="all"/, "complete styles activate together in canonical order");
 const runtimeAssets=["statistics.js", "data-contracts.js", "data-loader.js", "router.js", "route-loader.js", "route-app.js", "preferences.js", "live-updates.js", "observability.js", "cloudflare-live.js", "app.js"];
 for (const asset of runtimeAssets) assert.match(progressiveShell,new RegExp(asset.replace(".","\\.")),`${asset} is loaded by the progressive shell`);
 for (const asset of ["game-state.js", "data-contracts.js", "data-loader.js", "route-loader.js", "route-app.js", "cloudflare-live.js"]) {
@@ -75,6 +88,9 @@ assert.match(app,/describeSlateWindow\(\{games,slateDate:daily\.currentDate/, "t
 assert.match(index,/id="tonight-notice"[^>]*role="status"[^>]*aria-live="polite"/, "Tonight announces exceptional and non-current slate states");
 assert.match(index,/id="game-refresh-status"[^>]*role="status"/, "Game Centre exposes refresh success and failure without removing stored data");
 assert.match(app,/Refresh failed\. The stored game view remains available\./, "manual refresh failures explain that retained data is still usable");
+assert.match(gameCentre,/data-open-complete-view>Browse library/, "the lightweight Game Centre keeps library navigation available while detailed code loads");
+assert.match(gameCentre,/Refresh failed\. The stored game view remains available\./, "the lightweight Game Centre preserves its stored view when refresh fails");
+assert.match(quickRoutes,/tracker\.json\?live=/, "the lightweight Game Centre checks the latest artifact without waiting for the detailed app");
 assert.match(app,/const liveState=m\.cloudflareLive\?window\.NHLTrackerFreshnessStatus\?\.describe/, "Status reuses the same live, partial, cached and stale labels as the header");
 assert.match(quickRoutes,/section\.hidden=section\.id!=="schedule-calendar-chapter"/, "the lightweight Schedule shows one chapter at a time");
 assert.match(quickRoutes,/data-quick-calendar-game/, "the lightweight Schedule renders interactive games inside grouped calendar days");
@@ -126,7 +142,7 @@ assert.match(worker,/names\.filter\(name=>name!==CACHE\)/,"every previous cache 
 assert.ok(app.indexOf('initialisePage("dashboard")') < app.indexOf("hydrateLiveInBackground(archived)"), "static Home renders before live enhancement starts");
 const initialisation = app.slice(app.indexOf("async function init"), app.indexOf("function renderFatalError"));
 assert.doesNotMatch(initialisation, /await\s+window\.NHLCloudflareLive\.hydrate/, "live enhancement never blocks initial rendering");
-assert.match(index, /styles\.css\?v=6\.0\.0" media="print"/, "non-critical styles do not block the first paint");
+assert.match(index, new RegExp(`core-routes\\.css\\?v=${uiVersion.replaceAll(".", "\\.")}" media="print"`), "the compact route bundle does not block first paint");
 assert.doesNotMatch(index, /<script defer src="app\.js/, "the analytical application is not parsed before first paint");
 assert.match(index, /property="og:image"/);
 assert.match(index, /name="twitter:card" content="summary_large_image"/);
