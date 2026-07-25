@@ -88,6 +88,9 @@ assert.match(app,/describeSlateWindow\(\{games,slateDate:daily\.currentDate/, "t
 assert.match(index,/id="tonight-notice"[^>]*role="status"[^>]*aria-live="polite"/, "Tonight announces exceptional and non-current slate states");
 assert.match(index,/id="game-refresh-status"[^>]*role="status"/, "Game Centre exposes refresh success and failure without removing stored data");
 assert.match(app,/Refresh failed\. The stored game view remains available\./, "manual refresh failures explain that retained data is still usable");
+assert.match(gameCentre,/data-open-complete-view>Browse library/, "the lightweight Game Centre keeps library navigation available while detailed code loads");
+assert.match(gameCentre,/Refresh failed\. The stored game view remains available\./, "the lightweight Game Centre preserves its stored view when refresh fails");
+assert.match(quickRoutes,/tracker\.json\?live=/, "the lightweight Game Centre checks the latest artifact without waiting for the detailed app");
 assert.match(app,/const liveState=m\.cloudflareLive\?window\.NHLTrackerFreshnessStatus\?\.describe/, "Status reuses the same live, partial, cached and stale labels as the header");
 assert.match(quickRoutes,/section\.hidden=section\.id!=="schedule-calendar-chapter"/, "the lightweight Schedule shows one chapter at a time");
 assert.match(quickRoutes,/data-quick-calendar-game/, "the lightweight Schedule renders interactive games inside grouped calendar days");
