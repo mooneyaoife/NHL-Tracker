@@ -82,6 +82,10 @@ assert.match(quickRoutes,/NHLTrackerQuickRoutes=\{open,ready\}/,
   "the progressive shell can wait for lightweight data initialization");
 assert.match(progressiveShell,/NHLTrackerQuickRoutes\?\.ready/,
   "direct lightweight routes do not race the capability loader");
+assert.match(quickRoutes,/page==="games"\?\["core"\]/, "Game Centre summaries use only the compact core artifact");
+assert.match(progressiveShell,/scriptRequests\.has\(name\)/, "promotion to the complete app reuses quick-route script requests");
+assert.match(progressiveShell,/connection\?\.saveData/, "detailed-view prefetch respects reduced-data preferences");
+assert.match(gameCentre,/addEventListener\("pointerenter", primeDetailed/, "Game Centre warms detailed scripts only after deliberate intent");
 assert.doesNotMatch(quickRoutes,/class="calendar-item"/, "the lightweight Schedule does not fall back to one tile per game");
 assert.doesNotMatch(index,/data-workspace-target="workspace-saved">01/, "Workspace sections are not presented as duplicate numbered files");
 assert.doesNotMatch(index,/workspace-command-state/, "Workspace does not repeat its selected chapter in the page header");

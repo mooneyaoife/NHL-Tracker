@@ -11,11 +11,12 @@ SPEC.loader.exec_module(MODULE)
 
 class SplitTrackerDataTests(unittest.TestCase):
     def test_split_preserves_capability_contracts_and_compacts_false_evidence(self):
-        payload = {"meta": {"season": "20262027", "dataHash": "sha256:test"}, "standings": [], "teams": {}, "daily": {"games": []},
+        payload = {"meta": {"season": "20262027", "dataHash": "sha256:test", "trackedTeams": ["MTL"]}, "standings": [], "teams": {}, "daily": {"games": []},
                    "games": [{"id": 1, "team": "MTL", "opponent": "TOR", "date": "2026-10-01", "schedule": {"restDays": 0, "backToBack": False, "travelKm": 900}}],
                    "rosters": {"MTL": []}, "gameCentre": {"1": {"landing": {}}}}
         shards = MODULE.split_payload(payload)
         self.assertEqual(set(shards), {"core", "schedule", "players", "analytics"})
+        self.assertEqual(shards["core"]["games"], shards["schedule"]["games"])
         self.assertEqual(shards["schedule"]["games"][0]["schedule"], {"travelKm": 900})
         self.assertIn("rosters", shards["players"])
         self.assertIn("gameCentre", shards["analytics"])
@@ -34,6 +35,20 @@ class SplitTrackerDataTests(unittest.TestCase):
             self.assertEqual(manifest["schema"], 1)
             self.assertEqual(set(manifest["capabilities"]), {"core", "schedule", "players", "analytics"})
             self.assertTrue(all(len(item["sha256"]) == 64 for item in manifest["capabilities"].values()))
+
+    def test_core_game_window_keeps_daily_and_bounds_followed_games(self):
+        games = [{"id": index, "team": "MTL", "opponent": "TOR", "date": f"2026-10-{index:02d}", "finished": False}
+                 for index in range(1, 13)]
+        games += [{"id": 90 + index, "team": "MTL", "opponent": "BOS", "date": f"2026-09-{index:02d}", "finished": True}
+                  for index in range(1, 7)]
+        games.append({"id": 999, "team": "CAR", "opponent": "SJS", "date": "2026-10-01", "finished": False})
+        payload = {"meta": {"trackedTeams": ["MTL"]}, "daily": {"games": [{"id": 999}]}, "games": games}
+        window = MODULE.compact_game_window(payload)
+        ids = {row["id"] for row in window}
+        self.assertEqual(len(window), 15)
+        self.assertIn(999, ids)
+        self.assertEqual(len(ids & set(range(1, 13))), 10)
+        self.assertEqual(len(ids & set(range(91, 97))), 4)
 
 
 if __name__ == "__main__":

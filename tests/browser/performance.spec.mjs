@@ -43,11 +43,24 @@ test("Tonight uses the lightweight runtime and core data only",async({page})=>{
 test("Game Centre transfers at least 40 percent less route data",async({page})=>{
   await page.goto("/#games");
   await expect(page.locator("#games")).toHaveClass(/active/);
-  const rows=await resources(page),data=rows.filter(row=>/\/data\/tracker-(core|schedule|analytics|manifest)\.json$/.test(row.name)).reduce((sum,row)=>sum+row.bytes,0);
+  const rows=await resources(page),data=rows.filter(row=>/\/data\/tracker-(core|manifest)\.json$/.test(row.name)).reduce((sum,row)=>sum+row.bytes,0);
   expect(rows.map(row=>row.name)).not.toContain("/data/tracker.json");
   expect(rows.map(row=>row.name)).not.toContain("/data/tracker-players.json");
+  expect(rows.map(row=>row.name)).not.toContain("/data/tracker-schedule.json");
+  expect(rows.map(row=>row.name)).not.toContain("/data/tracker-analytics.json");
   expect(rows.map(row=>row.name)).toContain("/game-centre.js");
-  expect(data).toBeLessThanOrEqual(1554682);
+  expect(data).toBeLessThanOrEqual(75000);
+});
+
+test("detailed Game Centre reuses quick-route dependencies",async({page})=>{
+  await page.goto("/#games");
+  await expect(page.locator("[data-open-complete-game]")).toBeVisible();
+  await page.locator("[data-open-complete-game]").click();
+  await expect(page.locator("#games")).toHaveClass(/active/);
+  const scripts=await page.locator("script[src]").evaluateAll(nodes=>nodes.map(node=>new URL(node.src).pathname));
+  for(const name of ["data-contracts.js","data-loader.js","route-loader.js","cloudflare-live.js"]){
+    expect(scripts.filter(path=>path.endsWith(`/${name}`)),`${name} is executed once`).toHaveLength(1);
+  }
 });
 
 test("Season transfers at least 40 percent less route data",async({page})=>{
