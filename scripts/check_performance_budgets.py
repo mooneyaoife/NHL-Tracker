@@ -41,6 +41,13 @@ def main() -> int:
     if not full_match:
         raise RuntimeError("Could not read the complete application scripts")
     full_scripts = json.loads(full_match.group(1))
+    styles_match = re.search(r"const FULL_STYLES=(\[[^;]+\]);", shell_source)
+    if not styles_match:
+        raise RuntimeError("Could not read the deferred application styles")
+    version_match = re.search(r'const VERSION="([^"]+)";', shell_source)
+    if not version_match:
+        raise RuntimeError("Could not read the application version")
+    full_styles = json.loads(styles_match.group(1).replace("VERSION", json.dumps(version_match.group(1))))
     non_analytical_js = initial_js + total([SITE / value for value in quick_scripts])
     shell_match = re.search(r"const SHELL=(\[[^;]+\]);", worker)
     if not shell_match:
@@ -48,7 +55,8 @@ def main() -> int:
     shell = json.loads(shell_match.group(1))
     offline_cache = total(list(dict.fromkeys(local_path(value) for value in shell)))
     manifest = json.loads((SITE / "data" / "tracker-manifest.json").read_text())
-    measurements = {"initialJavaScriptBytes": initial_js, "initialStylesheetBytes": total(styles), "initialDataBytes": initial_data,
+    measurements = {"initialJavaScriptBytes": initial_js, "initialStylesheetBytes": total(styles),
+        "deferredStylesheetBytes": total([SITE / value["name"] for value in full_styles]), "initialDataBytes": initial_data,
         "offlineCacheBytes": offline_cache, "nonAnalyticalJavaScriptBytes": non_analytical_js,
         "fullApplicationJavaScriptBytes": total(list(dict.fromkeys(SITE / value for value in full_scripts))),
         "gameCentreRouteDataBytes": manifest["capabilities"]["core"]["bytes"] + (SITE / "data" / "tracker-manifest.json").stat().st_size,

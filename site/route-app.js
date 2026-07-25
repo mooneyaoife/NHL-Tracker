@@ -1,6 +1,6 @@
 (function initialiseQuickRoutes(){
   "use strict";
-  const VERSION="7.31.0",loader=window.NHLTrackerDataLoader,state=window.NHLTrackerGameState,routes=window.NHLTrackerRoutes,el=id=>document.getElementById(id),escape=value=>String(value??"").replace(/[&<>"']/g,char=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[char]));
+  const VERSION="7.32.0",loader=window.NHLTrackerDataLoader,state=window.NHLTrackerGameState,routes=window.NHLTrackerRoutes,el=id=>document.getElementById(id),escape=value=>String(value??"").replace(/[&<>"']/g,char=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[char]));
   let data=null,current="dashboard",gameCentreLoading=null;
   const seasonLabel=value=>{const season=String(value||"");return season.length===8?`${season.slice(0,4)}–${season.slice(6)}`:"Current season"};
   const teams=()=>data?.meta?.trackedTeams||[];

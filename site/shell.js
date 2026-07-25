@@ -1,10 +1,11 @@
 "use strict";
 (()=>{
-  const VERSION="7.31.0";
+  const VERSION="7.32.0";
   const QUICK_PAGES=new Set(["tonight","games","schedule"]);
   const QUICK_SCRIPTS=["data-contracts.js","data-loader.js","route-loader.js","cloudflare-live.js","route-app.js"];
   const FULL_SCRIPTS=["statistics.js","data-contracts.js","data-loader.js","router.js","route-loader.js","preferences.js","live-updates.js","observability.js","cloudflare-live.js","app.js"];
-  let quickLoading=null,fullLoading=null;
+  const FULL_STYLES=[{"name":"styles.css","version":"6.0.0"},{"name":"theme-569.css","version":"6.0.0"},{"name":"design-system.css","version":VERSION}];
+  let quickLoading=null,fullLoading=null,fullStylesLoading=null;
   const scriptRequests=new Map(),prefetchedScripts=new Set();
   const seasonLabel=value=>{const season=String(value||"");return season.length===8?`${season.slice(0,4)}–${season.slice(6)}`:"Current season"};
   const dateLabel=value=>{const date=new Date(value);return Number.isFinite(date.getTime())?date.toLocaleString("en-GB",{dateStyle:"medium",timeStyle:"short"}):"Latest artifact"};
@@ -27,6 +28,12 @@
     scriptRequests.set(name,request);return request;
   };
   const loadScripts=(names,label)=>Promise.all(names.map(loadScript)).then(()=>{}).catch(error=>{reportLoadFailure(label,error);throw error});
+  const loadCompleteStyles=()=>{
+    if(fullStylesLoading)return fullStylesLoading;
+    const links=FULL_STYLES.map(asset=>{const link=document.createElement("link");link.rel="stylesheet";link.media="not all";link.href=`${asset.name}?v=${asset.version}`;return link});
+    fullStylesLoading=Promise.all(links.map((link,index)=>new Promise((resolve,reject)=>{link.onload=resolve;link.onerror=()=>reject(new Error(`${FULL_STYLES[index].name} could not load`));document.head.appendChild(link)}))).then(()=>{for(const link of links)link.media="all"}).catch(error=>{for(const link of links)link.remove();fullStylesLoading=null;throw error});
+    return fullStylesLoading;
+  };
   const canPrefetch=()=>{const connection=navigator.connection||navigator.mozConnection||navigator.webkitConnection;return navigator.onLine!==false&&!connection?.saveData&&!/^(slow-)?2g$/.test(connection?.effectiveType||"")};
   const prefetchCompleteApp=()=>{
     if(!canPrefetch())return false;
@@ -40,7 +47,7 @@
     if(target&&document.getElementById(target))history.replaceState(null,"",`${location.pathname}${location.search}#${target}`);
     if(fullLoading)return fullLoading;
     document.getElementById("updated").textContent="Opening full tracker…";
-    fullLoading=loadScripts(FULL_SCRIPTS,"Full tracker").catch(error=>{fullLoading=null;throw error});return fullLoading;
+    fullLoading=loadCompleteStyles().catch(error=>{reportLoadFailure("Full tracker",error);throw error}).then(()=>loadScripts(FULL_SCRIPTS,"Full tracker")).catch(error=>{fullLoading=null;throw error});return fullLoading;
   };
   const loadFullApp=target=>{if(target&&QUICK_PAGES.has(target)&&!fullLoading){if(target&&document.getElementById(target))history.replaceState(null,"",`${location.pathname}${location.search}#${target}`);if(!quickLoading){document.getElementById("updated").textContent="Opening tracker…";quickLoading=loadScripts(QUICK_SCRIPTS,"Tracker").catch(error=>{quickLoading=null;throw error})}return quickLoading.then(()=>window.NHLTrackerQuickRoutes?.ready).then(()=>window.NHLTrackerQuickRoutes?.open(target))}return loadCompleteApp(target)};
   const requestLoad=target=>{void loadFullApp(target).catch(()=>{})};
@@ -50,6 +57,7 @@
   };
   window.NHLTrackerLoadFullApp=loadFullApp;
   window.NHLTrackerLoadCompleteApp=loadCompleteApp;
+  window.NHLTrackerLoadCompleteStyles=loadCompleteStyles;
   window.NHLTrackerPrefetchCompleteApp=prefetchCompleteApp;
 
   const renderHome=summary=>{

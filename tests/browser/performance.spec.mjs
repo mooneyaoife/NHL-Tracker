@@ -19,8 +19,10 @@ test("ordinary Home exploration does not download the full application",async({p
     window.dispatchEvent(new KeyboardEvent("keydown",{key:"PageDown"}));
   });
   await page.waitForTimeout(150);
-  expect((await resources(page)).map(row=>row.name)).not.toContain("/app.js");
-  expect((await resources(page)).map(row=>row.name)).not.toContain("/game-centre.js");
+  const names=(await resources(page)).map(row=>row.name);
+  expect(names).not.toContain("/app.js");
+  expect(names).not.toContain("/game-centre.js");
+  for(const stylesheet of ["/styles.css","/theme-569.css","/design-system.css"])expect(names).not.toContain(stylesheet);
 });
 
 test("Tonight uses the lightweight runtime and core data only",async({page})=>{
@@ -78,6 +80,9 @@ test("player profile loads player capabilities without unused chart code",async(
   expect(rows.map(row=>row.name)).not.toContain("/data/tracker.json");
   expect(rows.map(row=>row.name)).not.toContain("/data/tracker-schedule.json");
   expect(rows.map(row=>row.name)).not.toContain("/vendor/plotly-2.35.2.min.js");
+  for(const stylesheet of ["/styles.css","/theme-569.css","/design-system.css"])expect(rows.map(row=>row.name)).toContain(stylesheet);
+  const activeStyles=await page.locator('link[rel="stylesheet"]').evaluateAll(links=>links.filter(link=>["styles.css","theme-569.css","design-system.css"].some(name=>link.href.includes(name))).map(link=>link.media));
+  expect(activeStyles).toEqual(["all","all","all"]);
 });
 
 test("the first analytical chart records bounded script work",async({page})=>{

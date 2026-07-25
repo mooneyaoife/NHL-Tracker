@@ -37,6 +37,8 @@ Open `http://localhost:8000`.
 
 To inspect the existing generated site without refreshing external data, run only the second command.
 
+When the canonical files `site/styles.css`, `site/theme-569.css` or `site/design-system.css` change, regenerate the checked-in immediate-route bundle with `node scripts/extract_core_styles.mjs`. The complete cascade remains available on demand for deeper routes.
+
 ## Validate
 
 ```bash
@@ -45,6 +47,7 @@ python scripts/check_artifact_health.py
 python -m py_compile scripts/*.py
 python -m unittest discover -s tests -p "test_*.py"
 node --check site/app.js
+node --check scripts/extract_core_styles.mjs
 node tests/game_state.test.js
 node tests/cloudflare_live_overlay.test.js
 node tests/live_updates.test.js
