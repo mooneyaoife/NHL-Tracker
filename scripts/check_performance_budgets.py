@@ -28,6 +28,7 @@ def total(paths: list[Path]) -> int:
 def main() -> int:
     index = (SITE / "index.html").read_text()
     scripts = [local_path(value) for value in re.findall(r'<script[^>]+src="([^"]+)"', index)]
+    styles = list(dict.fromkeys(local_path(value) for value in re.findall(r'<link[^>]+rel="stylesheet"[^>]+href="([^"]+)"', index)))
     initial_js = total(scripts)
     initial_data = total([SITE / "data" / "home.json", SITE / "build-meta.json"])
     worker = (SITE / "sw.js").read_text()
@@ -36,14 +37,21 @@ def main() -> int:
     if not quick_match:
         raise RuntimeError("Could not read the quick-route scripts")
     quick_scripts = json.loads(quick_match.group(1))
+    full_match = re.search(r"const FULL_SCRIPTS=(\[[^;]+\]);", shell_source)
+    if not full_match:
+        raise RuntimeError("Could not read the complete application scripts")
+    full_scripts = json.loads(full_match.group(1))
     non_analytical_js = initial_js + total([SITE / value for value in quick_scripts])
     shell_match = re.search(r"const SHELL=(\[[^;]+\]);", worker)
     if not shell_match:
         raise RuntimeError("Could not read the service-worker shell")
     shell = json.loads(shell_match.group(1))
     offline_cache = total(list(dict.fromkeys(local_path(value) for value in shell)))
-    measurements = {"initialJavaScriptBytes": initial_js, "initialDataBytes": initial_data,
+    manifest = json.loads((SITE / "data" / "tracker-manifest.json").read_text())
+    measurements = {"initialJavaScriptBytes": initial_js, "initialStylesheetBytes": total(styles), "initialDataBytes": initial_data,
         "offlineCacheBytes": offline_cache, "nonAnalyticalJavaScriptBytes": non_analytical_js,
+        "fullApplicationJavaScriptBytes": total(list(dict.fromkeys(SITE / value for value in full_scripts))),
+        "gameCentreRouteDataBytes": manifest["capabilities"]["core"]["bytes"] + (SITE / "data" / "tracker-manifest.json").stat().st_size,
         "seasonRouteDataBytes": total([SITE / "data" / "tracker-core.json", SITE / "data" / "tracker-schedule.json"])}
     failures = [f"{name}: {value} > {BUDGETS[name]}" for name, value in measurements.items()
         if value > BUDGETS[name]]

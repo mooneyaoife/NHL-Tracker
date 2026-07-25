@@ -18,6 +18,7 @@
     londonTime,
     teamName,
     escape,
+    prefetchDetailed = () => {},
     openDetailed,
     openCompleteView,
     reload = () => window.location.reload(),
@@ -36,7 +37,12 @@
       }
       const status = normalize(game);
       detail.innerHTML = `<article class="game-hero quick-game-hero"><span>${escape(status.label)} · ${escape(londonTime(game.startTimeUTC))} UK</span><h3>${escape(teamName(game.away))} ${game.awayScore ?? ""} · ${escape(teamName(game.home))} ${game.homeScore ?? ""}</h3><p>The stored schedule and score remain available. Detailed charts and live play-by-play load on demand.</p><button type="button" data-open-complete-game>Open detailed analysis</button></article>`;
-      detail.querySelector("[data-open-complete-game]").onclick = () => openDetailed(game);
+      const detailedButton = detail.querySelector("[data-open-complete-game]");
+      const primeDetailed = () => prefetchDetailed();
+      detailedButton.addEventListener("pointerenter", primeDetailed, { once: true });
+      detailedButton.addEventListener("focus", primeDetailed, { once: true });
+      detailedButton.addEventListener("touchstart", primeDetailed, { once: true, passive: true });
+      detailedButton.onclick = () => openDetailed(game);
     };
 
     select.onchange = render;
@@ -45,7 +51,11 @@
       reload();
     };
     viewButtons.forEach(button => {
-      if (button.dataset.gameView !== "featured") button.onclick = openCompleteView;
+      if (button.dataset.gameView !== "featured") {
+        button.addEventListener("pointerenter", prefetchDetailed, { once: true });
+        button.addEventListener("focus", prefetchDetailed, { once: true });
+        button.onclick = openCompleteView;
+      }
     });
     render();
   }

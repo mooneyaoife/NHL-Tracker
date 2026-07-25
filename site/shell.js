@@ -1,10 +1,11 @@
 "use strict";
 (()=>{
-  const VERSION="7.30.0";
+  const VERSION="7.31.0";
   const QUICK_PAGES=new Set(["tonight","games","schedule"]);
   const QUICK_SCRIPTS=["data-contracts.js","data-loader.js","route-loader.js","cloudflare-live.js","route-app.js"];
   const FULL_SCRIPTS=["statistics.js","data-contracts.js","data-loader.js","router.js","route-loader.js","preferences.js","live-updates.js","observability.js","cloudflare-live.js","app.js"];
   let quickLoading=null,fullLoading=null;
+  const scriptRequests=new Map(),prefetchedScripts=new Set();
   const seasonLabel=value=>{const season=String(value||"");return season.length===8?`${season.slice(0,4)}–${season.slice(6)}`:"Current season"};
   const dateLabel=value=>{const date=new Date(value);return Number.isFinite(date.getTime())?date.toLocaleString("en-GB",{dateStyle:"medium",timeStyle:"short"}):"Latest artifact"};
   const gameState=window.NHLTrackerGameState;
@@ -20,7 +21,21 @@
     if(announcer)announcer.textContent=message;
     console.error(error);
   };
-  const loadScripts=(names,label)=>new Promise((resolve,reject)=>{let remaining=names.length;for(const name of names){const script=document.createElement("script");script.src=`${name}?v=${VERSION}`;script.async=false;script.onload=()=>{remaining-=1;if(!remaining)resolve()};script.onerror=()=>reject(new Error(`${name} could not load`));document.body.appendChild(script)}}).catch(error=>{reportLoadFailure(label,error);throw error});
+  const loadScript=name=>{
+    if(scriptRequests.has(name))return scriptRequests.get(name);
+    const request=new Promise((resolve,reject)=>{const script=document.createElement("script");script.src=`${name}?v=${VERSION}`;script.async=false;script.onload=resolve;script.onerror=()=>reject(new Error(`${name} could not load`));document.body.appendChild(script)}).catch(error=>{scriptRequests.delete(name);throw error});
+    scriptRequests.set(name,request);return request;
+  };
+  const loadScripts=(names,label)=>Promise.all(names.map(loadScript)).then(()=>{}).catch(error=>{reportLoadFailure(label,error);throw error});
+  const canPrefetch=()=>{const connection=navigator.connection||navigator.mozConnection||navigator.webkitConnection;return navigator.onLine!==false&&!connection?.saveData&&!/^(slow-)?2g$/.test(connection?.effectiveType||"")};
+  const prefetchCompleteApp=()=>{
+    if(!canPrefetch())return false;
+    for(const name of FULL_SCRIPTS){
+      if(scriptRequests.has(name)||prefetchedScripts.has(name))continue;
+      const link=document.createElement("link");link.rel="preload";link.as="script";link.href=`${name}?v=${VERSION}`;document.head.appendChild(link);prefetchedScripts.add(name);
+    }
+    return true;
+  };
   const loadCompleteApp=target=>{
     if(target&&document.getElementById(target))history.replaceState(null,"",`${location.pathname}${location.search}#${target}`);
     if(fullLoading)return fullLoading;
@@ -35,6 +50,7 @@
   };
   window.NHLTrackerLoadFullApp=loadFullApp;
   window.NHLTrackerLoadCompleteApp=loadCompleteApp;
+  window.NHLTrackerPrefetchCompleteApp=prefetchCompleteApp;
 
   const renderHome=summary=>{
     const season=seasonLabel(summary.season),updated=dateLabel(summary.dataGeneratedAt),games=summary.daily?.games||[],teams=summary.teams||{},slate=gameState.describeSlateWindow({games,slateDate:summary.daily?.currentDate||summary.daily?.slateDate});
