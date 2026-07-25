@@ -30,8 +30,8 @@
   const loadScripts=(names,label)=>Promise.all(names.map(loadScript)).then(()=>{}).catch(error=>{reportLoadFailure(label,error);throw error});
   const loadCompleteStyles=()=>{
     if(fullStylesLoading)return fullStylesLoading;
-    const links=FULL_STYLES.map(asset=>{const link=document.createElement("link");link.rel="stylesheet";link.media="not all";link.href=`${asset.name}?v=${asset.version}`;return link});
-    fullStylesLoading=Promise.all(links.map((link,index)=>new Promise((resolve,reject)=>{link.onload=resolve;link.onerror=()=>reject(new Error(`${FULL_STYLES[index].name} could not load`));document.head.appendChild(link)}))).then(()=>{for(const link of links)link.media="all"}).catch(error=>{for(const link of links)link.remove();fullStylesLoading=null;throw error});
+    const links=FULL_STYLES.map(asset=>{const link=document.createElement("link");link.rel="preload";link.as="style";link.href=`${asset.name}?v=${asset.version}`;return link});
+    fullStylesLoading=Promise.all(links.map((link,index)=>new Promise((resolve,reject)=>{link.onload=resolve;link.onerror=()=>reject(new Error(`${FULL_STYLES[index].name} could not load`));document.head.appendChild(link)}))).then(()=>{for(const link of links){link.rel="stylesheet";link.removeAttribute("as");link.media="all"}}).catch(error=>{for(const link of links)link.remove();fullStylesLoading=null;throw error});
     return fullStylesLoading;
   };
   const canPrefetch=()=>{const connection=navigator.connection||navigator.mozConnection||navigator.webkitConnection;return navigator.onLine!==false&&!connection?.saveData&&!/^(slow-)?2g$/.test(connection?.effectiveType||"")};

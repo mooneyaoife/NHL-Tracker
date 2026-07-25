@@ -51,6 +51,9 @@ for (const asset of ["styles.css", "theme-569.css", "design-system.css"]) {
   assert.match(progressiveShell,new RegExp(asset.replace(".","\\.")),`${asset} is available to complete routes`);
 }
 assert.match(progressiveShell,/loadCompleteStyles\(\)[\s\S]{0,180}loadScripts\(FULL_SCRIPTS/, "complete styles settle before the full route runtime renders");
+assert.match(progressiveShell,/link\.rel="preload";link\.as="style"/, "explicit deep-route intent fetches complete styles at preload priority");
+assert.doesNotMatch(progressiveShell,/link\.media="not all"/, "complete styles are not deprioritized behind a non-matching media query");
+assert.match(progressiveShell,/link\.rel="stylesheet";link\.removeAttribute\("as"\);link\.media="all"/, "complete styles activate together in canonical order");
 const runtimeAssets=["statistics.js", "data-contracts.js", "data-loader.js", "router.js", "route-loader.js", "route-app.js", "preferences.js", "live-updates.js", "observability.js", "cloudflare-live.js", "app.js"];
 for (const asset of runtimeAssets) assert.match(progressiveShell,new RegExp(asset.replace(".","\\.")),`${asset} is loaded by the progressive shell`);
 for (const asset of ["game-state.js", "data-contracts.js", "data-loader.js", "route-loader.js", "route-app.js", "cloudflare-live.js"]) {

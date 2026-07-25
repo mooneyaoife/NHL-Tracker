@@ -81,8 +81,8 @@ test("player profile loads player capabilities without unused chart code",async(
   expect(rows.map(row=>row.name)).not.toContain("/data/tracker-schedule.json");
   expect(rows.map(row=>row.name)).not.toContain("/vendor/plotly-2.35.2.min.js");
   for(const stylesheet of ["/styles.css","/theme-569.css","/design-system.css"])expect(rows.map(row=>row.name)).toContain(stylesheet);
-  const activeStyles=await page.locator('link[rel="stylesheet"]').evaluateAll(links=>links.filter(link=>["styles.css","theme-569.css","design-system.css"].some(name=>link.href.includes(name))).map(link=>link.media));
-  expect(activeStyles).toEqual(["all","all","all"]);
+  const activeStyles=await page.locator('link[rel="stylesheet"]').evaluateAll(links=>links.filter(link=>["styles.css","theme-569.css","design-system.css"].some(name=>link.href.includes(name))).map(link=>({rel:link.rel,media:link.media})));
+  expect(activeStyles).toEqual([{rel:"stylesheet",media:"all"},{rel:"stylesheet",media:"all"},{rel:"stylesheet",media:"all"}]);
 });
 
 test("the first analytical chart records bounded script work",async({page})=>{
