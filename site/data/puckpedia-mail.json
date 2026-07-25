@@ -1,7 +1,14 @@
 {
   "schema": 1,
-  "updatedAt": "2026-07-25T17:40:18.315Z",
+  "updatedAt": "2026-07-25T23:40:12.543Z",
   "items": [
+    {
+      "id": "10b6e6da08f8883dd560",
+      "title": "Nikita Klepov Signs a 3-Year, $3.23M Contract with the Anaheim Ducks",
+      "publishedAt": "2026-07-25T20:26:09.000Z",
+      "category": "Contract",
+      "url": "https://puckpedia.com/signing/10763?utm_source=email&utm_medium=email&utm_campaign=signing&utm_content=primary"
+    },
     {
       "id": "900ff5e2ea16705623ed",
       "title": "Akira Schmid Signs a 2-Year, $4.00M Contract with the Florida Panthers",
@@ -202,13 +209,6 @@
       "id": "3cecc7f4d170ff5e55ad",
       "title": "Anthony Mantha Signs a 2-Year, $9.50M Contract with the New Jersey Devils",
       "publishedAt": "2026-07-15T13:16:10.000Z",
-      "category": "Contract",
-      "url": "https://puckpedia.com/signing/10733?utm_source=email&utm_medium=email&utm_campaign=signing&utm_content=primary"
-    },
-    {
-      "id": "4cea9c3cbf1631084566",
-      "title": "Anthony Mantha Signs a 2-Year, $9.50M Contract with the Pittsburgh Penguins",
-      "publishedAt": "2026-07-15T12:59:09.000Z",
       "category": "Contract",
       "url": "https://puckpedia.com/signing/10733?utm_source=email&utm_medium=email&utm_campaign=signing&utm_content=primary"
     }
