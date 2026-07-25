@@ -20,6 +20,7 @@ test("ordinary Home exploration does not download the full application",async({p
   });
   await page.waitForTimeout(150);
   expect((await resources(page)).map(row=>row.name)).not.toContain("/app.js");
+  expect((await resources(page)).map(row=>row.name)).not.toContain("/game-centre.js");
 });
 
 test("Tonight uses the lightweight runtime and core data only",async({page})=>{
@@ -30,6 +31,7 @@ test("Tonight uses the lightweight runtime and core data only",async({page})=>{
   expect(names).toContain("/data/tracker-core.json");
   expect(names).not.toContain("/data/tracker.json");
   expect(names).not.toContain("/app.js");
+  expect(names).not.toContain("/game-centre.js");
   await page.evaluate(()=>window.dispatchEvent(new WheelEvent("wheel",{deltaY:240})));
   await page.waitForTimeout(100);
   expect((await resources(page)).map(row=>row.name)).not.toContain("/app.js");
@@ -44,6 +46,7 @@ test("Game Centre transfers at least 40 percent less route data",async({page})=>
   const rows=await resources(page),data=rows.filter(row=>/\/data\/tracker-(core|schedule|analytics|manifest)\.json$/.test(row.name)).reduce((sum,row)=>sum+row.bytes,0);
   expect(rows.map(row=>row.name)).not.toContain("/data/tracker.json");
   expect(rows.map(row=>row.name)).not.toContain("/data/tracker-players.json");
+  expect(rows.map(row=>row.name)).toContain("/game-centre.js");
   expect(data).toBeLessThanOrEqual(1554682);
 });
 

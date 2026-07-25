@@ -8,6 +8,7 @@ const app = fs.readFileSync(path.join(root, "site/app.js"), "utf8");
 const worker = fs.readFileSync(path.join(root, "site/sw.js"), "utf8");
 const critical = fs.readFileSync(path.join(root, "site/critical.css"), "utf8");
 const designSystem = fs.readFileSync(path.join(root, "site/design-system.css"), "utf8");
+const gameCentre = fs.readFileSync(path.join(root, "site/game-centre.js"), "utf8");
 const buildMeta = JSON.parse(fs.readFileSync(path.join(root, "site/build-meta.json"), "utf8"));
 
 const uiVersion = app.match(/^const UI_VERSION="([^"]+)";/)?.[1];
@@ -60,6 +61,14 @@ assert.match(app,/active!==document\.body&&active!==document\.documentElement\?a
 assert.match(index,/id="route-status" class="route-status" role="alert" hidden/,
   "recoverable route failures have a visible status surface");
 const quickRoutes=fs.readFileSync(path.join(root,"site/route-app.js"),"utf8");
+assert.match(quickRoutes,/game-centre\.js\?v=\$\{VERSION\}/, "Game Centre owns a separately loaded route module");
+assert.match(quickRoutes,/await ensureGameCentreModule\(\)/, "direct Game Centre routes wait for their module before rendering");
+assert.match(gameCentre,/createDetailController/, "detailed Game Centre request state is owned by the route module");
+assert.match(gameCentre,/createDetailView/, "Game Centre loading, empty and fallback presentation is owned by the route module");
+assert.match(gameCentre,/status: "superseded"/, "late game-detail responses cannot replace a newer selection");
+assert.match(app,/GAME_CENTRE_MODULE_LOADING=null;throw error/, "failed Game Centre module requests remain retryable");
+assert.match(quickRoutes,/gameCentreLoading=null;throw error/, "the lightweight Game Centre can retry a failed module request");
+assert.ok(!installShellAssets.some(value=>value.split("?")[0]==="./game-centre.js"), "Game Centre code is cached only after the route is opened");
 assert.match(quickRoutes,/gameWindow=selected/, "the lightweight Game Centre uses a bounded game window");
 assert.match(quickRoutes,/describeSlateWindow/, "the lightweight Tonight route uses the shared UK-time game-window contract");
 assert.match(app,/describeSlateWindow\(\{games,slateDate:daily\.currentDate/, "the complete Tonight route uses the same game-window contract");

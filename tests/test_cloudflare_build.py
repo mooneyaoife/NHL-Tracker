@@ -19,7 +19,7 @@ class CloudflareBuildTests(unittest.TestCase):
         )
         (self.source / "app.js").write_text("const base = 'https://mooneyaoife.github.io/NHL-Tracker/';", encoding="utf-8")
         (self.source / "cloudflare-live.js").write_text("window.NHLCloudflareLive = {};", encoding="utf-8")
-        for name in ("route-app.js", "data-loader.js", "route-loader.js"):
+        for name in ("route-app.js", "game-centre.js", "data-loader.js", "route-loader.js"):
             (self.source / name).write_text("", encoding="utf-8")
         data = self.source / "data"
         data.mkdir()

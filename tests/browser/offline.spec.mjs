@@ -6,14 +6,14 @@ test("installed Home, Tonight and Schedule survive offline",async({browser,baseU
   await page.goto("/");
   await page.evaluate(async()=>{const registration=await navigator.serviceWorker.ready;if(!registration.active)await new Promise(resolve=>navigator.serviceWorker.addEventListener("controllerchange",resolve,{once:true}))});
   const cached=await page.evaluate(async()=>{
-    const names=await caches.keys(),active=names.find(name=>name.includes("7.29.0")),keys=active?await (await caches.open(active)).keys():[];
+    const names=await caches.keys(),active=names.find(name=>name.includes("7.30.0")),keys=active?await (await caches.open(active)).keys():[];
     return keys.map(request=>new URL(request.url).pathname);
   });
   expect(cached).toContain("/data/home.json");
   expect(cached).toContain("/data/tracker-core.json");
   expect(cached).toContain("/data/tracker-schedule.json");
   expect(cached).not.toContain("/app.js");
-  expect((await page.evaluate(()=>caches.keys())).filter(name=>name.startsWith("nhl-tracker-"))).toEqual(["nhl-tracker-7.29.0"]);
+  expect((await page.evaluate(()=>caches.keys())).filter(name=>name.startsWith("nhl-tracker-"))).toEqual(["nhl-tracker-7.30.0"]);
   await page.goto("about:blank");
   await page.goto("/#tonight");
   await expect(page.locator("#tonight")).toHaveClass(/active/);

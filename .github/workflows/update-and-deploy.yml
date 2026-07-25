@@ -31,12 +31,14 @@ jobs:
           python scripts/generate_build_metadata.py
           python -m unittest discover -s tests -p 'test_*.py'
           node --check site/app.js
+          node --check site/game-centre.js
           node --check site/game-state.js
           node --check site/cloudflare-live.js
           node --check site/statistics.js
           node tests/game_state.test.js
           node tests/cloudflare_live_overlay.test.js
           node tests/live_updates.test.js
+          node tests/game_centre.test.js
           node --check site/sw.js
           node tests/frontend_statistics.test.js
           node tests/data_integrity.test.js

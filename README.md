@@ -16,6 +16,8 @@ A personal NHL companion for scores, schedules, game context, team and player an
 
 The site supports light and dark themes, keyboard navigation, reduced motion, responsive layouts and installation as a progressive web app.
 
+The frontend uses a progressive shell: Home loads first, Tonight and Schedule use compact route data, and deeper analytical code loads on demand. Game Centre has its own route module for the lightweight summary, detailed request lifecycle, stale-response protection and recoverable fallback states.
+
 ## Data
 
 The scheduled updater combines official NHL data with approved MoneyPuck downloads. Natural Stat Trick CSV imports remain manual and are handled through the in-site refresh helper. PuckPedia mail exports contain only public-link metadata and are validated independently of NHL refreshes.
@@ -46,6 +48,7 @@ node --check site/app.js
 node tests/game_state.test.js
 node tests/cloudflare_live_overlay.test.js
 node tests/live_updates.test.js
+node tests/game_centre.test.js
 node tests/site_contract.test.js
 node tests/workflow_contract.test.js
 node --test tests/cloudflare_api.test.mjs
