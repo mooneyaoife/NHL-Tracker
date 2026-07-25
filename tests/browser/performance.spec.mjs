@@ -72,8 +72,9 @@ test("detailed Game Centre defers historical matchup evidence",async({page})=>{
   await expect(page.getByRole("button",{name:"Browse library",exact:true})).toBeVisible({timeout:15000});
   const historical=row=>/\/data\/seasons\/\d{8}\.json$/.test(row.name);
   expect((await resources(page)).filter(historical)).toHaveLength(0);
-  const archivedSeason=await page.locator("#matchup-evidence-season option").evaluateAll(options=>options.find(option=>!option.textContent.includes("Current"))?.value||"");
-  expect(archivedSeason).not.toBe("");
+  const archivedSeasonOption=()=>page.locator("#matchup-evidence-season option").evaluateAll(options=>options.find(option=>!option.textContent.includes("Current"))?.value||"");
+  await expect.poll(archivedSeasonOption,{timeout:15000}).not.toBe("");
+  const archivedSeason=await archivedSeasonOption();
   await page.locator("#matchup-evidence-season").evaluate((select,value)=>{select.value=value},archivedSeason);
   await page.locator('[data-game-view="intelligence"]').click();
   await expect.poll(async()=> (await resources(page)).some(historical),{timeout:15000}).toBe(true);
