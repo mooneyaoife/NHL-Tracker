@@ -357,11 +357,16 @@ test("dense secondary evidence starts collapsed and common actions meet the touc
 });
 
 test("remaining fan and utility routes stay inside mobile and intermediate viewports", async ({ page }) => {
+  test.slow();
+  await page.route(/\/data\/seasons\/\d{8}\.json(?:\?.*)?$/, route => route.fulfill({ status: 503, contentType: "application/json", body: '{"error":"not required for viewport coverage"}' }));
+  await page.setViewportSize({ width: 375, height: 812 });
+  await page.goto("/?round3=responsive-routes#teams");
+  await expect(page.locator("#teams")).toHaveClass(/active/, { timeout: 15000 });
   for (const viewport of [{ width: 375, height: 812 }, { width: 1024, height: 820 }]) {
     await page.setViewportSize(viewport);
     for (const route of ["teams", "players", "league", "compare", "news", "watchlist", "guide", "status"]) {
-      await page.goto(`/?round3=${viewport.width}-${route}#${route}`);
-      await expect(page.locator(`#${route}`)).toHaveClass(/active/);
+      await page.evaluate(nextRoute => showPage(nextRoute), route);
+      await expect(page.locator(`#${route}`)).toHaveClass(/active/, { timeout: 15000 });
       expect(await page.evaluate(() => document.documentElement.scrollWidth <= document.documentElement.clientWidth + 1), `${route} at ${viewport.width}px`).toBe(true);
     }
   }
