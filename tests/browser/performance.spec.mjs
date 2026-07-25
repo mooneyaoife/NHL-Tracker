@@ -65,6 +65,25 @@ test("detailed Game Centre reuses quick-route dependencies",async({page})=>{
   }
 });
 
+test("detailed Game Centre defers historical matchup evidence",async({page})=>{
+  test.slow();
+  await page.route("**/data/seasons/index.json",route=>route.fulfill({json:{current:"20262027",seasons:[{season:"20262027",label:"2026–27",current:true},{season:"20252026",label:"2025–26",current:false}]}}));
+  let historicalRequests=0;
+  await page.route(/\/data\/seasons\/\d{8}\.json(?:\?.*)?$/,route=>{historicalRequests+=1;return route.fulfill({status:503,contentType:"application/json",body:'{"error":"simulated archive outage"}'})});
+  await page.goto("/#games");
+  await expect(page.locator("[data-open-complete-game]")).toBeVisible();
+  await page.locator("[data-open-complete-game]").click();
+  await expect(page.locator('#game-browse-nav [data-game-view="library"]')).toBeVisible({timeout:45000});
+  expect(historicalRequests).toBe(0);
+  const archivedSeasonOption=()=>page.locator("#matchup-evidence-season option").evaluateAll(options=>options.find(option=>!option.textContent.includes("Current"))?.value||"");
+  await expect.poll(archivedSeasonOption,{timeout:15000}).not.toBe("");
+  const archivedSeason=await archivedSeasonOption();
+  await page.locator("#matchup-evidence-season").evaluate((select,value)=>{select.value=value},archivedSeason);
+  await page.locator('[data-game-view="intelligence"]').click();
+  await expect.poll(()=>historicalRequests,{timeout:15000}).toBe(1);
+  await expect(page.locator("#matchup-intelligence-detail")).toContainText("unavailable",{timeout:15000});
+});
+
 test("Season transfers at least 40 percent less route data",async({page})=>{
   await page.goto("/#schedule");
   await expect(page.locator("#schedule")).toHaveClass(/active/);
