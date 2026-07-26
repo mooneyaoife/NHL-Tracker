@@ -2,6 +2,19 @@ import {test,expect} from "@playwright/test";
 
 const resources=page=>page.evaluate(()=>performance.getEntriesByType("resource").map(entry=>({name:new URL(entry.name).pathname,bytes:entry.decodedBodySize||entry.transferSize||0,duration:entry.duration,initiatorType:entry.initiatorType})));
 
+test("Home keeps a useful shell visible while its snapshot loads",async({page})=>{
+  await page.route(/\/data\/home\.json(?:\?.*)?$/,async route=>{
+    await new Promise(resolve=>setTimeout(resolve,1500));
+    await route.continue();
+  });
+  await page.goto("/",{waitUntil:"domcontentloaded"});
+  await expect(page.locator("#dashboard")).toHaveClass(/home-pending/);
+  await expect(page.locator(".home-masthead")).toBeVisible();
+  await expect(page.locator("#dashboard-page-heading")).toBeVisible();
+  await expect(page.locator("#today-games")).toBeHidden();
+  await expect(page.locator("#home-tonight-title")).toBeVisible({timeout:5000});
+});
+
 test("Home mobile LCP remains within 2.5 seconds",async({page})=>{
   await page.addInitScript(()=>{window.__lcp=0;new PerformanceObserver(list=>{for(const entry of list.getEntries())window.__lcp=Math.max(window.__lcp,entry.startTime)}).observe({type:"largest-contentful-paint",buffered:true})});
   await page.goto("/");
