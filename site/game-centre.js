@@ -23,15 +23,20 @@
     openCompleteView,
     reload = () => window.location.reload(),
   }) {
-    select.innerHTML = games.map(game =>
+    const unavailable = selected && !games.some(game => String(game.id) === String(selected));
+    select.innerHTML = (unavailable
+      ? `<option value="${escape(selected)}">Requested game unavailable</option>`
+      : "") + games.map(game =>
       `<option value="${escape(game.id)}">${escape(game.date || "")} · ${escape(game.away)} at ${escape(game.home)} · ${escape(normalize(game).label)}</option>`
     ).join("");
-    if (selected && games.some(game => String(game.id) === String(selected))) select.value = String(selected);
+    if (selected) select.value = String(selected);
 
     const render = () => {
-      const game = games.find(row => String(row.id) === select.value) || games[0];
+      const game = games.find(row => String(row.id) === select.value);
       if (!game) {
-        detail.innerHTML = '<p class="notice">No game is available in this window.</p>';
+        detail.innerHTML = unavailable && select.value === String(selected)
+          ? '<p class="notice">The requested game is not available in this release. Choose another game from the game window.</p>'
+          : '<p class="notice">No game is available in this window.</p>';
         if (browseNavigation) browseNavigation.innerHTML = "";
         return;
       }

@@ -69,3 +69,16 @@ Complete the strongest distinct ideas in the established backlog without duplica
 ### Known limitation
 
 The active 2026–27 artifact is still preseason. Schedule pressure therefore labels preseason opponent evidence explicitly and does not treat it as current-season form. Player Form Watch remains blocked until a real current-season sample exists.
+
+### Player Form Watch activation gate
+
+Player Form Watch + Saved Player Updates may begin only after a documented data-readiness review confirms all of the following:
+
+- A meaningful current regular-season sample exists; the review must record the minimum games and minutes used rather than treating preseason or a handful of appearances as form.
+- Current-season provider coverage is reliable enough for the official and model-derived measures shown, and the interface labels those two evidence classes separately.
+- Position-appropriate comparison groups and honest minimum-sample rules are defined, including explicit missing-data, rookie and inactive-player states.
+- Traded players aggregate correctly across teams while retaining the team context for each measured period.
+- Saved players use stable identifiers across refreshes, roster changes and team changes.
+- A reproducible baseline defines a material saved-player change without confusing short-term form with longer-term ability.
+
+Activation remains blocked if any condition is unverified. Passing the gate permits implementation planning; it does not permit a mostly empty or statistically unstable production interface.

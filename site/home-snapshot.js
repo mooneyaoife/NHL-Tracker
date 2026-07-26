@@ -25,7 +25,7 @@
     ?uniqueBriefs(selection.teams.map(team=>summary.watchNext?.teamBriefs?.[team])).slice(0,3)
     :uniqueBriefs(summary.watchNext?.leagueBriefs||[]).slice(0,3);
   const signalHtml=signal=>`<div class="watch-next-signal"><span>${escape(signal.label)}</span><strong>${escape(signal.value)}</strong><small>${escape(signal.detail)}</small></div>`;
-  const openGame=(id,open)=>{const url=new URL(location.href);url.searchParams.set("game",id);history.replaceState(history.state,"",`${url.pathname}${url.search}#dashboard`);open("games")};
+  const openGame=(id,open)=>{const url=new URL(location.href);url.searchParams.set("game",id);url.hash="games";history.pushState({page:"games",scrollY:0},"",`${url.pathname}${url.search}${url.hash}`);open("games")};
   const watchMarkup=(summary,rows,selection)=>{
     if(!rows.length)return'<div class="watch-next-empty"><strong>No upcoming games in this season</strong><span>The published schedule has no future matchup to brief.</span><button type="button" data-watch-page="schedule">Open Schedule →</button></div>';
     const hero=rows[0],supporting=rows.slice(1),evidence=seasonLabel(summary.watchNext?.sourceSeason),mode=selection.personalised?"Your teams":"League watch",stale=freshnessStale(summary),updated=new Date(summary.dataGeneratedAt).toLocaleDateString("en-GB",{day:"numeric",month:"short"}),freshness=stale?`stale snapshot · updated ${updated}`:`updated ${updated}`;

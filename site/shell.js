@@ -1,6 +1,6 @@
 "use strict";
 (()=>{
-  const VERSION="7.37.0";
+  const VERSION="7.38.0";
   const QUICK_PAGES=new Set(["tonight","games","schedule"]);
   const QUICK_SCRIPTS=["data-contracts.js","data-loader.js","route-loader.js","cloudflare-live.js","route-app.js"];
   const FULL_SCRIPTS=["statistics.js","data-contracts.js","data-loader.js","router.js","route-loader.js","preferences.js","live-updates.js","observability.js","cloudflare-live.js","url-safety.js","app.js"];
@@ -49,7 +49,7 @@
     document.getElementById("updated").textContent="Opening full tracker…";
     full=loadCompleteStyles().then(()=>loadScripts(FULL_SCRIPTS)).catch(error=>{full=null;reportLoadFailure("Full tracker",error);throw error});return full;
   };
-  const loadFullApp=target=>{if(target&&QUICK_PAGES.has(target)&&!full){if(target&&document.getElementById(target))history.replaceState(null,"",`${location.pathname}${location.search}#${target}`);if(!quick){document.getElementById("updated").textContent="Opening tracker…";quick=loadScripts(QUICK_SCRIPTS).catch(error=>{quick=null;reportLoadFailure("Tracker",error);throw error})}return quick.then(()=>window.NHLTrackerQuickRoutes?.ready).then(()=>window.NHLTrackerQuickRoutes?.open(target))}return loadCompleteApp(target)};
+  const loadFullApp=target=>{if(target&&QUICK_PAGES.has(target)&&!full&&!new URLSearchParams(location.search).has("season")){if(!quick){window.NHLTrackerQuickTarget=target;document.getElementById("updated").textContent="Opening tracker…";quick=loadScripts(QUICK_SCRIPTS).catch(error=>{quick=null;reportLoadFailure("Tracker",error);throw error})}return quick.then(()=>window.NHLTrackerQuickRoutes?.ready).then(()=>window.NHLTrackerQuickRoutes?.open(target))}return loadCompleteApp(target)};
   const requestLoad=target=>{void loadFullApp(target).catch(()=>{})};
   const bindLoadIntent=(button,target)=>{
     const handle=()=>{void loadFullApp(typeof target==="function"?target():target).then(()=>button.removeEventListener("click",handle)).catch(()=>{})};

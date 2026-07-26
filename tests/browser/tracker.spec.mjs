@@ -65,6 +65,40 @@ test("public direct links hand off to the canonical tracker route", async ({ pag
   await expect(page.locator("#schedule")).toHaveClass(/active/, { timeout: 15_000 });
 });
 
+test("quick routes preserve browser history and exact Game Centre context", async ({ page }) => {
+  await page.goto("/");
+  await page.getByRole("button", { name: "Tonight", exact: true }).click();
+  await expect(page.locator("#tonight")).toHaveClass(/active/, { timeout: 15_000 });
+  const game = page.locator("[data-quick-game]").first();
+  const gameId = await game.getAttribute("data-quick-game");
+  await game.click();
+  await expect(page).toHaveURL(new RegExp(`[?&]game=${gameId}.*#games$`));
+  await expect(page.locator("#games")).toHaveClass(/active/);
+  await expect(page.locator("#game-select")).toHaveValue(gameId);
+
+  await page.goBack();
+  await expect(page.locator("#tonight")).toHaveClass(/active/);
+  await page.goBack();
+  await expect(page.locator("#dashboard")).toHaveClass(/active/);
+  await page.goForward();
+  await expect(page.locator("#tonight")).toHaveClass(/active/);
+  await page.goForward();
+  await expect(page.locator("#games")).toHaveClass(/active/);
+  await expect(page.locator("#game-select")).toHaveValue(gameId);
+});
+
+test("Game Centre direct links handle unavailable and archived games honestly", async ({ page }) => {
+  await page.goto("/?game=9999999999#games");
+  await expect(page.locator("#games")).toHaveClass(/active/, { timeout: 15_000 });
+  await expect(page.locator("#game-detail")).toContainText("requested game is not available");
+  await expect(page).toHaveURL(/game=9999999999.*#games$/);
+
+  await page.goto("/?season=20252026&game=2025020001#games");
+  await expect(page.locator("#games")).toHaveClass(/active/, { timeout: 30_000 });
+  await expect(page.locator("#game-select")).toHaveValue("2025020001");
+  await expect(page.locator("#game-detail")).toContainText(/Final|permanent summary/i);
+});
+
 test("postponed games remain exceptional after their original start time", async ({ page }) => {
   await routeTracker(page, data => {
     data.daily = { currentDate: "2026-01-01", games: [{ id: 2026020999, date: "2026-01-01",

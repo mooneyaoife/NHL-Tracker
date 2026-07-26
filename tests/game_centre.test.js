@@ -71,6 +71,28 @@ const deferred = () => {
   assert.match(detail.innerHTML, /No game is available/);
   assert.equal(opened, null);
 
+  const unavailableSelect = { innerHTML: "", value: "" };
+  const unavailableDetail = { innerHTML: "", querySelector: () => null };
+  gameCentre.renderQuickView({
+    selected: "9999999999",
+    games: [{ id: 1, date: "2026-10-01", away: "BUF", home: "BOS" }],
+    select: unavailableSelect,
+    detail: unavailableDetail,
+    browseNavigation: { innerHTML: "stale" },
+    refreshButton: {},
+    refreshStatus: {},
+    viewButtons: [],
+    normalize: () => ({ label: "Scheduled" }),
+    londonTime: () => "19:00",
+    teamName: value => value,
+    escape: value => String(value),
+    openDetailed: () => {},
+    openCompleteView: () => {},
+    reload: () => {},
+  });
+  assert.match(unavailableSelect.innerHTML, /Requested game unavailable/);
+  assert.match(unavailableDetail.innerHTML, /requested game is not available/);
+
   const detailViewHost = { innerHTML: "" }, navigation = { innerHTML: "stale" };
   let briefingGame = null, moneyGame = null;
   const view = gameCentre.createDetailView({
