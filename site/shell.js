@@ -1,6 +1,6 @@
 "use strict";
 (()=>{
-  const VERSION="7.35.0";
+  const VERSION="7.35.1";
   const QUICK_PAGES=new Set(["tonight","games","schedule"]);
   const QUICK_SCRIPTS=["data-contracts.js","data-loader.js","route-loader.js","cloudflare-live.js","route-app.js"];
   const FULL_SCRIPTS=["statistics.js","data-contracts.js","data-loader.js","router.js","route-loader.js","preferences.js","live-updates.js","observability.js","cloudflare-live.js","url-safety.js","app.js"];
@@ -100,11 +100,12 @@
   };
 
   const settleHome=()=>document.getElementById("dashboard")?.classList.remove("home-pending");
-  fetch("data/home.json",{cache:"no-store"}).then(response=>response.ok?response.json():Promise.reject(new Error("Home snapshot unavailable"))).then(renderHome).then(settleHome).catch(()=>{
+  const homeController=new AbortController(),homeTimeout=setTimeout(()=>homeController.abort(),4000);
+  fetch("data/home.json",{cache:"no-store",signal:homeController.signal}).then(response=>response.ok?response.json():Promise.reject(new Error("Home snapshot unavailable"))).then(renderHome).then(settleHome).catch(()=>{
     document.getElementById("updated").textContent="Static snapshot unavailable";
     document.getElementById("today-games").textContent="Open the full tracker to retry NHL data.";
     settleHome();
-  });
+  }).finally(()=>clearTimeout(homeTimeout));
   fetch("data/seasons/index.json",{cache:"no-store"}).then(response=>response.ok?response.json():Promise.reject(new Error("Season list unavailable"))).then(renderSeasonPicker).catch(()=>{
     const select=document.getElementById("season-select");
     if(select)select.firstElementChild.textContent="Current season";

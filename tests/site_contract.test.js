@@ -24,8 +24,10 @@ assert.match(index, new RegExp(`freshness-status\\.js\\?v=${uiVersion.replaceAll
 assert.match(worker, new RegExp(`freshness-status\\.js\\?v=${uiVersion.replaceAll(".", "\\.")}`), "freshness details remain available offline");
 assert.match(index, new RegExp(`game-state\\.js\\?v=${uiVersion.replaceAll(".", "\\.")}`), "the shared game-window contract loads before the progressive shell");
 assert.match(index, /id="freshness-control"[\s\S]*id="freshness-detail-copy"/, "the compact status exposes accessible recovery details");
-assert.match(index, /id="dashboard" class="page active home-pending"/, "Home withholds its incomplete dynamic layout from first paint");
+assert.match(index, /id="dashboard" class="page active home-pending"/, "Home marks its incomplete dynamic layout during first paint");
+assert.match(index, /#dashboard\.home-pending \.home-masthead\{visibility:visible\}/, "Home keeps a useful masthead visible while its compact snapshot loads");
 assert.match(progressiveShell, /\.then\(renderHome\)\.then\(settleHome\)/, "Home becomes visible after its compact snapshot renders");
+assert.match(progressiveShell, /homeController\.abort\(\),4000/, "Home snapshot loading cannot hide the complete route indefinitely");
 assert.equal((index.match(/id="season-select"/g) || []).length, 1, "the header exposes one season control");
 assert.doesNotMatch(index, /season-archive-toggle/, "the duplicate archive shortcut is removed");
 assert.match(index, /data-group="season" data-default-page="schedule">Schedule</, "the primary route is named for its destination, not a second season control");
