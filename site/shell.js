@@ -1,6 +1,6 @@
 "use strict";
 (()=>{
-  const VERSION="7.35.2";
+  const VERSION="7.37.0";
   const QUICK_PAGES=new Set(["tonight","games","schedule"]);
   const QUICK_SCRIPTS=["data-contracts.js","data-loader.js","route-loader.js","cloudflare-live.js","route-app.js"];
   const FULL_SCRIPTS=["statistics.js","data-contracts.js","data-loader.js","router.js","route-loader.js","preferences.js","live-updates.js","observability.js","cloudflare-live.js","url-safety.js","app.js"];
@@ -8,9 +8,9 @@
   let quick=null,full=null,styles=null;
   const requests=new Map(),prefetched=new Set();
   const seasonLabel=value=>{const season=String(value||"");return season.length===8?`${season.slice(0,4)}–${season.slice(6)}`:"Current season"};
-  const dateLabel=value=>{const date=new Date(value);return Number.isFinite(date.getTime())?date.toLocaleString("en-GB",{dateStyle:"medium",timeStyle:"short"}):"Latest artifact"};
-  const gameState=window.NHLTrackerGameState;
-  const gameLabel=game=>gameState.normalizeGameState(game||{}).label;
+  const dateLabel=value=>{const date=new Date(value);return isNaN(date)?"Latest artifact":date.toLocaleString("en-GB",{dateStyle:"medium",timeStyle:"short"})};
+  const g=window.NHLTrackerGameState;
+  const gameLabel=game=>g.normalizeGameState(game||{}).label;
   const reportLoadFailure=(label,error)=>{
     const offline=!navigator.onLine,message=offline
       ?`${label} needs a connection the first time it is opened. Core routes remain available offline.`
@@ -60,18 +60,19 @@
   window.NHLTrackerLoadCompleteStyles=loadCompleteStyles;
   window.NHLTrackerPrefetchCompleteApp=prefetchCompleteApp;
 
-  const renderSnapshot=summary=>{const html=summary.snapshotHtml;if(html)for(const id in html)document.getElementById(id).innerHTML=html[id];const ready=loadScript("home-snapshot.js").then(()=>window.NHLTrackerHomeSnapshot[html?"attach":"render"](summary,{open:requestLoad}));return html?undefined:ready};
+  const renderSnapshot=summary=>{const html=summary.snapshotHtml;if(html)for(const id in html)document.getElementById(id).innerHTML=html[id];const ready=loadScript("home-snapshot.js").then(()=>window.NHLTrackerHomeSnapshot[html?"attach":"render"](summary,{open:requestLoad})).catch(()=>{});return html?0:ready};
 
   const renderHome=summary=>{
-    const season=seasonLabel(summary.season),updated=dateLabel(summary.dataGeneratedAt),games=summary.daily?.games||[],slate=gameState.describeSlateWindow({games,slateDate:summary.daily?.currentDate||summary.daily?.slateDate});
+    const season=seasonLabel(summary.season),updated=dateLabel(summary.dataGeneratedAt),games=summary.daily?.games||[],slate=g.describeSlateWindow({games,slateDate:summary.daily?.currentDate||summary.daily?.slateDate});
     document.getElementById("home-dossier-season").textContent=season;
     document.getElementById("home-dossier-updated").textContent=`Updated ${updated.split(",")[0]}`;
     document.getElementById("dashboard-season-label").textContent=season;
     window.NHLTrackerFreshnessStatus?.render({status:"static",snapshotAt:summary.dataGeneratedAt});
     document.getElementById("today-date").textContent=slate.dateText;
     const host=document.getElementById("today-games");
-    host.replaceChildren();
+    host.textContent="";
     const snapshot=renderSnapshot(summary);
+    if(summary.watchNext)return host.ariaBusy=!1,snapshot;
     if(slate.notice){const context=document.createElement("p");context.className="notice home-slate-notice";context.textContent=slate.code==="offseason-next"?"Offseason · next published slate · UK time":slate.notice;host.appendChild(context)}
     if(!games.length){const notice=document.createElement("p");notice.className="notice";notice.textContent="No games are published in the current NHL window.";host.appendChild(notice);return snapshot}
     games.slice(0,6).forEach(game=>{
@@ -80,7 +81,7 @@
       const detail=document.createElement("span");detail.textContent=gameLabel(game);
       button.append(clubs,detail);bindLoadIntent(button,"games");host.appendChild(button);
     });
-    return snapshot;
+    return host.ariaBusy=!1,snapshot;
   };
 
   const openSeason=(season,current)=>{

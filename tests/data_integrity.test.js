@@ -7,12 +7,26 @@ const stats = require("../site/statistics.js");
 const root = path.resolve(__dirname, "..");
 const archive = JSON.parse(fs.readFileSync(path.join(root, "site/data/seasons/20252026.json"), "utf8"));
 const current = JSON.parse(fs.readFileSync(path.join(root, "site/data/tracker.json"), "utf8"));
+assert.equal(current.schedulePressure.schema, 1, "schedule pressure has a versioned schema");
+assert.equal(current.schedulePressure.sourceSeason, current.scheduleDifficulty.sourceSeason, "schedule pressure labels its opponent evidence season");
+assert.equal(current.schedulePressure.teams.length, 32, "schedule pressure covers every NHL team");
+assert.ok(current.schedulePressure.teams.every(row => row.mode === "complete" || row.gameCount === row.games.length), "schedule pressure windows reconcile their game counts");
+assert.ok(current.schedulePressure.teams.flatMap(row => row.games).every(game => game.leaguePercentile >= 1 && game.leaguePercentile <= 100 && game.signals.length <= 3), "schedule pressure games contain bounded league context");
+const home = JSON.parse(fs.readFileSync(path.join(root, "site/data/home.json"), "utf8"));
 const capabilityManifest = JSON.parse(fs.readFileSync(path.join(root, "site/data/tracker-manifest.json"), "utf8"));
 for (const [name, entry] of Object.entries(capabilityManifest.capabilities)) {
   const body = fs.readFileSync(path.join(root, "site", entry.url));
   assert.equal(body.length, entry.bytes, `${name} capability byte count matches its manifest`);
   assert.equal(crypto.createHash("sha256").update(body).digest("hex"), entry.sha256, `${name} capability hash matches its manifest`);
 }
+
+assert.equal(home.schema, 3, "the compact Home artifact exposes the intelligence schema");
+assert.equal(home.watchNext.sourceSeason, current.scheduleDifficulty.sourceSeason, "Watch Next labels its opponent evidence season");
+assert.equal(Object.keys(home.watchNext.teamBriefs).length, 32, "every NHL team has a compact next-game brief when the schedule is published");
+assert.ok(Object.values(home.watchNext.teamBriefs).every(row => row.signals.length > 0 && row.signals.length <= 3), "Watch Next prioritises one to three signals per team");
+assert.ok(Object.values(home.watchNext.teamBriefs).every(row => current.games.some(game => String(game.id) === row.id && game.team === row.focusTeam)), "each brief links back to a canonical team-game row");
+assert.equal(home.continuity.schema, 3, "the compact return-visit snapshot remains compatible with the complete tracker");
+assert.ok(Buffer.byteLength(JSON.stringify(home)) < 100000, "the Home intelligence artifact remains inside the initial-data budget");
 
 assert.equal(archive.standings.length, 32, "the archived league contains all NHL teams");
 assert.equal(

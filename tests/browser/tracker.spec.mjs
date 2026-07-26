@@ -301,12 +301,46 @@ test("core journey avoids repeated slate, season and archive controls", async ({
   expect(await page.locator("#calendar-list .calendar-day.has-games").count()).toBeGreaterThan(0);
   await expect(page.locator("#calendar-list .calendar-item")).toHaveCount(0);
   expect(await page.locator("#calendar-list .calendar-game").evaluateAll(games => games.every(game => Boolean(game.closest(".calendar-day"))))).toBe(true);
+  await expect(page.locator("#schedule-pressure-title")).toHaveText("Next pressure window");
+  await expect(page.locator("#schedule-pressure-state")).toHaveText(/Current week|Next window/);
+  await expect(page.locator("#schedule-pressure-games .schedule-pressure-game")).toHaveCount(3);
   if ((page.viewportSize()?.width || 0) > 640) await expect(page.locator("#schedule .calendar-weekdays")).toBeVisible();
   else await expect(page.locator("#schedule .calendar-weekdays")).toBeHidden();
   const shapeButton = page.locator('[data-schedule-target="schedule-intelligence-chapter"]');
   await expect(shapeButton).toHaveCount(1);
   await shapeButton.click();
   await expect(page.locator("#schedule-intelligence-chapter")).toBeVisible({ timeout: 15_000 });
+});
+
+test("schedule pressure follows the calendar scope and opens exact evidence", async ({ page }) => {
+  await page.goto("./#schedule");
+  await expect(page.locator("#schedule")).toHaveClass(/active/);
+  await page.locator("#calendar-team").selectOption("BUF");
+  await expect(page.locator("#schedule-pressure-note")).toContainText("Buffalo Sabres");
+  const game = page.locator("#schedule-pressure-games .schedule-pressure-game").first();
+  await expect(page.locator("#schedule-pressure-summary > div").first()).toHaveCSS("display", "grid");
+  await expect(game).toHaveCSS("display", "grid");
+  const gameId = await game.getAttribute("data-open-game") || await game.getAttribute("data-quick-pressure-game");
+  await game.click();
+  await expect(page.locator("#games")).toHaveClass(/active/);
+  await expect(page.locator("#game-select")).toHaveValue(gameId);
+});
+
+test("movement desk reveals NHL-wide detections and opens exact roster context", async ({ page }) => {
+  await page.goto("./#news");
+  await expect(page.locator("#news")).toHaveClass(/active/);
+  await page.locator('[data-update-tab="confirmed"]').click();
+  await expect(page.locator("#confirmed")).toHaveClass(/active/);
+  await expect(page.locator("#move-scope")).toHaveValue("TRACKED");
+  await page.locator("#move-scope").selectOption("ALL");
+  await expect(page.locator("#move-status-title")).toContainText("Recent NHL");
+  await expect(page.locator("#detected-changes .move-event.detected")).toHaveCount(5);
+  await expect(page).toHaveURL(/moveScope=ALL/);
+  const rosterButton = page.locator("#detected-changes [data-move-roster-team]").first();
+  const team = await rosterButton.getAttribute("data-move-roster-team");
+  await rosterButton.click();
+  await expect(page.locator("#rosters")).toHaveClass(/active/);
+  await expect(page.locator(`[data-roster-team="${team}"]`)).toHaveAttribute("open", "");
 });
 
 test("workspace sections use concise labels without filing numbers", async ({ page }) => {

@@ -28,7 +28,10 @@ assert.match(index, /id="dashboard" class="page active"/, "Home is visible from 
 assert.match(index, /Loading followed-team records…/, "Home exposes a useful loading state before its snapshot arrives");
 assert.match(progressiveShell, /homeController\.abort\(\),4000/, "Home snapshot loading has a bounded wait");
 assert.match(progressiveShell, /home-snapshot\.js/, "the compact snapshot renderer is loaded without the full application");
-assert.match(worker, /home-snapshot\.js\?v=7\.35\.2/, "the complete Home snapshot remains available offline");
+assert.match(worker, new RegExp(`home-snapshot\\.js\\?v=${uiVersion.replaceAll(".", "\\.")}`), "the complete Home snapshot remains available offline");
+assert.match(index, /id="home-tonight-title">Watch Next</, "Home leads with the flagship intelligence question");
+assert.ok(index.indexOf('id="since-last-visit"') < index.indexOf('id="season-file"'), "return-visit continuity sits beside the flagship before deep season evidence");
+assert.match(progressiveShell, /if\(summary\.watchNext\)/, "the static Watch Next fragment is preserved while its compact interactions attach");
 assert.equal((index.match(/id="season-select"/g) || []).length, 1, "the header exposes one season control");
 assert.doesNotMatch(index, /season-archive-toggle/, "the duplicate archive shortcut is removed");
 assert.match(index, /data-group="season" data-default-page="schedule">Schedule</, "the primary route is named for its destination, not a second season control");
@@ -226,6 +229,10 @@ const latestNews = index.slice(index.indexOf('id="offseason"'), index.indexOf('i
 assert.doesNotMatch(latestNews, /PuckPedia Updates|Roster Pulse|Offseason Resources/, "Latest does not duplicate dedicated cap, roster or transaction tools");
 const rosterNews = index.slice(index.indexOf('id="rosters"'), index.indexOf('</section>', index.indexOf('id="rosters"')));
 assert.match(rosterNews, /Roster Pulse/, "roster monitoring lives with the complete roster view");
+assert.ok(idSet.has("move-scope") && idSet.has("move-timeline-scope"), "the movement desk exposes a labelled followed-team or all-NHL scope");
+assert.match(app, /leagueCount\?`\$\{leagueCount\} league-wide updates exist outside your followed teams/, "an empty followed-team movement view discloses league-wide activity");
+assert.match(app, /function openRosterContext\(team\)/, "tracker-detected movement opens the exact team roster without rendering every roster up front");
+assert.match(app, /"newsTopic","moveScope"/, "movement scope survives direct links and browser history");
 assert.doesNotMatch(index, /id="insider-posts"[^>]*\sopen(?:\s|>)/, "third-party insider timelines start collapsed");
 assert.match(app, /id==="rumours"&&el\("insider-posts"\)\?\.open/, "insider widgets load only after explicit disclosure");
 assert.match(app, /reset\.hidden=id!=="offseason"/, "News hides its Latest-only reset action on dedicated views");
