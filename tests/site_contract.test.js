@@ -10,6 +10,7 @@ const critical = fs.readFileSync(path.join(root, "site/critical.css"), "utf8");
 const coreRoutes = fs.readFileSync(path.join(root, "site/core-routes.css"), "utf8");
 const designSystem = fs.readFileSync(path.join(root, "site/design-system.css"), "utf8");
 const gameCentre = fs.readFileSync(path.join(root, "site/game-centre.js"), "utf8");
+const dataLoader = fs.readFileSync(path.join(root, "site/data-loader.js"), "utf8");
 const buildMeta = JSON.parse(fs.readFileSync(path.join(root, "site/build-meta.json"), "utf8"));
 
 const uiVersion = app.match(/^const UI_VERSION="([^"]+)";/)?.[1];
@@ -99,6 +100,9 @@ assert.match(quickRoutes,/NHLTrackerQuickRoutes=\{open,ready\}/,
 assert.match(progressiveShell,/NHLTrackerQuickRoutes\?\.ready/,
   "direct lightweight routes do not race the capability loader");
 assert.match(quickRoutes,/page==="games"\?\["core"\]/, "Game Centre summaries use only the compact core artifact");
+assert.match(dataLoader,/games:\["core","analytics"\]/, "the complete Game Centre starts without season and player shards");
+assert.match(app,/GAME_VIEW_CAPABILITIES=\{library:\["schedule"\],intelligence:\["schedule","players"\]\}/, "deep Game Centre panes own their additional data capabilities");
+assert.doesNotMatch(app,/renderGameLibrary\(\);renderGame\(\)/, "the hidden Game Library is not rendered during Featured-view startup");
 assert.match(progressiveShell,/scriptRequests\.has\(name\)/, "promotion to the complete app reuses quick-route script requests");
 assert.match(progressiveShell,/connection\?\.saveData/, "detailed-view prefetch respects reduced-data preferences");
 assert.match(gameCentre,/addEventListener\("pointerenter", primeDetailed/, "Game Centre warms detailed scripts only after deliberate intent");
@@ -124,8 +128,8 @@ assert.match(progressiveShell,/NHLTrackerLoadCompleteApp/,"deeper destinations c
 assert.doesNotMatch(progressiveShell,/addEventListener\("(?:wheel|touchmove)"/,"passive Home exploration never downloads the full application");
 assert.doesNotMatch(progressiveShell,/\["ArrowDown","PageDown","End"," "\]/,"ordinary page navigation keys never download the full application");
 assert.match(progressiveShell,/needs a connection the first time it is opened/,"an uncached deep route explains its offline limitation");
-assert.match(progressiveShell,/fullLoading=null;throw error/,"a failed full-route request can be retried");
-assert.match(progressiveShell,/quickLoading=null;throw error/,"a failed lightweight-route request can be retried");
+assert.match(progressiveShell,/fullLoading=null;reportLoadFailure\("Full tracker",error\);throw error/,"a failed full-route request is reset before retry becomes available");
+assert.match(progressiveShell,/quickLoading=null;reportLoadFailure\("Tracker",error\);throw error/,"a failed lightweight-route request is reset before retry becomes available");
 for(const group of ["night","season","people","explore"])assert.ok(fs.existsSync(path.join(root,`site/routes/${group}.js`)),`${group} has a native lazy route module`);
 const capabilityManifest=JSON.parse(fs.readFileSync(path.join(root,"site/data/tracker-manifest.json"),"utf8"));
 assert.deepEqual(Object.keys(capabilityManifest.capabilities).sort(),["analytics","core","players","schedule"]);

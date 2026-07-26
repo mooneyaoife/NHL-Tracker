@@ -6,7 +6,7 @@
   "use strict";
   const EMPTY={games:[],preseasonGames:[],standings:[],teams:{},daily:{games:[]},sources:{},rosters:{},players:{},officialPlayers:{skaters:[],goalies:[]},moneypuck:{teams:[],teamGames:[],skaters:[],goalies:[],lines:[],simulations:[]},naturalStatTrick:{teams:[],players:[],goalies:[]},gameCentre:{},news:{articles:[]},podcasts:{episodes:[]},videos:{videos:[]},transactions:{items:[]},rosterChanges:{},rosterChangeHistory:[],scheduleRelease:{},scheduleDifficulty:{},previousSeasonStandings:[],specialTeams:[],history:[],gameLibrary:[]};
   const ROUTE_CAPABILITIES={
-    dashboard:["core"],tonight:["core"],schedule:["core","schedule"],games:["core","schedule","players","analytics"],
+    dashboard:["core"],tonight:["core"],schedule:["core","schedule"],games:["core","analytics"],
     teams:["core","schedule","players","analytics"],players:["core","players","analytics"],availability:["core","schedule","players","analytics"],compare:["core","players","analytics"],
     league:["core","players","analytics"],power:["core","schedule","analytics"],trends:["core","schedule","analytics"],playoffs:["core","schedule","analytics"],
     news:["core","players"],watchlist:["core","players","analytics"],status:["core","schedule","players","analytics"],guide:["core"]
