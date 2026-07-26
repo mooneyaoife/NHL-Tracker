@@ -11,6 +11,7 @@ const coreRoutes = fs.readFileSync(path.join(root, "site/core-routes.css"), "utf
 const designSystem = fs.readFileSync(path.join(root, "site/design-system.css"), "utf8");
 const gameCentre = fs.readFileSync(path.join(root, "site/game-centre.js"), "utf8");
 const dataLoader = fs.readFileSync(path.join(root, "site/data-loader.js"), "utf8");
+const progressiveShell = fs.readFileSync(path.join(root, "site/shell.js"), "utf8");
 const buildMeta = JSON.parse(fs.readFileSync(path.join(root, "site/build-meta.json"), "utf8"));
 
 const uiVersion = app.match(/^const UI_VERSION="([^"]+)";/)?.[1];
@@ -23,6 +24,8 @@ assert.match(index, new RegExp(`freshness-status\\.js\\?v=${uiVersion.replaceAll
 assert.match(worker, new RegExp(`freshness-status\\.js\\?v=${uiVersion.replaceAll(".", "\\.")}`), "freshness details remain available offline");
 assert.match(index, new RegExp(`game-state\\.js\\?v=${uiVersion.replaceAll(".", "\\.")}`), "the shared game-window contract loads before the progressive shell");
 assert.match(index, /id="freshness-control"[\s\S]*id="freshness-detail-copy"/, "the compact status exposes accessible recovery details");
+assert.match(index, /id="dashboard" class="page active home-pending"/, "Home withholds its incomplete dynamic layout from first paint");
+assert.match(progressiveShell, /\.then\(renderHome\)\.then\(settleHome\)/, "Home becomes visible after its compact snapshot renders");
 assert.equal((index.match(/id="season-select"/g) || []).length, 1, "the header exposes one season control");
 assert.doesNotMatch(index, /season-archive-toggle/, "the duplicate archive shortcut is removed");
 assert.match(index, /data-group="season" data-default-page="schedule">Schedule</, "the primary route is named for its destination, not a second season control");
@@ -41,7 +44,6 @@ assert.doesNotMatch(criticalConsolidation, /Inter|Georgia|Times New Roman/, "cri
 assert.match(criticalConsolidation, /font-weight:730;line-height:1;letter-spacing:-\.045em/, "critical title metrics match the canonical hierarchy");
 assert.doesNotMatch(index, /tonight-slate-rail/, "Tonight does not repeat every game in a second navigation rail");
 assert.match(index, /class="schedule-command"[\s\S]*?<h2>Schedule<\/h2>/, "the schedule page has an unambiguous title");
-const progressiveShell=fs.readFileSync(path.join(root,"site/shell.js"),"utf8");
 const installShellAssets=JSON.parse(worker.match(/const SHELL=(\[[^;]+\]);/)?.[1] || "[]");
 for (const selector of [".home-masthead", ".tonight-command", ".calendar-grid", ".game-centre-controls", ".quick-game-hero"]) {
   assert.match(coreRoutes, new RegExp(selector.replace(".", "\\.")), `${selector} remains styled by the dependable route bundle`);
@@ -55,7 +57,7 @@ assert.match(progressiveShell,/loadCompleteStyles\(\)[\s\S]{0,180}loadScripts\(F
 assert.match(progressiveShell,/link\.rel="preload";link\.as="style"/, "explicit deep-route intent fetches complete styles at preload priority");
 assert.doesNotMatch(progressiveShell,/link\.media="not all"/, "complete styles are not deprioritized behind a non-matching media query");
 assert.match(progressiveShell,/link\.rel="stylesheet";link\.removeAttribute\("as"\);link\.media="all"/, "complete styles activate together in canonical order");
-const runtimeAssets=["statistics.js", "data-contracts.js", "data-loader.js", "router.js", "route-loader.js", "route-app.js", "preferences.js", "live-updates.js", "observability.js", "cloudflare-live.js", "app.js"];
+const runtimeAssets=["statistics.js", "data-contracts.js", "data-loader.js", "router.js", "route-loader.js", "route-app.js", "preferences.js", "live-updates.js", "observability.js", "cloudflare-live.js", "url-safety.js", "app.js"];
 for (const asset of runtimeAssets) assert.match(progressiveShell,new RegExp(asset.replace(".","\\.")),`${asset} is loaded by the progressive shell`);
 for (const asset of ["game-state.js", "data-contracts.js", "data-loader.js", "route-loader.js", "route-app.js", "cloudflare-live.js"]) {
   assert.match(worker, new RegExp(`${asset.replace(".", "\\.")}\\?v=${uiVersion.replaceAll(".", "\\.")}`), `${asset} supports the dependable offline routes`);
@@ -64,6 +66,9 @@ for (const asset of ["statistics.js", "router.js", "preferences.js", "live-updat
   assert.ok(!installShellAssets.some(value=>value.split("?")[0]===`./${asset}`),`${asset} is cached only after explicit use`);
 }
 assert.match(app, /NHLTrackerPreferences\.create/, "stored preferences are owned by the extracted module");
+assert.match(app, /\^\[A-Z\]\{2,4\}\$[\s\S]{0,120}icons\/icon\.svg/, "unknown team identities use a local image instead of requesting a broken NHL logo");
+assert.match(app, /NHLTrackerUrlSafety\?\.sanitise/, "provider links pass through the URL protocol allowlist");
+assert.match(app, /const url=externalUrl\(item\.url\);if\(url\)window\.open/, "search never opens an unvalidated provider URL");
 assert.match(progressiveShell,/QUICK_PAGES=new Set\(\["tonight","games","schedule"\]\)/,"Tonight, Game Centre and Season use the lightweight route runtime");
 assert.match(progressiveShell,/fetch\("data\/seasons\/index\.json"/, "the progressive shell primes the season picker before the full app loads");
 assert.match(progressiveShell,/NHLTrackerPendingAction=id/,
@@ -146,7 +151,10 @@ assert.match(worker,/names\.filter\(name=>name!==CACHE\)/,"every previous cache 
 assert.ok(app.indexOf('initialisePage("dashboard")') < app.indexOf("hydrateLiveInBackground(archived)"), "static Home renders before live enhancement starts");
 const initialisation = app.slice(app.indexOf("async function init"), app.indexOf("function renderFatalError"));
 assert.doesNotMatch(initialisation, /await\s+window\.NHLCloudflareLive\.hydrate/, "live enhancement never blocks initial rendering");
-assert.match(index, new RegExp(`core-routes\\.css\\?v=${uiVersion.replaceAll(".", "\\.")}" media="print"`), "the compact route bundle does not block first paint");
+for (const stylesheet of ["critical.css", "core-routes.css"]) {
+  assert.match(index, new RegExp(`<link rel="stylesheet" href="${stylesheet.replace(".", "\\.")}\\?v=${uiVersion.replaceAll(".", "\\.")}">`), `${stylesheet} is active before the first paint`);
+  assert.doesNotMatch(index, new RegExp(`${stylesheet.replace(".", "\\.")}[^>]+media="print"`), `${stylesheet} is not activated after first paint`);
+}
 assert.doesNotMatch(index, /<script defer src="app\.js/, "the analytical application is not parsed before first paint");
 assert.match(index, /property="og:image"/);
 assert.match(index, /name="twitter:card" content="summary_large_image"/);
@@ -159,7 +167,7 @@ assert.deepEqual(duplicates, [], "HTML IDs are unique across the application");
 const idSet = new Set(ids);
 
 const pages = [...index.matchAll(/<section id="([^"]+)" class="page(?:\s|\")/g)].map(match => match[1]);
-assert.equal(pages.length, 16, "all application pages are present");
+assert.equal(pages.length, 17, "all application pages are present");
 for (const page of pages) {
   const start = index.indexOf(`<section id="${page}" class="page`);
   const next = pages.map(id => index.indexOf(`<section id="${id}" class="page`, start + 1)).filter(position => position > start).sort((a, b) => a - b)[0] ?? index.indexOf("</main>", start);
@@ -171,6 +179,22 @@ const navigation = app.match(/const NAVIGATION=\{([\s\S]*?)\n\};/)?.[1] || "";
 const navigationTargets = new Set([...navigation.matchAll(/"([a-z][a-z-]+)"/g)].map(match => match[1]).filter(value => pages.includes(value)));
 for (const target of navigationTargets) assert.ok(idSet.has(target), `navigation target ${target} exists`);
 for (const match of index.matchAll(/data-(?:page|default-page)="([^"]+)"/g)) assert.ok(idSet.has(match[1]), `direct navigation target ${match[1]} exists`);
+
+const routeAliases = {
+  tonight: "tonight", games: "games", lineups: "availability", season: "schedule",
+  trends: "trends", playoffs: "playoffs", teams: "teams", players: "players",
+  compare: "compare", league: "league", power: "power", movement: "news",
+  workspace: "watchlist", reference: "guide", status: "status", policies: "policies",
+};
+for (const [slug, route] of Object.entries(routeAliases)) {
+  const alias = fs.readFileSync(path.join(root, `site/${slug}/index.html`), "utf8");
+  assert.match(alias, new RegExp(`target\\.hash = "#${route}"`), `${slug} hands off to #${route}`);
+  assert.match(alias, /target\.search = location\.search/, `${slug} preserves direct-link query state`);
+  assert.match(alias, /name="robots" content="noindex,follow"/, `${slug} cannot compete with the canonical root`);
+}
+const sitemap = fs.readFileSync(path.join(root, "site/sitemap.xml"), "utf8");
+assert.equal((sitemap.match(/<url>/g) || []).length, 1, "the sitemap advertises only the canonical indexable URL");
+assert.doesNotMatch(fs.readFileSync(path.join(root, "site/router.js"), "utf8"), /widget:\s*\{/, "unsupported widget metadata is removed");
 
 assert.ok(idSet.has("availability-lines-source") && idSet.has("availability-pairings-source"), "Lineups exposes its evidence season consistently");
 assert.match(app, /if\(page==="availability"\)void ensureAvailabilityEvidence/, "direct Lineups routes load completed-season evidence");

@@ -9,6 +9,8 @@ const scheduled = read("update-and-deploy.yml");
 const deploy = read("validate-and-deploy.yml");
 const mail = read("mail-feed.yml");
 const production = read("production-verify.yml");
+const browser = read("browser-tests.yml");
+const performance = read("performance.yml");
 
 assert.match(live, /cron: "7 0-10,16-23/, "live checks run hourly rather than every 15 minutes");
 assert.match(live, /if: steps\.live\.outputs\.active == 'true'[\s\S]{0,100}uses: actions\/deploy-pages/,
@@ -29,6 +31,8 @@ assert.match(deploy, /check_artifact_health\.py/,
   "committed artifacts pass the freshness and completeness gate before deployment");
 assert.match(scheduled, /check_artifact_health\.py/,
   "scheduled generation records artifact health before committing data");
+assert.match(scheduled, /git add site\/data site\/build-meta\.json data\/cache/,
+  "scheduled generation commits the metadata that describes its refreshed artifact");
 assert.match(live, /check_artifact_health\.py/,
   "live deployments use the same artifact health gate");
 for (const workflow of [deploy, live]) {
@@ -57,5 +61,11 @@ assert.doesNotMatch(production, /update_tracker|api-web\.nhle|moneypuck/,
 assert.match(mail, /site\/data\/puckpedia-mail\.json/);
 assert.doesNotMatch(mail, /update_tracker|deploy-pages|wrangler/,
   "mail-feed validation is isolated from full NHL refreshes and deployments");
+
+for (const workflow of [live, scheduled, deploy, mail, production, browser, performance]) {
+  const uses = [...workflow.matchAll(/uses:\s+([^\s#]+)/g)].map(match => match[1]);
+  assert.ok(uses.length, "workflow contains actions");
+  for (const action of uses) assert.match(action, /@[0-9a-f]{40}$/, `${action} is pinned to an immutable commit`);
+}
 
 console.log("workflow contracts: all checks passed");

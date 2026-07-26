@@ -9,7 +9,6 @@
     dashboard: { slug: "", title: "NHL Tracker", description: "Tonight's NHL games, season context and transparent hockey analysis." },
     tonight: { slug: "tonight", title: "Tonight's NHL Games", description: "NHL game times, live status, scores and followed-team context in UK time." },
     games: { slug: "games", title: "NHL Game Centre", description: "Game summaries, official status, matchup evidence and archived NHL game records." },
-    widget: { slug: "widget", title: "NHL Tracker Widget", description: "Compact NHL tracker snapshots for quick mobile viewing." },
     availability: { slug: "lineups", title: "NHL Lineups", description: "Official rosters, recent usage and clearly labelled lineup evidence." },
     schedule: { slug: "season", title: "NHL Season and Schedule", description: "NHL calendar, workload, travel and transparent schedule-difficulty analysis." },
     trends: { slug: "trends", title: "NHL Form and Trends", description: "Recent NHL form compared with season-long results and process." },

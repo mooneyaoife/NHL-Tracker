@@ -35,15 +35,15 @@ jobs:
       name: github-pages
       url: ${{ steps.pages.outputs.page_url }}
     steps:
-      - uses: actions/checkout@v7
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7
         with:
           # A scheduled generator commits after its run starts. Deploy the latest
           # default-branch commit rather than the generator's original head SHA.
           ref: ${{ github.event_name == 'workflow_run' && github.event.repository.default_branch || github.ref }}
-      - uses: actions/setup-python@v6
+      - uses: actions/setup-python@ece7cb06caefa5fff74198d8649806c4678c61a1 # v6
         with:
           python-version: "3.12"
-      - uses: actions/setup-node@v7
+      - uses: actions/setup-node@820762786026740c76f36085b0efc47a31fe5020 # v7
         with:
           node-version: "22"
       - name: Validate committed artifact without refreshing upstream data
@@ -69,6 +69,7 @@ jobs:
           node tests/data_integrity.test.js
           node tests/site_contract.test.js
           node tests/workflow_contract.test.js
+          node tests/url_safety.test.js
           python scripts/check_performance_budgets.py
           python scripts/validate_mail_feed.py
       - name: Check artifact health and freshness
@@ -79,13 +80,13 @@ jobs:
           python scripts/check_artifact_health.py
           --max-fresh-age-hours "$MAX_FRESH_AGE_HOURS"
           --max-fallback-age-hours "$MAX_FALLBACK_AGE_HOURS"
-      - uses: actions/configure-pages@v6
-      - uses: actions/upload-pages-artifact@v5
+      - uses: actions/configure-pages@45bfe0192ca1faeb007ade9deae92b16b8254a0d # v6
+      - uses: actions/upload-pages-artifact@fc324d3547104276b827a68afc52ff2a11cc49c9 # v5
         with:
           name: github-pages-${{ github.run_attempt }}
           path: site
       - id: pages
-        uses: actions/deploy-pages@v5
+        uses: actions/deploy-pages@cd2ce8fcbc39b97be8ca5fce6e763baed58fa128 # v5
         with:
           artifact_name: github-pages-${{ github.run_attempt }}
       - name: Build and verify private Cloudflare artifact

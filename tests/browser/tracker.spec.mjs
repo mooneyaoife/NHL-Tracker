@@ -59,6 +59,12 @@ test("shell theme changes on the first click and keeps browser chrome in sync", 
   await expect(page.locator('meta[name="theme-color"]')).toHaveAttribute("content", "#111815");
 });
 
+test("public direct links hand off to the canonical tracker route", async ({ page }) => {
+  await page.goto("/season/?month=2026-10");
+  await expect(page).toHaveURL(/\/\?month=2026-10#schedule$/);
+  await expect(page.locator("#schedule")).toHaveClass(/active/, { timeout: 15_000 });
+});
+
 test("postponed games remain exceptional after their original start time", async ({ page }) => {
   await routeTracker(page, data => {
     data.daily = { currentDate: "2026-01-01", games: [{ id: 2026020999, date: "2026-01-01",
@@ -364,7 +370,7 @@ test("remaining fan and utility routes stay inside mobile and intermediate viewp
   await expect(page.locator("#teams")).toHaveClass(/active/, { timeout: 15000 });
   for (const viewport of [{ width: 375, height: 812 }, { width: 1024, height: 820 }]) {
     await page.setViewportSize(viewport);
-    for (const route of ["teams", "players", "league", "compare", "news", "watchlist", "guide", "status"]) {
+    for (const route of ["teams", "players", "league", "compare", "news", "watchlist", "guide", "status", "policies"]) {
       await page.evaluate(nextRoute => showPage(nextRoute), route);
       await expect(page.locator(`#${route}`)).toHaveClass(/active/, { timeout: 15000 });
       expect(await page.evaluate(() => document.documentElement.scrollWidth <= document.documentElement.clientWidth + 1), `${route} at ${viewport.width}px`).toBe(true);
@@ -381,7 +387,17 @@ test("Explore routes keep one primary task and reveal deeper evidence on demand"
     await expect(teamTabs).toHaveCount(5);
     expect(await teamTabs.evaluateAll(buttons => buttons.every((button, index) => !buttons[index + 1] || button.getBoundingClientRect().right <= buttons[index + 1].getBoundingClientRect().left + 1))).toBe(true);
     if (viewport.width === 375) {
-      expect(await page.locator("#teams>.section-subnav").evaluate(nav => nav.scrollWidth > nav.clientWidth)).toBe(true);
+      const rail = await page.locator("#teams>.section-subnav").evaluate(nav => {
+        const last = nav.lastElementChild;
+        const navBox = nav.getBoundingClientRect();
+        const lastBox = last?.getBoundingClientRect();
+        return {
+          overflowX: getComputedStyle(nav).overflowX,
+          contentFits: !lastBox || lastBox.right - navBox.left <= nav.scrollWidth + 1,
+        };
+      });
+      expect(rail.overflowX).toBe("auto");
+      expect(rail.contentFits).toBe(true);
     }
     await page.locator('[data-section-tab="team-advanced"]').click();
     await expect(page.locator('[data-section-tab="team-advanced"]')).toHaveAttribute("aria-pressed", "true");
@@ -464,7 +480,7 @@ test("utility routes reveal detailed evidence only when requested", async ({ pag
 
 test("principal and redesigned journeys have no serious automated accessibility violations", async ({ page }) => {
   test.setTimeout(180_000);
-  for (const route of ["dashboard", "tonight", "schedule", "games", "teams", "players", "league", "compare", "power", "watchlist", "news", "guide", "status"]) {
+  for (const route of ["dashboard", "tonight", "schedule", "games", "teams", "players", "league", "compare", "power", "watchlist", "news", "guide", "status", "policies"]) {
     await page.goto("/");
     await page.evaluate(() => localStorage.removeItem("nhl-last-route-v1"));
     await page.goto("about:blank");
