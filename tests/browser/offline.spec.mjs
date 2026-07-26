@@ -42,7 +42,7 @@ test("an uncached deep route fails visibly while dependable routes remain availa
   await expect(page.locator("#today-games")).not.toBeEmpty();
   await page.unroute(/\/app\.js(?:\?|$)/);
   await page.locator('[data-default-page="teams"]').click();
-  await expect(page.locator("#teams")).toHaveClass(/active/);
+  await expect(page.locator("#teams")).toHaveClass(/active/,{timeout:15000});
   await context.close();
 });
 

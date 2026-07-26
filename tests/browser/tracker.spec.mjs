@@ -389,9 +389,11 @@ test("Explore routes keep one primary task and reveal deeper evidence on demand"
     if (viewport.width === 375) {
       const rail = await page.locator("#teams>.section-subnav").evaluate(nav => {
         const last = nav.lastElementChild;
+        const navBox = nav.getBoundingClientRect();
+        const lastBox = last?.getBoundingClientRect();
         return {
           overflowX: getComputedStyle(nav).overflowX,
-          contentFits: !last || last.offsetLeft + last.offsetWidth <= nav.scrollWidth + 1,
+          contentFits: !lastBox || lastBox.right - navBox.left <= nav.scrollWidth + 1,
         };
       });
       expect(rail.overflowX).toBe("auto");
