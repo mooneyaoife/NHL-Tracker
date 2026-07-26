@@ -10,6 +10,7 @@ const critical = fs.readFileSync(path.join(root, "site/critical.css"), "utf8");
 const coreRoutes = fs.readFileSync(path.join(root, "site/core-routes.css"), "utf8");
 const designSystem = fs.readFileSync(path.join(root, "site/design-system.css"), "utf8");
 const gameCentre = fs.readFileSync(path.join(root, "site/game-centre.js"), "utf8");
+const dataLoader = fs.readFileSync(path.join(root, "site/data-loader.js"), "utf8");
 const buildMeta = JSON.parse(fs.readFileSync(path.join(root, "site/build-meta.json"), "utf8"));
 
 const uiVersion = app.match(/^const UI_VERSION="([^"]+)";/)?.[1];
@@ -99,6 +100,9 @@ assert.match(quickRoutes,/NHLTrackerQuickRoutes=\{open,ready\}/,
 assert.match(progressiveShell,/NHLTrackerQuickRoutes\?\.ready/,
   "direct lightweight routes do not race the capability loader");
 assert.match(quickRoutes,/page==="games"\?\["core"\]/, "Game Centre summaries use only the compact core artifact");
+assert.match(dataLoader,/games:\["core","analytics"\]/, "the complete Game Centre starts without season and player shards");
+assert.match(app,/GAME_VIEW_CAPABILITIES=\{library:\["schedule"\],intelligence:\["schedule","players"\]\}/, "deep Game Centre panes own their additional data capabilities");
+assert.doesNotMatch(app,/renderGameLibrary\(\);renderGame\(\)/, "the hidden Game Library is not rendered during Featured-view startup");
 assert.match(progressiveShell,/scriptRequests\.has\(name\)/, "promotion to the complete app reuses quick-route script requests");
 assert.match(progressiveShell,/connection\?\.saveData/, "detailed-view prefetch respects reduced-data preferences");
 assert.match(gameCentre,/addEventListener\("pointerenter", primeDetailed/, "Game Centre warms detailed scripts only after deliberate intent");

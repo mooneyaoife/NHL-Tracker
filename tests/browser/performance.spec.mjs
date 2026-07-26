@@ -65,6 +65,25 @@ test("detailed Game Centre reuses quick-route dependencies",async({page})=>{
   }
 });
 
+test("detailed Game Centre loads deep data only for the pane that needs it",async({page})=>{
+  test.slow();
+  await page.route(/\/data\/seasons\/\d{8}\.json(?:\?.*)?$/,route=>route.fulfill({status:503,contentType:"application/json",body:'{"error":"archive not required for capability coverage"}'}));
+  await page.goto("/#games");
+  await expect(page.locator("[data-open-complete-game]")).toBeVisible();
+  await page.locator("[data-open-complete-game]").click();
+  await expect(page.locator('#game-browse-nav [data-game-view="library"]')).toBeVisible({timeout:45000});
+  let names=(await resources(page)).map(row=>row.name);
+  expect(names).toContain("/data/tracker-analytics.json");
+  expect(names).not.toContain("/data/tracker-schedule.json");
+  expect(names).not.toContain("/data/tracker-players.json");
+  await page.locator('#game-browse-nav [data-game-view="library"]').click();
+  await expect.poll(async()=> (await resources(page)).some(row=>row.name==="/data/tracker-schedule.json"),{timeout:45000}).toBe(true);
+  names=(await resources(page)).map(row=>row.name);
+  expect(names).not.toContain("/data/tracker-players.json");
+  await page.locator('[data-game-view="intelligence"]').click();
+  await expect.poll(async()=> (await resources(page)).some(row=>row.name==="/data/tracker-players.json"),{timeout:45000}).toBe(true);
+});
+
 test("detailed Game Centre defers historical matchup evidence",async({page})=>{
   test.slow();
   await page.route("**/data/seasons/index.json",route=>route.fulfill({json:{current:"20262027",seasons:[{season:"20262027",label:"2026–27",current:true},{season:"20252026",label:"2025–26",current:false}]}}));
