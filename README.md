@@ -39,6 +39,8 @@ To inspect the existing generated site without refreshing external data, run onl
 
 When the canonical files `site/styles.css`, `site/theme-569.css` or `site/design-system.css` change, regenerate the checked-in immediate-route bundle with `node scripts/extract_core_styles.mjs`. The complete cascade remains available on demand for deeper routes.
 
+When public route slugs change, regenerate the checked-in direct-link hand-off pages with `python scripts/generate_route_aliases.py`.
+
 ## Validate
 
 ```bash
@@ -54,6 +56,7 @@ node tests/live_updates.test.js
 node tests/game_centre.test.js
 node tests/site_contract.test.js
 node tests/workflow_contract.test.js
+node tests/url_safety.test.js
 node --test tests/cloudflare_api.test.mjs
 python scripts/check_performance_budgets.py
 python scripts/validate_mail_feed.py

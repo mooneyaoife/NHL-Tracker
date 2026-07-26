@@ -5,6 +5,7 @@
   "initialDataBytes": 100000,
   "offlineCacheBytes": 2100000,
   "mobileLcpMilliseconds": 2500,
+  "mobileCumulativeLayoutShift": 0.1,
   "nonAnalyticalJavaScriptBytes": 438000,
   "fullApplicationJavaScriptBytes": 650000,
   "gameCentreRouteDataBytes": 75000,

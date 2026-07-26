@@ -10,6 +10,19 @@ test("Home mobile LCP remains within 2.5 seconds",async({page})=>{
   expect(await page.evaluate(()=>window.__lcp)).toBeLessThanOrEqual(2500);
 });
 
+test("Home keeps cumulative layout shift within the good threshold",async({page})=>{
+  await page.addInitScript(()=>{
+    window.__cls=0;
+    new PerformanceObserver(list=>{
+      for(const entry of list.getEntries())if(!entry.hadRecentInput)window.__cls+=entry.value;
+    }).observe({type:"layout-shift",buffered:true});
+  });
+  await page.goto("/");
+  await expect(page.locator("#home-tonight-title")).toBeVisible();
+  await page.waitForTimeout(750);
+  expect(await page.evaluate(()=>window.__cls)).toBeLessThanOrEqual(0.1);
+});
+
 test("ordinary Home exploration does not download the full application",async({page})=>{
   await page.goto("/");
   await expect(page.locator("#dashboard")).toHaveClass(/active/);

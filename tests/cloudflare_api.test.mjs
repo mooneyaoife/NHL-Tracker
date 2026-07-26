@@ -1,4 +1,6 @@
 import assert from "node:assert/strict";
+import fs from "node:fs";
+import path from "node:path";
 import test from "node:test";
 import { webcrypto } from "node:crypto";
 
@@ -150,4 +152,10 @@ test("AUTH_MODE disabled is accepted only on a local development origin", async 
     authenticateAccess(new Request("https://nhl-tracker-private.pages.dev/api/health"), { AUTH_MODE: "disabled" }),
     /not configured/,
   );
+});
+
+test("Access failures never disclose configured or received audiences", () => {
+  const middleware = fs.readFileSync(path.resolve("functions/api/_middleware.js"), "utf8");
+  assert.doesNotMatch(middleware, /x-access-(?:received|expected)-audience/i);
+  assert.doesNotMatch(middleware, /receivedAudience|expectedAudience/);
 });

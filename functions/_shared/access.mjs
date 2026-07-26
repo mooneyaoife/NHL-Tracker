@@ -121,12 +121,7 @@ export async function authenticateAccess(request, env, fetchImpl = fetch) {
   const issuer = `https://${teamDomain}.cloudflareaccess.com`;
   if (!validSignature) throw new Error("Access authentication signature is invalid");
   if (payload.iss !== issuer) throw new Error("Access authentication issuer is invalid");
-  if (!audienceMatches(payload.aud, expectedAudience)) {
-    const error = new Error("Access authentication audience is invalid");
-    error.receivedAudience = Array.isArray(payload.aud) ? String(payload.aud[0] || "") : String(payload.aud || "");
-    error.expectedAudience = expectedAudience;
-    throw error;
-  }
+  if (!audienceMatches(payload.aud, expectedAudience)) throw new Error("Access authentication audience is invalid");
   if (!Number.isFinite(payload.exp) || payload.exp <= now || Number.isFinite(payload.nbf) && payload.nbf > now + 30) {
     throw new Error("Access authentication has expired");
   }
