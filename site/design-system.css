@@ -2958,3 +2958,95 @@ main{padding-top:34px!important}
 @media(max-width:1000px){.home-tonight .today-games{grid-template-columns:minmax(0,1fr)}.watch-next-hero{border-right:0;border-bottom:1px solid var(--rule)}.watch-next-support{grid-template-columns:repeat(2,minmax(0,1fr))}.watch-next-row:first-child{border-right:1px solid var(--rule)!important}}
 @media(max-width:640px){.home-tonight .today-games{display:block}.watch-next-hero>header{padding:19px 14px 16px}.watch-next-hero h3{font-size:23px!important}.watch-next-signals{grid-template-columns:minmax(0,1fr)}.watch-next-signal{min-height:0;padding:14px}.watch-next-hero>footer{align-items:stretch;flex-direction:column;padding:14px}.watch-next-open{width:100%}.watch-next-hero>footer>span{text-align:left}.watch-next-method{padding:0 14px}.watch-next-support{display:grid;grid-template-columns:minmax(0,1fr)}.watch-next-row{min-height:104px}.watch-next-row:first-child{border-right:0!important}.watch-next-empty{min-height:240px;padding:24px 14px}.visit-panel{margin:-6px 0 26px}}
 @media(prefers-reduced-motion:reduce){.watch-next-row,.watch-next-open{transition:none!important}}
+
+/* 7.38.3 · Screenshot-backed state and route consistency pass. Missing data
+   should read as a compact, intentional state—not as an empty visualisation. */
+details:not([open]) > :not(summary){display:none!important}
+
+.chart.is-empty{
+  display:grid!important;
+  place-items:stretch!important;
+  width:100%!important;
+  height:auto!important;
+  min-height:160px!important;
+}
+.chart.is-empty>.chart-empty{
+  width:100%!important;
+  max-width:none!important;
+  min-height:160px!important;
+  border-left-color:var(--brand)!important;
+}
+.page:not(#dashboard) .grid.two>.panel>.chart.is-empty,
+#playoffs #playoff-path-chart.playoff-pie.is-empty{
+  height:auto!important;
+  min-height:160px!important;
+}
+.panel:has(>.chart.is-empty){align-self:start!important}
+.panel:has(>.chart.is-empty) :is(.chart-help-button,.view-pin-button){display:none!important}
+#playoff-path-chart.is-empty + #playoff-path-note{display:none!important}
+
+.table-wrap:has(>.notice:only-child){
+  display:grid!important;
+  min-height:112px!important;
+  overflow:hidden!important;
+}
+.table-wrap>.notice:only-child{
+  display:grid!important;
+  align-content:center!important;
+  width:100%!important;
+  max-width:none!important;
+  min-height:112px!important;
+  margin:0!important;
+  border:0!important;
+  border-left:4px solid var(--brand)!important;
+  border-radius:0!important;
+  padding:20px 24px!important;
+}
+
+#teams .grid.two[data-section-pane="team-advanced"]>.panel{
+  min-width:0!important;
+  align-self:start!important;
+  border:0!important;
+  border-top:1px solid var(--ink)!important;
+  border-radius:0!important;
+  background:transparent!important;
+  box-shadow:none!important;
+  padding:var(--panel-padding)!important;
+}
+#teams .grid.two[data-section-pane="team-advanced"]>#team-lines,
+#team-lines>.notice{max-width:none!important}
+#team-lines:not(:has(table)){
+  display:grid!important;
+  align-content:center!important;
+  min-height:112px!important;
+  border-left:4px solid var(--brand)!important;
+  padding:20px 24px!important;
+  color:var(--ink-soft)!important;
+}
+
+#special-teams-hero.is-empty{
+  grid-template-columns:minmax(0,1fr)!important;
+  min-height:0!important;
+  padding:24px 28px!important;
+}
+#special-teams-hero.is-empty>div{max-width:760px!important}
+#special-teams-hero.is-empty + #special-teams-metrics{
+  grid-template-columns:repeat(2,minmax(0,1fr))!important;
+}
+
+#players:has([data-section-tab="player-goalies"].active)>.player-heading{display:none!important}
+
+.workspace-story-rail{padding:0!important}
+#watchlist .workspace-command h2{
+  font-family:var(--font-sans)!important;
+  font-size:clamp(40px,4.3vw,62px)!important;
+  font-weight:620!important;
+  line-height:.98!important;
+  letter-spacing:-.052em!important;
+}
+
+@media(max-width:640px){
+  .chart.is-empty,.chart.is-empty>.chart-empty{min-height:132px!important}
+  #special-teams-hero.is-empty{padding:20px 18px!important}
+  #special-teams-hero.is-empty + #special-teams-metrics{grid-template-columns:minmax(0,1fr)!important}
+}

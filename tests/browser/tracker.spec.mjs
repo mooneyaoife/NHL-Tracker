@@ -4,6 +4,7 @@ import fs from "node:fs/promises";
 import { readFileSync } from "node:fs";
 
 const gameStateFixtures = JSON.parse(readFileSync(new URL("../fixtures/game_states.json", import.meta.url), "utf8"));
+const playerCapability = JSON.parse(readFileSync(new URL("../../site/data/tracker-players.json", import.meta.url), "utf8"));
 const browserGameStates = gameStateFixtures.filter(row =>
   ["delayed", "suspended", "cancelled", "final-ot", "final-so"].includes(row.code));
 
@@ -321,6 +322,47 @@ test("principal routes share one type and control hierarchy", async ({ page }) =
       expect(visual.actionHeight, `${route} action height at ${viewport.width}px`).toBeGreaterThanOrEqual(44);
     }
   }
+});
+
+test("Goalies scopes the primary player selector and restores the previous player", async ({ page }) => {
+  const team = "CAR";
+  const players = [...(playerCapability.rosters[team] || []), ...(playerCapability.players[team] || [])];
+  const positions = new Map(players.map(player => [String(player.id), player.position]));
+  const skater = players.find(player => player.position !== "G" && player.number != null);
+
+  await page.goto("/#players");
+  await expect(page.locator("#players")).toHaveClass(/active/, { timeout: 15_000 });
+  await page.locator("#player-team-select").selectOption(team);
+  await expect(page.locator(`#player-select option[value="${skater.id}"]`)).toHaveCount(1);
+  await page.locator("#player-select").selectOption(String(skater.id));
+  await expect(page.locator("#player-title")).toHaveText(skater.name);
+
+  await page.locator('[data-section-tab="player-goalies"]').click();
+  await expect(page.locator('[data-section-tab="player-goalies"]')).toHaveAttribute("aria-pressed", "true");
+  await expect(page.locator("#players > .player-heading")).toBeHidden();
+  await expect(page.locator("#player-team-select")).toHaveValue(team);
+  await expect(page.locator("#player-select")).toHaveAttribute("aria-label", "Choose goalie");
+  const goalieIds = await page.locator("#player-select option").evaluateAll(options => options.map(option => option.value).filter(Boolean));
+  expect(goalieIds.length).toBeGreaterThan(0);
+  expect(goalieIds.every(id => positions.get(id) === "G"), "every primary option in Goalies is a goalie").toBe(true);
+  expect(goalieIds).not.toContain(String(skater.id));
+  const selectedGoalie = await page.locator("#player-select").inputValue();
+  await expect(page.locator("#goalie-select")).toHaveValue(selectedGoalie, { timeout: 15_000 });
+
+  await page.locator('[data-section-tab="player-profile"]').click();
+  await expect(page.locator("#players > .player-heading")).toBeVisible();
+  await expect(page.locator("#player-select")).toHaveAttribute("aria-label", "Choose player");
+  await expect(page.locator("#player-select")).toHaveValue(String(skater.id));
+  await expect(page.locator("#player-title")).toHaveText(skater.name);
+
+  await page.goto(`/?team=${team}&player=${skater.id}&section=player-goalies#players`);
+  await expect(page.locator('[data-section-tab="player-goalies"]')).toHaveAttribute("aria-pressed", "true");
+  await expect(page.locator("#players > .player-heading")).toBeHidden();
+  await expect(page.locator(`#player-select option[value="${skater.id}"]`)).toHaveCount(0);
+  const routedGoalie = await page.locator("#player-select").inputValue();
+  expect(positions.get(routedGoalie)).toBe("G");
+  await expect(page.locator("#goalie-select")).toHaveValue(routedGoalie, { timeout: 15_000 });
+  expect(new URL(page.url()).searchParams.get("player")).toBe(routedGoalie);
 });
 
 test("core journey avoids repeated slate, season and archive controls", async ({ page }) => {
