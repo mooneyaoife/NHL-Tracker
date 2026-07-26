@@ -8,6 +8,8 @@ Baseline source: `f4f155bba8ff0edad0f8bb0f28e74194f1b614f2`
 
 Working branch: `agent/full-audit-v734`
 
+Production merge: `96cffe60784cd485eb2f21fe2d60c57b30269ab3` (PR #11)
+
 ## 1. EXECUTIVE SUMMARY
 
 NHL Tracker is a unusually capable static-first personal hockey application. It combines official NHL schedules, game states, standings and rosters with season archives, player/team analysis, comparisons, power rankings, news, third-party evidence, calendar feeds and an installable offline shell. Its strongest original qualities were honest freshness labelling, detailed exceptional-game handling, Europe/London date support, capability-based data loading, and a cautious Cloudflare live-data layer that preserves a verified static snapshot when an upstream request fails.
@@ -296,7 +298,7 @@ The initial public site matched the baseline main branch and served a fresh 2026
 
 The meaningful baseline host difference was architectural: GitHub Pages served static public files, while Cloudflare served the same UI plus protected Functions. It was not a divergent frontend. The broken pretty URLs were specific to static hosting expectations and reproduced on GitHub Pages.
 
-The release candidate has passed the same Cloudflare build/verification scripts locally. Final production publication and the authenticated public/private artifact comparison are performed by `.github/workflows/validate-and-deploy.yml` after the audited branch is merged. The final task handoff records the resulting merge commit and workflow URL; no Cloudflare value or credential is copied into this report.
+The release was squash-merged through PR #11 as `96cffe60784cd485eb2f21fe2d60c57b30269ab3`. Production workflow run `30200819685` passed in 52 seconds: it revalidated the committed artifact and freshness, deployed GitHub Pages, built and verified the Cloudflare artifact, deployed it, and then passed the authenticated public/private artifact comparison. A final public fetch confirmed UI 7.35.0, fresh season `20262027` metadata identifying the merge commit, and working `/season/` and `/policies/` hand-off documents. No Cloudflare value or credential is copied into this report.
 
 ## 9. DESIGN-SYSTEM CONSISTENCY REVIEW
 
@@ -364,6 +366,8 @@ Final validation completed on 26 July 2026:
 - `pnpm test:browser` / Playwright Chromium desktop and mobile — **90 passed** in 1.6 minutes.
 - LHCI autorun — **3 of 3 passed**, with the metrics in section 11.
 - WebKit 26.0 compact smoke at 390×844 for Home, Schedule and Policies — **passed** without overflow, console errors or failed requests.
+- GitHub PR checks after the focused cross-platform assertion repair — browser **passed** (run `30200649484`), budgets **passed** (run `30200649480`).
+- Production deployment and authenticated public/private verification — **passed** (run `30200819685`, merge `96cffe6`).
 - `git diff --check` — **passed**.
 
 The browser suite covers direct links, route announcements, back/focus behaviours, theme, postponed/delayed/suspended/cancelled/OT/SO/offseason/empty states, London DST/midnight dates, static-before-live rendering, recovery states, responsive layout, control duplication, UI hierarchy, progressive disclosure, touch targets, transfer limits, offline behaviour and serious axe violations. All original live routes were also inspected manually at representative viewports.
@@ -434,7 +438,7 @@ No remaining item is a known feasible Critical, High or Medium defect.
 - [x] Desktop, tablet and mobile layouts checked; Chromium full suite and focused WebKit smoke passed.
 - [x] Accessibility, performance, reliability, security/privacy, design consistency and maintainability reviewed.
 - [x] Dependency audit, artifact health, performance budgets and Cloudflare production build passed.
-- [x] Baseline production compared with repository; final release candidate prepared for the established validated deployment workflow.
+- [x] Baseline production compared with repository; final GitHub Pages and Cloudflare artifacts deployed and verified from merge `96cffe6`.
 - [x] No production data, DNS, billing, credential or unrelated Cloudflare setting changed.
 - [x] No private credential or Access value included in code, report or fixtures.
 - [x] No known feasible Critical, High or Medium finding remains.
