@@ -15,7 +15,7 @@ DATA = ROOT / "site" / "data"
 SOURCE = DATA / "tracker.json"
 
 CORE_KEYS = ("meta", "standings", "daily", "teams", "sources", "divisionHistory")
-SCHEDULE_KEYS = ("preseasonGames", "scheduleRelease", "scheduleDifficulty", "nextSeasonPreview", "previousSeasonStandings")
+SCHEDULE_KEYS = ("preseasonGames", "scheduleRelease", "scheduleDifficulty", "schedulePressure", "nextSeasonPreview", "previousSeasonStandings")
 PLAYER_KEYS = ("rosters", "players", "officialPlayers", "playerCoverage", "rosterChanges", "rosterChangeHistory", "transactions", "news", "podcasts", "videos")
 ANALYTICS_KEYS = ("gameCentre", "moneypuck", "naturalStatTrick", "specialTeams", "history", "gameLibrary")
 

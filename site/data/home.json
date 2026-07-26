@@ -1,6 +1,6 @@
 {
-  "schema": 2,
-  "sourceCommit": "8d0a94bfbf0972e4ccbe6e8caad9af0b52523e25",
+  "schema": 3,
+  "sourceCommit": "57426cb7fda5aa8f2cd7dfd9d9d293ccae63a976",
   "dataGeneratedAt": "2026-07-26T14:01:59.296628+00:00",
   "season": "20262027",
   "version": "5.74.0",
@@ -391,6 +391,59 @@
       }
     ]
   },
+  "freshness": {
+    "status": "fresh",
+    "checkedAt": "2026-07-26T14:01:59.296644+00:00",
+    "lastSuccessfulAt": "2026-07-26T14:01:59.296647+00:00",
+    "ageSeconds": 0,
+    "failedTeams": [],
+    "schedule": {
+      "complete": true,
+      "expectedGamesPerTeam": 84,
+      "counts": {
+        "COL": 84,
+        "CAR": 84,
+        "DAL": 84,
+        "BUF": 84,
+        "TBL": 84,
+        "MTL": 84,
+        "MIN": 84,
+        "BOS": 84,
+        "OTT": 84,
+        "PIT": 84,
+        "PHI": 84,
+        "WSH": 84,
+        "VGK": 84,
+        "EDM": 84,
+        "UTA": 84,
+        "DET": 84,
+        "CBJ": 84,
+        "ANA": 84,
+        "NYI": 84,
+        "LAK": 84,
+        "NJD": 84,
+        "STL": 84,
+        "NSH": 84,
+        "SJS": 84,
+        "FLA": 84,
+        "WPG": 84,
+        "SEA": 84,
+        "TOR": 84,
+        "CGY": 84,
+        "NYR": 84,
+        "CHI": 84,
+        "VAN": 84
+      },
+      "failedTeams": [],
+      "fetchFailures": []
+    },
+    "rosters": {
+      "status": "fresh",
+      "complete": true,
+      "failedTeams": [],
+      "fallbackTeams": []
+    }
+  },
   "standingsEvidence": {
     "season": "20252026",
     "current": false,
@@ -490,6 +543,1683 @@
     "dashboard-points": "<div class=\"rank-row\" role=\"listitem\"><strong>CAR</strong><span>53-22-7 · 113 PTS · +56 GD</span></div><div class=\"rank-row\" role=\"listitem\"><strong>BUF</strong><span>50-23-9 · 109 PTS · +47 GD</span></div><div class=\"rank-row\" role=\"listitem\"><strong>MIN</strong><span>46-24-12 · 104 PTS · +32 GD</span></div><div class=\"rank-row\" role=\"listitem\"><strong>SJS</strong><span>39-35-8 · 86 PTS · -41 GD</span></div>",
     "recent-form": "<p class=\"notice\">2026–27 form begins after completed games.</p>",
     "home-saved-players": "<div class=\"home-empty-state\"><strong>Saved players are ready</strong><span>Open player analysis to view and manage your watchlist.</span></div>",
-    "home-pinned-analytics": "<button type=\"button\" class=\"home-pin\" data-shell-page=\"league\"><span>Team Rankings</span><small>League-wide performance categories</small><b>→</b></button><button type=\"button\" class=\"home-pin\" data-shell-page=\"playoffs\"><span>Playoff Path</span><small>Forecasts and postseason routes</small><b>→</b></button><button type=\"button\" class=\"home-pin\" data-shell-page=\"schedule\"><span>Season Shape</span><small>Density, rest and difficulty</small><b>→</b></button>"
+    "home-pinned-analytics": "<button type=\"button\" class=\"home-pin\" data-shell-page=\"league\"><span>Team Rankings</span><small>League-wide performance categories</small><b>→</b></button><button type=\"button\" class=\"home-pin\" data-shell-page=\"playoffs\"><span>Playoff Path</span><small>Forecasts and postseason routes</small><b>→</b></button><button type=\"button\" class=\"home-pin\" data-shell-page=\"schedule\"><span>Season Shape</span><small>Density, rest and difficulty</small><b>→</b></button>",
+    "today-games": "<article class=\"watch-next-hero\" data-watch-mode=\"league\"><header><div><span class=\"section-kicker\">League watch</span><h3>Florida Panthers at Carolina Hurricanes</h3><p>Tue 29 Sep · 22:00 UK · Lenovo Center</p></div><b class=\"watch-next-state state-scheduled\">Scheduled</b></header><div class=\"watch-next-signals\" aria-label=\"Three things to know\"><div class=\"watch-next-signal\"><span>Opponent baseline</span><strong>51.2% PTS</strong><small>Opponent points percentage in 2025–26; context, not a prediction</small></div><div class=\"watch-next-signal\"><span>Setting</span><strong>Home</strong><small>Lenovo Center</small></div></div><footer><a class=\"watch-next-open\" href=\"?game=2026020001#games\" data-watch-game=\"2026020001\">Open Game Centre →</a><span>2025–26 opponent evidence · updated 26 Jul · UK time</span></footer><details class=\"watch-next-method\"><summary>How to read this brief</summary><p>Official NHL schedule, prior-season opponent points percentage, travel, rest, congestion, road sequence, time-zone and event flags. Does not include injuries, projected goalies, current form or lineup changes.</p><small>Schedule burden is context, not a result or win-probability forecast.</small></details></article><div class=\"watch-next-support\" aria-label=\"More games to watch\"><a class=\"watch-next-row\" href=\"?game=2026020002#games\" data-watch-game=\"2026020002\"><span>Scheduled · Wed 30 Sep · 00:00 UK</span><strong>Montréal Canadiens at Toronto Maple Leafs</strong><small>64.6% PTS</small><b>→</b></a><a class=\"watch-next-row\" href=\"?game=2026020003#games\" data-watch-game=\"2026020003\"><span>Scheduled · Wed 30 Sep · 01:00 UK</span><strong>New York Rangers at Boston Bruins</strong><small>47.0% PTS</small><b>→</b></a></div>"
+  },
+  "watchNext": {
+    "schema": 1,
+    "season": "20262027",
+    "sourceSeason": "20252026",
+    "teamBriefs": {
+      "ANA": {
+        "id": "2026020021",
+        "focusTeam": "ANA",
+        "opponent": "VGK",
+        "away": "ANA",
+        "home": "VGK",
+        "startTimeUTC": "2026-10-03T02:00:00Z",
+        "londonDate": "2026-10-03",
+        "status": "scheduled",
+        "statusLabel": "Scheduled",
+        "location": "Away",
+        "venue": "T-Mobile Arena",
+        "burden": 36.1,
+        "signals": [
+          {
+            "kind": "opponent",
+            "label": "Opponent baseline",
+            "value": "57.9% PTS",
+            "detail": "Opponent points percentage in 2025–26; context, not a prediction"
+          },
+          {
+            "kind": "venue",
+            "label": "Setting",
+            "value": "Away",
+            "detail": "T-Mobile Arena"
+          }
+        ]
+      },
+      "BOS": {
+        "id": "2026020003",
+        "focusTeam": "BOS",
+        "opponent": "NYR",
+        "away": "NYR",
+        "home": "BOS",
+        "startTimeUTC": "2026-09-30T00:00:00Z",
+        "londonDate": "2026-09-30",
+        "status": "scheduled",
+        "statusLabel": "Scheduled",
+        "location": "Home",
+        "venue": "TD Garden",
+        "burden": 21.1,
+        "signals": [
+          {
+            "kind": "opponent",
+            "label": "Opponent baseline",
+            "value": "47.0% PTS",
+            "detail": "Opponent points percentage in 2025–26; context, not a prediction"
+          },
+          {
+            "kind": "venue",
+            "label": "Setting",
+            "value": "Home",
+            "detail": "TD Garden"
+          }
+        ]
+      },
+      "BUF": {
+        "id": "2026020011",
+        "focusTeam": "BUF",
+        "opponent": "CBJ",
+        "away": "BUF",
+        "home": "CBJ",
+        "startTimeUTC": "2026-10-01T23:00:00Z",
+        "londonDate": "2026-10-02",
+        "status": "scheduled",
+        "statusLabel": "Scheduled",
+        "location": "Away",
+        "venue": "Nationwide Arena",
+        "burden": 35.6,
+        "signals": [
+          {
+            "kind": "opponent",
+            "label": "Opponent baseline",
+            "value": "56.1% PTS",
+            "detail": "Opponent points percentage in 2025–26; context, not a prediction"
+          },
+          {
+            "kind": "venue",
+            "label": "Setting",
+            "value": "Away",
+            "detail": "Nationwide Arena"
+          }
+        ]
+      },
+      "CAR": {
+        "id": "2026020001",
+        "focusTeam": "CAR",
+        "opponent": "FLA",
+        "away": "FLA",
+        "home": "CAR",
+        "startTimeUTC": "2026-09-29T21:00:00Z",
+        "londonDate": "2026-09-29",
+        "status": "scheduled",
+        "statusLabel": "Scheduled",
+        "location": "Home",
+        "venue": "Lenovo Center",
+        "burden": 23.0,
+        "signals": [
+          {
+            "kind": "opponent",
+            "label": "Opponent baseline",
+            "value": "51.2% PTS",
+            "detail": "Opponent points percentage in 2025–26; context, not a prediction"
+          },
+          {
+            "kind": "venue",
+            "label": "Setting",
+            "value": "Home",
+            "detail": "Lenovo Center"
+          }
+        ]
+      },
+      "CBJ": {
+        "id": "2026020011",
+        "focusTeam": "CBJ",
+        "opponent": "BUF",
+        "away": "BUF",
+        "home": "CBJ",
+        "startTimeUTC": "2026-10-01T23:00:00Z",
+        "londonDate": "2026-10-02",
+        "status": "scheduled",
+        "statusLabel": "Scheduled",
+        "location": "Home",
+        "venue": "Nationwide Arena",
+        "burden": 29.9,
+        "signals": [
+          {
+            "kind": "opponent",
+            "label": "Opponent baseline",
+            "value": "66.5% PTS",
+            "detail": "Opponent points percentage in 2025–26; context, not a prediction"
+          },
+          {
+            "kind": "venue",
+            "label": "Setting",
+            "value": "Home",
+            "detail": "Nationwide Arena"
+          }
+        ]
+      },
+      "CGY": {
+        "id": "2026020014",
+        "focusTeam": "CGY",
+        "opponent": "SEA",
+        "away": "SEA",
+        "home": "CGY",
+        "startTimeUTC": "2026-10-02T01:00:00Z",
+        "londonDate": "2026-10-02",
+        "status": "scheduled",
+        "statusLabel": "Scheduled",
+        "location": "Home",
+        "venue": "Scotiabank Saddledome",
+        "burden": 21.7,
+        "signals": [
+          {
+            "kind": "opponent",
+            "label": "Opponent baseline",
+            "value": "48.2% PTS",
+            "detail": "Opponent points percentage in 2025–26; context, not a prediction"
+          },
+          {
+            "kind": "venue",
+            "label": "Setting",
+            "value": "Home",
+            "detail": "Scotiabank Saddledome"
+          }
+        ]
+      },
+      "CHI": {
+        "id": "2026020005",
+        "focusTeam": "CHI",
+        "opponent": "VGK",
+        "away": "CHI",
+        "home": "VGK",
+        "startTimeUTC": "2026-09-30T02:30:00Z",
+        "londonDate": "2026-09-30",
+        "status": "scheduled",
+        "statusLabel": "Scheduled",
+        "location": "Away",
+        "venue": "T-Mobile Arena",
+        "burden": 43.9,
+        "signals": [
+          {
+            "kind": "travel",
+            "label": "Travel",
+            "value": "2,451 km",
+            "detail": "Estimated trip from the previous venue"
+          },
+          {
+            "kind": "travel",
+            "label": "Time zones",
+            "value": "2 hours",
+            "detail": "Scheduled UTC-offset change from the previous venue"
+          },
+          {
+            "kind": "travel",
+            "label": "Road trip",
+            "value": "Game 1 of 3",
+            "detail": "Consecutive road-like games"
+          }
+        ]
+      },
+      "COL": {
+        "id": "2026020007",
+        "focusTeam": "COL",
+        "opponent": "LAK",
+        "away": "LAK",
+        "home": "COL",
+        "startTimeUTC": "2026-10-01T02:00:00Z",
+        "londonDate": "2026-10-01",
+        "status": "scheduled",
+        "statusLabel": "Scheduled",
+        "location": "Home",
+        "venue": "Ball Arena",
+        "burden": 24.7,
+        "signals": [
+          {
+            "kind": "opponent",
+            "label": "Opponent baseline",
+            "value": "54.9% PTS",
+            "detail": "Opponent points percentage in 2025–26; context, not a prediction"
+          },
+          {
+            "kind": "venue",
+            "label": "Setting",
+            "value": "Home",
+            "detail": "Ball Arena"
+          }
+        ]
+      },
+      "DAL": {
+        "id": "2026020020",
+        "focusTeam": "DAL",
+        "opponent": "STL",
+        "away": "STL",
+        "home": "DAL",
+        "startTimeUTC": "2026-10-03T01:00:00Z",
+        "londonDate": "2026-10-03",
+        "status": "scheduled",
+        "statusLabel": "Scheduled",
+        "location": "Home",
+        "venue": "American Airlines Center",
+        "burden": 23.6,
+        "signals": [
+          {
+            "kind": "opponent",
+            "label": "Opponent baseline",
+            "value": "52.4% PTS",
+            "detail": "Opponent points percentage in 2025–26; context, not a prediction"
+          },
+          {
+            "kind": "venue",
+            "label": "Setting",
+            "value": "Home",
+            "detail": "American Airlines Center"
+          }
+        ]
+      },
+      "DET": {
+        "id": "2026020017",
+        "focusTeam": "DET",
+        "opponent": "NYR",
+        "away": "NYR",
+        "home": "DET",
+        "startTimeUTC": "2026-10-02T22:30:00Z",
+        "londonDate": "2026-10-02",
+        "status": "scheduled",
+        "statusLabel": "Scheduled",
+        "location": "Home",
+        "venue": "Little Caesars Arena",
+        "burden": 21.1,
+        "signals": [
+          {
+            "kind": "opponent",
+            "label": "Opponent baseline",
+            "value": "47.0% PTS",
+            "detail": "Opponent points percentage in 2025–26; context, not a prediction"
+          },
+          {
+            "kind": "venue",
+            "label": "Setting",
+            "value": "Home",
+            "detail": "Little Caesars Arena"
+          }
+        ]
+      },
+      "EDM": {
+        "id": "2026020004",
+        "focusTeam": "EDM",
+        "opponent": "VAN",
+        "away": "VAN",
+        "home": "EDM",
+        "startTimeUTC": "2026-09-30T02:00:00Z",
+        "londonDate": "2026-09-30",
+        "status": "scheduled",
+        "statusLabel": "Scheduled",
+        "location": "Home",
+        "venue": "Rogers Place",
+        "burden": 15.9,
+        "signals": [
+          {
+            "kind": "opponent",
+            "label": "Opponent baseline",
+            "value": "35.4% PTS",
+            "detail": "Opponent points percentage in 2025–26; context, not a prediction"
+          },
+          {
+            "kind": "venue",
+            "label": "Setting",
+            "value": "Home",
+            "detail": "Rogers Place"
+          }
+        ]
+      },
+      "FLA": {
+        "id": "2026020001",
+        "focusTeam": "FLA",
+        "opponent": "CAR",
+        "away": "FLA",
+        "home": "CAR",
+        "startTimeUTC": "2026-09-29T21:00:00Z",
+        "londonDate": "2026-09-29",
+        "status": "scheduled",
+        "statusLabel": "Scheduled",
+        "location": "Away",
+        "venue": "Lenovo Center",
+        "burden": 43.0,
+        "signals": [
+          {
+            "kind": "travel",
+            "label": "Travel",
+            "value": "1,083 km",
+            "detail": "Estimated trip from the previous venue"
+          },
+          {
+            "kind": "travel",
+            "label": "Road trip",
+            "value": "Game 1 of 4",
+            "detail": "Consecutive road-like games"
+          },
+          {
+            "kind": "opponent",
+            "label": "Opponent baseline",
+            "value": "68.9% PTS",
+            "detail": "Opponent points percentage in 2025–26; context, not a prediction"
+          }
+        ]
+      },
+      "LAK": {
+        "id": "2026020007",
+        "focusTeam": "LAK",
+        "opponent": "COL",
+        "away": "LAK",
+        "home": "COL",
+        "startTimeUTC": "2026-10-01T02:00:00Z",
+        "londonDate": "2026-10-01",
+        "status": "scheduled",
+        "statusLabel": "Scheduled",
+        "location": "Away",
+        "venue": "Ball Arena",
+        "burden": 46.9,
+        "signals": [
+          {
+            "kind": "travel",
+            "label": "Travel",
+            "value": "1,337 km",
+            "detail": "Estimated trip from the previous venue"
+          },
+          {
+            "kind": "opponent",
+            "label": "Opponent baseline",
+            "value": "73.8% PTS",
+            "detail": "Opponent points percentage in 2025–26; context, not a prediction"
+          },
+          {
+            "kind": "venue",
+            "label": "Setting",
+            "value": "Away",
+            "detail": "Ball Arena"
+          }
+        ]
+      },
+      "MIN": {
+        "id": "2026020012",
+        "focusTeam": "MIN",
+        "opponent": "NSH",
+        "away": "MIN",
+        "home": "NSH",
+        "startTimeUTC": "2026-10-02T00:00:00Z",
+        "londonDate": "2026-10-02",
+        "status": "scheduled",
+        "statusLabel": "Scheduled",
+        "location": "Away",
+        "venue": "Bridgestone Arena",
+        "burden": 35.7,
+        "signals": [
+          {
+            "kind": "travel",
+            "label": "Travel",
+            "value": "1,113 km",
+            "detail": "Estimated trip from the previous venue"
+          },
+          {
+            "kind": "opponent",
+            "label": "Opponent baseline",
+            "value": "52.4% PTS",
+            "detail": "Opponent points percentage in 2025–26; context, not a prediction"
+          },
+          {
+            "kind": "venue",
+            "label": "Setting",
+            "value": "Away",
+            "detail": "Bridgestone Arena"
+          }
+        ]
+      },
+      "MTL": {
+        "id": "2026020002",
+        "focusTeam": "MTL",
+        "opponent": "TOR",
+        "away": "MTL",
+        "home": "TOR",
+        "startTimeUTC": "2026-09-29T23:00:00Z",
+        "londonDate": "2026-09-30",
+        "status": "scheduled",
+        "statusLabel": "Scheduled",
+        "location": "Away",
+        "venue": "Scotiabank Arena",
+        "burden": 31.8,
+        "signals": [
+          {
+            "kind": "opponent",
+            "label": "Opponent baseline",
+            "value": "47.6% PTS",
+            "detail": "Opponent points percentage in 2025–26; context, not a prediction"
+          },
+          {
+            "kind": "venue",
+            "label": "Setting",
+            "value": "Away",
+            "detail": "Scotiabank Arena"
+          }
+        ]
+      },
+      "NJD": {
+        "id": "2026020009",
+        "focusTeam": "NJD",
+        "opponent": "PHI",
+        "away": "PHI",
+        "home": "NJD",
+        "startTimeUTC": "2026-10-01T23:00:00Z",
+        "londonDate": "2026-10-02",
+        "status": "scheduled",
+        "statusLabel": "Scheduled",
+        "location": "Home",
+        "venue": "Prudential Center",
+        "burden": 26.9,
+        "signals": [
+          {
+            "kind": "opponent",
+            "label": "Opponent baseline",
+            "value": "59.8% PTS",
+            "detail": "Opponent points percentage in 2025–26; context, not a prediction"
+          },
+          {
+            "kind": "venue",
+            "label": "Setting",
+            "value": "Home",
+            "detail": "Prudential Center"
+          }
+        ]
+      },
+      "NSH": {
+        "id": "2026020012",
+        "focusTeam": "NSH",
+        "opponent": "MIN",
+        "away": "MIN",
+        "home": "NSH",
+        "startTimeUTC": "2026-10-02T00:00:00Z",
+        "londonDate": "2026-10-02",
+        "status": "scheduled",
+        "statusLabel": "Scheduled",
+        "location": "Home",
+        "venue": "Bridgestone Arena",
+        "burden": 28.5,
+        "signals": [
+          {
+            "kind": "opponent",
+            "label": "Opponent baseline",
+            "value": "63.4% PTS",
+            "detail": "Opponent points percentage in 2025–26; context, not a prediction"
+          },
+          {
+            "kind": "venue",
+            "label": "Setting",
+            "value": "Home",
+            "detail": "Bridgestone Arena"
+          }
+        ]
+      },
+      "NYI": {
+        "id": "2026020008",
+        "focusTeam": "NYI",
+        "opponent": "TOR",
+        "away": "NYI",
+        "home": "TOR",
+        "startTimeUTC": "2026-09-30T23:30:00Z",
+        "londonDate": "2026-10-01",
+        "status": "scheduled",
+        "statusLabel": "Scheduled",
+        "location": "Away",
+        "venue": "Scotiabank Arena",
+        "burden": 32.0,
+        "signals": [
+          {
+            "kind": "opponent",
+            "label": "Opponent baseline",
+            "value": "47.6% PTS",
+            "detail": "Opponent points percentage in 2025–26; context, not a prediction"
+          },
+          {
+            "kind": "venue",
+            "label": "Setting",
+            "value": "Away",
+            "detail": "Scotiabank Arena"
+          }
+        ]
+      },
+      "NYR": {
+        "id": "2026020003",
+        "focusTeam": "NYR",
+        "opponent": "BOS",
+        "away": "NYR",
+        "home": "BOS",
+        "startTimeUTC": "2026-09-30T00:00:00Z",
+        "londonDate": "2026-09-30",
+        "status": "scheduled",
+        "statusLabel": "Scheduled",
+        "location": "Away",
+        "venue": "TD Garden",
+        "burden": 37.3,
+        "signals": [
+          {
+            "kind": "opponent",
+            "label": "Opponent baseline",
+            "value": "61.0% PTS",
+            "detail": "Opponent points percentage in 2025–26; context, not a prediction"
+          },
+          {
+            "kind": "venue",
+            "label": "Setting",
+            "value": "Away",
+            "detail": "TD Garden"
+          }
+        ]
+      },
+      "OTT": {
+        "id": "2026020023",
+        "focusTeam": "OTT",
+        "opponent": "TOR",
+        "away": "OTT",
+        "home": "TOR",
+        "startTimeUTC": "2026-10-03T23:00:00Z",
+        "londonDate": "2026-10-04",
+        "status": "scheduled",
+        "statusLabel": "Scheduled",
+        "location": "Away",
+        "venue": "Scotiabank Arena",
+        "burden": 31.3,
+        "signals": [
+          {
+            "kind": "travel",
+            "label": "Road trip",
+            "value": "Game 1 of 3",
+            "detail": "Consecutive road-like games"
+          },
+          {
+            "kind": "opponent",
+            "label": "Opponent baseline",
+            "value": "47.6% PTS",
+            "detail": "Opponent points percentage in 2025–26; context, not a prediction"
+          },
+          {
+            "kind": "venue",
+            "label": "Setting",
+            "value": "Away",
+            "detail": "Scotiabank Arena"
+          }
+        ]
+      },
+      "PHI": {
+        "id": "2026020006",
+        "focusTeam": "PHI",
+        "opponent": "PIT",
+        "away": "PIT",
+        "home": "PHI",
+        "startTimeUTC": "2026-09-30T23:30:00Z",
+        "londonDate": "2026-10-01",
+        "status": "scheduled",
+        "statusLabel": "Scheduled",
+        "location": "Home",
+        "venue": "Xfinity Mobile Arena",
+        "burden": 26.9,
+        "signals": [
+          {
+            "kind": "opponent",
+            "label": "Opponent baseline",
+            "value": "59.8% PTS",
+            "detail": "Opponent points percentage in 2025–26; context, not a prediction"
+          },
+          {
+            "kind": "venue",
+            "label": "Setting",
+            "value": "Home",
+            "detail": "Xfinity Mobile Arena"
+          }
+        ]
+      },
+      "PIT": {
+        "id": "2026020006",
+        "focusTeam": "PIT",
+        "opponent": "PHI",
+        "away": "PIT",
+        "home": "PHI",
+        "startTimeUTC": "2026-09-30T23:30:00Z",
+        "londonDate": "2026-10-01",
+        "status": "scheduled",
+        "statusLabel": "Scheduled",
+        "location": "Away",
+        "venue": "Xfinity Mobile Arena",
+        "burden": 37.0,
+        "signals": [
+          {
+            "kind": "opponent",
+            "label": "Opponent baseline",
+            "value": "59.8% PTS",
+            "detail": "Opponent points percentage in 2025–26; context, not a prediction"
+          },
+          {
+            "kind": "venue",
+            "label": "Setting",
+            "value": "Away",
+            "detail": "Xfinity Mobile Arena"
+          }
+        ]
+      },
+      "SEA": {
+        "id": "2026020014",
+        "focusTeam": "SEA",
+        "opponent": "CGY",
+        "away": "SEA",
+        "home": "CGY",
+        "startTimeUTC": "2026-10-02T01:00:00Z",
+        "londonDate": "2026-10-02",
+        "status": "scheduled",
+        "statusLabel": "Scheduled",
+        "location": "Away",
+        "venue": "Scotiabank Saddledome",
+        "burden": 33.1,
+        "signals": [
+          {
+            "kind": "opponent",
+            "label": "Opponent baseline",
+            "value": "47.0% PTS",
+            "detail": "Opponent points percentage in 2025–26; context, not a prediction"
+          },
+          {
+            "kind": "venue",
+            "label": "Setting",
+            "value": "Away",
+            "detail": "Scotiabank Saddledome"
+          }
+        ]
+      },
+      "SJS": {
+        "id": "2026020016",
+        "focusTeam": "SJS",
+        "opponent": "FLA",
+        "away": "FLA",
+        "home": "SJS",
+        "startTimeUTC": "2026-10-02T02:00:00Z",
+        "londonDate": "2026-10-02",
+        "status": "scheduled",
+        "statusLabel": "Scheduled",
+        "location": "Home",
+        "venue": "SAP Center at San Jose",
+        "burden": 23.0,
+        "signals": [
+          {
+            "kind": "opponent",
+            "label": "Opponent baseline",
+            "value": "51.2% PTS",
+            "detail": "Opponent points percentage in 2025–26; context, not a prediction"
+          },
+          {
+            "kind": "venue",
+            "label": "Setting",
+            "value": "Home",
+            "detail": "SAP Center at San Jose"
+          }
+        ]
+      },
+      "STL": {
+        "id": "2026020020",
+        "focusTeam": "STL",
+        "opponent": "DAL",
+        "away": "STL",
+        "home": "DAL",
+        "startTimeUTC": "2026-10-03T01:00:00Z",
+        "londonDate": "2026-10-03",
+        "status": "scheduled",
+        "statusLabel": "Scheduled",
+        "location": "Away",
+        "venue": "American Airlines Center",
+        "burden": 42.2,
+        "signals": [
+          {
+            "kind": "travel",
+            "label": "Road trip",
+            "value": "Game 1 of 3",
+            "detail": "Consecutive road-like games"
+          },
+          {
+            "kind": "opponent",
+            "label": "Opponent baseline",
+            "value": "68.3% PTS",
+            "detail": "Opponent points percentage in 2025–26; context, not a prediction"
+          },
+          {
+            "kind": "venue",
+            "label": "Setting",
+            "value": "Away",
+            "detail": "American Airlines Center"
+          }
+        ]
+      },
+      "TBL": {
+        "id": "2026020010",
+        "focusTeam": "TBL",
+        "opponent": "NYR",
+        "away": "TBL",
+        "home": "NYR",
+        "startTimeUTC": "2026-10-01T23:00:00Z",
+        "londonDate": "2026-10-02",
+        "status": "scheduled",
+        "statusLabel": "Scheduled",
+        "location": "Away",
+        "venue": "Madison Square Garden",
+        "burden": 34.7,
+        "signals": [
+          {
+            "kind": "travel",
+            "label": "Travel",
+            "value": "1,620 km",
+            "detail": "Estimated trip from the previous venue"
+          },
+          {
+            "kind": "opponent",
+            "label": "Opponent baseline",
+            "value": "47.0% PTS",
+            "detail": "Opponent points percentage in 2025–26; context, not a prediction"
+          },
+          {
+            "kind": "venue",
+            "label": "Setting",
+            "value": "Away",
+            "detail": "Madison Square Garden"
+          }
+        ]
+      },
+      "TOR": {
+        "id": "2026020002",
+        "focusTeam": "TOR",
+        "opponent": "MTL",
+        "away": "MTL",
+        "home": "TOR",
+        "startTimeUTC": "2026-09-29T23:00:00Z",
+        "londonDate": "2026-09-30",
+        "status": "scheduled",
+        "statusLabel": "Scheduled",
+        "location": "Home",
+        "venue": "Scotiabank Arena",
+        "burden": 29.1,
+        "signals": [
+          {
+            "kind": "opponent",
+            "label": "Opponent baseline",
+            "value": "64.6% PTS",
+            "detail": "Opponent points percentage in 2025–26; context, not a prediction"
+          },
+          {
+            "kind": "venue",
+            "label": "Setting",
+            "value": "Home",
+            "detail": "Scotiabank Arena"
+          }
+        ]
+      },
+      "UTA": {
+        "id": "2026020013",
+        "focusTeam": "UTA",
+        "opponent": "CHI",
+        "away": "CHI",
+        "home": "UTA",
+        "startTimeUTC": "2026-10-02T01:00:00Z",
+        "londonDate": "2026-10-02",
+        "status": "scheduled",
+        "statusLabel": "Scheduled",
+        "location": "Home",
+        "venue": "Delta Center",
+        "burden": 19.8,
+        "signals": [
+          {
+            "kind": "opponent",
+            "label": "Opponent baseline",
+            "value": "43.9% PTS",
+            "detail": "Opponent points percentage in 2025–26; context, not a prediction"
+          },
+          {
+            "kind": "venue",
+            "label": "Setting",
+            "value": "Home",
+            "detail": "Delta Center"
+          }
+        ]
+      },
+      "VAN": {
+        "id": "2026020004",
+        "focusTeam": "VAN",
+        "opponent": "EDM",
+        "away": "VAN",
+        "home": "EDM",
+        "startTimeUTC": "2026-09-30T02:00:00Z",
+        "londonDate": "2026-09-30",
+        "status": "scheduled",
+        "statusLabel": "Scheduled",
+        "location": "Away",
+        "venue": "Rogers Place",
+        "burden": 37.8,
+        "signals": [
+          {
+            "kind": "opponent",
+            "label": "Opponent baseline",
+            "value": "56.7% PTS",
+            "detail": "Opponent points percentage in 2025–26; context, not a prediction"
+          },
+          {
+            "kind": "venue",
+            "label": "Setting",
+            "value": "Away",
+            "detail": "Rogers Place"
+          }
+        ]
+      },
+      "VGK": {
+        "id": "2026020005",
+        "focusTeam": "VGK",
+        "opponent": "CHI",
+        "away": "CHI",
+        "home": "VGK",
+        "startTimeUTC": "2026-09-30T02:30:00Z",
+        "londonDate": "2026-09-30",
+        "status": "scheduled",
+        "statusLabel": "Scheduled",
+        "location": "Home",
+        "venue": "T-Mobile Arena",
+        "burden": 19.8,
+        "signals": [
+          {
+            "kind": "opponent",
+            "label": "Opponent baseline",
+            "value": "43.9% PTS",
+            "detail": "Opponent points percentage in 2025–26; context, not a prediction"
+          },
+          {
+            "kind": "venue",
+            "label": "Setting",
+            "value": "Home",
+            "detail": "T-Mobile Arena"
+          }
+        ]
+      },
+      "WPG": {
+        "id": "2026020019",
+        "focusTeam": "WPG",
+        "opponent": "BOS",
+        "away": "BOS",
+        "home": "WPG",
+        "startTimeUTC": "2026-10-03T00:00:00Z",
+        "londonDate": "2026-10-03",
+        "status": "scheduled",
+        "statusLabel": "Scheduled",
+        "location": "Home",
+        "venue": "Canada Life Centre",
+        "burden": 27.4,
+        "signals": [
+          {
+            "kind": "opponent",
+            "label": "Opponent baseline",
+            "value": "61.0% PTS",
+            "detail": "Opponent points percentage in 2025–26; context, not a prediction"
+          },
+          {
+            "kind": "venue",
+            "label": "Setting",
+            "value": "Home",
+            "detail": "Canada Life Centre"
+          }
+        ]
+      },
+      "WSH": {
+        "id": "2026020018",
+        "focusTeam": "WSH",
+        "opponent": "CAR",
+        "away": "WSH",
+        "home": "CAR",
+        "startTimeUTC": "2026-10-02T23:00:00Z",
+        "londonDate": "2026-10-03",
+        "status": "scheduled",
+        "statusLabel": "Scheduled",
+        "location": "Away",
+        "venue": "Lenovo Center",
+        "burden": 41.1,
+        "signals": [
+          {
+            "kind": "opponent",
+            "label": "Opponent baseline",
+            "value": "68.9% PTS",
+            "detail": "Opponent points percentage in 2025–26; context, not a prediction"
+          },
+          {
+            "kind": "venue",
+            "label": "Setting",
+            "value": "Away",
+            "detail": "Lenovo Center"
+          }
+        ]
+      }
+    },
+    "leagueBriefs": [
+      {
+        "id": "2026020001",
+        "focusTeam": "CAR",
+        "opponent": "FLA",
+        "away": "FLA",
+        "home": "CAR",
+        "startTimeUTC": "2026-09-29T21:00:00Z",
+        "londonDate": "2026-09-29",
+        "status": "scheduled",
+        "statusLabel": "Scheduled",
+        "location": "Home",
+        "venue": "Lenovo Center",
+        "burden": 23.0,
+        "signals": [
+          {
+            "kind": "opponent",
+            "label": "Opponent baseline",
+            "value": "51.2% PTS",
+            "detail": "Opponent points percentage in 2025–26; context, not a prediction"
+          },
+          {
+            "kind": "venue",
+            "label": "Setting",
+            "value": "Home",
+            "detail": "Lenovo Center"
+          }
+        ]
+      },
+      {
+        "id": "2026020002",
+        "focusTeam": "TOR",
+        "opponent": "MTL",
+        "away": "MTL",
+        "home": "TOR",
+        "startTimeUTC": "2026-09-29T23:00:00Z",
+        "londonDate": "2026-09-30",
+        "status": "scheduled",
+        "statusLabel": "Scheduled",
+        "location": "Home",
+        "venue": "Scotiabank Arena",
+        "burden": 29.1,
+        "signals": [
+          {
+            "kind": "opponent",
+            "label": "Opponent baseline",
+            "value": "64.6% PTS",
+            "detail": "Opponent points percentage in 2025–26; context, not a prediction"
+          },
+          {
+            "kind": "venue",
+            "label": "Setting",
+            "value": "Home",
+            "detail": "Scotiabank Arena"
+          }
+        ]
+      },
+      {
+        "id": "2026020003",
+        "focusTeam": "BOS",
+        "opponent": "NYR",
+        "away": "NYR",
+        "home": "BOS",
+        "startTimeUTC": "2026-09-30T00:00:00Z",
+        "londonDate": "2026-09-30",
+        "status": "scheduled",
+        "statusLabel": "Scheduled",
+        "location": "Home",
+        "venue": "TD Garden",
+        "burden": 21.1,
+        "signals": [
+          {
+            "kind": "opponent",
+            "label": "Opponent baseline",
+            "value": "47.0% PTS",
+            "detail": "Opponent points percentage in 2025–26; context, not a prediction"
+          },
+          {
+            "kind": "venue",
+            "label": "Setting",
+            "value": "Home",
+            "detail": "TD Garden"
+          }
+        ]
+      },
+      {
+        "id": "2026020004",
+        "focusTeam": "EDM",
+        "opponent": "VAN",
+        "away": "VAN",
+        "home": "EDM",
+        "startTimeUTC": "2026-09-30T02:00:00Z",
+        "londonDate": "2026-09-30",
+        "status": "scheduled",
+        "statusLabel": "Scheduled",
+        "location": "Home",
+        "venue": "Rogers Place",
+        "burden": 15.9,
+        "signals": [
+          {
+            "kind": "opponent",
+            "label": "Opponent baseline",
+            "value": "35.4% PTS",
+            "detail": "Opponent points percentage in 2025–26; context, not a prediction"
+          },
+          {
+            "kind": "venue",
+            "label": "Setting",
+            "value": "Home",
+            "detail": "Rogers Place"
+          }
+        ]
+      },
+      {
+        "id": "2026020005",
+        "focusTeam": "VGK",
+        "opponent": "CHI",
+        "away": "CHI",
+        "home": "VGK",
+        "startTimeUTC": "2026-09-30T02:30:00Z",
+        "londonDate": "2026-09-30",
+        "status": "scheduled",
+        "statusLabel": "Scheduled",
+        "location": "Home",
+        "venue": "T-Mobile Arena",
+        "burden": 19.8,
+        "signals": [
+          {
+            "kind": "opponent",
+            "label": "Opponent baseline",
+            "value": "43.9% PTS",
+            "detail": "Opponent points percentage in 2025–26; context, not a prediction"
+          },
+          {
+            "kind": "venue",
+            "label": "Setting",
+            "value": "Home",
+            "detail": "T-Mobile Arena"
+          }
+        ]
+      },
+      {
+        "id": "2026020006",
+        "focusTeam": "PHI",
+        "opponent": "PIT",
+        "away": "PIT",
+        "home": "PHI",
+        "startTimeUTC": "2026-09-30T23:30:00Z",
+        "londonDate": "2026-10-01",
+        "status": "scheduled",
+        "statusLabel": "Scheduled",
+        "location": "Home",
+        "venue": "Xfinity Mobile Arena",
+        "burden": 26.9,
+        "signals": [
+          {
+            "kind": "opponent",
+            "label": "Opponent baseline",
+            "value": "59.8% PTS",
+            "detail": "Opponent points percentage in 2025–26; context, not a prediction"
+          },
+          {
+            "kind": "venue",
+            "label": "Setting",
+            "value": "Home",
+            "detail": "Xfinity Mobile Arena"
+          }
+        ]
+      }
+    ],
+    "methodology": {
+      "purpose": "Pregame schedule context, not a result prediction",
+      "inputs": "Official NHL schedule, prior-season opponent points percentage, travel, rest, congestion, road sequence, time-zone and event flags",
+      "limitations": "Does not include injuries, projected goalies, current form or lineup changes"
+    }
+  },
+  "continuity": {
+    "schema": 3,
+    "season": "20262027",
+    "capturedAt": "2026-07-26T14:01:59.296628+00:00",
+    "updatedAt": "2026-07-26T14:01:59.296628+00:00",
+    "finished": {},
+    "upcoming": {
+      "2026020001": {
+        "id": "2026020001",
+        "date": "2026-09-29",
+        "startTimeUTC": "2026-09-29T21:00:00Z",
+        "type": "Regular Season",
+        "away": "FLA",
+        "home": "CAR",
+        "awayScore": null,
+        "homeScore": null,
+        "focusTeams": [
+          "FLA",
+          "CAR"
+        ]
+      },
+      "2026020002": {
+        "id": "2026020002",
+        "date": "2026-09-29",
+        "startTimeUTC": "2026-09-29T23:00:00Z",
+        "type": "Regular Season",
+        "away": "MTL",
+        "home": "TOR",
+        "awayScore": null,
+        "homeScore": null,
+        "focusTeams": [
+          "MTL",
+          "TOR"
+        ]
+      },
+      "2026020003": {
+        "id": "2026020003",
+        "date": "2026-09-29",
+        "startTimeUTC": "2026-09-30T00:00:00Z",
+        "type": "Regular Season",
+        "away": "NYR",
+        "home": "BOS",
+        "awayScore": null,
+        "homeScore": null,
+        "focusTeams": [
+          "NYR",
+          "BOS"
+        ]
+      },
+      "2026020004": {
+        "id": "2026020004",
+        "date": "2026-09-29",
+        "startTimeUTC": "2026-09-30T02:00:00Z",
+        "type": "Regular Season",
+        "away": "VAN",
+        "home": "EDM",
+        "awayScore": null,
+        "homeScore": null,
+        "focusTeams": [
+          "VAN",
+          "EDM"
+        ]
+      },
+      "2026020005": {
+        "id": "2026020005",
+        "date": "2026-09-29",
+        "startTimeUTC": "2026-09-30T02:30:00Z",
+        "type": "Regular Season",
+        "away": "CHI",
+        "home": "VGK",
+        "awayScore": null,
+        "homeScore": null,
+        "focusTeams": [
+          "CHI",
+          "VGK"
+        ]
+      },
+      "2026020006": {
+        "id": "2026020006",
+        "date": "2026-09-30",
+        "startTimeUTC": "2026-09-30T23:30:00Z",
+        "type": "Regular Season",
+        "away": "PIT",
+        "home": "PHI",
+        "awayScore": null,
+        "homeScore": null,
+        "focusTeams": [
+          "PIT",
+          "PHI"
+        ]
+      },
+      "2026020008": {
+        "id": "2026020008",
+        "date": "2026-09-30",
+        "startTimeUTC": "2026-09-30T23:30:00Z",
+        "type": "Regular Season",
+        "away": "NYI",
+        "home": "TOR",
+        "awayScore": null,
+        "homeScore": null,
+        "focusTeams": [
+          "NYI",
+          "TOR"
+        ]
+      },
+      "2026020007": {
+        "id": "2026020007",
+        "date": "2026-09-30",
+        "startTimeUTC": "2026-10-01T02:00:00Z",
+        "type": "Regular Season",
+        "away": "LAK",
+        "home": "COL",
+        "awayScore": null,
+        "homeScore": null,
+        "focusTeams": [
+          "LAK",
+          "COL"
+        ]
+      },
+      "2026020009": {
+        "id": "2026020009",
+        "date": "2026-10-01",
+        "startTimeUTC": "2026-10-01T23:00:00Z",
+        "type": "Regular Season",
+        "away": "PHI",
+        "home": "NJD",
+        "awayScore": null,
+        "homeScore": null,
+        "focusTeams": [
+          "PHI",
+          "NJD"
+        ]
+      },
+      "2026020010": {
+        "id": "2026020010",
+        "date": "2026-10-01",
+        "startTimeUTC": "2026-10-01T23:00:00Z",
+        "type": "Regular Season",
+        "away": "TBL",
+        "home": "NYR",
+        "awayScore": null,
+        "homeScore": null,
+        "focusTeams": [
+          "TBL",
+          "NYR"
+        ]
+      },
+      "2026020011": {
+        "id": "2026020011",
+        "date": "2026-10-01",
+        "startTimeUTC": "2026-10-01T23:00:00Z",
+        "type": "Regular Season",
+        "away": "BUF",
+        "home": "CBJ",
+        "awayScore": null,
+        "homeScore": null,
+        "focusTeams": [
+          "BUF",
+          "CBJ"
+        ]
+      },
+      "2026020012": {
+        "id": "2026020012",
+        "date": "2026-10-01",
+        "startTimeUTC": "2026-10-02T00:00:00Z",
+        "type": "Regular Season",
+        "away": "MIN",
+        "home": "NSH",
+        "awayScore": null,
+        "homeScore": null,
+        "focusTeams": [
+          "MIN",
+          "NSH"
+        ]
+      },
+      "2026020013": {
+        "id": "2026020013",
+        "date": "2026-10-01",
+        "startTimeUTC": "2026-10-02T01:00:00Z",
+        "type": "Regular Season",
+        "away": "CHI",
+        "home": "UTA",
+        "awayScore": null,
+        "homeScore": null,
+        "focusTeams": [
+          "CHI",
+          "UTA"
+        ]
+      },
+      "2026020014": {
+        "id": "2026020014",
+        "date": "2026-10-01",
+        "startTimeUTC": "2026-10-02T01:00:00Z",
+        "type": "Regular Season",
+        "away": "SEA",
+        "home": "CGY",
+        "awayScore": null,
+        "homeScore": null,
+        "focusTeams": [
+          "SEA",
+          "CGY"
+        ]
+      },
+      "2026020015": {
+        "id": "2026020015",
+        "date": "2026-10-01",
+        "startTimeUTC": "2026-10-02T02:00:00Z",
+        "type": "Regular Season",
+        "away": "EDM",
+        "home": "VAN",
+        "awayScore": null,
+        "homeScore": null,
+        "focusTeams": [
+          "EDM",
+          "VAN"
+        ]
+      },
+      "2026020016": {
+        "id": "2026020016",
+        "date": "2026-10-01",
+        "startTimeUTC": "2026-10-02T02:00:00Z",
+        "type": "Regular Season",
+        "away": "FLA",
+        "home": "SJS",
+        "awayScore": null,
+        "homeScore": null,
+        "focusTeams": [
+          "FLA",
+          "SJS"
+        ]
+      },
+      "2026020017": {
+        "id": "2026020017",
+        "date": "2026-10-02",
+        "startTimeUTC": "2026-10-02T22:30:00Z",
+        "type": "Regular Season",
+        "away": "NYR",
+        "home": "DET",
+        "awayScore": null,
+        "homeScore": null,
+        "focusTeams": [
+          "NYR",
+          "DET"
+        ]
+      },
+      "2026020018": {
+        "id": "2026020018",
+        "date": "2026-10-02",
+        "startTimeUTC": "2026-10-02T23:00:00Z",
+        "type": "Regular Season",
+        "away": "WSH",
+        "home": "CAR",
+        "awayScore": null,
+        "homeScore": null,
+        "focusTeams": [
+          "WSH",
+          "CAR"
+        ]
+      },
+      "2026020019": {
+        "id": "2026020019",
+        "date": "2026-10-02",
+        "startTimeUTC": "2026-10-03T00:00:00Z",
+        "type": "Regular Season",
+        "away": "BOS",
+        "home": "WPG",
+        "awayScore": null,
+        "homeScore": null,
+        "focusTeams": [
+          "BOS",
+          "WPG"
+        ]
+      },
+      "2026020020": {
+        "id": "2026020020",
+        "date": "2026-10-02",
+        "startTimeUTC": "2026-10-03T01:00:00Z",
+        "type": "Regular Season",
+        "away": "STL",
+        "home": "DAL",
+        "awayScore": null,
+        "homeScore": null,
+        "focusTeams": [
+          "STL",
+          "DAL"
+        ]
+      },
+      "2026020021": {
+        "id": "2026020021",
+        "date": "2026-10-02",
+        "startTimeUTC": "2026-10-03T02:00:00Z",
+        "type": "Regular Season",
+        "away": "ANA",
+        "home": "VGK",
+        "awayScore": null,
+        "homeScore": null,
+        "focusTeams": [
+          "ANA",
+          "VGK"
+        ]
+      },
+      "2026020022": {
+        "id": "2026020022",
+        "date": "2026-10-03",
+        "startTimeUTC": "2026-10-03T23:00:00Z",
+        "type": "Regular Season",
+        "away": "CHI",
+        "home": "BUF",
+        "awayScore": null,
+        "homeScore": null,
+        "focusTeams": [
+          "CHI",
+          "BUF"
+        ]
+      },
+      "2026020023": {
+        "id": "2026020023",
+        "date": "2026-10-03",
+        "startTimeUTC": "2026-10-03T23:00:00Z",
+        "type": "Regular Season",
+        "away": "OTT",
+        "home": "TOR",
+        "awayScore": null,
+        "homeScore": null,
+        "focusTeams": [
+          "OTT",
+          "TOR"
+        ]
+      },
+      "2026020024": {
+        "id": "2026020024",
+        "date": "2026-10-03",
+        "startTimeUTC": "2026-10-03T23:00:00Z",
+        "type": "Regular Season",
+        "away": "WSH",
+        "home": "TBL",
+        "awayScore": null,
+        "homeScore": null,
+        "focusTeams": [
+          "WSH",
+          "TBL"
+        ]
+      },
+      "2026020026": {
+        "id": "2026020026",
+        "date": "2026-10-03",
+        "startTimeUTC": "2026-10-03T23:00:00Z",
+        "type": "Regular Season",
+        "away": "MTL",
+        "home": "PIT",
+        "awayScore": null,
+        "homeScore": null,
+        "focusTeams": [
+          "MTL",
+          "PIT"
+        ]
+      },
+      "2026020027": {
+        "id": "2026020027",
+        "date": "2026-10-03",
+        "startTimeUTC": "2026-10-03T23:00:00Z",
+        "type": "Regular Season",
+        "away": "UTA",
+        "home": "CBJ",
+        "awayScore": null,
+        "homeScore": null,
+        "focusTeams": [
+          "UTA",
+          "CBJ"
+        ]
+      },
+      "2026020028": {
+        "id": "2026020028",
+        "date": "2026-10-03",
+        "startTimeUTC": "2026-10-03T23:00:00Z",
+        "type": "Regular Season",
+        "away": "SEA",
+        "home": "EDM",
+        "awayScore": null,
+        "homeScore": null,
+        "focusTeams": [
+          "SEA",
+          "EDM"
+        ]
+      },
+      "2026020029": {
+        "id": "2026020029",
+        "date": "2026-10-03",
+        "startTimeUTC": "2026-10-03T23:30:00Z",
+        "type": "Regular Season",
+        "away": "NJD",
+        "home": "NYI",
+        "awayScore": null,
+        "homeScore": null,
+        "focusTeams": [
+          "NJD",
+          "NYI"
+        ]
+      },
+      "2026020030": {
+        "id": "2026020030",
+        "date": "2026-10-03",
+        "startTimeUTC": "2026-10-04T00:00:00Z",
+        "type": "Regular Season",
+        "away": "DAL",
+        "home": "NSH",
+        "awayScore": null,
+        "homeScore": null,
+        "focusTeams": [
+          "DAL",
+          "NSH"
+        ]
+      },
+      "2026020031": {
+        "id": "2026020031",
+        "date": "2026-10-03",
+        "startTimeUTC": "2026-10-04T00:00:00Z",
+        "type": "Regular Season",
+        "away": "BOS",
+        "home": "MIN",
+        "awayScore": null,
+        "homeScore": null,
+        "focusTeams": [
+          "BOS",
+          "MIN"
+        ]
+      },
+      "2026020032": {
+        "id": "2026020032",
+        "date": "2026-10-03",
+        "startTimeUTC": "2026-10-04T01:00:00Z",
+        "type": "Regular Season",
+        "away": "STL",
+        "home": "COL",
+        "awayScore": null,
+        "homeScore": null,
+        "focusTeams": [
+          "STL",
+          "COL"
+        ]
+      },
+      "2026020033": {
+        "id": "2026020033",
+        "date": "2026-10-03",
+        "startTimeUTC": "2026-10-04T02:00:00Z",
+        "type": "Regular Season",
+        "away": "CGY",
+        "home": "VAN",
+        "awayScore": null,
+        "homeScore": null,
+        "focusTeams": [
+          "CGY",
+          "VAN"
+        ]
+      },
+      "2026020034": {
+        "id": "2026020034",
+        "date": "2026-10-03",
+        "startTimeUTC": "2026-10-04T02:00:00Z",
+        "type": "Regular Season",
+        "away": "LAK",
+        "home": "SJS",
+        "awayScore": null,
+        "homeScore": null,
+        "focusTeams": [
+          "LAK",
+          "SJS"
+        ]
+      },
+      "2026020035": {
+        "id": "2026020035",
+        "date": "2026-10-04",
+        "startTimeUTC": "2026-10-04T17:00:00Z",
+        "type": "Regular Season",
+        "away": "WPG",
+        "home": "DET",
+        "awayScore": null,
+        "homeScore": null,
+        "focusTeams": [
+          "WPG",
+          "DET"
+        ]
+      },
+      "2026020037": {
+        "id": "2026020037",
+        "date": "2026-10-04",
+        "startTimeUTC": "2026-10-05T00:00:00Z",
+        "type": "Regular Season",
+        "away": "FLA",
+        "home": "ANA",
+        "awayScore": null,
+        "homeScore": null,
+        "focusTeams": [
+          "FLA",
+          "ANA"
+        ]
+      },
+      "2026020041": {
+        "id": "2026020041",
+        "date": "2026-10-05",
+        "startTimeUTC": "2026-10-05T23:30:00Z",
+        "type": "Regular Season",
+        "away": "OTT",
+        "home": "BOS",
+        "awayScore": null,
+        "homeScore": null,
+        "focusTeams": [
+          "OTT",
+          "BOS"
+        ]
+      }
+    },
+    "roster": {
+      "CHI|Added|8474141|2026-07-23T18:37:49.103935+00:00": {
+        "key": "CHI|Added|8474141|2026-07-23T18:37:49.103935+00:00",
+        "team": "CHI",
+        "direction": "Added",
+        "name": "Patrick Kane",
+        "detectedAt": "2026-07-23T18:37:49.103935+00:00"
+      },
+      "NJD|Added|8484177|2026-07-23T08:45:11.260817+00:00": {
+        "key": "NJD|Added|8484177|2026-07-23T08:45:11.260817+00:00",
+        "team": "NJD",
+        "direction": "Added",
+        "name": "Lenni Hameenaho",
+        "detectedAt": "2026-07-23T08:45:11.260817+00:00"
+      },
+      "NJD|Added|8482076|2026-07-23T08:45:11.260817+00:00": {
+        "key": "NJD|Added|8482076|2026-07-23T08:45:11.260817+00:00",
+        "team": "NJD",
+        "direction": "Added",
+        "name": "Nico Daws",
+        "detectedAt": "2026-07-23T08:45:11.260817+00:00"
+      },
+      "CBJ|Added|8478046|2026-07-22T23:16:06.607778+00:00": {
+        "key": "CBJ|Added|8478046|2026-07-22T23:16:06.607778+00:00",
+        "team": "CBJ",
+        "direction": "Added",
+        "name": "Danton Heinen",
+        "detectedAt": "2026-07-22T23:16:06.607778+00:00"
+      },
+      "SEA|Added|8480876|2026-07-21T23:12:25.068174+00:00": {
+        "key": "SEA|Added|8480876|2026-07-21T23:12:25.068174+00:00",
+        "team": "SEA",
+        "direction": "Added",
+        "name": "Curtis Douglas",
+        "detectedAt": "2026-07-21T23:12:25.068174+00:00"
+      }
+    },
+    "schedule": {
+      "activeSeason": "20262027",
+      "complete": true,
+      "completedAt": "2026-07-16T18:19:58.437549+00:00",
+      "changes": {}
+    }
   }
 }

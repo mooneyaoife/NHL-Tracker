@@ -25,10 +25,12 @@ from zoneinfo import ZoneInfo
 
 try:
     from scripts.game_state import london_date, normalize_game_state
+    from scripts.schedule_pressure import build_schedule_pressure
     from scripts.source_adapters import fetch_csv, fetch_json, fetch_text
     from scripts.split_tracker_data import write_capability_artifacts
 except ModuleNotFoundError:  # Direct execution places scripts/ on sys.path.
     from game_state import london_date, normalize_game_state
+    from schedule_pressure import build_schedule_pressure
     from source_adapters import fetch_csv, fetch_json, fetch_text
     from split_tracker_data import write_capability_artifacts
 
@@ -1901,6 +1903,7 @@ def main() -> None:
         else previous.get("previousSeasonStandings", []))
     schedule_difficulty, schedule_evidence = build_schedule_model(schedules, league_teams, previous_standings, SEASON)
     rows = tracked_game_rows(schedules, league_teams, schedule_evidence)
+    schedule_pressure = build_schedule_pressure(rows, league_teams, schedule_difficulty.get("sourceSeason"))
     preseason = preseason_schedule_rows(schedules)
     official_players = load_official_players(previous_same_season.get("officialPlayers", {}))
     players = build_players(schedules, league_teams, official_players)
@@ -1939,6 +1942,7 @@ def main() -> None:
         "previousSeasonStandings": previous_standings,
         "scheduleRelease": schedule_release, "nextSeasonPreview": preview,
         "scheduleDifficulty": schedule_difficulty,
+        "schedulePressure": schedule_pressure,
         "daily": daily, "rosters": rosters, "rosterChanges": changes, "rosterChangeHistory": change_history, "news": news, "transactions": transactions, "podcasts": podcasts, "videos": videos,
         "gameLibrary": game_library,
         "divisionHistory": division_histories(schedules, standings), "history": history, "moneypuck": moneypuck,

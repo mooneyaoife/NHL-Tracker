@@ -47,7 +47,7 @@ try {
     document.querySelectorAll(".page").forEach(page => page.classList.toggle("active", corePages.has(page.id)));
     document.documentElement.dataset.theme = "dark";
 
-    const routePattern = /\.(?:home|dashboard|tonight|calendar|game-centre|quick-game|game-hero|story-chapter|chapter-nav|chapter-return|season-file|season-state)[\w-]*/i;
+    const routePattern = /\.(?:home|watch-next|visit|dashboard|tonight|calendar|schedule-pressure|game-centre|quick-game|game-hero|story-chapter|chapter-nav|chapter-return|season-file|season-state)[\w-]*/i;
     const dynamicPseudos = /::(?:before|after|marker|placeholder|backdrop)|:(?:hover|active|focus|focus-visible|focus-within|visited|target|checked|disabled|enabled|open)\b/g;
     const belongsToCore = element => {
       const page = element.closest?.(".page");

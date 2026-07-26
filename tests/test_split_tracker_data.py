@@ -11,13 +11,14 @@ SPEC.loader.exec_module(MODULE)
 
 class SplitTrackerDataTests(unittest.TestCase):
     def test_split_preserves_capability_contracts_and_compacts_false_evidence(self):
-        payload = {"meta": {"season": "20262027", "dataHash": "sha256:test", "trackedTeams": ["MTL"]}, "standings": [], "teams": {}, "daily": {"games": []},
+        payload = {"meta": {"season": "20262027", "dataHash": "sha256:test", "trackedTeams": ["MTL"]}, "standings": [], "teams": {}, "daily": {"games": []}, "schedulePressure": {"teams": []},
                    "games": [{"id": 1, "team": "MTL", "opponent": "TOR", "date": "2026-10-01", "schedule": {"restDays": 0, "backToBack": False, "travelKm": 900}}],
                    "rosters": {"MTL": []}, "gameCentre": {"1": {"landing": {}}}}
         shards = MODULE.split_payload(payload)
         self.assertEqual(set(shards), {"core", "schedule", "players", "analytics"})
         self.assertEqual(shards["core"]["games"], shards["schedule"]["games"])
         self.assertEqual(shards["schedule"]["games"][0]["schedule"], {"travelKm": 900})
+        self.assertEqual(shards["schedule"]["schedulePressure"], {"teams": []})
         self.assertIn("rosters", shards["players"])
         self.assertIn("gameCentre", shards["analytics"])
 
