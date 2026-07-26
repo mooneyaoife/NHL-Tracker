@@ -348,6 +348,31 @@ def mp_value(row: dict, *names, default=""):
     return default
 
 
+def mp_numeric_value(row: dict, *names) -> float | None:
+    """Return the first finite MoneyPuck number without inventing a fallback."""
+    value = mp_value(row, *names, default=None)
+    if value is None or isinstance(value, bool):
+        return None
+    try:
+        parsed = float(value)
+    except (TypeError, ValueError):
+        return None
+    return parsed if math.isfinite(parsed) else None
+
+
+def mp_difference(row: dict, minuend: str, subtrahend: str) -> float | None:
+    """Subtract two provider fields only when both operands are published numbers."""
+    left = mp_numeric_value(row, minuend)
+    right = mp_numeric_value(row, subtrahend)
+    return left - right if left is not None and right is not None else None
+
+
+def mp_total(row: dict, *names: str) -> float | None:
+    """Add provider fields only when every required component is numeric."""
+    values = [mp_numeric_value(row, name) for name in names]
+    return sum(values) if values and all(value is not None for value in values) else None
+
+
 def load_moneypuck_team_games(previous: list[dict] | None = None, previous_special: list[dict] | None = None) -> tuple[list[dict], list[dict]]:
     """Load the explicitly published team game-by-game files without scraping pages."""
     aliases = {"L.A": "LAK", "N.J": "NJD", "S.J": "SJS", "T.B": "TBL"}
@@ -438,17 +463,17 @@ def load_moneypuck(previous: dict | None = None) -> dict:
         for r in teams_raw if str(r.get("situation", "")).lower().replace(" ", "") in {"5on4", "4on5"}]
     skaters = [{"id":str(r.get("playerId", "")).split(".")[0],"name":mp_value(r,"name"),"team":mp_value(r,"team"),"position":mp_value(r,"position"),
         "games":mp_value(r,"games_played"),"minutes":round(float(mp_value(r,"icetime",default=0) or 0)/60,1),
-        "goals":mp_value(r,"I_F_goals","goals"),"assists":mp_value(r,"I_F_primaryAssists",default=0)+mp_value(r,"I_F_secondaryAssists",default=0),
+        "goals":mp_value(r,"I_F_goals","goals"),"assists":mp_total(r,"I_F_primaryAssists","I_F_secondaryAssists"),
         "points":mp_value(r,"I_F_points"),"xGoals":mp_value(r,"I_F_xGoals"),"goalsAboveExpected":mp_value(r,"I_F_goalsAboveExpected"),
-        "onIceXgPct":mp_value(r,"onIce_xGoalsPercentage"),"relativeXgPct":mp_value(r,"onIce_xGoalsPercentage",default=0)-mp_value(r,"offIce_xGoalsPercentage",default=0),
+        "onIceXgPct":mp_value(r,"onIce_xGoalsPercentage"),"relativeXgPct":mp_difference(r,"onIce_xGoalsPercentage","offIce_xGoalsPercentage"),
         "corsiPct":mp_value(r,"onIce_corsiPercentage"),"fenwickPct":mp_value(r,"onIce_fenwickPercentage"),"highDanger":mp_value(r,"I_F_highDangerShots")}
         for r in skaters_raw if situation(r)]
     goalies = [{"id":str(r.get("playerId", "")).split(".")[0],"name":mp_value(r,"name"),"team":mp_value(r,"team"),"games":mp_value(r,"games_played"),
         "minutes":round(float(mp_value(r,"icetime",default=0) or 0)/60,1),"shots":mp_value(r,"shotsOnGoal","unblocked_shot_attempts"),
-        "goalsAgainst":mp_value(r,"goals"),"xGoalsAgainst":mp_value(r,"xGoals"),"gsax":mp_value(r,"xGoals",default=0)-mp_value(r,"goals",default=0),
+        "goalsAgainst":mp_value(r,"goals"),"xGoalsAgainst":mp_value(r,"xGoals"),"gsax":mp_difference(r,"xGoals","goals"),
         "savePct":mp_value(r,"savePercentage"),"expectedSavePct":mp_value(r,"xSavePercentage"),
-        "savePctAboveExpected":mp_value(r,"savePercentage",default=0)-mp_value(r,"xSavePercentage",default=0),
-        "reboundsAboveExpected":mp_value(r,"rebounds",default=0)-mp_value(r,"xRebounds",default=0)}
+        "savePctAboveExpected":mp_difference(r,"savePercentage","xSavePercentage"),
+        "reboundsAboveExpected":mp_difference(r,"rebounds","xRebounds")}
         for r in goalies_raw if situation(r)]
     lines = [{"team":mp_value(r,"team"),"name":mp_value(r,"name","lineName"),"type":mp_value(r,"position","lineType"),
         "minutes":round(float(mp_value(r,"icetime",default=0) or 0)/60,1),"xgPct":mp_value(r,"xGoalsPercentage"),

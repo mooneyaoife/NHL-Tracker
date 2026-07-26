@@ -45,6 +45,61 @@ test.describe("screenshot-backed desktop visual regressions", () => {
     await expect(page.locator("#today-games .home-matchup")).toHaveCount(0);
   });
 
+  test("Season evidence stays visible and contained at the reported tablet width", async ({ page }) => {
+    await page.setViewportSize({ width: 757, height: 1000 });
+    await page.goto("/");
+    await expect(page.locator("#dashboard")).toHaveClass(/active/, { timeout: 15_000 });
+    const cards = page.locator("#season-state-stage .season-state-teams article");
+    await expect(cards).toHaveCount(4, { timeout: 15_000 });
+    await expect.poll(() => cards.evaluateAll(elements => elements.every(element => Number(getComputedStyle(element).opacity) > 0.95))).toBe(true);
+
+    const layout = await page.evaluate(() => {
+      const season = document.querySelector(".season-file").getBoundingClientRect();
+      const body = document.querySelector(".season-file-body").getBoundingClientRect();
+      const nav = document.querySelector(".season-state-nav");
+      const stage = document.querySelector(".season-state-stage").getBoundingClientRect();
+      const buttons = [...nav.querySelectorAll("button")].map(button => ({
+        top: button.getBoundingClientRect().top,
+        contained: button.scrollWidth <= button.clientWidth + 1,
+      }));
+      return {
+        bodyHeight: body.height,
+        navContained: nav.scrollWidth <= nav.clientWidth + 1,
+        oneRow: Math.max(...buttons.map(button => button.top)) - Math.min(...buttons.map(button => button.top)) < 2,
+        labelsContained: buttons.every(button => button.contained),
+        stageContained: stage.left >= season.left - 1 && stage.right <= season.right + 1,
+        documentContained: document.documentElement.scrollWidth <= innerWidth + 1,
+      };
+    });
+    expect(layout.bodyHeight).toBeLessThan(620);
+    expect(layout.navContained).toBe(true);
+    expect(layout.oneRow).toBe(true);
+    expect(layout.labelsContained).toBe(true);
+    expect(layout.stageContained).toBe(true);
+    expect(layout.documentContained).toBe(true);
+  });
+
+  test("League tabs divide the full local rail into three equal destinations", async ({ page }) => {
+    await page.goto("/?leagueView=league-overview#league");
+    await expect(page.locator("#league")).toHaveClass(/active/, { timeout: 15_000 });
+    const tabs = page.locator("#league .league-subnav button");
+    await expect(tabs).toHaveCount(3);
+    const layout = await page.locator("#league .league-subnav").evaluate(element => {
+      const rail = element.getBoundingClientRect();
+      const buttons = [...element.querySelectorAll("button")].map(button => button.getBoundingClientRect());
+      return {
+        leadingGap: buttons[0].left - rail.left,
+        trailingGap: rail.right - buttons.at(-1).right,
+        widthSpread: Math.max(...buttons.map(button => button.width)) - Math.min(...buttons.map(button => button.width)),
+        contained: element.scrollWidth <= element.clientWidth + 1,
+      };
+    });
+    expect(Math.abs(layout.leadingGap)).toBeLessThanOrEqual(2);
+    expect(Math.abs(layout.trailingGap)).toBeLessThanOrEqual(2);
+    expect(layout.widthSpread).toBeLessThanOrEqual(2);
+    expect(layout.contained).toBe(true);
+  });
+
   test("unavailable Special Teams uses a compact, full-width state", async ({ page }) => {
     await makeAnalyticsUnavailable(page);
     await page.goto("/?team=CAR&section=team-special#teams");
@@ -136,5 +191,71 @@ test.describe("screenshot-backed desktop visual regressions", () => {
     expect(visual.railPaddingRight).toBeLessThanOrEqual(0.5);
     expect(visual.headingFamily).toBe(visual.canonicalFamily);
     expect(visual.headingWeight).toBeGreaterThanOrEqual(600);
+  });
+
+  test("Workspace preferences use balanced cards without an ink gutter", async ({ page }) => {
+    await page.goto("/?workspaceChapter=workspace-preferences#watchlist");
+    await expect(page.locator("#watchlist")).toHaveClass(/active/, { timeout: 15_000 });
+    await expect(page.locator("#workspace-preferences")).toBeVisible();
+    const visual = await page.locator("#workspace-preferences .workspace-preference-grid").evaluate(element => {
+      const panels = [...element.children].map(panel => panel.getBoundingClientRect());
+      const header = document.querySelector("#watchlist .workspace-command").getBoundingClientRect();
+      return {
+        gap: panels[1].left - panels[0].right,
+        heightDifference: Math.abs(panels[0].height - panels[1].height),
+        background: getComputedStyle(element).backgroundColor,
+        headerHeight: header.height,
+      };
+    });
+    expect(visual.gap).toBeGreaterThanOrEqual(10);
+    expect(visual.gap).toBeLessThanOrEqual(18);
+    expect(visual.heightDifference).toBeLessThanOrEqual(3);
+    expect(visual.background).toBe("rgba(0, 0, 0, 0)");
+    expect(visual.headerHeight).toBeLessThanOrEqual(112);
+  });
+
+  test("Data Status keeps closed evidence compact and separates the lower grid", async ({ page }) => {
+    await page.goto("/#status");
+    await expect(page.locator("#status")).toHaveClass(/active/, { timeout: 15_000 });
+    await expect(page.locator("#status .source-status-panel")).not.toHaveAttribute("open", "");
+    await expect(page.locator("#status-coverage-panel")).not.toHaveAttribute("open", "");
+    const visual = await page.evaluate(() => {
+      const source = document.querySelector("#status .source-status-panel").getBoundingClientRect();
+      const coverage = document.querySelector("#status-coverage-panel").getBoundingClientRect();
+      const refresh = document.querySelector("#nst-refresh-centre").getBoundingClientRect();
+      const evidence = document.querySelector("#status .status-evidence-grid").getBoundingClientRect();
+      const sectionGap = Number.parseFloat(getComputedStyle(document.documentElement).getPropertyValue("--section-gap"));
+      return {
+        sourceHeight: source.height,
+        coverageHeight: coverage.height,
+        evidenceGap: evidence.top - refresh.bottom,
+        sectionGap,
+        scrollMargin: Number.parseFloat(getComputedStyle(document.querySelector("#status-coverage-panel")).scrollMarginTop),
+      };
+    });
+    expect(visual.sourceHeight).toBeLessThanOrEqual(76);
+    expect(visual.coverageHeight).toBeLessThanOrEqual(76);
+    expect(visual.evidenceGap).toBeGreaterThanOrEqual(16);
+    expect(visual.evidenceGap).toBeLessThanOrEqual(visual.sectionGap + 2);
+    expect(visual.scrollMargin).toBeGreaterThan(50);
+  });
+
+  test("Workspace chapter rail clears the global context rail on mobile", async ({ page }) => {
+    await page.setViewportSize({ width: 390, height: 780 });
+    await page.goto("/?workspaceChapter=workspace-teams#watchlist");
+    await expect(page.locator("#workspace-teams")).toBeVisible({ timeout: 15_000 });
+    await page.evaluate(() => window.scrollTo(0, 520));
+    await expect.poll(() => page.evaluate(() => window.scrollY)).toBeGreaterThan(100);
+    const rails = await page.evaluate(() => {
+      const context = document.querySelector(".context-nav").getBoundingClientRect();
+      const workspace = document.querySelector("#workspace-chapter-nav").getBoundingClientRect();
+      return {
+        contextBottom: context.bottom,
+        workspaceTop: workspace.top,
+        documentContained: document.documentElement.scrollWidth <= innerWidth + 1,
+      };
+    });
+    expect(rails.workspaceTop).toBeGreaterThanOrEqual(rails.contextBottom - 1);
+    expect(rails.documentContained).toBe(true);
   });
 });

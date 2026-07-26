@@ -54,6 +54,7 @@ const installShellAssets=JSON.parse(worker.match(/const SHELL=(\[[^;]+\]);/)?.[1
 for (const selector of [".home-masthead", ".tonight-command", ".calendar-grid", ".game-centre-controls", ".quick-game-hero"]) {
   assert.match(coreRoutes, new RegExp(selector.replace(".", "\\.")), `${selector} remains styled by the dependable route bundle`);
 }
+assert.match(coreRoutes, /@keyframes season-evidence-in/, "first-paint Season cards keep their reveal animation");
 assert.doesNotMatch(index, /href="(?:styles|theme-569|design-system)\.css/, "canonical deep-route styles are deferred");
 for (const asset of ["styles.css", "theme-569.css", "design-system.css"]) {
   assert.ok(!installShellAssets.some(value=>value.split("?")[0]===`./${asset}`),`${asset} is cached only after a deep route is opened`);
@@ -125,7 +126,10 @@ assert.doesNotMatch(index,/data-section-pane="player-profile" open><summary>(?:P
 assert.doesNotMatch(index,/class="expandable analytics-section" open|class="expandable" open><summary>Standings by division/, "deep league evidence is collapsed on first view");
 assert.doesNotMatch(index,/id="analysis-journey"/, "League does not duplicate its tab navigation with a second guided route");
 assert.doesNotMatch(app,/ANALYSIS_JOURNEY|setupAnalysisJourney/, "the removed League journey leaves no dormant runtime behind");
-assert.equal((index.match(/class="expandable comparison-evidence"/g) || []).length, 2, "team and player comparisons reveal full evidence on demand");
+assert.equal((index.match(/<details[^>]*class="[^"]*\bcomparison-evidence\b[^"]*"/g) || []).length, 5, "team and player comparisons reveal complete evidence progressively");
+for (const id of ["player-comparison-impact-evidence", "player-comparison-process-evidence", "player-comparison-form-evidence", "player-comparison-context-evidence"]) {
+  assert.match(index, new RegExp(`id="${id}"`), `${id} remains a stable directly navigable comparison chapter`);
+}
 assert.match(index,/id="power-state-note"[\s\S]*id="power-visuals"[\s\S]*id="power-ranking-details"/, "Power Index separates availability, current visuals and historical rankings");
 assert.match(app,/setPowerAvailability\(false,[\s\S]{0,500}power-chart[\s\S]{0,200}power-scatter/, "Power Index suppresses unavailable charts during the offseason");
 assert.match(app,/pane\.dataset\.sectionPrimary==="true"/, "switching Explore tabs opens only their primary disclosure");

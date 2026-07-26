@@ -1,12 +1,14 @@
 import {test,expect} from "@playwright/test";
 
+const HISTORICAL_PLAYER_COMPARISON="/?view=players&comparisonSeason=20252026&a=8480830&b=8482093&aTeam=CAR&bTeam=CAR&aScope=all&bScope=all#compare";
+
 test("installed Home, Tonight and Schedule survive offline",async({browser,baseURL})=>{
   const context=await browser.newContext({baseURL,serviceWorkers:"allow"});
   const page=await context.newPage();
   await page.goto("/");
   await page.evaluate(async()=>{const registration=await navigator.serviceWorker.ready;if(!registration.active)await new Promise(resolve=>navigator.serviceWorker.addEventListener("controllerchange",resolve,{once:true}))});
   const cached=await page.evaluate(async()=>{
-    const names=await caches.keys(),active=names.find(name=>name.includes("7.38.3")),keys=active?await (await caches.open(active)).keys():[];
+    const names=await caches.keys(),active=names.find(name=>name.includes("7.39.0")),keys=active?await (await caches.open(active)).keys():[];
     return keys.map(request=>new URL(request.url).pathname);
   });
   expect(cached).toContain("/data/home.json");
@@ -15,7 +17,7 @@ test("installed Home, Tonight and Schedule survive offline",async({browser,baseU
   expect(cached).toContain("/core-routes.css");
   expect(cached).not.toContain("/design-system.css");
   expect(cached).not.toContain("/app.js");
-  expect((await page.evaluate(()=>caches.keys())).filter(name=>name.startsWith("nhl-tracker-"))).toEqual(["nhl-tracker-7.38.3"]);
+  expect((await page.evaluate(()=>caches.keys())).filter(name=>name.startsWith("nhl-tracker-"))).toEqual(["nhl-tracker-7.39.0"]);
   await page.goto("about:blank");
   await page.goto("/#tonight");
   await expect(page.locator("#tonight")).toHaveClass(/active/);
@@ -27,6 +29,46 @@ test("installed Home, Tonight and Schedule survive offline",async({browser,baseU
   await page.goto("/#schedule",{waitUntil:"domcontentloaded"});
   await expect(page.locator("#schedule")).toHaveClass(/active/);
   await expect(page.locator("#calendar-list")).not.toBeEmpty();
+  await context.setOffline(false);
+  await context.close();
+});
+
+test("a previously loaded historical Player Compare direct URL survives offline",async({browser,baseURL})=>{
+  const context=await browser.newContext({baseURL,serviceWorkers:"allow"});
+  const page=await context.newPage();
+  await page.goto("/");
+  await page.evaluate(async()=>{
+    await navigator.serviceWorker.ready;
+    if(!navigator.serviceWorker.controller)await new Promise(resolve=>navigator.serviceWorker.addEventListener("controllerchange",resolve,{once:true}));
+  });
+
+  await page.goto(HISTORICAL_PLAYER_COMPARISON);
+  await expect(page.locator("#compare")).toHaveClass(/active/,{timeout:30000});
+  await expect(page.locator("#compare-players")).toHaveClass(/active/);
+  await expect(page.locator("#player-comparison-summary")).toContainText("Andrei Svechnikov",{timeout:30000});
+  await expect(page.locator("#player-comparison-summary")).toContainText("Seth Jarvis");
+  await expect(page.locator("#player-comparison-table table")).toBeAttached();
+
+  const runtimeCache=await page.evaluate(async()=>{
+    const names=(await caches.keys()).filter(name=>name.startsWith("nhl-tracker-"));
+    const cache=await caches.open(names.at(-1));
+    return (await cache.keys()).map(request=>`${new URL(request.url).pathname}${new URL(request.url).search}`);
+  });
+  expect(runtimeCache.some(path=>path.startsWith("/data/seasons/20252026.json"))).toBe(true);
+  expect(runtimeCache.some(path=>path.startsWith("/player-comparison.js"))).toBe(true);
+
+  await page.goto("about:blank");
+  await context.setOffline(true);
+  await page.goto(HISTORICAL_PLAYER_COMPARISON,{waitUntil:"domcontentloaded"});
+  await expect(page.locator("#compare")).toHaveClass(/active/,{timeout:30000});
+  await expect(page.locator("#compare-players")).toHaveClass(/active/);
+  await expect(page.locator("#player-comparison-season")).toHaveValue("20252026");
+  await expect(page.locator("#player-comparison-summary")).toContainText("Andrei Svechnikov",{timeout:30000});
+  await expect(page.locator("#player-comparison-summary")).toContainText("Seth Jarvis");
+  await expect(page.locator("#player-comparison-table table")).toBeAttached();
+  await expect(page.locator("#player-comparison-summary")).not.toContainText(/could not load|check the connection|unavailable/i);
+  await expect(page.locator("#player-comparison-impact-note")).not.toContainText(/evidence request failed/i);
+  expect(await page.evaluate(()=>({offline:!navigator.onLine,controlled:Boolean(navigator.serviceWorker.controller)}))).toEqual({offline:true,controlled:true});
   await context.setOffline(false);
   await context.close();
 });

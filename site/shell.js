@@ -1,6 +1,6 @@
 "use strict";
 (()=>{
-  const VERSION="7.38.3";
+  const VERSION="7.39.0";
   const QUICK_PAGES=new Set(["tonight","games","schedule"]);
   const QUICK_SCRIPTS=["data-contracts.js","data-loader.js","route-loader.js","cloudflare-live.js","route-app.js"];
   const FULL_SCRIPTS=["statistics.js","data-contracts.js","data-loader.js","router.js","route-loader.js","preferences.js","live-updates.js","observability.js","cloudflare-live.js","url-safety.js","app.js"];
@@ -59,6 +59,7 @@
   window.NHLTrackerLoadCompleteApp=loadCompleteApp;
   window.NHLTrackerLoadCompleteStyles=loadCompleteStyles;
   window.NHLTrackerPrefetchCompleteApp=prefetchCompleteApp;
+  window.NHLTrackerLoadScript=loadScript;
 
   const renderSnapshot=summary=>{const html=summary.snapshotHtml;if(html)for(const id in html)document.getElementById(id).innerHTML=html[id];const ready=loadScript("home-snapshot.js").then(()=>window.NHLTrackerHomeSnapshot[html?"attach":"render"](summary,{open:requestLoad})).catch(()=>{});return html?0:ready};
 

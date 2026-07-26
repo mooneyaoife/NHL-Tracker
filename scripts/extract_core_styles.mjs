@@ -73,6 +73,7 @@ try {
       }
     };
     const serialize = rules => [...rules].map(rule => {
+      if (rule.type === CSSRule.KEYFRAMES_RULE) return rule.cssText;
       if (rule.type === CSSRule.STYLE_RULE) return targetsCore(rule.selectorText) ? rule.cssText : "";
       if (rule.cssRules) {
         const body = serialize(rule.cssRules);
@@ -80,7 +81,7 @@ try {
         const opening = rule.cssText.slice(0, rule.cssText.indexOf("{")).trim();
         return `${opening}{${body}}`;
       }
-      return [CSSRule.FONT_FACE_RULE, CSSRule.KEYFRAMES_RULE].includes(rule.type) || /^@(?:property|font-feature-values|counter-style)/.test(rule.cssText)
+      return rule.type === CSSRule.FONT_FACE_RULE || /^@(?:property|font-feature-values|counter-style)/.test(rule.cssText)
         ? rule.cssText : "";
     }).filter(Boolean).join("\n");
     const extract = source => {

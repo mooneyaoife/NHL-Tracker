@@ -120,5 +120,61 @@ class PlayerPipelineTests(unittest.TestCase):
         self.assertEqual(coverage["officialReconciliationFailures"], 1)
 
 
+class MoneyPuckPipelineTests(unittest.TestCase):
+    @patch.object(update_tracker, "load_moneypuck_team_games", return_value=([], []))
+    @patch.object(update_tracker, "fetch_csv")
+    def test_derived_values_require_every_numeric_operand(self, fetch_csv, _team_games):
+        skaters = [{
+            "situation": "all", "playerId": "1", "name": "Complete Skater",
+            "team": "BUF", "position": "C", "icetime": "3600",
+            "I_F_primaryAssists": "4", "I_F_secondaryAssists": "3",
+            "onIce_xGoalsPercentage": ".56", "offIce_xGoalsPercentage": ".49",
+        }, {
+            "situation": "all", "playerId": "2", "name": "Partial Skater",
+            "team": "BUF", "position": "C", "icetime": "1800",
+            "I_F_primaryAssists": "2", "I_F_secondaryAssists": "",
+            "onIce_xGoalsPercentage": ".52", "offIce_xGoalsPercentage": "NaN",
+        }]
+        goalies = [{
+            "situation": "all", "playerId": "3", "name": "Complete Goalie",
+            "team": "CAR", "icetime": "7200", "xGoals": "10.5", "goals": "8",
+            "savePercentage": ".925", "xSavePercentage": ".910",
+            "rebounds": "7", "xRebounds": "4.5",
+        }, {
+            "situation": "all", "playerId": "4", "name": "Partial Goalie",
+            "team": "CAR", "icetime": "3600", "xGoals": "", "goals": "5",
+            "savePercentage": "not available", "xSavePercentage": ".900",
+            "rebounds": "2", "xRebounds": None,
+        }]
+
+        def source_rows(url, **_kwargs):
+            if url.endswith("/teams.csv"):
+                return [{"situation": "all", "team": "BUF"}]
+            if url.endswith("/skaters.csv"):
+                return skaters
+            if url.endswith("/goalies.csv"):
+                return goalies
+            if url.endswith("/lines.csv") or "simulations_recent.csv" in url:
+                return []
+            raise AssertionError(f"Unexpected MoneyPuck request: {url}")
+
+        fetch_csv.side_effect = source_rows
+        result = update_tracker.load_moneypuck()
+        complete_skater, partial_skater = result["skaters"]
+        complete_goalie, partial_goalie = result["goalies"]
+
+        self.assertEqual(complete_skater["assists"], 7.0)
+        self.assertAlmostEqual(complete_skater["relativeXgPct"], .07)
+        self.assertIsNone(partial_skater["assists"])
+        self.assertIsNone(partial_skater["relativeXgPct"])
+
+        self.assertEqual(complete_goalie["gsax"], 2.5)
+        self.assertAlmostEqual(complete_goalie["savePctAboveExpected"], .015)
+        self.assertEqual(complete_goalie["reboundsAboveExpected"], 2.5)
+        self.assertIsNone(partial_goalie["gsax"])
+        self.assertIsNone(partial_goalie["savePctAboveExpected"])
+        self.assertIsNone(partial_goalie["reboundsAboveExpected"])
+
+
 if __name__ == "__main__":
     unittest.main()

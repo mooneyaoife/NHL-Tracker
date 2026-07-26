@@ -30,8 +30,8 @@
   <script>document.documentElement.dataset.theme=localStorage.getItem("nhl-theme")||"light";document.querySelector('meta[name="theme-color"]').content=document.documentElement.dataset.theme==="dark"?"#111815":"#f2eee3"</script>
   <style>:root{--canvas:#f3f1ea;--surface:#fffdf7;--ink:#172033;--rule:#d7d3c8;--brand:#183a61}*{box-sizing:border-box}body{margin:0;background:var(--canvas);color:var(--ink);font:15px/1.5 system-ui,sans-serif}body>header{min-height:76px;display:flex;align-items:center;padding:12px 24px;background:var(--surface);border-bottom:1px solid var(--rule)}.brand{display:flex;align-items:center;gap:11px;color:var(--ink);text-decoration:none}.brand img{width:40px;height:40px}.brand-name{font-size:21px;font-weight:650}.header-tools{display:flex;align-items:center;gap:8px;margin-left:auto}body>#nav{display:grid;grid-template-columns:repeat(5,1fr);width:min(520px,calc(100% - 32px));margin:12px auto 0;background:var(--surface);border:1px solid var(--rule);border-radius:12px;overflow:hidden}#nav button{min-height:44px;border:0;background:transparent;color:var(--ink)}main{max-width:1400px;margin:auto;padding:52px 28px}.page{display:none}.page.active{display:block}.home-masthead{display:grid;grid-template-columns:1fr auto;border:1px solid var(--rule);background:var(--surface)}.home-masthead-copy{display:flex;align-items:center;min-height:158px;padding:28px}.home-masthead-copy h1{margin:0;font:730 clamp(42px,4.2vw,58px)/1 system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;letter-spacing:-.045em}@media(max-width:760px){body>header{min-height:58px;padding:8px 12px}.brand img{width:36px;height:36px}.season-switcher,.status,.global-search-button{display:none}body>#nav{position:fixed;inset:auto 8px 8px;z-index:100;width:auto;min-height:58px;margin:0}main{padding:30px 13px}.home-masthead{display:block}.home-masthead-copy{min-height:105px;padding:24px 13px}.home-masthead-copy h1{font-size:40px}}</style>
   <style>.home-masthead-copy{contain:layout paint;transform:translateZ(0)}#home-dossier-updated{min-width:152px;text-align:right}.home-tonight>header{min-height:100px}#today-games[aria-busy="true"]{min-height:430px}.home-slate-notice{min-height:0!important;margin:0!important;padding:5px 8px!important;font-size:10px!important;line-height:1.2!important}@media(max-width:760px){.home-tonight>header{display:grid!important;grid-template-columns:1fr;align-items:start!important}.home-tonight>header>button{justify-self:start}#today-date{display:block;min-height:36px}#today-games[aria-busy="true"]{min-height:600px}}</style>
-  <link rel="stylesheet" href="critical.css?v=7.38.3">
-  <link rel="stylesheet" href="core-routes.css?v=7.38.3">
+  <link rel="stylesheet" href="critical.css?v=7.39.0">
+  <link rel="stylesheet" href="core-routes.css?v=7.39.0">
 </head>
 <body>
 <a class="skip-link" href="#main-content">Skip to content</a>
@@ -180,10 +180,58 @@
       <div class="compare-heading"><div><span id="player-comparison-evidence" class="section-kicker" role="status">Player profiles</span><h3>Player Comparison</h3></div><button id="copy-player-comparison" class="comparison-share" type="button">Copy link</button></div>
       <div class="comparison-season-control"><label for="player-comparison-season"><span>Season</span><select id="player-comparison-season" aria-describedby="player-comparison-season-note"></select></label><p id="player-comparison-season-note" role="status" aria-live="polite">Choose a season before selecting teams and players.</p></div>
       <div id="player-comparison-announcer" class="visually-hidden" role="status" aria-live="polite" aria-atomic="true"></div>
-      <div class="comparison-controls player-comparison-controls"><div class="comparison-picker"><strong>First player</strong><label>Team<select id="player-compare-team-a" aria-controls="player-compare-a" aria-describedby="player-compare-context-a"></select></label><label>Find player<input id="player-compare-search-a" list="player-comparison-options-a" autocomplete="off" placeholder="Type a player name" aria-describedby="player-compare-context-a"></label><label>Player<select id="player-compare-a" aria-describedby="player-compare-context-a"></select></label><datalist id="player-comparison-options-a"></datalist><p id="player-compare-context-a" class="comparison-picker-context"></p></div><button id="swap-player-comparison" class="comparison-swap" type="button" aria-label="Swap compared players">⇄</button><div class="comparison-picker"><strong>Second player</strong><label>Team<select id="player-compare-team-b" aria-controls="player-compare-b" aria-describedby="player-compare-context-b"></select></label><label>Find player<input id="player-compare-search-b" list="player-comparison-options-b" autocomplete="off" placeholder="Type a player name" aria-describedby="player-compare-context-b"></label><label>Player<select id="player-compare-b" aria-describedby="player-compare-context-b"></select></label><datalist id="player-comparison-options-b"></datalist><p id="player-compare-context-b" class="comparison-picker-context"></p></div></div>
+      <div class="comparison-controls player-comparison-controls"><fieldset class="comparison-picker"><legend>First player</legend><label>Team<select id="player-compare-team-a" aria-controls="player-compare-a" aria-describedby="player-compare-context-a"></select></label><label>Find player<input id="player-compare-search-a" list="player-comparison-options-a" autocomplete="off" placeholder="Type a player name" aria-describedby="player-compare-context-a"></label><label>Player<select id="player-compare-a" aria-describedby="player-compare-context-a"></select></label><datalist id="player-comparison-options-a"></datalist><p id="player-compare-context-a" class="comparison-picker-context"></p></fieldset><button id="swap-player-comparison" class="comparison-swap" type="button" aria-label="Swap compared players">⇄</button><fieldset class="comparison-picker"><legend>Second player</legend><label>Team<select id="player-compare-team-b" aria-controls="player-compare-b" aria-describedby="player-compare-context-b"></select></label><label>Find player<input id="player-compare-search-b" list="player-comparison-options-b" autocomplete="off" placeholder="Type a player name" aria-describedby="player-compare-context-b"></label><label>Player<select id="player-compare-b" aria-describedby="player-compare-context-b"></select></label><datalist id="player-comparison-options-b"></datalist><p id="player-compare-context-b" class="comparison-picker-context"></p></fieldset></div>
       <div id="player-comparison-context" class="comparison-evidence-context" role="status" aria-live="polite"></div>
+      <section id="player-comparison-summary" class="player-comparison-summary" aria-label="Selected-player identity and sample comparison" aria-live="polite"></section>
       <div id="player-comparison-edge" class="edge-comparison"></div>
-      <details class="expandable comparison-evidence"><summary>Charts and full performance matrix</summary><div class="grid two comparison-analysis"><article class="panel"><h3>Peer-group percentile profile</h3><div id="player-comparison-chart" class="chart comparison-radar"></div></article><article class="panel"><h3>Performance matrix</h3><div id="player-comparison-table" class="table-wrap"></div></article></div></details>
+      <nav id="player-comparison-section-nav" class="player-comparison-section-nav" aria-label="Player comparison evidence sections">
+        <button type="button" data-comparison-jump="player-comparison-impact-evidence" aria-controls="player-comparison-impact-evidence" aria-current="true">Impact</button>
+        <button type="button" data-comparison-jump="player-comparison-process-evidence" aria-controls="player-comparison-process-evidence">Process</button>
+        <button type="button" data-comparison-jump="player-comparison-form-evidence" aria-controls="player-comparison-form-evidence">Form</button>
+        <button type="button" data-comparison-jump="player-comparison-context-evidence" aria-controls="player-comparison-context-evidence">Context</button>
+      </nav>
+      <div class="player-comparison-chapters">
+        <details id="player-comparison-impact-evidence" class="expandable comparison-evidence player-comparison-chapter" open>
+          <summary><span><span class="section-kicker">Peer-adjusted evidence</span><strong>Impact profile</strong><small>Overall contribution, component scores and the complete performance matrix.</small></span></summary>
+          <div class="player-comparison-chapter-body">
+            <div id="player-comparison-impact-note" class="comparison-state player-comparison-state" role="status" aria-live="polite"></div>
+            <div id="player-comparison-components" class="player-comparison-components" role="table" aria-label="Comparative impact components"></div>
+            <div class="comparison-analysis player-comparison-panel-grid">
+              <article class="panel player-comparison-visual-panel"><h3>Peer-group percentile profile</h3><div id="player-comparison-chart" class="chart comparison-radar"></div></article>
+              <article class="panel player-comparison-table-panel"><h3>Performance matrix</h3><div id="player-comparison-table" class="table-wrap"></div></article>
+            </div>
+          </div>
+        </details>
+        <details id="player-comparison-process-evidence" class="expandable comparison-evidence player-comparison-chapter">
+          <summary><span><span class="section-kicker">Underlying play</span><strong id="player-comparison-process-title">Process and scoring</strong><small id="player-comparison-process-description">Five-on-five creation, all-situations on-ice shares, scoring efficiency and exact values.</small></span></summary>
+          <div class="player-comparison-chapter-body">
+            <div id="player-comparison-process-note" class="comparison-state player-comparison-state" role="status" aria-live="polite"></div>
+            <div class="player-comparison-panel-grid player-comparison-process-grid">
+              <article class="panel player-comparison-visual-panel"><h3 id="player-comparison-process-chart-title">Position-adjusted process percentiles</h3><div id="player-comparison-process-chart" class="chart" aria-labelledby="player-comparison-process-chart-title"></div></article>
+              <article class="panel player-comparison-visual-panel"><h3 id="player-comparison-scoring-chart-title">Five-on-five scoring efficiency</h3><div id="player-comparison-scoring-chart" class="chart" aria-labelledby="player-comparison-scoring-chart-title"></div></article>
+            </div>
+            <article class="panel player-comparison-table-panel player-comparison-wide-panel"><h3>Process matrix</h3><div id="player-comparison-process-table" class="table-wrap"></div></article>
+          </div>
+        </details>
+        <details id="player-comparison-form-evidence" class="expandable comparison-evidence player-comparison-chapter">
+          <summary><span><span class="section-kicker">Recent results</span><strong>Form and game evidence</strong><small>A shared trend plus coordinated recent-game samples for both players.</small></span></summary>
+          <div class="player-comparison-chapter-body">
+            <div id="player-comparison-form-note" class="comparison-state player-comparison-state" role="status" aria-live="polite"></div>
+            <article class="panel player-comparison-visual-panel player-comparison-wide-panel"><h3>Recent contribution</h3><div id="player-comparison-form-chart" class="chart"></div></article>
+            <div class="player-comparison-panel-grid player-comparison-form-grid">
+              <article class="panel player-comparison-table-panel"><h3>First player recent games</h3><div id="player-comparison-form-a" class="table-wrap"></div></article>
+              <article class="panel player-comparison-table-panel"><h3>Second player recent games</h3><div id="player-comparison-form-b" class="table-wrap"></div></article>
+            </div>
+          </div>
+        </details>
+        <details id="player-comparison-context-evidence" class="expandable comparison-evidence player-comparison-chapter">
+          <summary><span><span class="section-kicker">Interpretation</span><strong>Peers, context and method</strong><small>Statistical neighbours, comparison limits, evidence sources and methodology.</small></span></summary>
+          <div class="player-comparison-chapter-body player-comparison-panel-grid player-comparison-context-grid">
+            <article class="panel player-comparison-context-panel"><h3>Statistical neighbours</h3><div id="player-comparison-neighbours"></div></article>
+            <article class="panel player-comparison-context-panel"><h3>Method and evidence</h3><div id="player-comparison-method"></div></article>
+          </div>
+        </details>
+      </div>
     </article>
   </section>
 
@@ -266,7 +314,7 @@
 <footer><div class="footer-links"><button data-page="watchlist" data-workspace-chapter="workspace-app" id="footer-install-link">Install app</button><button data-page="watchlist" data-workspace-chapter="workspace-preferences">Settings</button><button data-page="guide">Reference</button><a href="https://moneypuck.com/data.htm" target="_blank" rel="noopener">Data sources</a><button data-page="status">Status</button><button data-page="policies">Policies</button></div><p>NHL Tracker · Unofficial, non-commercial fan project using public NHL data</p></footer>
 <aside id="app-update" class="app-update" role="status" hidden><span>A fresh version of NHL Tracker is ready.</span><button id="app-update-button" type="button">Update now</button></aside>
 <div id="chart-help-overlay" class="chart-help-overlay" hidden><section role="dialog" aria-modal="true" aria-labelledby="chart-help-title"><header><div><span class="section-kicker">How to use this view</span><h2 id="chart-help-title">Chart guide</h2></div><button id="chart-help-close" type="button" aria-label="Close chart guide">×</button></header><div id="chart-help-body"></div></section></div>
-  <script defer src="freshness-status.js?v=7.38.3"></script>
-  <script defer src="game-state.js?v=7.38.3"></script>
-  <script defer src="shell.js?v=7.38.3"></script>
+  <script defer src="freshness-status.js?v=7.39.0"></script>
+  <script defer src="game-state.js?v=7.39.0"></script>
+  <script defer src="shell.js?v=7.39.0"></script>
 </body></html>

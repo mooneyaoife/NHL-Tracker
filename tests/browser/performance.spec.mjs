@@ -280,7 +280,7 @@ test("the first analytical chart records bounded script work",async({page})=>{
   await expect(page.locator("#league")).toHaveClass(/active/);
   await page.locator("#league-chart").click({position:{x:10,y:10}});
   await expect.poll(async()=> (await resources(page)).some(row=>row.name==="/vendor/plotly-2.35.2.min.js"),{timeout:15000}).toBe(true);
-  await expect(page.locator("#league-chart")).toHaveAttribute("role",/img|status/,{timeout:15000});
+  await expect(page.locator("#league-chart")).toHaveAttribute("role",/img|status|group/,{timeout:15000});
   const rows=await resources(page),parseProxy=rows.filter(row=>row.name.endsWith(".js")).reduce((sum,row)=>sum+row.duration,0);
   expect(parseProxy).toBeLessThan(5000);
 });
