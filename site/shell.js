@@ -27,7 +27,7 @@
     const request=new Promise((resolve,reject)=>{const script=document.createElement("script");script.src=`${name}?v=${VERSION}`;script.async=false;script.onload=resolve;script.onerror=()=>reject(new Error(`${name} could not load`));document.body.appendChild(script)}).catch(error=>{scriptRequests.delete(name);throw error});
     scriptRequests.set(name,request);return request;
   };
-  const loadScripts=(names,label)=>Promise.all(names.map(loadScript)).then(()=>{}).catch(error=>{reportLoadFailure(label,error);throw error});
+  const loadScripts=names=>Promise.all(names.map(loadScript)).then(()=>{});
   const loadCompleteStyles=()=>{
     if(fullStylesLoading)return fullStylesLoading;
     const links=FULL_STYLES.map(asset=>{const link=document.createElement("link");link.rel="preload";link.as="style";link.href=`${asset.name}?v=${asset.version}`;return link});
@@ -47,9 +47,9 @@
     if(target&&document.getElementById(target))history.replaceState(null,"",`${location.pathname}${location.search}#${target}`);
     if(fullLoading)return fullLoading;
     document.getElementById("updated").textContent="Opening full tracker…";
-    fullLoading=loadCompleteStyles().catch(error=>{reportLoadFailure("Full tracker",error);throw error}).then(()=>loadScripts(FULL_SCRIPTS,"Full tracker")).catch(error=>{fullLoading=null;throw error});return fullLoading;
+    fullLoading=loadCompleteStyles().then(()=>loadScripts(FULL_SCRIPTS)).catch(error=>{fullLoading=null;reportLoadFailure("Full tracker",error);throw error});return fullLoading;
   };
-  const loadFullApp=target=>{if(target&&QUICK_PAGES.has(target)&&!fullLoading){if(target&&document.getElementById(target))history.replaceState(null,"",`${location.pathname}${location.search}#${target}`);if(!quickLoading){document.getElementById("updated").textContent="Opening tracker…";quickLoading=loadScripts(QUICK_SCRIPTS,"Tracker").catch(error=>{quickLoading=null;throw error})}return quickLoading.then(()=>window.NHLTrackerQuickRoutes?.ready).then(()=>window.NHLTrackerQuickRoutes?.open(target))}return loadCompleteApp(target)};
+  const loadFullApp=target=>{if(target&&QUICK_PAGES.has(target)&&!fullLoading){if(target&&document.getElementById(target))history.replaceState(null,"",`${location.pathname}${location.search}#${target}`);if(!quickLoading){document.getElementById("updated").textContent="Opening tracker…";quickLoading=loadScripts(QUICK_SCRIPTS).catch(error=>{quickLoading=null;reportLoadFailure("Tracker",error);throw error})}return quickLoading.then(()=>window.NHLTrackerQuickRoutes?.ready).then(()=>window.NHLTrackerQuickRoutes?.open(target))}return loadCompleteApp(target)};
   const requestLoad=target=>{void loadFullApp(target).catch(()=>{})};
   const bindLoadIntent=(button,target)=>{
     const handle=()=>{void loadFullApp(typeof target==="function"?target():target).then(()=>button.removeEventListener("click",handle)).catch(()=>{})};

@@ -128,8 +128,8 @@ assert.match(progressiveShell,/NHLTrackerLoadCompleteApp/,"deeper destinations c
 assert.doesNotMatch(progressiveShell,/addEventListener\("(?:wheel|touchmove)"/,"passive Home exploration never downloads the full application");
 assert.doesNotMatch(progressiveShell,/\["ArrowDown","PageDown","End"," "\]/,"ordinary page navigation keys never download the full application");
 assert.match(progressiveShell,/needs a connection the first time it is opened/,"an uncached deep route explains its offline limitation");
-assert.match(progressiveShell,/fullLoading=null;throw error/,"a failed full-route request can be retried");
-assert.match(progressiveShell,/quickLoading=null;throw error/,"a failed lightweight-route request can be retried");
+assert.match(progressiveShell,/fullLoading=null;reportLoadFailure\("Full tracker",error\);throw error/,"a failed full-route request is reset before retry becomes available");
+assert.match(progressiveShell,/quickLoading=null;reportLoadFailure\("Tracker",error\);throw error/,"a failed lightweight-route request is reset before retry becomes available");
 for(const group of ["night","season","people","explore"])assert.ok(fs.existsSync(path.join(root,`site/routes/${group}.js`)),`${group} has a native lazy route module`);
 const capabilityManifest=JSON.parse(fs.readFileSync(path.join(root,"site/data/tracker-manifest.json"),"utf8"));
 assert.deepEqual(Object.keys(capabilityManifest.capabilities).sort(),["analytics","core","players","schedule"]);
