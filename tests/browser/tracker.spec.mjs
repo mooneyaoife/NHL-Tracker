@@ -258,6 +258,13 @@ test("Tonight avoids horizontal overflow at the tablet breakpoint", async ({ pag
   expect(await page.evaluate(() => document.documentElement.scrollWidth <= document.documentElement.clientWidth + 1)).toBe(true);
 });
 
+test("direct Tonight starts at the top on desktop", async ({ page }) => {
+  await page.setViewportSize({ width: 1366, height: 900 });
+  await page.goto("/#tonight");
+  await expect(page.locator("#tonight")).toHaveClass(/active/);
+  await expect.poll(() => page.evaluate(() => window.scrollY)).toBe(0);
+});
+
 test("header controls stay distinct and the season choice is singular", async ({ page }) => {
   for (const viewport of [{ width: 375, height: 812 }, { width: 768, height: 1024 }, { width: 1280, height: 900 }, { width: 1440, height: 900 }]) {
     await page.setViewportSize(viewport);
