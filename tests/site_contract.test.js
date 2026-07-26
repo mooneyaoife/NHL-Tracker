@@ -24,10 +24,11 @@ assert.match(index, new RegExp(`freshness-status\\.js\\?v=${uiVersion.replaceAll
 assert.match(worker, new RegExp(`freshness-status\\.js\\?v=${uiVersion.replaceAll(".", "\\.")}`), "freshness details remain available offline");
 assert.match(index, new RegExp(`game-state\\.js\\?v=${uiVersion.replaceAll(".", "\\.")}`), "the shared game-window contract loads before the progressive shell");
 assert.match(index, /id="freshness-control"[\s\S]*id="freshness-detail-copy"/, "the compact status exposes accessible recovery details");
-assert.match(index, /id="dashboard" class="page active home-pending"/, "Home marks its incomplete dynamic layout during first paint");
-assert.match(index, /#dashboard\.home-pending \.home-masthead\{visibility:visible\}/, "Home keeps a useful masthead visible while its compact snapshot loads");
-assert.match(progressiveShell, /\.then\(renderHome\)\.then\(settleHome\)/, "Home becomes visible after its compact snapshot renders");
-assert.match(progressiveShell, /homeController\.abort\(\),4000/, "Home snapshot loading cannot hide the complete route indefinitely");
+assert.match(index, /id="dashboard" class="page active"/, "Home is visible from the first paint");
+assert.match(index, /Loading followed-team records…/, "Home exposes a useful loading state before its snapshot arrives");
+assert.match(progressiveShell, /homeController\.abort\(\),4000/, "Home snapshot loading has a bounded wait");
+assert.match(progressiveShell, /home-snapshot\.js/, "the compact snapshot renderer is loaded without the full application");
+assert.match(worker, /home-snapshot\.js\?v=7\.35\.2/, "the complete Home snapshot remains available offline");
 assert.equal((index.match(/id="season-select"/g) || []).length, 1, "the header exposes one season control");
 assert.doesNotMatch(index, /season-archive-toggle/, "the duplicate archive shortcut is removed");
 assert.match(index, /data-group="season" data-default-page="schedule">Schedule</, "the primary route is named for its destination, not a second season control");
@@ -110,7 +111,7 @@ assert.match(quickRoutes,/page==="games"\?\["core"\]/, "Game Centre summaries us
 assert.match(dataLoader,/games:\["core","analytics"\]/, "the complete Game Centre starts without season and player shards");
 assert.match(app,/GAME_VIEW_CAPABILITIES=\{library:\["schedule"\],intelligence:\["schedule","players"\]\}/, "deep Game Centre panes own their additional data capabilities");
 assert.doesNotMatch(app,/renderGameLibrary\(\);renderGame\(\)/, "the hidden Game Library is not rendered during Featured-view startup");
-assert.match(progressiveShell,/scriptRequests\.has\(name\)/, "promotion to the complete app reuses quick-route script requests");
+assert.match(progressiveShell,/requests\.has\(name\)/, "promotion to the complete app reuses quick-route script requests");
 assert.match(progressiveShell,/connection\?\.saveData/, "detailed-view prefetch respects reduced-data preferences");
 assert.match(gameCentre,/addEventListener\("pointerenter", primeDetailed/, "Game Centre warms detailed scripts only after deliberate intent");
 assert.doesNotMatch(quickRoutes,/class="calendar-item"/, "the lightweight Schedule does not fall back to one tile per game");
@@ -135,8 +136,8 @@ assert.match(progressiveShell,/NHLTrackerLoadCompleteApp/,"deeper destinations c
 assert.doesNotMatch(progressiveShell,/addEventListener\("(?:wheel|touchmove)"/,"passive Home exploration never downloads the full application");
 assert.doesNotMatch(progressiveShell,/\["ArrowDown","PageDown","End"," "\]/,"ordinary page navigation keys never download the full application");
 assert.match(progressiveShell,/needs a connection the first time it is opened/,"an uncached deep route explains its offline limitation");
-assert.match(progressiveShell,/fullLoading=null;reportLoadFailure\("Full tracker",error\);throw error/,"a failed full-route request is reset before retry becomes available");
-assert.match(progressiveShell,/quickLoading=null;reportLoadFailure\("Tracker",error\);throw error/,"a failed lightweight-route request is reset before retry becomes available");
+assert.match(progressiveShell,/full=null;reportLoadFailure\("Full tracker",error\);throw error/,"a failed full-route request is reset before retry becomes available");
+assert.match(progressiveShell,/quick=null;reportLoadFailure\("Tracker",error\);throw error/,"a failed lightweight-route request is reset before retry becomes available");
 for(const group of ["night","season","people","explore"])assert.ok(fs.existsSync(path.join(root,`site/routes/${group}.js`)),`${group} has a native lazy route module`);
 const capabilityManifest=JSON.parse(fs.readFileSync(path.join(root,"site/data/tracker-manifest.json"),"utf8"));
 assert.deepEqual(Object.keys(capabilityManifest.capabilities).sort(),["analytics","core","players","schedule"]);
@@ -150,6 +151,8 @@ assert.doesNotMatch(shell,/data\/tracker\.json/,"new offline installs use capabi
 assert.doesNotMatch(worker,/LEGACY_CACHE/,"a verified install does not retain a duplicate full cache generation");
 assert.match(worker,/caches\.delete/,"older cache generations are retired after a complete capability install");
 assert.match(worker,/names\.filter\(name=>name!==CACHE\)/,"every previous cache generation is retired after verification");
+assert.match(worker,/cache\.addAll\(SHELL\)\)\.then\(\(\)=>self\.skipWaiting\(\)\)/,"a verified application update does not remain stranded behind an old tab");
+assert.match(worker,/client\.navigate\(client\.url\)/,"the migration reloads clients that are still executing an obsolete cached shell");
 assert.ok(app.indexOf('initialisePage("dashboard")') < app.indexOf("hydrateLiveInBackground(archived)"), "static Home renders before live enhancement starts");
 const initialisation = app.slice(app.indexOf("async function init"), app.indexOf("function renderFatalError"));
 assert.doesNotMatch(initialisation, /await\s+window\.NHLCloudflareLive\.hydrate/, "live enhancement never blocks initial rendering");

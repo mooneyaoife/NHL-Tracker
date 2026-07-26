@@ -1,18 +1,25 @@
-const CACHE="nhl-tracker-7.35.1";
+const CACHE="nhl-tracker-7.35.2";
 // Home, Tonight and Schedule are the dependable install shell. Full analysis,
 // historical archives, auxiliary models and Plotly are cached only after use.
-const SHELL=["./","./index.html","./critical.css?v=7.35.1","./core-routes.css?v=7.35.1","./freshness-status.js?v=7.35.1","./shell.js?v=7.35.1","./game-state.js?v=7.35.1","./data-contracts.js?v=7.35.1","./data-loader.js?v=7.35.1","./route-loader.js?v=7.35.1","./route-app.js?v=7.35.1","./routes/night.js?v=7.35.1","./routes/season.js?v=7.35.1","./cloudflare-live.js?v=7.35.1","./manifest.webmanifest","./icons/icon.svg?v=7.0.1","./icons/icon-192.png","./icons/icon-512.png","./build-meta.json","./data/home.json","./data/tracker-manifest.json","./data/tracker-core.json","./data/tracker-schedule.json"];
+const SHELL=["./","./index.html","./critical.css?v=7.35.2","./core-routes.css?v=7.35.2","./freshness-status.js?v=7.35.2","./shell.js?v=7.35.2","./home-snapshot.js?v=7.35.2","./game-state.js?v=7.35.2","./data-contracts.js?v=7.35.2","./data-loader.js?v=7.35.2","./route-loader.js?v=7.35.2","./route-app.js?v=7.35.2","./routes/night.js?v=7.35.2","./routes/season.js?v=7.35.2","./cloudflare-live.js?v=7.35.2","./manifest.webmanifest","./icons/icon.svg?v=7.0.1","./icons/icon-192.png","./icons/icon-512.png","./build-meta.json","./data/home.json","./data/tracker-manifest.json","./data/tracker-core.json","./data/tracker-schedule.json"];
 
-self.addEventListener("install",event=>event.waitUntil(caches.open(CACHE).then(cache=>cache.addAll(SHELL))));
+self.addEventListener("install",event=>event.waitUntil(caches.open(CACHE).then(cache=>cache.addAll(SHELL)).then(()=>self.skipWaiting())));
 self.addEventListener("activate",event=>event.waitUntil((async()=>{
   // Retire previous generations only after verifying the complete new shell.
   const cache=await caches.open(CACHE),required=["./data/home.json","./data/tracker-manifest.json","./data/tracker-core.json","./data/tracker-schedule.json"];
   const ready=(await Promise.all(required.map(path=>cache.match(path)))).every(Boolean);
   if(ready){
-    const names=await caches.keys();
+    const names=await caches.keys(),previous=names.filter(name=>name.startsWith("nhl-tracker-")&&name!==CACHE);
     await Promise.all(names.filter(name=>name!==CACHE).map(name=>caches.delete(name)));
-  }else console.warn("NHL Tracker offline shell is incomplete; retaining the previous cache generation.");
-  await self.clients.claim();
+    await self.clients.claim();
+    if(previous.length){
+      const windows=await self.clients.matchAll({type:"window"});
+      await Promise.all(windows.map(client=>client.navigate(client.url).catch(()=>null)));
+    }
+  }else{
+    console.warn("NHL Tracker offline shell is incomplete; retaining the previous cache generation.");
+    await self.clients.claim();
+  }
 })()));
 self.addEventListener("message",event=>{if(event.data?.type==="SKIP_WAITING")self.skipWaiting()});
 
