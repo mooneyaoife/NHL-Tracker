@@ -1,6 +1,6 @@
 {
-  "schema": 1,
-  "sourceCommit": "35a0b9912254e8aa459e5d970eb079ef884e9de4",
+  "schema": 2,
+  "sourceCommit": "8d0a94bfbf0972e4ccbe6e8caad9af0b52523e25",
   "dataGeneratedAt": "2026-07-26T14:01:59.296628+00:00",
   "season": "20262027",
   "version": "5.74.0",
@@ -390,5 +390,106 @@
         }
       }
     ]
+  },
+  "standingsEvidence": {
+    "season": "20252026",
+    "current": false,
+    "rows": [
+      {
+        "team": "CAR",
+        "name": "Carolina Hurricanes",
+        "logo": "https://assets.nhle.com/logos/nhl/svg/CAR_light.svg",
+        "conference": "Eastern",
+        "division": "Metropolitan",
+        "gp": 82,
+        "w": 53,
+        "l": 22,
+        "otl": 7,
+        "points": 113,
+        "rw": 39,
+        "gf": 296,
+        "ga": 240,
+        "gd": 56,
+        "divisionRank": 1,
+        "wildcardRank": 0,
+        "streak": "W1"
+      },
+      {
+        "team": "BUF",
+        "name": "Buffalo Sabres",
+        "logo": "https://assets.nhle.com/logos/nhl/svg/BUF_light.svg",
+        "conference": "Eastern",
+        "division": "Atlantic",
+        "gp": 82,
+        "w": 50,
+        "l": 23,
+        "otl": 9,
+        "points": 109,
+        "rw": 42,
+        "gf": 288,
+        "ga": 241,
+        "gd": 47,
+        "divisionRank": 1,
+        "wildcardRank": 0,
+        "streak": "OT1"
+      },
+      {
+        "team": "MIN",
+        "name": "Minnesota Wild",
+        "logo": "https://assets.nhle.com/logos/nhl/svg/MIN_light.svg",
+        "conference": "Western",
+        "division": "Central",
+        "gp": 82,
+        "w": 46,
+        "l": 24,
+        "otl": 12,
+        "points": 104,
+        "rw": 31,
+        "gf": 272,
+        "ga": 240,
+        "gd": 32,
+        "divisionRank": 3,
+        "wildcardRank": 0,
+        "streak": "W1"
+      },
+      {
+        "team": "SJS",
+        "name": "San Jose Sharks",
+        "logo": "https://assets.nhle.com/logos/nhl/svg/SJS_light.svg",
+        "conference": "Western",
+        "division": "Pacific",
+        "gp": 82,
+        "w": 39,
+        "l": 35,
+        "otl": 8,
+        "points": 86,
+        "rw": 27,
+        "gf": 251,
+        "ga": 292,
+        "gd": -41,
+        "divisionRank": 5,
+        "wildcardRank": 5,
+        "streak": "W1"
+      }
+    ]
+  },
+  "teamForm": {
+    "BUF": [],
+    "SJS": [],
+    "MIN": [],
+    "CAR": []
+  },
+  "scheduledGames": {
+    "BUF": 84,
+    "SJS": 84,
+    "MIN": 84,
+    "CAR": 84
+  },
+  "snapshotHtml": {
+    "season-state-teams": "<article style=\"--delay:0ms\"><img src=\"https://assets.nhle.com/logos/nhl/svg/CAR_light.svg\" alt=\"\"><div><span>Carolina Hurricanes</span><strong>113</strong><small>2025–26 points</small><p>53-22-7 · +56 goal difference · 68.9 PTS%</p></div><i class=\"season-state-meter\"><b style=\"width:68.90243902439023%\"></b></i></article><article style=\"--delay:55ms\"><img src=\"https://assets.nhle.com/logos/nhl/svg/BUF_light.svg\" alt=\"\"><div><span>Buffalo Sabres</span><strong>109</strong><small>2025–26 points</small><p>50-23-9 · +47 goal difference · 66.5 PTS%</p></div><i class=\"season-state-meter\"><b style=\"width:66.46341463414635%\"></b></i></article><article style=\"--delay:110ms\"><img src=\"https://assets.nhle.com/logos/nhl/svg/MIN_light.svg\" alt=\"\"><div><span>Minnesota Wild</span><strong>104</strong><small>2025–26 points</small><p>46-24-12 · +32 goal difference · 63.4 PTS%</p></div><i class=\"season-state-meter\"><b style=\"width:63.41463414634146%\"></b></i></article><article style=\"--delay:165ms\"><img src=\"https://assets.nhle.com/logos/nhl/svg/SJS_light.svg\" alt=\"\"><div><span>San Jose Sharks</span><strong>86</strong><small>2025–26 points</small><p>39-35-8 · -41 goal difference · 52.4 PTS%</p></div><i class=\"season-state-meter\"><b style=\"width:52.4390243902439%\"></b></i></article>",
+    "dashboard-points": "<div class=\"rank-row\" role=\"listitem\"><strong>CAR</strong><span>53-22-7 · 113 PTS · +56 GD</span></div><div class=\"rank-row\" role=\"listitem\"><strong>BUF</strong><span>50-23-9 · 109 PTS · +47 GD</span></div><div class=\"rank-row\" role=\"listitem\"><strong>MIN</strong><span>46-24-12 · 104 PTS · +32 GD</span></div><div class=\"rank-row\" role=\"listitem\"><strong>SJS</strong><span>39-35-8 · 86 PTS · -41 GD</span></div>",
+    "recent-form": "<p class=\"notice\">2026–27 form begins after completed games.</p>",
+    "home-saved-players": "<div class=\"home-empty-state\"><strong>Saved players are ready</strong><span>Open player analysis to view and manage your watchlist.</span></div>",
+    "home-pinned-analytics": "<button type=\"button\" class=\"home-pin\" data-shell-page=\"league\"><span>Team Rankings</span><small>League-wide performance categories</small><b>→</b></button><button type=\"button\" class=\"home-pin\" data-shell-page=\"playoffs\"><span>Playoff Path</span><small>Forecasts and postseason routes</small><b>→</b></button><button type=\"button\" class=\"home-pin\" data-shell-page=\"schedule\"><span>Season Shape</span><small>Density, rest and difficulty</small><b>→</b></button>"
   }
 }

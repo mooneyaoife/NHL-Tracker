@@ -8,11 +8,11 @@ test("Home keeps a useful shell visible while its snapshot loads",async({page})=
     await route.continue();
   });
   await page.goto("/",{waitUntil:"domcontentloaded"});
-  await expect(page.locator("#dashboard")).toHaveClass(/home-pending/);
+  await expect(page.locator("#dashboard")).toHaveClass(/active/);
   await expect(page.locator(".home-masthead")).toBeVisible();
   await expect(page.locator("#dashboard-page-heading")).toBeVisible();
-  await expect(page.locator("#today-games")).toBeHidden();
-  await expect(page.locator("#home-tonight-title")).toBeVisible({timeout:5000});
+  await expect(page.locator("#season-state-stage h3")).toHaveText("Record");
+  await expect(page.locator("#today-games")).not.toBeEmpty({timeout:5000});
 });
 
 test("Home mobile LCP remains within 2.5 seconds",async({page})=>{
@@ -36,7 +36,7 @@ test("Home keeps cumulative layout shift within the good threshold",async({page}
   expect(await page.evaluate(()=>window.__cls)).toBeLessThanOrEqual(0.1);
 });
 
-test("ordinary Home exploration does not download the full application",async({page})=>{
+test("Home shell does not synchronously download the full application",async({page})=>{
   await page.goto("/");
   await expect(page.locator("#dashboard")).toHaveClass(/active/);
   await page.evaluate(()=>{
@@ -49,6 +49,16 @@ test("ordinary Home exploration does not download the full application",async({p
   expect(names).not.toContain("/app.js");
   expect(names).not.toContain("/game-centre.js");
   for(const stylesheet of ["/styles.css","/theme-569.css","/design-system.css"])expect(names).not.toContain(stylesheet);
+});
+
+test("Home snapshot fills its useful dashboard without a route round trip",async({page})=>{
+  await page.goto("/");
+  await expect(page.locator("#today-games")).not.toBeEmpty();
+  await expect(page.locator("#season-state-stage")).not.toBeEmpty();
+  await expect(page.locator("#recent-form")).not.toBeEmpty();
+  await expect(page.locator("#dashboard-points .rank-row")).toHaveCount(4);
+  await expect(page.locator("#dashboard")).toHaveClass(/active/);
+  expect((await resources(page)).map(row=>row.name)).not.toContain("/app.js");
 });
 
 test("Tonight uses the lightweight runtime and core data only",async({page})=>{
