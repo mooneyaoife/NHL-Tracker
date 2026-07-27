@@ -8,6 +8,7 @@ const app = fs.readFileSync(path.join(root, "site/app.js"), "utf8");
 const worker = fs.readFileSync(path.join(root, "site/sw.js"), "utf8");
 const critical = fs.readFileSync(path.join(root, "site/critical.css"), "utf8");
 const coreRoutes = fs.readFileSync(path.join(root, "site/core-routes.css"), "utf8");
+const fullRoutes = fs.readFileSync(path.join(root, "site/full-routes.css"), "utf8");
 const designSystem = fs.readFileSync(path.join(root, "site/design-system.css"), "utf8");
 const gameCentre = fs.readFileSync(path.join(root, "site/game-centre.js"), "utf8");
 const dataLoader = fs.readFileSync(path.join(root, "site/data-loader.js"), "utf8");
@@ -16,7 +17,7 @@ const buildMeta = JSON.parse(fs.readFileSync(path.join(root, "site/build-meta.js
 
 const uiVersion = app.match(/^const UI_VERSION="([^"]+)";/)?.[1];
 assert.ok(uiVersion, "the application exposes a UI version");
-for (const asset of ["critical.css", "core-routes.css", "shell.js"]) {
+for (const asset of ["critical.css", "core-routes.min.css", "shell.js"]) {
   assert.match(index, new RegExp(`${asset.replace(".", "\\.")}\\?v=${uiVersion.replaceAll(".", "\\.")}`), `${asset} uses the current UI cache key`);
   assert.match(worker, new RegExp(`${asset.replace(".", "\\.")}\\?v=${uiVersion.replaceAll(".", "\\.")}`), `${asset} is cached with the current UI version`);
 }
@@ -27,8 +28,8 @@ assert.match(index, /id="freshness-control"[\s\S]*id="freshness-detail-copy"/, "
 assert.match(index, /id="dashboard" class="page active"/, "Home is visible from the first paint");
 assert.match(index, /Loading followed-team records…/, "Home exposes a useful loading state before its snapshot arrives");
 assert.match(progressiveShell, /homeController\.abort\(\),4000/, "Home snapshot loading has a bounded wait");
-assert.match(progressiveShell, /home-snapshot\.js/, "the compact snapshot renderer is loaded without the full application");
-assert.match(worker, new RegExp(`home-snapshot\\.js\\?v=${uiVersion.replaceAll(".", "\\.")}`), "the complete Home snapshot remains available offline");
+assert.match(progressiveShell, /home-snapshot\.min\.js/, "the optimized compact snapshot renderer is loaded without the full application");
+assert.match(worker, new RegExp(`home-snapshot\\.min\\.js\\?v=${uiVersion.replaceAll(".", "\\.")}`), "the complete Home snapshot remains available offline");
 assert.match(index, /id="home-tonight-title">Watch Next</, "Home leads with the flagship intelligence question");
 assert.ok(index.indexOf('id="since-last-visit"') < index.indexOf('id="season-file"'), "return-visit continuity sits beside the flagship before deep season evidence");
 assert.match(progressiveShell, /if\(summary\.watchNext\)/, "the static Watch Next fragment is preserved while its compact interactions attach");
@@ -59,20 +60,19 @@ assert.doesNotMatch(coreRoutes, /[\w-]+:;/, "generated route CSS never contains 
 assert.doesNotMatch(designSystem, /var\(--font-mono\)/, "the canonical typography cascade uses only defined font roles");
 assert.match(coreRoutes, /@keyframes season-evidence-in/, "first-paint Season cards keep their reveal animation");
 assert.doesNotMatch(index, /href="(?:styles|theme-569|design-system)\.css/, "canonical deep-route styles are deferred");
-for (const asset of ["styles.css", "theme-569.css", "design-system.css"]) {
-  assert.ok(!installShellAssets.some(value=>value.split("?")[0]===`./${asset}`),`${asset} is cached only after a deep route is opened`);
-  assert.match(progressiveShell,new RegExp(asset.replace(".","\\.")),`${asset} is available to complete routes`);
-}
+for (const asset of ["styles.css", "theme-569.css", "design-system.css"]) assert.ok(!installShellAssets.some(value=>value.split("?")[0]===`./${asset}`),`${asset} remains a canonical source rather than an installed payload`);
+assert.match(progressiveShell,/full-routes\.min\.css/,"deep routes load the generated non-core cascade only");
+assert.doesNotMatch(fullRoutes,/\.home-masthead|\.tonight-command|\.calendar-grid/,"the deferred cascade does not duplicate immediate-route selectors");
 assert.match(progressiveShell,/loadCompleteStyles\(\)[\s\S]{0,180}loadScripts\(FULL_SCRIPTS/, "complete styles settle before the full route runtime renders");
 assert.match(progressiveShell,/link\.rel="preload";link\.as="style"/, "explicit deep-route intent fetches complete styles at preload priority");
 assert.doesNotMatch(progressiveShell,/link\.media="not all"/, "complete styles are not deprioritized behind a non-matching media query");
 assert.match(progressiveShell,/link\.rel="stylesheet";link\.removeAttribute\("as"\);link\.media="all"/, "complete styles activate together in canonical order");
-const runtimeAssets=["statistics.js", "data-contracts.js", "data-loader.js", "router.js", "route-loader.js", "route-app.js", "preferences.js", "live-updates.js", "observability.js", "cloudflare-live.js", "url-safety.js", "app.js"];
+const runtimeAssets=["statistics.min.js", "data-contracts.min.js", "data-loader.min.js", "router.min.js", "route-loader.min.js", "route-app.min.js", "preferences.min.js", "live-updates.min.js", "observability.min.js", "cloudflare-live.min.js", "url-safety.min.js", "app.min.js"];
 for (const asset of runtimeAssets) assert.match(progressiveShell,new RegExp(asset.replace(".","\\.")),`${asset} is loaded by the progressive shell`);
-for (const asset of ["game-state.js", "data-contracts.js", "data-loader.js", "route-loader.js", "route-app.js", "cloudflare-live.js"]) {
+for (const asset of ["game-state.js", "data-contracts.min.js", "data-loader.min.js", "route-loader.min.js", "route-app.min.js", "cloudflare-live.min.js"]) {
   assert.match(worker, new RegExp(`${asset.replace(".", "\\.")}\\?v=${uiVersion.replaceAll(".", "\\.")}`), `${asset} supports the dependable offline routes`);
 }
-for (const asset of ["statistics.js", "router.js", "preferences.js", "live-updates.js", "observability.js", "app.js"]) {
+for (const asset of ["statistics.min.js", "router.min.js", "preferences.min.js", "live-updates.min.js", "observability.min.js", "app.min.js"]) {
   assert.ok(!installShellAssets.some(value=>value.split("?")[0]===`./${asset}`),`${asset} is cached only after explicit use`);
 }
 assert.match(app, /NHLTrackerPreferences\.create/, "stored preferences are owned by the extracted module");
@@ -94,14 +94,14 @@ assert.match(app, /setupExclusiveViewNavigation\(\)/,
 assert.match(index,/id="route-status" class="route-status" role="alert" hidden/,
   "recoverable route failures have a visible status surface");
 const quickRoutes=fs.readFileSync(path.join(root,"site/route-app.js"),"utf8");
-assert.match(quickRoutes,/game-centre\.js\?v=\$\{VERSION\}/, "Game Centre owns a separately loaded route module");
+assert.match(quickRoutes,/game-centre\.min\.js\?v=\$\{VERSION\}/, "Game Centre owns a separately loaded optimized route module");
 assert.match(quickRoutes,/await ensureGameCentreModule\(\)/, "direct Game Centre routes wait for their module before rendering");
 assert.match(gameCentre,/createDetailController/, "detailed Game Centre request state is owned by the route module");
 assert.match(gameCentre,/createDetailView/, "Game Centre loading, empty and fallback presentation is owned by the route module");
 assert.match(gameCentre,/status: "superseded"/, "late game-detail responses cannot replace a newer selection");
 assert.match(app,/GAME_CENTRE_MODULE_LOADING=null;throw error/, "failed Game Centre module requests remain retryable");
 assert.match(quickRoutes,/gameCentreLoading=null;throw error/, "the lightweight Game Centre can retry a failed module request");
-assert.ok(!installShellAssets.some(value=>value.split("?")[0]==="./game-centre.js"), "Game Centre code is cached only after the route is opened");
+assert.ok(!installShellAssets.some(value=>value.split("?")[0]==="./game-centre.min.js"), "Game Centre code is cached only after the route is opened");
 assert.match(quickRoutes,/gameWindow=selected/, "the lightweight Game Centre uses a bounded game window");
 assert.match(quickRoutes,/describeSlateWindow/, "the lightweight Tonight route uses the shared UK-time game-window contract");
 assert.match(app,/describeSlateWindow\(\{games,slateDate:daily\.currentDate/, "the complete Tonight route uses the same game-window contract");
@@ -152,7 +152,7 @@ assert.doesNotMatch(progressiveShell,/\["ArrowDown","PageDown","End"," "\]/,"ord
 assert.match(progressiveShell,/needs a connection the first time it is opened/,"an uncached deep route explains its offline limitation");
 assert.match(progressiveShell,/full=null;reportLoadFailure\("Full tracker",error\);throw error/,"a failed full-route request is reset before retry becomes available");
 assert.match(progressiveShell,/quick=null;reportLoadFailure\("Tracker",error\);throw error/,"a failed lightweight-route request is reset before retry becomes available");
-for(const group of ["night","season","people","explore"])assert.ok(fs.existsSync(path.join(root,`site/routes/${group}.js`)),`${group} has a native lazy route module`);
+for(const group of ["night","season","people","explore"]){assert.ok(fs.existsSync(path.join(root,`site/routes/${group}.js`)),`${group} has a native lazy route source`);assert.ok(fs.existsSync(path.join(root,`site/routes/${group}.min.js`)),`${group} has a generated optimized route module`)}
 const capabilityManifest=JSON.parse(fs.readFileSync(path.join(root,"site/data/tracker-manifest.json"),"utf8"));
 assert.deepEqual(Object.keys(capabilityManifest.capabilities).sort(),["analytics","core","players","schedule"]);
 const legacyBytes=fs.statSync(path.join(root,"site/data/tracker.json")).size;
@@ -170,11 +170,11 @@ assert.match(worker,/client\.navigate\(client\.url\)/,"the migration reloads cli
 assert.ok(app.indexOf('initialisePage("dashboard")') < app.indexOf("hydrateLiveInBackground(archived)"), "static Home renders before live enhancement starts");
 const initialisation = app.slice(app.indexOf("async function init"), app.indexOf("function renderFatalError"));
 assert.doesNotMatch(initialisation, /await\s+window\.NHLCloudflareLive\.hydrate/, "live enhancement never blocks initial rendering");
-for (const stylesheet of ["critical.css", "core-routes.css"]) {
+for (const stylesheet of ["critical.css", "core-routes.min.css"]) {
   assert.match(index, new RegExp(`<link rel="stylesheet" href="${stylesheet.replace(".", "\\.")}\\?v=${uiVersion.replaceAll(".", "\\.")}">`), `${stylesheet} is active before the first paint`);
   assert.doesNotMatch(index, new RegExp(`${stylesheet.replace(".", "\\.")}[^>]+media="print"`), `${stylesheet} is not activated after first paint`);
 }
-assert.doesNotMatch(index, /<script defer src="app\.js/, "the analytical application is not parsed before first paint");
+assert.doesNotMatch(index, /<script defer src="app(?:\.min)?\.js/, "the analytical application is not parsed before first paint");
 assert.match(index, /property="og:image"/);
 assert.match(index, /name="twitter:card" content="summary_large_image"/);
 assert.equal(buildMeta.schema, 1);

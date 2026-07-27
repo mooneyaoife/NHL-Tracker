@@ -1,11 +1,14 @@
 {
   "private": true,
   "scripts": {
+    "build:assets": "node scripts/build_web_assets.mjs",
+    "check:assets": "node scripts/build_web_assets.mjs --check",
     "test:browser": "playwright test"
   },
   "devDependencies": {
     "@axe-core/playwright": "4.10.2",
     "@lhci/cli": "0.15.1",
-    "@playwright/test": "1.55.1"
+    "@playwright/test": "1.55.1",
+    "esbuild": "0.25.12"
   }
 }

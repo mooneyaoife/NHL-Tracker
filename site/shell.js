@@ -1,10 +1,10 @@
 "use strict";
 (()=>{
-  const VERSION="7.39.1";
+  const VERSION="7.40.0";
   const QUICK_PAGES=new Set(["tonight","games","schedule"]);
-  const QUICK_SCRIPTS=["data-contracts.js","data-loader.js","route-loader.js","cloudflare-live.js","route-app.js"];
-  const FULL_SCRIPTS=["statistics.js","data-contracts.js","data-loader.js","router.js","route-loader.js","preferences.js","live-updates.js","observability.js","cloudflare-live.js","url-safety.js","app.js"];
-  const FULL_STYLES=[{"name":"styles.css","version":"6.0.0"},{"name":"theme-569.css","version":"6.0.0"},{"name":"design-system.css","version":VERSION}];
+  const QUICK_SCRIPTS=["data-contracts.min.js","data-loader.min.js","route-loader.min.js","cloudflare-live.min.js","route-app.min.js"];
+  const FULL_SCRIPTS=["statistics.min.js","data-contracts.min.js","data-loader.min.js","router.min.js","route-loader.min.js","preferences.min.js","live-updates.min.js","observability.min.js","cloudflare-live.min.js","url-safety.min.js","app.min.js"];
+  const FULL_STYLES=[{"name":"full-routes.min.css","version":VERSION}];
   let quick=null,full=null,styles=null;
   const requests=new Map(),prefetched=new Set();
   const seasonLabel=value=>{const season=String(value||"");return season.length===8?`${season.slice(0,4)}–${season.slice(6)}`:"Current season"};
@@ -39,7 +39,7 @@
     if(!canPrefetch())return false;
     for(const name of FULL_SCRIPTS){
       if(requests.has(name)||prefetched.has(name))continue;
-      const link=document.createElement("link");link.rel="preload";link.as="script";link.href=`${name}?v=${VERSION}`;document.head.appendChild(link);prefetched.add(name);
+      const link=document.createElement("link");link.rel="prefetch";link.as="script";link.href=`${name}?v=${VERSION}`;document.head.appendChild(link);prefetched.add(name);
     }
     return true;
   };
@@ -61,7 +61,7 @@
   window.NHLTrackerPrefetchCompleteApp=prefetchCompleteApp;
   window.NHLTrackerLoadScript=loadScript;
 
-  const renderSnapshot=summary=>{const html=summary.snapshotHtml;if(html)for(const id in html)document.getElementById(id).innerHTML=html[id];const ready=loadScript("home-snapshot.js").then(()=>window.NHLTrackerHomeSnapshot[html?"attach":"render"](summary,{open:requestLoad})).catch(()=>{});return html?0:ready};
+  const renderSnapshot=summary=>{const html=summary.snapshotHtml;if(html)for(const id in html)document.getElementById(id).innerHTML=html[id];const ready=loadScript("home-snapshot.min.js").then(()=>window.NHLTrackerHomeSnapshot[html?"attach":"render"](summary,{open:requestLoad})).catch(()=>{});return html?0:ready};
 
   const renderHome=summary=>{
     const season=seasonLabel(summary.season),updated=dateLabel(summary.dataGeneratedAt),games=summary.daily?.games||[],slate=g.describeSlateWindow({games,slateDate:summary.daily?.currentDate||summary.daily?.slateDate});

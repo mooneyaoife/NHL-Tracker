@@ -1,13 +1,13 @@
 {
   "initialJavaScriptBytes": 21000,
-  "initialStylesheetBytes": 220000,
-  "deferredStylesheetBytes": 500000,
+  "initialStylesheetBytes": 200000,
+  "deferredStylesheetBytes": 350000,
   "initialDataBytes": 100000,
   "offlineCacheBytes": 2100000,
   "mobileLcpMilliseconds": 2500,
   "mobileCumulativeLayoutShift": 0.1,
-  "nonAnalyticalJavaScriptBytes": 438000,
-  "fullApplicationJavaScriptBytes": 650000,
+  "nonAnalyticalJavaScriptBytes": 90000,
+  "fullApplicationJavaScriptBytes": 510000,
   "gameCentreRouteDataBytes": 75000,
   "seasonRouteDataBytes": 1554682
 }
