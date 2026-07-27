@@ -54,6 +54,9 @@ const installShellAssets=JSON.parse(worker.match(/const SHELL=(\[[^;]+\]);/)?.[1
 for (const selector of [".home-masthead", ".tonight-command", ".calendar-grid", ".game-centre-controls", ".quick-game-hero"]) {
   assert.match(coreRoutes, new RegExp(selector.replace(".", "\\.")), `${selector} remains styled by the dependable route bundle`);
 }
+assert.match(coreRoutes, /#game-detail>\.notice/, "the lightweight unavailable-game state spans the Game Centre content area");
+assert.doesNotMatch(coreRoutes, /[\w-]+:;/, "generated route CSS never contains empty declarations");
+assert.doesNotMatch(designSystem, /var\(--font-mono\)/, "the canonical typography cascade uses only defined font roles");
 assert.match(coreRoutes, /@keyframes season-evidence-in/, "first-paint Season cards keep their reveal animation");
 assert.doesNotMatch(index, /href="(?:styles|theme-569|design-system)\.css/, "canonical deep-route styles are deferred");
 for (const asset of ["styles.css", "theme-569.css", "design-system.css"]) {
@@ -84,6 +87,10 @@ assert.match(app,/pendingAction==="theme-button"[\s\S]{0,180}pendingAction==="gl
   "the complete app replays deferred theme and search actions");
 assert.match(app,/active!==document\.body&&active!==document\.documentElement\?active:el\("global-search-button"\)/,
   "search restores focus reliably when hydration replaces the original active element");
+assert.match(app, /host\?\.classList\.contains\("home-snapshot-list"\)[\s\S]{0,160}host\.replaceChildren\(\)/,
+  "full Home charts replace, rather than overlay, their fast snapshot renderer");
+assert.match(app, /setupExclusiveViewNavigation\(\)/,
+  "exclusive local view rails share keyboard and active-item visibility behaviour");
 assert.match(index,/id="route-status" class="route-status" role="alert" hidden/,
   "recoverable route failures have a visible status surface");
 const quickRoutes=fs.readFileSync(path.join(root,"site/route-app.js"),"utf8");
@@ -243,6 +250,7 @@ assert.match(app, /reset\.hidden=id!=="offseason"/, "News hides its Latest-only 
 assert.match(app, /visible=CAP_TIMELINE_EXPANDED\?filtered:filtered\.slice\(0,10\)/, "the cap timeline starts with a bounded recent set");
 assert.match(index, /id="nst-refresh-centre" class="panel nst-refresh-centre status-disclosure"/, "manual refresh instructions use progressive disclosure");
 assert.match(index, /id="status-coverage-panel" class="panel status-disclosure"/, "coverage evidence starts as a disclosure");
+assert.match(index, /id="status-rollover-panel" class="panel status-disclosure"/, "season rollover explanation uses the shared disclosure pattern");
 assert.match(app, /stale=active&&\(!ready\|\|age>=7\)/, "manual analytics reminders stay quiet outside the active season");
 assert.match(app, /!active\?"No action needed"/, "offseason status does not falsely request a refresh");
 assert.match(designSystem, /#news>\.news-subnav[\s\S]*overflow-x:auto!important/, "the five News destinations scroll instead of colliding on phones");

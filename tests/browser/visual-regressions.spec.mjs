@@ -25,6 +25,28 @@ async function expectCompactEmptyChart(locator) {
   expect(height).toBeLessThanOrEqual(240);
 }
 
+async function expectDirectChildToFillContent(parent, selector = ":scope > .notice") {
+  const layout = await parent.evaluate((element, childSelector) => {
+    const child = element.querySelector(childSelector);
+    if (!child) return null;
+    const host = element.getBoundingClientRect();
+    const item = child.getBoundingClientRect();
+    const styles = getComputedStyle(element);
+    const contentLeft = host.left + Number.parseFloat(styles.borderLeftWidth) + Number.parseFloat(styles.paddingLeft);
+    const contentRight = host.right - Number.parseFloat(styles.borderRightWidth) - Number.parseFloat(styles.paddingRight);
+    const contentWidth = contentRight - contentLeft;
+    return {
+      leftGap: Math.abs(item.left - contentLeft),
+      rightGap: Math.abs(contentRight - item.right),
+      widthRatio: contentWidth ? item.width / contentWidth : 0,
+    };
+  }, selector);
+  expect(layout).not.toBeNull();
+  expect(layout.leftGap).toBeLessThanOrEqual(2);
+  expect(layout.rightGap).toBeLessThanOrEqual(2);
+  expect(layout.widthRatio).toBeGreaterThan(0.98);
+}
+
 test.describe("screenshot-backed desktop visual regressions", () => {
   test.beforeEach(async ({ page }, testInfo) => {
     test.skip(testInfo.project.name !== "desktop-chromium", "Desktop screenshot contract");
@@ -43,6 +65,94 @@ test.describe("screenshot-backed desktop visual regressions", () => {
 
     await expect(page.locator("#today-games > :is(.watch-next-hero, .watch-next-empty)")).toBeVisible();
     await expect(page.locator("#today-games .home-matchup")).toHaveCount(0);
+  });
+
+  test("hydrated Home replaces the lightweight standings snapshot with one chart", async ({ page }) => {
+    await page.goto("/");
+    const performance = page.locator("#dashboard-points");
+    await expect(performance.locator(":scope > .rank-row")).toHaveCount(4);
+
+    await page.getByRole("button", { name: "Tonight", exact: true }).click();
+    await expect(page.locator("#tonight")).toHaveClass(/active/, { timeout: 15_000 });
+    await page.getByRole("button", { name: "Home", exact: true }).click();
+    await expect(page.locator("#dashboard")).toHaveClass(/active/, { timeout: 15_000 });
+    await performance.scrollIntoViewIfNeeded();
+
+    await expect(performance).toHaveClass(/\bjs-plotly-plot\b/, { timeout: 15_000 });
+    await expect(performance).not.toHaveClass(/\bhome-snapshot-list\b/);
+    await expect(performance.locator(":scope > .rank-row")).toHaveCount(0);
+    await expect(performance.locator(":scope > .plot-container")).toHaveCount(1);
+    await expect(performance).not.toHaveAttribute("role", "list");
+  });
+
+  test("Schedule active section keeps WCAG text contrast in dark mode", async ({ page }) => {
+    await page.addInitScript(() => localStorage.setItem("nhl-theme", "dark"));
+    await page.goto("/#schedule");
+    await expect(page.locator("#schedule")).toHaveClass(/active/, { timeout: 15_000 });
+    const active = page.locator('#schedule-chapter-nav button[aria-pressed="true"]');
+    await expect(active).toBeVisible();
+
+    const ratios = await active.evaluate(element => {
+      const channel = value => {
+        const normalized = value / 255;
+        return normalized <= 0.04045 ? normalized / 12.92 : ((normalized + 0.055) / 1.055) ** 2.4;
+      };
+      const rgb = value => (value.match(/[\d.]+/g) || []).slice(0, 3).map(Number);
+      const luminance = value => {
+        const [red, green, blue] = rgb(value).map(channel);
+        return 0.2126 * red + 0.7152 * green + 0.0722 * blue;
+      };
+      const background = getComputedStyle(element).backgroundColor;
+      return [element, element.querySelector("strong"), element.querySelector("small")].map(node => {
+        const light = Math.max(luminance(getComputedStyle(node).color), luminance(background));
+        const dark = Math.min(luminance(getComputedStyle(node).color), luminance(background));
+        return (light + 0.05) / (dark + 0.05);
+      });
+    });
+    expect(Math.min(...ratios)).toBeGreaterThanOrEqual(4.5);
+  });
+
+  test("Lineups preserves the full long team name at 1024 pixels", async ({ page }) => {
+    await page.setViewportSize({ width: 1024, height: 1000 });
+    await page.goto("/?availabilityTeam=BUF#availability");
+    await expect(page.locator("#availability")).toHaveClass(/active/, { timeout: 15_000 });
+    const opponent = page.locator("#availability-next .availability-matchup h3", { hasText: "Pittsburgh Penguins" });
+    await expect(opponent).toHaveText("Pittsburgh Penguins");
+    const presentation = await opponent.evaluate(element => {
+      const styles = getComputedStyle(element);
+      return {
+        horizontalOverflow: element.scrollWidth - element.clientWidth,
+        verticalOverflow: element.scrollHeight - element.clientHeight,
+        textOverflow: styles.textOverflow,
+        whiteSpace: styles.whiteSpace,
+      };
+    });
+    expect(presentation.horizontalOverflow).toBeLessThanOrEqual(1);
+    expect(presentation.verticalOverflow).toBeLessThanOrEqual(1);
+    expect(presentation.textOverflow).not.toBe("ellipsis");
+    expect(presentation.whiteSpace).not.toBe("nowrap");
+  });
+
+  test("offseason Trends notice spans the story row", async ({ page }) => {
+    await page.goto("/#trends");
+    await expect(page.locator("#trends")).toHaveClass(/active/, { timeout: 15_000 });
+    const stories = page.locator("#trend-stories");
+    await expect(stories.locator(":scope > .notice")).toBeVisible();
+    await expectDirectChildToFillContent(stories);
+  });
+
+  test("Team Compare and Game Centre fallback notices span their content", async ({ page }) => {
+    await page.goto("/#compare");
+    await expect(page.locator("#compare")).toHaveClass(/active/, { timeout: 15_000 });
+    const comparison = page.locator("#team-comparison-edge");
+    await expect(comparison.locator(":scope > .notice")).toBeVisible();
+    await expectDirectChildToFillContent(comparison);
+
+    await page.goto("/?game=9999999999#games");
+    await expect(page.locator("#games")).toHaveClass(/active/, { timeout: 15_000 });
+    const game = page.locator("#game-detail");
+    await expect(game.locator(":scope > .notice")).toBeVisible({ timeout: 15_000 });
+    await expectDirectChildToFillContent(game);
   });
 
   test("Season evidence stays visible and contained at the reported tablet width", async ({ page }) => {
@@ -219,15 +329,18 @@ test.describe("screenshot-backed desktop visual regressions", () => {
     await expect(page.locator("#status")).toHaveClass(/active/, { timeout: 15_000 });
     await expect(page.locator("#status .source-status-panel")).not.toHaveAttribute("open", "");
     await expect(page.locator("#status-coverage-panel")).not.toHaveAttribute("open", "");
+    await expect(page.locator("#status-rollover-panel")).not.toHaveAttribute("open", "");
     const visual = await page.evaluate(() => {
       const source = document.querySelector("#status .source-status-panel").getBoundingClientRect();
       const coverage = document.querySelector("#status-coverage-panel").getBoundingClientRect();
+      const rollover = document.querySelector("#status-rollover-panel").getBoundingClientRect();
       const refresh = document.querySelector("#nst-refresh-centre").getBoundingClientRect();
       const evidence = document.querySelector("#status .status-evidence-grid").getBoundingClientRect();
       const sectionGap = Number.parseFloat(getComputedStyle(document.documentElement).getPropertyValue("--section-gap"));
       return {
         sourceHeight: source.height,
         coverageHeight: coverage.height,
+        rolloverHeight: rollover.height,
         evidenceGap: evidence.top - refresh.bottom,
         sectionGap,
         scrollMargin: Number.parseFloat(getComputedStyle(document.querySelector("#status-coverage-panel")).scrollMarginTop),
@@ -235,6 +348,8 @@ test.describe("screenshot-backed desktop visual regressions", () => {
     });
     expect(visual.sourceHeight).toBeLessThanOrEqual(76);
     expect(visual.coverageHeight).toBeLessThanOrEqual(76);
+    expect(visual.rolloverHeight).toBeLessThanOrEqual(76);
+    expect(Math.abs(visual.rolloverHeight - visual.coverageHeight)).toBeLessThanOrEqual(1);
     expect(visual.evidenceGap).toBeGreaterThanOrEqual(16);
     expect(visual.evidenceGap).toBeLessThanOrEqual(visual.sectionGap + 2);
     expect(visual.scrollMargin).toBeGreaterThan(50);
