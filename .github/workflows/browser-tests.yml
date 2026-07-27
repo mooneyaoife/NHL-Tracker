@@ -28,6 +28,7 @@ jobs:
           version: 11.9.0
           run_install: false
       - run: pnpm install --frozen-lockfile --ignore-scripts
+      - run: pnpm check:assets
       - run: node tests/url_safety.test.js
       - run: pnpm audit --audit-level=high
       - run: pnpm exec playwright install --with-deps chromium

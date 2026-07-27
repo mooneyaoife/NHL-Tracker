@@ -37,7 +37,7 @@ Open `http://localhost:8000`.
 
 To inspect the existing generated site without refreshing external data, run only the second command.
 
-When the canonical files `site/styles.css`, `site/theme-569.css` or `site/design-system.css` change, regenerate the checked-in immediate-route bundle with `node scripts/extract_core_styles.mjs`. The complete cascade remains available on demand for deeper routes.
+When the canonical files `site/styles.css`, `site/theme-569.css` or `site/design-system.css` change, regenerate the checked-in immediate and deep-route bundles with `node scripts/extract_core_styles.mjs`, then run `pnpm build:assets`. Canonical source remains readable while the site serves minified, non-duplicated route assets.
 
 When public route slugs change, regenerate the checked-in direct-link hand-off pages with `python scripts/generate_route_aliases.py`.
 

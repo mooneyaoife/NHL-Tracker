@@ -32,6 +32,7 @@ jobs:
           version: 11.9.0
           run_install: false
       - run: pnpm install --frozen-lockfile --ignore-scripts
+      - run: pnpm check:assets
       - name: Check deterministic payload budgets
         run: python scripts/check_performance_budgets.py
       - name: Serve the committed artifact

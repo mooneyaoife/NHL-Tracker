@@ -20,7 +20,12 @@ class CloudflareBuildTests(unittest.TestCase):
         (self.source / "app.js").write_text("const base = 'https://mooneyaoife.github.io/NHL-Tracker/';", encoding="utf-8")
         (self.source / "core-routes.css").write_text("body { display: block; }", encoding="utf-8")
         (self.source / "cloudflare-live.js").write_text("window.NHLCloudflareLive = {};", encoding="utf-8")
+        for name in ("core-routes.min.css", "full-routes.min.css"):
+            (self.source / name).write_text("body{display:block}", encoding="utf-8")
+        (self.source / "app.min.js").write_text("const base='https://mooneyaoife.github.io/NHL-Tracker/';", encoding="utf-8")
         for name in ("route-app.js", "game-centre.js", "data-loader.js", "route-loader.js"):
+            (self.source / name).write_text("", encoding="utf-8")
+        for name in ("route-app.min.js", "game-centre.min.js", "data-loader.min.js", "route-loader.min.js", "cloudflare-live.min.js"):
             (self.source / name).write_text("", encoding="utf-8")
         data = self.source / "data"
         data.mkdir()
@@ -58,6 +63,7 @@ class CloudflareBuildTests(unittest.TestCase):
         build_cloudflare.build(output, "https://nhl-tracker-private.pages.dev")
         self.assertEqual([], verify_cloudflare_build.failures_for(output, "https://nhl-tracker-private.pages.dev/"))
         self.assertNotIn(build_cloudflare.GITHUB_PAGES_URL, (output / "app.js").read_text(encoding="utf-8"))
+        self.assertNotIn(build_cloudflare.GITHUB_PAGES_URL, (output / "app.min.js").read_text(encoding="utf-8"))
         self.assertIn('name="nhl-cloudflare-api"', (output / "index.html").read_text(encoding="utf-8"))
 
     def test_rejects_insecure_or_credential_bearing_urls(self):

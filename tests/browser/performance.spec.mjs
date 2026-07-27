@@ -46,9 +46,9 @@ test("Home shell does not synchronously download the full application",async({pa
   });
   await page.waitForTimeout(150);
   const names=(await resources(page)).map(row=>row.name);
-  expect(names).not.toContain("/app.js");
-  expect(names).not.toContain("/game-centre.js");
-  for(const stylesheet of ["/styles.css","/theme-569.css","/design-system.css"])expect(names).not.toContain(stylesheet);
+  expect(names).not.toContain("/app.min.js");
+  expect(names).not.toContain("/game-centre.min.js");
+  expect(names).not.toContain("/full-routes.min.css");
 });
 
 test("Home snapshot fills its useful dashboard without a route round trip",async({page})=>{
@@ -58,7 +58,7 @@ test("Home snapshot fills its useful dashboard without a route round trip",async
   await expect(page.locator("#recent-form")).not.toBeEmpty();
   await expect(page.locator("#dashboard-points .rank-row")).toHaveCount(4);
   await expect(page.locator("#dashboard")).toHaveClass(/active/);
-  expect((await resources(page)).map(row=>row.name)).not.toContain("/app.js");
+  expect((await resources(page)).map(row=>row.name)).not.toContain("/app.min.js");
 });
 
 test("Home keeps its standings snapshot until the deferred chart renders",async({page})=>{
@@ -110,7 +110,7 @@ test("Watch Next puts locally followed teams first without loading the full app"
   await expect(page.locator(".watch-next-hero .section-kicker")).toHaveText("Your teams");
   await expect(page.locator("#today-date")).toContainText("2 followed teams");
   await expect(page.locator(".watch-next-hero")).toContainText(/Wild|Sharks/);
-  expect((await resources(page)).map(row=>row.name)).not.toContain("/app.js");
+  expect((await resources(page)).map(row=>row.name)).not.toContain("/app.min.js");
 });
 
 test("Since last check is device-local, markable, and quiet when unchanged",async({page})=>{
@@ -201,11 +201,11 @@ test("Tonight uses the lightweight runtime and core data only",async({page})=>{
   const rows=await resources(page),names=rows.map(row=>row.name);
   expect(names).toContain("/data/tracker-core.json");
   expect(names).not.toContain("/data/tracker.json");
-  expect(names).not.toContain("/app.js");
-  expect(names).not.toContain("/game-centre.js");
+  expect(names).not.toContain("/app.min.js");
+  expect(names).not.toContain("/game-centre.min.js");
   await page.evaluate(()=>window.dispatchEvent(new WheelEvent("wheel",{deltaY:240})));
   await page.waitForTimeout(100);
-  expect((await resources(page)).map(row=>row.name)).not.toContain("/app.js");
+  expect((await resources(page)).map(row=>row.name)).not.toContain("/app.min.js");
   const javascript=rows.filter(row=>row.name.endsWith(".js")).reduce((sum,row)=>sum+row.bytes,0);
   expect(javascript).toBeLessThanOrEqual(438000);
   expect(errors.filter(message=>message.includes("Data loader must be initialised"))).toEqual([]);
@@ -219,7 +219,7 @@ test("Game Centre transfers at least 40 percent less route data",async({page})=>
   expect(rows.map(row=>row.name)).not.toContain("/data/tracker-players.json");
   expect(rows.map(row=>row.name)).not.toContain("/data/tracker-schedule.json");
   expect(rows.map(row=>row.name)).not.toContain("/data/tracker-analytics.json");
-  expect(rows.map(row=>row.name)).toContain("/game-centre.js");
+  expect(rows.map(row=>row.name)).toContain("/game-centre.min.js");
   expect(data).toBeLessThanOrEqual(75000);
 });
 
@@ -229,7 +229,7 @@ test("detailed Game Centre reuses quick-route dependencies",async({page})=>{
   await page.locator("[data-open-complete-game]").click();
   await expect(page.locator("#games")).toHaveClass(/active/);
   const scripts=await page.locator("script[src]").evaluateAll(nodes=>nodes.map(node=>new URL(node.src).pathname));
-  for(const name of ["data-contracts.js","data-loader.js","route-loader.js","cloudflare-live.js"]){
+  for(const name of ["data-contracts.min.js","data-loader.min.js","route-loader.min.js","cloudflare-live.min.js"]){
     expect(scripts.filter(path=>path.endsWith(`/${name}`)),`${name} is executed once`).toHaveLength(1);
   }
 });
@@ -287,9 +287,9 @@ test("player profile loads player capabilities without unused chart code",async(
   expect(rows.map(row=>row.name)).not.toContain("/data/tracker.json");
   expect(rows.map(row=>row.name)).not.toContain("/data/tracker-schedule.json");
   expect(rows.map(row=>row.name)).not.toContain("/vendor/plotly-2.35.2.min.js");
-  for(const stylesheet of ["/styles.css","/theme-569.css","/design-system.css"])expect(rows.map(row=>row.name)).toContain(stylesheet);
-  const activeStyles=await page.locator('link[rel="stylesheet"]').evaluateAll(links=>links.filter(link=>["styles.css","theme-569.css","design-system.css"].some(name=>link.href.includes(name))).map(link=>({rel:link.rel,media:link.media})));
-  expect(activeStyles).toEqual([{rel:"stylesheet",media:"all"},{rel:"stylesheet",media:"all"},{rel:"stylesheet",media:"all"}]);
+  expect(rows.map(row=>row.name)).toContain("/full-routes.min.css");
+  const activeStyles=await page.locator('link[rel="stylesheet"]').evaluateAll(links=>links.filter(link=>link.href.includes("full-routes.min.css")).map(link=>({rel:link.rel,media:link.media})));
+  expect(activeStyles).toEqual([{rel:"stylesheet",media:"all"}]);
 });
 
 test("the first analytical chart records bounded script work",async({page})=>{
