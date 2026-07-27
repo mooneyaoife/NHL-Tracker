@@ -4,6 +4,7 @@ export default defineConfig({
   testDir: "./tests/browser",
   timeout: 30_000,
   fullyParallel: false,
+  workers: process.env.CI ? 1 : undefined,
   use: {
     baseURL: "http://127.0.0.1:4173",
     serviceWorkers: "block",
