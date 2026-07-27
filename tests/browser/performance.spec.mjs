@@ -61,6 +61,23 @@ test("Home snapshot fills its useful dashboard without a route round trip",async
   expect((await resources(page)).map(row=>row.name)).not.toContain("/app.js");
 });
 
+test("Home keeps its standings snapshot until the deferred chart renders",async({page})=>{
+  await page.goto("/");
+  const performance=page.locator("#dashboard-points");
+  await expect(performance.locator(":scope > .rank-row")).toHaveCount(4);
+
+  await page.evaluate(()=>window.NHLTrackerLoadCompleteApp());
+  await expect(page.locator("#team-select option")).not.toHaveCount(0,{timeout:15_000});
+  await expect(performance).toHaveClass(/\bhome-snapshot-list\b/);
+  await expect(performance.locator(":scope > .rank-row")).toHaveCount(4);
+  await expect(performance).toHaveAttribute("role","list");
+
+  await performance.scrollIntoViewIfNeeded();
+  await expect(performance).toHaveClass(/\bjs-plotly-plot\b/,{timeout:15_000});
+  await expect(performance).not.toHaveClass(/\bhome-snapshot-list\b/);
+  await expect(performance.locator(":scope > .rank-row")).toHaveCount(0);
+});
+
 test("Watch Next answers the league question and opens the exact Game Centre",async({page})=>{
   await page.addInitScript(()=>localStorage.removeItem("nhl-tracked-teams"));
   await page.goto("/");

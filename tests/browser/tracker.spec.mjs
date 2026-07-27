@@ -16,6 +16,13 @@ async function routeTracker(page, transform) {
   });
 }
 
+async function waitForTrackerApp(page) {
+  await page.evaluate(async () => {
+    if (typeof window.NHLTrackerLoadCompleteApp === "function") await window.NHLTrackerLoadCompleteApp();
+  });
+  await page.waitForFunction(() => typeof showPage === "function", null, { timeout: 30_000 });
+}
+
 function gameFor(fixture, index = 0) {
   return {
     id: 2026020900 + index,
@@ -492,6 +499,7 @@ test("remaining fan and utility routes stay inside mobile and intermediate viewp
   await page.setViewportSize({ width: 375, height: 812 });
   await page.goto("/?round3=responsive-routes#teams");
   await expect(page.locator("#teams")).toHaveClass(/active/, { timeout: 15000 });
+  await waitForTrackerApp(page);
   for (const viewport of [{ width: 375, height: 812 }, { width: 1024, height: 820 }]) {
     await page.setViewportSize(viewport);
     for (const route of ["teams", "players", "league", "compare", "news", "watchlist", "guide", "status", "policies"]) {
@@ -575,8 +583,14 @@ test("utility routes reveal detailed evidence only when requested", async ({ pag
     await page.goto(`/?round7=${viewport.width}-status#status`);
     await expect(page.locator("#status .source-status-panel")).not.toHaveAttribute("open", "");
     await expect(page.locator("#status-coverage-panel")).not.toHaveAttribute("open", "");
+    await expect(page.locator("#status-rollover-panel")).not.toHaveAttribute("open", "");
     await expect(page.locator("#nst-refresh-centre")).not.toHaveAttribute("open", "");
     await expect(page.locator("#nst-refresh-badge")).toHaveText("No action needed");
+    const rolloverSummary = page.locator("#status-rollover-panel summary");
+    await rolloverSummary.focus();
+    await page.keyboard.press("Enter");
+    await expect(page.locator("#status-rollover-panel")).toHaveAttribute("open", "");
+    await expect(page.locator("#season-decision")).toBeVisible();
     await page.locator("#open-nst-refresh").click();
     await expect(page.locator("#nst-refresh-centre")).toHaveAttribute("open", "");
 
@@ -602,16 +616,64 @@ test("utility routes reveal detailed evidence only when requested", async ({ pag
   }
 });
 
-test("principal and redesigned journeys have no serious automated accessibility violations", async ({ page }) => {
-  test.setTimeout(180_000);
-  for (const route of ["dashboard", "tonight", "schedule", "games", "teams", "players", "league", "compare", "power", "watchlist", "news", "guide", "status", "policies"]) {
+test("every route has no serious automated accessibility violations in both themes", async ({ page }) => {
+  test.setTimeout(360_000);
+  const routes = ["dashboard", "tonight", "schedule", "games", "availability", "teams", "players", "league", "compare", "power", "trends", "playoffs", "news", "watchlist", "guide", "status", "policies"];
+  for (const theme of ["light", "dark"]) {
     await page.goto("/");
-    await page.evaluate(() => localStorage.removeItem("nhl-last-route-v1"));
-    await page.goto("about:blank");
-    await page.goto(`/#${route}`);
-    await expect(page.locator(`#${route}`)).toHaveClass(/active/);
-    await page.waitForTimeout(400);
-    const results = await new AxeBuilder({ page }).analyze();
-    expect(results.violations.filter(violation => ["serious", "critical"].includes(violation.impact)), route).toEqual([]);
+    await page.evaluate(selectedTheme => {
+      localStorage.setItem("nhl-theme", selectedTheme);
+      localStorage.removeItem("nhl-last-route-v1");
+    }, theme);
+    await page.reload();
+    await expect(page.locator("#updated")).not.toContainText("Loading", { timeout: 30_000 });
+    await waitForTrackerApp(page);
+    for (const route of routes) {
+      await page.evaluate(nextRoute => showPage(nextRoute), route);
+      await expect(page.locator(`#${route}`)).toHaveClass(/active/);
+      await page.waitForTimeout(250);
+      const results = await new AxeBuilder({ page }).analyze();
+      expect(
+        results.violations.filter(violation => ["serious", "critical"].includes(violation.impact)),
+        `${route} in ${theme} mode`,
+      ).toEqual([]);
+    }
   }
+});
+
+test("exclusive local views use roving keyboard focus and only scrollable data joins the tab order", async ({ page }) => {
+  await page.setViewportSize({ width: 1024, height: 820 });
+  await page.goto("/#teams");
+  await expect(page.locator("#teams")).toHaveClass(/active/, { timeout: 30_000 });
+  await expect(page.locator("#updated")).not.toContainText("Loading", { timeout: 30_000 });
+
+  const rail = page.locator("#teams > .section-subnav");
+  const overview = rail.getByRole("button", { name: "Overview", exact: true });
+  const performance = rail.getByRole("button", { name: "Performance", exact: true });
+  await overview.focus();
+  await page.keyboard.press("ArrowRight");
+  await expect(performance).toBeFocused();
+  await expect(performance).toHaveAttribute("aria-pressed", "true");
+  await expect(performance).toHaveAttribute("tabindex", "0");
+  await expect(overview).toHaveAttribute("tabindex", "-1");
+  const controlledPanel = await performance.getAttribute("aria-controls");
+  expect(controlledPanel).toBeTruthy();
+  for (const panelId of controlledPanel.split(/\s+/)) {
+    await expect(page.locator(`#${panelId}`)).toHaveClass(/active/);
+  }
+
+  await page.keyboard.press("End");
+  await expect(rail.getByRole("button", { name: "Games", exact: true })).toBeFocused();
+  await page.keyboard.press("Home");
+  await expect(overview).toBeFocused();
+
+  await expect.poll(async () => page.locator("#teams .chart[tabindex]").count()).toBe(0);
+  await rail.getByRole("button", { name: "Games", exact: true }).click();
+  await page.waitForTimeout(150);
+  const tableRegions = await page.locator("#teams .table-wrap:visible").evaluateAll(wraps => wraps.map(wrap => ({
+    scrollable: wrap.scrollWidth > wrap.clientWidth + 1 || wrap.scrollHeight > wrap.clientHeight + 1,
+    tabIndex: wrap.getAttribute("tabindex"),
+  })));
+  expect(tableRegions.length).toBeGreaterThan(0);
+  expect(tableRegions.every(region => region.scrollable ? region.tabIndex === "0" : region.tabIndex === null)).toBe(true);
 });
