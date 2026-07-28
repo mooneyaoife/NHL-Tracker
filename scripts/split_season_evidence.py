@@ -86,6 +86,101 @@ def compact_evidence(payload: dict) -> dict:
     return result
 
 
+def team_codes(payload: dict) -> list[str]:
+    codes = set((payload.get("rosters") or {}).keys()) | set((payload.get("players") or {}).keys())
+    codes.update(row.get("team") for row in payload.get("standings") or [] if row.get("team"))
+    return sorted(str(code) for code in codes if code)
+
+
+def team_game_library(rows: list[dict], team: str) -> list[dict]:
+    return [row for row in latest_team_games(rows) if team in (row.get("away"), row.get("home"))]
+
+
+def official_team_players(payload: dict, team: str) -> dict:
+    identifiers = {
+        str(row.get("id"))
+        for row in (payload.get("players") or {}).get(team, []) + (payload.get("rosters") or {}).get(team, [])
+        if row.get("id") is not None
+    }
+    return {
+        group: [
+            row for row in (payload.get("officialPlayers") or {}).get(group, [])
+            if team in (row.get("teams") or []) or str(row.get("id")) in identifiers
+        ]
+        for group in ("skaters", "goalies")
+    }
+
+
+def provider_metadata(provider: dict) -> dict:
+    return {
+        key: value for key, value in provider.items()
+        if not isinstance(value, list) and not isinstance(value, dict)
+    }
+
+
+def peer_evidence(payload: dict) -> dict:
+    """Shared league context used by player percentiles and goalie rankings."""
+    moneypuck = payload.get("moneypuck") or {}
+    natural = payload.get("naturalStatTrick") or {}
+    return {
+        "meta": payload.get("meta") or {},
+        "moneypuck": {**provider_metadata(moneypuck), "goalies": moneypuck.get("goalies") or []},
+        "naturalStatTrick": {
+            **provider_metadata(natural),
+            "teams": natural.get("teams") or [],
+            "players": natural.get("players") or [],
+            "goalies": natural.get("goalies") or [],
+        },
+    }
+
+
+def team_evidence(payload: dict, team: str) -> dict:
+    """Selected-team evidence without other clubs' large player/provider arrays."""
+    moneypuck = payload.get("moneypuck") or {}
+    natural = payload.get("naturalStatTrick") or {}
+    belongs = lambda row: row.get("team") == team
+    return {
+        "meta": payload.get("meta") or {},
+        "standings": payload.get("standings") or [],
+        "teams": {team: team_summaries(payload.get("teams") or {}).get(team, {})},
+        "rosters": {team: (payload.get("rosters") or {}).get(team, [])},
+        "players": {team: player_summaries(payload.get("players") or {}).get(team, [])},
+        "officialPlayers": official_team_players(payload, team),
+        "playerCoverage": payload.get("playerCoverage") or {},
+        "specialTeams": payload.get("specialTeams") or [],
+        "sources": payload.get("sources") or {},
+        "gameLibrary": team_game_library(payload.get("gameLibrary") or [], team),
+        "moneypuck": {
+            **provider_metadata(moneypuck),
+            "teams": moneypuck.get("teams") or [],
+            "teamGames": [row for row in moneypuck.get("teamGames") or [] if belongs(row)],
+            "skaters": [row for row in moneypuck.get("skaters") or [] if belongs(row)],
+            "lines": [row for row in moneypuck.get("lines") or [] if belongs(row)],
+            "specialTeamGames": [row for row in moneypuck.get("specialTeamGames") or [] if belongs(row)],
+            "specialTeams": [row for row in moneypuck.get("specialTeams") or [] if belongs(row)],
+        },
+        "naturalStatTrick": {**provider_metadata(natural), "teams": natural.get("teams") or []},
+    }
+
+
+def availability_evidence(payload: dict, team: str) -> dict:
+    """Lean roster, starter and line-combination evidence for the Lineups route."""
+    moneypuck = payload.get("moneypuck") or {}
+    belongs = lambda row: row.get("team") == team
+    return {
+        "meta": payload.get("meta") or {},
+        "standings": payload.get("standings") or [],
+        "teams": {team: team_summaries(payload.get("teams") or {}).get(team, {})},
+        "rosters": {team: (payload.get("rosters") or {}).get(team, [])},
+        "players": {team: player_summaries(payload.get("players") or {}).get(team, [])},
+        "gameLibrary": team_game_library(payload.get("gameLibrary") or [], team),
+        "moneypuck": {
+            **provider_metadata(moneypuck),
+            "lines": [row for row in moneypuck.get("lines") or [] if belongs(row)],
+        },
+    }
+
+
 def write_season_evidence(source: Path) -> dict:
     payload = json.loads(source.read_text(encoding="utf-8"))
     season = str(payload.get("meta", {}).get("season") or source.stem)
@@ -96,12 +191,24 @@ def write_season_evidence(source: Path) -> dict:
         })
         for team, games in sorted(player_game_shards(payload.get("players") or {}).items())
     }
+    peers = write_if_changed(SEASONS / f"{season}-peers.json", peer_evidence(payload))
+    scoped_teams = {
+        team: write_if_changed(SEASONS / f"{season}-team-{team}.json", team_evidence(payload, team))
+        for team in team_codes(payload)
+    }
+    availability = {
+        team: write_if_changed(SEASONS / f"{season}-availability-{team}.json", availability_evidence(payload, team))
+        for team in team_codes(payload)
+    }
     manifest = {
         "schema": 1,
         "season": season,
         "legacyUrl": f"data/seasons/{season}.json",
         "evidence": evidence,
         "playerGames": teams,
+        "peerEvidence": peers,
+        "teamEvidence": scoped_teams,
+        "availabilityEvidence": availability,
     }
     write_if_changed(SEASONS / f"{season}-manifest.json", manifest)
     return manifest
@@ -114,4 +221,5 @@ if __name__ == "__main__":
             "season": manifest["season"],
             "evidenceBytes": manifest["evidence"]["bytes"],
             "teamShards": len(manifest["playerGames"]),
+            "teamEvidenceShards": len(manifest["teamEvidence"]),
         }, sort_keys=True))

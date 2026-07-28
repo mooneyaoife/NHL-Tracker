@@ -41,6 +41,23 @@ class SplitSeasonEvidenceTests(unittest.TestCase):
         shards = MODULE.player_game_shards(self.payload()["players"])
         self.assertEqual(shards["BUF"]["9"], shards["CAR"]["9"])
 
+    def test_scoped_evidence_separates_peer_team_and_availability_data(self):
+        payload = self.payload()
+        payload["moneypuck"].update({
+            "skaters": [{"id": "9", "team": "BUF"}, {"id": "10", "team": "CAR"}],
+            "goalies": [{"id": "1", "team": "BUF"}],
+            "lines": [{"team": "BUF", "name": "A-B-C"}, {"team": "CAR", "name": "D-E-F"}],
+        })
+        payload["naturalStatTrick"]["players"] = [{"id": "9"}, {"id": "10"}]
+        peers = MODULE.peer_evidence(payload)
+        team = MODULE.team_evidence(payload, "BUF")
+        availability = MODULE.availability_evidence(payload, "BUF")
+        self.assertEqual(len(peers["naturalStatTrick"]["players"]), 2)
+        self.assertEqual(peers["moneypuck"]["goalies"][0]["id"], "1")
+        self.assertEqual([row["team"] for row in team["moneypuck"]["skaters"]], ["BUF"])
+        self.assertEqual([row["team"] for row in availability["moneypuck"]["lines"]], ["BUF"])
+        self.assertNotIn("naturalStatTrick", availability)
+
     def test_manifest_has_verified_sizes_hashes_and_stable_urls(self):
         with tempfile.TemporaryDirectory() as directory:
             root = Path(directory)
@@ -57,6 +74,10 @@ class SplitSeasonEvidenceTests(unittest.TestCase):
             self.assertEqual(len(manifest["evidence"]["sha256"]), 64)
             self.assertIn("BUF", manifest["playerGames"])
             self.assertIn("CAR", manifest["playerGames"])
+            self.assertIn("peerEvidence", manifest)
+            self.assertIn("BUF", manifest["teamEvidence"])
+            self.assertIn("BUF", manifest["availabilityEvidence"])
+            self.assertEqual(len(manifest["peerEvidence"]["sha256"]), 64)
             self.assertLess(evidence.stat().st_size, source.stat().st_size)
 
 

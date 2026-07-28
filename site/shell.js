@@ -1,6 +1,6 @@
 "use strict";
 (()=>{
-  const VERSION="7.42.0";
+  const VERSION="7.43.0";
   const QUICK_PAGES=new Set(["tonight","games","schedule"]);
   const QUICK_SCRIPTS=["data-contracts.min.js","data-loader.min.js","route-loader.min.js","cloudflare-live.min.js","route-app.min.js"];
   const FULL_SCRIPTS=["statistics.min.js","data-contracts.min.js","data-loader.min.js","router.min.js","route-loader.min.js","preferences.min.js","live-updates.min.js","observability.min.js","cloudflare-live.min.js","url-safety.min.js","app.min.js"];

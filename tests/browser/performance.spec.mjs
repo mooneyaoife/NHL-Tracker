@@ -2,18 +2,19 @@ import {test,expect} from "@playwright/test";
 
 const resources=page=>page.evaluate(()=>performance.getEntriesByType("resource").map(entry=>({name:new URL(entry.name).pathname,bytes:entry.decodedBodySize||entry.transferSize||0,duration:entry.duration,initiatorType:entry.initiatorType})));
 
-test("direct Explore routes skip Home and load compact historical evidence",async({page})=>{
+test("direct Explore routes skip Home and load selected-team historical evidence",async({page})=>{
   await page.goto("/#league");
   await expect(page.locator("#league")).toHaveClass(/active/,{timeout:15_000});
   await expect(page.locator("#analytics-team-select option")).not.toHaveCount(0,{timeout:15_000});
-  await expect.poll(async()=>((await resources(page)).map(row=>row.name).some(name=>name.endsWith("/20252026-evidence.json")))).toBe(true);
+  await expect.poll(async()=>((await resources(page)).map(row=>row.name).some(name=>/\/20252026-team-[A-Z]+\.json$/.test(name)))).toBe(true);
   const rows=await resources(page),names=rows.map(row=>row.name),dataBytes=rows.filter(row=>row.name.includes("/data/")).reduce((sum,row)=>sum+row.bytes,0);
   expect(names).not.toContain("/data/home.json");
   expect(names).not.toContain("/home-snapshot.min.js");
   expect(names).not.toContain("/data/seasons/20252026.json");
+  expect(names).not.toContain("/data/seasons/20252026-evidence.json");
   expect(names).not.toContain("/data/puckpedia-mail.json");
   expect(names).not.toContain("/data/tracker-models.json");
-  expect(dataBytes).toBeLessThan(4_000_000);
+  expect(dataBytes).toBeLessThan(1_250_000);
 });
 
 test("optional feeds wait for a destination that uses them",async({page})=>{
@@ -23,6 +24,18 @@ test("optional feeds wait for a destination that uses them",async({page})=>{
   await page.goto("/#news");
   await expect(page.locator("#news")).toHaveClass(/active/,{timeout:15_000});
   await expect.poll(async()=>((await resources(page)).map(row=>row.name).includes("/data/puckpedia-mail.json"))).toBe(true);
+});
+
+test("Lineups uses calendar and lean team evidence",async({page})=>{
+  await page.goto("/#availability");
+  await expect(page.locator("#availability")).toHaveClass(/active/,{timeout:15_000});
+  await expect.poll(async()=> (await resources(page)).some(row=>/\/20252026-availability-[A-Z]+\.json$/.test(row.name)),{timeout:15_000}).toBe(true);
+  const rows=await resources(page),names=rows.map(row=>row.name),dataBytes=rows.filter(row=>row.name.includes("/data/")).reduce((sum,row)=>sum+row.bytes,0);
+  expect(names).toContain("/data/tracker-calendar.json");
+  expect(names).not.toContain("/data/tracker-schedule.json");
+  expect(names).not.toContain("/data/tracker-analytics.json");
+  expect(names).not.toContain("/data/seasons/20252026-evidence.json");
+  expect(dataBytes).toBeLessThan(850_000);
 });
 
 test("Home keeps a useful shell visible while its snapshot loads",async({page})=>{
@@ -309,11 +322,14 @@ test("Calendar avoids analytical schedule data until requested",async({page})=>{
 test("player profile loads player capabilities without unused chart code",async({page})=>{
   await page.goto("/#players");
   await expect(page.locator("#players")).toHaveClass(/active/);
-  let rows=await resources(page);
-  expect(rows.map(row=>row.name)).not.toContain("/data/tracker.json");
-  expect(rows.map(row=>row.name)).not.toContain("/data/tracker-schedule.json");
-  expect(rows.map(row=>row.name)).not.toContain("/vendor/plotly-2.35.2.min.js");
-  expect(rows.map(row=>row.name)).toContain("/full-routes.min.css");
+  await expect.poll(async()=> (await resources(page)).some(row=>row.name==="/data/seasons/20252026-peers.json"),{timeout:15000}).toBe(true);
+  let rows=await resources(page),names=rows.map(row=>row.name),dataBytes=rows.filter(row=>row.name.includes("/data/")).reduce((sum,row)=>sum+row.bytes,0);
+  expect(names).not.toContain("/data/tracker.json");
+  expect(names).not.toContain("/data/tracker-schedule.json");
+  expect(names).not.toContain("/data/seasons/20252026-evidence.json");
+  expect(names).not.toContain("/vendor/plotly-2.35.2.min.js");
+  expect(names).toContain("/full-routes.min.css");
+  expect(dataBytes).toBeLessThan(1_750_000);
   const activeStyles=await page.locator('link[rel="stylesheet"]').evaluateAll(links=>links.filter(link=>link.href.includes("full-routes.min.css")).map(link=>({rel:link.rel,media:link.media})));
   expect(activeStyles).toEqual([{rel:"stylesheet",media:"all"}]);
 });
