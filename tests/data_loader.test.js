@@ -1,7 +1,7 @@
 const assert=require("node:assert/strict");
 const loaderPath=require.resolve("../site/data-loader.js");
 const responses={
-  "data/tracker-manifest.json":{schema:1,legacyUrl:"data/tracker.json",capabilities:{core:{url:"data/tracker-core.json"},players:{url:"data/tracker-players.json"},schedule:{url:"data/tracker-schedule.json"},analytics:{url:"data/tracker-analytics.json"}}},
+  "data/tracker-manifest.json":{schema:1,legacyUrl:"data/tracker.json",capabilities:{core:{url:"data/tracker-core.json"},calendar:{url:"data/tracker-calendar.json"},players:{url:"data/tracker-players.json"},schedule:{url:"data/tracker-schedule.json"},analytics:{url:"data/tracker-analytics.json"}}},
   "data/tracker-core.json":{meta:{season:"20262027"},standings:[],teams:{},daily:{games:[]}},
   "data/tracker-players.json":{rosters:{MTL:[{id:1,name:"Player"}]}},
 };

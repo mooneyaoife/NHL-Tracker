@@ -9,5 +9,6 @@
   "nonAnalyticalJavaScriptBytes": 90000,
   "fullApplicationJavaScriptBytes": 510000,
   "gameCentreRouteDataBytes": 75000,
+  "calendarRouteDataBytes": 350000,
   "seasonRouteDataBytes": 1554682
 }

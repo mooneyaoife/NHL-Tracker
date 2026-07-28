@@ -272,12 +272,14 @@ test("detailed Game Centre defers historical matchup evidence",async({page})=>{
   await expect(page.locator("#matchup-intelligence-detail")).toContainText("unavailable",{timeout:15000});
 });
 
-test("Season transfers at least 40 percent less route data",async({page})=>{
+test("Calendar avoids analytical schedule data until requested",async({page})=>{
   await page.goto("/#schedule");
   await expect(page.locator("#schedule")).toHaveClass(/active/);
-  const rows=await resources(page),data=rows.filter(row=>/\/data\/tracker-(core|schedule|manifest)\.json$/.test(row.name)).reduce((sum,row)=>sum+row.bytes,0);
+  const rows=await resources(page),data=rows.filter(row=>/\/data\/tracker-(core|calendar|manifest)\.json$/.test(row.name)).reduce((sum,row)=>sum+row.bytes,0);
   expect(rows.map(row=>row.name)).not.toContain("/data/tracker.json");
-  expect(data).toBeLessThanOrEqual(1554682);
+  expect(rows.map(row=>row.name)).not.toContain("/data/tracker-schedule.json");
+  expect(rows.map(row=>row.name)).toContain("/data/tracker-calendar.json");
+  expect(data).toBeLessThanOrEqual(350000);
 });
 
 test("player profile loads player capabilities without unused chart code",async({page})=>{

@@ -15,8 +15,10 @@ class SplitTrackerDataTests(unittest.TestCase):
                    "games": [{"id": 1, "team": "MTL", "opponent": "TOR", "date": "2026-10-01", "schedule": {"restDays": 0, "backToBack": False, "travelKm": 900}}],
                    "rosters": {"MTL": []}, "gameCentre": {"1": {"landing": {}}}}
         shards = MODULE.split_payload(payload)
-        self.assertEqual(set(shards), {"core", "schedule", "players", "analytics"})
+        self.assertEqual(set(shards), {"core", "calendar", "schedule", "players", "analytics"})
         self.assertEqual(shards["core"]["games"], shards["schedule"]["games"])
+        self.assertEqual(shards["calendar"]["games"][0]["id"], shards["schedule"]["games"][0]["id"])
+        self.assertNotIn("schedule", shards["calendar"]["games"][0])
         self.assertEqual(shards["schedule"]["games"][0]["schedule"], {"travelKm": 900})
         self.assertEqual(shards["schedule"]["schedulePressure"], {"teams": []})
         self.assertIn("rosters", shards["players"])
@@ -34,7 +36,7 @@ class SplitTrackerDataTests(unittest.TestCase):
             finally:
                 MODULE.DATA = original_data
             self.assertEqual(manifest["schema"], 1)
-            self.assertEqual(set(manifest["capabilities"]), {"core", "schedule", "players", "analytics"})
+            self.assertEqual(set(manifest["capabilities"]), {"core", "calendar", "schedule", "players", "analytics"})
             self.assertTrue(all(len(item["sha256"]) == 64 for item in manifest["capabilities"].values()))
 
     def test_core_game_window_keeps_daily_and_bounds_followed_games(self):
@@ -50,6 +52,16 @@ class SplitTrackerDataTests(unittest.TestCase):
         self.assertIn(999, ids)
         self.assertEqual(len(ids & set(range(1, 13))), 10)
         self.assertEqual(len(ids & set(range(91, 97))), 4)
+
+    def test_calendar_deduplicates_paired_rows_and_drops_schedule_evidence(self):
+        rows = [
+            {"id": 1, "team": "MTL", "opponent": "TOR", "location": "Away", "date": "2026-10-01", "schedule": {"travelKm": 500}},
+            {"id": 1, "team": "TOR", "opponent": "MTL", "location": "Home", "date": "2026-10-01", "schedule": {"travelKm": 0}},
+        ]
+        calendar = MODULE.compact_calendar_games(rows)
+        self.assertEqual(len(calendar), 1)
+        self.assertNotIn("schedule", calendar[0])
+        self.assertEqual(calendar[0]["team"], "MTL")
 
 
 if __name__ == "__main__":

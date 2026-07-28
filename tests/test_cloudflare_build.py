@@ -29,7 +29,7 @@ class CloudflareBuildTests(unittest.TestCase):
             (self.source / name).write_text("", encoding="utf-8")
         data = self.source / "data"
         data.mkdir()
-        for name in ("tracker-manifest.json", "tracker-core.json", "tracker-schedule.json", "tracker-players.json", "tracker-analytics.json"):
+        for name in ("tracker-manifest.json", "tracker-core.json", "tracker-calendar.json", "tracker-schedule.json", "tracker-players.json", "tracker-analytics.json"):
             (data / name).write_text("{}", encoding="utf-8")
         (self.source / "build-meta.json").write_text(json.dumps({
             "sourceCommit": "abc123", "artifactGeneratedAt": "2026-07-21T10:00:00+00:00",

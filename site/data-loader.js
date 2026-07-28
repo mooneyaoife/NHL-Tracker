@@ -15,7 +15,9 @@
   const loaded=new Set();
   const inFlight=new Map();
   const merge=(base,addition)=>Object.assign(base,addition||{});
-  const responseJson=async(url)=>{const response=await fetch(url,{cache:"no-store"});if(!response.ok)throw new Error(`${url} unavailable (${response.status})`);return response.json()};
+  // Revalidate current-season artifacts without forcing an unconditional
+  // download on every visit. Changed files still arrive immediately via ETag.
+  const responseJson=async(url)=>{const response=await fetch(url,{cache:"no-cache"});if(!response.ok)throw new Error(`${url} unavailable (${response.status})`);return response.json()};
   const withDefaults=value=>merge(structuredClone(EMPTY),value);
   async function legacyLoad(url="data/tracker.json"){
     if(legacy&&payload)return payload;

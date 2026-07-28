@@ -154,14 +154,18 @@ assert.match(progressiveShell,/full=null;reportLoadFailure\("Full tracker",error
 assert.match(progressiveShell,/quick=null;reportLoadFailure\("Tracker",error\);throw error/,"a failed lightweight-route request is reset before retry becomes available");
 for(const group of ["night","season","people","explore"]){assert.ok(fs.existsSync(path.join(root,`site/routes/${group}.js`)),`${group} has a native lazy route source`);assert.ok(fs.existsSync(path.join(root,`site/routes/${group}.min.js`)),`${group} has a generated optimized route module`)}
 const capabilityManifest=JSON.parse(fs.readFileSync(path.join(root,"site/data/tracker-manifest.json"),"utf8"));
-assert.deepEqual(Object.keys(capabilityManifest.capabilities).sort(),["analytics","core","players","schedule"]);
+assert.deepEqual(Object.keys(capabilityManifest.capabilities).sort(),["analytics","calendar","core","players","schedule"]);
 const legacyBytes=fs.statSync(path.join(root,"site/data/tracker.json")).size;
 const seasonBytes=capabilityManifest.capabilities.core.bytes+capabilityManifest.capabilities.schedule.bytes;
 assert.ok(seasonBytes<=legacyBytes*.6,`Season capability data is at least 40% smaller (${seasonBytes} <= ${Math.floor(legacyBytes*.6)})`);
+const calendarBytes=capabilityManifest.capabilities.core.bytes+capabilityManifest.capabilities.calendar.bytes;
+assert.ok(calendarBytes<=seasonBytes*.25,`Immediate Calendar data is at least 75% smaller than analytical Schedule data (${calendarBytes} <= ${Math.floor(seasonBytes*.25)})`);
 assert.match(worker, new RegExp(`const CACHE="nhl-tracker-${uiVersion.replaceAll(".", "\\.")}"`), "the service-worker cache matches the UI version");
 const shell = worker.match(/const SHELL=(\[[^;]+\]);/)?.[1] || "";
 assert.doesNotMatch(shell, /plotly|seasons\/\d+\.json|tracker-models|puckpedia-mail/i, "offline installation excludes charts, archives and auxiliary data");
 assert.doesNotMatch(shell,/data\/tracker\.json/,"new offline installs use capability artifacts instead of the monolith");
+assert.doesNotMatch(shell,/data\/tracker-schedule\.json/,"offline installation does not block on analytical schedule evidence");
+assert.match(shell,/data\/tracker-calendar\.json/,"the useful calendar remains available offline");
 assert.doesNotMatch(worker,/LEGACY_CACHE/,"a verified install does not retain a duplicate full cache generation");
 assert.match(worker,/caches\.delete/,"older cache generations are retired after a complete capability install");
 assert.match(worker,/names\.filter\(name=>name!==CACHE\)/,"every previous cache generation is retired after verification");
