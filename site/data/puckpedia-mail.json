@@ -1,7 +1,14 @@
 {
   "schema": 1,
-  "updatedAt": "2026-07-28T17:40:12.584Z",
+  "updatedAt": "2026-07-28T23:40:12.995Z",
   "items": [
+    {
+      "id": "e17d48517a1a19e62e54",
+      "title": "Sean Farrell Signs a 1-Year, $850K Contract with the Anaheim Ducks",
+      "publishedAt": "2026-07-28T19:36:09.000Z",
+      "category": "Contract",
+      "url": "https://puckpedia.com/signing/10764?utm_source=email&utm_medium=email&utm_campaign=signing&utm_content=primary"
+    },
     {
       "id": "b36673ea08a89806d6d6",
       "title": "The Anaheim Ducks acquire Sean Farrell from the Montreal Canadiens for Sasha Pastujov",
@@ -204,13 +211,6 @@
       "publishedAt": "2026-07-15T18:52:08.000Z",
       "category": "Contract",
       "url": "https://puckpedia.com/signing/10736?utm_source=email&utm_medium=email&utm_campaign=signing&utm_content=primary"
-    },
-    {
-      "id": "cf7556a6d6f2161c5ea2",
-      "title": "Elton Hermansson Signs a 3-Year, $3.23M Contract with the Los Angeles Kings",
-      "publishedAt": "2026-07-15T17:26:10.000Z",
-      "category": "Contract",
-      "url": "https://puckpedia.com/signing/10735?utm_source=email&utm_medium=email&utm_campaign=signing&utm_content=primary"
     }
   ]
 }
