@@ -120,7 +120,7 @@
   const validateCapabilityManifest = manifest => {
     const errors = [];
     if (manifest?.schema !== 1) errors.push("capability manifest schema must be 1");
-    for (const name of ["core", "schedule", "players", "analytics"]) {
+    for (const name of ["core", "calendar", "schedule", "players", "analytics"]) {
       const entry = manifest?.capabilities?.[name];
       if (!entry?.url) errors.push(`${name} capability requires a URL`);
       if (entry?.bytes != null && (!Number.isInteger(entry.bytes) || entry.bytes < 2)) errors.push(`${name} capability bytes must be positive`);
@@ -132,6 +132,7 @@
   const validateCapabilityData = (name, payload) => {
     if (!payload || typeof payload !== "object" || Array.isArray(payload)) return [`${name} capability must be an object`];
     if (name === "core") return validateTrackerData({ ...payload, games: payload.games || [] });
+    if (name === "calendar" && !Array.isArray(payload.games)) return ["calendar capability games must be an array"];
     if (name === "schedule" && !Array.isArray(payload.games)) return ["schedule capability games must be an array"];
     if (name === "players" && (payload.rosters == null || typeof payload.rosters !== "object")) return ["players capability rosters must be an object"];
     if (name === "analytics" && (payload.gameCentre == null || typeof payload.gameCentre !== "object")) return ["analytics capability gameCentre must be an object"];

@@ -41,6 +41,25 @@ def compact_games(rows: list[dict]) -> list[dict]:
     return compact
 
 
+def compact_calendar_games(rows: list[dict]) -> list[dict]:
+    """Return one lightweight team-perspective row per NHL game.
+
+    The analytical schedule keeps paired home/away rows and team-specific
+    evidence. The calendar only needs the matchup, time and result, so sending
+    both rows makes a common navigation path needlessly expensive.
+    """
+    unique: dict[str, dict] = {}
+    for row in rows:
+        game_id = row.get("id")
+        if game_id is None:
+            continue
+        unique.setdefault(str(game_id), {key: row[key] for key in GAME_KEYS if key in row})
+    return sorted(unique.values(), key=lambda row: (
+        row.get("startTimeUTC") or row.get("date") or "",
+        str(row.get("id") or ""),
+    ))
+
+
 def compact_game_window(payload: dict) -> list[dict]:
     """Keep only the games needed by the immediate Game Centre summary.
 
@@ -88,6 +107,7 @@ def split_payload(payload: dict) -> dict[str, dict]:
     core["games"] = compact_game_window(payload)
     return {
         "core": core,
+        "calendar": {"games": compact_calendar_games(payload.get("games") or [])},
         "schedule": {"games": compact_games(payload.get("games") or []), **{
             key: payload.get(key) for key in SCHEDULE_KEYS if key in payload}},
         "players": {key: payload.get(key) for key in PLAYER_KEYS if key in payload},

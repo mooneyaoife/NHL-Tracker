@@ -60,6 +60,7 @@ def main() -> int:
         "offlineCacheBytes": offline_cache, "nonAnalyticalJavaScriptBytes": non_analytical_js,
         "fullApplicationJavaScriptBytes": total(list(dict.fromkeys(SITE / value for value in full_scripts))),
         "gameCentreRouteDataBytes": manifest["capabilities"]["core"]["bytes"] + (SITE / "data" / "tracker-manifest.json").stat().st_size,
+        "calendarRouteDataBytes": total([SITE / "data" / "tracker-core.json", SITE / "data" / "tracker-calendar.json"]),
         "seasonRouteDataBytes": total([SITE / "data" / "tracker-core.json", SITE / "data" / "tracker-schedule.json"])}
     failures = [f"{name}: {value} > {BUDGETS[name]}" for name, value in measurements.items()
         if value > BUDGETS[name]]
