@@ -28,11 +28,13 @@ try:
     from scripts.schedule_pressure import build_schedule_pressure
     from scripts.source_adapters import fetch_csv, fetch_json, fetch_text
     from scripts.split_tracker_data import write_capability_artifacts
+    from scripts.split_season_evidence import write_season_evidence
 except ModuleNotFoundError:  # Direct execution places scripts/ on sys.path.
     from game_state import london_date, normalize_game_state
     from schedule_pressure import build_schedule_pressure
     from source_adapters import fetch_csv, fetch_json, fetch_text
     from split_tracker_data import write_capability_artifacts
+    from split_season_evidence import write_season_evidence
 
 ROOT = Path(__file__).resolve().parents[1]
 CONFIG = json.loads((ROOT / "config.json").read_text())
@@ -1759,8 +1761,10 @@ def write_season_index(current_season: str) -> None:
         try:
             data = json.loads(path.read_text())
             season = str(data.get("meta", {}).get("season") or path.stem)
+            manifest_path = season_dir / f"{season}-manifest.json"
             entries.append({"season": season, "label": f"{season[:4]}–{season[6:]}",
-                "updatedAt": data.get("meta", {}).get("updatedAt"), "current": season == current_season})
+                "updatedAt": data.get("meta", {}).get("updatedAt"), "current": season == current_season,
+                **({"capabilityManifestUrl": f"data/seasons/{manifest_path.name}"} if manifest_path.exists() else {})})
         except (json.JSONDecodeError, OSError):
             continue
     (season_dir / "index.json").write_text(json.dumps({"current": current_season, "seasons": entries}, separators=(",", ":")))
@@ -1876,6 +1880,7 @@ def write_payload(payload: dict, archive: bool = True) -> None:
         season_archive = OUTPUT.parent / "seasons" / f"{SEASON}.json"
         season_archive.parent.mkdir(parents=True, exist_ok=True)
         season_archive.write_text(json.dumps(payload, separators=(",", ":"), ensure_ascii=False))
+        write_season_evidence(season_archive)
         write_season_index(SEASON)
 
 

@@ -8,7 +8,7 @@ test("installed Home, Tonight and Schedule survive offline",async({browser,baseU
   await page.goto("/");
   await page.evaluate(async()=>{const registration=await navigator.serviceWorker.ready;if(!registration.active)await new Promise(resolve=>navigator.serviceWorker.addEventListener("controllerchange",resolve,{once:true}))});
   const cached=await page.evaluate(async()=>{
-    const names=await caches.keys(),active=names.find(name=>name.includes("7.41.0")),keys=active?await (await caches.open(active)).keys():[];
+    const names=await caches.keys(),active=names.find(name=>name.includes("7.42.0")),keys=active?await (await caches.open(active)).keys():[];
     return keys.map(request=>new URL(request.url).pathname);
   });
   expect(cached).toContain("/data/home.json");
@@ -18,7 +18,7 @@ test("installed Home, Tonight and Schedule survive offline",async({browser,baseU
   expect(cached).toContain("/core-routes.min.css");
   expect(cached).not.toContain("/full-routes.min.css");
   expect(cached).not.toContain("/app.min.js");
-  expect((await page.evaluate(()=>caches.keys())).filter(name=>name.startsWith("nhl-tracker-"))).toEqual(["nhl-tracker-7.41.0"]);
+  expect((await page.evaluate(()=>caches.keys())).filter(name=>name.startsWith("nhl-tracker-"))).toEqual(["nhl-tracker-7.42.0"]);
   await page.goto("about:blank");
   await page.goto("/#tonight");
   await expect(page.locator("#tonight")).toHaveClass(/active/);
@@ -55,7 +55,9 @@ test("a previously loaded historical Player Compare direct URL survives offline"
     const cache=await caches.open(names.at(-1));
     return (await cache.keys()).map(request=>`${new URL(request.url).pathname}${new URL(request.url).search}`);
   });
-  expect(runtimeCache.some(path=>path.startsWith("/data/seasons/20252026.json"))).toBe(true);
+  expect(runtimeCache.some(path=>path.startsWith("/data/seasons/20252026-evidence.json"))).toBe(true);
+  expect(runtimeCache.some(path=>path.startsWith("/data/seasons/20252026-players-CAR.json"))).toBe(true);
+  expect(runtimeCache.some(path=>path.startsWith("/data/seasons/20252026.json"))).toBe(false);
   expect(runtimeCache.some(path=>path.startsWith("/player-comparison.min.js"))).toBe(true);
 
   await page.goto("about:blank");

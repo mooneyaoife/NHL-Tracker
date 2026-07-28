@@ -31,6 +31,10 @@ class CloudflareBuildTests(unittest.TestCase):
         data.mkdir()
         for name in ("tracker-manifest.json", "tracker-core.json", "tracker-calendar.json", "tracker-schedule.json", "tracker-players.json", "tracker-analytics.json"):
             (data / name).write_text("{}", encoding="utf-8")
+        seasons = data / "seasons"
+        seasons.mkdir()
+        for name in ("index.json", "20252026-manifest.json", "20252026-evidence.json"):
+            (seasons / name).write_text("{}", encoding="utf-8")
         (self.source / "build-meta.json").write_text(json.dumps({
             "sourceCommit": "abc123", "artifactGeneratedAt": "2026-07-21T10:00:00+00:00",
             "dataGeneratedAt": "2026-07-21T09:00:00+00:00", "dataHash": "sha256:abc",

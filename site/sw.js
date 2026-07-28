@@ -1,7 +1,7 @@
-const CACHE="nhl-tracker-7.41.0";
+const CACHE="nhl-tracker-7.42.0";
 // Home, Tonight and Schedule are the dependable install shell. Full analysis,
 // historical archives, auxiliary models and Plotly are cached only after use.
-const SHELL=["./","./index.html","./critical.css?v=7.41.0","./core-routes.min.css?v=7.41.0","./freshness-status.js?v=7.41.0","./shell.js?v=7.41.0","./home-snapshot.min.js?v=7.41.0","./game-state.js?v=7.41.0","./data-contracts.min.js?v=7.41.0","./data-loader.min.js?v=7.41.0","./route-loader.min.js?v=7.41.0","./route-app.min.js?v=7.41.0","./routes/night.min.js?v=7.41.0","./routes/season.min.js?v=7.41.0","./cloudflare-live.min.js?v=7.41.0","./manifest.webmanifest","./icons/icon.svg?v=7.0.1","./icons/icon-192.png","./icons/icon-512.png","./build-meta.json","./data/home.json","./data/tracker-manifest.json","./data/tracker-core.json","./data/tracker-calendar.json"];
+const SHELL=["./","./index.html","./critical.css?v=7.42.0","./core-routes.min.css?v=7.42.0","./freshness-status.js?v=7.42.0","./shell.js?v=7.42.0","./home-snapshot.min.js?v=7.42.0","./game-state.js?v=7.42.0","./data-contracts.min.js?v=7.42.0","./data-loader.min.js?v=7.42.0","./route-loader.min.js?v=7.42.0","./route-app.min.js?v=7.42.0","./routes/night.min.js?v=7.42.0","./routes/season.min.js?v=7.42.0","./cloudflare-live.min.js?v=7.42.0","./manifest.webmanifest","./icons/icon.svg?v=7.0.1","./icons/icon-192.png","./icons/icon-512.png","./build-meta.json","./data/home.json","./data/tracker-manifest.json","./data/tracker-core.json","./data/tracker-calendar.json"];
 
 self.addEventListener("install",event=>event.waitUntil(caches.open(CACHE).then(cache=>cache.addAll(SHELL)).then(()=>self.skipWaiting())));
 self.addEventListener("activate",event=>event.waitUntil((async()=>{

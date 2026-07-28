@@ -247,7 +247,7 @@ test.describe("complete player comparison", () => {
 
   test("an empty current season does not borrow archive evidence and an archive failure can retry", async ({ page }) => {
     let archiveRequests = 0;
-    await page.route(/\/data\/seasons\/20252026\.json(?:\?.*)?$/, async route => {
+    await page.route(/\/data\/seasons\/20252026-evidence\.json(?:\?.*)?$/, async route => {
       archiveRequests += 1;
       if (archiveRequests === 1) {
         await route.fulfill({
@@ -339,7 +339,7 @@ test.describe("complete player comparison", () => {
   });
 
   test("missing source fields render as an em dash rather than a genuine zero", async ({ page }) => {
-    await page.route(/\/data\/seasons\/20252026\.json(?:\?.*)?$/, async route => {
+    await page.route(/\/data\/seasons\/20252026-evidence\.json(?:\?.*)?$/, async route => {
       const response = await route.fetch();
       const data = await response.json();
       const player = data.naturalStatTrick.players.find(row => String(row.id) === PLAYERS.svechnikov.id);
@@ -421,7 +421,7 @@ test.describe("complete player comparison", () => {
   });
 
   test("nullable Impact and goalie evidence never fabricates zero values or ranks", async ({ page }) => {
-    await page.route(/\/data\/seasons\/20252026\.json(?:\?.*)?$/, async route => {
+    await page.route(/\/data\/seasons\/20252026-evidence\.json(?:\?.*)?$/, async route => {
       const response = await route.fetch();
       const data = await response.json();
       const skater = data.naturalStatTrick.players.find(row => String(row.id) === PLAYERS.svechnikov.id);

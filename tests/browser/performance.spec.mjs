@@ -2,6 +2,29 @@ import {test,expect} from "@playwright/test";
 
 const resources=page=>page.evaluate(()=>performance.getEntriesByType("resource").map(entry=>({name:new URL(entry.name).pathname,bytes:entry.decodedBodySize||entry.transferSize||0,duration:entry.duration,initiatorType:entry.initiatorType})));
 
+test("direct Explore routes skip Home and load compact historical evidence",async({page})=>{
+  await page.goto("/#league");
+  await expect(page.locator("#league")).toHaveClass(/active/,{timeout:15_000});
+  await expect(page.locator("#analytics-team-select option")).not.toHaveCount(0,{timeout:15_000});
+  await expect.poll(async()=>((await resources(page)).map(row=>row.name).some(name=>name.endsWith("/20252026-evidence.json")))).toBe(true);
+  const rows=await resources(page),names=rows.map(row=>row.name),dataBytes=rows.filter(row=>row.name.includes("/data/")).reduce((sum,row)=>sum+row.bytes,0);
+  expect(names).not.toContain("/data/home.json");
+  expect(names).not.toContain("/home-snapshot.min.js");
+  expect(names).not.toContain("/data/seasons/20252026.json");
+  expect(names).not.toContain("/data/puckpedia-mail.json");
+  expect(names).not.toContain("/data/tracker-models.json");
+  expect(dataBytes).toBeLessThan(4_000_000);
+});
+
+test("optional feeds wait for a destination that uses them",async({page})=>{
+  await page.goto("/#teams");
+  await expect(page.locator("#teams")).toHaveClass(/active/,{timeout:15_000});
+  expect((await resources(page)).map(row=>row.name)).not.toContain("/data/puckpedia-mail.json");
+  await page.goto("/#news");
+  await expect(page.locator("#news")).toHaveClass(/active/,{timeout:15_000});
+  await expect.poll(async()=>((await resources(page)).map(row=>row.name).includes("/data/puckpedia-mail.json"))).toBe(true);
+});
+
 test("Home keeps a useful shell visible while its snapshot loads",async({page})=>{
   await page.route(/\/data\/home\.json(?:\?.*)?$/,async route=>{
     await new Promise(resolve=>setTimeout(resolve,1500));
@@ -257,6 +280,7 @@ test("detailed Game Centre defers historical matchup evidence",async({page})=>{
   test.slow();
   await page.route("**/data/seasons/index.json",route=>route.fulfill({json:{current:"20262027",seasons:[{season:"20262027",label:"2026–27",current:true},{season:"20252026",label:"2025–26",current:false}]}}));
   let historicalRequests=0;
+  await page.route(/\/data\/seasons\/\d{8}-(?:evidence|manifest)\.json(?:\?.*)?$/,route=>{historicalRequests+=1;return route.fulfill({status:503,contentType:"application/json",body:'{"error":"simulated archive outage"}'})});
   await page.route(/\/data\/seasons\/\d{8}\.json(?:\?.*)?$/,route=>{historicalRequests+=1;return route.fulfill({status:503,contentType:"application/json",body:'{"error":"simulated archive outage"}'})});
   await page.goto("/#games");
   await expect(page.locator("[data-open-complete-game]")).toBeVisible();
@@ -268,7 +292,7 @@ test("detailed Game Centre defers historical matchup evidence",async({page})=>{
   const archivedSeason=await archivedSeasonOption();
   await page.locator("#matchup-evidence-season").evaluate((select,value)=>{select.value=value},archivedSeason);
   await page.locator('[data-game-view="intelligence"]').click();
-  await expect.poll(()=>historicalRequests,{timeout:15000}).toBe(1);
+  await expect.poll(()=>historicalRequests,{timeout:15000}).toBeGreaterThan(0);
   await expect(page.locator("#matchup-intelligence-detail")).toContainText("unavailable",{timeout:15000});
 });
 

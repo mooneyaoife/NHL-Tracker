@@ -14,7 +14,8 @@ def failures_for(output: Path, production_url: str) -> list[str]:
     production_url = production_url.rstrip("/") + "/"
     failures: list[str] = []
     required = ("index.html", "core-routes.min.css", "full-routes.min.css", "app.min.js", "route-app.min.js", "game-centre.min.js", "data-loader.min.js", "route-loader.min.js", "cloudflare-live.min.js", "build-meta.json", "manifest.webmanifest", "robots.txt", "_headers", "_routes.json",
-        "data/tracker-manifest.json", "data/tracker-core.json", "data/tracker-calendar.json", "data/tracker-schedule.json", "data/tracker-players.json", "data/tracker-analytics.json")
+        "data/tracker-manifest.json", "data/tracker-core.json", "data/tracker-calendar.json", "data/tracker-schedule.json", "data/tracker-players.json", "data/tracker-analytics.json",
+        "data/seasons/index.json", "data/seasons/20252026-manifest.json", "data/seasons/20252026-evidence.json")
     for relative in required:
         if not (output / relative).is_file():
             failures.append(f"missing {relative}")
