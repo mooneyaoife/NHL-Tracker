@@ -1,7 +1,21 @@
 {
   "schema": 1,
-  "updatedAt": "2026-07-29T11:40:13.271Z",
+  "updatedAt": "2026-07-29T17:40:14.755Z",
   "items": [
+    {
+      "id": "ab05409e5df02d5d5102",
+      "title": "Topias Vilen Signs a 1-Year, $850K Contract with the New Jersey Devils",
+      "publishedAt": "2026-07-29T15:47:08.000Z",
+      "category": "Contract",
+      "url": "https://puckpedia.com/signing/10766?utm_source=email&utm_medium=email&utm_campaign=signing&utm_content=primary"
+    },
+    {
+      "id": "a0b4f09f301a8bd7914e",
+      "title": "Macklin Celebrini Signs a 5-Year, $94.00M Contract with the San Jose Sharks",
+      "publishedAt": "2026-07-29T14:50:11.000Z",
+      "category": "Contract",
+      "url": "https://puckpedia.com/signing/10765?utm_source=email&utm_medium=email&utm_campaign=signing&utm_content=primary"
+    },
     {
       "id": "e17d48517a1a19e62e54",
       "title": "Sean Farrell Signs a 1-Year, $850K Contract with the Anaheim Ducks",
@@ -197,20 +211,6 @@
       "publishedAt": "2026-07-15T20:06:09.000Z",
       "category": "Contract",
       "url": "https://puckpedia.com/signing/10738?utm_source=email&utm_medium=email&utm_campaign=signing&utm_content=primary"
-    },
-    {
-      "id": "bbd89a4fe65943e99905",
-      "title": "Cole Perfetti Signs a 5-Year, $30.00M Contract with the Winnipeg Jets",
-      "publishedAt": "2026-07-15T19:57:09.000Z",
-      "category": "Contract",
-      "url": "https://puckpedia.com/signing/10737?utm_source=email&utm_medium=email&utm_campaign=signing&utm_content=primary"
-    },
-    {
-      "id": "0490519d5480a571ebcb",
-      "title": "Juho Piiparinen Signs a 3-Year, $3.23M Contract with the Vegas Golden Knights",
-      "publishedAt": "2026-07-15T18:52:08.000Z",
-      "category": "Contract",
-      "url": "https://puckpedia.com/signing/10736?utm_source=email&utm_medium=email&utm_campaign=signing&utm_content=primary"
     }
   ]
 }
