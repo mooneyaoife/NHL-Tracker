@@ -1,7 +1,14 @@
 {
   "schema": 1,
-  "updatedAt": "2026-07-29T23:40:14.509Z",
+  "updatedAt": "2026-07-30T05:40:18.711Z",
   "items": [
+    {
+      "id": "9cefd83a5baac4c966a8",
+      "title": "Carter Gylander Signs a 1-Year, $850K Contract with the Detroit Red Wings",
+      "publishedAt": "2026-07-29T23:52:10.000Z",
+      "category": "Contract",
+      "url": "https://puckpedia.com/signing/10767?utm_source=email&utm_medium=email&utm_campaign=signing&utm_content=primary"
+    },
     {
       "id": "ab05409e5df02d5d5102",
       "title": "Topias Vilen Signs a 1-Year, $850K Contract with the New Jersey Devils",
@@ -204,13 +211,6 @@
       "publishedAt": "2026-07-15T23:57:09.000Z",
       "category": "Contract",
       "url": "https://puckpedia.com/signing/10739?utm_source=email&utm_medium=email&utm_campaign=signing&utm_content=primary"
-    },
-    {
-      "id": "6089ec04b4d238f4c97d",
-      "title": "William H?kansson Signs a 3-Year, $2.99M Contract with the Carolina Hurricanes",
-      "publishedAt": "2026-07-15T20:06:09.000Z",
-      "category": "Contract",
-      "url": "https://puckpedia.com/signing/10738?utm_source=email&utm_medium=email&utm_campaign=signing&utm_content=primary"
     }
   ]
 }
