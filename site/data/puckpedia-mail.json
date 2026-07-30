@@ -1,7 +1,14 @@
 {
   "schema": 1,
-  "updatedAt": "2026-07-30T05:40:18.711Z",
+  "updatedAt": "2026-07-30T17:40:14.784Z",
   "items": [
+    {
+      "id": "fe449e44c7f7147b8092",
+      "title": "Colin White Signs a 1-Year, $900K Contract with the New Jersey Devils",
+      "publishedAt": "2026-07-30T14:23:10.000Z",
+      "category": "Contract",
+      "url": "https://puckpedia.com/signing/10768?utm_source=email&utm_medium=email&utm_campaign=signing&utm_content=primary"
+    },
     {
       "id": "9cefd83a5baac4c966a8",
       "title": "Carter Gylander Signs a 1-Year, $850K Contract with the Detroit Red Wings",
@@ -204,13 +211,6 @@
       "publishedAt": "2026-07-15T23:59:07.000Z",
       "category": "Contract",
       "url": "https://puckpedia.com/signing/10740?utm_source=email&utm_medium=email&utm_campaign=signing&utm_content=primary"
-    },
-    {
-      "id": "b66a4be93a5bf00b97f2",
-      "title": "Marcus Nordmark Signs a 3-Year, $3.23M Contract with the Anaheim Ducks",
-      "publishedAt": "2026-07-15T23:57:09.000Z",
-      "category": "Contract",
-      "url": "https://puckpedia.com/signing/10739?utm_source=email&utm_medium=email&utm_campaign=signing&utm_content=primary"
     }
   ]
 }
