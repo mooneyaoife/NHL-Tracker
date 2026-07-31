@@ -1,7 +1,14 @@
 {
   "schema": 1,
-  "updatedAt": "2026-07-31T17:40:14.274Z",
+  "updatedAt": "2026-07-31T23:40:17.349Z",
   "items": [
+    {
+      "id": "82eb5b56e6a28732790c",
+      "title": "Collin Graf Signs a 3-Year, $12.75M Contract with the San Jose Sharks",
+      "publishedAt": "2026-07-31T18:26:10.000Z",
+      "category": "Contract",
+      "url": "https://puckpedia.com/signing/10770?utm_source=email&utm_medium=email&utm_campaign=signing&utm_content=primary"
+    },
     {
       "id": "6b6320889f8e4fd17e0c",
       "title": "Thomas Novak Signs a 3-Year, $13.95M Contract with the Pittsburgh Penguins",
@@ -204,13 +211,6 @@
       "publishedAt": "2026-07-16T20:55:09.000Z",
       "category": "Contract",
       "url": "https://puckpedia.com/signing/10742?utm_source=email&utm_medium=email&utm_campaign=signing&utm_content=primary"
-    },
-    {
-      "id": "ff6e88b96d14ab784bb6",
-      "title": "Trevor Zegras Signs a 4-Year, $36.50M Contract with the Philadelphia Flyers",
-      "publishedAt": "2026-07-16T02:02:10.000Z",
-      "category": "Contract",
-      "url": "https://puckpedia.com/signing/10741?utm_source=email&utm_medium=email&utm_campaign=signing&utm_content=primary"
     }
   ]
 }
