@@ -9,6 +9,6 @@
     "@axe-core/playwright": "4.10.2",
     "@lhci/cli": "0.15.1",
     "@playwright/test": "1.55.1",
-    "esbuild": "0.25.12"
+    "esbuild": "0.28.1"
   }
 }
