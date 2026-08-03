@@ -1,7 +1,14 @@
 {
   "schema": 1,
-  "updatedAt": "2026-07-31T23:40:17.349Z",
+  "updatedAt": "2026-08-03T17:40:26.920Z",
   "items": [
+    {
+      "id": "a0c6e855cc1c09445fc2",
+      "title": "Maksymilian Szuber Signs a 1-Year, $850K Contract with the Montreal Canadiens",
+      "publishedAt": "2026-08-03T16:20:11.000Z",
+      "category": "Contract",
+      "url": "https://puckpedia.com/signing/10771?utm_source=email&utm_medium=email&utm_campaign=signing&utm_content=primary"
+    },
     {
       "id": "82eb5b56e6a28732790c",
       "title": "Collin Graf Signs a 3-Year, $12.75M Contract with the San Jose Sharks",
@@ -204,13 +211,6 @@
       "publishedAt": "2026-07-16T21:05:09.000Z",
       "category": "Contract",
       "url": "https://puckpedia.com/signing/10743?utm_source=email&utm_medium=email&utm_campaign=signing&utm_content=primary"
-    },
-    {
-      "id": "67da2c7958624f784a93",
-      "title": "Connor McMichael Signs a 6-Year, $40.50M Contract with the St. Louis Blues",
-      "publishedAt": "2026-07-16T20:55:09.000Z",
-      "category": "Contract",
-      "url": "https://puckpedia.com/signing/10742?utm_source=email&utm_medium=email&utm_campaign=signing&utm_content=primary"
     }
   ]
 }
