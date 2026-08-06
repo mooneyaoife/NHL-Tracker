@@ -1,7 +1,14 @@
 {
   "schema": 1,
-  "updatedAt": "2026-08-03T17:40:26.920Z",
+  "updatedAt": "2026-08-06T17:40:21.761Z",
   "items": [
+    {
+      "id": "98263256de1af1b0f27a",
+      "title": "Ville Koivunen Signs an 8-Year, $32.00M Contract with the Pittsburgh Penguins",
+      "publishedAt": "2026-08-06T15:13:11.000Z",
+      "category": "Contract",
+      "url": "https://puckpedia.com/signing/10772?utm_source=email&utm_medium=email&utm_campaign=signing&utm_content=primary"
+    },
     {
       "id": "a0c6e855cc1c09445fc2",
       "title": "Maksymilian Szuber Signs a 1-Year, $850K Contract with the Montreal Canadiens",
@@ -204,13 +211,6 @@
       "publishedAt": "2026-07-17T01:28:08.000Z",
       "category": "Contract",
       "url": "https://puckpedia.com/signing/10744?utm_source=email&utm_medium=email&utm_campaign=signing&utm_content=primary"
-    },
-    {
-      "id": "69a444dbb7621ae88ba0",
-      "title": "Kirby Dach Signs a 1-Year, $3.60M Contract with the Montreal Canadiens",
-      "publishedAt": "2026-07-16T21:05:09.000Z",
-      "category": "Contract",
-      "url": "https://puckpedia.com/signing/10743?utm_source=email&utm_medium=email&utm_campaign=signing&utm_content=primary"
     }
   ]
 }
