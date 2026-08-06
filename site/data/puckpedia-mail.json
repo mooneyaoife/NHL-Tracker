@@ -1,7 +1,14 @@
 {
   "schema": 1,
-  "updatedAt": "2026-08-06T17:40:21.761Z",
+  "updatedAt": "2026-08-06T23:40:23.439Z",
   "items": [
+    {
+      "id": "9a4e8b91b9a491dffa88",
+      "title": "Nikita Grebenkin Signs a 2-Year, $2.20M Contract with the Philadelphia Flyers",
+      "publishedAt": "2026-08-06T22:34:10.000Z",
+      "category": "Contract",
+      "url": "https://puckpedia.com/signing/10773?utm_source=email&utm_medium=email&utm_campaign=signing&utm_content=primary"
+    },
     {
       "id": "98263256de1af1b0f27a",
       "title": "Ville Koivunen Signs an 8-Year, $32.00M Contract with the Pittsburgh Penguins",
@@ -204,13 +211,6 @@
       "publishedAt": "2026-07-17T04:02:10.000Z",
       "category": "Contract",
       "url": "https://puckpedia.com/signing/10745?utm_source=email&utm_medium=email&utm_campaign=signing&utm_content=primary"
-    },
-    {
-      "id": "18108467a4ffefe112cb",
-      "title": "Henrik Tikkanen Signs a 1-Year, $850K Contract with the New York Islanders",
-      "publishedAt": "2026-07-17T01:28:08.000Z",
-      "category": "Contract",
-      "url": "https://puckpedia.com/signing/10744?utm_source=email&utm_medium=email&utm_campaign=signing&utm_content=primary"
     }
   ]
 }
