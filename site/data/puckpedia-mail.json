@@ -1,7 +1,14 @@
 {
   "schema": 1,
-  "updatedAt": "2026-08-06T23:40:23.439Z",
+  "updatedAt": "2026-08-10T23:40:14.761Z",
   "items": [
+    {
+      "id": "82c6dd604ed3d2b91386",
+      "title": "Tyrel Bauer Signs a 2-Year, $1.75M Contract with the Winnipeg Jets",
+      "publishedAt": "2026-08-10T21:36:09.000Z",
+      "category": "Contract",
+      "url": "https://puckpedia.com/signing/10774?utm_source=email&utm_medium=email&utm_campaign=signing&utm_content=primary"
+    },
     {
       "id": "9a4e8b91b9a491dffa88",
       "title": "Nikita Grebenkin Signs a 2-Year, $2.20M Contract with the Philadelphia Flyers",
@@ -204,13 +211,6 @@
       "publishedAt": "2026-07-17T18:36:10.000Z",
       "category": "Contract",
       "url": "https://puckpedia.com/signing/10746?utm_source=email&utm_medium=email&utm_campaign=signing&utm_content=primary"
-    },
-    {
-      "id": "4180e752f4c0cd0dc649",
-      "title": "Viktor Neuchev Signs a 1-Year, $850K Contract with the Carolina Hurricanes",
-      "publishedAt": "2026-07-17T04:02:10.000Z",
-      "category": "Contract",
-      "url": "https://puckpedia.com/signing/10745?utm_source=email&utm_medium=email&utm_campaign=signing&utm_content=primary"
     }
   ]
 }
