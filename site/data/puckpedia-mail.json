@@ -1,7 +1,14 @@
 {
   "schema": 1,
-  "updatedAt": "2026-08-13T17:40:11.294Z",
+  "updatedAt": "2026-08-13T23:40:15.823Z",
   "items": [
+    {
+      "id": "daa4b656338ca85c3fe0",
+      "title": "Sasha Pastujov Signs a 1-Year, $850K Contract with the Montreal Canadiens",
+      "publishedAt": "2026-08-13T23:03:09.000Z",
+      "category": "Contract",
+      "url": "https://puckpedia.com/signing/10776?utm_source=email&utm_medium=email&utm_campaign=signing&utm_content=primary"
+    },
     {
       "id": "819c3d1a95ee6011fd1a",
       "title": "Adam Novotn? Signs a 3-Year, $3.23M Contract with the Vancouver Canucks",
@@ -204,13 +211,6 @@
       "publishedAt": "2026-07-20T16:11:10.000Z",
       "category": "Contract",
       "url": "https://puckpedia.com/signing/10748?utm_source=email&utm_medium=email&utm_campaign=signing&utm_content=primary"
-    },
-    {
-      "id": "e50b76f943dcb6ed4b44",
-      "title": "Connor Bedard Signs a 5-Year, $75.00M Contract with the Chicago Blackhawks",
-      "publishedAt": "2026-07-18T20:34:10.000Z",
-      "category": "Contract",
-      "url": "https://puckpedia.com/signing/10747?utm_source=email&utm_medium=email&utm_campaign=signing&utm_content=primary"
     }
   ]
 }
