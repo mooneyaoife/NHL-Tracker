@@ -1,7 +1,14 @@
 {
   "schema": 1,
-  "updatedAt": "2026-08-17T11:41:05.625Z",
+  "updatedAt": "2026-08-17T17:40:14.641Z",
   "items": [
+    {
+      "id": "24c1ea22f4c3069bafd0",
+      "title": "The Buffalo Sabres trade Stiven Sardaryan to the Carolina Hurricanes for future considerations",
+      "publishedAt": "2026-08-17T17:06:14.000Z",
+      "category": "Trade",
+      "url": "https://puckpedia.com/trade/1201?utm_source=email&utm_medium=email&utm_campaign=trade&utm_content=primary"
+    },
     {
       "id": "daa4b656338ca85c3fe0",
       "title": "Sasha Pastujov Signs a 1-Year, $850K Contract with the Montreal Canadiens",
@@ -204,13 +211,6 @@
       "publishedAt": "2026-07-20T17:15:11.000Z",
       "category": "Contract",
       "url": "https://puckpedia.com/signing/10749?utm_source=email&utm_medium=email&utm_campaign=signing&utm_content=primary"
-    },
-    {
-      "id": "4416dc7a995b318f3758",
-      "title": "Hunter McKown Signs a 1-Year, $850K Contract with the Montreal Canadiens",
-      "publishedAt": "2026-07-20T16:11:10.000Z",
-      "category": "Contract",
-      "url": "https://puckpedia.com/signing/10748?utm_source=email&utm_medium=email&utm_campaign=signing&utm_content=primary"
     }
   ]
 }
