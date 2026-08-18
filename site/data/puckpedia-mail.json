@@ -1,7 +1,14 @@
 {
   "schema": 1,
-  "updatedAt": "2026-08-18T17:40:17.681Z",
+  "updatedAt": "2026-08-18T23:40:16.402Z",
   "items": [
+    {
+      "id": "f23e5a17424a963c1648",
+      "title": "Hunter McDonald Signs a 2-Year, $1.83M Contract with the Philadelphia Flyers",
+      "publishedAt": "2026-08-18T19:44:11.000Z",
+      "category": "Contract",
+      "url": "https://puckpedia.com/signing/10777?utm_source=email&utm_medium=email&utm_campaign=signing&utm_content=primary"
+    },
     {
       "id": "24c1ea22f4c3069bafd0",
       "title": "The Buffalo Sabres trade Stiven Sardaryan to the Carolina Hurricanes for future considerations",
@@ -204,13 +211,6 @@
       "publishedAt": "2026-07-20T23:44:09.000Z",
       "category": "Contract",
       "url": "https://puckpedia.com/signing/10750?utm_source=email&utm_medium=email&utm_campaign=signing&utm_content=primary"
-    },
-    {
-      "id": "2d6bde33c4fd2d1728a4",
-      "title": "Jared Davidson Signs a 1-Year, $850K Contract with the Montreal Canadiens",
-      "publishedAt": "2026-07-20T17:15:11.000Z",
-      "category": "Contract",
-      "url": "https://puckpedia.com/signing/10749?utm_source=email&utm_medium=email&utm_campaign=signing&utm_content=primary"
     }
   ]
 }
