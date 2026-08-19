@@ -1,7 +1,14 @@
 {
   "schema": 1,
-  "updatedAt": "2026-08-19T17:40:14.032Z",
+  "updatedAt": "2026-08-19T23:40:19.805Z",
   "items": [
+    {
+      "id": "83fdd2bacc8195308bf7",
+      "title": "The Pittsburgh Penguins trade Cruz Lucius to the Anaheim Ducks for future considerations",
+      "publishedAt": "2026-08-19T19:00:20.000Z",
+      "category": "Trade",
+      "url": "https://puckpedia.com/trade/1202?utm_source=email&utm_medium=email&utm_campaign=trade&utm_content=primary"
+    },
     {
       "id": "6850e1e5cd8150931475",
       "title": "Scott Morrow Signs a 1-Year, $850K Contract with the New York Rangers",
@@ -204,13 +211,6 @@
       "publishedAt": "2026-07-21T23:44:10.000Z",
       "category": "Contract",
       "url": "https://puckpedia.com/signing/10752?utm_source=email&utm_medium=email&utm_campaign=signing&utm_content=primary"
-    },
-    {
-      "id": "fcc2dcb9af28f1cb2c15",
-      "title": "John Marino Signs an 8-Year, $54.00M Contract with the Utah Mammoth",
-      "publishedAt": "2026-07-21T15:39:10.000Z",
-      "category": "Contract",
-      "url": "https://puckpedia.com/signing/10751?utm_source=email&utm_medium=email&utm_campaign=signing&utm_content=primary"
     }
   ]
 }
