@@ -1,7 +1,14 @@
 {
   "schema": 1,
-  "updatedAt": "2026-08-19T11:40:15.208Z",
+  "updatedAt": "2026-08-19T17:40:14.032Z",
   "items": [
+    {
+      "id": "6850e1e5cd8150931475",
+      "title": "Scott Morrow Signs a 1-Year, $850K Contract with the New York Rangers",
+      "publishedAt": "2026-08-19T14:39:09.000Z",
+      "category": "Contract",
+      "url": "https://puckpedia.com/signing/10778?utm_source=email&utm_medium=email&utm_campaign=signing&utm_content=primary"
+    },
     {
       "id": "f23e5a17424a963c1648",
       "title": "Hunter McDonald Signs a 2-Year, $1.83M Contract with the Philadelphia Flyers",
@@ -204,13 +211,6 @@
       "publishedAt": "2026-07-21T15:39:10.000Z",
       "category": "Contract",
       "url": "https://puckpedia.com/signing/10751?utm_source=email&utm_medium=email&utm_campaign=signing&utm_content=primary"
-    },
-    {
-      "id": "0da0b7c3b9fb04449a3e",
-      "title": "Georgii Merkulov Signs a 1-Year, $850K Contract with the Colorado Avalanche",
-      "publishedAt": "2026-07-20T23:44:09.000Z",
-      "category": "Contract",
-      "url": "https://puckpedia.com/signing/10750?utm_source=email&utm_medium=email&utm_campaign=signing&utm_content=primary"
     }
   ]
 }
