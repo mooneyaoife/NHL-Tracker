@@ -1,7 +1,14 @@
 {
   "schema": 1,
-  "updatedAt": "2026-08-20T17:40:20.628Z",
+  "updatedAt": "2026-08-20T23:40:14.323Z",
   "items": [
+    {
+      "id": "5b989955c356a6e0e4c9",
+      "title": "The Nashville Predators trade Sutter Muzzatti to the Detroit Red Wings for future considerations",
+      "publishedAt": "2026-08-20T18:35:14.000Z",
+      "category": "Trade",
+      "url": "https://puckpedia.com/trade/1203?utm_source=email&utm_medium=email&utm_campaign=trade&utm_content=primary"
+    },
     {
       "id": "83fdd2bacc8195308bf7",
       "title": "The Pittsburgh Penguins trade Cruz Lucius to the Anaheim Ducks for future considerations",
@@ -204,13 +211,6 @@
       "publishedAt": "2026-07-22T00:12:08.000Z",
       "category": "Contract",
       "url": "https://puckpedia.com/signing/10753?utm_source=email&utm_medium=email&utm_campaign=signing&utm_content=primary"
-    },
-    {
-      "id": "b3c2ae22f134817f806f",
-      "title": "Mikulas Hovorka Signs a 1-Year, $850K Contract with the Florida Panthers",
-      "publishedAt": "2026-07-21T23:44:10.000Z",
-      "category": "Contract",
-      "url": "https://puckpedia.com/signing/10752?utm_source=email&utm_medium=email&utm_campaign=signing&utm_content=primary"
     }
   ]
 }
