@@ -1,7 +1,14 @@
 {
   "schema": 1,
-  "updatedAt": "2026-08-21T17:40:13.488Z",
+  "updatedAt": "2026-08-21T23:40:14.396Z",
   "items": [
+    {
+      "id": "417746d87e5d457e938d",
+      "title": "Vincent Iorio Signs a 1-Year, $850K Contract with the New York Rangers",
+      "publishedAt": "2026-08-21T21:45:12.000Z",
+      "category": "Contract",
+      "url": "https://puckpedia.com/signing/10780?utm_source=email&utm_medium=email&utm_campaign=signing&utm_content=primary"
+    },
     {
       "id": "11ccdb19a57b3481c294",
       "title": "Cruz Lucius Signs a 2-Year, $2.10M Contract with the Anaheim Ducks",
@@ -204,13 +211,6 @@
       "publishedAt": "2026-07-22T23:46:08.000Z",
       "category": "Contract",
       "url": "https://puckpedia.com/signing/10755?utm_source=email&utm_medium=email&utm_campaign=signing&utm_content=primary"
-    },
-    {
-      "id": "65b0f463fd60b0482a10",
-      "title": "Danton Heinen Signs a 1-Year, $1.00M Contract with the Columbus Blue Jackets",
-      "publishedAt": "2026-07-22T22:04:10.000Z",
-      "category": "Contract",
-      "url": "https://puckpedia.com/signing/10754?utm_source=email&utm_medium=email&utm_campaign=signing&utm_content=primary"
     }
   ]
 }
