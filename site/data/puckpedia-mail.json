@@ -1,7 +1,14 @@
 {
   "schema": 1,
-  "updatedAt": "2026-08-21T11:40:18.770Z",
+  "updatedAt": "2026-08-21T17:40:13.488Z",
   "items": [
+    {
+      "id": "11ccdb19a57b3481c294",
+      "title": "Cruz Lucius Signs a 2-Year, $2.10M Contract with the Anaheim Ducks",
+      "publishedAt": "2026-08-21T15:50:12.000Z",
+      "category": "Contract",
+      "url": "https://puckpedia.com/signing/10779?utm_source=email&utm_medium=email&utm_campaign=signing&utm_content=primary"
+    },
     {
       "id": "5b989955c356a6e0e4c9",
       "title": "The Nashville Predators trade Sutter Muzzatti to the Detroit Red Wings for future considerations",
@@ -204,13 +211,6 @@
       "publishedAt": "2026-07-22T22:04:10.000Z",
       "category": "Contract",
       "url": "https://puckpedia.com/signing/10754?utm_source=email&utm_medium=email&utm_campaign=signing&utm_content=primary"
-    },
-    {
-      "id": "b396d234bff1b6395347",
-      "title": "Jason Robertson Signs a 1-Year, $12.00M Contract with the Dallas Stars",
-      "publishedAt": "2026-07-22T00:12:08.000Z",
-      "category": "Contract",
-      "url": "https://puckpedia.com/signing/10753?utm_source=email&utm_medium=email&utm_campaign=signing&utm_content=primary"
     }
   ]
 }
