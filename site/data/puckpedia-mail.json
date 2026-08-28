@@ -1,7 +1,14 @@
 {
   "schema": 1,
-  "updatedAt": "2026-08-28T17:40:14.800Z",
+  "updatedAt": "2026-08-28T23:40:11.171Z",
   "items": [
+    {
+      "id": "543be2e3898547958acd",
+      "title": "Cale Makar Signs an 8-Year, $163.20M Contract with the Colorado Avalanche",
+      "publishedAt": "2026-08-28T21:27:10.000Z",
+      "category": "Contract",
+      "url": "https://puckpedia.com/signing/10784?utm_source=email&utm_medium=email&utm_campaign=signing&utm_content=primary"
+    },
     {
       "id": "417746d87e5d457e938d",
       "title": "Vincent Iorio Signs a 1-Year, $850K Contract with the New York Rangers",
@@ -204,13 +211,6 @@
       "publishedAt": "2026-07-23T13:09:10.000Z",
       "category": "Contract",
       "url": "https://puckpedia.com/signing/10756?utm_source=email&utm_medium=email&utm_campaign=signing&utm_content=primary"
-    },
-    {
-      "id": "39d15363e227f3287b87",
-      "title": "Joey Larson Signs a 2-Year, $1.75M Contract with the New York Islanders",
-      "publishedAt": "2026-07-22T23:46:08.000Z",
-      "category": "Contract",
-      "url": "https://puckpedia.com/signing/10755?utm_source=email&utm_medium=email&utm_campaign=signing&utm_content=primary"
     }
   ]
 }
