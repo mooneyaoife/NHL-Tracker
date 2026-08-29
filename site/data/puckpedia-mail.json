@@ -1,7 +1,14 @@
 {
   "schema": 1,
-  "updatedAt": "2026-08-29T17:40:42.334Z",
+  "updatedAt": "2026-08-29T23:40:55.582Z",
   "items": [
+    {
+      "id": "719226d014009ac6a43a",
+      "title": "Kevin Korchinski Signs a 2-Year, $2.65M Contract with the Chicago Blackhawks",
+      "publishedAt": "2026-08-29T21:22:10.000Z",
+      "category": "Contract",
+      "url": "https://puckpedia.com/signing/10785?utm_source=email&utm_medium=email&utm_campaign=signing&utm_content=primary"
+    },
     {
       "id": "543be2e3898547958acd",
       "title": "Cale Makar Signs an 8-Year, $163.20M Contract with the Colorado Avalanche",
@@ -204,13 +211,6 @@
       "publishedAt": "2026-07-23T13:43:09.000Z",
       "category": "Contract",
       "url": "https://puckpedia.com/signing/10757?utm_source=email&utm_medium=email&utm_campaign=signing&utm_content=primary"
-    },
-    {
-      "id": "fab204a943417bdb2af7",
-      "title": "Patrick Kane Signs a 2-Year, $16.00M Contract with the Chicago Blackhawks",
-      "publishedAt": "2026-07-23T13:09:10.000Z",
-      "category": "Contract",
-      "url": "https://puckpedia.com/signing/10756?utm_source=email&utm_medium=email&utm_campaign=signing&utm_content=primary"
     }
   ]
 }
