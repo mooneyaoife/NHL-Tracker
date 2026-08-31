@@ -6,9 +6,9 @@
     "test:browser": "playwright test"
   },
   "devDependencies": {
-    "@axe-core/playwright": "4.10.2",
+    "@axe-core/playwright": "4.13.0",
     "@lhci/cli": "0.15.1",
-    "@playwright/test": "1.55.1",
+    "@playwright/test": "1.62.1",
     "esbuild": "0.25.12"
   }
 }
