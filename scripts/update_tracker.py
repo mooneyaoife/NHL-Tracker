@@ -1841,8 +1841,8 @@ def write_calendar_feeds(schedules: list[dict], standings: list[dict]) -> None:
             localised(game.get("awayTeam", {}).get("abbrev")).upper(),
             localised(game.get("homeTeam", {}).get("abbrev")).upper()}]
         colour = TEAM_CALENDAR_COLOURS.get(team, "#142640")
-        (CALENDAR_DIR / f"{team}.ics").write_text(calendar_feed(f"{name} - NHL Tracker", games, team_names, colour), encoding="utf-8", newline="")
-    (CALENDAR_DIR / "NHL.ics").write_text(calendar_feed("NHL Schedule - NHL Tracker", eligible, team_names), encoding="utf-8", newline="")
+        (CALENDAR_DIR / f"{team}.ics").write_text(calendar_feed(f"{name} - NHL Tracker", games, team_names, colour), encoding="utf-8")
+    (CALENDAR_DIR / "NHL.ics").write_text(calendar_feed("NHL Schedule - NHL Tracker", eligible, team_names), encoding="utf-8")
 
 
 def source_commit() -> str:

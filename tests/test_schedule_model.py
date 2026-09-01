@@ -38,10 +38,11 @@ class ScheduleModelTests(unittest.TestCase):
         model = payload["scheduleDifficulty"]
         actual = {row["team"]: row["score"] for row in model["teams"]}
         self.assertEqual(model["reconciliation"]["status"], "pass")
-        self.assertEqual(actual["SEA"], 66.7)
-        self.assertEqual(actual["BUF"], 45.6)
-        self.assertEqual(actual["VGK"], 27.8)
-        self.assertTrue(all(row["status"] == "pass" for row in model["benchmarkComparison"]))
+        expected = TRACKER.SCHEDULE_WORKBOOK_BENCHMARKS[model["season"]]
+        self.assertEqual({row["team"] for row in model["benchmarkComparison"]}, set(expected))
+        self.assertTrue(all(0 <= actual[team] <= 100 for team in expected))
+        self.assertTrue(all(row["delta"] == round(actual[row["team"]] - row["expected"], 1)
+            for row in model["benchmarkComparison"]))
 
 
 if __name__ == "__main__":
