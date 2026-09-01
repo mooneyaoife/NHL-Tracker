@@ -1,7 +1,14 @@
 {
   "schema": 1,
-  "updatedAt": "2026-09-01T17:40:15.324Z",
+  "updatedAt": "2026-09-01T23:40:19.213Z",
   "items": [
+    {
+      "id": "488b1d1f5d1bc9727fae",
+      "title": "Eeli Tolvanen Signs a 1-Year, $1.50M Contract with the New York Rangers",
+      "publishedAt": "2026-09-01T21:01:11.000Z",
+      "category": "Contract",
+      "url": "https://puckpedia.com/signing/10786?utm_source=email&utm_medium=email&utm_campaign=signing&utm_content=primary"
+    },
     {
       "id": "719226d014009ac6a43a",
       "title": "Kevin Korchinski Signs a 2-Year, $2.65M Contract with the Chicago Blackhawks",
@@ -204,13 +211,6 @@
       "publishedAt": "2026-07-23T20:30:11.000Z",
       "category": "Contract",
       "url": "https://puckpedia.com/signing/10758?utm_source=email&utm_medium=email&utm_campaign=signing&utm_content=primary"
-    },
-    {
-      "id": "9668da3f35591de81008",
-      "title": "Jet Greaves Signs a 3-Year, $15.00M Contract with the Columbus Blue Jackets",
-      "publishedAt": "2026-07-23T13:43:09.000Z",
-      "category": "Contract",
-      "url": "https://puckpedia.com/signing/10757?utm_source=email&utm_medium=email&utm_campaign=signing&utm_content=primary"
     }
   ]
 }
