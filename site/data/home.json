@@ -1,7 +1,7 @@
 {
   "schema": 3,
-  "sourceCommit": "bd55111bb9e73341846a15fd803d4cb1b020cfaa",
-  "dataGeneratedAt": "2026-09-01T18:22:58.757609+00:00",
+  "sourceCommit": "0234ce2b8dba9cb81d511de8fb7ae37f6a2e637d",
+  "dataGeneratedAt": "2026-09-01T22:39:18.537294+00:00",
   "season": "20262027",
   "version": "5.74.0",
   "trackedTeams": [
@@ -393,8 +393,8 @@
   },
   "freshness": {
     "status": "fresh",
-    "checkedAt": "2026-09-01T18:22:58.757893+00:00",
-    "lastSuccessfulAt": "2026-09-01T18:22:58.757897+00:00",
+    "checkedAt": "2026-09-01T22:39:18.537309+00:00",
+    "lastSuccessfulAt": "2026-09-01T22:39:18.537311+00:00",
     "ageSeconds": 0,
     "failedTeams": [],
     "schedule": {
@@ -1669,8 +1669,8 @@
   "continuity": {
     "schema": 3,
     "season": "20262027",
-    "capturedAt": "2026-09-01T18:22:58.757609+00:00",
-    "updatedAt": "2026-09-01T18:22:58.757609+00:00",
+    "capturedAt": "2026-09-01T22:39:18.537294+00:00",
+    "updatedAt": "2026-09-01T22:39:18.537294+00:00",
     "finished": {},
     "upcoming": {
       "2026020001": {
