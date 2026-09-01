@@ -19,6 +19,8 @@ assert.match(live, /if: steps\.live\.outputs\.active == 'true' && vars\.CLOUDFLA
   "Cloudflare work also requires an active followed-team game");
 assert.doesNotMatch(scheduled, /^\s+push:/m, "scheduled data generation is not triggered by unrelated pushes");
 assert.doesNotMatch(scheduled, /deploy-pages|wrangler/, "scheduled generation does not deploy directly");
+assert.match(scheduled, /cron: "20 \*\/2 \* \* \*"/,
+  "the full-league schedule refreshes every two hours to capture NHL time changes promptly");
 assert.match(deploy, /workflow_run:[\s\S]{0,160}workflows: \["Generate scheduled NHL data"\]/,
   "successful scheduled generation hands off to the separate deployment workflow");
 assert.match(deploy, /github\.event\.workflow_run\.conclusion == 'success'/,

@@ -1,7 +1,7 @@
 {
   "schema": 3,
-  "sourceCommit": "7c0fafa1e7a301354072bff9440019f8ff006b3b",
-  "dataGeneratedAt": "2026-07-31T00:17:16.601272+00:00",
+  "sourceCommit": "bd55111bb9e73341846a15fd803d4cb1b020cfaa",
+  "dataGeneratedAt": "2026-09-01T18:22:58.757609+00:00",
   "season": "20262027",
   "version": "5.74.0",
   "trackedTeams": [
@@ -393,8 +393,8 @@
   },
   "freshness": {
     "status": "fresh",
-    "checkedAt": "2026-07-31T00:17:16.601283+00:00",
-    "lastSuccessfulAt": "2026-07-31T00:17:16.601286+00:00",
+    "checkedAt": "2026-09-01T18:22:58.757893+00:00",
+    "lastSuccessfulAt": "2026-09-01T18:22:58.757897+00:00",
     "ageSeconds": 0,
     "failedTeams": [],
     "schedule": {
@@ -544,7 +544,7 @@
     "recent-form": "<p class=\"notice\">2026–27 form begins after completed games.</p>",
     "home-saved-players": "<div class=\"home-empty-state\"><strong>Saved players are ready</strong><span>Open player analysis to view and manage your watchlist.</span></div>",
     "home-pinned-analytics": "<button type=\"button\" class=\"home-pin\" data-shell-page=\"league\"><span>Team Rankings</span><small>League-wide performance categories</small><b>→</b></button><button type=\"button\" class=\"home-pin\" data-shell-page=\"playoffs\"><span>Playoff Path</span><small>Forecasts and postseason routes</small><b>→</b></button><button type=\"button\" class=\"home-pin\" data-shell-page=\"schedule\"><span>Season Shape</span><small>Density, rest and difficulty</small><b>→</b></button>",
-    "today-games": "<article class=\"watch-next-hero\" data-watch-mode=\"league\"><header><div><span class=\"section-kicker\">League watch</span><h3>Florida Panthers at Carolina Hurricanes</h3><p>Tue 29 Sep · 22:00 UK · Lenovo Center</p></div><b class=\"watch-next-state state-scheduled\">Scheduled</b></header><div class=\"watch-next-signals\" aria-label=\"Three things to know\"><div class=\"watch-next-signal\"><span>Opponent baseline</span><strong>51.2% PTS</strong><small>Opponent points percentage in 2025–26; context, not a prediction</small></div><div class=\"watch-next-signal\"><span>Setting</span><strong>Home</strong><small>Lenovo Center</small></div></div><footer><a class=\"watch-next-open\" href=\"?game=2026020001#games\" data-watch-game=\"2026020001\">Open Game Centre →</a><span>2025–26 opponent evidence · updated 31 Jul · UK time</span></footer><details class=\"watch-next-method\"><summary>How to read this brief</summary><p>Official NHL schedule, prior-season opponent points percentage, travel, rest, congestion, road sequence, time-zone and event flags. Does not include injuries, projected goalies, current form or lineup changes.</p><small>Schedule burden is context, not a result or win-probability forecast.</small></details></article><div class=\"watch-next-support\" aria-label=\"More games to watch\"><a class=\"watch-next-row\" href=\"?game=2026020002#games\" data-watch-game=\"2026020002\"><span>Scheduled · Wed 30 Sep · 00:00 UK</span><strong>Montréal Canadiens at Toronto Maple Leafs</strong><small>64.6% PTS</small><b>→</b></a><a class=\"watch-next-row\" href=\"?game=2026020003#games\" data-watch-game=\"2026020003\"><span>Scheduled · Wed 30 Sep · 01:00 UK</span><strong>New York Rangers at Boston Bruins</strong><small>47.0% PTS</small><b>→</b></a></div>"
+    "today-games": "<article class=\"watch-next-hero\" data-watch-mode=\"league\"><header><div><span class=\"section-kicker\">League watch</span><h3>Florida Panthers at Carolina Hurricanes</h3><p>Tue 29 Sep · 22:00 UK · Lenovo Center</p></div><b class=\"watch-next-state state-scheduled\">Scheduled</b></header><div class=\"watch-next-signals\" aria-label=\"Three things to know\"><div class=\"watch-next-signal\"><span>Opponent baseline</span><strong>51.2% PTS</strong><small>Opponent points percentage in 2025–26; context, not a prediction</small></div><div class=\"watch-next-signal\"><span>Setting</span><strong>Home</strong><small>Lenovo Center</small></div></div><footer><a class=\"watch-next-open\" href=\"?game=2026020001#games\" data-watch-game=\"2026020001\">Open Game Centre →</a><span>2025–26 opponent evidence · updated 1 Sep · UK time</span></footer><details class=\"watch-next-method\"><summary>How to read this brief</summary><p>Official NHL schedule, prior-season opponent points percentage, travel, rest, congestion, road sequence, time-zone and event flags. Does not include injuries, projected goalies, current form or lineup changes.</p><small>Schedule burden is context, not a result or win-probability forecast.</small></details></article><div class=\"watch-next-support\" aria-label=\"More games to watch\"><a class=\"watch-next-row\" href=\"?game=2026020002#games\" data-watch-game=\"2026020002\"><span>Scheduled · Wed 30 Sep · 00:00 UK</span><strong>Montréal Canadiens at Toronto Maple Leafs</strong><small>64.6% PTS</small><b>→</b></a><a class=\"watch-next-row\" href=\"?game=2026020003#games\" data-watch-game=\"2026020003\"><span>Scheduled · Wed 30 Sep · 01:00 UK</span><strong>New York Rangers at Boston Bruins</strong><small>47.0% PTS</small><b>→</b></a></div>"
   },
   "watchNext": {
     "schema": 1,
@@ -1355,7 +1355,7 @@
         "opponent": "CHI",
         "away": "CHI",
         "home": "UTA",
-        "startTimeUTC": "2026-10-02T01:00:00Z",
+        "startTimeUTC": "2026-10-02T01:30:00Z",
         "londonDate": "2026-10-02",
         "status": "scheduled",
         "statusLabel": "Scheduled",
@@ -1669,8 +1669,8 @@
   "continuity": {
     "schema": 3,
     "season": "20262027",
-    "capturedAt": "2026-07-31T00:17:16.601272+00:00",
-    "updatedAt": "2026-07-31T00:17:16.601272+00:00",
+    "capturedAt": "2026-09-01T18:22:58.757609+00:00",
+    "updatedAt": "2026-09-01T18:22:58.757609+00:00",
     "finished": {},
     "upcoming": {
       "2026020001": {
@@ -1841,20 +1841,6 @@
           "NSH"
         ]
       },
-      "2026020013": {
-        "id": "2026020013",
-        "date": "2026-10-01",
-        "startTimeUTC": "2026-10-02T01:00:00Z",
-        "type": "Regular Season",
-        "away": "CHI",
-        "home": "UTA",
-        "awayScore": null,
-        "homeScore": null,
-        "focusTeams": [
-          "CHI",
-          "UTA"
-        ]
-      },
       "2026020014": {
         "id": "2026020014",
         "date": "2026-10-01",
@@ -1867,6 +1853,20 @@
         "focusTeams": [
           "SEA",
           "CGY"
+        ]
+      },
+      "2026020013": {
+        "id": "2026020013",
+        "date": "2026-10-01",
+        "startTimeUTC": "2026-10-02T01:30:00Z",
+        "type": "Regular Season",
+        "away": "CHI",
+        "home": "UTA",
+        "awayScore": null,
+        "homeScore": null,
+        "focusTeams": [
+          "CHI",
+          "UTA"
         ]
       },
       "2026020015": {
@@ -2179,96 +2179,709 @@
       }
     },
     "roster": {
-      "EDM|Added|8481056|2026-07-31T00:17:16.597693+00:00": {
-        "key": "EDM|Added|8481056|2026-07-31T00:17:16.597693+00:00",
-        "team": "EDM",
+      "TBL|Added|8485386|2026-09-01T18:22:58.714544+00:00": {
+        "key": "TBL|Added|8485386|2026-09-01T18:22:58.714544+00:00",
+        "team": "TBL",
         "direction": "Added",
-        "name": "Spencer Stastney",
-        "detectedAt": "2026-07-31T00:17:16.597693+00:00"
+        "name": "Ethan Czata",
+        "detectedAt": "2026-09-01T18:22:58.714544+00:00"
       },
-      "DAL|Added|8477335|2026-07-29T00:12:19.838454+00:00": {
-        "key": "DAL|Added|8477335|2026-07-29T00:12:19.838454+00:00",
+      "TBL|Added|8485091|2026-09-01T18:22:58.714544+00:00": {
+        "key": "TBL|Added|8485091|2026-09-01T18:22:58.714544+00:00",
+        "team": "TBL",
+        "direction": "Added",
+        "name": "Noah Steen",
+        "detectedAt": "2026-09-01T18:22:58.714544+00:00"
+      },
+      "TBL|Added|8482951|2026-09-01T18:22:58.714544+00:00": {
+        "key": "TBL|Added|8482951|2026-09-01T18:22:58.714544+00:00",
+        "team": "TBL",
+        "direction": "Added",
+        "name": "Cooper Flinton",
+        "detectedAt": "2026-09-01T18:22:58.714544+00:00"
+      },
+      "TBL|Added|8484636|2026-09-01T18:22:58.714544+00:00": {
+        "key": "TBL|Added|8484636|2026-09-01T18:22:58.714544+00:00",
+        "team": "TBL",
+        "direction": "Added",
+        "name": "Harrison Meneghin",
+        "detectedAt": "2026-09-01T18:22:58.714544+00:00"
+      },
+      "TBL|Added|8482663|2026-09-01T18:22:58.714544+00:00": {
+        "key": "TBL|Added|8482663|2026-09-01T18:22:58.714544+00:00",
+        "team": "TBL",
+        "direction": "Added",
+        "name": "Dylan Duke",
+        "detectedAt": "2026-09-01T18:22:58.714544+00:00"
+      },
+      "TBL|Added|8481544|2026-09-01T18:22:58.714544+00:00": {
+        "key": "TBL|Added|8481544|2026-09-01T18:22:58.714544+00:00",
+        "team": "TBL",
+        "direction": "Added",
+        "name": "Mads Sogaard",
+        "detectedAt": "2026-09-01T18:22:58.714544+00:00"
+      },
+      "TBL|Added|8484770|2026-09-01T18:22:58.714544+00:00": {
+        "key": "TBL|Added|8484770|2026-09-01T18:22:58.714544+00:00",
+        "team": "TBL",
+        "direction": "Added",
+        "name": "Sam O'Reilly",
+        "detectedAt": "2026-09-01T18:22:58.714544+00:00"
+      },
+      "TBL|Added|8486241|2026-09-01T18:22:58.714544+00:00": {
+        "key": "TBL|Added|8486241|2026-09-01T18:22:58.714544+00:00",
+        "team": "TBL",
+        "direction": "Added",
+        "name": "Tomas Kralovic",
+        "detectedAt": "2026-09-01T18:22:58.714544+00:00"
+      },
+      "TBL|Added|8483921|2026-09-01T18:22:58.714544+00:00": {
+        "key": "TBL|Added|8483921|2026-09-01T18:22:58.714544+00:00",
+        "team": "TBL",
+        "direction": "Added",
+        "name": "Milo Roelens",
+        "detectedAt": "2026-09-01T18:22:58.714544+00:00"
+      },
+      "TBL|Added|8480828|2026-09-01T18:22:58.714544+00:00": {
+        "key": "TBL|Added|8480828|2026-09-01T18:22:58.714544+00:00",
+        "team": "TBL",
+        "direction": "Added",
+        "name": "Michael Callahan",
+        "detectedAt": "2026-09-01T18:22:58.714544+00:00"
+      },
+      "TBL|Added|8484310|2026-09-01T18:22:58.714544+00:00": {
+        "key": "TBL|Added|8484310|2026-09-01T18:22:58.714544+00:00",
+        "team": "TBL",
+        "direction": "Added",
+        "name": "Tristan Allard",
+        "detectedAt": "2026-09-01T18:22:58.714544+00:00"
+      },
+      "TBL|Added|8483692|2026-09-01T18:22:58.714544+00:00": {
+        "key": "TBL|Added|8483692|2026-09-01T18:22:58.714544+00:00",
+        "team": "TBL",
+        "direction": "Added",
+        "name": "Dyllan Gill",
+        "detectedAt": "2026-09-01T18:22:58.714544+00:00"
+      },
+      "TBL|Added|8480885|2026-09-01T18:22:58.714544+00:00": {
+        "key": "TBL|Added|8480885|2026-09-01T18:22:58.714544+00:00",
+        "team": "TBL",
+        "direction": "Added",
+        "name": "Olivier Rodrigue",
+        "detectedAt": "2026-09-01T18:22:58.714544+00:00"
+      },
+      "TBL|Added|8484173|2026-09-01T18:22:58.714544+00:00": {
+        "key": "TBL|Added|8484173|2026-09-01T18:22:58.714544+00:00",
+        "team": "TBL",
+        "direction": "Added",
+        "name": "Ethan Gauthier",
+        "detectedAt": "2026-09-01T18:22:58.714544+00:00"
+      },
+      "TBL|Added|8482518|2026-09-01T18:22:58.714544+00:00": {
+        "key": "TBL|Added|8482518|2026-09-01T18:22:58.714544+00:00",
+        "team": "TBL",
+        "direction": "Added",
+        "name": "Lucas Mercuri",
+        "detectedAt": "2026-09-01T18:22:58.714544+00:00"
+      },
+      "TBL|Added|8482168|2026-09-01T18:22:58.714544+00:00": {
+        "key": "TBL|Added|8482168|2026-09-01T18:22:58.714544+00:00",
+        "team": "TBL",
+        "direction": "Added",
+        "name": "Maxim Groshev",
+        "detectedAt": "2026-09-01T18:22:58.714544+00:00"
+      },
+      "TBL|Added|8477463|2026-09-01T18:22:58.714544+00:00": {
+        "key": "TBL|Added|8477463|2026-09-01T18:22:58.714544+00:00",
+        "team": "TBL",
+        "direction": "Added",
+        "name": "Steven Santini",
+        "detectedAt": "2026-09-01T18:22:58.714544+00:00"
+      },
+      "TBL|Added|8481547|2026-09-01T18:22:58.714544+00:00": {
+        "key": "TBL|Added|8481547|2026-09-01T18:22:58.714544+00:00",
+        "team": "TBL",
+        "direction": "Added",
+        "name": "Simon Lundmark",
+        "detectedAt": "2026-09-01T18:22:58.714544+00:00"
+      },
+      "TBL|Added|8483727|2026-09-01T18:22:58.714544+00:00": {
+        "key": "TBL|Added|8483727|2026-09-01T18:22:58.714544+00:00",
+        "team": "TBL",
+        "direction": "Added",
+        "name": "Connor Kurth",
+        "detectedAt": "2026-09-01T18:22:58.714544+00:00"
+      },
+      "TBL|Added|8481592|2026-09-01T18:22:58.714544+00:00": {
+        "key": "TBL|Added|8481592|2026-09-01T18:22:58.714544+00:00",
+        "team": "TBL",
+        "direction": "Added",
+        "name": "Jakob Pelletier",
+        "detectedAt": "2026-09-01T18:22:58.714544+00:00"
+      },
+      "TBL|Added|8484507|2026-09-01T18:22:58.714544+00:00": {
+        "key": "TBL|Added|8484507|2026-09-01T18:22:58.714544+00:00",
+        "team": "TBL",
+        "direction": "Added",
+        "name": "Gabriel Szturc",
+        "detectedAt": "2026-09-01T18:22:58.714544+00:00"
+      },
+      "TBL|Added|8481720|2026-09-01T18:22:58.714544+00:00": {
+        "key": "TBL|Added|8481720|2026-09-01T18:22:58.714544+00:00",
+        "team": "TBL",
+        "direction": "Added",
+        "name": "Nick Abruzzese",
+        "detectedAt": "2026-09-01T18:22:58.714544+00:00"
+      },
+      "DAL|Added|8484442|2026-09-01T18:22:58.714544+00:00": {
+        "key": "DAL|Added|8484442|2026-09-01T18:22:58.714544+00:00",
         "team": "DAL",
         "direction": "Added",
-        "name": "Kyle Burroughs",
-        "detectedAt": "2026-07-29T00:12:19.838454+00:00"
+        "name": "Arno Tiefensee",
+        "detectedAt": "2026-09-01T18:22:58.714544+00:00"
       },
-      "ANA|Added|8483746|2026-07-28T00:13:26.556263+00:00": {
-        "key": "ANA|Added|8483746|2026-07-28T00:13:26.556263+00:00",
-        "team": "ANA",
+      "DAL|Added|8484796|2026-09-01T18:22:58.714544+00:00": {
+        "key": "DAL|Added|8484796|2026-09-01T18:22:58.714544+00:00",
+        "team": "DAL",
         "direction": "Added",
-        "name": "Vyacheslav Buteyets",
-        "detectedAt": "2026-07-28T00:13:26.556263+00:00"
+        "name": "Emil Hemming",
+        "detectedAt": "2026-09-01T18:22:58.714544+00:00"
       },
-      "ANA|Added|8486072|2026-07-28T00:13:26.556263+00:00": {
-        "key": "ANA|Added|8486072|2026-07-28T00:13:26.556263+00:00",
-        "team": "ANA",
+      "DAL|Added|8482690|2026-09-01T18:22:58.714544+00:00": {
+        "key": "DAL|Added|8482690|2026-09-01T18:22:58.714544+00:00",
+        "team": "DAL",
         "direction": "Added",
-        "name": "Marcus Nordmark",
-        "detectedAt": "2026-07-28T00:13:26.556263+00:00"
+        "name": "Ayrton Martino",
+        "detectedAt": "2026-09-01T18:22:58.714544+00:00"
       },
-      "ANA|Added|8485400|2026-07-28T00:13:26.556263+00:00": {
-        "key": "ANA|Added|8485400|2026-07-28T00:13:26.556263+00:00",
-        "team": "ANA",
+      "DAL|Added|8486174|2026-09-01T18:22:58.714544+00:00": {
+        "key": "DAL|Added|8486174|2026-09-01T18:22:58.714544+00:00",
+        "team": "DAL",
         "direction": "Added",
-        "name": "Roger McQueen",
-        "detectedAt": "2026-07-28T00:13:26.556263+00:00"
+        "name": "Christian Fitzgerald",
+        "detectedAt": "2026-09-01T18:22:58.714544+00:00"
       },
-      "ANA|Added|8482118|2026-07-28T00:13:26.556263+00:00": {
-        "key": "ANA|Added|8482118|2026-07-28T00:13:26.556263+00:00",
-        "team": "ANA",
+      "DAL|Added|8482465|2026-09-01T18:22:58.714544+00:00": {
+        "key": "DAL|Added|8482465|2026-09-01T18:22:58.714544+00:00",
+        "team": "DAL",
         "direction": "Added",
-        "name": "Sam Colangelo",
-        "detectedAt": "2026-07-28T00:13:26.556263+00:00"
+        "name": "Rémi Poirier",
+        "detectedAt": "2026-09-01T18:22:58.714544+00:00"
       },
-      "ANA|Added|8486052|2026-07-28T00:13:26.556263+00:00": {
-        "key": "ANA|Added|8486052|2026-07-28T00:13:26.556263+00:00",
-        "team": "ANA",
+      "DAL|Added|8485691|2026-09-01T18:22:58.714544+00:00": {
+        "key": "DAL|Added|8485691|2026-09-01T18:22:58.714544+00:00",
+        "team": "DAL",
         "direction": "Added",
-        "name": "Nikita Klepov",
-        "detectedAt": "2026-07-28T00:13:26.556263+00:00"
+        "name": "Jaxon Fuder",
+        "detectedAt": "2026-09-01T18:22:58.714544+00:00"
       },
-      "CHI|Added|8474141|2026-07-23T18:37:49.103935+00:00": {
-        "key": "CHI|Added|8474141|2026-07-23T18:37:49.103935+00:00",
-        "team": "CHI",
+      "DAL|Added|8484523|2026-09-01T18:22:58.714544+00:00": {
+        "key": "DAL|Added|8484523|2026-09-01T18:22:58.714544+00:00",
+        "team": "DAL",
         "direction": "Added",
-        "name": "Patrick Kane",
-        "detectedAt": "2026-07-23T18:37:49.103935+00:00"
+        "name": "Connor Punnett",
+        "detectedAt": "2026-09-01T18:22:58.714544+00:00"
       },
-      "NJD|Added|8484177|2026-07-23T08:45:11.260817+00:00": {
-        "key": "NJD|Added|8484177|2026-07-23T08:45:11.260817+00:00",
-        "team": "NJD",
+      "DAL|Added|8477990|2026-09-01T18:22:58.714544+00:00": {
+        "key": "DAL|Added|8477990|2026-09-01T18:22:58.714544+00:00",
+        "team": "DAL",
         "direction": "Added",
-        "name": "Lenni Hameenaho",
-        "detectedAt": "2026-07-23T08:45:11.260817+00:00"
+        "name": "Brandon Halverson",
+        "detectedAt": "2026-09-01T18:22:58.714544+00:00"
       },
-      "NJD|Added|8482076|2026-07-23T08:45:11.260817+00:00": {
-        "key": "NJD|Added|8482076|2026-07-23T08:45:11.260817+00:00",
-        "team": "NJD",
+      "DAL|Added|8485041|2026-09-01T18:22:58.714544+00:00": {
+        "key": "DAL|Added|8485041|2026-09-01T18:22:58.714544+00:00",
+        "team": "DAL",
         "direction": "Added",
-        "name": "Nico Daws",
-        "detectedAt": "2026-07-23T08:45:11.260817+00:00"
+        "name": "Niilopekka Muhonen",
+        "detectedAt": "2026-09-01T18:22:58.714544+00:00"
       },
-      "CBJ|Added|8478046|2026-07-22T23:16:06.607778+00:00": {
-        "key": "CBJ|Added|8478046|2026-07-22T23:16:06.607778+00:00",
-        "team": "CBJ",
+      "DAL|Added|8484146|2026-09-01T18:22:58.714544+00:00": {
+        "key": "DAL|Added|8484146|2026-09-01T18:22:58.714544+00:00",
+        "team": "DAL",
         "direction": "Added",
-        "name": "Danton Heinen",
-        "detectedAt": "2026-07-22T23:16:06.607778+00:00"
+        "name": "Tristan Bertucci",
+        "detectedAt": "2026-09-01T18:22:58.714544+00:00"
       },
-      "SEA|Added|8480876|2026-07-21T23:12:25.068174+00:00": {
-        "key": "SEA|Added|8480876|2026-07-21T23:12:25.068174+00:00",
-        "team": "SEA",
+      "DAL|Added|8486130|2026-09-01T18:22:58.714544+00:00": {
+        "key": "DAL|Added|8486130|2026-09-01T18:22:58.714544+00:00",
+        "team": "DAL",
         "direction": "Added",
-        "name": "Curtis Douglas",
-        "detectedAt": "2026-07-21T23:12:25.068174+00:00"
+        "name": "Dylan Hryckowian",
+        "detectedAt": "2026-09-01T18:22:58.714544+00:00"
+      },
+      "DAL|Added|8483514|2026-09-01T18:22:58.714544+00:00": {
+        "key": "DAL|Added|8483514|2026-09-01T18:22:58.714544+00:00",
+        "team": "DAL",
+        "direction": "Added",
+        "name": "Matthew Seminoff",
+        "detectedAt": "2026-09-01T18:22:58.714544+00:00"
+      },
+      "DAL|Added|8478888|2026-09-01T18:22:58.714544+00:00": {
+        "key": "DAL|Added|8478888|2026-09-01T18:22:58.714544+00:00",
+        "team": "DAL",
+        "direction": "Added",
+        "name": "Cameron Hughes",
+        "detectedAt": "2026-09-01T18:22:58.714544+00:00"
+      },
+      "DAL|Added|8482214|2026-09-01T18:22:58.714544+00:00": {
+        "key": "DAL|Added|8482214|2026-09-01T18:22:58.714544+00:00",
+        "team": "DAL",
+        "direction": "Added",
+        "name": "Artem Shlaine",
+        "detectedAt": "2026-09-01T18:22:58.714544+00:00"
+      },
+      "DAL|Added|8484194|2026-09-01T18:22:58.714544+00:00": {
+        "key": "DAL|Added|8484194|2026-09-01T18:22:58.714544+00:00",
+        "team": "DAL",
+        "direction": "Added",
+        "name": "Aram Minnetian",
+        "detectedAt": "2026-09-01T18:22:58.714544+00:00"
+      },
+      "DAL|Added|8482919|2026-09-01T18:22:58.714544+00:00": {
+        "key": "DAL|Added|8482919|2026-09-01T18:22:58.714544+00:00",
+        "team": "DAL",
+        "direction": "Added",
+        "name": "Justin Ertel",
+        "detectedAt": "2026-09-01T18:22:58.714544+00:00"
+      },
+      "DAL|Added|8486126|2026-09-01T18:22:58.714544+00:00": {
+        "key": "DAL|Added|8486126|2026-09-01T18:22:58.714544+00:00",
+        "team": "DAL",
+        "direction": "Added",
+        "name": "Jack Anderson",
+        "detectedAt": "2026-09-01T18:22:58.714544+00:00"
+      },
+      "DAL|Added|8484468|2026-09-01T18:22:58.714544+00:00": {
+        "key": "DAL|Added|8484468|2026-09-01T18:22:58.714544+00:00",
+        "team": "DAL",
+        "direction": "Added",
+        "name": "Angus MacDonell",
+        "detectedAt": "2026-09-01T18:22:58.714544+00:00"
+      },
+      "DAL|Added|8484822|2026-09-01T18:22:58.714544+00:00": {
+        "key": "DAL|Added|8484822|2026-09-01T18:22:58.714544+00:00",
+        "team": "DAL",
+        "direction": "Added",
+        "name": "Luke Krys",
+        "detectedAt": "2026-09-01T18:22:58.714544+00:00"
+      },
+      "BUF|Added|8484192|2026-09-01T18:22:58.714544+00:00": {
+        "key": "BUF|Added|8484192|2026-09-01T18:22:58.714544+00:00",
+        "team": "BUF",
+        "direction": "Added",
+        "name": "Gavin McCarthy",
+        "detectedAt": "2026-09-01T18:22:58.714544+00:00"
+      },
+      "BUF|Added|8480056|2026-09-01T18:22:58.714544+00:00": {
+        "key": "BUF|Added|8480056|2026-09-01T18:22:58.714544+00:00",
+        "team": "BUF",
+        "direction": "Added",
+        "name": "Jack Rathbone",
+        "detectedAt": "2026-09-01T18:22:58.714544+00:00"
+      },
+      "BUF|Added|8483475|2026-09-01T18:22:58.714544+00:00": {
+        "key": "BUF|Added|8483475|2026-09-01T18:22:58.714544+00:00",
+        "team": "BUF",
+        "direction": "Added",
+        "name": "Topias Leinonen",
+        "detectedAt": "2026-09-01T18:22:58.714544+00:00"
+      },
+      "BUF|Added|8484255|2026-09-01T18:22:58.714544+00:00": {
+        "key": "BUF|Added|8484255|2026-09-01T18:22:58.714544+00:00",
+        "team": "BUF",
+        "direction": "Added",
+        "name": "Jason Polin",
+        "detectedAt": "2026-09-01T18:22:58.714544+00:00"
+      },
+      "BUF|Added|8482479|2026-09-01T18:22:58.714544+00:00": {
+        "key": "BUF|Added|8482479|2026-09-01T18:22:58.714544+00:00",
+        "team": "BUF",
+        "direction": "Added",
+        "name": "Trevor Kuntar",
+        "detectedAt": "2026-09-01T18:22:58.714544+00:00"
+      },
+      "BUF|Added|8483755|2026-09-01T18:22:58.714544+00:00": {
+        "key": "BUF|Added|8483755|2026-09-01T18:22:58.714544+00:00",
+        "team": "BUF",
+        "direction": "Added",
+        "name": "Jake Richard",
+        "detectedAt": "2026-09-01T18:22:58.714544+00:00"
+      },
+      "BUF|Added|8481683|2026-09-01T18:22:58.714544+00:00": {
+        "key": "BUF|Added|8481683|2026-09-01T18:22:58.714544+00:00",
+        "team": "BUF",
+        "direction": "Added",
+        "name": "Aidan McDonough",
+        "detectedAt": "2026-09-01T18:22:58.714544+00:00"
       }
     },
     "schedule": {
       "activeSeason": "20262027",
       "complete": true,
       "completedAt": "2026-07-16T18:19:58.437549+00:00",
-      "changes": {}
+      "changes": {
+        "changed:2026020049:2026-10-06T23:00:00Z": {
+          "key": "changed:2026020049:2026-10-06T23:00:00Z",
+          "kind": "changed",
+          "game": {
+            "id": "2026020049",
+            "date": "2026-10-06",
+            "startTimeUTC": "2026-10-06T23:00:00Z",
+            "away": "MIN",
+            "home": "BUF",
+            "venue": "KeyBank Center"
+          },
+          "previousDate": "2026-10-06",
+          "previousStartTimeUTC": "2026-10-07T00:00:00Z",
+          "detectedAt": "2026-09-01T18:22:58.754829+00:00"
+        },
+        "changed:2026020293:2026-11-12T00:00:00Z": {
+          "key": "changed:2026020293:2026-11-12T00:00:00Z",
+          "kind": "changed",
+          "game": {
+            "id": "2026020293",
+            "date": "2026-11-11",
+            "startTimeUTC": "2026-11-12T00:00:00Z",
+            "away": "TBL",
+            "home": "BUF",
+            "venue": "KeyBank Center"
+          },
+          "previousDate": "2026-11-11",
+          "previousStartTimeUTC": "2026-11-12T00:30:00Z",
+          "detectedAt": "2026-09-01T18:22:58.754829+00:00"
+        },
+        "changed:2026020373:2026-11-22T17:30:00Z": {
+          "key": "changed:2026020373:2026-11-22T17:30:00Z",
+          "kind": "changed",
+          "game": {
+            "id": "2026020373",
+            "date": "2026-11-22",
+            "startTimeUTC": "2026-11-22T17:30:00Z",
+            "away": "CAR",
+            "home": "NYR",
+            "venue": "Madison Square Garden"
+          },
+          "previousDate": "2026-11-22",
+          "previousStartTimeUTC": "2026-11-22T18:00:00Z",
+          "detectedAt": "2026-09-01T18:22:58.754829+00:00"
+        },
+        "changed:2026020398:2026-11-26T03:00:00Z": {
+          "key": "changed:2026020398:2026-11-26T03:00:00Z",
+          "kind": "changed",
+          "game": {
+            "id": "2026020398",
+            "date": "2026-11-25",
+            "startTimeUTC": "2026-11-26T03:00:00Z",
+            "away": "SJS",
+            "home": "ANA",
+            "venue": "Honda Center"
+          },
+          "previousDate": "2026-11-25",
+          "previousStartTimeUTC": "2026-11-26T02:30:00Z",
+          "detectedAt": "2026-09-01T18:22:58.754829+00:00"
+        },
+        "changed:2026020428:2026-11-29T19:00:00Z": {
+          "key": "changed:2026020428:2026-11-29T19:00:00Z",
+          "kind": "changed",
+          "game": {
+            "id": "2026020428",
+            "date": "2026-11-29",
+            "startTimeUTC": "2026-11-29T19:00:00Z",
+            "away": "MIN",
+            "home": "CHI",
+            "venue": "United Center"
+          },
+          "previousDate": "2026-11-29",
+          "previousStartTimeUTC": "2026-11-29T20:00:00Z",
+          "detectedAt": "2026-09-01T18:22:58.754829+00:00"
+        },
+        "changed:2026020437:2026-12-02T00:30:00Z": {
+          "key": "changed:2026020437:2026-12-02T00:30:00Z",
+          "kind": "changed",
+          "game": {
+            "id": "2026020437",
+            "date": "2026-12-01",
+            "startTimeUTC": "2026-12-02T00:30:00Z",
+            "away": "SJS",
+            "home": "NJD",
+            "venue": "Prudential Center"
+          },
+          "previousDate": "2026-12-01",
+          "previousStartTimeUTC": "2026-12-02T00:00:00Z",
+          "detectedAt": "2026-09-01T18:22:58.754829+00:00"
+        },
+        "changed:2026020494:2026-12-09T01:00:00Z": {
+          "key": "changed:2026020494:2026-12-09T01:00:00Z",
+          "kind": "changed",
+          "game": {
+            "id": "2026020494",
+            "date": "2026-12-08",
+            "startTimeUTC": "2026-12-09T01:00:00Z",
+            "away": "EDM",
+            "home": "MIN",
+            "venue": "Grand Casino Arena"
+          },
+          "previousDate": "2026-12-08",
+          "previousStartTimeUTC": "2026-12-09T02:00:00Z",
+          "detectedAt": "2026-09-01T18:22:58.754829+00:00"
+        },
+        "changed:2026020498:2026-12-10T02:30:00Z": {
+          "key": "changed:2026020498:2026-12-10T02:30:00Z",
+          "kind": "changed",
+          "game": {
+            "id": "2026020498",
+            "date": "2026-12-09",
+            "startTimeUTC": "2026-12-10T02:30:00Z",
+            "away": "SJS",
+            "home": "LAK",
+            "venue": "Crypto.com Arena"
+          },
+          "previousDate": "2026-12-09",
+          "previousStartTimeUTC": "2026-12-10T03:00:00Z",
+          "detectedAt": "2026-09-01T18:22:58.754829+00:00"
+        },
+        "changed:2026020559:2026-12-19T00:30:00Z": {
+          "key": "changed:2026020559:2026-12-19T00:30:00Z",
+          "kind": "changed",
+          "game": {
+            "id": "2026020559",
+            "date": "2026-12-18",
+            "startTimeUTC": "2026-12-19T00:30:00Z",
+            "away": "MTL",
+            "home": "BUF",
+            "venue": "KeyBank Center"
+          },
+          "previousDate": "2026-12-18",
+          "previousStartTimeUTC": "2026-12-19T00:00:00Z",
+          "detectedAt": "2026-09-01T18:22:58.754829+00:00"
+        },
+        "changed:2026020744:2027-01-15T00:30:00Z": {
+          "key": "changed:2026020744:2027-01-15T00:30:00Z",
+          "kind": "changed",
+          "game": {
+            "id": "2026020744",
+            "date": "2027-01-14",
+            "startTimeUTC": "2027-01-15T00:30:00Z",
+            "away": "COL",
+            "home": "BUF",
+            "venue": "KeyBank Center"
+          },
+          "previousDate": "2027-01-14",
+          "previousStartTimeUTC": "2027-01-15T00:00:00Z",
+          "detectedAt": "2026-09-01T18:22:58.754829+00:00"
+        },
+        "changed:2026020751:2027-01-15T02:30:00Z": {
+          "key": "changed:2026020751:2027-01-15T02:30:00Z",
+          "kind": "changed",
+          "game": {
+            "id": "2026020751",
+            "date": "2027-01-14",
+            "startTimeUTC": "2027-01-15T02:30:00Z",
+            "away": "FLA",
+            "home": "MIN",
+            "venue": "Grand Casino Arena"
+          },
+          "previousDate": "2027-01-14",
+          "previousStartTimeUTC": "2027-01-15T02:00:00Z",
+          "detectedAt": "2026-09-01T18:22:58.754829+00:00"
+        },
+        "changed:2026020776:2027-01-18T19:00:00Z": {
+          "key": "changed:2026020776:2027-01-18T19:00:00Z",
+          "kind": "changed",
+          "game": {
+            "id": "2026020776",
+            "date": "2027-01-18",
+            "startTimeUTC": "2027-01-18T19:00:00Z",
+            "away": "MTL",
+            "home": "BUF",
+            "venue": "KeyBank Center"
+          },
+          "previousDate": "2027-01-18",
+          "previousStartTimeUTC": "2027-01-18T18:00:00Z",
+          "detectedAt": "2026-09-01T18:22:58.754829+00:00"
+        },
+        "changed:2026020851:2027-01-28T23:30:00Z": {
+          "key": "changed:2026020851:2027-01-28T23:30:00Z",
+          "kind": "changed",
+          "game": {
+            "id": "2026020851",
+            "date": "2027-01-28",
+            "startTimeUTC": "2027-01-28T23:30:00Z",
+            "away": "NYI",
+            "home": "CAR",
+            "venue": "Lenovo Center"
+          },
+          "previousDate": "2027-01-28",
+          "previousStartTimeUTC": "2027-01-29T00:00:00Z",
+          "detectedAt": "2026-09-01T18:22:58.754829+00:00"
+        },
+        "changed:2026020898:2027-02-10T00:30:00Z": {
+          "key": "changed:2026020898:2027-02-10T00:30:00Z",
+          "kind": "changed",
+          "game": {
+            "id": "2026020898",
+            "date": "2027-02-09",
+            "startTimeUTC": "2027-02-10T00:30:00Z",
+            "away": "COL",
+            "home": "CAR",
+            "venue": "Lenovo Center"
+          },
+          "previousDate": "2027-02-09",
+          "previousStartTimeUTC": "2027-02-10T00:00:00Z",
+          "detectedAt": "2026-09-01T18:22:58.754829+00:00"
+        },
+        "changed:2026020931:2027-02-15T23:00:00Z": {
+          "key": "changed:2026020931:2027-02-15T23:00:00Z",
+          "kind": "changed",
+          "game": {
+            "id": "2026020931",
+            "date": "2027-02-15",
+            "startTimeUTC": "2027-02-15T23:00:00Z",
+            "away": "BUF",
+            "home": "NYR",
+            "venue": "Madison Square Garden"
+          },
+          "previousDate": "2027-02-15",
+          "previousStartTimeUTC": "2027-02-15T20:00:00Z",
+          "detectedAt": "2026-09-01T18:22:58.754829+00:00"
+        },
+        "changed:2026020968:2027-02-20T18:30:00Z": {
+          "key": "changed:2026020968:2027-02-20T18:30:00Z",
+          "kind": "changed",
+          "game": {
+            "id": "2026020968",
+            "date": "2027-02-20",
+            "startTimeUTC": "2027-02-20T18:30:00Z",
+            "away": "BUF",
+            "home": "NJD",
+            "venue": "Prudential Center"
+          },
+          "previousDate": "2027-02-20",
+          "previousStartTimeUTC": "2027-02-20T20:00:00Z",
+          "detectedAt": "2026-09-01T18:22:58.754829+00:00"
+        },
+        "changed:2026020993:2027-02-24T00:30:00Z": {
+          "key": "changed:2026020993:2027-02-24T00:30:00Z",
+          "kind": "changed",
+          "game": {
+            "id": "2026020993",
+            "date": "2027-02-23",
+            "startTimeUTC": "2027-02-24T00:30:00Z",
+            "away": "CAR",
+            "home": "NJD",
+            "venue": "Prudential Center"
+          },
+          "previousDate": "2027-02-23",
+          "previousStartTimeUTC": "2027-02-24T00:00:00Z",
+          "detectedAt": "2026-09-01T18:22:58.754829+00:00"
+        },
+        "changed:2026021085:2027-03-07T20:00:00Z": {
+          "key": "changed:2026021085:2027-03-07T20:00:00Z",
+          "kind": "changed",
+          "game": {
+            "id": "2026021085",
+            "date": "2027-03-07",
+            "startTimeUTC": "2027-03-07T20:00:00Z",
+            "away": "BUF",
+            "home": "OTT",
+            "venue": "Canadian Tire Centre"
+          },
+          "previousDate": "2027-03-07",
+          "previousStartTimeUTC": "2027-03-07T22:00:00Z",
+          "detectedAt": "2026-09-01T18:22:58.754829+00:00"
+        },
+        "changed:2026021088:2027-03-08T02:30:00Z": {
+          "key": "changed:2026021088:2027-03-08T02:30:00Z",
+          "kind": "changed",
+          "game": {
+            "id": "2026021088",
+            "date": "2027-03-07",
+            "startTimeUTC": "2027-03-08T02:30:00Z",
+            "away": "WSH",
+            "home": "MIN",
+            "venue": "Grand Casino Arena"
+          },
+          "previousDate": "2027-03-07",
+          "previousStartTimeUTC": "2027-03-08T01:30:00Z",
+          "detectedAt": "2026-09-01T18:22:58.754829+00:00"
+        },
+        "changed:2026021103:2027-03-10T03:30:00Z": {
+          "key": "changed:2026021103:2027-03-10T03:30:00Z",
+          "kind": "changed",
+          "game": {
+            "id": "2026021103",
+            "date": "2027-03-09",
+            "startTimeUTC": "2027-03-10T03:30:00Z",
+            "away": "SJS",
+            "home": "VGK",
+            "venue": "T-Mobile Arena"
+          },
+          "previousDate": "2027-03-09",
+          "previousStartTimeUTC": "2027-03-10T03:00:00Z",
+          "detectedAt": "2026-09-01T18:22:58.754829+00:00"
+        },
+        "changed:2026021152:2027-03-17T02:30:00Z": {
+          "key": "changed:2026021152:2027-03-17T02:30:00Z",
+          "kind": "changed",
+          "game": {
+            "id": "2026021152",
+            "date": "2027-03-16",
+            "startTimeUTC": "2027-03-17T02:30:00Z",
+            "away": "CAR",
+            "home": "ANA",
+            "venue": "Honda Center"
+          },
+          "previousDate": "2027-03-16",
+          "previousStartTimeUTC": "2027-03-17T02:00:00Z",
+          "detectedAt": "2026-09-01T18:22:58.754829+00:00"
+        },
+        "changed:2026021156:2027-03-18T00:30:00Z": {
+          "key": "changed:2026021156:2027-03-18T00:30:00Z",
+          "kind": "changed",
+          "game": {
+            "id": "2026021156",
+            "date": "2027-03-17",
+            "startTimeUTC": "2027-03-18T00:30:00Z",
+            "away": "MIN",
+            "home": "COL",
+            "venue": "Ball Arena"
+          },
+          "previousDate": "2027-03-17",
+          "previousStartTimeUTC": "2027-03-18T01:00:00Z",
+          "detectedAt": "2026-09-01T18:22:58.754829+00:00"
+        },
+        "changed:2026021160:2027-03-18T23:30:00Z": {
+          "key": "changed:2026021160:2027-03-18T23:30:00Z",
+          "kind": "changed",
+          "game": {
+            "id": "2026021160",
+            "date": "2027-03-18",
+            "startTimeUTC": "2027-03-18T23:30:00Z",
+            "away": "WSH",
+            "home": "BUF",
+            "venue": "KeyBank Center"
+          },
+          "previousDate": "2027-03-18",
+          "previousStartTimeUTC": "2027-03-18T23:00:00Z",
+          "detectedAt": "2026-09-01T18:22:58.754829+00:00"
+        },
+        "changed:2026021228:2027-03-27T18:00:00Z": {
+          "key": "changed:2026021228:2027-03-27T18:00:00Z",
+          "kind": "changed",
+          "game": {
+            "id": "2026021228",
+            "date": "2027-03-27",
+            "startTimeUTC": "2027-03-27T18:00:00Z",
+            "away": "SEA",
+            "home": "MIN",
+            "venue": "Grand Casino Arena"
+          },
+          "previousDate": "2027-03-27",
+          "previousStartTimeUTC": "2027-03-27T20:00:00Z",
+          "detectedAt": "2026-09-01T18:22:58.754829+00:00"
+        }
+      }
     }
   }
 }

@@ -3,8 +3,9 @@ name: Generate scheduled NHL data
 on:
   workflow_dispatch:
   schedule:
-    # GitHub cron is UTC. Data is rendered for Europe/London in the application.
-    - cron: "20 7,12,18,23 * * *"
+    # Refresh the full league schedule every two hours. This picks up NHL start-time
+    # changes quickly while the app continues to render them in Europe/London time.
+    - cron: "20 */2 * * *"
 
 permissions:
   contents: write
