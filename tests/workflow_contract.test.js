@@ -31,10 +31,14 @@ assert.match(deploy, /Validate committed artifact without refreshing upstream da
   "code/artifact deployment does not perform a full NHL refresh");
 assert.match(deploy, /check_artifact_health\.py/,
   "committed artifacts pass the freshness and completeness gate before deployment");
+assert.match(deploy, /github\.event_name == 'workflow_run'[\s\S]{0,120}--skip-age-check/,
+  "code-only deploys check integrity without creating false stale-data failures");
 assert.match(scheduled, /check_artifact_health\.py/,
   "scheduled generation records artifact health before committing data");
 assert.match(scheduled, /git add site\/data site\/build-meta\.json data\/cache/,
   "scheduled generation commits the metadata that describes its refreshed artifact");
+assert.match(scheduled, /for attempt in 1 2[\s\S]{0,260}sleep 30/,
+  "a transient provider failure is retried before the scheduled workflow sends a failure notification");
 assert.match(live, /check_artifact_health\.py/,
   "live deployments use the same artifact health gate");
 for (const workflow of [deploy, live]) {
@@ -60,6 +64,10 @@ assert.match(production, /verify_production\.py/);
 assert.match(production, /CLOUDFLARE_ACCESS_CLIENT_ID/);
 assert.doesNotMatch(production, /update_tracker|api-web\.nhle|moneypuck/,
   "production verification never refreshes upstream provider data");
+assert.doesNotMatch(performance, /lhci autorun/,
+  "performance checks avoid the vulnerable Lighthouse CLI dependency chain");
+assert.match(performance, /Home mobile LCP\|cumulative layout shift\|every route has no serious automated accessibility violations/,
+  "the replacement performance workflow preserves speed, stability and accessibility coverage");
 assert.match(mail, /site\/data\/puckpedia-mail\.json/);
 assert.doesNotMatch(mail, /update_tracker|deploy-pages|wrangler/,
   "mail-feed validation is isolated from full NHL refreshes and deployments");

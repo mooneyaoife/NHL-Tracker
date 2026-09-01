@@ -60,6 +60,20 @@ class ArtifactHealthTests(unittest.TestCase):
         self.assertFalse(report["passed"])
         self.assertTrue(any("exceeds" in error for error in report["errors"]))
 
+    def test_code_deploy_can_check_integrity_without_blocking_on_age(self):
+        with tempfile.TemporaryDirectory() as directory:
+            path = Path(directory) / "tracker.json"
+            tracker = {"meta": {"freshness": {"status": "fresh",
+                "schedule": {"complete": True}, "rosters": {"complete": True}}},
+                "scheduleRelease": {"complete": True}, "rosters": {"BUF": [{}]}}
+            path.write_text(json.dumps(tracker), encoding="utf-8")
+            data_hash = f"sha256:{hashlib.sha256(path.read_bytes()).hexdigest()}"
+            metadata = {"sourceCommit": "abc123", "dataGeneratedAt": (NOW - timedelta(hours=240)).isoformat(),
+                "dataHash": data_hash, "freshness": tracker["meta"]["freshness"]}
+            report = HEALTH.assess_artifact(metadata, tracker, path, NOW, 24, 72, enforce_age=False)
+        self.assertTrue(report["passed"])
+        self.assertFalse(report["ageEnforced"])
+
     def test_incomplete_artifact_without_safe_snapshot_is_blocked(self):
         report = self.assess(status="stale", schedule_complete=False)
         self.assertFalse(report["passed"])

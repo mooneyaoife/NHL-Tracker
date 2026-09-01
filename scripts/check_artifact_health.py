@@ -42,7 +42,7 @@ def clean(value: object) -> str:
 
 def assess_payload(metadata: dict, tracker: dict, actual_hash: str,
         now: datetime | None = None, max_fresh_age_hours: float = 24,
-        max_fallback_age_hours: float = 72) -> dict:
+        max_fallback_age_hours: float = 72, enforce_age: bool = True) -> dict:
     now = (now or datetime.now(timezone.utc)).astimezone(timezone.utc)
     freshness = metadata.get("freshness") if isinstance(metadata.get("freshness"), dict) else {}
     tracker_meta = tracker.get("meta") if isinstance(tracker.get("meta"), dict) else {}
@@ -97,7 +97,7 @@ def assess_payload(metadata: dict, tracker: dict, actual_hash: str,
         errors.append("artifact has no complete schedule snapshot")
     if not rosters_complete:
         errors.append("artifact has no complete roster snapshot or safe fallback")
-    if age_hours > age_limit:
+    if enforce_age and age_hours > age_limit:
         errors.append(f"artifact age {age_hours:.1f}h exceeds the {age_limit:g}h {status} limit")
 
     expected_games = schedule.get("expectedGamesPerTeam")
@@ -115,6 +115,7 @@ def assess_payload(metadata: dict, tracker: dict, actual_hash: str,
         "dataGeneratedAt": generated_at.isoformat() if generated_at else "unknown",
         "ageHours": age_hours,
         "ageLimitHours": age_limit,
+        "ageEnforced": enforce_age,
         "dataHash": actual_hash,
         "schedule": schedule_detail,
         "rosters": "complete" if rosters_complete else "incomplete",
@@ -124,9 +125,9 @@ def assess_payload(metadata: dict, tracker: dict, actual_hash: str,
 
 def assess_artifact(metadata: dict, tracker: dict, tracker_path: Path,
         now: datetime | None = None, max_fresh_age_hours: float = 24,
-        max_fallback_age_hours: float = 72) -> dict:
+        max_fallback_age_hours: float = 72, enforce_age: bool = True) -> dict:
     return assess_payload(metadata, tracker, digest(tracker_path), now,
-        max_fresh_age_hours, max_fallback_age_hours)
+        max_fresh_age_hours, max_fallback_age_hours, enforce_age)
 
 
 def markdown(report: dict) -> str:
@@ -140,7 +141,8 @@ def markdown(report: dict) -> str:
         f"| Gate | **{result}** |",
         f"| Freshness | `{clean(report['status'])}` |",
         f"| Data generated | `{clean(report['dataGeneratedAt'])}` |",
-        f"| Data age | {report['ageHours']:.1f}h / {report['ageLimitHours']:g}h limit |",
+        f"| Data age | {report['ageHours']:.1f}h / "
+        f"{'%g' % report['ageLimitHours'] + 'h limit' if report['ageEnforced'] else 'informational only'} |",
         f"| Source commit | `{clean(report['sourceCommit'])}` |",
         f"| Data hash | `{clean(report['dataHash'])}` |",
         f"| Schedule | {clean(report['schedule'])} |",
@@ -166,6 +168,8 @@ def main() -> int:
     parser.add_argument("--tracker", type=Path, default=DEFAULT_TRACKER)
     parser.add_argument("--max-fresh-age-hours", type=positive_hours, default=24)
     parser.add_argument("--max-fallback-age-hours", type=positive_hours, default=72)
+    parser.add_argument("--skip-age-check", action="store_true",
+        help="Validate artifact integrity and completeness without blocking on age")
     args = parser.parse_args()
 
     try:
@@ -173,7 +177,8 @@ def main() -> int:
         tracker = json.loads(args.tracker.read_text(encoding="utf-8"))
         report = assess_artifact(metadata, tracker, args.tracker,
             max_fresh_age_hours=args.max_fresh_age_hours,
-            max_fallback_age_hours=args.max_fallback_age_hours)
+            max_fallback_age_hours=args.max_fallback_age_hours,
+            enforce_age=not args.skip_age_check)
     except (OSError, json.JSONDecodeError, TypeError, ValueError) as exc:
         print(f"artifact health check failed: {exc}", file=sys.stderr)
         return 1

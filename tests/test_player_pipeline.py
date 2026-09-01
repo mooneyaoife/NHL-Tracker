@@ -121,6 +121,22 @@ class PlayerPipelineTests(unittest.TestCase):
 
 
 class MoneyPuckPipelineTests(unittest.TestCase):
+    def test_unpublished_new_season_is_recorded_and_retried_without_warning_state(self):
+        result = update_tracker.moneypuck_unavailable_payload({}, RuntimeError("HTTP Error 404: Not Found"),
+            "2026-09-01T12:00:00+00:00")
+        self.assertEqual(result["status"], "Awaiting new-season data")
+        self.assertEqual(result["availabilityReason"], "season-files-not-published")
+        self.assertEqual(result["lastCheckedAt"], "2026-09-01T12:00:00+00:00")
+
+    def test_temporary_moneypuck_error_retains_current_season_data(self):
+        previous = {"season": update_tracker.SEASON, "status": "Ready",
+            "teams": [{"team": "BUF"}], "skaters": [], "goalies": [], "teamGames": []}
+        result = update_tracker.moneypuck_unavailable_payload(previous, RuntimeError("timed out"),
+            "2026-09-01T12:00:00+00:00")
+        self.assertEqual(result["status"], "Stale fallback")
+        self.assertEqual(result["availabilityReason"], "temporary-source-error")
+        self.assertEqual(result["teams"], previous["teams"])
+
     @patch.object(update_tracker, "load_moneypuck_team_games", return_value=([], []))
     @patch.object(update_tracker, "fetch_csv")
     def test_derived_values_require_every_numeric_operand(self, fetch_csv, _team_games):

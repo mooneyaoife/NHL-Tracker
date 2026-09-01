@@ -487,6 +487,25 @@ def load_moneypuck(previous: dict | None = None) -> dict:
     return {"credit":"Data: MoneyPuck.com","updatedAt":datetime.now(timezone.utc).isoformat(),"season":SEASON,"status":"Ready","teams":teams,"specialTeams":special_teams,"skaters":skaters,"goalies":goalies,"lines":lines,"simulations":simulations,"teamGames":team_games,"specialTeamGames":special_team_games}
 
 
+def moneypuck_unavailable_payload(previous: dict | None, error: Exception,
+        checked_at: str | None = None) -> dict:
+    """Retain usable current-season data and describe expected publication gaps."""
+    checked_at = checked_at or datetime.now(timezone.utc).isoformat()
+    previous = previous if isinstance(previous, dict) else {}
+    same_season = str(previous.get("season") or "") == SEASON
+    has_data = any(previous.get(key) for key in ("teams", "skaters", "goalies", "teamGames"))
+    reason = "season-files-not-published" if "404" in str(error) else "temporary-source-error"
+    if same_season and has_data:
+        payload = {**previous, "status": "Stale fallback"}
+    else:
+        payload = {"credit":"Data: MoneyPuck.com","season":SEASON,"updatedAt":None,
+            "status":"Awaiting new-season data","teams":[],"specialTeams":[],"skaters":[],
+            "goalies":[],"lines":[],"simulations":[],"teamGames":[],"specialTeamGames":[]}
+    payload["lastCheckedAt"] = checked_at
+    payload["availabilityReason"] = reason
+    return payload
+
+
 def normalise_player_name(value: str) -> str:
     """Create a stable comparison key without discarding position or team identity."""
     decomposed = unicodedata.normalize("NFD", str(value or ""))
@@ -1952,8 +1971,9 @@ def main() -> None:
     try:
         moneypuck = load_moneypuck(previous_same_season.get("moneypuck", {}))
     except Exception as exc:
-        print(f"warning: MoneyPuck data unavailable: {exc}", file=sys.stderr)
-        moneypuck = previous_same_season.get("moneypuck") or {"credit":"Data: MoneyPuck.com","season":SEASON,"updatedAt":None,"status":"Awaiting new-season data","teams":[],"specialTeams":[],"skaters":[],"goalies":[],"lines":[],"simulations":[],"teamGames":[],"specialTeamGames":[]}
+        moneypuck = moneypuck_unavailable_payload(previous_same_season.get("moneypuck"), exc)
+        stream = sys.stdout if moneypuck["availabilityReason"] == "season-files-not-published" else sys.stderr
+        print(f"MoneyPuck status: {moneypuck['status']} ({moneypuck['availabilityReason']})", file=stream)
     game_library = build_game_library(schedules, rosters, moneypuck, previous_same_season, schedule_evidence)
     natural_stat_trick = load_natural_stat_trick(standings, rosters)
     player_coverage = player_data_coverage(rosters, players, official_players, moneypuck, natural_stat_trick)

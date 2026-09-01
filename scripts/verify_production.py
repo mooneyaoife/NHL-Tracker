@@ -49,7 +49,8 @@ def decode_json(body: bytes, label: str) -> dict:
 
 def verify_site(url: str, fetch: Fetch, headers: dict[str, str] | None = None,
         now: datetime | None = None, require_health: bool = False,
-        max_fresh_age_hours: float = 24, max_fallback_age_hours: float = 72) -> dict:
+        max_fresh_age_hours: float = 24, max_fallback_age_hours: float = 72,
+        enforce_age: bool = True) -> dict:
     root = base_url(url)
     headers = headers or {}
     errors: list[str] = []
@@ -63,7 +64,7 @@ def verify_site(url: str, fetch: Fetch, headers: dict[str, str] | None = None,
     metadata = decode_json(metadata_body, "build metadata")
     tracker = decode_json(tracker_body, "tracker data")
     health = assess_payload(metadata, tracker, digest_bytes(tracker_body), now,
-        max_fresh_age_hours, max_fallback_age_hours)
+        max_fresh_age_hours, max_fallback_age_hours, enforce_age)
     errors.extend(health["errors"])
 
     api_health = None
@@ -88,10 +89,11 @@ def verify_site(url: str, fetch: Fetch, headers: dict[str, str] | None = None,
 
 def verify_production(public_url: str, private_url: str = "", access_id: str = "",
         access_secret: str = "", fetch: Fetch = fetch_bytes, now: datetime | None = None,
-        max_fresh_age_hours: float = 24, max_fallback_age_hours: float = 72) -> dict:
+        max_fresh_age_hours: float = 24, max_fallback_age_hours: float = 72,
+        enforce_age: bool = True) -> dict:
     sites = [verify_site(public_url, fetch, now=now,
         max_fresh_age_hours=max_fresh_age_hours,
-        max_fallback_age_hours=max_fallback_age_hours)]
+        max_fallback_age_hours=max_fallback_age_hours, enforce_age=enforce_age)]
     if private_url:
         if not access_id or not access_secret:
             raise ValueError("Cloudflare Access credentials are required for the private deployment")
@@ -100,7 +102,7 @@ def verify_production(public_url: str, private_url: str = "", access_id: str = "
             "CF-Access-Client-Secret": access_secret,
         }
         private = verify_site(private_url, fetch, headers, now, True,
-            max_fresh_age_hours, max_fallback_age_hours)
+            max_fresh_age_hours, max_fallback_age_hours, enforce_age)
         sites.append(private)
         public = sites[0]
         if private["sourceCommit"] != public["sourceCommit"]:
@@ -138,6 +140,8 @@ def main() -> int:
     parser.add_argument("--access-secret", default=os.environ.get("CLOUDFLARE_ACCESS_CLIENT_SECRET", ""))
     parser.add_argument("--max-fresh-age-hours", type=positive, default=24)
     parser.add_argument("--max-fallback-age-hours", type=positive, default=72)
+    parser.add_argument("--skip-age-check", action="store_true",
+        help="Validate deployed integrity and completeness without blocking on age")
     parser.add_argument("--attempts", type=int, default=1)
     parser.add_argument("--retry-delay", type=positive, default=5)
     args = parser.parse_args()
@@ -149,7 +153,8 @@ def main() -> int:
         try:
             report = verify_production(args.public_url, args.private_url, args.access_id,
                 args.access_secret, max_fresh_age_hours=args.max_fresh_age_hours,
-                max_fallback_age_hours=args.max_fallback_age_hours)
+                max_fallback_age_hours=args.max_fallback_age_hours,
+                enforce_age=not args.skip_age_check)
             if report["passed"] or attempt == args.attempts:
                 break
         except (HTTPError, URLError, OSError, TypeError, ValueError) as exc:

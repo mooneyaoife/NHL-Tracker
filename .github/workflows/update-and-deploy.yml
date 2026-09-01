@@ -26,7 +26,17 @@ jobs:
         with:
           node-version: "22"
       - name: Update NHL data
-        run: python scripts/update_tracker.py
+        run: |
+          for attempt in 1 2; do
+            if python scripts/update_tracker.py; then
+              exit 0
+            fi
+            if [ "$attempt" -eq 1 ]; then
+              echo "NHL update failed once; retrying in 30 seconds."
+              sleep 30
+            fi
+          done
+          exit 1
       - name: Validate generated data and application contracts
         run: |
           python scripts/generate_build_metadata.py

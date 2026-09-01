@@ -80,6 +80,12 @@ class ProductionVerifyTests(unittest.TestCase):
         self.assertFalse(report["passed"])
         self.assertTrue(any("exceeds" in error for error in report["sites"][0]["errors"]))
 
+    def test_code_deploy_verifies_old_but_complete_artifact_without_age_gate(self):
+        rows = fixtures(age=240)
+        report = VERIFY.verify_production("https://public.test/",
+            fetch=self.fetcher({"https://public.test/": rows}), now=NOW, enforce_age=False)
+        self.assertTrue(report["passed"])
+
 
 if __name__ == "__main__":
     unittest.main()

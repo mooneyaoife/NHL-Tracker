@@ -37,5 +37,9 @@ jobs:
         run: python scripts/check_performance_budgets.py
       - name: Serve the committed artifact
         run: python scripts/serve_static_gzip.py --port 4173 --directory site >/tmp/nhl-tracker-http.log 2>&1 &
-      - name: Check throttled mobile LCP and accessibility
-        run: pnpm exec lhci autorun
+      - run: pnpm exec playwright install --with-deps chromium
+      - name: Check mobile LCP, layout stability and route accessibility
+        run: >-
+          pnpm exec playwright test
+          tests/browser/performance.spec.mjs tests/browser/tracker.spec.mjs
+          --grep "Home mobile LCP|cumulative layout shift|every route has no serious automated accessibility violations"
