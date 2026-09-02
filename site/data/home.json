@@ -1,7 +1,7 @@
 {
   "schema": 3,
-  "sourceCommit": "969e190edbc49866fe5d90e76893fe7b08e571b4",
-  "dataGeneratedAt": "2026-09-02T11:28:39.552581+00:00",
+  "sourceCommit": "8f4bc515ef6de189e520d4f4b5e4327599ceeacf",
+  "dataGeneratedAt": "2026-09-02T16:41:07.052398+00:00",
   "season": "20262027",
   "version": "5.74.0",
   "trackedTeams": [
@@ -393,8 +393,8 @@
   },
   "freshness": {
     "status": "fresh",
-    "checkedAt": "2026-09-02T11:28:39.552591+00:00",
-    "lastSuccessfulAt": "2026-09-02T11:28:39.552593+00:00",
+    "checkedAt": "2026-09-02T16:41:07.052412+00:00",
+    "lastSuccessfulAt": "2026-09-02T16:41:07.052414+00:00",
     "ageSeconds": 0,
     "failedTeams": [],
     "schedule": {
@@ -1669,8 +1669,8 @@
   "continuity": {
     "schema": 3,
     "season": "20262027",
-    "capturedAt": "2026-09-02T11:28:39.552581+00:00",
-    "updatedAt": "2026-09-02T11:28:39.552581+00:00",
+    "capturedAt": "2026-09-02T16:41:07.052398+00:00",
+    "updatedAt": "2026-09-02T16:41:07.052398+00:00",
     "finished": {},
     "upcoming": {
       "2026020001": {
@@ -2179,6 +2179,27 @@
       }
     },
     "roster": {
+      "NJD|Added|8482146|2026-09-02T16:41:07.048419+00:00": {
+        "key": "NJD|Added|8482146|2026-09-02T16:41:07.048419+00:00",
+        "team": "NJD",
+        "direction": "Added",
+        "name": "Luke Evangelista",
+        "detectedAt": "2026-09-02T16:41:07.048419+00:00"
+      },
+      "NSH|Departed|8482146|2026-09-02T16:41:07.048419+00:00": {
+        "key": "NSH|Departed|8482146|2026-09-02T16:41:07.048419+00:00",
+        "team": "NSH",
+        "direction": "Departed",
+        "name": "Luke Evangelista",
+        "detectedAt": "2026-09-02T16:41:07.048419+00:00"
+      },
+      "NYR|Added|8480009|2026-09-02T16:41:07.048419+00:00": {
+        "key": "NYR|Added|8480009|2026-09-02T16:41:07.048419+00:00",
+        "team": "NYR",
+        "direction": "Added",
+        "name": "Eeli Tolvanen",
+        "detectedAt": "2026-09-02T16:41:07.048419+00:00"
+      },
       "TBL|Added|8485386|2026-09-01T18:22:58.714544+00:00": {
         "key": "TBL|Added|8485386|2026-09-01T18:22:58.714544+00:00",
         "team": "TBL",
@@ -2492,27 +2513,6 @@
         "team": "BUF",
         "direction": "Added",
         "name": "Jason Polin",
-        "detectedAt": "2026-09-01T18:22:58.714544+00:00"
-      },
-      "BUF|Added|8482479|2026-09-01T18:22:58.714544+00:00": {
-        "key": "BUF|Added|8482479|2026-09-01T18:22:58.714544+00:00",
-        "team": "BUF",
-        "direction": "Added",
-        "name": "Trevor Kuntar",
-        "detectedAt": "2026-09-01T18:22:58.714544+00:00"
-      },
-      "BUF|Added|8483755|2026-09-01T18:22:58.714544+00:00": {
-        "key": "BUF|Added|8483755|2026-09-01T18:22:58.714544+00:00",
-        "team": "BUF",
-        "direction": "Added",
-        "name": "Jake Richard",
-        "detectedAt": "2026-09-01T18:22:58.714544+00:00"
-      },
-      "BUF|Added|8481683|2026-09-01T18:22:58.714544+00:00": {
-        "key": "BUF|Added|8481683|2026-09-01T18:22:58.714544+00:00",
-        "team": "BUF",
-        "direction": "Added",
-        "name": "Aidan McDonough",
         "detectedAt": "2026-09-01T18:22:58.714544+00:00"
       }
     },
