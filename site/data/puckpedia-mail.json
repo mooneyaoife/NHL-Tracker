@@ -1,7 +1,14 @@
 {
   "schema": 1,
-  "updatedAt": "2026-09-01T23:40:19.213Z",
+  "updatedAt": "2026-09-02T05:40:12.920Z",
   "items": [
+    {
+      "id": "0c498ea49ca2b6802b5c",
+      "title": "The New Jersey Devils acquire Luke Evangelista from the Nashville Predators for a conditional 2028 1st round pick (COL) and a 2028 2nd round pick",
+      "publishedAt": "2026-09-02T00:51:15.000Z",
+      "category": "Trade",
+      "url": "https://puckpedia.com/trade/1204?utm_source=email&utm_medium=email&utm_campaign=trade&utm_content=primary"
+    },
     {
       "id": "488b1d1f5d1bc9727fae",
       "title": "Eeli Tolvanen Signs a 1-Year, $1.50M Contract with the New York Rangers",
@@ -204,13 +211,6 @@
       "publishedAt": "2026-07-23T21:32:10.000Z",
       "category": "Contract",
       "url": "https://puckpedia.com/signing/10759?utm_source=email&utm_medium=email&utm_campaign=signing&utm_content=primary"
-    },
-    {
-      "id": "dd95ac736e4bdd62ab42",
-      "title": "Ronan Seeley Signs a 1-Year, $850K Contract with the Carolina Hurricanes",
-      "publishedAt": "2026-07-23T20:30:11.000Z",
-      "category": "Contract",
-      "url": "https://puckpedia.com/signing/10758?utm_source=email&utm_medium=email&utm_campaign=signing&utm_content=primary"
     }
   ]
 }
