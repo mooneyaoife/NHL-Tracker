@@ -1,7 +1,7 @@
 {
   "schema": 3,
-  "sourceCommit": "36fe74ac292c4d3095688f72c281406f5db1a047",
-  "dataGeneratedAt": "2026-09-03T17:54:18.672455+00:00",
+  "sourceCommit": "e3954f0c73099572e5096af156efa0972a286fd0",
+  "dataGeneratedAt": "2026-09-03T21:08:02.364796+00:00",
   "season": "20262027",
   "version": "5.74.0",
   "trackedTeams": [
@@ -393,8 +393,8 @@
   },
   "freshness": {
     "status": "fresh",
-    "checkedAt": "2026-09-03T17:54:18.672468+00:00",
-    "lastSuccessfulAt": "2026-09-03T17:54:18.672471+00:00",
+    "checkedAt": "2026-09-03T21:08:02.364810+00:00",
+    "lastSuccessfulAt": "2026-09-03T21:08:02.364813+00:00",
     "ageSeconds": 0,
     "failedTeams": [],
     "schedule": {
@@ -1669,8 +1669,8 @@
   "continuity": {
     "schema": 3,
     "season": "20262027",
-    "capturedAt": "2026-09-03T17:54:18.672455+00:00",
-    "updatedAt": "2026-09-03T17:54:18.672455+00:00",
+    "capturedAt": "2026-09-03T21:08:02.364796+00:00",
+    "updatedAt": "2026-09-03T21:08:02.364796+00:00",
     "finished": {},
     "upcoming": {
       "2026020001": {
@@ -2179,6 +2179,90 @@
       }
     },
     "roster": {
+      "VGK|Departed|8485138|2026-09-03T21:08:02.360664+00:00": {
+        "key": "VGK|Departed|8485138|2026-09-03T21:08:02.360664+00:00",
+        "team": "VGK",
+        "direction": "Departed",
+        "name": "Viliam Kmec",
+        "detectedAt": "2026-09-03T21:08:02.360664+00:00"
+      },
+      "VGK|Departed|8484466|2026-09-03T21:08:02.360664+00:00": {
+        "key": "VGK|Departed|8484466|2026-09-03T21:08:02.360664+00:00",
+        "team": "VGK",
+        "direction": "Departed",
+        "name": "Tuomas Uronen",
+        "detectedAt": "2026-09-03T21:08:02.360664+00:00"
+      },
+      "VGK|Departed|8485002|2026-09-03T21:08:02.360664+00:00": {
+        "key": "VGK|Departed|8485002|2026-09-03T21:08:02.360664+00:00",
+        "team": "VGK",
+        "direction": "Departed",
+        "name": "Pavel Moysevich",
+        "detectedAt": "2026-09-03T21:08:02.360664+00:00"
+      },
+      "VGK|Departed|8483829|2026-09-03T21:08:02.360664+00:00": {
+        "key": "VGK|Departed|8483829|2026-09-03T21:08:02.360664+00:00",
+        "team": "VGK",
+        "direction": "Departed",
+        "name": "Joe Fleming",
+        "detectedAt": "2026-09-03T21:08:02.360664+00:00"
+      },
+      "VGK|Departed|8485057|2026-09-03T21:08:02.360664+00:00": {
+        "key": "VGK|Departed|8485057|2026-09-03T21:08:02.360664+00:00",
+        "team": "VGK",
+        "direction": "Departed",
+        "name": "Trent Swick",
+        "detectedAt": "2026-09-03T21:08:02.360664+00:00"
+      },
+      "VGK|Departed|8484532|2026-09-03T21:08:02.360664+00:00": {
+        "key": "VGK|Departed|8484532|2026-09-03T21:08:02.360664+00:00",
+        "team": "VGK",
+        "direction": "Departed",
+        "name": "Bronson Ride",
+        "detectedAt": "2026-09-03T21:08:02.360664+00:00"
+      },
+      "VGK|Departed|8482512|2026-09-03T21:08:02.360664+00:00": {
+        "key": "VGK|Departed|8482512|2026-09-03T21:08:02.360664+00:00",
+        "team": "VGK",
+        "direction": "Departed",
+        "name": "Jackson Hallum",
+        "detectedAt": "2026-09-03T21:08:02.360664+00:00"
+      },
+      "VGK|Departed|8483523|2026-09-03T21:08:02.360664+00:00": {
+        "key": "VGK|Departed|8483523|2026-09-03T21:08:02.360664+00:00",
+        "team": "VGK",
+        "direction": "Departed",
+        "name": "Cameron Whitehead",
+        "detectedAt": "2026-09-03T21:08:02.360664+00:00"
+      },
+      "VGK|Departed|8483451|2026-09-03T21:08:02.360664+00:00": {
+        "key": "VGK|Departed|8483451|2026-09-03T21:08:02.360664+00:00",
+        "team": "VGK",
+        "direction": "Departed",
+        "name": "Jordan Gustafson",
+        "detectedAt": "2026-09-03T21:08:02.360664+00:00"
+      },
+      "VGK|Departed|8485661|2026-09-03T21:08:02.360664+00:00": {
+        "key": "VGK|Departed|8485661|2026-09-03T21:08:02.360664+00:00",
+        "team": "VGK",
+        "direction": "Departed",
+        "name": "Alexander Weiermair",
+        "detectedAt": "2026-09-03T21:08:02.360664+00:00"
+      },
+      "VGK|Departed|8483748|2026-09-03T21:08:02.360664+00:00": {
+        "key": "VGK|Departed|8483748|2026-09-03T21:08:02.360664+00:00",
+        "team": "VGK",
+        "direction": "Departed",
+        "name": "Ben Hemmerling",
+        "detectedAt": "2026-09-03T21:08:02.360664+00:00"
+      },
+      "VGK|Departed|8484155|2026-09-03T21:08:02.360664+00:00": {
+        "key": "VGK|Departed|8484155|2026-09-03T21:08:02.360664+00:00",
+        "team": "VGK",
+        "direction": "Departed",
+        "name": "Mathieu Cataford",
+        "detectedAt": "2026-09-03T21:08:02.360664+00:00"
+      },
       "NJD|Added|8482146|2026-09-02T16:41:07.048419+00:00": {
         "key": "NJD|Added|8482146|2026-09-02T16:41:07.048419+00:00",
         "team": "NJD",
@@ -2429,90 +2513,6 @@
         "team": "DAL",
         "direction": "Added",
         "name": "Dylan Hryckowian",
-        "detectedAt": "2026-09-01T18:22:58.714544+00:00"
-      },
-      "DAL|Added|8483514|2026-09-01T18:22:58.714544+00:00": {
-        "key": "DAL|Added|8483514|2026-09-01T18:22:58.714544+00:00",
-        "team": "DAL",
-        "direction": "Added",
-        "name": "Matthew Seminoff",
-        "detectedAt": "2026-09-01T18:22:58.714544+00:00"
-      },
-      "DAL|Added|8478888|2026-09-01T18:22:58.714544+00:00": {
-        "key": "DAL|Added|8478888|2026-09-01T18:22:58.714544+00:00",
-        "team": "DAL",
-        "direction": "Added",
-        "name": "Cameron Hughes",
-        "detectedAt": "2026-09-01T18:22:58.714544+00:00"
-      },
-      "DAL|Added|8482214|2026-09-01T18:22:58.714544+00:00": {
-        "key": "DAL|Added|8482214|2026-09-01T18:22:58.714544+00:00",
-        "team": "DAL",
-        "direction": "Added",
-        "name": "Artem Shlaine",
-        "detectedAt": "2026-09-01T18:22:58.714544+00:00"
-      },
-      "DAL|Added|8484194|2026-09-01T18:22:58.714544+00:00": {
-        "key": "DAL|Added|8484194|2026-09-01T18:22:58.714544+00:00",
-        "team": "DAL",
-        "direction": "Added",
-        "name": "Aram Minnetian",
-        "detectedAt": "2026-09-01T18:22:58.714544+00:00"
-      },
-      "DAL|Added|8482919|2026-09-01T18:22:58.714544+00:00": {
-        "key": "DAL|Added|8482919|2026-09-01T18:22:58.714544+00:00",
-        "team": "DAL",
-        "direction": "Added",
-        "name": "Justin Ertel",
-        "detectedAt": "2026-09-01T18:22:58.714544+00:00"
-      },
-      "DAL|Added|8486126|2026-09-01T18:22:58.714544+00:00": {
-        "key": "DAL|Added|8486126|2026-09-01T18:22:58.714544+00:00",
-        "team": "DAL",
-        "direction": "Added",
-        "name": "Jack Anderson",
-        "detectedAt": "2026-09-01T18:22:58.714544+00:00"
-      },
-      "DAL|Added|8484468|2026-09-01T18:22:58.714544+00:00": {
-        "key": "DAL|Added|8484468|2026-09-01T18:22:58.714544+00:00",
-        "team": "DAL",
-        "direction": "Added",
-        "name": "Angus MacDonell",
-        "detectedAt": "2026-09-01T18:22:58.714544+00:00"
-      },
-      "DAL|Added|8484822|2026-09-01T18:22:58.714544+00:00": {
-        "key": "DAL|Added|8484822|2026-09-01T18:22:58.714544+00:00",
-        "team": "DAL",
-        "direction": "Added",
-        "name": "Luke Krys",
-        "detectedAt": "2026-09-01T18:22:58.714544+00:00"
-      },
-      "BUF|Added|8484192|2026-09-01T18:22:58.714544+00:00": {
-        "key": "BUF|Added|8484192|2026-09-01T18:22:58.714544+00:00",
-        "team": "BUF",
-        "direction": "Added",
-        "name": "Gavin McCarthy",
-        "detectedAt": "2026-09-01T18:22:58.714544+00:00"
-      },
-      "BUF|Added|8480056|2026-09-01T18:22:58.714544+00:00": {
-        "key": "BUF|Added|8480056|2026-09-01T18:22:58.714544+00:00",
-        "team": "BUF",
-        "direction": "Added",
-        "name": "Jack Rathbone",
-        "detectedAt": "2026-09-01T18:22:58.714544+00:00"
-      },
-      "BUF|Added|8483475|2026-09-01T18:22:58.714544+00:00": {
-        "key": "BUF|Added|8483475|2026-09-01T18:22:58.714544+00:00",
-        "team": "BUF",
-        "direction": "Added",
-        "name": "Topias Leinonen",
-        "detectedAt": "2026-09-01T18:22:58.714544+00:00"
-      },
-      "BUF|Added|8484255|2026-09-01T18:22:58.714544+00:00": {
-        "key": "BUF|Added|8484255|2026-09-01T18:22:58.714544+00:00",
-        "team": "BUF",
-        "direction": "Added",
-        "name": "Jason Polin",
         "detectedAt": "2026-09-01T18:22:58.714544+00:00"
       }
     },
