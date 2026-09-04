@@ -1,7 +1,21 @@
 {
   "schema": 1,
-  "updatedAt": "2026-09-04T17:40:20.364Z",
+  "updatedAt": "2026-09-04T23:40:15.802Z",
   "items": [
+    {
+      "id": "d342840c20327595937a",
+      "title": "Zeev Buium Signs an 8-Year, $75.04M Contract with the Vancouver Canucks",
+      "publishedAt": "2026-09-04T21:51:10.000Z",
+      "category": "Contract",
+      "url": "https://puckpedia.com/signing/10790?utm_source=email&utm_medium=email&utm_campaign=signing&utm_content=primary"
+    },
+    {
+      "id": "12b6735ed21288651d35",
+      "title": "Zach Metsa Signs a 1-Year, $900K Contract with the Buffalo Sabres",
+      "publishedAt": "2026-09-04T19:06:12.000Z",
+      "category": "Contract",
+      "url": "https://puckpedia.com/signing/10789?utm_source=email&utm_medium=email&utm_campaign=signing&utm_content=primary"
+    },
     {
       "id": "7bf540e1e0e2d3437cd8",
       "title": "Jacob Melanson Signs a 3-Year, $4.35M Contract with the Seattle Kraken",
@@ -197,20 +211,6 @@
       "publishedAt": "2026-07-25T20:26:09.000Z",
       "category": "Contract",
       "url": "https://puckpedia.com/signing/10763?utm_source=email&utm_medium=email&utm_campaign=signing&utm_content=primary"
-    },
-    {
-      "id": "900ff5e2ea16705623ed",
-      "title": "Akira Schmid Signs a 2-Year, $4.00M Contract with the Florida Panthers",
-      "publishedAt": "2026-07-24T20:07:09.000Z",
-      "category": "Contract",
-      "url": "https://puckpedia.com/signing/10762?utm_source=email&utm_medium=email&utm_campaign=signing&utm_content=primary"
-    },
-    {
-      "id": "77f765f688a09f4749f0",
-      "title": "Cole Sillinger Signs a 3-Year, $13.88M Contract with the Columbus Blue Jackets",
-      "publishedAt": "2026-07-24T17:05:10.000Z",
-      "category": "Contract",
-      "url": "https://puckpedia.com/signing/10761?utm_source=email&utm_medium=email&utm_campaign=signing&utm_content=primary"
     }
   ]
 }
