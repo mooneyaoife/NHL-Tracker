@@ -1,7 +1,21 @@
 {
   "schema": 1,
-  "updatedAt": "2026-09-04T11:40:12.986Z",
+  "updatedAt": "2026-09-04T17:40:20.364Z",
   "items": [
+    {
+      "id": "7bf540e1e0e2d3437cd8",
+      "title": "Jacob Melanson Signs a 3-Year, $4.35M Contract with the Seattle Kraken",
+      "publishedAt": "2026-09-04T15:17:11.000Z",
+      "category": "Contract",
+      "url": "https://puckpedia.com/signing/10788?utm_source=email&utm_medium=email&utm_campaign=signing&utm_content=primary"
+    },
+    {
+      "id": "132a89f9d8d429b0dd2f",
+      "title": "Brendan Brisson Signs a 1-Year, $850K Contract with the Toronto Maple Leafs",
+      "publishedAt": "2026-09-04T13:38:12.000Z",
+      "category": "Contract",
+      "url": "https://puckpedia.com/signing/10787?utm_source=email&utm_medium=email&utm_campaign=signing&utm_content=primary"
+    },
     {
       "id": "0c498ea49ca2b6802b5c",
       "title": "The New Jersey Devils acquire Luke Evangelista from the Nashville Predators for a conditional 2028 1st round pick (COL) and a 2028 2nd round pick",
@@ -197,20 +211,6 @@
       "publishedAt": "2026-07-24T17:05:10.000Z",
       "category": "Contract",
       "url": "https://puckpedia.com/signing/10761?utm_source=email&utm_medium=email&utm_campaign=signing&utm_content=primary"
-    },
-    {
-      "id": "ff9e4431033c8d4639f9",
-      "title": "Alex Jefferies Signs a 1-Year, $850K Contract with the New York Islanders",
-      "publishedAt": "2026-07-24T14:39:09.000Z",
-      "category": "Contract",
-      "url": "https://puckpedia.com/signing/10760?utm_source=email&utm_medium=email&utm_campaign=signing&utm_content=primary"
-    },
-    {
-      "id": "8767ec4bb842335d78da",
-      "title": "Max Psenicka Signs a 3-Year, $2.99M Contract with the Utah Mammoth",
-      "publishedAt": "2026-07-23T21:32:10.000Z",
-      "category": "Contract",
-      "url": "https://puckpedia.com/signing/10759?utm_source=email&utm_medium=email&utm_campaign=signing&utm_content=primary"
     }
   ]
 }
