@@ -1,15 +1,15 @@
 {
   "schema": 1,
-  "sourceCommit": "1b9a8063d28ca9e034b5e080b1e75cf56be3c068",
-  "artifactGeneratedAt": "2026-09-04T04:43:05.834244+00:00",
-  "dataGeneratedAt": "2026-09-04T04:43:03.672853+00:00",
-  "dataHash": "sha256:af0407e24e7f5b104bee1410df299929de051a382097680997696cd07bcdc7cd",
+  "sourceCommit": "67491df3c8061a72e70fd0498818483cfe8d780f",
+  "artifactGeneratedAt": "2026-09-04T11:27:53.838425+00:00",
+  "dataGeneratedAt": "2026-09-04T11:27:51.881230+00:00",
+  "dataHash": "sha256:d96a07da1d65ccbdacfc87c2eba6fd730d5c9c048af313b079a3a49c281c0645",
   "season": "20262027",
   "version": "5.74.0",
   "freshness": {
     "status": "fresh",
-    "checkedAt": "2026-09-04T04:43:03.672863+00:00",
-    "lastSuccessfulAt": "2026-09-04T04:43:03.672865+00:00",
+    "checkedAt": "2026-09-04T11:27:51.881244+00:00",
+    "lastSuccessfulAt": "2026-09-04T11:27:51.881246+00:00",
     "ageSeconds": 0,
     "failedTeams": [],
     "schedule": {
