@@ -1,7 +1,7 @@
 {
   "schema": 3,
-  "sourceCommit": "51c39a1796ede4084af47a1522e308513b85a5ca",
-  "dataGeneratedAt": "2026-09-04T16:28:23.994896+00:00",
+  "sourceCommit": "d3fff18803638da82fabe10cd2d9e81027ad7786",
+  "dataGeneratedAt": "2026-09-04T20:50:05.057888+00:00",
   "season": "20262027",
   "version": "5.74.0",
   "trackedTeams": [
@@ -393,8 +393,8 @@
   },
   "freshness": {
     "status": "fresh",
-    "checkedAt": "2026-09-04T16:28:23.994911+00:00",
-    "lastSuccessfulAt": "2026-09-04T16:28:23.994913+00:00",
+    "checkedAt": "2026-09-04T20:50:05.057899+00:00",
+    "lastSuccessfulAt": "2026-09-04T20:50:05.057902+00:00",
     "ageSeconds": 0,
     "failedTeams": [],
     "schedule": {
@@ -1669,8 +1669,8 @@
   "continuity": {
     "schema": 3,
     "season": "20262027",
-    "capturedAt": "2026-09-04T16:28:23.994896+00:00",
-    "updatedAt": "2026-09-04T16:28:23.994896+00:00",
+    "capturedAt": "2026-09-04T20:50:05.057888+00:00",
+    "updatedAt": "2026-09-04T20:50:05.057888+00:00",
     "finished": {},
     "upcoming": {
       "2026020001": {
@@ -2179,6 +2179,13 @@
       }
     },
     "roster": {
+      "TOR|Added|8482153|2026-09-04T20:50:05.053953+00:00": {
+        "key": "TOR|Added|8482153|2026-09-04T20:50:05.053953+00:00",
+        "team": "TOR",
+        "direction": "Added",
+        "name": "Brendan Brisson",
+        "detectedAt": "2026-09-04T20:50:05.053953+00:00"
+      },
       "VGK|Departed|8485138|2026-09-03T21:08:02.360664+00:00": {
         "key": "VGK|Departed|8485138|2026-09-03T21:08:02.360664+00:00",
         "team": "VGK",
@@ -2506,13 +2513,6 @@
         "team": "DAL",
         "direction": "Added",
         "name": "Tristan Bertucci",
-        "detectedAt": "2026-09-01T18:22:58.714544+00:00"
-      },
-      "DAL|Added|8486130|2026-09-01T18:22:58.714544+00:00": {
-        "key": "DAL|Added|8486130|2026-09-01T18:22:58.714544+00:00",
-        "team": "DAL",
-        "direction": "Added",
-        "name": "Dylan Hryckowian",
         "detectedAt": "2026-09-01T18:22:58.714544+00:00"
       }
     },
