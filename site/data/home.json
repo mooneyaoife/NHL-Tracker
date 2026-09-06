@@ -1,7 +1,7 @@
 {
   "schema": 3,
-  "sourceCommit": "b2c82dc8db2ca72539ee0c48523e0caaf308b462",
-  "dataGeneratedAt": "2026-09-05T23:59:14.615592+00:00",
+  "sourceCommit": "9c4fd1e8f33ade37bd5d4a4ae0051667490544bf",
+  "dataGeneratedAt": "2026-09-06T04:49:16.811156+00:00",
   "season": "20262027",
   "version": "5.74.0",
   "trackedTeams": [
@@ -393,8 +393,8 @@
   },
   "freshness": {
     "status": "fresh",
-    "checkedAt": "2026-09-05T23:59:14.615604+00:00",
-    "lastSuccessfulAt": "2026-09-05T23:59:14.615607+00:00",
+    "checkedAt": "2026-09-06T04:49:16.811169+00:00",
+    "lastSuccessfulAt": "2026-09-06T04:49:16.811172+00:00",
     "ageSeconds": 0,
     "failedTeams": [],
     "schedule": {
@@ -544,7 +544,7 @@
     "recent-form": "<p class=\"notice\">2026–27 form begins after completed games.</p>",
     "home-saved-players": "<div class=\"home-empty-state\"><strong>Saved players are ready</strong><span>Open player analysis to view and manage your watchlist.</span></div>",
     "home-pinned-analytics": "<button type=\"button\" class=\"home-pin\" data-shell-page=\"league\"><span>Team Rankings</span><small>League-wide performance categories</small><b>→</b></button><button type=\"button\" class=\"home-pin\" data-shell-page=\"playoffs\"><span>Playoff Path</span><small>Forecasts and postseason routes</small><b>→</b></button><button type=\"button\" class=\"home-pin\" data-shell-page=\"schedule\"><span>Season Shape</span><small>Density, rest and difficulty</small><b>→</b></button>",
-    "today-games": "<article class=\"watch-next-hero\" data-watch-mode=\"league\"><header><div><span class=\"section-kicker\">League watch</span><h3>Florida Panthers at Carolina Hurricanes</h3><p>Tue 29 Sep · 22:00 UK · Lenovo Center</p></div><b class=\"watch-next-state state-scheduled\">Scheduled</b></header><div class=\"watch-next-signals\" aria-label=\"Three things to know\"><div class=\"watch-next-signal\"><span>Opponent baseline</span><strong>51.2% PTS</strong><small>Opponent points percentage in 2025–26; context, not a prediction</small></div><div class=\"watch-next-signal\"><span>Setting</span><strong>Home</strong><small>Lenovo Center</small></div></div><footer><a class=\"watch-next-open\" href=\"?game=2026020001#games\" data-watch-game=\"2026020001\">Open Game Centre →</a><span>2025–26 opponent evidence · updated 5 Sep · UK time</span></footer><details class=\"watch-next-method\"><summary>How to read this brief</summary><p>Official NHL schedule, prior-season opponent points percentage, travel, rest, congestion, road sequence, time-zone and event flags. Does not include injuries, projected goalies, current form or lineup changes.</p><small>Schedule burden is context, not a result or win-probability forecast.</small></details></article><div class=\"watch-next-support\" aria-label=\"More games to watch\"><a class=\"watch-next-row\" href=\"?game=2026020002#games\" data-watch-game=\"2026020002\"><span>Scheduled · Wed 30 Sep · 00:00 UK</span><strong>Montréal Canadiens at Toronto Maple Leafs</strong><small>64.6% PTS</small><b>→</b></a><a class=\"watch-next-row\" href=\"?game=2026020003#games\" data-watch-game=\"2026020003\"><span>Scheduled · Wed 30 Sep · 01:00 UK</span><strong>New York Rangers at Boston Bruins</strong><small>47.0% PTS</small><b>→</b></a></div>"
+    "today-games": "<article class=\"watch-next-hero\" data-watch-mode=\"league\"><header><div><span class=\"section-kicker\">League watch</span><h3>Florida Panthers at Carolina Hurricanes</h3><p>Tue 29 Sep · 22:00 UK · Lenovo Center</p></div><b class=\"watch-next-state state-scheduled\">Scheduled</b></header><div class=\"watch-next-signals\" aria-label=\"Three things to know\"><div class=\"watch-next-signal\"><span>Opponent baseline</span><strong>51.2% PTS</strong><small>Opponent points percentage in 2025–26; context, not a prediction</small></div><div class=\"watch-next-signal\"><span>Setting</span><strong>Home</strong><small>Lenovo Center</small></div></div><footer><a class=\"watch-next-open\" href=\"?game=2026020001#games\" data-watch-game=\"2026020001\">Open Game Centre →</a><span>2025–26 opponent evidence · updated 6 Sep · UK time</span></footer><details class=\"watch-next-method\"><summary>How to read this brief</summary><p>Official NHL schedule, prior-season opponent points percentage, travel, rest, congestion, road sequence, time-zone and event flags. Does not include injuries, projected goalies, current form or lineup changes.</p><small>Schedule burden is context, not a result or win-probability forecast.</small></details></article><div class=\"watch-next-support\" aria-label=\"More games to watch\"><a class=\"watch-next-row\" href=\"?game=2026020002#games\" data-watch-game=\"2026020002\"><span>Scheduled · Wed 30 Sep · 00:00 UK</span><strong>Montréal Canadiens at Toronto Maple Leafs</strong><small>64.6% PTS</small><b>→</b></a><a class=\"watch-next-row\" href=\"?game=2026020003#games\" data-watch-game=\"2026020003\"><span>Scheduled · Wed 30 Sep · 01:00 UK</span><strong>New York Rangers at Boston Bruins</strong><small>47.0% PTS</small><b>→</b></a></div>"
   },
   "watchNext": {
     "schema": 1,
@@ -1669,8 +1669,8 @@
   "continuity": {
     "schema": 3,
     "season": "20262027",
-    "capturedAt": "2026-09-05T23:59:14.615592+00:00",
-    "updatedAt": "2026-09-05T23:59:14.615592+00:00",
+    "capturedAt": "2026-09-06T04:49:16.811156+00:00",
+    "updatedAt": "2026-09-06T04:49:16.811156+00:00",
     "finished": {},
     "upcoming": {
       "2026020001": {
