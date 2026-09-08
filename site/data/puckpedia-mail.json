@@ -1,7 +1,14 @@
 {
   "schema": 1,
-  "updatedAt": "2026-09-08T11:40:11.581Z",
+  "updatedAt": "2026-09-08T17:40:10.752Z",
   "items": [
+    {
+      "id": "8d7be8acf7eff6b247f8",
+      "title": "Fraser Minten Signs a 7-Year, $50.40M Contract with the Boston Bruins",
+      "publishedAt": "2026-09-08T13:44:11.000Z",
+      "category": "Contract",
+      "url": "https://puckpedia.com/signing/10791?utm_source=email&utm_medium=email&utm_campaign=signing&utm_content=primary"
+    },
     {
       "id": "d342840c20327595937a",
       "title": "Zeev Buium Signs an 8-Year, $75.04M Contract with the Vancouver Canucks",
@@ -204,13 +211,6 @@
       "publishedAt": "2026-07-27T17:27:13.000Z",
       "category": "Trade",
       "url": "https://puckpedia.com/trade/1200?utm_source=email&utm_medium=email&utm_campaign=trade&utm_content=primary"
-    },
-    {
-      "id": "10b6e6da08f8883dd560",
-      "title": "Nikita Klepov Signs a 3-Year, $3.23M Contract with the Anaheim Ducks",
-      "publishedAt": "2026-07-25T20:26:09.000Z",
-      "category": "Contract",
-      "url": "https://puckpedia.com/signing/10763?utm_source=email&utm_medium=email&utm_campaign=signing&utm_content=primary"
     }
   ]
 }
