@@ -1,7 +1,7 @@
 {
   "schema": 3,
-  "sourceCommit": "e3bf31bc97e0ec769b84e74e0f4163247e7b5749",
-  "dataGeneratedAt": "2026-09-08T11:27:47.755231+00:00",
+  "sourceCommit": "db27ad7105fc45cf2d0ef246ca4fbbee1e542bb3",
+  "dataGeneratedAt": "2026-09-08T16:43:24.632817+00:00",
   "season": "20262027",
   "version": "5.74.0",
   "trackedTeams": [
@@ -393,8 +393,8 @@
   },
   "freshness": {
     "status": "fresh",
-    "checkedAt": "2026-09-08T11:27:47.755244+00:00",
-    "lastSuccessfulAt": "2026-09-08T11:27:47.755247+00:00",
+    "checkedAt": "2026-09-08T16:43:24.632828+00:00",
+    "lastSuccessfulAt": "2026-09-08T16:43:24.632831+00:00",
     "ageSeconds": 0,
     "failedTeams": [],
     "schedule": {
@@ -1669,8 +1669,8 @@
   "continuity": {
     "schema": 3,
     "season": "20262027",
-    "capturedAt": "2026-09-08T11:27:47.755231+00:00",
-    "updatedAt": "2026-09-08T11:27:47.755231+00:00",
+    "capturedAt": "2026-09-08T16:43:24.632817+00:00",
+    "updatedAt": "2026-09-08T16:43:24.632817+00:00",
     "finished": {},
     "upcoming": {
       "2026020001": {
@@ -2179,6 +2179,174 @@
       }
     },
     "roster": {
+      "STL|Added|8484790|2026-09-08T16:43:24.628992+00:00": {
+        "key": "STL|Added|8484790|2026-09-08T16:43:24.628992+00:00",
+        "team": "STL",
+        "direction": "Added",
+        "name": "Adam Jiricek",
+        "detectedAt": "2026-09-08T16:43:24.628992+00:00"
+      },
+      "STL|Added|8482121|2026-09-08T16:43:24.628992+00:00": {
+        "key": "STL|Added|8482121|2026-09-08T16:43:24.628992+00:00",
+        "team": "STL",
+        "direction": "Added",
+        "name": "Dylan Peterson",
+        "detectedAt": "2026-09-08T16:43:24.628992+00:00"
+      },
+      "STL|Added|8484792|2026-09-08T16:43:24.628992+00:00": {
+        "key": "STL|Added|8484792|2026-09-08T16:43:24.628992+00:00",
+        "team": "STL",
+        "direction": "Added",
+        "name": "Adam Jecho",
+        "detectedAt": "2026-09-08T16:43:24.628992+00:00"
+      },
+      "STL|Added|8486033|2026-09-08T16:43:24.628992+00:00": {
+        "key": "STL|Added|8486033|2026-09-08T16:43:24.628992+00:00",
+        "team": "STL",
+        "direction": "Added",
+        "name": "Maddox Dagenais",
+        "detectedAt": "2026-09-08T16:43:24.628992+00:00"
+      },
+      "STL|Added|8483764|2026-09-08T16:43:24.628992+00:00": {
+        "key": "STL|Added|8483764|2026-09-08T16:43:24.628992+00:00",
+        "team": "STL",
+        "direction": "Added",
+        "name": "Marc-Andre Gaudet",
+        "detectedAt": "2026-09-08T16:43:24.628992+00:00"
+      },
+      "STL|Added|8483427|2026-09-08T16:43:24.628992+00:00": {
+        "key": "STL|Added|8483427|2026-09-08T16:43:24.628992+00:00",
+        "team": "STL",
+        "direction": "Added",
+        "name": "Michael Buchinger",
+        "detectedAt": "2026-09-08T16:43:24.628992+00:00"
+      },
+      "STL|Added|8479346|2026-09-08T16:43:24.628992+00:00": {
+        "key": "STL|Added|8479346|2026-09-08T16:43:24.628992+00:00",
+        "team": "STL",
+        "direction": "Added",
+        "name": "Dillon Dube",
+        "detectedAt": "2026-09-08T16:43:24.628992+00:00"
+      },
+      "STL|Added|8485382|2026-09-08T16:43:24.628992+00:00": {
+        "key": "STL|Added|8485382|2026-09-08T16:43:24.628992+00:00",
+        "team": "STL",
+        "direction": "Added",
+        "name": "Justin Carbonneau",
+        "detectedAt": "2026-09-08T16:43:24.628992+00:00"
+      },
+      "STL|Added|8483463|2026-09-08T16:43:24.628992+00:00": {
+        "key": "STL|Added|8483463|2026-09-08T16:43:24.628992+00:00",
+        "team": "STL",
+        "direction": "Added",
+        "name": "Aleksanteri Kaskimaki",
+        "detectedAt": "2026-09-08T16:43:24.628992+00:00"
+      },
+      "STL|Added|8484393|2026-09-08T16:43:24.628992+00:00": {
+        "key": "STL|Added|8484393|2026-09-08T16:43:24.628992+00:00",
+        "team": "STL",
+        "direction": "Added",
+        "name": "Juraj Pekarcik",
+        "detectedAt": "2026-09-08T16:43:24.628992+00:00"
+      },
+      "STL|Added|8484865|2026-09-08T16:43:24.628992+00:00": {
+        "key": "STL|Added|8484865|2026-09-08T16:43:24.628992+00:00",
+        "team": "STL",
+        "direction": "Added",
+        "name": "Colin Ralph",
+        "detectedAt": "2026-09-08T16:43:24.628992+00:00"
+      },
+      "STL|Added|8486134|2026-09-08T16:43:24.628992+00:00": {
+        "key": "STL|Added|8486134|2026-09-08T16:43:24.628992+00:00",
+        "team": "STL",
+        "direction": "Added",
+        "name": "Felix Trudeau",
+        "detectedAt": "2026-09-08T16:43:24.628992+00:00"
+      },
+      "STL|Added|8484188|2026-09-08T16:43:24.628992+00:00": {
+        "key": "STL|Added|8484188|2026-09-08T16:43:24.628992+00:00",
+        "team": "STL",
+        "direction": "Added",
+        "name": "Theo Lindstein",
+        "detectedAt": "2026-09-08T16:43:24.628992+00:00"
+      },
+      "STL|Added|8484810|2026-09-08T16:43:24.628992+00:00": {
+        "key": "STL|Added|8484810|2026-09-08T16:43:24.628992+00:00",
+        "team": "STL",
+        "direction": "Added",
+        "name": "Lukas Fischer",
+        "detectedAt": "2026-09-08T16:43:24.628992+00:00"
+      },
+      "STL|Added|8483705|2026-09-08T16:43:24.628992+00:00": {
+        "key": "STL|Added|8483705|2026-09-08T16:43:24.628992+00:00",
+        "team": "STL",
+        "direction": "Added",
+        "name": "Arseni Koromyslov",
+        "detectedAt": "2026-09-08T16:43:24.628992+00:00"
+      },
+      "STL|Added|8484476|2026-09-08T16:43:24.628992+00:00": {
+        "key": "STL|Added|8484476|2026-09-08T16:43:24.628992+00:00",
+        "team": "STL",
+        "direction": "Added",
+        "name": "Nikita Susuev",
+        "detectedAt": "2026-09-08T16:43:24.628992+00:00"
+      },
+      "STL|Added|8480157|2026-09-08T16:43:24.628992+00:00": {
+        "key": "STL|Added|8480157|2026-09-08T16:43:24.628992+00:00",
+        "team": "STL",
+        "direction": "Added",
+        "name": "Calle Rosen",
+        "detectedAt": "2026-09-08T16:43:24.628992+00:00"
+      },
+      "STL|Added|8482205|2026-09-08T16:43:24.628992+00:00": {
+        "key": "STL|Added|8482205|2026-09-08T16:43:24.628992+00:00",
+        "team": "STL",
+        "direction": "Added",
+        "name": "Will Cranley",
+        "detectedAt": "2026-09-08T16:43:24.628992+00:00"
+      },
+      "STL|Added|8484312|2026-09-08T16:43:24.628992+00:00": {
+        "key": "STL|Added|8484312|2026-09-08T16:43:24.628992+00:00",
+        "team": "STL",
+        "direction": "Added",
+        "name": "Georgii Romanov",
+        "detectedAt": "2026-09-08T16:43:24.628992+00:00"
+      },
+      "STL|Added|8484229|2026-09-08T16:43:24.628992+00:00": {
+        "key": "STL|Added|8484229|2026-09-08T16:43:24.628992+00:00",
+        "team": "STL",
+        "direction": "Added",
+        "name": "Jakub Stancl",
+        "detectedAt": "2026-09-08T16:43:24.628992+00:00"
+      },
+      "STL|Added|8484151|2026-09-08T16:43:24.628992+00:00": {
+        "key": "STL|Added|8484151|2026-09-08T16:43:24.628992+00:00",
+        "team": "STL",
+        "direction": "Added",
+        "name": "Quinton Burns",
+        "detectedAt": "2026-09-08T16:43:24.628992+00:00"
+      },
+      "STL|Added|8482784|2026-09-08T16:43:24.628992+00:00": {
+        "key": "STL|Added|8482784|2026-09-08T16:43:24.628992+00:00",
+        "team": "STL",
+        "direction": "Added",
+        "name": "Zach Dean",
+        "detectedAt": "2026-09-08T16:43:24.628992+00:00"
+      },
+      "STL|Added|8482716|2026-09-08T16:43:24.628992+00:00": {
+        "key": "STL|Added|8482716|2026-09-08T16:43:24.628992+00:00",
+        "team": "STL",
+        "direction": "Added",
+        "name": "Simon Robertsson",
+        "detectedAt": "2026-09-08T16:43:24.628992+00:00"
+      },
+      "STL|Added|8484230|2026-09-08T16:43:24.628992+00:00": {
+        "key": "STL|Added|8484230|2026-09-08T16:43:24.628992+00:00",
+        "team": "STL",
+        "direction": "Added",
+        "name": "Otto Stenberg",
+        "detectedAt": "2026-09-08T16:43:24.628992+00:00"
+      },
       "TOR|Added|8482153|2026-09-04T20:50:05.053953+00:00": {
         "key": "TOR|Added|8482153|2026-09-04T20:50:05.053953+00:00",
         "team": "TOR",
@@ -2345,174 +2513,6 @@
         "team": "TBL",
         "direction": "Added",
         "name": "Tomas Kralovic",
-        "detectedAt": "2026-09-01T18:22:58.714544+00:00"
-      },
-      "TBL|Added|8483921|2026-09-01T18:22:58.714544+00:00": {
-        "key": "TBL|Added|8483921|2026-09-01T18:22:58.714544+00:00",
-        "team": "TBL",
-        "direction": "Added",
-        "name": "Milo Roelens",
-        "detectedAt": "2026-09-01T18:22:58.714544+00:00"
-      },
-      "TBL|Added|8480828|2026-09-01T18:22:58.714544+00:00": {
-        "key": "TBL|Added|8480828|2026-09-01T18:22:58.714544+00:00",
-        "team": "TBL",
-        "direction": "Added",
-        "name": "Michael Callahan",
-        "detectedAt": "2026-09-01T18:22:58.714544+00:00"
-      },
-      "TBL|Added|8484310|2026-09-01T18:22:58.714544+00:00": {
-        "key": "TBL|Added|8484310|2026-09-01T18:22:58.714544+00:00",
-        "team": "TBL",
-        "direction": "Added",
-        "name": "Tristan Allard",
-        "detectedAt": "2026-09-01T18:22:58.714544+00:00"
-      },
-      "TBL|Added|8483692|2026-09-01T18:22:58.714544+00:00": {
-        "key": "TBL|Added|8483692|2026-09-01T18:22:58.714544+00:00",
-        "team": "TBL",
-        "direction": "Added",
-        "name": "Dyllan Gill",
-        "detectedAt": "2026-09-01T18:22:58.714544+00:00"
-      },
-      "TBL|Added|8480885|2026-09-01T18:22:58.714544+00:00": {
-        "key": "TBL|Added|8480885|2026-09-01T18:22:58.714544+00:00",
-        "team": "TBL",
-        "direction": "Added",
-        "name": "Olivier Rodrigue",
-        "detectedAt": "2026-09-01T18:22:58.714544+00:00"
-      },
-      "TBL|Added|8484173|2026-09-01T18:22:58.714544+00:00": {
-        "key": "TBL|Added|8484173|2026-09-01T18:22:58.714544+00:00",
-        "team": "TBL",
-        "direction": "Added",
-        "name": "Ethan Gauthier",
-        "detectedAt": "2026-09-01T18:22:58.714544+00:00"
-      },
-      "TBL|Added|8482518|2026-09-01T18:22:58.714544+00:00": {
-        "key": "TBL|Added|8482518|2026-09-01T18:22:58.714544+00:00",
-        "team": "TBL",
-        "direction": "Added",
-        "name": "Lucas Mercuri",
-        "detectedAt": "2026-09-01T18:22:58.714544+00:00"
-      },
-      "TBL|Added|8482168|2026-09-01T18:22:58.714544+00:00": {
-        "key": "TBL|Added|8482168|2026-09-01T18:22:58.714544+00:00",
-        "team": "TBL",
-        "direction": "Added",
-        "name": "Maxim Groshev",
-        "detectedAt": "2026-09-01T18:22:58.714544+00:00"
-      },
-      "TBL|Added|8477463|2026-09-01T18:22:58.714544+00:00": {
-        "key": "TBL|Added|8477463|2026-09-01T18:22:58.714544+00:00",
-        "team": "TBL",
-        "direction": "Added",
-        "name": "Steven Santini",
-        "detectedAt": "2026-09-01T18:22:58.714544+00:00"
-      },
-      "TBL|Added|8481547|2026-09-01T18:22:58.714544+00:00": {
-        "key": "TBL|Added|8481547|2026-09-01T18:22:58.714544+00:00",
-        "team": "TBL",
-        "direction": "Added",
-        "name": "Simon Lundmark",
-        "detectedAt": "2026-09-01T18:22:58.714544+00:00"
-      },
-      "TBL|Added|8483727|2026-09-01T18:22:58.714544+00:00": {
-        "key": "TBL|Added|8483727|2026-09-01T18:22:58.714544+00:00",
-        "team": "TBL",
-        "direction": "Added",
-        "name": "Connor Kurth",
-        "detectedAt": "2026-09-01T18:22:58.714544+00:00"
-      },
-      "TBL|Added|8481592|2026-09-01T18:22:58.714544+00:00": {
-        "key": "TBL|Added|8481592|2026-09-01T18:22:58.714544+00:00",
-        "team": "TBL",
-        "direction": "Added",
-        "name": "Jakob Pelletier",
-        "detectedAt": "2026-09-01T18:22:58.714544+00:00"
-      },
-      "TBL|Added|8484507|2026-09-01T18:22:58.714544+00:00": {
-        "key": "TBL|Added|8484507|2026-09-01T18:22:58.714544+00:00",
-        "team": "TBL",
-        "direction": "Added",
-        "name": "Gabriel Szturc",
-        "detectedAt": "2026-09-01T18:22:58.714544+00:00"
-      },
-      "TBL|Added|8481720|2026-09-01T18:22:58.714544+00:00": {
-        "key": "TBL|Added|8481720|2026-09-01T18:22:58.714544+00:00",
-        "team": "TBL",
-        "direction": "Added",
-        "name": "Nick Abruzzese",
-        "detectedAt": "2026-09-01T18:22:58.714544+00:00"
-      },
-      "DAL|Added|8484442|2026-09-01T18:22:58.714544+00:00": {
-        "key": "DAL|Added|8484442|2026-09-01T18:22:58.714544+00:00",
-        "team": "DAL",
-        "direction": "Added",
-        "name": "Arno Tiefensee",
-        "detectedAt": "2026-09-01T18:22:58.714544+00:00"
-      },
-      "DAL|Added|8484796|2026-09-01T18:22:58.714544+00:00": {
-        "key": "DAL|Added|8484796|2026-09-01T18:22:58.714544+00:00",
-        "team": "DAL",
-        "direction": "Added",
-        "name": "Emil Hemming",
-        "detectedAt": "2026-09-01T18:22:58.714544+00:00"
-      },
-      "DAL|Added|8482690|2026-09-01T18:22:58.714544+00:00": {
-        "key": "DAL|Added|8482690|2026-09-01T18:22:58.714544+00:00",
-        "team": "DAL",
-        "direction": "Added",
-        "name": "Ayrton Martino",
-        "detectedAt": "2026-09-01T18:22:58.714544+00:00"
-      },
-      "DAL|Added|8486174|2026-09-01T18:22:58.714544+00:00": {
-        "key": "DAL|Added|8486174|2026-09-01T18:22:58.714544+00:00",
-        "team": "DAL",
-        "direction": "Added",
-        "name": "Christian Fitzgerald",
-        "detectedAt": "2026-09-01T18:22:58.714544+00:00"
-      },
-      "DAL|Added|8482465|2026-09-01T18:22:58.714544+00:00": {
-        "key": "DAL|Added|8482465|2026-09-01T18:22:58.714544+00:00",
-        "team": "DAL",
-        "direction": "Added",
-        "name": "Rémi Poirier",
-        "detectedAt": "2026-09-01T18:22:58.714544+00:00"
-      },
-      "DAL|Added|8485691|2026-09-01T18:22:58.714544+00:00": {
-        "key": "DAL|Added|8485691|2026-09-01T18:22:58.714544+00:00",
-        "team": "DAL",
-        "direction": "Added",
-        "name": "Jaxon Fuder",
-        "detectedAt": "2026-09-01T18:22:58.714544+00:00"
-      },
-      "DAL|Added|8484523|2026-09-01T18:22:58.714544+00:00": {
-        "key": "DAL|Added|8484523|2026-09-01T18:22:58.714544+00:00",
-        "team": "DAL",
-        "direction": "Added",
-        "name": "Connor Punnett",
-        "detectedAt": "2026-09-01T18:22:58.714544+00:00"
-      },
-      "DAL|Added|8477990|2026-09-01T18:22:58.714544+00:00": {
-        "key": "DAL|Added|8477990|2026-09-01T18:22:58.714544+00:00",
-        "team": "DAL",
-        "direction": "Added",
-        "name": "Brandon Halverson",
-        "detectedAt": "2026-09-01T18:22:58.714544+00:00"
-      },
-      "DAL|Added|8485041|2026-09-01T18:22:58.714544+00:00": {
-        "key": "DAL|Added|8485041|2026-09-01T18:22:58.714544+00:00",
-        "team": "DAL",
-        "direction": "Added",
-        "name": "Niilopekka Muhonen",
-        "detectedAt": "2026-09-01T18:22:58.714544+00:00"
-      },
-      "DAL|Added|8484146|2026-09-01T18:22:58.714544+00:00": {
-        "key": "DAL|Added|8484146|2026-09-01T18:22:58.714544+00:00",
-        "team": "DAL",
-        "direction": "Added",
-        "name": "Tristan Bertucci",
         "detectedAt": "2026-09-01T18:22:58.714544+00:00"
       }
     },
