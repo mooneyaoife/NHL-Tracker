@@ -1,7 +1,7 @@
 {
   "schema": 3,
-  "sourceCommit": "db27ad7105fc45cf2d0ef246ca4fbbee1e542bb3",
-  "dataGeneratedAt": "2026-09-08T16:43:24.632817+00:00",
+  "sourceCommit": "571beefd764cb6605939a9c4c973e2de9465d98c",
+  "dataGeneratedAt": "2026-09-08T21:15:20.557725+00:00",
   "season": "20262027",
   "version": "5.74.0",
   "trackedTeams": [
@@ -393,8 +393,8 @@
   },
   "freshness": {
     "status": "fresh",
-    "checkedAt": "2026-09-08T16:43:24.632828+00:00",
-    "lastSuccessfulAt": "2026-09-08T16:43:24.632831+00:00",
+    "checkedAt": "2026-09-08T21:15:20.557738+00:00",
+    "lastSuccessfulAt": "2026-09-08T21:15:20.557740+00:00",
     "ageSeconds": 0,
     "failedTeams": [],
     "schedule": {
@@ -1669,8 +1669,8 @@
   "continuity": {
     "schema": 3,
     "season": "20262027",
-    "capturedAt": "2026-09-08T16:43:24.632817+00:00",
-    "updatedAt": "2026-09-08T16:43:24.632817+00:00",
+    "capturedAt": "2026-09-08T21:15:20.557725+00:00",
+    "updatedAt": "2026-09-08T21:15:20.557725+00:00",
     "finished": {},
     "upcoming": {
       "2026020001": {
@@ -2179,6 +2179,20 @@
       }
     },
     "roster": {
+      "CAR|Added|8480058|2026-09-08T21:15:20.553716+00:00": {
+        "key": "CAR|Added|8480058|2026-09-08T21:15:20.553716+00:00",
+        "team": "CAR",
+        "direction": "Added",
+        "name": "Pierre-Olivier Joseph",
+        "detectedAt": "2026-09-08T21:15:20.553716+00:00"
+      },
+      "SJS|Added|8478492|2026-09-08T21:15:20.553716+00:00": {
+        "key": "SJS|Added|8478492|2026-09-08T21:15:20.553716+00:00",
+        "team": "SJS",
+        "direction": "Added",
+        "name": "Ilya Samsonov",
+        "detectedAt": "2026-09-08T21:15:20.553716+00:00"
+      },
       "STL|Added|8484790|2026-09-08T16:43:24.628992+00:00": {
         "key": "STL|Added|8484790|2026-09-08T16:43:24.628992+00:00",
         "team": "STL",
@@ -2499,20 +2513,6 @@
         "team": "TBL",
         "direction": "Added",
         "name": "Mads Sogaard",
-        "detectedAt": "2026-09-01T18:22:58.714544+00:00"
-      },
-      "TBL|Added|8484770|2026-09-01T18:22:58.714544+00:00": {
-        "key": "TBL|Added|8484770|2026-09-01T18:22:58.714544+00:00",
-        "team": "TBL",
-        "direction": "Added",
-        "name": "Sam O'Reilly",
-        "detectedAt": "2026-09-01T18:22:58.714544+00:00"
-      },
-      "TBL|Added|8486241|2026-09-01T18:22:58.714544+00:00": {
-        "key": "TBL|Added|8486241|2026-09-01T18:22:58.714544+00:00",
-        "team": "TBL",
-        "direction": "Added",
-        "name": "Tomas Kralovic",
         "detectedAt": "2026-09-01T18:22:58.714544+00:00"
       }
     },
