@@ -1,7 +1,7 @@
 {
   "schema": 3,
-  "sourceCommit": "d0ba31925e74e8fb2041ad0bf59dbfd8c35c12e5",
-  "dataGeneratedAt": "2026-09-09T17:52:00.945860+00:00",
+  "sourceCommit": "8af0e4eee117c458cc4c2db73823b93b8262debc",
+  "dataGeneratedAt": "2026-09-09T21:00:13.027744+00:00",
   "season": "20262027",
   "version": "5.74.0",
   "trackedTeams": [
@@ -393,8 +393,8 @@
   },
   "freshness": {
     "status": "fresh",
-    "checkedAt": "2026-09-09T17:52:00.945872+00:00",
-    "lastSuccessfulAt": "2026-09-09T17:52:00.945875+00:00",
+    "checkedAt": "2026-09-09T21:00:13.027756+00:00",
+    "lastSuccessfulAt": "2026-09-09T21:00:13.027758+00:00",
     "ageSeconds": 0,
     "failedTeams": [],
     "schedule": {
@@ -1669,8 +1669,8 @@
   "continuity": {
     "schema": 3,
     "season": "20262027",
-    "capturedAt": "2026-09-09T17:52:00.945860+00:00",
-    "updatedAt": "2026-09-09T17:52:00.945860+00:00",
+    "capturedAt": "2026-09-09T21:00:13.027744+00:00",
+    "updatedAt": "2026-09-09T21:00:13.027744+00:00",
     "finished": {},
     "upcoming": {
       "2026020001": {
@@ -2179,6 +2179,20 @@
       }
     },
     "roster": {
+      "PIT|Added|8484855|2026-09-09T21:00:13.023730+00:00": {
+        "key": "PIT|Added|8484855|2026-09-09T21:00:13.023730+00:00",
+        "team": "PIT",
+        "direction": "Added",
+        "name": "Tomas Galvas",
+        "detectedAt": "2026-09-09T21:00:13.023730+00:00"
+      },
+      "EDM|Added|8480029|2026-09-09T21:00:13.023730+00:00": {
+        "key": "EDM|Added|8480029|2026-09-09T21:00:13.023730+00:00",
+        "team": "EDM",
+        "direction": "Added",
+        "name": "Alex Formenton",
+        "detectedAt": "2026-09-09T21:00:13.023730+00:00"
+      },
       "CAR|Added|8482785|2026-09-09T17:52:00.941948+00:00": {
         "key": "CAR|Added|8482785|2026-09-09T17:52:00.941948+00:00",
         "team": "CAR",
@@ -2500,20 +2514,6 @@
         "direction": "Added",
         "name": "Eeli Tolvanen",
         "detectedAt": "2026-09-02T16:41:07.048419+00:00"
-      },
-      "TBL|Added|8485386|2026-09-01T18:22:58.714544+00:00": {
-        "key": "TBL|Added|8485386|2026-09-01T18:22:58.714544+00:00",
-        "team": "TBL",
-        "direction": "Added",
-        "name": "Ethan Czata",
-        "detectedAt": "2026-09-01T18:22:58.714544+00:00"
-      },
-      "TBL|Added|8485091|2026-09-01T18:22:58.714544+00:00": {
-        "key": "TBL|Added|8485091|2026-09-01T18:22:58.714544+00:00",
-        "team": "TBL",
-        "direction": "Added",
-        "name": "Noah Steen",
-        "detectedAt": "2026-09-01T18:22:58.714544+00:00"
       }
     },
     "schedule": {
