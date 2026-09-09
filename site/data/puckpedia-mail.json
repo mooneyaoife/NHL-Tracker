@@ -1,7 +1,35 @@
 {
   "schema": 1,
-  "updatedAt": "2026-09-09T11:40:14.293Z",
+  "updatedAt": "2026-09-09T17:40:12.745Z",
   "items": [
+    {
+      "id": "18c613575ed28f43554f",
+      "title": "Justin Robidas Signs a 1-Year, $850K Contract with the Carolina Hurricanes",
+      "publishedAt": "2026-09-09T15:22:09.000Z",
+      "category": "Contract",
+      "url": "https://puckpedia.com/signing/10797?utm_source=email&utm_medium=email&utm_campaign=signing&utm_content=primary"
+    },
+    {
+      "id": "416f9096334329a4a472",
+      "title": "Skyler Brind'Amour Signs a 1-Year, $850K Contract with the Carolina Hurricanes",
+      "publishedAt": "2026-09-09T15:19:10.000Z",
+      "category": "Contract",
+      "url": "https://puckpedia.com/signing/10796?utm_source=email&utm_medium=email&utm_campaign=signing&utm_content=primary"
+    },
+    {
+      "id": "441ad33783325757f5f9",
+      "title": "Cayden Primeau Signs a 2-Year, $1.83M Contract with the Carolina Hurricanes",
+      "publishedAt": "2026-09-09T15:17:10.000Z",
+      "category": "Contract",
+      "url": "https://puckpedia.com/signing/10795?utm_source=email&utm_medium=email&utm_campaign=signing&utm_content=primary"
+    },
+    {
+      "id": "57d62e667a0ebaf0bc36",
+      "title": "Alex Formenton Signs a 1-Year, $850K Contract with the Edmonton Oilers",
+      "publishedAt": "2026-09-09T15:10:10.000Z",
+      "category": "Contract",
+      "url": "https://puckpedia.com/signing/10794?utm_source=email&utm_medium=email&utm_campaign=signing&utm_content=primary"
+    },
     {
       "id": "43e42bb597057c61c729",
       "title": "Ilya Samsonov Signs a 1-Year, $850K Contract with the San Jose Sharks",
@@ -183,34 +211,6 @@
       "publishedAt": "2026-07-31T14:06:14.000Z",
       "category": "Contract",
       "url": "https://puckpedia.com/signing/10769?utm_source=email&utm_medium=email&utm_campaign=signing&utm_content=primary"
-    },
-    {
-      "id": "fe449e44c7f7147b8092",
-      "title": "Colin White Signs a 1-Year, $900K Contract with the New Jersey Devils",
-      "publishedAt": "2026-07-30T14:23:10.000Z",
-      "category": "Contract",
-      "url": "https://puckpedia.com/signing/10768?utm_source=email&utm_medium=email&utm_campaign=signing&utm_content=primary"
-    },
-    {
-      "id": "9cefd83a5baac4c966a8",
-      "title": "Carter Gylander Signs a 1-Year, $850K Contract with the Detroit Red Wings",
-      "publishedAt": "2026-07-29T23:52:10.000Z",
-      "category": "Contract",
-      "url": "https://puckpedia.com/signing/10767?utm_source=email&utm_medium=email&utm_campaign=signing&utm_content=primary"
-    },
-    {
-      "id": "ab05409e5df02d5d5102",
-      "title": "Topias Vilen Signs a 1-Year, $850K Contract with the New Jersey Devils",
-      "publishedAt": "2026-07-29T15:47:08.000Z",
-      "category": "Contract",
-      "url": "https://puckpedia.com/signing/10766?utm_source=email&utm_medium=email&utm_campaign=signing&utm_content=primary"
-    },
-    {
-      "id": "a0b4f09f301a8bd7914e",
-      "title": "Macklin Celebrini Signs a 5-Year, $94.00M Contract with the San Jose Sharks",
-      "publishedAt": "2026-07-29T14:50:11.000Z",
-      "category": "Contract",
-      "url": "https://puckpedia.com/signing/10765?utm_source=email&utm_medium=email&utm_campaign=signing&utm_content=primary"
     }
   ]
 }
