@@ -1,7 +1,7 @@
 {
   "schema": 3,
-  "sourceCommit": "4afe7e7dd3c85fe53054666bf82d4c5aaa7669b2",
-  "dataGeneratedAt": "2026-09-09T13:00:29.754831+00:00",
+  "sourceCommit": "d0ba31925e74e8fb2041ad0bf59dbfd8c35c12e5",
+  "dataGeneratedAt": "2026-09-09T17:52:00.945860+00:00",
   "season": "20262027",
   "version": "5.74.0",
   "trackedTeams": [
@@ -393,8 +393,8 @@
   },
   "freshness": {
     "status": "fresh",
-    "checkedAt": "2026-09-09T13:00:29.754843+00:00",
-    "lastSuccessfulAt": "2026-09-09T13:00:29.754846+00:00",
+    "checkedAt": "2026-09-09T17:52:00.945872+00:00",
+    "lastSuccessfulAt": "2026-09-09T17:52:00.945875+00:00",
     "ageSeconds": 0,
     "failedTeams": [],
     "schedule": {
@@ -1669,8 +1669,8 @@
   "continuity": {
     "schema": 3,
     "season": "20262027",
-    "capturedAt": "2026-09-09T13:00:29.754831+00:00",
-    "updatedAt": "2026-09-09T13:00:29.754831+00:00",
+    "capturedAt": "2026-09-09T17:52:00.945860+00:00",
+    "updatedAt": "2026-09-09T17:52:00.945860+00:00",
     "finished": {},
     "upcoming": {
       "2026020001": {
@@ -2179,6 +2179,34 @@
       }
     },
     "roster": {
+      "CAR|Added|8482785|2026-09-09T17:52:00.941948+00:00": {
+        "key": "CAR|Added|8482785|2026-09-09T17:52:00.941948+00:00",
+        "team": "CAR",
+        "direction": "Added",
+        "name": "Justin Robidas",
+        "detectedAt": "2026-09-09T17:52:00.941948+00:00"
+      },
+      "CAR|Added|8480291|2026-09-09T17:52:00.941948+00:00": {
+        "key": "CAR|Added|8480291|2026-09-09T17:52:00.941948+00:00",
+        "team": "CAR",
+        "direction": "Added",
+        "name": "Skyler Brind'Amour",
+        "detectedAt": "2026-09-09T17:52:00.941948+00:00"
+      },
+      "CAR|Added|8480051|2026-09-09T17:52:00.941948+00:00": {
+        "key": "CAR|Added|8480051|2026-09-09T17:52:00.941948+00:00",
+        "team": "CAR",
+        "direction": "Added",
+        "name": "Cayden Primeau",
+        "detectedAt": "2026-09-09T17:52:00.941948+00:00"
+      },
+      "TBL|Added|8485587|2026-09-09T17:52:00.941948+00:00": {
+        "key": "TBL|Added|8485587|2026-09-09T17:52:00.941948+00:00",
+        "team": "TBL",
+        "direction": "Added",
+        "name": "Benjamin Rautiainen",
+        "detectedAt": "2026-09-09T17:52:00.941948+00:00"
+      },
       "CAR|Added|8480058|2026-09-08T21:15:20.553716+00:00": {
         "key": "CAR|Added|8480058|2026-09-08T21:15:20.553716+00:00",
         "team": "CAR",
@@ -2485,34 +2513,6 @@
         "team": "TBL",
         "direction": "Added",
         "name": "Noah Steen",
-        "detectedAt": "2026-09-01T18:22:58.714544+00:00"
-      },
-      "TBL|Added|8482951|2026-09-01T18:22:58.714544+00:00": {
-        "key": "TBL|Added|8482951|2026-09-01T18:22:58.714544+00:00",
-        "team": "TBL",
-        "direction": "Added",
-        "name": "Cooper Flinton",
-        "detectedAt": "2026-09-01T18:22:58.714544+00:00"
-      },
-      "TBL|Added|8484636|2026-09-01T18:22:58.714544+00:00": {
-        "key": "TBL|Added|8484636|2026-09-01T18:22:58.714544+00:00",
-        "team": "TBL",
-        "direction": "Added",
-        "name": "Harrison Meneghin",
-        "detectedAt": "2026-09-01T18:22:58.714544+00:00"
-      },
-      "TBL|Added|8482663|2026-09-01T18:22:58.714544+00:00": {
-        "key": "TBL|Added|8482663|2026-09-01T18:22:58.714544+00:00",
-        "team": "TBL",
-        "direction": "Added",
-        "name": "Dylan Duke",
-        "detectedAt": "2026-09-01T18:22:58.714544+00:00"
-      },
-      "TBL|Added|8481544|2026-09-01T18:22:58.714544+00:00": {
-        "key": "TBL|Added|8481544|2026-09-01T18:22:58.714544+00:00",
-        "team": "TBL",
-        "direction": "Added",
-        "name": "Mads Sogaard",
         "detectedAt": "2026-09-01T18:22:58.714544+00:00"
       }
     },
