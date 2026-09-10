@@ -1,7 +1,21 @@
 {
   "schema": 1,
-  "updatedAt": "2026-09-10T17:40:11.314Z",
+  "updatedAt": "2026-09-10T23:40:23.875Z",
   "items": [
+    {
+      "id": "8e7511f01eb4da06bf14",
+      "title": "Braeden Bowman Signs a 6-Year, $20.40M Contract with the Vegas Golden Knights",
+      "publishedAt": "2026-09-10T21:07:10.000Z",
+      "category": "Contract",
+      "url": "https://puckpedia.com/signing/10799?utm_source=email&utm_medium=email&utm_campaign=signing&utm_content=primary"
+    },
+    {
+      "id": "584c4375c3dc0cb17cf6",
+      "title": "Mike Reilly Signs a 1-Year, $850K Contract with the Carolina Hurricanes",
+      "publishedAt": "2026-09-10T20:26:10.000Z",
+      "category": "Contract",
+      "url": "https://puckpedia.com/signing/10798?utm_source=email&utm_medium=email&utm_campaign=signing&utm_content=primary"
+    },
     {
       "id": "18c613575ed28f43554f",
       "title": "Justin Robidas Signs a 1-Year, $850K Contract with the Carolina Hurricanes",
@@ -197,20 +211,6 @@
       "publishedAt": "2026-08-03T16:20:11.000Z",
       "category": "Contract",
       "url": "https://puckpedia.com/signing/10771?utm_source=email&utm_medium=email&utm_campaign=signing&utm_content=primary"
-    },
-    {
-      "id": "82eb5b56e6a28732790c",
-      "title": "Collin Graf Signs a 3-Year, $12.75M Contract with the San Jose Sharks",
-      "publishedAt": "2026-07-31T18:26:10.000Z",
-      "category": "Contract",
-      "url": "https://puckpedia.com/signing/10770?utm_source=email&utm_medium=email&utm_campaign=signing&utm_content=primary"
-    },
-    {
-      "id": "6b6320889f8e4fd17e0c",
-      "title": "Thomas Novak Signs a 3-Year, $13.95M Contract with the Pittsburgh Penguins",
-      "publishedAt": "2026-07-31T14:06:14.000Z",
-      "category": "Contract",
-      "url": "https://puckpedia.com/signing/10769?utm_source=email&utm_medium=email&utm_campaign=signing&utm_content=primary"
     }
   ]
 }
