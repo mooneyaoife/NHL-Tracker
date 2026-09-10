@@ -1,7 +1,7 @@
 {
   "schema": 3,
-  "sourceCommit": "20f93b9339765a893f6c56d6776766ddd4c8bd04",
-  "dataGeneratedAt": "2026-09-10T11:30:21.459009+00:00",
+  "sourceCommit": "df32dd169a350375e16029cfd5bc546b4239c4f0",
+  "dataGeneratedAt": "2026-09-10T16:31:17.615056+00:00",
   "season": "20262027",
   "version": "5.74.0",
   "trackedTeams": [
@@ -395,8 +395,8 @@
   },
   "freshness": {
     "status": "fresh",
-    "checkedAt": "2026-09-10T11:30:21.459022+00:00",
-    "lastSuccessfulAt": "2026-09-10T11:30:21.459025+00:00",
+    "checkedAt": "2026-09-10T16:31:17.615070+00:00",
+    "lastSuccessfulAt": "2026-09-10T16:31:17.615072+00:00",
     "ageSeconds": 0,
     "failedTeams": [],
     "schedule": {
@@ -1671,8 +1671,8 @@
   "continuity": {
     "schema": 3,
     "season": "20262027",
-    "capturedAt": "2026-09-10T11:30:21.459009+00:00",
-    "updatedAt": "2026-09-10T11:30:21.459009+00:00",
+    "capturedAt": "2026-09-10T16:31:17.615056+00:00",
+    "updatedAt": "2026-09-10T16:31:17.615056+00:00",
     "finished": {},
     "upcoming": {
       "2026020001": {
@@ -2181,6 +2181,13 @@
       }
     },
     "roster": {
+      "CAR|Added|8484428|2026-09-10T16:31:17.610805+00:00": {
+        "key": "CAR|Added|8484428|2026-09-10T16:31:17.610805+00:00",
+        "team": "CAR",
+        "direction": "Added",
+        "name": "Charles Alexis Legault",
+        "detectedAt": "2026-09-10T16:31:17.610805+00:00"
+      },
       "PIT|Added|8484855|2026-09-09T21:00:13.023730+00:00": {
         "key": "PIT|Added|8484855|2026-09-09T21:00:13.023730+00:00",
         "team": "PIT",
@@ -2508,13 +2515,6 @@
         "team": "NSH",
         "direction": "Departed",
         "name": "Luke Evangelista",
-        "detectedAt": "2026-09-02T16:41:07.048419+00:00"
-      },
-      "NYR|Added|8480009|2026-09-02T16:41:07.048419+00:00": {
-        "key": "NYR|Added|8480009|2026-09-02T16:41:07.048419+00:00",
-        "team": "NYR",
-        "direction": "Added",
-        "name": "Eeli Tolvanen",
         "detectedAt": "2026-09-02T16:41:07.048419+00:00"
       }
     },
