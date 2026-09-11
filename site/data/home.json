@@ -1,7 +1,7 @@
 {
   "schema": 3,
-  "sourceCommit": "d55e63c4627356e30078cb95959f1f338bab5a2a",
-  "dataGeneratedAt": "2026-09-11T11:32:04.024389+00:00",
+  "sourceCommit": "01aa10361beaea90bdd39ff248e6aacdb9c36294",
+  "dataGeneratedAt": "2026-09-11T16:35:38.708644+00:00",
   "season": "20262027",
   "version": "5.74.0",
   "trackedTeams": [
@@ -395,8 +395,8 @@
   },
   "freshness": {
     "status": "fresh",
-    "checkedAt": "2026-09-11T11:32:04.024402+00:00",
-    "lastSuccessfulAt": "2026-09-11T11:32:04.024405+00:00",
+    "checkedAt": "2026-09-11T16:35:38.708654+00:00",
+    "lastSuccessfulAt": "2026-09-11T16:35:38.708656+00:00",
     "ageSeconds": 0,
     "failedTeams": [],
     "schedule": {
@@ -1671,8 +1671,8 @@
   "continuity": {
     "schema": 3,
     "season": "20262027",
-    "capturedAt": "2026-09-11T11:32:04.024389+00:00",
-    "updatedAt": "2026-09-11T11:32:04.024389+00:00",
+    "capturedAt": "2026-09-11T16:35:38.708644+00:00",
+    "updatedAt": "2026-09-11T16:35:38.708644+00:00",
     "finished": {},
     "upcoming": {
       "2026020001": {
@@ -2181,6 +2181,13 @@
       }
     },
     "roster": {
+      "PIT|Departed|8484855|2026-09-11T16:35:38.705159+00:00": {
+        "key": "PIT|Departed|8484855|2026-09-11T16:35:38.705159+00:00",
+        "team": "PIT",
+        "direction": "Departed",
+        "name": "Tomas Galvas",
+        "detectedAt": "2026-09-11T16:35:38.705159+00:00"
+      },
       "CAR|Added|8476422|2026-09-10T20:56:53.518850+00:00": {
         "key": "CAR|Added|8476422|2026-09-10T20:56:53.518850+00:00",
         "team": "CAR",
@@ -2508,13 +2515,6 @@
         "team": "VGK",
         "direction": "Departed",
         "name": "Ben Hemmerling",
-        "detectedAt": "2026-09-03T21:08:02.360664+00:00"
-      },
-      "VGK|Departed|8484155|2026-09-03T21:08:02.360664+00:00": {
-        "key": "VGK|Departed|8484155|2026-09-03T21:08:02.360664+00:00",
-        "team": "VGK",
-        "direction": "Departed",
-        "name": "Mathieu Cataford",
         "detectedAt": "2026-09-03T21:08:02.360664+00:00"
       }
     },
