@@ -1,7 +1,14 @@
 {
   "schema": 1,
-  "updatedAt": "2026-09-12T11:40:12.414Z",
+  "updatedAt": "2026-09-12T17:40:38.507Z",
   "items": [
+    {
+      "id": "e209b9fba4a3b6b2b1f7",
+      "title": "Mark Stone Signs a 2-Year, $18.00M Contract with the Vegas Golden Knights",
+      "publishedAt": "2026-09-12T16:11:10.000Z",
+      "category": "Contract",
+      "url": "https://puckpedia.com/signing/10800?utm_source=email&utm_medium=email&utm_campaign=signing&utm_content=primary"
+    },
     {
       "id": "8e7511f01eb4da06bf14",
       "title": "Braeden Bowman Signs a 6-Year, $20.40M Contract with the Vegas Golden Knights",
@@ -204,13 +211,6 @@
       "publishedAt": "2026-08-06T15:13:11.000Z",
       "category": "Contract",
       "url": "https://puckpedia.com/signing/10772?utm_source=email&utm_medium=email&utm_campaign=signing&utm_content=primary"
-    },
-    {
-      "id": "a0c6e855cc1c09445fc2",
-      "title": "Maksymilian Szuber Signs a 1-Year, $850K Contract with the Montreal Canadiens",
-      "publishedAt": "2026-08-03T16:20:11.000Z",
-      "category": "Contract",
-      "url": "https://puckpedia.com/signing/10771?utm_source=email&utm_medium=email&utm_campaign=signing&utm_content=primary"
     }
   ]
 }
