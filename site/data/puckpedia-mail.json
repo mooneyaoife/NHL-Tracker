@@ -1,7 +1,14 @@
 {
   "schema": 1,
-  "updatedAt": "2026-09-13T11:40:10.904Z",
+  "updatedAt": "2026-09-13T17:40:12.024Z",
   "items": [
+    {
+      "id": "ddfc39bf917ee1d7d864",
+      "title": "Zack Bolduc Signs a 4-Year, $16.80M Contract with the Montreal Canadiens",
+      "publishedAt": "2026-09-13T17:29:14.000Z",
+      "category": "Contract",
+      "url": "https://puckpedia.com/signing/10802?utm_source=email&utm_medium=email&utm_campaign=signing&utm_content=primary"
+    },
     {
       "id": "a5414c3aace13a6e9f48",
       "title": "Chris Kreider Signs a 1-Year, $2.15M Contract with the Montreal Canadiens",
@@ -204,13 +211,6 @@
       "publishedAt": "2026-08-10T21:36:09.000Z",
       "category": "Contract",
       "url": "https://puckpedia.com/signing/10774?utm_source=email&utm_medium=email&utm_campaign=signing&utm_content=primary"
-    },
-    {
-      "id": "9a4e8b91b9a491dffa88",
-      "title": "Nikita Grebenkin Signs a 2-Year, $2.20M Contract with the Philadelphia Flyers",
-      "publishedAt": "2026-08-06T22:34:10.000Z",
-      "category": "Contract",
-      "url": "https://puckpedia.com/signing/10773?utm_source=email&utm_medium=email&utm_campaign=signing&utm_content=primary"
     }
   ]
 }
