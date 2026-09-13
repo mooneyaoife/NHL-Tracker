@@ -1,7 +1,7 @@
 {
   "schema": 3,
-  "sourceCommit": "9cf5992017d1fdab1b825ffd707994a0fddb4b15",
-  "dataGeneratedAt": "2026-09-13T12:01:45.137390+00:00",
+  "sourceCommit": "e85e47f7a005db5772f84436c5e0e7020c7608fc",
+  "dataGeneratedAt": "2026-09-13T16:26:52.470875+00:00",
   "season": "20262027",
   "version": "5.74.0",
   "trackedTeams": [
@@ -395,8 +395,8 @@
   },
   "freshness": {
     "status": "fresh",
-    "checkedAt": "2026-09-13T12:01:45.137400+00:00",
-    "lastSuccessfulAt": "2026-09-13T12:01:45.137403+00:00",
+    "checkedAt": "2026-09-13T16:26:52.470887+00:00",
+    "lastSuccessfulAt": "2026-09-13T16:26:52.470888+00:00",
     "ageSeconds": 0,
     "failedTeams": [],
     "schedule": {
@@ -1671,8 +1671,8 @@
   "continuity": {
     "schema": 3,
     "season": "20262027",
-    "capturedAt": "2026-09-13T12:01:45.137390+00:00",
-    "updatedAt": "2026-09-13T12:01:45.137390+00:00",
+    "capturedAt": "2026-09-13T16:26:52.470875+00:00",
+    "updatedAt": "2026-09-13T16:26:52.470875+00:00",
     "finished": {},
     "upcoming": {
       "2026020001": {
@@ -2181,6 +2181,13 @@
       }
     },
     "roster": {
+      "MTL|Added|8475184|2026-09-13T16:26:52.466571+00:00": {
+        "key": "MTL|Added|8475184|2026-09-13T16:26:52.466571+00:00",
+        "team": "MTL",
+        "direction": "Added",
+        "name": "Chris Kreider",
+        "detectedAt": "2026-09-13T16:26:52.466571+00:00"
+      },
       "SEA|Departed|8485003|2026-09-11T21:03:13.110828+00:00": {
         "key": "SEA|Departed|8485003|2026-09-11T21:03:13.110828+00:00",
         "team": "SEA",
@@ -2508,13 +2515,6 @@
         "team": "VGK",
         "direction": "Departed",
         "name": "Jordan Gustafson",
-        "detectedAt": "2026-09-03T21:08:02.360664+00:00"
-      },
-      "VGK|Departed|8485661|2026-09-03T21:08:02.360664+00:00": {
-        "key": "VGK|Departed|8485661|2026-09-03T21:08:02.360664+00:00",
-        "team": "VGK",
-        "direction": "Departed",
-        "name": "Alexander Weiermair",
         "detectedAt": "2026-09-03T21:08:02.360664+00:00"
       }
     },
