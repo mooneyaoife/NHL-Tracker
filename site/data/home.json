@@ -1,7 +1,7 @@
 {
   "schema": 3,
-  "sourceCommit": "e85e47f7a005db5772f84436c5e0e7020c7608fc",
-  "dataGeneratedAt": "2026-09-13T16:26:52.470875+00:00",
+  "sourceCommit": "8fc9b429e930b1093553b253f8507553c6feedb0",
+  "dataGeneratedAt": "2026-09-13T20:56:18.821026+00:00",
   "season": "20262027",
   "version": "5.74.0",
   "trackedTeams": [
@@ -395,8 +395,8 @@
   },
   "freshness": {
     "status": "fresh",
-    "checkedAt": "2026-09-13T16:26:52.470887+00:00",
-    "lastSuccessfulAt": "2026-09-13T16:26:52.470888+00:00",
+    "checkedAt": "2026-09-13T20:56:18.821036+00:00",
+    "lastSuccessfulAt": "2026-09-13T20:56:18.821037+00:00",
     "ageSeconds": 0,
     "failedTeams": [],
     "schedule": {
@@ -1671,8 +1671,8 @@
   "continuity": {
     "schema": 3,
     "season": "20262027",
-    "capturedAt": "2026-09-13T16:26:52.470875+00:00",
-    "updatedAt": "2026-09-13T16:26:52.470875+00:00",
+    "capturedAt": "2026-09-13T20:56:18.821026+00:00",
+    "updatedAt": "2026-09-13T20:56:18.821026+00:00",
     "finished": {},
     "upcoming": {
       "2026020001": {
@@ -2181,6 +2181,13 @@
       }
     },
     "roster": {
+      "SEA|Added|8482874|2026-09-13T20:56:18.817644+00:00": {
+        "key": "SEA|Added|8482874|2026-09-13T20:56:18.817644+00:00",
+        "team": "SEA",
+        "direction": "Added",
+        "name": "Jacob Melanson",
+        "detectedAt": "2026-09-13T20:56:18.817644+00:00"
+      },
       "MTL|Added|8475184|2026-09-13T16:26:52.466571+00:00": {
         "key": "MTL|Added|8475184|2026-09-13T16:26:52.466571+00:00",
         "team": "MTL",
@@ -2508,13 +2515,6 @@
         "team": "VGK",
         "direction": "Departed",
         "name": "Cameron Whitehead",
-        "detectedAt": "2026-09-03T21:08:02.360664+00:00"
-      },
-      "VGK|Departed|8483451|2026-09-03T21:08:02.360664+00:00": {
-        "key": "VGK|Departed|8483451|2026-09-03T21:08:02.360664+00:00",
-        "team": "VGK",
-        "direction": "Departed",
-        "name": "Jordan Gustafson",
         "detectedAt": "2026-09-03T21:08:02.360664+00:00"
       }
     },
