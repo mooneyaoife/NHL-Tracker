@@ -1,7 +1,7 @@
 {
   "schema": 3,
-  "sourceCommit": "695d4c10a5f043955f2fbb4fe7da410f6808902d",
-  "dataGeneratedAt": "2026-09-14T13:00:23.191247+00:00",
+  "sourceCommit": "0c5051fa3e6b722f3e00501d7f82451d4eb96fe5",
+  "dataGeneratedAt": "2026-09-14T19:28:10.402717+00:00",
   "season": "20262027",
   "version": "5.74.0",
   "trackedTeams": [
@@ -395,8 +395,8 @@
   },
   "freshness": {
     "status": "fresh",
-    "checkedAt": "2026-09-14T13:00:23.191261+00:00",
-    "lastSuccessfulAt": "2026-09-14T13:00:23.191262+00:00",
+    "checkedAt": "2026-09-14T19:28:10.402728+00:00",
+    "lastSuccessfulAt": "2026-09-14T19:28:10.402730+00:00",
     "ageSeconds": 0,
     "failedTeams": [],
     "schedule": {
@@ -1671,8 +1671,8 @@
   "continuity": {
     "schema": 3,
     "season": "20262027",
-    "capturedAt": "2026-09-14T13:00:23.191247+00:00",
-    "updatedAt": "2026-09-14T13:00:23.191247+00:00",
+    "capturedAt": "2026-09-14T19:28:10.402717+00:00",
+    "updatedAt": "2026-09-14T19:28:10.402717+00:00",
     "finished": {},
     "upcoming": {
       "2026020001": {
@@ -2181,6 +2181,13 @@
       }
     },
     "roster": {
+      "VGK|Added|8486083|2026-09-14T19:28:10.399228+00:00": {
+        "key": "VGK|Added|8486083|2026-09-14T19:28:10.399228+00:00",
+        "team": "VGK",
+        "direction": "Added",
+        "name": "Juho Piiparinen",
+        "detectedAt": "2026-09-14T19:28:10.399228+00:00"
+      },
       "SEA|Added|8482874|2026-09-13T20:56:18.817644+00:00": {
         "key": "SEA|Added|8482874|2026-09-13T20:56:18.817644+00:00",
         "team": "SEA",
@@ -2508,13 +2515,6 @@
         "team": "VGK",
         "direction": "Departed",
         "name": "Jackson Hallum",
-        "detectedAt": "2026-09-03T21:08:02.360664+00:00"
-      },
-      "VGK|Departed|8483523|2026-09-03T21:08:02.360664+00:00": {
-        "key": "VGK|Departed|8483523|2026-09-03T21:08:02.360664+00:00",
-        "team": "VGK",
-        "direction": "Departed",
-        "name": "Cameron Whitehead",
         "detectedAt": "2026-09-03T21:08:02.360664+00:00"
       }
     },
