@@ -1,7 +1,21 @@
 {
   "schema": 1,
-  "updatedAt": "2026-09-14T11:40:11.516Z",
+  "updatedAt": "2026-09-14T17:40:11.898Z",
   "items": [
+    {
+      "id": "b9e5c3da8f84d956baa1",
+      "title": "Cam Talbot Signs a 1-Year, $950K Contract with the Columbus Blue Jackets",
+      "publishedAt": "2026-09-14T17:03:09.000Z",
+      "category": "Contract",
+      "url": "https://puckpedia.com/signing/10804?utm_source=email&utm_medium=email&utm_campaign=signing&utm_content=primary"
+    },
+    {
+      "id": "16035c3fea9d6010ac5c",
+      "title": "Noah ?stlund Signs an 8-Year, $52.80M Contract with the Buffalo Sabres",
+      "publishedAt": "2026-09-14T15:46:10.000Z",
+      "category": "Contract",
+      "url": "https://puckpedia.com/signing/10803?utm_source=email&utm_medium=email&utm_campaign=signing&utm_content=primary"
+    },
     {
       "id": "ddfc39bf917ee1d7d864",
       "title": "Zack Bolduc Signs a 4-Year, $16.80M Contract with the Montreal Canadiens",
@@ -197,20 +211,6 @@
       "publishedAt": "2026-08-13T23:03:09.000Z",
       "category": "Contract",
       "url": "https://puckpedia.com/signing/10776?utm_source=email&utm_medium=email&utm_campaign=signing&utm_content=primary"
-    },
-    {
-      "id": "819c3d1a95ee6011fd1a",
-      "title": "Adam Novotn? Signs a 3-Year, $3.23M Contract with the Vancouver Canucks",
-      "publishedAt": "2026-08-11T19:15:11.000Z",
-      "category": "Contract",
-      "url": "https://puckpedia.com/signing/10775?utm_source=email&utm_medium=email&utm_campaign=signing&utm_content=primary"
-    },
-    {
-      "id": "82c6dd604ed3d2b91386",
-      "title": "Tyrel Bauer Signs a 2-Year, $1.75M Contract with the Winnipeg Jets",
-      "publishedAt": "2026-08-10T21:36:09.000Z",
-      "category": "Contract",
-      "url": "https://puckpedia.com/signing/10774?utm_source=email&utm_medium=email&utm_campaign=signing&utm_content=primary"
     }
   ]
 }
