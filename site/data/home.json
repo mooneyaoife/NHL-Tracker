@@ -1,7 +1,7 @@
 {
   "schema": 3,
-  "sourceCommit": "a55da58cf6a8c954203eb83d608c2145edbf44b5",
-  "dataGeneratedAt": "2026-09-15T11:53:01.377362+00:00",
+  "sourceCommit": "54a982130d2ba349ea964a4a361e6c2b7ab56d25",
+  "dataGeneratedAt": "2026-09-15T17:07:20.153166+00:00",
   "season": "20262027",
   "version": "5.74.0",
   "trackedTeams": [
@@ -395,8 +395,8 @@
   },
   "freshness": {
     "status": "fresh",
-    "checkedAt": "2026-09-15T11:53:01.377377+00:00",
-    "lastSuccessfulAt": "2026-09-15T11:53:01.377379+00:00",
+    "checkedAt": "2026-09-15T17:07:20.153180+00:00",
+    "lastSuccessfulAt": "2026-09-15T17:07:20.153183+00:00",
     "ageSeconds": 0,
     "failedTeams": [],
     "schedule": {
@@ -1671,8 +1671,8 @@
   "continuity": {
     "schema": 3,
     "season": "20262027",
-    "capturedAt": "2026-09-15T11:53:01.377362+00:00",
-    "updatedAt": "2026-09-15T11:53:01.377362+00:00",
+    "capturedAt": "2026-09-15T17:07:20.153166+00:00",
+    "updatedAt": "2026-09-15T17:07:20.153166+00:00",
     "finished": {},
     "upcoming": {
       "2026020001": {
@@ -2181,6 +2181,20 @@
       }
     },
     "roster": {
+      "CBJ|Added|8475660|2026-09-15T17:07:20.148820+00:00": {
+        "key": "CBJ|Added|8475660|2026-09-15T17:07:20.148820+00:00",
+        "team": "CBJ",
+        "direction": "Added",
+        "name": "Cam Talbot",
+        "detectedAt": "2026-09-15T17:07:20.148820+00:00"
+      },
+      "DET|Added|8484425|2026-09-15T17:07:20.148820+00:00": {
+        "key": "DET|Added|8484425|2026-09-15T17:07:20.148820+00:00",
+        "team": "DET",
+        "direction": "Added",
+        "name": "Sutter Muzzatti",
+        "detectedAt": "2026-09-15T17:07:20.148820+00:00"
+      },
       "VGK|Added|8486083|2026-09-14T19:28:10.399228+00:00": {
         "key": "VGK|Added|8486083|2026-09-14T19:28:10.399228+00:00",
         "team": "VGK",
@@ -2501,20 +2515,6 @@
         "team": "VGK",
         "direction": "Departed",
         "name": "Trent Swick",
-        "detectedAt": "2026-09-03T21:08:02.360664+00:00"
-      },
-      "VGK|Departed|8484532|2026-09-03T21:08:02.360664+00:00": {
-        "key": "VGK|Departed|8484532|2026-09-03T21:08:02.360664+00:00",
-        "team": "VGK",
-        "direction": "Departed",
-        "name": "Bronson Ride",
-        "detectedAt": "2026-09-03T21:08:02.360664+00:00"
-      },
-      "VGK|Departed|8482512|2026-09-03T21:08:02.360664+00:00": {
-        "key": "VGK|Departed|8482512|2026-09-03T21:08:02.360664+00:00",
-        "team": "VGK",
-        "direction": "Departed",
-        "name": "Jackson Hallum",
         "detectedAt": "2026-09-03T21:08:02.360664+00:00"
       }
     },
