@@ -1,7 +1,28 @@
 {
   "schema": 1,
-  "updatedAt": "2026-09-15T17:40:13.058Z",
+  "updatedAt": "2026-09-15T23:40:13.728Z",
   "items": [
+    {
+      "id": "70b19679f100695f94a0",
+      "title": "Alex Newhook Signs a 4-Year, $22.20M Contract with the Montreal Canadiens",
+      "publishedAt": "2026-09-15T21:22:09.000Z",
+      "category": "Contract",
+      "url": "https://puckpedia.com/signing/10809?utm_source=email&utm_medium=email&utm_campaign=signing&utm_content=primary"
+    },
+    {
+      "id": "b41f806af1e906bc0bd3",
+      "title": "Arber Xhekaj Signs a 1-Year, $1.50M Contract with the Montreal Canadiens",
+      "publishedAt": "2026-09-15T21:05:11.000Z",
+      "category": "Contract",
+      "url": "https://puckpedia.com/signing/10808?utm_source=email&utm_medium=email&utm_campaign=signing&utm_content=primary"
+    },
+    {
+      "id": "71de81ef3c6d71afbbfa",
+      "title": "Sutter Muzzatti Signs a 2-Year, $2.10M Contract with the Detroit Red Wings",
+      "publishedAt": "2026-09-15T17:50:11.000Z",
+      "category": "Contract",
+      "url": "https://puckpedia.com/signing/10807?utm_source=email&utm_medium=email&utm_campaign=signing&utm_content=primary"
+    },
     {
       "id": "5952d37e5b2a67ab8e5d",
       "title": "Ryan Leonard Signs an 8-Year, $84.00M Contract with the Washington Capitals",
@@ -190,27 +211,6 @@
       "publishedAt": "2026-08-20T18:35:14.000Z",
       "category": "Trade",
       "url": "https://puckpedia.com/trade/1203?utm_source=email&utm_medium=email&utm_campaign=trade&utm_content=primary"
-    },
-    {
-      "id": "83fdd2bacc8195308bf7",
-      "title": "The Pittsburgh Penguins trade Cruz Lucius to the Anaheim Ducks for future considerations",
-      "publishedAt": "2026-08-19T19:00:20.000Z",
-      "category": "Trade",
-      "url": "https://puckpedia.com/trade/1202?utm_source=email&utm_medium=email&utm_campaign=trade&utm_content=primary"
-    },
-    {
-      "id": "6850e1e5cd8150931475",
-      "title": "Scott Morrow Signs a 1-Year, $850K Contract with the New York Rangers",
-      "publishedAt": "2026-08-19T14:39:09.000Z",
-      "category": "Contract",
-      "url": "https://puckpedia.com/signing/10778?utm_source=email&utm_medium=email&utm_campaign=signing&utm_content=primary"
-    },
-    {
-      "id": "f23e5a17424a963c1648",
-      "title": "Hunter McDonald Signs a 2-Year, $1.83M Contract with the Philadelphia Flyers",
-      "publishedAt": "2026-08-18T19:44:11.000Z",
-      "category": "Contract",
-      "url": "https://puckpedia.com/signing/10777?utm_source=email&utm_medium=email&utm_campaign=signing&utm_content=primary"
     }
   ]
 }
