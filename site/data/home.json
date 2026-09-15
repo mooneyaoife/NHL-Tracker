@@ -1,7 +1,7 @@
 {
   "schema": 3,
-  "sourceCommit": "54a982130d2ba349ea964a4a361e6c2b7ab56d25",
-  "dataGeneratedAt": "2026-09-15T17:07:20.153166+00:00",
+  "sourceCommit": "df526c54174feefbe98a02f72126af7b92f23524",
+  "dataGeneratedAt": "2026-09-15T21:28:54.882571+00:00",
   "season": "20262027",
   "version": "5.74.0",
   "trackedTeams": [
@@ -395,8 +395,8 @@
   },
   "freshness": {
     "status": "fresh",
-    "checkedAt": "2026-09-15T17:07:20.153180+00:00",
-    "lastSuccessfulAt": "2026-09-15T17:07:20.153183+00:00",
+    "checkedAt": "2026-09-15T21:28:54.882583+00:00",
+    "lastSuccessfulAt": "2026-09-15T21:28:54.882586+00:00",
     "ageSeconds": 0,
     "failedTeams": [],
     "schedule": {
@@ -1671,8 +1671,8 @@
   "continuity": {
     "schema": 3,
     "season": "20262027",
-    "capturedAt": "2026-09-15T17:07:20.153166+00:00",
-    "updatedAt": "2026-09-15T17:07:20.153166+00:00",
+    "capturedAt": "2026-09-15T21:28:54.882571+00:00",
+    "updatedAt": "2026-09-15T21:28:54.882571+00:00",
     "finished": {},
     "upcoming": {
       "2026020001": {
@@ -2181,6 +2181,20 @@
       }
     },
     "roster": {
+      "STL|Added|8486263|2026-09-15T21:28:54.878459+00:00": {
+        "key": "STL|Added|8486263|2026-09-15T21:28:54.878459+00:00",
+        "team": "STL",
+        "direction": "Added",
+        "name": "Vladimir Proskurin",
+        "detectedAt": "2026-09-15T21:28:54.878459+00:00"
+      },
+      "STL|Departed|8484792|2026-09-15T21:28:54.878459+00:00": {
+        "key": "STL|Departed|8484792|2026-09-15T21:28:54.878459+00:00",
+        "team": "STL",
+        "direction": "Departed",
+        "name": "Adam Jecho",
+        "detectedAt": "2026-09-15T21:28:54.878459+00:00"
+      },
       "CBJ|Added|8475660|2026-09-15T17:07:20.148820+00:00": {
         "key": "CBJ|Added|8475660|2026-09-15T17:07:20.148820+00:00",
         "team": "CBJ",
@@ -2501,20 +2515,6 @@
         "team": "VGK",
         "direction": "Departed",
         "name": "Pavel Moysevich",
-        "detectedAt": "2026-09-03T21:08:02.360664+00:00"
-      },
-      "VGK|Departed|8483829|2026-09-03T21:08:02.360664+00:00": {
-        "key": "VGK|Departed|8483829|2026-09-03T21:08:02.360664+00:00",
-        "team": "VGK",
-        "direction": "Departed",
-        "name": "Joe Fleming",
-        "detectedAt": "2026-09-03T21:08:02.360664+00:00"
-      },
-      "VGK|Departed|8485057|2026-09-03T21:08:02.360664+00:00": {
-        "key": "VGK|Departed|8485057|2026-09-03T21:08:02.360664+00:00",
-        "team": "VGK",
-        "direction": "Departed",
-        "name": "Trent Swick",
         "detectedAt": "2026-09-03T21:08:02.360664+00:00"
       }
     },
