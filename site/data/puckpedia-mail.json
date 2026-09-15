@@ -1,7 +1,21 @@
 {
   "schema": 1,
-  "updatedAt": "2026-09-15T11:40:15.724Z",
+  "updatedAt": "2026-09-15T17:40:13.058Z",
   "items": [
+    {
+      "id": "5952d37e5b2a67ab8e5d",
+      "title": "Ryan Leonard Signs an 8-Year, $84.00M Contract with the Washington Capitals",
+      "publishedAt": "2026-09-15T13:19:10.000Z",
+      "category": "Contract",
+      "url": "https://puckpedia.com/signing/10806?utm_source=email&utm_medium=email&utm_campaign=signing&utm_content=primary"
+    },
+    {
+      "id": "b1126fa5a7b0121d8c74",
+      "title": "Drake Batherson Signs an 8-Year, $86.00M Contract with the Ottawa Senators",
+      "publishedAt": "2026-09-15T12:13:10.000Z",
+      "category": "Contract",
+      "url": "https://puckpedia.com/signing/10805?utm_source=email&utm_medium=email&utm_campaign=signing&utm_content=primary"
+    },
     {
       "id": "b9e5c3da8f84d956baa1",
       "title": "Cam Talbot Signs a 1-Year, $950K Contract with the Columbus Blue Jackets",
@@ -197,20 +211,6 @@
       "publishedAt": "2026-08-18T19:44:11.000Z",
       "category": "Contract",
       "url": "https://puckpedia.com/signing/10777?utm_source=email&utm_medium=email&utm_campaign=signing&utm_content=primary"
-    },
-    {
-      "id": "24c1ea22f4c3069bafd0",
-      "title": "The Buffalo Sabres trade Stiven Sardaryan to the Carolina Hurricanes for future considerations",
-      "publishedAt": "2026-08-17T17:06:14.000Z",
-      "category": "Trade",
-      "url": "https://puckpedia.com/trade/1201?utm_source=email&utm_medium=email&utm_campaign=trade&utm_content=primary"
-    },
-    {
-      "id": "daa4b656338ca85c3fe0",
-      "title": "Sasha Pastujov Signs a 1-Year, $850K Contract with the Montreal Canadiens",
-      "publishedAt": "2026-08-13T23:03:09.000Z",
-      "category": "Contract",
-      "url": "https://puckpedia.com/signing/10776?utm_source=email&utm_medium=email&utm_campaign=signing&utm_content=primary"
     }
   ]
 }
