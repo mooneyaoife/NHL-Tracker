@@ -1,7 +1,14 @@
 {
   "schema": 1,
-  "updatedAt": "2026-09-16T11:40:17.955Z",
+  "updatedAt": "2026-09-16T17:40:12.502Z",
   "items": [
+    {
+      "id": "e3500cf8457c0d1fd1b9",
+      "title": "Ethan Del Mastro Signs a 2-Year, $1.90M Contract with the Chicago Blackhawks",
+      "publishedAt": "2026-09-16T13:35:11.000Z",
+      "category": "Contract",
+      "url": "https://puckpedia.com/signing/10814?utm_source=email&utm_medium=email&utm_campaign=signing&utm_content=primary"
+    },
     {
       "id": "b4716524417d3f0b0ab5",
       "title": "Luke Evangelista Signs a 5-Year, $36.25M Contract with the New Jersey Devils",
@@ -204,13 +211,6 @@
       "publishedAt": "2026-09-01T21:01:11.000Z",
       "category": "Contract",
       "url": "https://puckpedia.com/signing/10786?utm_source=email&utm_medium=email&utm_campaign=signing&utm_content=primary"
-    },
-    {
-      "id": "719226d014009ac6a43a",
-      "title": "Kevin Korchinski Signs a 2-Year, $2.65M Contract with the Chicago Blackhawks",
-      "publishedAt": "2026-08-29T21:22:10.000Z",
-      "category": "Contract",
-      "url": "https://puckpedia.com/signing/10785?utm_source=email&utm_medium=email&utm_campaign=signing&utm_content=primary"
     }
   ]
 }
