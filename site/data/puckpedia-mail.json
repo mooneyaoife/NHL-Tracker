@@ -1,7 +1,35 @@
 {
   "schema": 1,
-  "updatedAt": "2026-09-15T23:40:13.728Z",
+  "updatedAt": "2026-09-16T05:40:12.996Z",
   "items": [
+    {
+      "id": "b4716524417d3f0b0ab5",
+      "title": "Luke Evangelista Signs a 5-Year, $36.25M Contract with the New Jersey Devils",
+      "publishedAt": "2026-09-16T03:26:09.000Z",
+      "category": "Contract",
+      "url": "https://puckpedia.com/signing/10813?utm_source=email&utm_medium=email&utm_campaign=signing&utm_content=primary"
+    },
+    {
+      "id": "6d654357fab7fd0a2616",
+      "title": "Jordan Staal Signs a 1-Year, $4.90M Contract with the Carolina Hurricanes",
+      "publishedAt": "2026-09-16T03:09:10.000Z",
+      "category": "Contract",
+      "url": "https://puckpedia.com/signing/10812?utm_source=email&utm_medium=email&utm_campaign=signing&utm_content=primary"
+    },
+    {
+      "id": "edbe1a9bf5f7ef760e1f",
+      "title": "Cutter Gauthier Signs a 6-Year, $81.00M Contract with the Anaheim Ducks",
+      "publishedAt": "2026-09-16T01:56:10.000Z",
+      "category": "Contract",
+      "url": "https://puckpedia.com/signing/10811?utm_source=email&utm_medium=email&utm_campaign=signing&utm_content=primary"
+    },
+    {
+      "id": "70297697feb572d9ecff",
+      "title": "Justin Sourdif Signs an 8-Year, $50.80M Contract with the Washington Capitals",
+      "publishedAt": "2026-09-16T01:37:08.000Z",
+      "category": "Contract",
+      "url": "https://puckpedia.com/signing/10810?utm_source=email&utm_medium=email&utm_campaign=signing&utm_content=primary"
+    },
     {
       "id": "70b19679f100695f94a0",
       "title": "Alex Newhook Signs a 4-Year, $22.20M Contract with the Montreal Canadiens",
@@ -183,34 +211,6 @@
       "publishedAt": "2026-08-29T21:22:10.000Z",
       "category": "Contract",
       "url": "https://puckpedia.com/signing/10785?utm_source=email&utm_medium=email&utm_campaign=signing&utm_content=primary"
-    },
-    {
-      "id": "543be2e3898547958acd",
-      "title": "Cale Makar Signs an 8-Year, $163.20M Contract with the Colorado Avalanche",
-      "publishedAt": "2026-08-28T21:27:10.000Z",
-      "category": "Contract",
-      "url": "https://puckpedia.com/signing/10784?utm_source=email&utm_medium=email&utm_campaign=signing&utm_content=primary"
-    },
-    {
-      "id": "417746d87e5d457e938d",
-      "title": "Vincent Iorio Signs a 1-Year, $850K Contract with the New York Rangers",
-      "publishedAt": "2026-08-21T21:45:12.000Z",
-      "category": "Contract",
-      "url": "https://puckpedia.com/signing/10780?utm_source=email&utm_medium=email&utm_campaign=signing&utm_content=primary"
-    },
-    {
-      "id": "11ccdb19a57b3481c294",
-      "title": "Cruz Lucius Signs a 2-Year, $2.10M Contract with the Anaheim Ducks",
-      "publishedAt": "2026-08-21T15:50:12.000Z",
-      "category": "Contract",
-      "url": "https://puckpedia.com/signing/10779?utm_source=email&utm_medium=email&utm_campaign=signing&utm_content=primary"
-    },
-    {
-      "id": "5b989955c356a6e0e4c9",
-      "title": "The Nashville Predators trade Sutter Muzzatti to the Detroit Red Wings for future considerations",
-      "publishedAt": "2026-08-20T18:35:14.000Z",
-      "category": "Trade",
-      "url": "https://puckpedia.com/trade/1203?utm_source=email&utm_medium=email&utm_campaign=trade&utm_content=primary"
     }
   ]
 }
