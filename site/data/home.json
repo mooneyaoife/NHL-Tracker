@@ -1,7 +1,7 @@
 {
   "schema": 3,
-  "sourceCommit": "3852848db97aeb2f14a3593e36644a5657838414",
-  "dataGeneratedAt": "2026-09-17T13:34:57.206356+00:00",
+  "sourceCommit": "603b3df2fdc37ef1681a59574db893296e7b6c45",
+  "dataGeneratedAt": "2026-09-17T18:20:35.756999+00:00",
   "season": "20262027",
   "version": "5.74.0",
   "trackedTeams": [
@@ -219,8 +219,8 @@
   },
   "freshness": {
     "status": "fresh",
-    "checkedAt": "2026-09-17T13:34:57.206366+00:00",
-    "lastSuccessfulAt": "2026-09-17T13:34:57.206367+00:00",
+    "checkedAt": "2026-09-17T18:20:35.757012+00:00",
+    "lastSuccessfulAt": "2026-09-17T18:20:35.757014+00:00",
     "ageSeconds": 0,
     "failedTeams": [],
     "schedule": {
@@ -1495,8 +1495,8 @@
   "continuity": {
     "schema": 3,
     "season": "20262027",
-    "capturedAt": "2026-09-17T13:34:57.206356+00:00",
-    "updatedAt": "2026-09-17T13:34:57.206356+00:00",
+    "capturedAt": "2026-09-17T18:20:35.756999+00:00",
+    "updatedAt": "2026-09-17T18:20:35.756999+00:00",
     "finished": {},
     "upcoming": {
       "2026020001": {
@@ -2005,6 +2005,27 @@
       }
     },
     "roster": {
+      "CAR|Departed|8486043|2026-09-17T18:20:35.752982+00:00": {
+        "key": "CAR|Departed|8486043|2026-09-17T18:20:35.752982+00:00",
+        "team": "CAR",
+        "direction": "Departed",
+        "name": "William Hakansson",
+        "detectedAt": "2026-09-17T18:20:35.752982+00:00"
+      },
+      "TOR|Departed|8477503|2026-09-17T18:20:35.752982+00:00": {
+        "key": "TOR|Departed|8477503|2026-09-17T18:20:35.752982+00:00",
+        "team": "TOR",
+        "direction": "Departed",
+        "name": "Max Domi",
+        "detectedAt": "2026-09-17T18:20:35.752982+00:00"
+      },
+      "TOR|Departed|8481570|2026-09-17T18:20:35.752982+00:00": {
+        "key": "TOR|Departed|8481570|2026-09-17T18:20:35.752982+00:00",
+        "team": "TOR",
+        "direction": "Departed",
+        "name": "Cade Webber",
+        "detectedAt": "2026-09-17T18:20:35.752982+00:00"
+      },
       "VGK|Added|8480007|2026-09-17T00:38:17.044581+00:00": {
         "key": "VGK|Added|8480007|2026-09-17T00:38:17.044581+00:00",
         "team": "VGK",
@@ -2318,27 +2339,6 @@
         "team": "STL",
         "direction": "Added",
         "name": "Aleksanteri Kaskimaki",
-        "detectedAt": "2026-09-08T16:43:24.628992+00:00"
-      },
-      "STL|Added|8484393|2026-09-08T16:43:24.628992+00:00": {
-        "key": "STL|Added|8484393|2026-09-08T16:43:24.628992+00:00",
-        "team": "STL",
-        "direction": "Added",
-        "name": "Juraj Pekarcik",
-        "detectedAt": "2026-09-08T16:43:24.628992+00:00"
-      },
-      "STL|Added|8484865|2026-09-08T16:43:24.628992+00:00": {
-        "key": "STL|Added|8484865|2026-09-08T16:43:24.628992+00:00",
-        "team": "STL",
-        "direction": "Added",
-        "name": "Colin Ralph",
-        "detectedAt": "2026-09-08T16:43:24.628992+00:00"
-      },
-      "STL|Added|8486134|2026-09-08T16:43:24.628992+00:00": {
-        "key": "STL|Added|8486134|2026-09-08T16:43:24.628992+00:00",
-        "team": "STL",
-        "direction": "Added",
-        "name": "Felix Trudeau",
         "detectedAt": "2026-09-08T16:43:24.628992+00:00"
       }
     },
