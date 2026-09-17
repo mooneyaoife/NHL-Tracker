@@ -1,7 +1,7 @@
 {
   "schema": 3,
-  "sourceCommit": "603b3df2fdc37ef1681a59574db893296e7b6c45",
-  "dataGeneratedAt": "2026-09-17T18:20:35.756999+00:00",
+  "sourceCommit": "f77dca49edf5196485302c02bfb5957cb4e64f7d",
+  "dataGeneratedAt": "2026-09-17T22:53:33.468564+00:00",
   "season": "20262027",
   "version": "5.74.0",
   "trackedTeams": [
@@ -219,8 +219,8 @@
   },
   "freshness": {
     "status": "fresh",
-    "checkedAt": "2026-09-17T18:20:35.757012+00:00",
-    "lastSuccessfulAt": "2026-09-17T18:20:35.757014+00:00",
+    "checkedAt": "2026-09-17T22:53:33.468573+00:00",
+    "lastSuccessfulAt": "2026-09-17T22:53:33.468574+00:00",
     "ageSeconds": 0,
     "failedTeams": [],
     "schedule": {
@@ -1495,8 +1495,8 @@
   "continuity": {
     "schema": 3,
     "season": "20262027",
-    "capturedAt": "2026-09-17T18:20:35.756999+00:00",
-    "updatedAt": "2026-09-17T18:20:35.756999+00:00",
+    "capturedAt": "2026-09-17T22:53:33.468564+00:00",
+    "updatedAt": "2026-09-17T22:53:33.468564+00:00",
     "finished": {},
     "upcoming": {
       "2026020001": {
@@ -2005,6 +2005,13 @@
       }
     },
     "roster": {
+      "TOR|Departed|8482174|2026-09-17T22:53:33.465539+00:00": {
+        "key": "TOR|Departed|8482174|2026-09-17T22:53:33.465539+00:00",
+        "team": "TOR",
+        "direction": "Departed",
+        "name": "William Villeneuve",
+        "detectedAt": "2026-09-17T22:53:33.465539+00:00"
+      },
       "CAR|Departed|8486043|2026-09-17T18:20:35.752982+00:00": {
         "key": "CAR|Departed|8486043|2026-09-17T18:20:35.752982+00:00",
         "team": "CAR",
@@ -2332,13 +2339,6 @@
         "team": "STL",
         "direction": "Added",
         "name": "Justin Carbonneau",
-        "detectedAt": "2026-09-08T16:43:24.628992+00:00"
-      },
-      "STL|Added|8483463|2026-09-08T16:43:24.628992+00:00": {
-        "key": "STL|Added|8483463|2026-09-08T16:43:24.628992+00:00",
-        "team": "STL",
-        "direction": "Added",
-        "name": "Aleksanteri Kaskimaki",
         "detectedAt": "2026-09-08T16:43:24.628992+00:00"
       }
     },
