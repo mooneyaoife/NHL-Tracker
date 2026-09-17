@@ -1,7 +1,14 @@
 {
   "schema": 1,
-  "updatedAt": "2026-09-16T23:40:10.248Z",
+  "updatedAt": "2026-09-17T05:40:23.841Z",
   "items": [
+    {
+      "id": "68e7adba7cee239afb0b",
+      "title": "Matthew Poitras Signs a 1-Year, $850K Contract with the Boston Bruins",
+      "publishedAt": "2026-09-17T00:55:11.000Z",
+      "category": "Contract",
+      "url": "https://puckpedia.com/signing/10815?utm_source=email&utm_medium=email&utm_campaign=signing&utm_content=primary"
+    },
     {
       "id": "e3500cf8457c0d1fd1b9",
       "title": "Ethan Del Mastro Signs a 2-Year, $1.90M Contract with the Chicago Blackhawks",
@@ -204,13 +211,6 @@
       "publishedAt": "2026-09-02T00:51:15.000Z",
       "category": "Trade",
       "url": "https://puckpedia.com/trade/1204?utm_source=email&utm_medium=email&utm_campaign=trade&utm_content=primary"
-    },
-    {
-      "id": "488b1d1f5d1bc9727fae",
-      "title": "Eeli Tolvanen Signs a 1-Year, $1.50M Contract with the New York Rangers",
-      "publishedAt": "2026-09-01T21:01:11.000Z",
-      "category": "Contract",
-      "url": "https://puckpedia.com/signing/10786?utm_source=email&utm_medium=email&utm_campaign=signing&utm_content=primary"
     }
   ]
 }
