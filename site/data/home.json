@@ -1,7 +1,7 @@
 {
   "schema": 3,
-  "sourceCommit": "24c1e2ed1fc9b675da587610e5e920555c9ea7f3",
-  "dataGeneratedAt": "2026-09-18T16:32:11.254704+00:00",
+  "sourceCommit": "1f09848f2ef76f5e388e5605d7510d8ef75fe374",
+  "dataGeneratedAt": "2026-09-18T20:59:15.252582+00:00",
   "season": "20262027",
   "version": "5.74.0",
   "trackedTeams": [
@@ -219,8 +219,8 @@
   },
   "freshness": {
     "status": "fresh",
-    "checkedAt": "2026-09-18T16:32:11.254715+00:00",
-    "lastSuccessfulAt": "2026-09-18T16:32:11.254718+00:00",
+    "checkedAt": "2026-09-18T20:59:15.252593+00:00",
+    "lastSuccessfulAt": "2026-09-18T20:59:15.252596+00:00",
     "ageSeconds": 0,
     "failedTeams": [],
     "schedule": {
@@ -1495,8 +1495,8 @@
   "continuity": {
     "schema": 3,
     "season": "20262027",
-    "capturedAt": "2026-09-18T16:32:11.254704+00:00",
-    "updatedAt": "2026-09-18T16:32:11.254704+00:00",
+    "capturedAt": "2026-09-18T20:59:15.252582+00:00",
+    "updatedAt": "2026-09-18T20:59:15.252582+00:00",
     "finished": {},
     "upcoming": {
       "2026020001": {
@@ -2005,6 +2005,27 @@
       }
     },
     "roster": {
+      "EDM|Added|8483083|2026-09-18T20:59:15.248564+00:00": {
+        "key": "EDM|Added|8483083|2026-09-18T20:59:15.248564+00:00",
+        "team": "EDM",
+        "direction": "Added",
+        "name": "Connor Ungar",
+        "detectedAt": "2026-09-18T20:59:15.248564+00:00"
+      },
+      "EDM|Added|8485484|2026-09-18T20:59:15.248564+00:00": {
+        "key": "EDM|Added|8485484|2026-09-18T20:59:15.248564+00:00",
+        "team": "EDM",
+        "direction": "Added",
+        "name": "Damien Carfagna",
+        "detectedAt": "2026-09-18T20:59:15.248564+00:00"
+      },
+      "CGY|Added|8482747|2026-09-18T20:59:15.248564+00:00": {
+        "key": "CGY|Added|8482747|2026-09-18T20:59:15.248564+00:00",
+        "team": "CGY",
+        "direction": "Added",
+        "name": "Brennan Othmann",
+        "detectedAt": "2026-09-18T20:59:15.248564+00:00"
+      },
       "TOR|Departed|8482174|2026-09-17T22:53:33.465539+00:00": {
         "key": "TOR|Departed|8482174|2026-09-17T22:53:33.465539+00:00",
         "team": "TOR",
@@ -2318,27 +2339,6 @@
         "team": "STL",
         "direction": "Added",
         "name": "Marc-Andre Gaudet",
-        "detectedAt": "2026-09-08T16:43:24.628992+00:00"
-      },
-      "STL|Added|8483427|2026-09-08T16:43:24.628992+00:00": {
-        "key": "STL|Added|8483427|2026-09-08T16:43:24.628992+00:00",
-        "team": "STL",
-        "direction": "Added",
-        "name": "Michael Buchinger",
-        "detectedAt": "2026-09-08T16:43:24.628992+00:00"
-      },
-      "STL|Added|8479346|2026-09-08T16:43:24.628992+00:00": {
-        "key": "STL|Added|8479346|2026-09-08T16:43:24.628992+00:00",
-        "team": "STL",
-        "direction": "Added",
-        "name": "Dillon Dube",
-        "detectedAt": "2026-09-08T16:43:24.628992+00:00"
-      },
-      "STL|Added|8485382|2026-09-08T16:43:24.628992+00:00": {
-        "key": "STL|Added|8485382|2026-09-08T16:43:24.628992+00:00",
-        "team": "STL",
-        "direction": "Added",
-        "name": "Justin Carbonneau",
         "detectedAt": "2026-09-08T16:43:24.628992+00:00"
       }
     },
