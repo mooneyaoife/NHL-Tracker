@@ -1,7 +1,14 @@
 {
   "schema": 1,
-  "updatedAt": "2026-09-18T17:40:12.330Z",
+  "updatedAt": "2026-09-18T23:40:13.523Z",
   "items": [
+    {
+      "id": "5ba9e7061b25abe16f17",
+      "title": "Brennan Othmann Signs a 1-Year, $975K Contract with the Calgary Flames",
+      "publishedAt": "2026-09-18T18:26:12.000Z",
+      "category": "Contract",
+      "url": "https://puckpedia.com/signing/10816?utm_source=email&utm_medium=email&utm_campaign=signing&utm_content=primary"
+    },
     {
       "id": "68e7adba7cee239afb0b",
       "title": "Matthew Poitras Signs a 1-Year, $850K Contract with the Boston Bruins",
@@ -204,13 +211,6 @@
       "publishedAt": "2026-09-04T13:38:12.000Z",
       "category": "Contract",
       "url": "https://puckpedia.com/signing/10787?utm_source=email&utm_medium=email&utm_campaign=signing&utm_content=primary"
-    },
-    {
-      "id": "0c498ea49ca2b6802b5c",
-      "title": "The New Jersey Devils acquire Luke Evangelista from the Nashville Predators for a conditional 2028 1st round pick (COL) and a 2028 2nd round pick",
-      "publishedAt": "2026-09-02T00:51:15.000Z",
-      "category": "Trade",
-      "url": "https://puckpedia.com/trade/1204?utm_source=email&utm_medium=email&utm_campaign=trade&utm_content=primary"
     }
   ]
 }
