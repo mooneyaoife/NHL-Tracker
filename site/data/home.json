@@ -1,7 +1,7 @@
 {
   "schema": 3,
-  "sourceCommit": "f2b3e427227c2837c1ba464f27a62a47d57ca563",
-  "dataGeneratedAt": "2026-09-19T17:19:15.464374+00:00",
+  "sourceCommit": "67c78ca2cd9ad2680fd5845fef3ad4d746440a4f",
+  "dataGeneratedAt": "2026-09-19T20:49:12.740356+00:00",
   "season": "20262027",
   "version": "5.74.0",
   "trackedTeams": [
@@ -219,8 +219,8 @@
   },
   "freshness": {
     "status": "fresh",
-    "checkedAt": "2026-09-19T17:19:15.464386+00:00",
-    "lastSuccessfulAt": "2026-09-19T17:19:15.464388+00:00",
+    "checkedAt": "2026-09-19T20:49:12.740368+00:00",
+    "lastSuccessfulAt": "2026-09-19T20:49:12.740370+00:00",
     "ageSeconds": 0,
     "failedTeams": [],
     "schedule": {
@@ -1495,8 +1495,8 @@
   "continuity": {
     "schema": 3,
     "season": "20262027",
-    "capturedAt": "2026-09-19T17:19:15.464374+00:00",
-    "updatedAt": "2026-09-19T17:19:15.464374+00:00",
+    "capturedAt": "2026-09-19T20:49:12.740356+00:00",
+    "updatedAt": "2026-09-19T20:49:12.740356+00:00",
     "finished": {},
     "upcoming": {
       "2026020001": {
@@ -2005,6 +2005,48 @@
       }
     },
     "roster": {
+      "COL|Departed|8486206|2026-09-19T20:49:12.736324+00:00": {
+        "key": "COL|Departed|8486206|2026-09-19T20:49:12.736324+00:00",
+        "team": "COL",
+        "direction": "Departed",
+        "name": "Nikita Novosyolov",
+        "detectedAt": "2026-09-19T20:49:12.736324+00:00"
+      },
+      "PHI|Departed|8485073|2026-09-19T20:49:12.736324+00:00": {
+        "key": "PHI|Departed|8485073|2026-09-19T20:49:12.736324+00:00",
+        "team": "PHI",
+        "direction": "Departed",
+        "name": "Ilya Pautov",
+        "detectedAt": "2026-09-19T20:49:12.736324+00:00"
+      },
+      "PHI|Departed|8484156|2026-09-19T20:49:12.736324+00:00": {
+        "key": "PHI|Departed|8484156|2026-09-19T20:49:12.736324+00:00",
+        "team": "PHI",
+        "direction": "Departed",
+        "name": "Alex Ciernik",
+        "detectedAt": "2026-09-19T20:49:12.736324+00:00"
+      },
+      "PHI|Departed|8483461|2026-09-19T20:49:12.736324+00:00": {
+        "key": "PHI|Departed|8483461|2026-09-19T20:49:12.736324+00:00",
+        "team": "PHI",
+        "direction": "Departed",
+        "name": "Devin Kaplan",
+        "detectedAt": "2026-09-19T20:49:12.736324+00:00"
+      },
+      "PHI|Departed|8483438|2026-09-19T20:49:12.736324+00:00": {
+        "key": "PHI|Departed|8483438|2026-09-19T20:49:12.736324+00:00",
+        "team": "PHI",
+        "direction": "Departed",
+        "name": "Jackson Edward",
+        "detectedAt": "2026-09-19T20:49:12.736324+00:00"
+      },
+      "FLA|Added|8482760|2026-09-19T20:49:12.736324+00:00": {
+        "key": "FLA|Added|8482760|2026-09-19T20:49:12.736324+00:00",
+        "team": "FLA",
+        "direction": "Added",
+        "name": "Samu Salminen",
+        "detectedAt": "2026-09-19T20:49:12.736324+00:00"
+      },
       "EDM|Departed|8483512|2026-09-19T17:19:15.461137+00:00": {
         "key": "EDM|Departed|8483512|2026-09-19T17:19:15.461137+00:00",
         "team": "EDM",
@@ -2298,48 +2340,6 @@
         "direction": "Added",
         "name": "Benjamin Rautiainen",
         "detectedAt": "2026-09-09T17:52:00.941948+00:00"
-      },
-      "CAR|Added|8480058|2026-09-08T21:15:20.553716+00:00": {
-        "key": "CAR|Added|8480058|2026-09-08T21:15:20.553716+00:00",
-        "team": "CAR",
-        "direction": "Added",
-        "name": "Pierre-Olivier Joseph",
-        "detectedAt": "2026-09-08T21:15:20.553716+00:00"
-      },
-      "SJS|Added|8478492|2026-09-08T21:15:20.553716+00:00": {
-        "key": "SJS|Added|8478492|2026-09-08T21:15:20.553716+00:00",
-        "team": "SJS",
-        "direction": "Added",
-        "name": "Ilya Samsonov",
-        "detectedAt": "2026-09-08T21:15:20.553716+00:00"
-      },
-      "STL|Added|8484790|2026-09-08T16:43:24.628992+00:00": {
-        "key": "STL|Added|8484790|2026-09-08T16:43:24.628992+00:00",
-        "team": "STL",
-        "direction": "Added",
-        "name": "Adam Jiricek",
-        "detectedAt": "2026-09-08T16:43:24.628992+00:00"
-      },
-      "STL|Added|8482121|2026-09-08T16:43:24.628992+00:00": {
-        "key": "STL|Added|8482121|2026-09-08T16:43:24.628992+00:00",
-        "team": "STL",
-        "direction": "Added",
-        "name": "Dylan Peterson",
-        "detectedAt": "2026-09-08T16:43:24.628992+00:00"
-      },
-      "STL|Added|8484792|2026-09-08T16:43:24.628992+00:00": {
-        "key": "STL|Added|8484792|2026-09-08T16:43:24.628992+00:00",
-        "team": "STL",
-        "direction": "Added",
-        "name": "Adam Jecho",
-        "detectedAt": "2026-09-08T16:43:24.628992+00:00"
-      },
-      "STL|Added|8486033|2026-09-08T16:43:24.628992+00:00": {
-        "key": "STL|Added|8486033|2026-09-08T16:43:24.628992+00:00",
-        "team": "STL",
-        "direction": "Added",
-        "name": "Maddox Dagenais",
-        "detectedAt": "2026-09-08T16:43:24.628992+00:00"
       }
     },
     "schedule": {
