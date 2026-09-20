@@ -1,7 +1,7 @@
 {
   "schema": 3,
-  "sourceCommit": "8abb72b035eaf3607381e56dda7382d5a5ecb3e0",
-  "dataGeneratedAt": "2026-09-20T11:34:59.532703+00:00",
+  "sourceCommit": "051393b8aef532cacae69509864bcbf38efe0dcf",
+  "dataGeneratedAt": "2026-09-20T16:15:46.528815+00:00",
   "season": "20262027",
   "version": "5.74.0",
   "trackedTeams": [
@@ -45,185 +45,171 @@
     "VAN": "Vancouver Canucks"
   },
   "daily": {
-    "currentDate": "2026-09-19",
-    "requestedDate": "2026-09-19",
+    "currentDate": "2026-09-20",
+    "requestedDate": "2026-09-20",
     "fallback": false,
     "games": [
       {
-        "id": 2026010001,
-        "date": "2026-09-19",
-        "slateDate": "2026-09-19",
+        "id": 2026010008,
+        "date": "2026-09-20",
+        "slateDate": "2026-09-20",
         "londonDate": "2026-09-20",
-        "startTimeUTC": "2026-09-19T23:00:00Z",
-        "state": "FINAL",
-        "status": "final",
-        "statusLabel": "Final",
+        "startTimeUTC": "2026-09-20T17:00:00Z",
+        "state": "FUT",
+        "status": "scheduled",
+        "statusLabel": "Scheduled",
         "scheduleState": "OK",
-        "gameOutcome": {
-          "lastPeriodType": "REG"
-        },
+        "gameOutcome": {},
         "type": 1,
-        "venue": "Enterprise Center",
-        "home": "STL",
-        "away": "DAL",
-        "homeScore": 1,
-        "awayScore": 2,
-        "period": 3,
-        "broadcasts": [
-          "Blues App"
-        ],
-        "schedule": {}
-      },
-      {
-        "id": 2026010006,
-        "date": "2026-09-19",
-        "slateDate": "2026-09-19",
-        "londonDate": "2026-09-20",
-        "startTimeUTC": "2026-09-19T23:00:00Z",
-        "state": "FINAL",
-        "status": "final",
-        "statusLabel": "Final",
-        "scheduleState": "OK",
-        "gameOutcome": {
-          "lastPeriodType": "REG"
-        },
-        "type": 1,
-        "venue": "Scotiabank Arena",
-        "home": "TOR",
-        "away": "MTL",
-        "homeScore": 1,
-        "awayScore": 4,
-        "period": 3,
-        "broadcasts": [
-          "TSN2",
-          "TSN4",
-          "RDSI"
-        ],
-        "schedule": {}
-      },
-      {
-        "id": 2026010007,
-        "date": "2026-09-19",
-        "slateDate": "2026-09-19",
-        "londonDate": "2026-09-20",
-        "startTimeUTC": "2026-09-19T23:00:00Z",
-        "state": "FINAL",
-        "status": "final-ot",
-        "statusLabel": "Final/OT",
-        "scheduleState": "OK",
-        "gameOutcome": {
-          "lastPeriodType": "OT"
-        },
-        "type": 1,
-        "venue": "Centre Bell",
-        "home": "MTL",
-        "away": "TOR",
-        "homeScore": 4,
-        "awayScore": 3,
-        "period": 4,
+        "venue": "Prudential Center",
+        "home": "NJD",
+        "away": "NYI",
+        "homeScore": null,
+        "awayScore": null,
+        "period": 1,
         "broadcasts": [
           "NHLN",
-          "SN1",
-          "RDS"
+          "MSGSN",
+          "MSG"
         ],
         "schedule": {}
       },
       {
-        "id": 2026010003,
-        "date": "2026-09-19",
-        "slateDate": "2026-09-19",
+        "id": 2026010009,
+        "date": "2026-09-20",
+        "slateDate": "2026-09-20",
         "londonDate": "2026-09-20",
-        "startTimeUTC": "2026-09-20T00:00:00Z",
-        "state": "FINAL",
-        "status": "final",
-        "statusLabel": "Final",
+        "startTimeUTC": "2026-09-20T20:00:00Z",
+        "state": "FUT",
+        "status": "scheduled",
+        "statusLabel": "Scheduled",
         "scheduleState": "OK",
-        "gameOutcome": {
-          "lastPeriodType": "REG"
-        },
+        "gameOutcome": {},
         "type": 1,
-        "venue": "Rogers Place",
-        "home": "EDM",
-        "away": "WPG",
-        "homeScore": 5,
-        "awayScore": 2,
-        "period": 3,
+        "venue": "Honda Center",
+        "home": "ANA",
+        "away": "SJS",
+        "homeScore": null,
+        "awayScore": null,
+        "period": 1,
+        "broadcasts": [],
+        "schedule": {}
+      },
+      {
+        "id": 2026010011,
+        "date": "2026-09-20",
+        "slateDate": "2026-09-20",
+        "londonDate": "2026-09-20",
+        "startTimeUTC": "2026-09-20T21:00:00Z",
+        "state": "FUT",
+        "status": "scheduled",
+        "statusLabel": "Scheduled",
+        "scheduleState": "OK",
+        "gameOutcome": {},
+        "type": 1,
+        "venue": "Benchmark International Arena",
+        "home": "TBL",
+        "away": "NSH",
+        "homeScore": null,
+        "awayScore": null,
+        "period": 1,
         "broadcasts": [
-          "Oilers+"
+          "The Spot",
+          "SCRIPPS"
         ],
         "schedule": {}
       },
       {
-        "id": 2026010004,
-        "date": "2026-09-19",
-        "slateDate": "2026-09-19",
+        "id": 2026010013,
+        "date": "2026-09-20",
+        "slateDate": "2026-09-20",
         "londonDate": "2026-09-20",
-        "startTimeUTC": "2026-09-20T00:00:00Z",
-        "state": "FINAL",
-        "status": "final-ot",
-        "statusLabel": "Final/OT",
+        "startTimeUTC": "2026-09-20T21:00:00Z",
+        "state": "FUT",
+        "status": "scheduled",
+        "statusLabel": "Scheduled",
         "scheduleState": "OK",
-        "gameOutcome": {
-          "lastPeriodType": "OT"
-        },
+        "gameOutcome": {},
         "type": 1,
-        "venue": "Grand Casino Arena",
-        "home": "MIN",
-        "away": "CHI",
-        "homeScore": 3,
-        "awayScore": 2,
-        "period": 4,
+        "venue": "TD Garden",
+        "home": "BOS",
+        "away": "WSH",
+        "homeScore": null,
+        "awayScore": null,
+        "period": 1,
         "broadcasts": [
-          "CHSN+"
+          "NHLN",
+          "NESNplus",
+          "MNMT2"
         ],
         "schedule": {}
       },
       {
-        "id": 2026010002,
-        "date": "2026-09-19",
-        "slateDate": "2026-09-19",
-        "londonDate": "2026-09-20",
-        "startTimeUTC": "2026-09-20T01:00:00Z",
-        "state": "FINAL",
-        "status": "final",
-        "statusLabel": "Final",
+        "id": 2026010010,
+        "date": "2026-09-20",
+        "slateDate": "2026-09-20",
+        "londonDate": "2026-09-21",
+        "startTimeUTC": "2026-09-20T23:00:00Z",
+        "state": "FUT",
+        "status": "scheduled",
+        "statusLabel": "Scheduled",
         "scheduleState": "OK",
-        "gameOutcome": {
-          "lastPeriodType": "REG"
-        },
+        "gameOutcome": {},
         "type": 1,
-        "venue": "Toyota Arena",
-        "home": "LAK",
-        "away": "VGK",
-        "homeScore": 2,
-        "awayScore": 4,
-        "period": 3,
+        "venue": "Amerant Bank Arena",
+        "home": "FLA",
+        "away": "CAR",
+        "homeScore": null,
+        "awayScore": null,
+        "period": 1,
         "broadcasts": [
           "SCRIPPS"
         ],
         "schedule": {}
       },
       {
-        "id": 2026010005,
-        "date": "2026-09-19",
-        "slateDate": "2026-09-19",
-        "londonDate": "2026-09-20",
-        "startTimeUTC": "2026-09-20T01:00:00Z",
-        "state": "FINAL",
-        "status": "final",
-        "statusLabel": "Final",
+        "id": 2026010012,
+        "date": "2026-09-20",
+        "slateDate": "2026-09-20",
+        "londonDate": "2026-09-21",
+        "startTimeUTC": "2026-09-20T23:00:00Z",
+        "state": "FUT",
+        "status": "scheduled",
+        "statusLabel": "Scheduled",
         "scheduleState": "OK",
-        "gameOutcome": {
-          "lastPeriodType": "REG"
-        },
+        "gameOutcome": {},
         "type": 1,
-        "venue": "Climate Pledge Arena",
-        "home": "SEA",
-        "away": "VAN",
-        "homeScore": 4,
-        "awayScore": 2,
-        "period": 3,
+        "venue": "Ball Arena",
+        "home": "COL",
+        "away": "UTA",
+        "homeScore": null,
+        "awayScore": null,
+        "period": 1,
         "broadcasts": [
+          "Utah16"
+        ],
+        "schedule": {}
+      },
+      {
+        "id": 2026010014,
+        "date": "2026-09-20",
+        "slateDate": "2026-09-20",
+        "londonDate": "2026-09-21",
+        "startTimeUTC": "2026-09-21T00:00:00Z",
+        "state": "FUT",
+        "status": "scheduled",
+        "statusLabel": "Scheduled",
+        "scheduleState": "OK",
+        "gameOutcome": {},
+        "type": 1,
+        "venue": "Scotiabank Saddledome",
+        "home": "CGY",
+        "away": "SEA",
+        "homeScore": null,
+        "awayScore": null,
+        "period": 1,
+        "broadcasts": [
+          "NHLN",
           "KHN/Prime",
           "KONG"
         ],
@@ -233,8 +219,8 @@
   },
   "freshness": {
     "status": "fresh",
-    "checkedAt": "2026-09-20T11:34:59.532714+00:00",
-    "lastSuccessfulAt": "2026-09-20T11:34:59.532717+00:00",
+    "checkedAt": "2026-09-20T16:15:46.528831+00:00",
+    "lastSuccessfulAt": "2026-09-20T16:15:46.528833+00:00",
     "ageSeconds": 0,
     "failedTeams": [],
     "schedule": {
@@ -1509,8 +1495,8 @@
   "continuity": {
     "schema": 3,
     "season": "20262027",
-    "capturedAt": "2026-09-20T11:34:59.532703+00:00",
-    "updatedAt": "2026-09-20T11:34:59.532703+00:00",
+    "capturedAt": "2026-09-20T16:15:46.528815+00:00",
+    "updatedAt": "2026-09-20T16:15:46.528815+00:00",
     "finished": {},
     "upcoming": {
       "2026020001": {
@@ -2019,6 +2005,69 @@
       }
     },
     "roster": {
+      "EDM|Departed|8483769|2026-09-20T16:15:46.524101+00:00": {
+        "key": "EDM|Departed|8483769|2026-09-20T16:15:46.524101+00:00",
+        "team": "EDM",
+        "direction": "Departed",
+        "name": "Samuel Jonsson",
+        "detectedAt": "2026-09-20T16:15:46.524101+00:00"
+      },
+      "EDM|Departed|8484455|2026-09-20T16:15:46.524101+00:00": {
+        "key": "EDM|Departed|8484455|2026-09-20T16:15:46.524101+00:00",
+        "team": "EDM",
+        "direction": "Departed",
+        "name": "Nathaniel Day",
+        "detectedAt": "2026-09-20T16:15:46.524101+00:00"
+      },
+      "STL|Departed|8484810|2026-09-20T16:15:46.524101+00:00": {
+        "key": "STL|Departed|8484810|2026-09-20T16:15:46.524101+00:00",
+        "team": "STL",
+        "direction": "Departed",
+        "name": "Lukas Fischer",
+        "detectedAt": "2026-09-20T16:15:46.524101+00:00"
+      },
+      "STL|Departed|8482716|2026-09-20T16:15:46.524101+00:00": {
+        "key": "STL|Departed|8482716|2026-09-20T16:15:46.524101+00:00",
+        "team": "STL",
+        "direction": "Departed",
+        "name": "Simon Robertsson",
+        "detectedAt": "2026-09-20T16:15:46.524101+00:00"
+      },
+      "STL|Departed|8483427|2026-09-20T16:15:46.524101+00:00": {
+        "key": "STL|Departed|8483427|2026-09-20T16:15:46.524101+00:00",
+        "team": "STL",
+        "direction": "Departed",
+        "name": "Michael Buchinger",
+        "detectedAt": "2026-09-20T16:15:46.524101+00:00"
+      },
+      "STL|Departed|8484229|2026-09-20T16:15:46.524101+00:00": {
+        "key": "STL|Departed|8484229|2026-09-20T16:15:46.524101+00:00",
+        "team": "STL",
+        "direction": "Departed",
+        "name": "Jakub Stancl",
+        "detectedAt": "2026-09-20T16:15:46.524101+00:00"
+      },
+      "STL|Departed|8486263|2026-09-20T16:15:46.524101+00:00": {
+        "key": "STL|Departed|8486263|2026-09-20T16:15:46.524101+00:00",
+        "team": "STL",
+        "direction": "Departed",
+        "name": "Vladimir Proskurin",
+        "detectedAt": "2026-09-20T16:15:46.524101+00:00"
+      },
+      "STL|Departed|8484393|2026-09-20T16:15:46.524101+00:00": {
+        "key": "STL|Departed|8484393|2026-09-20T16:15:46.524101+00:00",
+        "team": "STL",
+        "direction": "Departed",
+        "name": "Juraj Pekarcik",
+        "detectedAt": "2026-09-20T16:15:46.524101+00:00"
+      },
+      "STL|Departed|8486033|2026-09-20T16:15:46.524101+00:00": {
+        "key": "STL|Departed|8486033|2026-09-20T16:15:46.524101+00:00",
+        "team": "STL",
+        "direction": "Departed",
+        "name": "Maddox Dagenais",
+        "detectedAt": "2026-09-20T16:15:46.524101+00:00"
+      },
       "COL|Departed|8486206|2026-09-19T20:49:12.736324+00:00": {
         "key": "COL|Departed|8486206|2026-09-19T20:49:12.736324+00:00",
         "team": "COL",
@@ -2291,69 +2340,6 @@
         "direction": "Departed",
         "name": "Tomas Galvas",
         "detectedAt": "2026-09-11T16:35:38.705159+00:00"
-      },
-      "CAR|Added|8476422|2026-09-10T20:56:53.518850+00:00": {
-        "key": "CAR|Added|8476422|2026-09-10T20:56:53.518850+00:00",
-        "team": "CAR",
-        "direction": "Added",
-        "name": "Mike Reilly",
-        "detectedAt": "2026-09-10T20:56:53.518850+00:00"
-      },
-      "ANA|Departed|8475184|2026-09-10T20:56:53.518850+00:00": {
-        "key": "ANA|Departed|8475184|2026-09-10T20:56:53.518850+00:00",
-        "team": "ANA",
-        "direction": "Departed",
-        "name": "Chris Kreider",
-        "detectedAt": "2026-09-10T20:56:53.518850+00:00"
-      },
-      "CAR|Added|8484428|2026-09-10T16:31:17.610805+00:00": {
-        "key": "CAR|Added|8484428|2026-09-10T16:31:17.610805+00:00",
-        "team": "CAR",
-        "direction": "Added",
-        "name": "Charles Alexis Legault",
-        "detectedAt": "2026-09-10T16:31:17.610805+00:00"
-      },
-      "PIT|Added|8484855|2026-09-09T21:00:13.023730+00:00": {
-        "key": "PIT|Added|8484855|2026-09-09T21:00:13.023730+00:00",
-        "team": "PIT",
-        "direction": "Added",
-        "name": "Tomas Galvas",
-        "detectedAt": "2026-09-09T21:00:13.023730+00:00"
-      },
-      "EDM|Added|8480029|2026-09-09T21:00:13.023730+00:00": {
-        "key": "EDM|Added|8480029|2026-09-09T21:00:13.023730+00:00",
-        "team": "EDM",
-        "direction": "Added",
-        "name": "Alex Formenton",
-        "detectedAt": "2026-09-09T21:00:13.023730+00:00"
-      },
-      "CAR|Added|8482785|2026-09-09T17:52:00.941948+00:00": {
-        "key": "CAR|Added|8482785|2026-09-09T17:52:00.941948+00:00",
-        "team": "CAR",
-        "direction": "Added",
-        "name": "Justin Robidas",
-        "detectedAt": "2026-09-09T17:52:00.941948+00:00"
-      },
-      "CAR|Added|8480291|2026-09-09T17:52:00.941948+00:00": {
-        "key": "CAR|Added|8480291|2026-09-09T17:52:00.941948+00:00",
-        "team": "CAR",
-        "direction": "Added",
-        "name": "Skyler Brind'Amour",
-        "detectedAt": "2026-09-09T17:52:00.941948+00:00"
-      },
-      "CAR|Added|8480051|2026-09-09T17:52:00.941948+00:00": {
-        "key": "CAR|Added|8480051|2026-09-09T17:52:00.941948+00:00",
-        "team": "CAR",
-        "direction": "Added",
-        "name": "Cayden Primeau",
-        "detectedAt": "2026-09-09T17:52:00.941948+00:00"
-      },
-      "TBL|Added|8485587|2026-09-09T17:52:00.941948+00:00": {
-        "key": "TBL|Added|8485587|2026-09-09T17:52:00.941948+00:00",
-        "team": "TBL",
-        "direction": "Added",
-        "name": "Benjamin Rautiainen",
-        "detectedAt": "2026-09-09T17:52:00.941948+00:00"
       }
     },
     "schedule": {
