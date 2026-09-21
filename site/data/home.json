@@ -1,7 +1,7 @@
 {
   "schema": 3,
-  "sourceCommit": "087a01d5f35accc45ce7cca0495d36c38012d0fd",
-  "dataGeneratedAt": "2026-09-21T19:33:48.899171+00:00",
+  "sourceCommit": "cda54a3804d575ce91953c3cce8f932a7ed441b7",
+  "dataGeneratedAt": "2026-09-21T23:22:12.425785+00:00",
   "season": "20262027",
   "version": "5.74.0",
   "trackedTeams": [
@@ -55,17 +55,17 @@
         "slateDate": "2026-09-21",
         "londonDate": "2026-09-22",
         "startTimeUTC": "2026-09-21T23:00:00Z",
-        "state": "FUT",
-        "status": "scheduled",
-        "statusLabel": "Scheduled",
+        "state": "LIVE",
+        "status": "live",
+        "statusLabel": "Live",
         "scheduleState": "OK",
         "gameOutcome": {},
         "type": 1,
         "venue": "PPG Paints Arena",
         "home": "PIT",
         "away": "BUF",
-        "homeScore": null,
-        "awayScore": null,
+        "homeScore": 0,
+        "awayScore": 0,
         "period": 1,
         "broadcasts": [
           "SN-PIT+",
@@ -79,17 +79,17 @@
         "slateDate": "2026-09-21",
         "londonDate": "2026-09-22",
         "startTimeUTC": "2026-09-21T23:00:00Z",
-        "state": "FUT",
-        "status": "scheduled",
-        "statusLabel": "Scheduled",
+        "state": "LIVE",
+        "status": "live",
+        "statusLabel": "Live",
         "scheduleState": "OK",
         "gameOutcome": {},
         "type": 1,
         "venue": "Nationwide Arena",
         "home": "CBJ",
         "away": "DET",
-        "homeScore": null,
-        "awayScore": null,
+        "homeScore": 0,
+        "awayScore": 0,
         "period": 1,
         "broadcasts": [],
         "schedule": {}
@@ -100,9 +100,9 @@
         "slateDate": "2026-09-21",
         "londonDate": "2026-09-22",
         "startTimeUTC": "2026-09-21T23:00:00Z",
-        "state": "FUT",
-        "status": "scheduled",
-        "statusLabel": "Scheduled",
+        "state": "PRE",
+        "status": "pregame",
+        "statusLabel": "Pregame",
         "scheduleState": "OK",
         "gameOutcome": {},
         "type": 1,
@@ -124,17 +124,17 @@
         "slateDate": "2026-09-21",
         "londonDate": "2026-09-22",
         "startTimeUTC": "2026-09-21T23:00:00Z",
-        "state": "FUT",
-        "status": "scheduled",
-        "statusLabel": "Scheduled",
+        "state": "LIVE",
+        "status": "live",
+        "statusLabel": "Live",
         "scheduleState": "OK",
         "gameOutcome": {},
         "type": 1,
         "venue": "GIANT Center",
         "home": "WSH",
         "away": "PHI",
-        "homeScore": null,
-        "awayScore": null,
+        "homeScore": 0,
+        "awayScore": 1,
         "period": 1,
         "broadcasts": [
           "NBCSP",
@@ -148,17 +148,17 @@
         "slateDate": "2026-09-21",
         "londonDate": "2026-09-22",
         "startTimeUTC": "2026-09-21T23:00:00Z",
-        "state": "FUT",
-        "status": "scheduled",
-        "statusLabel": "Scheduled",
+        "state": "LIVE",
+        "status": "live",
+        "statusLabel": "Live",
         "scheduleState": "OK",
         "gameOutcome": {},
         "type": 1,
         "venue": "Colisée Vidéotron",
         "home": "MTL",
         "away": "OTT",
-        "homeScore": null,
-        "awayScore": null,
+        "homeScore": 0,
+        "awayScore": 1,
         "period": 1,
         "broadcasts": [
           "NHLN",
@@ -236,8 +236,8 @@
   },
   "freshness": {
     "status": "fresh",
-    "checkedAt": "2026-09-21T19:33:48.899188+00:00",
-    "lastSuccessfulAt": "2026-09-21T19:33:48.899190+00:00",
+    "checkedAt": "2026-09-21T23:22:12.425797+00:00",
+    "lastSuccessfulAt": "2026-09-21T23:22:12.425798+00:00",
     "ageSeconds": 0,
     "failedTeams": [],
     "schedule": {
@@ -1512,8 +1512,8 @@
   "continuity": {
     "schema": 3,
     "season": "20262027",
-    "capturedAt": "2026-09-21T19:33:48.899171+00:00",
-    "updatedAt": "2026-09-21T19:33:48.899171+00:00",
+    "capturedAt": "2026-09-21T23:22:12.425785+00:00",
+    "updatedAt": "2026-09-21T23:22:12.425785+00:00",
     "finished": {},
     "upcoming": {
       "2026020001": {
@@ -2022,6 +2022,62 @@
       }
     },
     "roster": {
+      "BOS|Departed|8482868|2026-09-21T23:22:12.421624+00:00": {
+        "key": "BOS|Departed|8482868|2026-09-21T23:22:12.421624+00:00",
+        "team": "BOS",
+        "direction": "Departed",
+        "name": "Kalle Vaisanen",
+        "detectedAt": "2026-09-21T23:22:12.421624+00:00"
+      },
+      "BOS|Departed|8486148|2026-09-21T23:22:12.421624+00:00": {
+        "key": "BOS|Departed|8486148|2026-09-21T23:22:12.421624+00:00",
+        "team": "BOS",
+        "direction": "Departed",
+        "name": "Max Lundgren",
+        "detectedAt": "2026-09-21T23:22:12.421624+00:00"
+      },
+      "BOS|Departed|8485072|2026-09-21T23:22:12.421624+00:00": {
+        "key": "BOS|Departed|8485072|2026-09-21T23:22:12.421624+00:00",
+        "team": "BOS",
+        "direction": "Departed",
+        "name": "Loke Johansson",
+        "detectedAt": "2026-09-21T23:22:12.421624+00:00"
+      },
+      "BOS|Departed|8481817|2026-09-21T23:22:12.421624+00:00": {
+        "key": "BOS|Departed|8481817|2026-09-21T23:22:12.421624+00:00",
+        "team": "BOS",
+        "direction": "Departed",
+        "name": "Navrin Mutter",
+        "detectedAt": "2026-09-21T23:22:12.421624+00:00"
+      },
+      "BOS|Departed|8483654|2026-09-21T23:22:12.421624+00:00": {
+        "key": "BOS|Departed|8483654|2026-09-21T23:22:12.421624+00:00",
+        "team": "BOS",
+        "direction": "Departed",
+        "name": "Luke Cavallin",
+        "detectedAt": "2026-09-21T23:22:12.421624+00:00"
+      },
+      "SEA|Departed|8484773|2026-09-21T23:22:12.421624+00:00": {
+        "key": "SEA|Departed|8484773|2026-09-21T23:22:12.421624+00:00",
+        "team": "SEA",
+        "direction": "Departed",
+        "name": "Julius Miettinen",
+        "detectedAt": "2026-09-21T23:22:12.421624+00:00"
+      },
+      "SEA|Departed|8484838|2026-09-21T23:22:12.421624+00:00": {
+        "key": "SEA|Departed|8484838|2026-09-21T23:22:12.421624+00:00",
+        "team": "SEA",
+        "direction": "Departed",
+        "name": "Alexis Bernier",
+        "detectedAt": "2026-09-21T23:22:12.421624+00:00"
+      },
+      "SEA|Departed|8486009|2026-09-21T23:22:12.421624+00:00": {
+        "key": "SEA|Departed|8486009|2026-09-21T23:22:12.421624+00:00",
+        "team": "SEA",
+        "direction": "Departed",
+        "name": "Ryden Evers",
+        "detectedAt": "2026-09-21T23:22:12.421624+00:00"
+      },
       "MIN|Departed|8479406|2026-09-21T19:33:48.893969+00:00": {
         "key": "MIN|Departed|8479406|2026-09-21T19:33:48.893969+00:00",
         "team": "MIN",
@@ -2301,62 +2357,6 @@
         "direction": "Departed",
         "name": "Cade Webber",
         "detectedAt": "2026-09-17T18:20:35.752982+00:00"
-      },
-      "VGK|Added|8480007|2026-09-17T00:38:17.044581+00:00": {
-        "key": "VGK|Added|8480007|2026-09-17T00:38:17.044581+00:00",
-        "team": "VGK",
-        "direction": "Added",
-        "name": "Jonas Rondbjerg",
-        "detectedAt": "2026-09-17T00:38:17.044581+00:00"
-      },
-      "VGK|Added|8483511|2026-09-17T00:38:17.044581+00:00": {
-        "key": "VGK|Added|8483511|2026-09-17T00:38:17.044581+00:00",
-        "team": "VGK",
-        "direction": "Added",
-        "name": "Matyas Sapovaliv",
-        "detectedAt": "2026-09-17T00:38:17.044581+00:00"
-      },
-      "VGK|Departed|8486083|2026-09-17T00:38:17.044581+00:00": {
-        "key": "VGK|Departed|8486083|2026-09-17T00:38:17.044581+00:00",
-        "team": "VGK",
-        "direction": "Departed",
-        "name": "Juho Piiparinen",
-        "detectedAt": "2026-09-17T00:38:17.044581+00:00"
-      },
-      "VGK|Departed|8482933|2026-09-16T21:24:30.520779+00:00": {
-        "key": "VGK|Departed|8482933|2026-09-16T21:24:30.520779+00:00",
-        "team": "VGK",
-        "direction": "Departed",
-        "name": "Jakub Demek",
-        "detectedAt": "2026-09-16T21:24:30.520779+00:00"
-      },
-      "VGK|Departed|8483511|2026-09-16T21:24:30.520779+00:00": {
-        "key": "VGK|Departed|8483511|2026-09-16T21:24:30.520779+00:00",
-        "team": "VGK",
-        "direction": "Departed",
-        "name": "Matyas Sapovaliv",
-        "detectedAt": "2026-09-16T21:24:30.520779+00:00"
-      },
-      "VGK|Departed|8480007|2026-09-16T21:24:30.520779+00:00": {
-        "key": "VGK|Departed|8480007|2026-09-16T21:24:30.520779+00:00",
-        "team": "VGK",
-        "direction": "Departed",
-        "name": "Jonas Rondbjerg",
-        "detectedAt": "2026-09-16T21:24:30.520779+00:00"
-      },
-      "NYI|Added|8478115|2026-09-16T21:24:30.520779+00:00": {
-        "key": "NYI|Added|8478115|2026-09-16T21:24:30.520779+00:00",
-        "team": "NYI",
-        "direction": "Added",
-        "name": "Pierre Engvall",
-        "detectedAt": "2026-09-16T21:24:30.520779+00:00"
-      },
-      "LAK|Added|8486350|2026-09-16T21:24:30.520779+00:00": {
-        "key": "LAK|Added|8486350|2026-09-16T21:24:30.520779+00:00",
-        "team": "LAK",
-        "direction": "Added",
-        "name": "Lucas Ambrosio",
-        "detectedAt": "2026-09-16T21:24:30.520779+00:00"
       }
     },
     "schedule": {
