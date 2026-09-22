@@ -1,7 +1,7 @@
 {
   "schema": 3,
-  "sourceCommit": "8b9a2fef0a9f14547eef96b8f307f9c7d7e30101",
-  "dataGeneratedAt": "2026-09-22T11:49:49.292733+00:00",
+  "sourceCommit": "b376952f09263a150caaa59890cc5f0f3bbac915",
+  "dataGeneratedAt": "2026-09-22T17:03:10.851775+00:00",
   "season": "20262027",
   "version": "5.74.0",
   "trackedTeams": [
@@ -45,79 +45,97 @@
     "VAN": "Vancouver Canucks"
   },
   "daily": {
-    "currentDate": "2026-09-21",
-    "requestedDate": "2026-09-21",
+    "currentDate": "2026-09-22",
+    "requestedDate": "2026-09-22",
     "fallback": false,
     "games": [
       {
-        "id": 2026010016,
-        "date": "2026-09-21",
-        "slateDate": "2026-09-21",
-        "londonDate": "2026-09-22",
-        "startTimeUTC": "2026-09-21T23:00:00Z",
-        "state": "FINAL",
-        "status": "final",
-        "statusLabel": "Final",
+        "id": 2026010024,
+        "date": "2026-09-22",
+        "slateDate": "2026-09-22",
+        "londonDate": "2026-09-23",
+        "startTimeUTC": "2026-09-22T23:00:00Z",
+        "state": "FUT",
+        "status": "scheduled",
+        "statusLabel": "Scheduled",
         "scheduleState": "OK",
-        "gameOutcome": {
-          "lastPeriodType": "REG"
-        },
+        "gameOutcome": {},
         "type": 1,
-        "venue": "PPG Paints Arena",
-        "home": "PIT",
-        "away": "BUF",
-        "homeScore": 4,
-        "awayScore": 1,
-        "period": 3,
-        "broadcasts": [
-          "SN-PIT+",
-          "MSG-B"
-        ],
-        "schedule": {}
-      },
-      {
-        "id": 2026010017,
-        "date": "2026-09-21",
-        "slateDate": "2026-09-21",
-        "londonDate": "2026-09-22",
-        "startTimeUTC": "2026-09-21T23:00:00Z",
-        "state": "FINAL",
-        "status": "final-so",
-        "statusLabel": "Final/SO",
-        "scheduleState": "OK",
-        "gameOutcome": {
-          "lastPeriodType": "SO"
-        },
-        "type": 1,
-        "venue": "Nationwide Arena",
-        "home": "CBJ",
-        "away": "DET",
-        "homeScore": 1,
-        "awayScore": 0,
-        "period": 5,
+        "venue": "KeyBank Center",
+        "home": "BUF",
+        "away": "CBJ",
+        "homeScore": null,
+        "awayScore": null,
+        "period": 1,
         "broadcasts": [],
         "schedule": {}
       },
       {
-        "id": 2026010019,
-        "date": "2026-09-21",
-        "slateDate": "2026-09-21",
-        "londonDate": "2026-09-22",
-        "startTimeUTC": "2026-09-21T23:00:00Z",
-        "state": "FINAL",
-        "status": "final",
-        "statusLabel": "Final",
+        "id": 2026010025,
+        "date": "2026-09-22",
+        "slateDate": "2026-09-22",
+        "londonDate": "2026-09-23",
+        "startTimeUTC": "2026-09-22T23:00:00Z",
+        "state": "FUT",
+        "status": "scheduled",
+        "statusLabel": "Scheduled",
         "scheduleState": "OK",
-        "gameOutcome": {
-          "lastPeriodType": "REG"
-        },
+        "gameOutcome": {},
         "type": 1,
-        "venue": "Prudential Center",
-        "home": "NJD",
-        "away": "NYR",
-        "homeScore": 3,
-        "awayScore": 2,
-        "period": 3,
+        "venue": "PPG Paints Arena",
+        "home": "PIT",
+        "away": "DET",
+        "homeScore": null,
+        "awayScore": null,
+        "period": 1,
+        "broadcasts": [
+          "DSN",
+          "SN-PIT+"
+        ],
+        "schedule": {}
+      },
+      {
+        "id": 2026010026,
+        "date": "2026-09-22",
+        "slateDate": "2026-09-22",
+        "londonDate": "2026-09-23",
+        "startTimeUTC": "2026-09-22T23:00:00Z",
+        "state": "FUT",
+        "status": "scheduled",
+        "statusLabel": "Scheduled",
+        "scheduleState": "OK",
+        "gameOutcome": {},
+        "type": 1,
+        "venue": "Lenovo Center",
+        "home": "CAR",
+        "away": "FLA",
+        "homeScore": null,
+        "awayScore": null,
+        "period": 1,
+        "broadcasts": [
+          "NHLN",
+          "SCRIPPS"
+        ],
+        "schedule": {}
+      },
+      {
+        "id": 2026010027,
+        "date": "2026-09-22",
+        "slateDate": "2026-09-22",
+        "londonDate": "2026-09-23",
+        "startTimeUTC": "2026-09-22T23:00:00Z",
+        "state": "FUT",
+        "status": "scheduled",
+        "statusLabel": "Scheduled",
+        "scheduleState": "OK",
+        "gameOutcome": {},
+        "type": 1,
+        "venue": "Madison Square Garden",
+        "home": "NYR",
+        "away": "NYI",
+        "homeScore": null,
+        "awayScore": null,
+        "period": 1,
         "broadcasts": [
           "MSGSN",
           "MSG"
@@ -125,135 +143,152 @@
         "schedule": {}
       },
       {
-        "id": 2026010020,
-        "date": "2026-09-21",
-        "slateDate": "2026-09-21",
-        "londonDate": "2026-09-22",
-        "startTimeUTC": "2026-09-21T23:00:00Z",
-        "state": "FINAL",
-        "status": "final",
-        "statusLabel": "Final",
+        "id": 2026010028,
+        "date": "2026-09-22",
+        "slateDate": "2026-09-22",
+        "londonDate": "2026-09-23",
+        "startTimeUTC": "2026-09-22T23:00:00Z",
+        "state": "FUT",
+        "status": "scheduled",
+        "statusLabel": "Scheduled",
         "scheduleState": "OK",
-        "gameOutcome": {
-          "lastPeriodType": "REG"
-        },
+        "gameOutcome": {},
         "type": 1,
-        "venue": "GIANT Center",
-        "home": "WSH",
+        "venue": "TD Garden",
+        "home": "BOS",
         "away": "PHI",
-        "homeScore": 5,
-        "awayScore": 2,
-        "period": 3,
+        "homeScore": null,
+        "awayScore": null,
+        "period": 1,
         "broadcasts": [
-          "NBCSP",
-          "MNMT"
+          "NESNplus",
+          "NBCSP+"
         ],
         "schedule": {}
       },
       {
-        "id": 2026010022,
-        "date": "2026-09-21",
-        "slateDate": "2026-09-21",
-        "londonDate": "2026-09-22",
-        "startTimeUTC": "2026-09-21T23:00:00Z",
-        "state": "FINAL",
-        "status": "final-ot",
-        "statusLabel": "Final/OT",
+        "id": 2026010023,
+        "date": "2026-09-22",
+        "slateDate": "2026-09-22",
+        "londonDate": "2026-09-23",
+        "startTimeUTC": "2026-09-23T00:00:00Z",
+        "state": "FUT",
+        "status": "scheduled",
+        "statusLabel": "Scheduled",
         "scheduleState": "OK",
-        "gameOutcome": {
-          "lastPeriodType": "OT"
-        },
-        "type": 1,
-        "venue": "Colisée Vidéotron",
-        "home": "MTL",
-        "away": "OTT",
-        "homeScore": 3,
-        "awayScore": 2,
-        "period": 4,
-        "broadcasts": [
-          "NHLN",
-          "SN1",
-          "TVAS"
-        ],
-        "schedule": {}
-      },
-      {
-        "id": 2026010015,
-        "date": "2026-09-21",
-        "slateDate": "2026-09-21",
-        "londonDate": "2026-09-22",
-        "startTimeUTC": "2026-09-22T00:00:00Z",
-        "state": "FINAL",
-        "status": "final",
-        "statusLabel": "Final",
-        "scheduleState": "OK",
-        "gameOutcome": {
-          "lastPeriodType": "REG"
-        },
+        "gameOutcome": {},
         "type": 1,
         "venue": "Canada Life Centre",
         "home": "WPG",
-        "away": "COL",
-        "homeScore": 3,
-        "awayScore": 1,
-        "period": 3,
-        "broadcasts": [],
-        "schedule": {}
-      },
-      {
-        "id": 2026010018,
-        "date": "2026-09-21",
-        "slateDate": "2026-09-21",
-        "londonDate": "2026-09-22",
-        "startTimeUTC": "2026-09-22T00:00:00Z",
-        "state": "FINAL",
-        "status": "final-ot",
-        "statusLabel": "Final/OT",
-        "scheduleState": "OK",
-        "gameOutcome": {
-          "lastPeriodType": "OT"
-        },
-        "type": 1,
-        "venue": "United Center",
-        "home": "CHI",
-        "away": "MIN",
-        "homeScore": 4,
-        "awayScore": 3,
-        "period": 4,
+        "away": "EDM",
+        "homeScore": null,
+        "awayScore": null,
+        "period": 1,
         "broadcasts": [
-          "CHSN"
+          "TSN3"
         ],
         "schedule": {}
       },
       {
-        "id": 2026010021,
-        "date": "2026-09-21",
-        "slateDate": "2026-09-21",
-        "londonDate": "2026-09-22",
-        "startTimeUTC": "2026-09-22T00:00:00Z",
-        "state": "FINAL",
-        "status": "final",
-        "statusLabel": "Final",
+        "id": 2026010029,
+        "date": "2026-09-22",
+        "slateDate": "2026-09-22",
+        "londonDate": "2026-09-23",
+        "startTimeUTC": "2026-09-23T00:00:00Z",
+        "state": "FUT",
+        "status": "scheduled",
+        "statusLabel": "Scheduled",
         "scheduleState": "OK",
-        "gameOutcome": {
-          "lastPeriodType": "REG"
-        },
+        "gameOutcome": {},
         "type": 1,
-        "venue": "American Airlines Center",
-        "home": "DAL",
-        "away": "STL",
-        "homeScore": 2,
-        "awayScore": 1,
-        "period": 3,
-        "broadcasts": [],
+        "venue": "Bridgestone Arena",
+        "home": "NSH",
+        "away": "TBL",
+        "homeScore": null,
+        "awayScore": null,
+        "period": 1,
+        "broadcasts": [
+          "The Spot",
+          "SCRIPPS"
+        ],
+        "schedule": {}
+      },
+      {
+        "id": 2026010031,
+        "date": "2026-09-22",
+        "slateDate": "2026-09-22",
+        "londonDate": "2026-09-23",
+        "startTimeUTC": "2026-09-23T01:00:00Z",
+        "state": "FUT",
+        "status": "scheduled",
+        "statusLabel": "Scheduled",
+        "scheduleState": "OK",
+        "gameOutcome": {},
+        "type": 1,
+        "venue": "Scotiabank Saddledome",
+        "home": "CGY",
+        "away": "VAN",
+        "homeScore": null,
+        "awayScore": null,
+        "period": 1,
+        "broadcasts": [
+          "SN1"
+        ],
+        "schedule": {}
+      },
+      {
+        "id": 2026010030,
+        "date": "2026-09-22",
+        "slateDate": "2026-09-22",
+        "londonDate": "2026-09-23",
+        "startTimeUTC": "2026-09-23T02:00:00Z",
+        "state": "FUT",
+        "status": "scheduled",
+        "statusLabel": "Scheduled",
+        "scheduleState": "OK",
+        "gameOutcome": {},
+        "type": 1,
+        "venue": "Crypto.com Arena",
+        "home": "LAK",
+        "away": "UTA",
+        "homeScore": null,
+        "awayScore": null,
+        "period": 1,
+        "broadcasts": [
+          "Utah16"
+        ],
+        "schedule": {}
+      },
+      {
+        "id": 2026010032,
+        "date": "2026-09-22",
+        "slateDate": "2026-09-22",
+        "londonDate": "2026-09-23",
+        "startTimeUTC": "2026-09-23T02:00:00Z",
+        "state": "FUT",
+        "status": "scheduled",
+        "statusLabel": "Scheduled",
+        "scheduleState": "OK",
+        "gameOutcome": {},
+        "type": 1,
+        "venue": "SAP Center at San Jose",
+        "home": "SJS",
+        "away": "VGK",
+        "homeScore": null,
+        "awayScore": null,
+        "period": 1,
+        "broadcasts": [
+          "NHLN",
+          "SCRIPPS"
+        ],
         "schedule": {}
       }
     ]
   },
   "freshness": {
     "status": "fresh",
-    "checkedAt": "2026-09-22T11:49:49.292747+00:00",
-    "lastSuccessfulAt": "2026-09-22T11:49:49.292748+00:00",
+    "checkedAt": "2026-09-22T17:03:10.851786+00:00",
+    "lastSuccessfulAt": "2026-09-22T17:03:10.851787+00:00",
     "ageSeconds": 0,
     "failedTeams": [],
     "schedule": {
@@ -1528,8 +1563,8 @@
   "continuity": {
     "schema": 3,
     "season": "20262027",
-    "capturedAt": "2026-09-22T11:49:49.292733+00:00",
-    "updatedAt": "2026-09-22T11:49:49.292733+00:00",
+    "capturedAt": "2026-09-22T17:03:10.851775+00:00",
+    "updatedAt": "2026-09-22T17:03:10.851775+00:00",
     "finished": {},
     "upcoming": {
       "2026020001": {
@@ -2038,6 +2073,83 @@
       }
     },
     "roster": {
+      "DAL|Departed|8485041|2026-09-22T17:03:10.848380+00:00": {
+        "key": "DAL|Departed|8485041|2026-09-22T17:03:10.848380+00:00",
+        "team": "DAL",
+        "direction": "Departed",
+        "name": "Niilopekka Muhonen",
+        "detectedAt": "2026-09-22T17:03:10.848380+00:00"
+      },
+      "DAL|Departed|8484468|2026-09-22T17:03:10.848380+00:00": {
+        "key": "DAL|Departed|8484468|2026-09-22T17:03:10.848380+00:00",
+        "team": "DAL",
+        "direction": "Departed",
+        "name": "Angus MacDonell",
+        "detectedAt": "2026-09-22T17:03:10.848380+00:00"
+      },
+      "DAL|Departed|8484442|2026-09-22T17:03:10.848380+00:00": {
+        "key": "DAL|Departed|8484442|2026-09-22T17:03:10.848380+00:00",
+        "team": "DAL",
+        "direction": "Departed",
+        "name": "Arno Tiefensee",
+        "detectedAt": "2026-09-22T17:03:10.848380+00:00"
+      },
+      "CBJ|Departed|8482881|2026-09-22T17:03:10.848380+00:00": {
+        "key": "CBJ|Departed|8482881|2026-09-22T17:03:10.848380+00:00",
+        "team": "CBJ",
+        "direction": "Departed",
+        "name": "Max McCue",
+        "detectedAt": "2026-09-22T17:03:10.848380+00:00"
+      },
+      "LAK|Departed|8484857|2026-09-22T17:03:10.848380+00:00": {
+        "key": "LAK|Departed|8484857|2026-09-22T17:03:10.848380+00:00",
+        "team": "LAK",
+        "direction": "Departed",
+        "name": "Carter George",
+        "detectedAt": "2026-09-22T17:03:10.848380+00:00"
+      },
+      "LAK|Departed|8485384|2026-09-22T17:03:10.848380+00:00": {
+        "key": "LAK|Departed|8485384|2026-09-22T17:03:10.848380+00:00",
+        "team": "LAK",
+        "direction": "Departed",
+        "name": "Vojtech Cihar",
+        "detectedAt": "2026-09-22T17:03:10.848380+00:00"
+      },
+      "LAK|Departed|8485602|2026-09-22T17:03:10.848380+00:00": {
+        "key": "LAK|Departed|8485602|2026-09-22T17:03:10.848380+00:00",
+        "team": "LAK",
+        "direction": "Departed",
+        "name": "Jimmy Lombardi",
+        "detectedAt": "2026-09-22T17:03:10.848380+00:00"
+      },
+      "LAK|Departed|8483052|2026-09-22T17:03:10.848380+00:00": {
+        "key": "LAK|Departed|8483052|2026-09-22T17:03:10.848380+00:00",
+        "team": "LAK",
+        "direction": "Departed",
+        "name": "Kaleb Lawrence",
+        "detectedAt": "2026-09-22T17:03:10.848380+00:00"
+      },
+      "LAK|Departed|8486160|2026-09-22T17:03:10.848380+00:00": {
+        "key": "LAK|Departed|8486160|2026-09-22T17:03:10.848380+00:00",
+        "team": "LAK",
+        "direction": "Departed",
+        "name": "Grant Slukynsky",
+        "detectedAt": "2026-09-22T17:03:10.848380+00:00"
+      },
+      "LAK|Departed|8485381|2026-09-22T17:03:10.848380+00:00": {
+        "key": "LAK|Departed|8485381|2026-09-22T17:03:10.848380+00:00",
+        "team": "LAK",
+        "direction": "Departed",
+        "name": "Henry Brzustewicz",
+        "detectedAt": "2026-09-22T17:03:10.848380+00:00"
+      },
+      "LAK|Departed|8484417|2026-09-22T17:03:10.848380+00:00": {
+        "key": "LAK|Departed|8484417|2026-09-22T17:03:10.848380+00:00",
+        "team": "LAK",
+        "direction": "Departed",
+        "name": "Hampton Slukynsky",
+        "detectedAt": "2026-09-22T17:03:10.848380+00:00"
+      },
       "BOS|Departed|8482868|2026-09-21T23:22:12.421624+00:00": {
         "key": "BOS|Departed|8482868|2026-09-21T23:22:12.421624+00:00",
         "team": "BOS",
@@ -2296,83 +2408,6 @@
         "direction": "Departed",
         "name": "Alex Ciernik",
         "detectedAt": "2026-09-19T20:49:12.736324+00:00"
-      },
-      "PHI|Departed|8483461|2026-09-19T20:49:12.736324+00:00": {
-        "key": "PHI|Departed|8483461|2026-09-19T20:49:12.736324+00:00",
-        "team": "PHI",
-        "direction": "Departed",
-        "name": "Devin Kaplan",
-        "detectedAt": "2026-09-19T20:49:12.736324+00:00"
-      },
-      "PHI|Departed|8483438|2026-09-19T20:49:12.736324+00:00": {
-        "key": "PHI|Departed|8483438|2026-09-19T20:49:12.736324+00:00",
-        "team": "PHI",
-        "direction": "Departed",
-        "name": "Jackson Edward",
-        "detectedAt": "2026-09-19T20:49:12.736324+00:00"
-      },
-      "FLA|Added|8482760|2026-09-19T20:49:12.736324+00:00": {
-        "key": "FLA|Added|8482760|2026-09-19T20:49:12.736324+00:00",
-        "team": "FLA",
-        "direction": "Added",
-        "name": "Samu Salminen",
-        "detectedAt": "2026-09-19T20:49:12.736324+00:00"
-      },
-      "EDM|Departed|8483512|2026-09-19T17:19:15.461137+00:00": {
-        "key": "EDM|Departed|8483512|2026-09-19T17:19:15.461137+00:00",
-        "team": "EDM",
-        "direction": "Departed",
-        "name": "Matt Savoie",
-        "detectedAt": "2026-09-19T17:19:15.461137+00:00"
-      },
-      "EDM|Added|8483083|2026-09-18T20:59:15.248564+00:00": {
-        "key": "EDM|Added|8483083|2026-09-18T20:59:15.248564+00:00",
-        "team": "EDM",
-        "direction": "Added",
-        "name": "Connor Ungar",
-        "detectedAt": "2026-09-18T20:59:15.248564+00:00"
-      },
-      "EDM|Added|8485484|2026-09-18T20:59:15.248564+00:00": {
-        "key": "EDM|Added|8485484|2026-09-18T20:59:15.248564+00:00",
-        "team": "EDM",
-        "direction": "Added",
-        "name": "Damien Carfagna",
-        "detectedAt": "2026-09-18T20:59:15.248564+00:00"
-      },
-      "CGY|Added|8482747|2026-09-18T20:59:15.248564+00:00": {
-        "key": "CGY|Added|8482747|2026-09-18T20:59:15.248564+00:00",
-        "team": "CGY",
-        "direction": "Added",
-        "name": "Brennan Othmann",
-        "detectedAt": "2026-09-18T20:59:15.248564+00:00"
-      },
-      "TOR|Departed|8482174|2026-09-17T22:53:33.465539+00:00": {
-        "key": "TOR|Departed|8482174|2026-09-17T22:53:33.465539+00:00",
-        "team": "TOR",
-        "direction": "Departed",
-        "name": "William Villeneuve",
-        "detectedAt": "2026-09-17T22:53:33.465539+00:00"
-      },
-      "CAR|Departed|8486043|2026-09-17T18:20:35.752982+00:00": {
-        "key": "CAR|Departed|8486043|2026-09-17T18:20:35.752982+00:00",
-        "team": "CAR",
-        "direction": "Departed",
-        "name": "William Hakansson",
-        "detectedAt": "2026-09-17T18:20:35.752982+00:00"
-      },
-      "TOR|Departed|8477503|2026-09-17T18:20:35.752982+00:00": {
-        "key": "TOR|Departed|8477503|2026-09-17T18:20:35.752982+00:00",
-        "team": "TOR",
-        "direction": "Departed",
-        "name": "Max Domi",
-        "detectedAt": "2026-09-17T18:20:35.752982+00:00"
-      },
-      "TOR|Departed|8481570|2026-09-17T18:20:35.752982+00:00": {
-        "key": "TOR|Departed|8481570|2026-09-17T18:20:35.752982+00:00",
-        "team": "TOR",
-        "direction": "Departed",
-        "name": "Cade Webber",
-        "detectedAt": "2026-09-17T18:20:35.752982+00:00"
       }
     },
     "schedule": {
