@@ -1,7 +1,7 @@
 {
   "schema": 3,
-  "sourceCommit": "b376952f09263a150caaa59890cc5f0f3bbac915",
-  "dataGeneratedAt": "2026-09-22T17:03:10.851775+00:00",
+  "sourceCommit": "a230b9162319a2ad8a3feb581f809dfc548e51eb",
+  "dataGeneratedAt": "2026-09-22T21:26:49.271828+00:00",
   "season": "20262027",
   "version": "5.74.0",
   "trackedTeams": [
@@ -185,6 +185,7 @@
         "awayScore": null,
         "period": 1,
         "broadcasts": [
+          "Oilers+",
           "TSN3"
         ],
         "schedule": {}
@@ -287,8 +288,8 @@
   },
   "freshness": {
     "status": "fresh",
-    "checkedAt": "2026-09-22T17:03:10.851786+00:00",
-    "lastSuccessfulAt": "2026-09-22T17:03:10.851787+00:00",
+    "checkedAt": "2026-09-22T21:26:49.271841+00:00",
+    "lastSuccessfulAt": "2026-09-22T21:26:49.271842+00:00",
     "ageSeconds": 0,
     "failedTeams": [],
     "schedule": {
@@ -1563,8 +1564,8 @@
   "continuity": {
     "schema": 3,
     "season": "20262027",
-    "capturedAt": "2026-09-22T17:03:10.851775+00:00",
-    "updatedAt": "2026-09-22T17:03:10.851775+00:00",
+    "capturedAt": "2026-09-22T21:26:49.271828+00:00",
+    "updatedAt": "2026-09-22T21:26:49.271828+00:00",
     "finished": {},
     "upcoming": {
       "2026020001": {
@@ -2073,6 +2074,62 @@
       }
     },
     "roster": {
+      "NSH|Departed|8485005|2026-09-22T21:26:49.267509+00:00": {
+        "key": "NSH|Departed|8485005|2026-09-22T21:26:49.267509+00:00",
+        "team": "NSH",
+        "direction": "Departed",
+        "name": "Hiroki Gojsic",
+        "detectedAt": "2026-09-22T21:26:49.267509+00:00"
+      },
+      "NSH|Departed|8483844|2026-09-22T21:26:49.267509+00:00": {
+        "key": "NSH|Departed|8483844|2026-09-22T21:26:49.267509+00:00",
+        "team": "NSH",
+        "direction": "Departed",
+        "name": "Austin Roest",
+        "detectedAt": "2026-09-22T21:26:49.267509+00:00"
+      },
+      "NSH|Departed|8485000|2026-09-22T21:26:49.267509+00:00": {
+        "key": "NSH|Departed|8485000|2026-09-22T21:26:49.267509+00:00",
+        "team": "NSH",
+        "direction": "Departed",
+        "name": "Viggo Gustafsson",
+        "detectedAt": "2026-09-22T21:26:49.267509+00:00"
+      },
+      "NSH|Departed|8484412|2026-09-22T21:26:49.267509+00:00": {
+        "key": "NSH|Departed|8484412|2026-09-22T21:26:49.267509+00:00",
+        "team": "NSH",
+        "direction": "Departed",
+        "name": "Joey Willis",
+        "detectedAt": "2026-09-22T21:26:49.267509+00:00"
+      },
+      "NSH|Departed|8484187|2026-09-22T21:26:49.267509+00:00": {
+        "key": "NSH|Departed|8484187|2026-09-22T21:26:49.267509+00:00",
+        "team": "NSH",
+        "direction": "Departed",
+        "name": "Kalan Lind",
+        "detectedAt": "2026-09-22T21:26:49.267509+00:00"
+      },
+      "NSH|Departed|8484174|2026-09-22T21:26:49.267509+00:00": {
+        "key": "NSH|Departed|8484174|2026-09-22T21:26:49.267509+00:00",
+        "team": "NSH",
+        "direction": "Departed",
+        "name": "Andrew Gibson",
+        "detectedAt": "2026-09-22T21:26:49.267509+00:00"
+      },
+      "NSH|Departed|8484494|2026-09-22T21:26:49.267509+00:00": {
+        "key": "NSH|Departed|8484494|2026-09-22T21:26:49.267509+00:00",
+        "team": "NSH",
+        "direction": "Departed",
+        "name": "Aiden Fink",
+        "detectedAt": "2026-09-22T21:26:49.267509+00:00"
+      },
+      "CHI|Departed|8476884|2026-09-22T21:26:49.267509+00:00": {
+        "key": "CHI|Departed|8476884|2026-09-22T21:26:49.267509+00:00",
+        "team": "CHI",
+        "direction": "Departed",
+        "name": "Derrick Pouliot",
+        "detectedAt": "2026-09-22T21:26:49.267509+00:00"
+      },
       "DAL|Departed|8485041|2026-09-22T17:03:10.848380+00:00": {
         "key": "DAL|Departed|8485041|2026-09-22T17:03:10.848380+00:00",
         "team": "DAL",
@@ -2352,62 +2409,6 @@
         "direction": "Departed",
         "name": "Simon Robertsson",
         "detectedAt": "2026-09-20T16:15:46.524101+00:00"
-      },
-      "STL|Departed|8483427|2026-09-20T16:15:46.524101+00:00": {
-        "key": "STL|Departed|8483427|2026-09-20T16:15:46.524101+00:00",
-        "team": "STL",
-        "direction": "Departed",
-        "name": "Michael Buchinger",
-        "detectedAt": "2026-09-20T16:15:46.524101+00:00"
-      },
-      "STL|Departed|8484229|2026-09-20T16:15:46.524101+00:00": {
-        "key": "STL|Departed|8484229|2026-09-20T16:15:46.524101+00:00",
-        "team": "STL",
-        "direction": "Departed",
-        "name": "Jakub Stancl",
-        "detectedAt": "2026-09-20T16:15:46.524101+00:00"
-      },
-      "STL|Departed|8486263|2026-09-20T16:15:46.524101+00:00": {
-        "key": "STL|Departed|8486263|2026-09-20T16:15:46.524101+00:00",
-        "team": "STL",
-        "direction": "Departed",
-        "name": "Vladimir Proskurin",
-        "detectedAt": "2026-09-20T16:15:46.524101+00:00"
-      },
-      "STL|Departed|8484393|2026-09-20T16:15:46.524101+00:00": {
-        "key": "STL|Departed|8484393|2026-09-20T16:15:46.524101+00:00",
-        "team": "STL",
-        "direction": "Departed",
-        "name": "Juraj Pekarcik",
-        "detectedAt": "2026-09-20T16:15:46.524101+00:00"
-      },
-      "STL|Departed|8486033|2026-09-20T16:15:46.524101+00:00": {
-        "key": "STL|Departed|8486033|2026-09-20T16:15:46.524101+00:00",
-        "team": "STL",
-        "direction": "Departed",
-        "name": "Maddox Dagenais",
-        "detectedAt": "2026-09-20T16:15:46.524101+00:00"
-      },
-      "COL|Departed|8486206|2026-09-19T20:49:12.736324+00:00": {
-        "key": "COL|Departed|8486206|2026-09-19T20:49:12.736324+00:00",
-        "team": "COL",
-        "direction": "Departed",
-        "name": "Nikita Novosyolov",
-        "detectedAt": "2026-09-19T20:49:12.736324+00:00"
-      },
-      "PHI|Departed|8485073|2026-09-19T20:49:12.736324+00:00": {
-        "key": "PHI|Departed|8485073|2026-09-19T20:49:12.736324+00:00",
-        "team": "PHI",
-        "direction": "Departed",
-        "name": "Ilya Pautov",
-        "detectedAt": "2026-09-19T20:49:12.736324+00:00"
-      },
-      "PHI|Departed|8484156|2026-09-19T20:49:12.736324+00:00": {
-        "key": "PHI|Departed|8484156|2026-09-19T20:49:12.736324+00:00",
-        "team": "PHI",
-        "direction": "Departed",
-        "name": "Alex Ciernik",
-        "detectedAt": "2026-09-19T20:49:12.736324+00:00"
       }
     },
     "schedule": {
