@@ -1,7 +1,7 @@
 {
   "schema": 3,
-  "sourceCommit": "a230b9162319a2ad8a3feb581f809dfc548e51eb",
-  "dataGeneratedAt": "2026-09-22T21:26:49.271828+00:00",
+  "sourceCommit": "fa5f45caa93975958c451875c80355f04bb57e6b",
+  "dataGeneratedAt": "2026-09-23T00:40:55.668349+00:00",
   "season": "20262027",
   "version": "5.74.0",
   "trackedTeams": [
@@ -55,18 +55,18 @@
         "slateDate": "2026-09-22",
         "londonDate": "2026-09-23",
         "startTimeUTC": "2026-09-22T23:00:00Z",
-        "state": "FUT",
-        "status": "scheduled",
-        "statusLabel": "Scheduled",
+        "state": "LIVE",
+        "status": "live",
+        "statusLabel": "Live",
         "scheduleState": "OK",
         "gameOutcome": {},
         "type": 1,
         "venue": "KeyBank Center",
         "home": "BUF",
         "away": "CBJ",
-        "homeScore": null,
-        "awayScore": null,
-        "period": 1,
+        "homeScore": 3,
+        "awayScore": 0,
+        "period": 2,
         "broadcasts": [],
         "schedule": {}
       },
@@ -76,18 +76,18 @@
         "slateDate": "2026-09-22",
         "londonDate": "2026-09-23",
         "startTimeUTC": "2026-09-22T23:00:00Z",
-        "state": "FUT",
-        "status": "scheduled",
-        "statusLabel": "Scheduled",
+        "state": "LIVE",
+        "status": "live",
+        "statusLabel": "Live",
         "scheduleState": "OK",
         "gameOutcome": {},
         "type": 1,
         "venue": "PPG Paints Arena",
         "home": "PIT",
         "away": "DET",
-        "homeScore": null,
-        "awayScore": null,
-        "period": 1,
+        "homeScore": 2,
+        "awayScore": 3,
+        "period": 2,
         "broadcasts": [
           "DSN",
           "SN-PIT+"
@@ -100,18 +100,18 @@
         "slateDate": "2026-09-22",
         "londonDate": "2026-09-23",
         "startTimeUTC": "2026-09-22T23:00:00Z",
-        "state": "FUT",
-        "status": "scheduled",
-        "statusLabel": "Scheduled",
+        "state": "LIVE",
+        "status": "live",
+        "statusLabel": "Live",
         "scheduleState": "OK",
         "gameOutcome": {},
         "type": 1,
         "venue": "Lenovo Center",
         "home": "CAR",
         "away": "FLA",
-        "homeScore": null,
-        "awayScore": null,
-        "period": 1,
+        "homeScore": 2,
+        "awayScore": 2,
+        "period": 2,
         "broadcasts": [
           "NHLN",
           "SCRIPPS"
@@ -124,18 +124,18 @@
         "slateDate": "2026-09-22",
         "londonDate": "2026-09-23",
         "startTimeUTC": "2026-09-22T23:00:00Z",
-        "state": "FUT",
-        "status": "scheduled",
-        "statusLabel": "Scheduled",
+        "state": "LIVE",
+        "status": "live",
+        "statusLabel": "Live",
         "scheduleState": "OK",
         "gameOutcome": {},
         "type": 1,
         "venue": "Madison Square Garden",
         "home": "NYR",
         "away": "NYI",
-        "homeScore": null,
-        "awayScore": null,
-        "period": 1,
+        "homeScore": 3,
+        "awayScore": 1,
+        "period": 2,
         "broadcasts": [
           "MSGSN",
           "MSG"
@@ -148,18 +148,18 @@
         "slateDate": "2026-09-22",
         "londonDate": "2026-09-23",
         "startTimeUTC": "2026-09-22T23:00:00Z",
-        "state": "FUT",
-        "status": "scheduled",
-        "statusLabel": "Scheduled",
+        "state": "LIVE",
+        "status": "live",
+        "statusLabel": "Live",
         "scheduleState": "OK",
         "gameOutcome": {},
         "type": 1,
         "venue": "TD Garden",
         "home": "BOS",
         "away": "PHI",
-        "homeScore": null,
-        "awayScore": null,
-        "period": 1,
+        "homeScore": 1,
+        "awayScore": 1,
+        "period": 2,
         "broadcasts": [
           "NESNplus",
           "NBCSP+"
@@ -172,17 +172,17 @@
         "slateDate": "2026-09-22",
         "londonDate": "2026-09-23",
         "startTimeUTC": "2026-09-23T00:00:00Z",
-        "state": "FUT",
-        "status": "scheduled",
-        "statusLabel": "Scheduled",
+        "state": "LIVE",
+        "status": "live",
+        "statusLabel": "Live",
         "scheduleState": "OK",
         "gameOutcome": {},
         "type": 1,
         "venue": "Canada Life Centre",
         "home": "WPG",
         "away": "EDM",
-        "homeScore": null,
-        "awayScore": null,
+        "homeScore": 1,
+        "awayScore": 1,
         "period": 1,
         "broadcasts": [
           "Oilers+",
@@ -196,17 +196,17 @@
         "slateDate": "2026-09-22",
         "londonDate": "2026-09-23",
         "startTimeUTC": "2026-09-23T00:00:00Z",
-        "state": "FUT",
-        "status": "scheduled",
-        "statusLabel": "Scheduled",
+        "state": "LIVE",
+        "status": "live",
+        "statusLabel": "Live",
         "scheduleState": "OK",
         "gameOutcome": {},
         "type": 1,
         "venue": "Bridgestone Arena",
         "home": "NSH",
         "away": "TBL",
-        "homeScore": null,
-        "awayScore": null,
+        "homeScore": 0,
+        "awayScore": 0,
         "period": 1,
         "broadcasts": [
           "The Spot",
@@ -220,9 +220,9 @@
         "slateDate": "2026-09-22",
         "londonDate": "2026-09-23",
         "startTimeUTC": "2026-09-23T01:00:00Z",
-        "state": "FUT",
-        "status": "scheduled",
-        "statusLabel": "Scheduled",
+        "state": "PRE",
+        "status": "pregame",
+        "statusLabel": "Pregame",
         "scheduleState": "OK",
         "gameOutcome": {},
         "type": 1,
@@ -288,8 +288,8 @@
   },
   "freshness": {
     "status": "fresh",
-    "checkedAt": "2026-09-22T21:26:49.271841+00:00",
-    "lastSuccessfulAt": "2026-09-22T21:26:49.271842+00:00",
+    "checkedAt": "2026-09-23T00:40:55.668361+00:00",
+    "lastSuccessfulAt": "2026-09-23T00:40:55.668363+00:00",
     "ageSeconds": 0,
     "failedTeams": [],
     "schedule": {
@@ -439,7 +439,7 @@
     "recent-form": "<p class=\"notice\">2026–27 form begins after completed games.</p>",
     "home-saved-players": "<div class=\"home-empty-state\"><strong>Saved players are ready</strong><span>Open player analysis to view and manage your watchlist.</span></div>",
     "home-pinned-analytics": "<button type=\"button\" class=\"home-pin\" data-shell-page=\"league\"><span>Team Rankings</span><small>League-wide performance categories</small><b>→</b></button><button type=\"button\" class=\"home-pin\" data-shell-page=\"playoffs\"><span>Playoff Path</span><small>Forecasts and postseason routes</small><b>→</b></button><button type=\"button\" class=\"home-pin\" data-shell-page=\"schedule\"><span>Season Shape</span><small>Density, rest and difficulty</small><b>→</b></button>",
-    "today-games": "<article class=\"watch-next-hero\" data-watch-mode=\"league\"><header><div><span class=\"section-kicker\">League watch</span><h3>Florida Panthers at Carolina Hurricanes</h3><p>Tue 29 Sep · 22:00 UK · Lenovo Center</p></div><b class=\"watch-next-state state-scheduled\">Scheduled</b></header><div class=\"watch-next-signals\" aria-label=\"Three things to know\"><div class=\"watch-next-signal\"><span>Opponent baseline</span><strong>51.2% PTS</strong><small>Opponent points percentage in 2025–26; context, not a prediction</small></div><div class=\"watch-next-signal\"><span>Setting</span><strong>Home</strong><small>Lenovo Center</small></div></div><footer><a class=\"watch-next-open\" href=\"?game=2026020001#games\" data-watch-game=\"2026020001\">Open Game Centre →</a><span>2025–26 opponent evidence · updated 22 Sep · UK time</span></footer><details class=\"watch-next-method\"><summary>How to read this brief</summary><p>Official NHL schedule, prior-season opponent points percentage, travel, rest, congestion, road sequence, time-zone and event flags. Does not include injuries, projected goalies, current form or lineup changes.</p><small>Schedule burden is context, not a result or win-probability forecast.</small></details></article><div class=\"watch-next-support\" aria-label=\"More games to watch\"><a class=\"watch-next-row\" href=\"?game=2026020002#games\" data-watch-game=\"2026020002\"><span>Scheduled · Wed 30 Sep · 00:00 UK</span><strong>Montréal Canadiens at Toronto Maple Leafs</strong><small>64.6% PTS</small><b>→</b></a><a class=\"watch-next-row\" href=\"?game=2026020003#games\" data-watch-game=\"2026020003\"><span>Scheduled · Wed 30 Sep · 01:00 UK</span><strong>New York Rangers at Boston Bruins</strong><small>47.0% PTS</small><b>→</b></a></div>"
+    "today-games": "<article class=\"watch-next-hero\" data-watch-mode=\"league\"><header><div><span class=\"section-kicker\">League watch</span><h3>Florida Panthers at Carolina Hurricanes</h3><p>Tue 29 Sep · 22:00 UK · Lenovo Center</p></div><b class=\"watch-next-state state-scheduled\">Scheduled</b></header><div class=\"watch-next-signals\" aria-label=\"Three things to know\"><div class=\"watch-next-signal\"><span>Opponent baseline</span><strong>51.2% PTS</strong><small>Opponent points percentage in 2025–26; context, not a prediction</small></div><div class=\"watch-next-signal\"><span>Setting</span><strong>Home</strong><small>Lenovo Center</small></div></div><footer><a class=\"watch-next-open\" href=\"?game=2026020001#games\" data-watch-game=\"2026020001\">Open Game Centre →</a><span>2025–26 opponent evidence · updated 23 Sep · UK time</span></footer><details class=\"watch-next-method\"><summary>How to read this brief</summary><p>Official NHL schedule, prior-season opponent points percentage, travel, rest, congestion, road sequence, time-zone and event flags. Does not include injuries, projected goalies, current form or lineup changes.</p><small>Schedule burden is context, not a result or win-probability forecast.</small></details></article><div class=\"watch-next-support\" aria-label=\"More games to watch\"><a class=\"watch-next-row\" href=\"?game=2026020002#games\" data-watch-game=\"2026020002\"><span>Scheduled · Wed 30 Sep · 00:00 UK</span><strong>Montréal Canadiens at Toronto Maple Leafs</strong><small>64.6% PTS</small><b>→</b></a><a class=\"watch-next-row\" href=\"?game=2026020003#games\" data-watch-game=\"2026020003\"><span>Scheduled · Wed 30 Sep · 01:00 UK</span><strong>New York Rangers at Boston Bruins</strong><small>47.0% PTS</small><b>→</b></a></div>"
   },
   "watchNext": {
     "schema": 1,
@@ -1564,8 +1564,8 @@
   "continuity": {
     "schema": 3,
     "season": "20262027",
-    "capturedAt": "2026-09-22T21:26:49.271828+00:00",
-    "updatedAt": "2026-09-22T21:26:49.271828+00:00",
+    "capturedAt": "2026-09-23T00:40:55.668349+00:00",
+    "updatedAt": "2026-09-23T00:40:55.668349+00:00",
     "finished": {},
     "upcoming": {
       "2026020001": {
@@ -2074,6 +2074,41 @@
       }
     },
     "roster": {
+      "NYI|Departed|8485490|2026-09-23T00:40:55.664314+00:00": {
+        "key": "NYI|Departed|8485490|2026-09-23T00:40:55.664314+00:00",
+        "team": "NYI",
+        "direction": "Departed",
+        "name": "Joey Larson",
+        "detectedAt": "2026-09-23T00:40:55.664314+00:00"
+      },
+      "NYI|Departed|8484766|2026-09-23T00:40:55.664314+00:00": {
+        "key": "NYI|Departed|8484766|2026-09-23T00:40:55.664314+00:00",
+        "team": "NYI",
+        "direction": "Departed",
+        "name": "Jesse Pulkkinen",
+        "detectedAt": "2026-09-23T00:40:55.664314+00:00"
+      },
+      "NYI|Departed|8484208|2026-09-23T00:40:55.664314+00:00": {
+        "key": "NYI|Departed|8484208|2026-09-23T00:40:55.664314+00:00",
+        "team": "NYI",
+        "direction": "Departed",
+        "name": "Jesse Nurmi",
+        "detectedAt": "2026-09-23T00:40:55.664314+00:00"
+      },
+      "NYI|Departed|8483498|2026-09-23T00:40:55.664314+00:00": {
+        "key": "NYI|Departed|8483498|2026-09-23T00:40:55.664314+00:00",
+        "team": "NYI",
+        "direction": "Departed",
+        "name": "Calle Odelius",
+        "detectedAt": "2026-09-23T00:40:55.664314+00:00"
+      },
+      "NYI|Departed|8485462|2026-09-23T00:40:55.664314+00:00": {
+        "key": "NYI|Departed|8485462|2026-09-23T00:40:55.664314+00:00",
+        "team": "NYI",
+        "direction": "Departed",
+        "name": "Gleb Veremyev",
+        "detectedAt": "2026-09-23T00:40:55.664314+00:00"
+      },
       "NSH|Departed|8485005|2026-09-22T21:26:49.267509+00:00": {
         "key": "NSH|Departed|8485005|2026-09-22T21:26:49.267509+00:00",
         "team": "NSH",
@@ -2374,41 +2409,6 @@
         "direction": "Departed",
         "name": "Adam Gajan",
         "detectedAt": "2026-09-21T19:33:48.893969+00:00"
-      },
-      "STL|Departed|8483764|2026-09-20T18:53:23.024742+00:00": {
-        "key": "STL|Departed|8483764|2026-09-20T18:53:23.024742+00:00",
-        "team": "STL",
-        "direction": "Departed",
-        "name": "Marc-Andre Gaudet",
-        "detectedAt": "2026-09-20T18:53:23.024742+00:00"
-      },
-      "EDM|Departed|8483769|2026-09-20T16:15:46.524101+00:00": {
-        "key": "EDM|Departed|8483769|2026-09-20T16:15:46.524101+00:00",
-        "team": "EDM",
-        "direction": "Departed",
-        "name": "Samuel Jonsson",
-        "detectedAt": "2026-09-20T16:15:46.524101+00:00"
-      },
-      "EDM|Departed|8484455|2026-09-20T16:15:46.524101+00:00": {
-        "key": "EDM|Departed|8484455|2026-09-20T16:15:46.524101+00:00",
-        "team": "EDM",
-        "direction": "Departed",
-        "name": "Nathaniel Day",
-        "detectedAt": "2026-09-20T16:15:46.524101+00:00"
-      },
-      "STL|Departed|8484810|2026-09-20T16:15:46.524101+00:00": {
-        "key": "STL|Departed|8484810|2026-09-20T16:15:46.524101+00:00",
-        "team": "STL",
-        "direction": "Departed",
-        "name": "Lukas Fischer",
-        "detectedAt": "2026-09-20T16:15:46.524101+00:00"
-      },
-      "STL|Departed|8482716|2026-09-20T16:15:46.524101+00:00": {
-        "key": "STL|Departed|8482716|2026-09-20T16:15:46.524101+00:00",
-        "team": "STL",
-        "direction": "Departed",
-        "name": "Simon Robertsson",
-        "detectedAt": "2026-09-20T16:15:46.524101+00:00"
       }
     },
     "schedule": {
