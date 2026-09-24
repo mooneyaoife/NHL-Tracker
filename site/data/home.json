@@ -1,7 +1,7 @@
 {
   "schema": 3,
-  "sourceCommit": "699d81a359e6132f8d577e0268352c193824b412",
-  "dataGeneratedAt": "2026-09-23T22:59:40.695022+00:00",
+  "sourceCommit": "a83c44fd871f677343f4abec6c061126173da2c6",
+  "dataGeneratedAt": "2026-09-24T05:02:23.213996+00:00",
   "season": "20262027",
   "version": "5.74.0",
   "trackedTeams": [
@@ -55,18 +55,20 @@
         "slateDate": "2026-09-23",
         "londonDate": "2026-09-24",
         "startTimeUTC": "2026-09-23T23:00:00Z",
-        "state": "PRE",
-        "status": "pregame",
-        "statusLabel": "Pregame",
+        "state": "FINAL",
+        "status": "final",
+        "statusLabel": "Final",
         "scheduleState": "OK",
-        "gameOutcome": {},
+        "gameOutcome": {
+          "lastPeriodType": "REG"
+        },
         "type": 1,
         "venue": "Scotiabank Arena",
         "home": "TOR",
         "away": "OTT",
-        "homeScore": null,
-        "awayScore": null,
-        "period": 1,
+        "homeScore": 6,
+        "awayScore": 1,
+        "period": 3,
         "broadcasts": [
           "SN1"
         ],
@@ -78,18 +80,20 @@
         "slateDate": "2026-09-23",
         "londonDate": "2026-09-24",
         "startTimeUTC": "2026-09-23T23:00:00Z",
-        "state": "PRE",
-        "status": "pregame",
-        "statusLabel": "Pregame",
+        "state": "FINAL",
+        "status": "final",
+        "statusLabel": "Final",
         "scheduleState": "OK",
-        "gameOutcome": {},
+        "gameOutcome": {
+          "lastPeriodType": "REG"
+        },
         "type": 1,
         "venue": "Canadian Tire Centre",
         "home": "OTT",
         "away": "TOR",
-        "homeScore": null,
-        "awayScore": null,
-        "period": 1,
+        "homeScore": 2,
+        "awayScore": 4,
+        "period": 3,
         "broadcasts": [
           "NHLN",
           "TSN5",
@@ -103,18 +107,20 @@
         "slateDate": "2026-09-23",
         "londonDate": "2026-09-24",
         "startTimeUTC": "2026-09-24T00:00:00Z",
-        "state": "FUT",
-        "status": "scheduled",
-        "statusLabel": "Scheduled",
+        "state": "FINAL",
+        "status": "final",
+        "statusLabel": "Final",
         "scheduleState": "OK",
-        "gameOutcome": {},
+        "gameOutcome": {
+          "lastPeriodType": "REG"
+        },
         "type": 1,
         "venue": "American Airlines Center",
         "home": "DAL",
         "away": "MIN",
-        "homeScore": null,
-        "awayScore": null,
-        "period": 1,
+        "homeScore": 2,
+        "awayScore": 0,
+        "period": 3,
         "broadcasts": [
           "KSTC"
         ],
@@ -126,18 +132,20 @@
         "slateDate": "2026-09-23",
         "londonDate": "2026-09-24",
         "startTimeUTC": "2026-09-24T02:00:00Z",
-        "state": "FUT",
-        "status": "scheduled",
-        "statusLabel": "Scheduled",
+        "state": "FINAL",
+        "status": "final",
+        "statusLabel": "Final",
         "scheduleState": "OK",
-        "gameOutcome": {},
+        "gameOutcome": {
+          "lastPeriodType": "REG"
+        },
         "type": 1,
         "venue": "Honda Center",
         "home": "ANA",
         "away": "LAK",
-        "homeScore": null,
-        "awayScore": null,
-        "period": 1,
+        "homeScore": 1,
+        "awayScore": 2,
+        "period": 3,
         "broadcasts": [
           "KCOP-13"
         ],
@@ -147,8 +155,8 @@
   },
   "freshness": {
     "status": "fresh",
-    "checkedAt": "2026-09-23T22:59:40.695035+00:00",
-    "lastSuccessfulAt": "2026-09-23T22:59:40.695037+00:00",
+    "checkedAt": "2026-09-24T05:02:23.214009+00:00",
+    "lastSuccessfulAt": "2026-09-24T05:02:23.214011+00:00",
     "ageSeconds": 0,
     "failedTeams": [],
     "schedule": {
@@ -298,7 +306,7 @@
     "recent-form": "<p class=\"notice\">2026–27 form begins after completed games.</p>",
     "home-saved-players": "<div class=\"home-empty-state\"><strong>Saved players are ready</strong><span>Open player analysis to view and manage your watchlist.</span></div>",
     "home-pinned-analytics": "<button type=\"button\" class=\"home-pin\" data-shell-page=\"league\"><span>Team Rankings</span><small>League-wide performance categories</small><b>→</b></button><button type=\"button\" class=\"home-pin\" data-shell-page=\"playoffs\"><span>Playoff Path</span><small>Forecasts and postseason routes</small><b>→</b></button><button type=\"button\" class=\"home-pin\" data-shell-page=\"schedule\"><span>Season Shape</span><small>Density, rest and difficulty</small><b>→</b></button>",
-    "today-games": "<article class=\"watch-next-hero\" data-watch-mode=\"league\"><header><div><span class=\"section-kicker\">League watch</span><h3>Florida Panthers at Carolina Hurricanes</h3><p>Tue 29 Sep · 22:00 UK · Lenovo Center</p></div><b class=\"watch-next-state state-scheduled\">Scheduled</b></header><div class=\"watch-next-signals\" aria-label=\"Three things to know\"><div class=\"watch-next-signal\"><span>Opponent baseline</span><strong>51.2% PTS</strong><small>Opponent points percentage in 2025–26; context, not a prediction</small></div><div class=\"watch-next-signal\"><span>Setting</span><strong>Home</strong><small>Lenovo Center</small></div></div><footer><a class=\"watch-next-open\" href=\"?game=2026020001#games\" data-watch-game=\"2026020001\">Open Game Centre →</a><span>2025–26 opponent evidence · updated 23 Sep · UK time</span></footer><details class=\"watch-next-method\"><summary>How to read this brief</summary><p>Official NHL schedule, prior-season opponent points percentage, travel, rest, congestion, road sequence, time-zone and event flags. Does not include injuries, projected goalies, current form or lineup changes.</p><small>Schedule burden is context, not a result or win-probability forecast.</small></details></article><div class=\"watch-next-support\" aria-label=\"More games to watch\"><a class=\"watch-next-row\" href=\"?game=2026020002#games\" data-watch-game=\"2026020002\"><span>Scheduled · Wed 30 Sep · 00:00 UK</span><strong>Montréal Canadiens at Toronto Maple Leafs</strong><small>64.6% PTS</small><b>→</b></a><a class=\"watch-next-row\" href=\"?game=2026020003#games\" data-watch-game=\"2026020003\"><span>Scheduled · Wed 30 Sep · 01:00 UK</span><strong>New York Rangers at Boston Bruins</strong><small>47.0% PTS</small><b>→</b></a></div>"
+    "today-games": "<article class=\"watch-next-hero\" data-watch-mode=\"league\"><header><div><span class=\"section-kicker\">League watch</span><h3>Florida Panthers at Carolina Hurricanes</h3><p>Tue 29 Sep · 22:00 UK · Lenovo Center</p></div><b class=\"watch-next-state state-scheduled\">Scheduled</b></header><div class=\"watch-next-signals\" aria-label=\"Three things to know\"><div class=\"watch-next-signal\"><span>Opponent baseline</span><strong>51.2% PTS</strong><small>Opponent points percentage in 2025–26; context, not a prediction</small></div><div class=\"watch-next-signal\"><span>Setting</span><strong>Home</strong><small>Lenovo Center</small></div></div><footer><a class=\"watch-next-open\" href=\"?game=2026020001#games\" data-watch-game=\"2026020001\">Open Game Centre →</a><span>2025–26 opponent evidence · updated 24 Sep · UK time</span></footer><details class=\"watch-next-method\"><summary>How to read this brief</summary><p>Official NHL schedule, prior-season opponent points percentage, travel, rest, congestion, road sequence, time-zone and event flags. Does not include injuries, projected goalies, current form or lineup changes.</p><small>Schedule burden is context, not a result or win-probability forecast.</small></details></article><div class=\"watch-next-support\" aria-label=\"More games to watch\"><a class=\"watch-next-row\" href=\"?game=2026020002#games\" data-watch-game=\"2026020002\"><span>Scheduled · Wed 30 Sep · 00:00 UK</span><strong>Montréal Canadiens at Toronto Maple Leafs</strong><small>64.6% PTS</small><b>→</b></a><a class=\"watch-next-row\" href=\"?game=2026020003#games\" data-watch-game=\"2026020003\"><span>Scheduled · Wed 30 Sep · 01:00 UK</span><strong>New York Rangers at Boston Bruins</strong><small>47.0% PTS</small><b>→</b></a></div>"
   },
   "watchNext": {
     "schema": 1,
@@ -1423,8 +1431,8 @@
   "continuity": {
     "schema": 3,
     "season": "20262027",
-    "capturedAt": "2026-09-23T22:59:40.695022+00:00",
-    "updatedAt": "2026-09-23T22:59:40.695022+00:00",
+    "capturedAt": "2026-09-24T05:02:23.213996+00:00",
+    "updatedAt": "2026-09-24T05:02:23.213996+00:00",
     "finished": {},
     "upcoming": {
       "2026020001": {
