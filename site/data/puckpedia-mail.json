@@ -1,7 +1,14 @@
 {
   "schema": 1,
-  "updatedAt": "2026-09-24T11:40:12.342Z",
+  "updatedAt": "2026-09-24T17:40:16.127Z",
   "items": [
+    {
+      "id": "afd8179e32f44f33357a",
+      "title": "Oliver Moore Signs a 5-Year, $21.25M Contract with the Chicago Blackhawks",
+      "publishedAt": "2026-09-24T15:28:10.000Z",
+      "category": "Contract",
+      "url": "https://puckpedia.com/signing/10820?utm_source=email&utm_medium=email&utm_campaign=signing&utm_content=primary"
+    },
     {
       "id": "053ac34fbd315c459eed",
       "title": "Sam Steel Signs a 4-Year, $14.80M Contract with the Dallas Stars",
@@ -204,13 +211,6 @@
       "publishedAt": "2026-09-08T13:44:11.000Z",
       "category": "Contract",
       "url": "https://puckpedia.com/signing/10791?utm_source=email&utm_medium=email&utm_campaign=signing&utm_content=primary"
-    },
-    {
-      "id": "d342840c20327595937a",
-      "title": "Zeev Buium Signs an 8-Year, $75.04M Contract with the Vancouver Canucks",
-      "publishedAt": "2026-09-04T21:51:10.000Z",
-      "category": "Contract",
-      "url": "https://puckpedia.com/signing/10790?utm_source=email&utm_medium=email&utm_campaign=signing&utm_content=primary"
     }
   ]
 }
