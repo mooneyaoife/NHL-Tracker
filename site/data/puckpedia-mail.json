@@ -1,7 +1,14 @@
 {
   "schema": 1,
-  "updatedAt": "2026-09-24T17:40:16.127Z",
+  "updatedAt": "2026-09-24T23:40:12.419Z",
   "items": [
+    {
+      "id": "7b52d5587bcac53a7cd4",
+      "title": "Adam Fantilli Signs a 6-Year, $82.50M Contract with the Columbus Blue Jackets",
+      "publishedAt": "2026-09-24T19:07:11.000Z",
+      "category": "Contract",
+      "url": "https://puckpedia.com/signing/10821?utm_source=email&utm_medium=email&utm_campaign=signing&utm_content=primary"
+    },
     {
       "id": "afd8179e32f44f33357a",
       "title": "Oliver Moore Signs a 5-Year, $21.25M Contract with the Chicago Blackhawks",
@@ -204,13 +211,6 @@
       "publishedAt": "2026-09-08T18:13:10.000Z",
       "category": "Contract",
       "url": "https://puckpedia.com/signing/10792?utm_source=email&utm_medium=email&utm_campaign=signing&utm_content=primary"
-    },
-    {
-      "id": "8d7be8acf7eff6b247f8",
-      "title": "Fraser Minten Signs a 7-Year, $50.40M Contract with the Boston Bruins",
-      "publishedAt": "2026-09-08T13:44:11.000Z",
-      "category": "Contract",
-      "url": "https://puckpedia.com/signing/10791?utm_source=email&utm_medium=email&utm_campaign=signing&utm_content=primary"
     }
   ]
 }
