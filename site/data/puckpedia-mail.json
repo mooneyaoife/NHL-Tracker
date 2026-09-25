@@ -1,7 +1,21 @@
 {
   "schema": 1,
-  "updatedAt": "2026-09-25T17:40:11.568Z",
+  "updatedAt": "2026-09-25T23:40:11.642Z",
   "items": [
+    {
+      "id": "0798cc8b440960e4bdbb",
+      "title": "The Tampa Bay Lightning trade Jonas Johansson to the Ottawa Senators for future considerations",
+      "publishedAt": "2026-09-25T23:34:13.000Z",
+      "category": "Trade",
+      "url": "https://puckpedia.com/trade/1205?utm_source=email&utm_medium=email&utm_campaign=trade&utm_content=primary"
+    },
+    {
+      "id": "fd0c051691c385cff307",
+      "title": "Alexander Nylander Signs a 1-Year, $850K Contract with the Calgary Flames",
+      "publishedAt": "2026-09-25T21:46:12.000Z",
+      "category": "Contract",
+      "url": "https://puckpedia.com/signing/10824?utm_source=email&utm_medium=email&utm_campaign=signing&utm_content=primary"
+    },
     {
       "id": "3afa2a399dd210261c7f",
       "title": "Pyotr Kochetkov Signs a 2-Year, $7.90M Contract with the Carolina Hurricanes",
@@ -197,20 +211,6 @@
       "publishedAt": "2026-09-09T15:19:10.000Z",
       "category": "Contract",
       "url": "https://puckpedia.com/signing/10796?utm_source=email&utm_medium=email&utm_campaign=signing&utm_content=primary"
-    },
-    {
-      "id": "441ad33783325757f5f9",
-      "title": "Cayden Primeau Signs a 2-Year, $1.83M Contract with the Carolina Hurricanes",
-      "publishedAt": "2026-09-09T15:17:10.000Z",
-      "category": "Contract",
-      "url": "https://puckpedia.com/signing/10795?utm_source=email&utm_medium=email&utm_campaign=signing&utm_content=primary"
-    },
-    {
-      "id": "57d62e667a0ebaf0bc36",
-      "title": "Alex Formenton Signs a 1-Year, $850K Contract with the Edmonton Oilers",
-      "publishedAt": "2026-09-09T15:10:10.000Z",
-      "category": "Contract",
-      "url": "https://puckpedia.com/signing/10794?utm_source=email&utm_medium=email&utm_campaign=signing&utm_content=primary"
     }
   ]
 }
