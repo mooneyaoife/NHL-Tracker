@@ -1,7 +1,7 @@
 {
   "schema": 3,
-  "sourceCommit": "de53536d65c1e63be229f8ebb35e7f5f5ef4e2e1",
-  "dataGeneratedAt": "2026-09-25T18:43:21.957925+00:00",
+  "sourceCommit": "20767867cebeaf3231d3a6cdb54c4d6354e7b2dd",
+  "dataGeneratedAt": "2026-09-25T23:20:32.117881+00:00",
   "season": "20262027",
   "version": "5.74.0",
   "trackedTeams": [
@@ -55,17 +55,17 @@
         "slateDate": "2026-09-25",
         "londonDate": "2026-09-26",
         "startTimeUTC": "2026-09-25T23:00:00Z",
-        "state": "FUT",
-        "status": "scheduled",
-        "statusLabel": "Scheduled",
+        "state": "LIVE",
+        "status": "live",
+        "statusLabel": "Live",
         "scheduleState": "OK",
         "gameOutcome": {},
         "type": 1,
         "venue": "Capital One Arena",
         "home": "WSH",
         "away": "BOS",
-        "homeScore": null,
-        "awayScore": null,
+        "homeScore": 0,
+        "awayScore": 0,
         "period": 1,
         "broadcasts": [
           "SN1",
@@ -80,9 +80,9 @@
         "slateDate": "2026-09-25",
         "londonDate": "2026-09-26",
         "startTimeUTC": "2026-09-25T23:30:00Z",
-        "state": "FUT",
-        "status": "scheduled",
-        "statusLabel": "Scheduled",
+        "state": "PRE",
+        "status": "pregame",
+        "statusLabel": "Pregame",
         "scheduleState": "OK",
         "gameOutcome": {},
         "type": 1,
@@ -148,8 +148,8 @@
   },
   "freshness": {
     "status": "fresh",
-    "checkedAt": "2026-09-25T18:43:21.957938+00:00",
-    "lastSuccessfulAt": "2026-09-25T18:43:21.957940+00:00",
+    "checkedAt": "2026-09-25T23:20:32.117893+00:00",
+    "lastSuccessfulAt": "2026-09-25T23:20:32.117896+00:00",
     "ageSeconds": 0,
     "failedTeams": [],
     "schedule": {
@@ -1424,8 +1424,8 @@
   "continuity": {
     "schema": 3,
     "season": "20262027",
-    "capturedAt": "2026-09-25T18:43:21.957925+00:00",
-    "updatedAt": "2026-09-25T18:43:21.957925+00:00",
+    "capturedAt": "2026-09-25T23:20:32.117881+00:00",
+    "updatedAt": "2026-09-25T23:20:32.117881+00:00",
     "finished": {},
     "upcoming": {
       "2026020001": {
@@ -1934,341 +1934,341 @@
       }
     },
     "roster": {
-      "TBL|Departed|8483921|2026-09-25T18:43:21.953584+00:00": {
-        "key": "TBL|Departed|8483921|2026-09-25T18:43:21.953584+00:00",
-        "team": "TBL",
+      "CAR|Departed|8482187|2026-09-25T23:20:32.113819+00:00": {
+        "key": "CAR|Departed|8482187|2026-09-25T23:20:32.113819+00:00",
+        "team": "CAR",
         "direction": "Departed",
-        "name": "Milo Roelens",
-        "detectedAt": "2026-09-25T18:43:21.953584+00:00"
+        "name": "Ronan Seeley",
+        "detectedAt": "2026-09-25T23:20:32.113819+00:00"
       },
-      "TBL|Departed|8484310|2026-09-25T18:43:21.953584+00:00": {
-        "key": "TBL|Departed|8484310|2026-09-25T18:43:21.953584+00:00",
-        "team": "TBL",
+      "CAR|Departed|8479313|2026-09-25T23:20:32.113819+00:00": {
+        "key": "CAR|Departed|8479313|2026-09-25T23:20:32.113819+00:00",
+        "team": "CAR",
         "direction": "Departed",
-        "name": "Tristan Allard",
-        "detectedAt": "2026-09-25T18:43:21.953584+00:00"
+        "name": "Zach Sawchenko",
+        "detectedAt": "2026-09-25T23:20:32.113819+00:00"
       },
-      "TBL|Departed|8484507|2026-09-25T18:43:21.953584+00:00": {
-        "key": "TBL|Departed|8484507|2026-09-25T18:43:21.953584+00:00",
-        "team": "TBL",
+      "CAR|Departed|8484440|2026-09-25T23:20:32.113819+00:00": {
+        "key": "CAR|Departed|8484440|2026-09-25T23:20:32.113819+00:00",
+        "team": "CAR",
         "direction": "Departed",
-        "name": "Gabriel Szturc",
-        "detectedAt": "2026-09-25T18:43:21.953584+00:00"
+        "name": "Ruslan Khazheyev",
+        "detectedAt": "2026-09-25T23:20:32.113819+00:00"
       },
-      "TBL|Departed|8483727|2026-09-25T18:43:21.953584+00:00": {
-        "key": "TBL|Departed|8483727|2026-09-25T18:43:21.953584+00:00",
-        "team": "TBL",
+      "CAR|Departed|8482911|2026-09-25T23:20:32.113819+00:00": {
+        "key": "CAR|Departed|8482911|2026-09-25T23:20:32.113819+00:00",
+        "team": "CAR",
         "direction": "Departed",
-        "name": "Connor Kurth",
-        "detectedAt": "2026-09-25T18:43:21.953584+00:00"
+        "name": "Joel Nystrom",
+        "detectedAt": "2026-09-25T23:20:32.113819+00:00"
       },
-      "TBL|Departed|8483692|2026-09-25T18:43:21.953584+00:00": {
-        "key": "TBL|Departed|8483692|2026-09-25T18:43:21.953584+00:00",
-        "team": "TBL",
+      "CAR|Departed|8483496|2026-09-25T23:20:32.113819+00:00": {
+        "key": "CAR|Departed|8483496|2026-09-25T23:20:32.113819+00:00",
+        "team": "CAR",
         "direction": "Departed",
-        "name": "Dyllan Gill",
-        "detectedAt": "2026-09-25T18:43:21.953584+00:00"
+        "name": "Viktor Neuchev",
+        "detectedAt": "2026-09-25T23:20:32.113819+00:00"
       },
-      "TBL|Departed|8484636|2026-09-25T18:43:21.953584+00:00": {
-        "key": "TBL|Departed|8484636|2026-09-25T18:43:21.953584+00:00",
-        "team": "TBL",
+      "CAR|Departed|8484781|2026-09-25T23:20:32.113819+00:00": {
+        "key": "CAR|Departed|8484781|2026-09-25T23:20:32.113819+00:00",
+        "team": "CAR",
         "direction": "Departed",
-        "name": "Harrison Meneghin",
-        "detectedAt": "2026-09-25T18:43:21.953584+00:00"
+        "name": "Dominik Badinka",
+        "detectedAt": "2026-09-25T23:20:32.113819+00:00"
       },
-      "TBL|Departed|8477992|2026-09-25T18:43:21.953584+00:00": {
-        "key": "TBL|Departed|8477992|2026-09-25T18:43:21.953584+00:00",
-        "team": "TBL",
-        "direction": "Departed",
-        "name": "Jonas Johansson",
-        "detectedAt": "2026-09-25T18:43:21.953584+00:00"
-      },
-      "TBL|Departed|8482951|2026-09-25T18:43:21.953584+00:00": {
-        "key": "TBL|Departed|8482951|2026-09-25T18:43:21.953584+00:00",
-        "team": "TBL",
-        "direction": "Departed",
-        "name": "Cooper Flinton",
-        "detectedAt": "2026-09-25T18:43:21.953584+00:00"
-      },
-      "TBL|Departed|8486241|2026-09-25T18:43:21.953584+00:00": {
-        "key": "TBL|Departed|8486241|2026-09-25T18:43:21.953584+00:00",
-        "team": "TBL",
-        "direction": "Departed",
-        "name": "Tomas Kralovic",
-        "detectedAt": "2026-09-25T18:43:21.953584+00:00"
-      },
-      "TBL|Departed|8484173|2026-09-25T18:43:21.953584+00:00": {
-        "key": "TBL|Departed|8484173|2026-09-25T18:43:21.953584+00:00",
-        "team": "TBL",
-        "direction": "Departed",
-        "name": "Ethan Gauthier",
-        "detectedAt": "2026-09-25T18:43:21.953584+00:00"
-      },
-      "MIN|Departed|8482641|2026-09-25T18:43:21.953584+00:00": {
-        "key": "MIN|Departed|8482641|2026-09-25T18:43:21.953584+00:00",
+      "MIN|Departed|8482693|2026-09-25T23:20:32.113819+00:00": {
+        "key": "MIN|Departed|8482693|2026-09-25T23:20:32.113819+00:00",
         "team": "MIN",
         "direction": "Departed",
-        "name": "Matt Kiersted",
-        "detectedAt": "2026-09-25T18:43:21.953584+00:00"
+        "name": "Roman Schmidt",
+        "detectedAt": "2026-09-25T23:20:32.113819+00:00"
       },
-      "MIN|Departed|8482781|2026-09-25T18:43:21.953584+00:00": {
-        "key": "MIN|Departed|8482781|2026-09-25T18:43:21.953584+00:00",
+      "MIN|Departed|8475752|2026-09-25T23:20:32.113819+00:00": {
+        "key": "MIN|Departed|8475752|2026-09-25T23:20:32.113819+00:00",
         "team": "MIN",
         "direction": "Departed",
-        "name": "Carson Lambos",
-        "detectedAt": "2026-09-25T18:43:21.953584+00:00"
+        "name": "Tyler Pitlick",
+        "detectedAt": "2026-09-25T23:20:32.113819+00:00"
       },
-      "MIN|Departed|8482863|2026-09-25T18:43:21.953584+00:00": {
-        "key": "MIN|Departed|8482863|2026-09-25T18:43:21.953584+00:00",
+      "MIN|Departed|8479580|2026-09-25T23:20:32.113819+00:00": {
+        "key": "MIN|Departed|8479580|2026-09-25T23:20:32.113819+00:00",
         "team": "MIN",
         "direction": "Departed",
-        "name": "Caedan Bankier",
-        "detectedAt": "2026-09-25T18:43:21.953584+00:00"
+        "name": "Dylan Gambrell",
+        "detectedAt": "2026-09-25T23:20:32.113819+00:00"
       },
-      "DAL|Departed|8483514|2026-09-25T18:43:21.953584+00:00": {
-        "key": "DAL|Departed|8483514|2026-09-25T18:43:21.953584+00:00",
-        "team": "DAL",
+      "MIN|Departed|8479972|2026-09-25T23:20:32.113819+00:00": {
+        "key": "MIN|Departed|8479972|2026-09-25T23:20:32.113819+00:00",
+        "team": "MIN",
         "direction": "Departed",
-        "name": "Matthew Seminoff",
-        "detectedAt": "2026-09-25T18:43:21.953584+00:00"
+        "name": "Mason Shaw",
+        "detectedAt": "2026-09-25T23:20:32.113819+00:00"
       },
-      "BOS|Departed|8483930|2026-09-25T18:43:21.953584+00:00": {
-        "key": "BOS|Departed|8483930|2026-09-25T18:43:21.953584+00:00",
-        "team": "BOS",
+      "MIN|Departed|8477993|2026-09-25T23:20:32.113819+00:00": {
+        "key": "MIN|Departed|8477993|2026-09-25T23:20:32.113819+00:00",
+        "team": "MIN",
         "direction": "Departed",
-        "name": "Ivan Ivan",
-        "detectedAt": "2026-09-25T18:43:21.953584+00:00"
+        "name": "Justin Kirkland",
+        "detectedAt": "2026-09-25T23:20:32.113819+00:00"
       },
-      "BOS|Departed|8484583|2026-09-25T18:43:21.953584+00:00": {
-        "key": "BOS|Departed|8484583|2026-09-25T18:43:21.953584+00:00",
-        "team": "BOS",
-        "direction": "Departed",
-        "name": "Attilio Biasca",
-        "detectedAt": "2026-09-25T18:43:21.953584+00:00"
-      },
-      "BUF|Added|8476891|2026-09-25T18:43:21.953584+00:00": {
-        "key": "BUF|Added|8476891|2026-09-25T18:43:21.953584+00:00",
+      "BUF|Departed|8483755|2026-09-25T23:20:32.113819+00:00": {
+        "key": "BUF|Departed|8483755|2026-09-25T23:20:32.113819+00:00",
         "team": "BUF",
+        "direction": "Departed",
+        "name": "Jake Richard",
+        "detectedAt": "2026-09-25T23:20:32.113819+00:00"
+      },
+      "BUF|Departed|8485404|2026-09-25T23:20:32.113819+00:00": {
+        "key": "BUF|Departed|8485404|2026-09-25T23:20:32.113819+00:00",
+        "team": "BUF",
+        "direction": "Departed",
+        "name": "Radim Mrtka",
+        "detectedAt": "2026-09-25T23:20:32.113819+00:00"
+      },
+      "BUF|Departed|8484192|2026-09-25T23:20:32.113819+00:00": {
+        "key": "BUF|Departed|8484192|2026-09-25T23:20:32.113819+00:00",
+        "team": "BUF",
+        "direction": "Departed",
+        "name": "Gavin McCarthy",
+        "detectedAt": "2026-09-25T23:20:32.113819+00:00"
+      },
+      "BUF|Departed|8484218|2026-09-25T23:20:32.113819+00:00": {
+        "key": "BUF|Departed|8484218|2026-09-25T23:20:32.113819+00:00",
+        "team": "BUF",
+        "direction": "Departed",
+        "name": "Scott Ratzlaff",
+        "detectedAt": "2026-09-25T23:20:32.113819+00:00"
+      },
+      "BUF|Departed|8484233|2026-09-25T23:20:32.113819+00:00": {
+        "key": "BUF|Departed|8484233|2026-09-25T23:20:32.113819+00:00",
+        "team": "BUF",
+        "direction": "Departed",
+        "name": "Maxim Strbak",
+        "detectedAt": "2026-09-25T23:20:32.113819+00:00"
+      },
+      "BUF|Departed|8484757|2026-09-25T23:20:32.113819+00:00": {
+        "key": "BUF|Departed|8484757|2026-09-25T23:20:32.113819+00:00",
+        "team": "BUF",
+        "direction": "Departed",
+        "name": "Zac Funk",
+        "detectedAt": "2026-09-25T23:20:32.113819+00:00"
+      },
+      "BUF|Departed|8483732|2026-09-25T23:20:32.113819+00:00": {
+        "key": "BUF|Departed|8483732|2026-09-25T23:20:32.113819+00:00",
+        "team": "BUF",
+        "direction": "Departed",
+        "name": "Vsevolod Komarov",
+        "detectedAt": "2026-09-25T23:20:32.113819+00:00"
+      },
+      "BUF|Departed|8483090|2026-09-25T23:20:32.113819+00:00": {
+        "key": "BUF|Departed|8483090|2026-09-25T23:20:32.113819+00:00",
+        "team": "BUF",
+        "direction": "Departed",
+        "name": "Riley Fiddler-Schultz",
+        "detectedAt": "2026-09-25T23:20:32.113819+00:00"
+      },
+      "DET|Added|8481757|2026-09-25T23:20:32.113819+00:00": {
+        "key": "DET|Added|8481757|2026-09-25T23:20:32.113819+00:00",
+        "team": "DET",
         "direction": "Added",
-        "name": "Matt Grzelcyk",
-        "detectedAt": "2026-09-25T18:43:21.953584+00:00"
-      },
-      "PHI|Departed|8483787|2026-09-25T18:43:21.953584+00:00": {
-        "key": "PHI|Departed|8483787|2026-09-25T18:43:21.953584+00:00",
-        "team": "PHI",
-        "direction": "Departed",
-        "name": "Cole Knuble",
-        "detectedAt": "2026-09-25T18:43:21.953584+00:00"
-      },
-      "PHI|Departed|8481848|2026-09-25T18:43:21.953584+00:00": {
-        "key": "PHI|Departed|8481848|2026-09-25T18:43:21.953584+00:00",
-        "team": "PHI",
-        "direction": "Departed",
-        "name": "Jacob Gaucher",
-        "detectedAt": "2026-09-25T18:43:21.953584+00:00"
-      },
-      "PHI|Departed|8484148|2026-09-25T18:43:21.953584+00:00": {
-        "key": "PHI|Departed|8484148|2026-09-25T18:43:21.953584+00:00",
-        "team": "PHI",
-        "direction": "Departed",
-        "name": "Oliver Bonk",
-        "detectedAt": "2026-09-25T18:43:21.953584+00:00"
-      },
-      "PHI|Departed|8484779|2026-09-25T18:43:21.953584+00:00": {
-        "key": "PHI|Departed|8484779|2026-09-25T18:43:21.953584+00:00",
-        "team": "PHI",
-        "direction": "Departed",
-        "name": "Jett Luchanko",
-        "detectedAt": "2026-09-25T18:43:21.953584+00:00"
-      },
-      "EDM|Departed|8485511|2026-09-25T18:43:21.953584+00:00": {
-        "key": "EDM|Departed|8485511|2026-09-25T18:43:21.953584+00:00",
-        "team": "EDM",
-        "direction": "Departed",
-        "name": "Quinn Hutson",
-        "detectedAt": "2026-09-25T18:43:21.953584+00:00"
-      },
-      "EDM|Departed|8485163|2026-09-25T18:43:21.953584+00:00": {
-        "key": "EDM|Departed|8485163|2026-09-25T18:43:21.953584+00:00",
-        "team": "EDM",
-        "direction": "Departed",
-        "name": "Tomas Cibulka",
-        "detectedAt": "2026-09-25T18:43:21.953584+00:00"
-      },
-      "EDM|Departed|8482759|2026-09-25T18:43:21.953584+00:00": {
-        "key": "EDM|Departed|8482759|2026-09-25T18:43:21.953584+00:00",
-        "team": "EDM",
-        "direction": "Departed",
-        "name": "Viljami Marjala",
-        "detectedAt": "2026-09-25T18:43:21.953584+00:00"
-      },
-      "EDM|Departed|8485087|2026-09-25T18:43:21.953584+00:00": {
-        "key": "EDM|Departed|8485087|2026-09-25T18:43:21.953584+00:00",
-        "team": "EDM",
-        "direction": "Departed",
-        "name": "William Nicholl",
-        "detectedAt": "2026-09-25T18:43:21.953584+00:00"
-      },
-      "EDM|Departed|8484529|2026-09-25T18:43:21.953584+00:00": {
-        "key": "EDM|Departed|8484529|2026-09-25T18:43:21.953584+00:00",
-        "team": "EDM",
-        "direction": "Departed",
-        "name": "Connor Clattenburg",
-        "detectedAt": "2026-09-25T18:43:21.953584+00:00"
-      },
-      "EDM|Departed|8481699|2026-09-25T18:43:21.953584+00:00": {
-        "key": "EDM|Departed|8481699|2026-09-25T18:43:21.953584+00:00",
-        "team": "EDM",
-        "direction": "Departed",
-        "name": "Aku Raty",
-        "detectedAt": "2026-09-25T18:43:21.953584+00:00"
-      },
-      "VGK|Departed|8482761|2026-09-25T18:43:21.953584+00:00": {
-        "key": "VGK|Departed|8482761|2026-09-25T18:43:21.953584+00:00",
-        "team": "VGK",
-        "direction": "Departed",
-        "name": "Carl Lindbom",
-        "detectedAt": "2026-09-25T18:43:21.953584+00:00"
-      },
-      "UTA|Departed|8484181|2026-09-25T18:43:21.953584+00:00": {
-        "key": "UTA|Departed|8484181|2026-09-25T18:43:21.953584+00:00",
-        "team": "UTA",
-        "direction": "Departed",
-        "name": "Michael Hrabal",
-        "detectedAt": "2026-09-25T18:43:21.953584+00:00"
-      },
-      "OTT|Departed|8482447|2026-09-25T18:43:21.953584+00:00": {
-        "key": "OTT|Departed|8482447|2026-09-25T18:43:21.953584+00:00",
-        "team": "OTT",
-        "direction": "Departed",
-        "name": "Leevi Meriläinen",
-        "detectedAt": "2026-09-25T18:43:21.953584+00:00"
-      },
-      "DET|Departed|8485545|2026-09-25T18:43:21.953584+00:00": {
-        "key": "DET|Departed|8485545|2026-09-25T18:43:21.953584+00:00",
-        "team": "DET",
-        "direction": "Departed",
-        "name": "Michal Postava",
-        "detectedAt": "2026-09-25T18:43:21.953584+00:00"
-      },
-      "DET|Departed|8481757|2026-09-25T18:43:21.953584+00:00": {
-        "key": "DET|Departed|8481757|2026-09-25T18:43:21.953584+00:00",
-        "team": "DET",
-        "direction": "Departed",
         "name": "Carter Gylander",
-        "detectedAt": "2026-09-25T18:43:21.953584+00:00"
+        "detectedAt": "2026-09-25T23:20:32.113819+00:00"
       },
-      "DET|Departed|8483459|2026-09-25T18:43:21.953584+00:00": {
-        "key": "DET|Departed|8483459|2026-09-25T18:43:21.953584+00:00",
-        "team": "DET",
+      "CBJ|Departed|8482451|2026-09-25T23:20:32.113819+00:00": {
+        "key": "CBJ|Departed|8482451|2026-09-25T23:20:32.113819+00:00",
+        "team": "CBJ",
         "direction": "Departed",
-        "name": "Dylan James",
-        "detectedAt": "2026-09-25T18:43:21.953584+00:00"
+        "name": "Mikael Pyyhtia",
+        "detectedAt": "2026-09-25T23:20:32.113819+00:00"
       },
-      "DET|Departed|8484141|2026-09-25T18:43:21.953584+00:00": {
-        "key": "DET|Departed|8484141|2026-09-25T18:43:21.953584+00:00",
-        "team": "DET",
+      "CBJ|Departed|8478841|2026-09-25T23:20:32.113819+00:00": {
+        "key": "CBJ|Departed|8478841|2026-09-25T23:20:32.113819+00:00",
+        "team": "CBJ",
         "direction": "Departed",
-        "name": "Trey Augustine",
-        "detectedAt": "2026-09-25T18:43:21.953584+00:00"
+        "name": "Colton White",
+        "detectedAt": "2026-09-25T23:20:32.113819+00:00"
       },
-      "DET|Departed|8484425|2026-09-25T18:43:21.953584+00:00": {
-        "key": "DET|Departed|8484425|2026-09-25T18:43:21.953584+00:00",
-        "team": "DET",
+      "CBJ|Departed|8482678|2026-09-25T23:20:32.113819+00:00": {
+        "key": "CBJ|Departed|8482678|2026-09-25T23:20:32.113819+00:00",
+        "team": "CBJ",
         "direction": "Departed",
-        "name": "Sutter Muzzatti",
-        "detectedAt": "2026-09-25T18:43:21.953584+00:00"
+        "name": "Corson Ceulemans",
+        "detectedAt": "2026-09-25T23:20:32.113819+00:00"
       },
-      "DET|Departed|8479942|2026-09-25T18:43:21.953584+00:00": {
-        "key": "DET|Departed|8479942|2026-09-25T18:43:21.953584+00:00",
-        "team": "DET",
+      "NSH|Departed|8484196|2026-09-25T23:20:32.113819+00:00": {
+        "key": "NSH|Departed|8484196|2026-09-25T23:20:32.113819+00:00",
+        "team": "NSH",
         "direction": "Departed",
-        "name": "Dominik Shine",
-        "detectedAt": "2026-09-25T18:43:21.953584+00:00"
+        "name": "Tanner Molendyk",
+        "detectedAt": "2026-09-25T23:20:32.113819+00:00"
       },
-      "DET|Departed|8481077|2026-09-25T18:43:21.953584+00:00": {
-        "key": "DET|Departed|8481077|2026-09-25T18:43:21.953584+00:00",
-        "team": "DET",
+      "NSH|Departed|8483696|2026-09-25T23:20:32.113819+00:00": {
+        "key": "NSH|Departed|8483696|2026-09-25T23:20:32.113819+00:00",
+        "team": "NSH",
         "direction": "Departed",
-        "name": "John Leonard",
-        "detectedAt": "2026-09-25T18:43:21.953584+00:00"
+        "name": "Cole O'Hara",
+        "detectedAt": "2026-09-25T23:20:32.113819+00:00"
       },
-      "DET|Departed|8484836|2026-09-25T18:43:21.953584+00:00": {
-        "key": "DET|Departed|8484836|2026-09-25T18:43:21.953584+00:00",
-        "team": "DET",
+      "NSH|Departed|8483575|2026-09-25T23:20:32.113819+00:00": {
+        "key": "NSH|Departed|8483575|2026-09-25T23:20:32.113819+00:00",
+        "team": "NSH",
         "direction": "Departed",
-        "name": "Ondrej Becher",
-        "detectedAt": "2026-09-25T18:43:21.953584+00:00"
+        "name": "Matt Murray",
+        "detectedAt": "2026-09-25T23:20:32.113819+00:00"
       },
-      "DET|Departed|8484380|2026-09-25T18:43:21.953584+00:00": {
-        "key": "DET|Departed|8484380|2026-09-25T18:43:21.953584+00:00",
-        "team": "DET",
+      "NSH|Departed|8484206|2026-09-25T23:20:32.113819+00:00": {
+        "key": "NSH|Departed|8484206|2026-09-25T23:20:32.113819+00:00",
+        "team": "NSH",
         "direction": "Departed",
-        "name": "Wilmer Skoog",
-        "detectedAt": "2026-09-25T18:43:21.953584+00:00"
+        "name": "Felix Nilsson",
+        "detectedAt": "2026-09-25T23:20:32.113819+00:00"
       },
-      "DET|Departed|8478021|2026-09-25T18:43:21.953584+00:00": {
-        "key": "DET|Departed|8478021|2026-09-25T18:43:21.953584+00:00",
-        "team": "DET",
+      "NJD|Departed|8484405|2026-09-25T23:20:32.113819+00:00": {
+        "key": "NJD|Departed|8484405|2026-09-25T23:20:32.113819+00:00",
+        "team": "NJD",
         "direction": "Departed",
-        "name": "William Lagesson",
-        "detectedAt": "2026-09-25T18:43:21.953584+00:00"
+        "name": "Cam Squires",
+        "detectedAt": "2026-09-25T23:20:32.113819+00:00"
       },
-      "DET|Departed|8482184|2026-09-25T18:43:21.953584+00:00": {
-        "key": "DET|Departed|8482184|2026-09-25T18:43:21.953584+00:00",
-        "team": "DET",
+      "NJD|Departed|8484198|2026-09-25T23:20:32.113819+00:00": {
+        "key": "NJD|Departed|8484198|2026-09-25T23:20:32.113819+00:00",
+        "team": "NJD",
         "direction": "Departed",
-        "name": "Theo Rochette",
-        "detectedAt": "2026-09-25T18:43:21.953584+00:00"
+        "name": "Etienne Morin",
+        "detectedAt": "2026-09-25T23:20:32.113819+00:00"
       },
-      "DET|Departed|8484161|2026-09-25T18:43:21.953584+00:00": {
-        "key": "DET|Departed|8484161|2026-09-25T18:43:21.953584+00:00",
-        "team": "DET",
+      "NJD|Departed|8484616|2026-09-25T23:20:32.113819+00:00": {
+        "key": "NJD|Departed|8484616|2026-09-25T23:20:32.113819+00:00",
+        "team": "NJD",
         "direction": "Departed",
-        "name": "Noah Dower Nilsson",
-        "detectedAt": "2026-09-25T18:43:21.953584+00:00"
+        "name": "Matyas Melovsky",
+        "detectedAt": "2026-09-25T23:20:32.113819+00:00"
       },
-      "DET|Departed|8484183|2026-09-25T18:43:21.953584+00:00": {
-        "key": "DET|Departed|8484183|2026-09-25T18:43:21.953584+00:00",
-        "team": "DET",
+      "NJD|Departed|8483085|2026-09-25T23:20:32.113819+00:00": {
+        "key": "NJD|Departed|8483085|2026-09-25T23:20:32.113819+00:00",
+        "team": "NJD",
         "direction": "Departed",
-        "name": "Jesse Kiiskinen",
-        "detectedAt": "2026-09-25T18:43:21.953584+00:00"
+        "name": "Mikael Diotte",
+        "detectedAt": "2026-09-25T23:20:32.113819+00:00"
       },
-      "DET|Departed|8482777|2026-09-25T18:43:21.953584+00:00": {
-        "key": "DET|Departed|8482777|2026-09-25T18:43:21.953584+00:00",
-        "team": "DET",
+      "NJD|Departed|8482194|2026-09-25T23:20:32.113819+00:00": {
+        "key": "NJD|Departed|8482194|2026-09-25T23:20:32.113819+00:00",
+        "team": "NJD",
         "direction": "Departed",
-        "name": "Shai Buium",
-        "detectedAt": "2026-09-25T18:43:21.953584+00:00"
+        "name": "Ethan Edwards",
+        "detectedAt": "2026-09-25T23:20:32.113819+00:00"
       },
-      "DET|Departed|8483045|2026-09-25T18:43:21.953584+00:00": {
-        "key": "DET|Departed|8483045|2026-09-25T18:43:21.953584+00:00",
-        "team": "DET",
+      "NJD|Departed|8482867|2026-09-25T23:20:32.113819+00:00": {
+        "key": "NJD|Departed|8482867|2026-09-25T23:20:32.113819+00:00",
+        "team": "NJD",
         "direction": "Departed",
-        "name": "Cameron Butler",
-        "detectedAt": "2026-09-25T18:43:21.953584+00:00"
+        "name": "Jakub Malek",
+        "detectedAt": "2026-09-25T23:20:32.113819+00:00"
       },
-      "DET|Departed|8480196|2026-09-25T18:43:21.953584+00:00": {
-        "key": "DET|Departed|8480196|2026-09-25T18:43:21.953584+00:00",
-        "team": "DET",
+      "NJD|Departed|8484987|2026-09-25T23:20:32.113819+00:00": {
+        "key": "NJD|Departed|8484987|2026-09-25T23:20:32.113819+00:00",
+        "team": "NJD",
         "direction": "Departed",
-        "name": "Jacob Bryson",
-        "detectedAt": "2026-09-25T18:43:21.953584+00:00"
+        "name": "Anton Silaev",
+        "detectedAt": "2026-09-25T23:20:32.113819+00:00"
       },
-      "DET|Departed|8481521|2026-09-25T18:43:21.953584+00:00": {
-        "key": "DET|Departed|8481521|2026-09-25T18:43:21.953584+00:00",
-        "team": "DET",
+      "NJD|Departed|8484177|2026-09-25T23:20:32.113819+00:00": {
+        "key": "NJD|Departed|8484177|2026-09-25T23:20:32.113819+00:00",
+        "team": "NJD",
         "direction": "Departed",
-        "name": "Ronnie Attard",
-        "detectedAt": "2026-09-25T18:43:21.953584+00:00"
+        "name": "Lenni Hameenaho",
+        "detectedAt": "2026-09-25T23:20:32.113819+00:00"
       },
-      "DET|Departed|8480326|2026-09-25T18:43:21.953584+00:00": {
-        "key": "DET|Departed|8480326|2026-09-25T18:43:21.953584+00:00",
-        "team": "DET",
+      "NJD|Departed|8483841|2026-09-25T23:20:32.113819+00:00": {
+        "key": "NJD|Departed|8483841|2026-09-25T23:20:32.113819+00:00",
+        "team": "NJD",
         "direction": "Departed",
-        "name": "Sheldon Dries",
-        "detectedAt": "2026-09-25T18:43:21.953584+00:00"
+        "name": "Xavier Parent",
+        "detectedAt": "2026-09-25T23:20:32.113819+00:00"
+      },
+      "NJD|Departed|8483439|2026-09-25T23:20:32.113819+00:00": {
+        "key": "NJD|Departed|8483439|2026-09-25T23:20:32.113819+00:00",
+        "team": "NJD",
+        "direction": "Departed",
+        "name": "Josh Filmon",
+        "detectedAt": "2026-09-25T23:20:32.113819+00:00"
+      },
+      "NJD|Departed|8483086|2026-09-25T23:20:32.113819+00:00": {
+        "key": "NJD|Departed|8483086|2026-09-25T23:20:32.113819+00:00",
+        "team": "NJD",
+        "direction": "Departed",
+        "name": "Jeremy Hanzel",
+        "detectedAt": "2026-09-25T23:20:32.113819+00:00"
+      },
+      "NJD|Departed|8482941|2026-09-25T23:20:32.113819+00:00": {
+        "key": "NJD|Departed|8482941|2026-09-25T23:20:32.113819+00:00",
+        "team": "NJD",
+        "direction": "Departed",
+        "name": "Shane Lachance",
+        "detectedAt": "2026-09-25T23:20:32.113819+00:00"
+      },
+      "NJD|Departed|8484834|2026-09-25T23:20:32.113819+00:00": {
+        "key": "NJD|Departed|8484834|2026-09-25T23:20:32.113819+00:00",
+        "team": "NJD",
+        "direction": "Departed",
+        "name": "Ben Steeves",
+        "detectedAt": "2026-09-25T23:20:32.113819+00:00"
+      },
+      "TOR|Departed|8479543|2026-09-25T23:20:32.113819+00:00": {
+        "key": "TOR|Departed|8479543|2026-09-25T23:20:32.113819+00:00",
+        "team": "TOR",
+        "direction": "Departed",
+        "name": "Michael Pezzetta",
+        "detectedAt": "2026-09-25T23:20:32.113819+00:00"
+      },
+      "TOR|Departed|8479968|2026-09-25T23:20:32.113819+00:00": {
+        "key": "TOR|Departed|8479968|2026-09-25T23:20:32.113819+00:00",
+        "team": "TOR",
+        "direction": "Departed",
+        "name": "Vinni Lettieri",
+        "detectedAt": "2026-09-25T23:20:32.113819+00:00"
+      },
+      "TOR|Departed|8481662|2026-09-25T23:20:32.113819+00:00": {
+        "key": "TOR|Departed|8481662|2026-09-25T23:20:32.113819+00:00",
+        "team": "TOR",
+        "direction": "Departed",
+        "name": "Henrik Rybinski",
+        "detectedAt": "2026-09-25T23:20:32.113819+00:00"
+      },
+      "TOR|Departed|8482153|2026-09-25T23:20:32.113819+00:00": {
+        "key": "TOR|Departed|8482153|2026-09-25T23:20:32.113819+00:00",
+        "team": "TOR",
+        "direction": "Departed",
+        "name": "Brendan Brisson",
+        "detectedAt": "2026-09-25T23:20:32.113819+00:00"
+      },
+      "TOR|Departed|8482525|2026-09-25T23:20:32.113819+00:00": {
+        "key": "TOR|Departed|8482525|2026-09-25T23:20:32.113819+00:00",
+        "team": "TOR",
+        "direction": "Departed",
+        "name": "Ryan Tverberg",
+        "detectedAt": "2026-09-25T23:20:32.113819+00:00"
+      },
+      "TOR|Departed|8478904|2026-09-25T23:20:32.113819+00:00": {
+        "key": "TOR|Departed|8478904|2026-09-25T23:20:32.113819+00:00",
+        "team": "TOR",
+        "direction": "Departed",
+        "name": "Steven Lorentz",
+        "detectedAt": "2026-09-25T23:20:32.113819+00:00"
+      },
+      "TOR|Departed|8483546|2026-09-25T23:20:32.113819+00:00": {
+        "key": "TOR|Departed|8483546|2026-09-25T23:20:32.113819+00:00",
+        "team": "TOR",
+        "direction": "Departed",
+        "name": "Marshall Rifai",
+        "detectedAt": "2026-09-25T23:20:32.113819+00:00"
+      },
+      "TOR|Departed|8479026|2026-09-25T23:20:32.113819+00:00": {
+        "key": "TOR|Departed|8479026|2026-09-25T23:20:32.113819+00:00",
+        "team": "TOR",
+        "direction": "Departed",
+        "name": "Philippe Myers",
+        "detectedAt": "2026-09-25T23:20:32.113819+00:00"
       }
     },
     "schedule": {
