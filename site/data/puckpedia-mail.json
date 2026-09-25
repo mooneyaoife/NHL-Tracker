@@ -1,7 +1,21 @@
 {
   "schema": 1,
-  "updatedAt": "2026-09-25T11:40:13.443Z",
+  "updatedAt": "2026-09-25T17:40:11.568Z",
   "items": [
+    {
+      "id": "3afa2a399dd210261c7f",
+      "title": "Pyotr Kochetkov Signs a 2-Year, $7.90M Contract with the Carolina Hurricanes",
+      "publishedAt": "2026-09-25T15:57:10.000Z",
+      "category": "Contract",
+      "url": "https://puckpedia.com/signing/10823?utm_source=email&utm_medium=email&utm_campaign=signing&utm_content=primary"
+    },
+    {
+      "id": "80912aa9aae10a6d9883",
+      "title": "Matt Grzelcyk Signs a 1-Year, $850K Contract with the Buffalo Sabres",
+      "publishedAt": "2026-09-25T14:35:12.000Z",
+      "category": "Contract",
+      "url": "https://puckpedia.com/signing/10822?utm_source=email&utm_medium=email&utm_campaign=signing&utm_content=primary"
+    },
     {
       "id": "7b52d5587bcac53a7cd4",
       "title": "Adam Fantilli Signs a 6-Year, $82.50M Contract with the Columbus Blue Jackets",
@@ -197,20 +211,6 @@
       "publishedAt": "2026-09-09T15:10:10.000Z",
       "category": "Contract",
       "url": "https://puckpedia.com/signing/10794?utm_source=email&utm_medium=email&utm_campaign=signing&utm_content=primary"
-    },
-    {
-      "id": "43e42bb597057c61c729",
-      "title": "Ilya Samsonov Signs a 1-Year, $850K Contract with the San Jose Sharks",
-      "publishedAt": "2026-09-08T20:53:10.000Z",
-      "category": "Contract",
-      "url": "https://puckpedia.com/signing/10793?utm_source=email&utm_medium=email&utm_campaign=signing&utm_content=primary"
-    },
-    {
-      "id": "16dc2dc6b9918aaaf9fa",
-      "title": "Pierre-Olivier Joseph Signs a 1-Year, $850K Contract with the Carolina Hurricanes",
-      "publishedAt": "2026-09-08T18:13:10.000Z",
-      "category": "Contract",
-      "url": "https://puckpedia.com/signing/10792?utm_source=email&utm_medium=email&utm_campaign=signing&utm_content=primary"
     }
   ]
 }
