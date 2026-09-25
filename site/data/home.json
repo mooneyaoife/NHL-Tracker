@@ -1,7 +1,7 @@
 {
   "schema": 3,
-  "sourceCommit": "ea784e0d47933f08e24165444fb375eb596debfa",
-  "dataGeneratedAt": "2026-09-25T07:57:32.656404+00:00",
+  "sourceCommit": "565064f3bfb62d11baf627a9986f27da444d6727",
+  "dataGeneratedAt": "2026-09-25T13:55:42.461036+00:00",
   "season": "20262027",
   "version": "5.74.0",
   "trackedTeams": [
@@ -333,8 +333,8 @@
   },
   "freshness": {
     "status": "fresh",
-    "checkedAt": "2026-09-25T07:57:32.656421+00:00",
-    "lastSuccessfulAt": "2026-09-25T07:57:32.656422+00:00",
+    "checkedAt": "2026-09-25T13:55:42.461050+00:00",
+    "lastSuccessfulAt": "2026-09-25T13:55:42.461053+00:00",
     "ageSeconds": 0,
     "failedTeams": [],
     "schedule": {
@@ -1609,8 +1609,8 @@
   "continuity": {
     "schema": 3,
     "season": "20262027",
-    "capturedAt": "2026-09-25T07:57:32.656404+00:00",
-    "updatedAt": "2026-09-25T07:57:32.656404+00:00",
+    "capturedAt": "2026-09-25T13:55:42.461036+00:00",
+    "updatedAt": "2026-09-25T13:55:42.461036+00:00",
     "finished": {},
     "upcoming": {
       "2026020001": {
@@ -2119,6 +2119,34 @@
       }
     },
     "roster": {
+      "STL|Departed|8484230|2026-09-25T13:55:42.456461+00:00": {
+        "key": "STL|Departed|8484230|2026-09-25T13:55:42.456461+00:00",
+        "team": "STL",
+        "direction": "Departed",
+        "name": "Otto Stenberg",
+        "detectedAt": "2026-09-25T13:55:42.456461+00:00"
+      },
+      "STL|Departed|8482121|2026-09-25T13:55:42.456461+00:00": {
+        "key": "STL|Departed|8482121|2026-09-25T13:55:42.456461+00:00",
+        "team": "STL",
+        "direction": "Departed",
+        "name": "Dylan Peterson",
+        "detectedAt": "2026-09-25T13:55:42.456461+00:00"
+      },
+      "STL|Departed|8484790|2026-09-25T13:55:42.456461+00:00": {
+        "key": "STL|Departed|8484790|2026-09-25T13:55:42.456461+00:00",
+        "team": "STL",
+        "direction": "Departed",
+        "name": "Adam Jiricek",
+        "detectedAt": "2026-09-25T13:55:42.456461+00:00"
+      },
+      "STL|Departed|8483463|2026-09-25T13:55:42.456461+00:00": {
+        "key": "STL|Departed|8483463|2026-09-25T13:55:42.456461+00:00",
+        "team": "STL",
+        "direction": "Departed",
+        "name": "Aleksanteri Kaskimaki",
+        "detectedAt": "2026-09-25T13:55:42.456461+00:00"
+      },
       "CAR|Departed|8485368|2026-09-24T21:36:07.392761+00:00": {
         "key": "CAR|Departed|8485368|2026-09-24T21:36:07.392761+00:00",
         "team": "CAR",
@@ -2425,34 +2453,6 @@
         "team": "MIN",
         "direction": "Departed",
         "name": "Rasmus Kumpulainen",
-        "detectedAt": "2026-09-24T17:18:53.483663+00:00"
-      },
-      "ANA|Departed|8484391|2026-09-24T17:18:53.483663+00:00": {
-        "key": "ANA|Departed|8484391|2026-09-24T17:18:53.483663+00:00",
-        "team": "ANA",
-        "direction": "Departed",
-        "name": "Damian Clara",
-        "detectedAt": "2026-09-24T17:18:53.483663+00:00"
-      },
-      "ANA|Departed|8484853|2026-09-24T17:18:53.483663+00:00": {
-        "key": "ANA|Departed|8484853|2026-09-24T17:18:53.483663+00:00",
-        "team": "ANA",
-        "direction": "Departed",
-        "name": "Herman Traff",
-        "detectedAt": "2026-09-24T17:18:53.483663+00:00"
-      },
-      "ANA|Departed|8484216|2026-09-24T17:18:53.483663+00:00": {
-        "key": "ANA|Departed|8484216|2026-09-24T17:18:53.483663+00:00",
-        "team": "ANA",
-        "direction": "Departed",
-        "name": "Coulson Pitre",
-        "detectedAt": "2026-09-24T17:18:53.483663+00:00"
-      },
-      "ANA|Departed|8484867|2026-09-24T17:18:53.483663+00:00": {
-        "key": "ANA|Departed|8484867|2026-09-24T17:18:53.483663+00:00",
-        "team": "ANA",
-        "direction": "Departed",
-        "name": "Ethan Procyszyn",
         "detectedAt": "2026-09-24T17:18:53.483663+00:00"
       }
     },
