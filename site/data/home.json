@@ -1,7 +1,7 @@
 {
   "schema": 3,
-  "sourceCommit": "442b1b34b527153596096df820ac9d909a3a75ba",
-  "dataGeneratedAt": "2026-09-26T11:33:38.401166+00:00",
+  "sourceCommit": "1a7bdf246c4b7249a78f8f23b3e99f9eafe9d7a6",
+  "dataGeneratedAt": "2026-09-26T16:30:42.586575+00:00",
   "season": "20262027",
   "version": "5.74.0",
   "trackedTeams": [
@@ -45,57 +45,288 @@
     "VAN": "Vancouver Canucks"
   },
   "daily": {
-    "currentDate": "2026-09-25",
-    "requestedDate": "2026-09-25",
+    "currentDate": "2026-09-26",
+    "requestedDate": "2026-09-26",
     "fallback": false,
     "games": [
       {
-        "id": 2026010049,
-        "date": "2026-09-25",
-        "slateDate": "2026-09-25",
+        "id": 2026010053,
+        "date": "2026-09-26",
+        "slateDate": "2026-09-26",
         "londonDate": "2026-09-26",
-        "startTimeUTC": "2026-09-25T23:00:00Z",
-        "state": "FINAL",
-        "status": "final-ot",
-        "statusLabel": "Final/OT",
+        "startTimeUTC": "2026-09-26T19:00:00Z",
+        "state": "FUT",
+        "status": "scheduled",
+        "statusLabel": "Scheduled",
         "scheduleState": "OK",
-        "gameOutcome": {
-          "lastPeriodType": "OT"
-        },
+        "gameOutcome": {},
         "type": 1,
-        "venue": "Capital One Arena",
-        "home": "WSH",
-        "away": "BOS",
-        "homeScore": 3,
-        "awayScore": 2,
-        "period": 4,
+        "venue": "Bridgestone Arena",
+        "home": "NSH",
+        "away": "CAR",
+        "homeScore": null,
+        "awayScore": null,
+        "period": 1,
         "broadcasts": [
-          "SN1",
-          "NESNplus",
+          "SCRIPPS"
+        ],
+        "schedule": {}
+      },
+      {
+        "id": 2026010055,
+        "date": "2026-09-26",
+        "slateDate": "2026-09-26",
+        "londonDate": "2026-09-26",
+        "startTimeUTC": "2026-09-26T19:00:00Z",
+        "state": "FUT",
+        "status": "scheduled",
+        "statusLabel": "Scheduled",
+        "scheduleState": "OK",
+        "gameOutcome": {},
+        "type": 1,
+        "venue": "KeyBank Center",
+        "home": "BUF",
+        "away": "PIT",
+        "homeScore": null,
+        "awayScore": null,
+        "period": 1,
+        "broadcasts": [
+          "NHLN",
+          "SN-PIT+",
+          "MSG-B"
+        ],
+        "schedule": {}
+      },
+      {
+        "id": 2026010052,
+        "date": "2026-09-26",
+        "slateDate": "2026-09-26",
+        "londonDate": "2026-09-26",
+        "startTimeUTC": "2026-09-26T20:00:00Z",
+        "state": "FUT",
+        "status": "scheduled",
+        "statusLabel": "Scheduled",
+        "scheduleState": "OK",
+        "gameOutcome": {},
+        "type": 1,
+        "venue": "Crypto.com Arena",
+        "home": "LAK",
+        "away": "ANA",
+        "homeScore": null,
+        "awayScore": null,
+        "period": 1,
+        "broadcasts": [
+          "ABTV ",
+          "KCOP-13"
+        ],
+        "schedule": {}
+      },
+      {
+        "id": 2026010054,
+        "date": "2026-09-26",
+        "slateDate": "2026-09-26",
+        "londonDate": "2026-09-26",
+        "startTimeUTC": "2026-09-26T21:00:00Z",
+        "state": "FUT",
+        "status": "scheduled",
+        "statusLabel": "Scheduled",
+        "scheduleState": "OK",
+        "gameOutcome": {},
+        "type": 1,
+        "venue": "Delta Center",
+        "home": "UTA",
+        "away": "COL",
+        "homeScore": null,
+        "awayScore": null,
+        "period": 1,
+        "broadcasts": [
+          "Utah16"
+        ],
+        "schedule": {}
+      },
+      {
+        "id": 2026010057,
+        "date": "2026-09-26",
+        "slateDate": "2026-09-26",
+        "londonDate": "2026-09-26",
+        "startTimeUTC": "2026-09-26T21:00:00Z",
+        "state": "FUT",
+        "status": "scheduled",
+        "statusLabel": "Scheduled",
+        "scheduleState": "OK",
+        "gameOutcome": {},
+        "type": 1,
+        "venue": "Xfinity Mobile Arena",
+        "home": "PHI",
+        "away": "WSH",
+        "homeScore": null,
+        "awayScore": null,
+        "period": 1,
+        "broadcasts": [
+          "NBCSP",
           "MNMT"
         ],
         "schedule": {}
       },
       {
-        "id": 2026010051,
-        "date": "2026-09-25",
-        "slateDate": "2026-09-25",
+        "id": 2026010059,
+        "date": "2026-09-26",
+        "slateDate": "2026-09-26",
         "londonDate": "2026-09-26",
-        "startTimeUTC": "2026-09-25T23:30:00Z",
-        "state": "FINAL",
-        "status": "final",
-        "statusLabel": "Final",
+        "startTimeUTC": "2026-09-26T22:00:00Z",
+        "state": "FUT",
+        "status": "scheduled",
+        "statusLabel": "Scheduled",
         "scheduleState": "OK",
-        "gameOutcome": {
-          "lastPeriodType": "REG"
-        },
+        "gameOutcome": {},
+        "type": 1,
+        "venue": "Amerant Bank Arena",
+        "home": "FLA",
+        "away": "TBL",
+        "homeScore": null,
+        "awayScore": null,
+        "period": 1,
+        "broadcasts": [
+          "The Spot",
+          "SCRIPPS"
+        ],
+        "schedule": {}
+      },
+      {
+        "id": 2026010056,
+        "date": "2026-09-26",
+        "slateDate": "2026-09-26",
+        "londonDate": "2026-09-27",
+        "startTimeUTC": "2026-09-26T23:00:00Z",
+        "state": "FUT",
+        "status": "scheduled",
+        "statusLabel": "Scheduled",
+        "scheduleState": "OK",
+        "gameOutcome": {},
+        "type": 1,
+        "venue": "Rogers Arena",
+        "home": "VAN",
+        "away": "SEA",
+        "homeScore": null,
+        "awayScore": null,
+        "period": 1,
+        "broadcasts": [
+          "SN",
+          "KHN/Prime",
+          "KONG"
+        ],
+        "schedule": {}
+      },
+      {
+        "id": 2026010058,
+        "date": "2026-09-26",
+        "slateDate": "2026-09-26",
+        "londonDate": "2026-09-27",
+        "startTimeUTC": "2026-09-26T23:00:00Z",
+        "state": "FUT",
+        "status": "scheduled",
+        "statusLabel": "Scheduled",
+        "scheduleState": "OK",
+        "gameOutcome": {},
+        "type": 1,
+        "venue": "United Center",
+        "home": "CHI",
+        "away": "STL",
+        "homeScore": null,
+        "awayScore": null,
+        "period": 1,
+        "broadcasts": [
+          "NHLN",
+          "CHSN+"
+        ],
+        "schedule": {}
+      },
+      {
+        "id": 2026010061,
+        "date": "2026-09-26",
+        "slateDate": "2026-09-26",
+        "londonDate": "2026-09-27",
+        "startTimeUTC": "2026-09-26T23:00:00Z",
+        "state": "FUT",
+        "status": "scheduled",
+        "statusLabel": "Scheduled",
+        "scheduleState": "OK",
+        "gameOutcome": {},
+        "type": 1,
+        "venue": "Little Caesars Arena",
+        "home": "DET",
+        "away": "CBJ",
+        "homeScore": null,
+        "awayScore": null,
+        "period": 1,
+        "broadcasts": [
+          "DSN"
+        ],
+        "schedule": {}
+      },
+      {
+        "id": 2026010064,
+        "date": "2026-09-26",
+        "slateDate": "2026-09-26",
+        "londonDate": "2026-09-27",
+        "startTimeUTC": "2026-09-26T23:00:00Z",
+        "state": "FUT",
+        "status": "scheduled",
+        "statusLabel": "Scheduled",
+        "scheduleState": "OK",
+        "gameOutcome": {},
+        "type": 1,
+        "venue": "Canadian Tire Centre",
+        "home": "OTT",
+        "away": "MTL",
+        "homeScore": null,
+        "awayScore": null,
+        "period": 1,
+        "broadcasts": [],
+        "schedule": {}
+      },
+      {
+        "id": 2026010065,
+        "date": "2026-09-26",
+        "slateDate": "2026-09-26",
+        "londonDate": "2026-09-27",
+        "startTimeUTC": "2026-09-26T23:00:00Z",
+        "state": "FUT",
+        "status": "scheduled",
+        "statusLabel": "Scheduled",
+        "scheduleState": "OK",
+        "gameOutcome": {},
+        "type": 1,
+        "venue": "Centre Bell",
+        "home": "MTL",
+        "away": "OTT",
+        "homeScore": null,
+        "awayScore": null,
+        "period": 1,
+        "broadcasts": [
+          "TSN5",
+          "RDS"
+        ],
+        "schedule": {}
+      },
+      {
+        "id": 2026010062,
+        "date": "2026-09-26",
+        "slateDate": "2026-09-26",
+        "londonDate": "2026-09-27",
+        "startTimeUTC": "2026-09-26T23:30:00Z",
+        "state": "FUT",
+        "status": "scheduled",
+        "statusLabel": "Scheduled",
+        "scheduleState": "OK",
+        "gameOutcome": {},
         "type": 1,
         "venue": "UBS Arena",
         "home": "NYI",
-        "away": "NYR",
-        "homeScore": 1,
-        "awayScore": 6,
-        "period": 3,
+        "away": "NJD",
+        "homeScore": null,
+        "awayScore": null,
+        "period": 1,
         "broadcasts": [
           "MSGSN",
           "MSG"
@@ -103,61 +334,59 @@
         "schedule": {}
       },
       {
-        "id": 2026010050,
-        "date": "2026-09-25",
-        "slateDate": "2026-09-25",
-        "londonDate": "2026-09-26",
-        "startTimeUTC": "2026-09-26T00:00:00Z",
-        "state": "FINAL",
-        "status": "final",
-        "statusLabel": "Final",
+        "id": 2026010060,
+        "date": "2026-09-26",
+        "slateDate": "2026-09-26",
+        "londonDate": "2026-09-27",
+        "startTimeUTC": "2026-09-27T01:00:00Z",
+        "state": "FUT",
+        "status": "scheduled",
+        "statusLabel": "Scheduled",
         "scheduleState": "OK",
-        "gameOutcome": {
-          "lastPeriodType": "REG"
-        },
+        "gameOutcome": {},
         "type": 1,
-        "venue": "Grand Casino Arena",
-        "home": "MIN",
-        "away": "DAL",
-        "homeScore": 1,
-        "awayScore": 2,
-        "period": 3,
+        "venue": "Rogers Place",
+        "home": "EDM",
+        "away": "CGY",
+        "homeScore": null,
+        "awayScore": null,
+        "period": 1,
         "broadcasts": [
-          "TNT",
-          "truTV",
-          "HBO MAX"
+          "Oilers+"
         ],
         "schedule": {}
       },
       {
-        "id": 2026010048,
-        "date": "2026-09-25",
-        "slateDate": "2026-09-25",
-        "londonDate": "2026-09-26",
-        "startTimeUTC": "2026-09-26T00:30:00Z",
-        "state": "FINAL",
-        "status": "final",
-        "statusLabel": "Final",
+        "id": 2026010063,
+        "date": "2026-09-26",
+        "slateDate": "2026-09-26",
+        "londonDate": "2026-09-27",
+        "startTimeUTC": "2026-09-27T02:00:00Z",
+        "state": "FUT",
+        "status": "scheduled",
+        "statusLabel": "Scheduled",
         "scheduleState": "OK",
-        "gameOutcome": {
-          "lastPeriodType": "REG"
-        },
+        "gameOutcome": {},
         "type": 1,
-        "venue": "Ball Arena",
-        "home": "COL",
-        "away": "WPG",
-        "homeScore": 5,
-        "awayScore": 2,
-        "period": 3,
-        "broadcasts": [],
+        "venue": "T-Mobile Arena",
+        "home": "VGK",
+        "away": "SJS",
+        "homeScore": null,
+        "awayScore": null,
+        "period": 1,
+        "broadcasts": [
+          "NHLN",
+          "SN",
+          "SCRIPPS"
+        ],
         "schedule": {}
       }
     ]
   },
   "freshness": {
     "status": "fresh",
-    "checkedAt": "2026-09-26T11:33:38.401178+00:00",
-    "lastSuccessfulAt": "2026-09-26T11:33:38.401180+00:00",
+    "checkedAt": "2026-09-26T16:30:42.586588+00:00",
+    "lastSuccessfulAt": "2026-09-26T16:30:42.586590+00:00",
     "ageSeconds": 0,
     "failedTeams": [],
     "schedule": {
@@ -1432,8 +1661,8 @@
   "continuity": {
     "schema": 3,
     "season": "20262027",
-    "capturedAt": "2026-09-26T11:33:38.401166+00:00",
-    "updatedAt": "2026-09-26T11:33:38.401166+00:00",
+    "capturedAt": "2026-09-26T16:30:42.586575+00:00",
+    "updatedAt": "2026-09-26T16:30:42.586575+00:00",
     "finished": {},
     "upcoming": {
       "2026020001": {
@@ -1942,6 +2171,132 @@
       }
     },
     "roster": {
+      "MIN|Added|8482781|2026-09-26T16:30:42.582854+00:00": {
+        "key": "MIN|Added|8482781|2026-09-26T16:30:42.582854+00:00",
+        "team": "MIN",
+        "direction": "Added",
+        "name": "Carson Lambos",
+        "detectedAt": "2026-09-26T16:30:42.582854+00:00"
+      },
+      "MIN|Departed|8486275|2026-09-26T16:30:42.582854+00:00": {
+        "key": "MIN|Departed|8486275|2026-09-26T16:30:42.582854+00:00",
+        "team": "MIN",
+        "direction": "Departed",
+        "name": "Filip Ruzicka",
+        "detectedAt": "2026-09-26T16:30:42.582854+00:00"
+      },
+      "MIN|Departed|8483918|2026-09-26T16:30:42.582854+00:00": {
+        "key": "MIN|Departed|8483918|2026-09-26T16:30:42.582854+00:00",
+        "team": "MIN",
+        "direction": "Departed",
+        "name": "Riley Mercer",
+        "detectedAt": "2026-09-26T16:30:42.582854+00:00"
+      },
+      "COL|Added|8485105|2026-09-26T16:30:42.582854+00:00": {
+        "key": "COL|Added|8485105|2026-09-26T16:30:42.582854+00:00",
+        "team": "COL",
+        "direction": "Added",
+        "name": "Nikita Prishchepov",
+        "detectedAt": "2026-09-26T16:30:42.582854+00:00"
+      },
+      "EDM|Departed|8477384|2026-09-26T16:30:42.582854+00:00": {
+        "key": "EDM|Departed|8477384|2026-09-26T16:30:42.582854+00:00",
+        "team": "EDM",
+        "direction": "Departed",
+        "name": "Joshua Brown",
+        "detectedAt": "2026-09-26T16:30:42.582854+00:00"
+      },
+      "EDM|Departed|8482631|2026-09-26T16:30:42.582854+00:00": {
+        "key": "EDM|Departed|8482631|2026-09-26T16:30:42.582854+00:00",
+        "team": "EDM",
+        "direction": "Departed",
+        "name": "Eduards Tralmaks",
+        "detectedAt": "2026-09-26T16:30:42.582854+00:00"
+      },
+      "EDM|Departed|8483083|2026-09-26T16:30:42.582854+00:00": {
+        "key": "EDM|Departed|8483083|2026-09-26T16:30:42.582854+00:00",
+        "team": "EDM",
+        "direction": "Departed",
+        "name": "Connor Ungar",
+        "detectedAt": "2026-09-26T16:30:42.582854+00:00"
+      },
+      "EDM|Departed|8479388|2026-09-26T16:30:42.582854+00:00": {
+        "key": "EDM|Departed|8479388|2026-09-26T16:30:42.582854+00:00",
+        "team": "EDM",
+        "direction": "Departed",
+        "name": "Riley Stillman",
+        "detectedAt": "2026-09-26T16:30:42.582854+00:00"
+      },
+      "EDM|Departed|8483100|2026-09-26T16:30:42.582854+00:00": {
+        "key": "EDM|Departed|8483100|2026-09-26T16:30:42.582854+00:00",
+        "team": "EDM",
+        "direction": "Departed",
+        "name": "James Stefan",
+        "detectedAt": "2026-09-26T16:30:42.582854+00:00"
+      },
+      "EDM|Departed|8485509|2026-09-26T16:30:42.582854+00:00": {
+        "key": "EDM|Departed|8485509|2026-09-26T16:30:42.582854+00:00",
+        "team": "EDM",
+        "direction": "Departed",
+        "name": "Atro Leppanen",
+        "detectedAt": "2026-09-26T16:30:42.582854+00:00"
+      },
+      "NYI|Departed|8482154|2026-09-26T16:30:42.582854+00:00": {
+        "key": "NYI|Departed|8482154|2026-09-26T16:30:42.582854+00:00",
+        "team": "NYI",
+        "direction": "Departed",
+        "name": "Alex Jefferies",
+        "detectedAt": "2026-09-26T16:30:42.582854+00:00"
+      },
+      "NYI|Departed|8486136|2026-09-26T16:30:42.582854+00:00": {
+        "key": "NYI|Departed|8486136|2026-09-26T16:30:42.582854+00:00",
+        "team": "NYI",
+        "direction": "Departed",
+        "name": "Joshua Kotai",
+        "detectedAt": "2026-09-26T16:30:42.582854+00:00"
+      },
+      "NYI|Departed|8485448|2026-09-26T16:30:42.582854+00:00": {
+        "key": "NYI|Departed|8485448|2026-09-26T16:30:42.582854+00:00",
+        "team": "NYI",
+        "direction": "Departed",
+        "name": "Daniil Prokhorov",
+        "detectedAt": "2026-09-26T16:30:42.582854+00:00"
+      },
+      "NYI|Departed|8481569|2026-09-26T16:30:42.582854+00:00": {
+        "key": "NYI|Departed|8481569|2026-09-26T16:30:42.582854+00:00",
+        "team": "NYI",
+        "direction": "Departed",
+        "name": "Marshall Warren",
+        "detectedAt": "2026-09-26T16:30:42.582854+00:00"
+      },
+      "LAK|Added|8482922|2026-09-26T16:30:42.582854+00:00": {
+        "key": "LAK|Added|8482922|2026-09-26T16:30:42.582854+00:00",
+        "team": "LAK",
+        "direction": "Added",
+        "name": "Kirill Kirsanov",
+        "detectedAt": "2026-09-26T16:30:42.582854+00:00"
+      },
+      "LAK|Departed|8483756|2026-09-26T16:30:42.582854+00:00": {
+        "key": "LAK|Departed|8483756|2026-09-26T16:30:42.582854+00:00",
+        "team": "LAK",
+        "direction": "Departed",
+        "name": "Jared Wright",
+        "detectedAt": "2026-09-26T16:30:42.582854+00:00"
+      },
+      "LAK|Departed|8483675|2026-09-26T16:30:42.582854+00:00": {
+        "key": "LAK|Departed|8483675|2026-09-26T16:30:42.582854+00:00",
+        "team": "LAK",
+        "direction": "Departed",
+        "name": "Kenny Connors",
+        "detectedAt": "2026-09-26T16:30:42.582854+00:00"
+      },
+      "CGY|Added|8479423|2026-09-26T16:30:42.582854+00:00": {
+        "key": "CGY|Added|8479423|2026-09-26T16:30:42.582854+00:00",
+        "team": "CGY",
+        "direction": "Added",
+        "name": "Alex Nylander",
+        "detectedAt": "2026-09-26T16:30:42.582854+00:00"
+      },
       "CAR|Departed|8482187|2026-09-25T23:20:32.113819+00:00": {
         "key": "CAR|Departed|8482187|2026-09-25T23:20:32.113819+00:00",
         "team": "CAR",
@@ -2150,132 +2505,6 @@
         "team": "NJD",
         "direction": "Departed",
         "name": "Matyas Melovsky",
-        "detectedAt": "2026-09-25T23:20:32.113819+00:00"
-      },
-      "NJD|Departed|8483085|2026-09-25T23:20:32.113819+00:00": {
-        "key": "NJD|Departed|8483085|2026-09-25T23:20:32.113819+00:00",
-        "team": "NJD",
-        "direction": "Departed",
-        "name": "Mikael Diotte",
-        "detectedAt": "2026-09-25T23:20:32.113819+00:00"
-      },
-      "NJD|Departed|8482194|2026-09-25T23:20:32.113819+00:00": {
-        "key": "NJD|Departed|8482194|2026-09-25T23:20:32.113819+00:00",
-        "team": "NJD",
-        "direction": "Departed",
-        "name": "Ethan Edwards",
-        "detectedAt": "2026-09-25T23:20:32.113819+00:00"
-      },
-      "NJD|Departed|8482867|2026-09-25T23:20:32.113819+00:00": {
-        "key": "NJD|Departed|8482867|2026-09-25T23:20:32.113819+00:00",
-        "team": "NJD",
-        "direction": "Departed",
-        "name": "Jakub Malek",
-        "detectedAt": "2026-09-25T23:20:32.113819+00:00"
-      },
-      "NJD|Departed|8484987|2026-09-25T23:20:32.113819+00:00": {
-        "key": "NJD|Departed|8484987|2026-09-25T23:20:32.113819+00:00",
-        "team": "NJD",
-        "direction": "Departed",
-        "name": "Anton Silaev",
-        "detectedAt": "2026-09-25T23:20:32.113819+00:00"
-      },
-      "NJD|Departed|8484177|2026-09-25T23:20:32.113819+00:00": {
-        "key": "NJD|Departed|8484177|2026-09-25T23:20:32.113819+00:00",
-        "team": "NJD",
-        "direction": "Departed",
-        "name": "Lenni Hameenaho",
-        "detectedAt": "2026-09-25T23:20:32.113819+00:00"
-      },
-      "NJD|Departed|8483841|2026-09-25T23:20:32.113819+00:00": {
-        "key": "NJD|Departed|8483841|2026-09-25T23:20:32.113819+00:00",
-        "team": "NJD",
-        "direction": "Departed",
-        "name": "Xavier Parent",
-        "detectedAt": "2026-09-25T23:20:32.113819+00:00"
-      },
-      "NJD|Departed|8483439|2026-09-25T23:20:32.113819+00:00": {
-        "key": "NJD|Departed|8483439|2026-09-25T23:20:32.113819+00:00",
-        "team": "NJD",
-        "direction": "Departed",
-        "name": "Josh Filmon",
-        "detectedAt": "2026-09-25T23:20:32.113819+00:00"
-      },
-      "NJD|Departed|8483086|2026-09-25T23:20:32.113819+00:00": {
-        "key": "NJD|Departed|8483086|2026-09-25T23:20:32.113819+00:00",
-        "team": "NJD",
-        "direction": "Departed",
-        "name": "Jeremy Hanzel",
-        "detectedAt": "2026-09-25T23:20:32.113819+00:00"
-      },
-      "NJD|Departed|8482941|2026-09-25T23:20:32.113819+00:00": {
-        "key": "NJD|Departed|8482941|2026-09-25T23:20:32.113819+00:00",
-        "team": "NJD",
-        "direction": "Departed",
-        "name": "Shane Lachance",
-        "detectedAt": "2026-09-25T23:20:32.113819+00:00"
-      },
-      "NJD|Departed|8484834|2026-09-25T23:20:32.113819+00:00": {
-        "key": "NJD|Departed|8484834|2026-09-25T23:20:32.113819+00:00",
-        "team": "NJD",
-        "direction": "Departed",
-        "name": "Ben Steeves",
-        "detectedAt": "2026-09-25T23:20:32.113819+00:00"
-      },
-      "TOR|Departed|8479543|2026-09-25T23:20:32.113819+00:00": {
-        "key": "TOR|Departed|8479543|2026-09-25T23:20:32.113819+00:00",
-        "team": "TOR",
-        "direction": "Departed",
-        "name": "Michael Pezzetta",
-        "detectedAt": "2026-09-25T23:20:32.113819+00:00"
-      },
-      "TOR|Departed|8479968|2026-09-25T23:20:32.113819+00:00": {
-        "key": "TOR|Departed|8479968|2026-09-25T23:20:32.113819+00:00",
-        "team": "TOR",
-        "direction": "Departed",
-        "name": "Vinni Lettieri",
-        "detectedAt": "2026-09-25T23:20:32.113819+00:00"
-      },
-      "TOR|Departed|8481662|2026-09-25T23:20:32.113819+00:00": {
-        "key": "TOR|Departed|8481662|2026-09-25T23:20:32.113819+00:00",
-        "team": "TOR",
-        "direction": "Departed",
-        "name": "Henrik Rybinski",
-        "detectedAt": "2026-09-25T23:20:32.113819+00:00"
-      },
-      "TOR|Departed|8482153|2026-09-25T23:20:32.113819+00:00": {
-        "key": "TOR|Departed|8482153|2026-09-25T23:20:32.113819+00:00",
-        "team": "TOR",
-        "direction": "Departed",
-        "name": "Brendan Brisson",
-        "detectedAt": "2026-09-25T23:20:32.113819+00:00"
-      },
-      "TOR|Departed|8482525|2026-09-25T23:20:32.113819+00:00": {
-        "key": "TOR|Departed|8482525|2026-09-25T23:20:32.113819+00:00",
-        "team": "TOR",
-        "direction": "Departed",
-        "name": "Ryan Tverberg",
-        "detectedAt": "2026-09-25T23:20:32.113819+00:00"
-      },
-      "TOR|Departed|8478904|2026-09-25T23:20:32.113819+00:00": {
-        "key": "TOR|Departed|8478904|2026-09-25T23:20:32.113819+00:00",
-        "team": "TOR",
-        "direction": "Departed",
-        "name": "Steven Lorentz",
-        "detectedAt": "2026-09-25T23:20:32.113819+00:00"
-      },
-      "TOR|Departed|8483546|2026-09-25T23:20:32.113819+00:00": {
-        "key": "TOR|Departed|8483546|2026-09-25T23:20:32.113819+00:00",
-        "team": "TOR",
-        "direction": "Departed",
-        "name": "Marshall Rifai",
-        "detectedAt": "2026-09-25T23:20:32.113819+00:00"
-      },
-      "TOR|Departed|8479026|2026-09-25T23:20:32.113819+00:00": {
-        "key": "TOR|Departed|8479026|2026-09-25T23:20:32.113819+00:00",
-        "team": "TOR",
-        "direction": "Departed",
-        "name": "Philippe Myers",
         "detectedAt": "2026-09-25T23:20:32.113819+00:00"
       }
     },
