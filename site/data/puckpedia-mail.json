@@ -1,7 +1,21 @@
 {
   "schema": 1,
-  "updatedAt": "2026-09-27T11:40:12.078Z",
+  "updatedAt": "2026-09-27T17:40:12.520Z",
   "items": [
+    {
+      "id": "611250b6dda75f7a57aa",
+      "title": "Nick Blankenburg Signs a 1-Year, $1.40M Contract with the Toronto Maple Leafs",
+      "publishedAt": "2026-09-27T17:33:10.000Z",
+      "category": "Contract",
+      "url": "https://puckpedia.com/signing/10826?utm_source=email&utm_medium=email&utm_campaign=signing&utm_content=primary"
+    },
+    {
+      "id": "ec4e806e7dce785c077c",
+      "title": "Logan Stanley Signs a 1-Year, $1.50M Contract with the New York Islanders",
+      "publishedAt": "2026-09-27T13:43:12.000Z",
+      "category": "Contract",
+      "url": "https://puckpedia.com/signing/10825?utm_source=email&utm_medium=email&utm_campaign=signing&utm_content=primary"
+    },
     {
       "id": "0798cc8b440960e4bdbb",
       "title": "The Tampa Bay Lightning trade Jonas Johansson to the Ottawa Senators for future considerations",
@@ -197,20 +211,6 @@
       "publishedAt": "2026-09-10T20:26:10.000Z",
       "category": "Contract",
       "url": "https://puckpedia.com/signing/10798?utm_source=email&utm_medium=email&utm_campaign=signing&utm_content=primary"
-    },
-    {
-      "id": "18c613575ed28f43554f",
-      "title": "Justin Robidas Signs a 1-Year, $850K Contract with the Carolina Hurricanes",
-      "publishedAt": "2026-09-09T15:22:09.000Z",
-      "category": "Contract",
-      "url": "https://puckpedia.com/signing/10797?utm_source=email&utm_medium=email&utm_campaign=signing&utm_content=primary"
-    },
-    {
-      "id": "416f9096334329a4a472",
-      "title": "Skyler Brind'Amour Signs a 1-Year, $850K Contract with the Carolina Hurricanes",
-      "publishedAt": "2026-09-09T15:19:10.000Z",
-      "category": "Contract",
-      "url": "https://puckpedia.com/signing/10796?utm_source=email&utm_medium=email&utm_campaign=signing&utm_content=primary"
     }
   ]
 }
