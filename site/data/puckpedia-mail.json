@@ -1,7 +1,14 @@
 {
   "schema": 1,
-  "updatedAt": "2026-09-27T17:40:12.520Z",
+  "updatedAt": "2026-09-27T23:40:13.898Z",
   "items": [
+    {
+      "id": "f0a0cfe4538991c4c0a9",
+      "title": "Nathan Bastian Signs a 1-Year, $850K Contract with the Florida Panthers",
+      "publishedAt": "2026-09-27T18:21:09.000Z",
+      "category": "Contract",
+      "url": "https://puckpedia.com/signing/10827?utm_source=email&utm_medium=email&utm_campaign=signing&utm_content=primary"
+    },
     {
       "id": "611250b6dda75f7a57aa",
       "title": "Nick Blankenburg Signs a 1-Year, $1.40M Contract with the Toronto Maple Leafs",
@@ -204,13 +211,6 @@
       "publishedAt": "2026-09-10T21:07:10.000Z",
       "category": "Contract",
       "url": "https://puckpedia.com/signing/10799?utm_source=email&utm_medium=email&utm_campaign=signing&utm_content=primary"
-    },
-    {
-      "id": "584c4375c3dc0cb17cf6",
-      "title": "Mike Reilly Signs a 1-Year, $850K Contract with the Carolina Hurricanes",
-      "publishedAt": "2026-09-10T20:26:10.000Z",
-      "category": "Contract",
-      "url": "https://puckpedia.com/signing/10798?utm_source=email&utm_medium=email&utm_campaign=signing&utm_content=primary"
     }
   ]
 }
