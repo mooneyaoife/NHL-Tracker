@@ -1,7 +1,7 @@
 {
   "schema": 3,
-  "sourceCommit": "3f52e6fa981da6f43034436cc3636b18614c2cf8",
-  "dataGeneratedAt": "2026-09-27T18:29:47.425787+00:00",
+  "sourceCommit": "ffd676ac2156f40c324756df35d8d92a44f2f860",
+  "dataGeneratedAt": "2026-09-27T23:07:45.076254+00:00",
   "season": "20262027",
   "version": "5.74.0",
   "trackedTeams": [
@@ -395,8 +395,8 @@
   },
   "freshness": {
     "status": "fresh",
-    "checkedAt": "2026-09-27T18:29:47.425797+00:00",
-    "lastSuccessfulAt": "2026-09-27T18:29:47.425799+00:00",
+    "checkedAt": "2026-09-27T23:07:45.076271+00:00",
+    "lastSuccessfulAt": "2026-09-27T23:07:45.076273+00:00",
     "ageSeconds": 0,
     "failedTeams": [],
     "schedule": {
@@ -1671,8 +1671,8 @@
   "continuity": {
     "schema": 3,
     "season": "20262027",
-    "capturedAt": "2026-09-27T18:29:47.425787+00:00",
-    "updatedAt": "2026-09-27T18:29:47.425787+00:00",
+    "capturedAt": "2026-09-27T23:07:45.076254+00:00",
+    "updatedAt": "2026-09-27T23:07:45.076254+00:00",
     "finished": {},
     "upcoming": {
       "2026020001": {
@@ -2181,6 +2181,230 @@
       }
     },
     "roster": {
+      "BOS|Departed|8482117|2026-09-27T23:07:45.071540+00:00": {
+        "key": "BOS|Departed|8482117|2026-09-27T23:07:45.071540+00:00",
+        "team": "BOS",
+        "direction": "Departed",
+        "name": "Lukas Reichel",
+        "detectedAt": "2026-09-27T23:07:45.071540+00:00"
+      },
+      "BOS|Departed|8482634|2026-09-27T23:07:45.071540+00:00": {
+        "key": "BOS|Departed|8482634|2026-09-27T23:07:45.071540+00:00",
+        "team": "BOS",
+        "direction": "Departed",
+        "name": "Alex Steeves",
+        "detectedAt": "2026-09-27T23:07:45.071540+00:00"
+      },
+      "BOS|Departed|8483505|2026-09-27T23:07:45.071540+00:00": {
+        "key": "BOS|Departed|8483505|2026-09-27T23:07:45.071540+00:00",
+        "team": "BOS",
+        "direction": "Departed",
+        "name": "Matthew Poitras",
+        "detectedAt": "2026-09-27T23:07:45.071540+00:00"
+      },
+      "MTL|Departed|8482687|2026-09-27T23:07:45.071540+00:00": {
+        "key": "MTL|Departed|8482687|2026-09-27T23:07:45.071540+00:00",
+        "team": "MTL",
+        "direction": "Departed",
+        "name": "Luke Mittelstadt",
+        "detectedAt": "2026-09-27T23:07:45.071540+00:00"
+      },
+      "MTL|Departed|8484170|2026-09-27T23:07:45.071540+00:00": {
+        "key": "MTL|Departed|8484170|2026-09-27T23:07:45.071540+00:00",
+        "team": "MTL",
+        "direction": "Departed",
+        "name": "Jacob Fowler",
+        "detectedAt": "2026-09-27T23:07:45.071540+00:00"
+      },
+      "MTL|Departed|8483488|2026-09-27T23:07:45.071540+00:00": {
+        "key": "MTL|Departed|8483488|2026-09-27T23:07:45.071540+00:00",
+        "team": "MTL",
+        "direction": "Departed",
+        "name": "Filip Mesar",
+        "detectedAt": "2026-09-27T23:07:45.071540+00:00"
+      },
+      "MTL|Departed|8483728|2026-09-27T23:07:45.071540+00:00": {
+        "key": "MTL|Departed|8483728|2026-09-27T23:07:45.071540+00:00",
+        "team": "MTL",
+        "direction": "Departed",
+        "name": "Jared Davidson",
+        "detectedAt": "2026-09-27T23:07:45.071540+00:00"
+      },
+      "MTL|Departed|8483424|2026-09-27T23:07:45.071540+00:00": {
+        "key": "MTL|Departed|8483424|2026-09-27T23:07:45.071540+00:00",
+        "team": "MTL",
+        "direction": "Departed",
+        "name": "Owen Beck",
+        "detectedAt": "2026-09-27T23:07:45.071540+00:00"
+      },
+      "MTL|Departed|8484220|2026-09-27T23:07:45.071540+00:00": {
+        "key": "MTL|Departed|8484220|2026-09-27T23:07:45.071540+00:00",
+        "team": "MTL",
+        "direction": "Departed",
+        "name": "David Reinbacher",
+        "detectedAt": "2026-09-27T23:07:45.071540+00:00"
+      },
+      "MTL|Departed|8484533|2026-09-27T23:07:45.071540+00:00": {
+        "key": "MTL|Departed|8484533|2026-09-27T23:07:45.071540+00:00",
+        "team": "MTL",
+        "direction": "Departed",
+        "name": "Tyler Thorpe",
+        "detectedAt": "2026-09-27T23:07:45.071540+00:00"
+      },
+      "MTL|Departed|8485218|2026-09-27T23:07:45.071540+00:00": {
+        "key": "MTL|Departed|8485218|2026-09-27T23:07:45.071540+00:00",
+        "team": "MTL",
+        "direction": "Departed",
+        "name": "Bryce Pickford",
+        "detectedAt": "2026-09-27T23:07:45.071540+00:00"
+      },
+      "MTL|Departed|8482087|2026-09-27T23:07:45.071540+00:00": {
+        "key": "MTL|Departed|8482087|2026-09-27T23:07:45.071540+00:00",
+        "team": "MTL",
+        "direction": "Departed",
+        "name": "Kaiden Guhle",
+        "detectedAt": "2026-09-27T23:07:45.071540+00:00"
+      },
+      "MTL|Departed|8483549|2026-09-27T23:07:45.071540+00:00": {
+        "key": "MTL|Departed|8483549|2026-09-27T23:07:45.071540+00:00",
+        "team": "MTL",
+        "direction": "Departed",
+        "name": "Lucas Condotta",
+        "detectedAt": "2026-09-27T23:07:45.071540+00:00"
+      },
+      "MTL|Departed|8485008|2026-09-27T23:07:45.071540+00:00": {
+        "key": "MTL|Departed|8485008|2026-09-27T23:07:45.071540+00:00",
+        "team": "MTL",
+        "direction": "Departed",
+        "name": "Owen Protz",
+        "detectedAt": "2026-09-27T23:07:45.071540+00:00"
+      },
+      "NYI|Departed|8478445|2026-09-27T23:07:45.071540+00:00": {
+        "key": "NYI|Departed|8478445|2026-09-27T23:07:45.071540+00:00",
+        "team": "NYI",
+        "direction": "Departed",
+        "name": "Mathew Barzal",
+        "detectedAt": "2026-09-27T23:07:45.071540+00:00"
+      },
+      "ANA|Departed|8483521|2026-09-27T23:07:45.071540+00:00": {
+        "key": "ANA|Departed|8483521|2026-09-27T23:07:45.071540+00:00",
+        "team": "ANA",
+        "direction": "Departed",
+        "name": "Noah Warren",
+        "detectedAt": "2026-09-27T23:07:45.071540+00:00"
+      },
+      "ANA|Departed|8484201|2026-09-27T23:07:45.071540+00:00": {
+        "key": "ANA|Departed|8484201|2026-09-27T23:07:45.071540+00:00",
+        "team": "ANA",
+        "direction": "Departed",
+        "name": "Nico Myatovic",
+        "detectedAt": "2026-09-27T23:07:45.071540+00:00"
+      },
+      "STL|Added|8484790|2026-09-27T23:07:45.071540+00:00": {
+        "key": "STL|Added|8484790|2026-09-27T23:07:45.071540+00:00",
+        "team": "STL",
+        "direction": "Added",
+        "name": "Adam Jiricek",
+        "detectedAt": "2026-09-27T23:07:45.071540+00:00"
+      },
+      "LAK|Departed|8481059|2026-09-27T23:07:45.071540+00:00": {
+        "key": "LAK|Departed|8481059|2026-09-27T23:07:45.071540+00:00",
+        "team": "LAK",
+        "direction": "Departed",
+        "name": "Scott Perunovich",
+        "detectedAt": "2026-09-27T23:07:45.071540+00:00"
+      },
+      "LAK|Departed|8483406|2026-09-27T23:07:45.071540+00:00": {
+        "key": "LAK|Departed|8483406|2026-09-27T23:07:45.071540+00:00",
+        "team": "LAK",
+        "direction": "Departed",
+        "name": "Taylor Ward",
+        "detectedAt": "2026-09-27T23:07:45.071540+00:00"
+      },
+      "SEA|Added|8482866|2026-09-27T23:07:45.071540+00:00": {
+        "key": "SEA|Added|8482866|2026-09-27T23:07:45.071540+00:00",
+        "team": "SEA",
+        "direction": "Added",
+        "name": "Ville Ottavainen",
+        "detectedAt": "2026-09-27T23:07:45.071540+00:00"
+      },
+      "SEA|Added|8485383|2026-09-27T23:07:45.071540+00:00": {
+        "key": "SEA|Added|8485383|2026-09-27T23:07:45.071540+00:00",
+        "team": "SEA",
+        "direction": "Added",
+        "name": "Jake O'Brien",
+        "detectedAt": "2026-09-27T23:07:45.071540+00:00"
+      },
+      "FLA|Departed|8484224|2026-09-27T23:07:45.071540+00:00": {
+        "key": "FLA|Departed|8484224|2026-09-27T23:07:45.071540+00:00",
+        "team": "FLA",
+        "direction": "Departed",
+        "name": "Gracyn Sawchyn",
+        "detectedAt": "2026-09-27T23:07:45.071540+00:00"
+      },
+      "FLA|Departed|8482760|2026-09-27T23:07:45.071540+00:00": {
+        "key": "FLA|Departed|8482760|2026-09-27T23:07:45.071540+00:00",
+        "team": "FLA",
+        "direction": "Departed",
+        "name": "Samu Salminen",
+        "detectedAt": "2026-09-27T23:07:45.071540+00:00"
+      },
+      "FLA|Departed|8485004|2026-09-27T23:07:45.071540+00:00": {
+        "key": "FLA|Departed|8485004|2026-09-27T23:07:45.071540+00:00",
+        "team": "FLA",
+        "direction": "Departed",
+        "name": "Matvei Shuravin",
+        "detectedAt": "2026-09-27T23:07:45.071540+00:00"
+      },
+      "FLA|Departed|8484900|2026-09-27T23:07:45.071540+00:00": {
+        "key": "FLA|Departed|8484900|2026-09-27T23:07:45.071540+00:00",
+        "team": "FLA",
+        "direction": "Departed",
+        "name": "Cooper Black",
+        "detectedAt": "2026-09-27T23:07:45.071540+00:00"
+      },
+      "FLA|Departed|8479578|2026-09-27T23:07:45.071540+00:00": {
+        "key": "FLA|Departed|8479578|2026-09-27T23:07:45.071540+00:00",
+        "team": "FLA",
+        "direction": "Departed",
+        "name": "Casey Fitzgerald",
+        "detectedAt": "2026-09-27T23:07:45.071540+00:00"
+      },
+      "FLA|Departed|8484933|2026-09-27T23:07:45.071540+00:00": {
+        "key": "FLA|Departed|8484933|2026-09-27T23:07:45.071540+00:00",
+        "team": "FLA",
+        "direction": "Departed",
+        "name": "Mikulas Hovorka",
+        "detectedAt": "2026-09-27T23:07:45.071540+00:00"
+      },
+      "FLA|Departed|8483433|2026-09-27T23:07:45.071540+00:00": {
+        "key": "FLA|Departed|8483433|2026-09-27T23:07:45.071540+00:00",
+        "team": "FLA",
+        "direction": "Departed",
+        "name": "Jack Devine",
+        "detectedAt": "2026-09-27T23:07:45.071540+00:00"
+      },
+      "FLA|Departed|8485071|2026-09-27T23:07:45.071540+00:00": {
+        "key": "FLA|Departed|8485071|2026-09-27T23:07:45.071540+00:00",
+        "team": "FLA",
+        "direction": "Departed",
+        "name": "Hunter St. Martin",
+        "detectedAt": "2026-09-27T23:07:45.071540+00:00"
+      },
+      "FLA|Departed|8481065|2026-09-27T23:07:45.071540+00:00": {
+        "key": "FLA|Departed|8481065|2026-09-27T23:07:45.071540+00:00",
+        "team": "FLA",
+        "direction": "Departed",
+        "name": "Angus Crookshank",
+        "detectedAt": "2026-09-27T23:07:45.071540+00:00"
+      },
+      "FLA|Departed|8483687|2026-09-27T23:07:45.071540+00:00": {
+        "key": "FLA|Departed|8483687|2026-09-27T23:07:45.071540+00:00",
+        "team": "FLA",
+        "direction": "Departed",
+        "name": "Marek Alscher",
+        "detectedAt": "2026-09-27T23:07:45.071540+00:00"
+      },
       "MIN|Departed|8482781|2026-09-27T18:29:47.422235+00:00": {
         "key": "MIN|Departed|8482781|2026-09-27T18:29:47.422235+00:00",
         "team": "MIN",
@@ -2291,230 +2515,6 @@
         "team": "DAL",
         "direction": "Departed",
         "name": "Rémi Poirier",
-        "detectedAt": "2026-09-27T18:29:47.422235+00:00"
-      },
-      "BOS|Departed|8482213|2026-09-27T18:29:47.422235+00:00": {
-        "key": "BOS|Departed|8482213|2026-09-27T18:29:47.422235+00:00",
-        "team": "BOS",
-        "direction": "Departed",
-        "name": "Riley Duran",
-        "detectedAt": "2026-09-27T18:29:47.422235+00:00"
-      },
-      "BOS|Departed|8483704|2026-09-27T18:29:47.422235+00:00": {
-        "key": "BOS|Departed|8483704|2026-09-27T18:29:47.422235+00:00",
-        "team": "BOS",
-        "direction": "Departed",
-        "name": "Dans Locmelis",
-        "detectedAt": "2026-09-27T18:29:47.422235+00:00"
-      },
-      "COL|Departed|8482942|2026-09-27T18:29:47.422235+00:00": {
-        "key": "COL|Departed|8482942|2026-09-27T18:29:47.422235+00:00",
-        "team": "COL",
-        "direction": "Departed",
-        "name": "Alex Gagne",
-        "detectedAt": "2026-09-27T18:29:47.422235+00:00"
-      },
-      "COL|Departed|8484996|2026-09-27T18:29:47.422235+00:00": {
-        "key": "COL|Departed|8484996|2026-09-27T18:29:47.422235+00:00",
-        "team": "COL",
-        "direction": "Departed",
-        "name": "Ilya Nabokov",
-        "detectedAt": "2026-09-27T18:29:47.422235+00:00"
-      },
-      "COL|Departed|8485105|2026-09-27T18:29:47.422235+00:00": {
-        "key": "COL|Departed|8485105|2026-09-27T18:29:47.422235+00:00",
-        "team": "COL",
-        "direction": "Departed",
-        "name": "Nikita Prishchepov",
-        "detectedAt": "2026-09-27T18:29:47.422235+00:00"
-      },
-      "COL|Departed|8486151|2026-09-27T18:29:47.422235+00:00": {
-        "key": "COL|Departed|8486151|2026-09-27T18:29:47.422235+00:00",
-        "team": "COL",
-        "direction": "Departed",
-        "name": "Matthew DiMarsico",
-        "detectedAt": "2026-09-27T18:29:47.422235+00:00"
-      },
-      "COL|Departed|8486118|2026-09-27T18:29:47.422235+00:00": {
-        "key": "COL|Departed|8486118|2026-09-27T18:29:47.422235+00:00",
-        "team": "COL",
-        "direction": "Departed",
-        "name": "Gustav Stjernberg",
-        "detectedAt": "2026-09-27T18:29:47.422235+00:00"
-      },
-      "COL|Departed|8482676|2026-09-27T18:29:47.422235+00:00": {
-        "key": "COL|Departed|8482676|2026-09-27T18:29:47.422235+00:00",
-        "team": "COL",
-        "direction": "Departed",
-        "name": "Sean Behrens",
-        "detectedAt": "2026-09-27T18:29:47.422235+00:00"
-      },
-      "COL|Departed|8484149|2026-09-27T18:29:47.422235+00:00": {
-        "key": "COL|Departed|8484149|2026-09-27T18:29:47.422235+00:00",
-        "team": "COL",
-        "direction": "Departed",
-        "name": "Gavin Brindley",
-        "detectedAt": "2026-09-27T18:29:47.422235+00:00"
-      },
-      "PHI|Added|8475253|2026-09-27T18:29:47.422235+00:00": {
-        "key": "PHI|Added|8475253|2026-09-27T18:29:47.422235+00:00",
-        "team": "PHI",
-        "direction": "Added",
-        "name": "Garrett Wilson",
-        "detectedAt": "2026-09-27T18:29:47.422235+00:00"
-      },
-      "PHI|Departed|8482783|2026-09-27T18:29:47.422235+00:00": {
-        "key": "PHI|Departed|8482783|2026-09-27T18:29:47.422235+00:00",
-        "team": "PHI",
-        "direction": "Departed",
-        "name": "Aleksei Kolosov",
-        "detectedAt": "2026-09-27T18:29:47.422235+00:00"
-      },
-      "EDM|Departed|8477450|2026-09-27T18:29:47.422235+00:00": {
-        "key": "EDM|Departed|8477450|2026-09-27T18:29:47.422235+00:00",
-        "team": "EDM",
-        "direction": "Departed",
-        "name": "Jason Dickinson",
-        "detectedAt": "2026-09-27T18:29:47.422235+00:00"
-      },
-      "NYI|Added|8479378|2026-09-27T18:29:47.422235+00:00": {
-        "key": "NYI|Added|8479378|2026-09-27T18:29:47.422235+00:00",
-        "team": "NYI",
-        "direction": "Added",
-        "name": "Logan Stanley",
-        "detectedAt": "2026-09-27T18:29:47.422235+00:00"
-      },
-      "NYI|Departed|8478115|2026-09-27T18:29:47.422235+00:00": {
-        "key": "NYI|Departed|8478115|2026-09-27T18:29:47.422235+00:00",
-        "team": "NYI",
-        "direction": "Departed",
-        "name": "Pierre Engvall",
-        "detectedAt": "2026-09-27T18:29:47.422235+00:00"
-      },
-      "NYI|Departed|8480853|2026-09-27T18:29:47.422235+00:00": {
-        "key": "NYI|Departed|8480853|2026-09-27T18:29:47.422235+00:00",
-        "team": "NYI",
-        "direction": "Departed",
-        "name": "Liam Foudy",
-        "detectedAt": "2026-09-27T18:29:47.422235+00:00"
-      },
-      "NYI|Departed|8479644|2026-09-27T18:29:47.422235+00:00": {
-        "key": "NYI|Departed|8479644|2026-09-27T18:29:47.422235+00:00",
-        "team": "NYI",
-        "direction": "Departed",
-        "name": "Matt Luff",
-        "detectedAt": "2026-09-27T18:29:47.422235+00:00"
-      },
-      "NYI|Departed|8485352|2026-09-27T18:29:47.422235+00:00": {
-        "key": "NYI|Departed|8485352|2026-09-27T18:29:47.422235+00:00",
-        "team": "NYI",
-        "direction": "Departed",
-        "name": "Kashawn Aitcheson",
-        "detectedAt": "2026-09-27T18:29:47.422235+00:00"
-      },
-      "NYI|Departed|8484807|2026-09-27T18:29:47.422235+00:00": {
-        "key": "NYI|Departed|8484807|2026-09-27T18:29:47.422235+00:00",
-        "team": "NYI",
-        "direction": "Departed",
-        "name": "Cole Eiserman",
-        "detectedAt": "2026-09-27T18:29:47.422235+00:00"
-      },
-      "NYI|Departed|8483448|2026-09-27T18:29:47.422235+00:00": {
-        "key": "NYI|Departed|8483448|2026-09-27T18:29:47.422235+00:00",
-        "team": "NYI",
-        "direction": "Departed",
-        "name": "Isaiah George",
-        "detectedAt": "2026-09-27T18:29:47.422235+00:00"
-      },
-      "NYI|Departed|8483104|2026-09-27T18:29:47.422235+00:00": {
-        "key": "NYI|Departed|8483104|2026-09-27T18:29:47.422235+00:00",
-        "team": "NYI",
-        "direction": "Departed",
-        "name": "Daylan Kuefler",
-        "detectedAt": "2026-09-27T18:29:47.422235+00:00"
-      },
-      "NYI|Departed|8483441|2026-09-27T18:29:47.422235+00:00": {
-        "key": "NYI|Departed|8483441|2026-09-27T18:29:47.422235+00:00",
-        "team": "NYI",
-        "direction": "Departed",
-        "name": "Quinn Finley",
-        "detectedAt": "2026-09-27T18:29:47.422235+00:00"
-      },
-      "UTA|Departed|8479293|2026-09-27T18:29:47.422235+00:00": {
-        "key": "UTA|Departed|8479293|2026-09-27T18:29:47.422235+00:00",
-        "team": "UTA",
-        "direction": "Departed",
-        "name": "Brandon Tanev",
-        "detectedAt": "2026-09-27T18:29:47.422235+00:00"
-      },
-      "NJD|Added|8482465|2026-09-27T18:29:47.422235+00:00": {
-        "key": "NJD|Added|8482465|2026-09-27T18:29:47.422235+00:00",
-        "team": "NJD",
-        "direction": "Added",
-        "name": "Rémi Poirier",
-        "detectedAt": "2026-09-27T18:29:47.422235+00:00"
-      },
-      "DET|Departed|8481757|2026-09-27T18:29:47.422235+00:00": {
-        "key": "DET|Departed|8481757|2026-09-27T18:29:47.422235+00:00",
-        "team": "DET",
-        "direction": "Departed",
-        "name": "Carter Gylander",
-        "detectedAt": "2026-09-27T18:29:47.422235+00:00"
-      },
-      "DET|Departed|8485362|2026-09-27T18:29:47.422235+00:00": {
-        "key": "DET|Departed|8485362|2026-09-27T18:29:47.422235+00:00",
-        "team": "DET",
-        "direction": "Departed",
-        "name": "Carter Bear",
-        "detectedAt": "2026-09-27T18:29:47.422235+00:00"
-      },
-      "DET|Departed|8482714|2026-09-27T18:29:47.422235+00:00": {
-        "key": "DET|Departed|8482714|2026-09-27T18:29:47.422235+00:00",
-        "team": "DET",
-        "direction": "Departed",
-        "name": "Chase Stillman",
-        "detectedAt": "2026-09-27T18:29:47.422235+00:00"
-      },
-      "CBJ|Departed|8477831|2026-09-27T18:29:47.422235+00:00": {
-        "key": "CBJ|Departed|8477831|2026-09-27T18:29:47.422235+00:00",
-        "team": "CBJ",
-        "direction": "Departed",
-        "name": "Pheonix Copley",
-        "detectedAt": "2026-09-27T18:29:47.422235+00:00"
-      },
-      "STL|Added|8482111|2026-09-27T18:29:47.422235+00:00": {
-        "key": "STL|Added|8482111|2026-09-27T18:29:47.422235+00:00",
-        "team": "STL",
-        "direction": "Added",
-        "name": "Justin Barron",
-        "detectedAt": "2026-09-27T18:29:47.422235+00:00"
-      },
-      "LAK|Departed|8481707|2026-09-27T18:29:47.422235+00:00": {
-        "key": "LAK|Departed|8481707|2026-09-27T18:29:47.422235+00:00",
-        "team": "LAK",
-        "direction": "Departed",
-        "name": "Erik Portillo",
-        "detectedAt": "2026-09-27T18:29:47.422235+00:00"
-      },
-      "LAK|Departed|8483509|2026-09-27T18:29:47.422235+00:00": {
-        "key": "LAK|Departed|8483509|2026-09-27T18:29:47.422235+00:00",
-        "team": "LAK",
-        "direction": "Departed",
-        "name": "Otto Salin",
-        "detectedAt": "2026-09-27T18:29:47.422235+00:00"
-      },
-      "LAK|Departed|8482922|2026-09-27T18:29:47.422235+00:00": {
-        "key": "LAK|Departed|8482922|2026-09-27T18:29:47.422235+00:00",
-        "team": "LAK",
-        "direction": "Departed",
-        "name": "Kirill Kirsanov",
-        "detectedAt": "2026-09-27T18:29:47.422235+00:00"
-      },
-      "SJS|Departed|8484421|2026-09-27T18:29:47.422235+00:00": {
-        "key": "SJS|Departed|8484421|2026-09-27T18:29:47.422235+00:00",
-        "team": "SJS",
-        "direction": "Departed",
-        "name": "Eric Pohlkamp",
         "detectedAt": "2026-09-27T18:29:47.422235+00:00"
       }
     },
