@@ -1,7 +1,28 @@
 {
   "schema": 1,
-  "updatedAt": "2026-09-28T17:40:13.587Z",
+  "updatedAt": "2026-09-28T23:40:11.955Z",
   "items": [
+    {
+      "id": "534a30e321758975a2c2",
+      "title": "The Toronto Maple Leafs acquire Kirill Marchenko, Elvis Merzlikins (18% retained) and Miles Wood from the Columbus Blue Jackets for Matthew Knies, Emil Andrae, Steven Lorentz and a",
+      "publishedAt": "2026-09-28T21:37:15.000Z",
+      "category": "Trade",
+      "url": "https://puckpedia.com/trade/1206?utm_source=email&utm_medium=email&utm_campaign=trade&utm_content=primary"
+    },
+    {
+      "id": "0feaffa5018138447acf",
+      "title": "Kirill Marchenko Signs a 6-Year, $75.00M Contract with the Toronto Maple Leafs",
+      "publishedAt": "2026-09-28T21:06:10.000Z",
+      "category": "Contract",
+      "url": "https://puckpedia.com/signing/10830?utm_source=email&utm_medium=email&utm_campaign=signing&utm_content=primary"
+    },
+    {
+      "id": "32bf987611ea1d981fa6",
+      "title": "Tyson Jost Signs a 1-Year, $850K Contract with the Nashville Predators",
+      "publishedAt": "2026-09-28T17:59:11.000Z",
+      "category": "Contract",
+      "url": "https://puckpedia.com/signing/10829?utm_source=email&utm_medium=email&utm_campaign=signing&utm_content=primary"
+    },
     {
       "id": "85a3d03364fad43e0e15",
       "title": "Garrett Wilson Signs a 1-Year, $850K Contract with the Philadelphia Flyers",
@@ -190,27 +211,6 @@
       "publishedAt": "2026-09-14T15:46:10.000Z",
       "category": "Contract",
       "url": "https://puckpedia.com/signing/10803?utm_source=email&utm_medium=email&utm_campaign=signing&utm_content=primary"
-    },
-    {
-      "id": "ddfc39bf917ee1d7d864",
-      "title": "Zack Bolduc Signs a 4-Year, $16.80M Contract with the Montreal Canadiens",
-      "publishedAt": "2026-09-13T17:29:14.000Z",
-      "category": "Contract",
-      "url": "https://puckpedia.com/signing/10802?utm_source=email&utm_medium=email&utm_campaign=signing&utm_content=primary"
-    },
-    {
-      "id": "a5414c3aace13a6e9f48",
-      "title": "Chris Kreider Signs a 1-Year, $2.15M Contract with the Montreal Canadiens",
-      "publishedAt": "2026-09-12T21:33:11.000Z",
-      "category": "Contract",
-      "url": "https://puckpedia.com/signing/10801?utm_source=email&utm_medium=email&utm_campaign=signing&utm_content=primary"
-    },
-    {
-      "id": "e209b9fba4a3b6b2b1f7",
-      "title": "Mark Stone Signs a 2-Year, $18.00M Contract with the Vegas Golden Knights",
-      "publishedAt": "2026-09-12T16:11:10.000Z",
-      "category": "Contract",
-      "url": "https://puckpedia.com/signing/10800?utm_source=email&utm_medium=email&utm_campaign=signing&utm_content=primary"
     }
   ]
 }
