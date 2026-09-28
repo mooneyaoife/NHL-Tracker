@@ -1,7 +1,14 @@
 {
   "schema": 1,
-  "updatedAt": "2026-09-27T23:40:13.898Z",
+  "updatedAt": "2026-09-28T05:40:30.169Z",
   "items": [
+    {
+      "id": "85a3d03364fad43e0e15",
+      "title": "Garrett Wilson Signs a 1-Year, $850K Contract with the Philadelphia Flyers",
+      "publishedAt": "2026-09-27T23:51:11.000Z",
+      "category": "Contract",
+      "url": "https://puckpedia.com/signing/10828?utm_source=email&utm_medium=email&utm_campaign=signing&utm_content=primary"
+    },
     {
       "id": "f0a0cfe4538991c4c0a9",
       "title": "Nathan Bastian Signs a 1-Year, $850K Contract with the Florida Panthers",
@@ -204,13 +211,6 @@
       "publishedAt": "2026-09-12T16:11:10.000Z",
       "category": "Contract",
       "url": "https://puckpedia.com/signing/10800?utm_source=email&utm_medium=email&utm_campaign=signing&utm_content=primary"
-    },
-    {
-      "id": "8e7511f01eb4da06bf14",
-      "title": "Braeden Bowman Signs a 6-Year, $20.40M Contract with the Vegas Golden Knights",
-      "publishedAt": "2026-09-10T21:07:10.000Z",
-      "category": "Contract",
-      "url": "https://puckpedia.com/signing/10799?utm_source=email&utm_medium=email&utm_campaign=signing&utm_content=primary"
     }
   ]
 }
