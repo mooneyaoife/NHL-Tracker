@@ -1,7 +1,14 @@
 {
   "schema": 1,
-  "updatedAt": "2026-09-29T17:40:14.053Z",
+  "updatedAt": "2026-09-29T23:40:10.424Z",
   "items": [
+    {
+      "id": "54d5fbfa2a3f0bb0d298",
+      "title": "Carson Soucy Signs a 1-Year, $1.15M Contract with the Columbus Blue Jackets",
+      "publishedAt": "2026-09-29T18:33:09.000Z",
+      "category": "Contract",
+      "url": "https://puckpedia.com/signing/10831?utm_source=email&utm_medium=email&utm_campaign=signing&utm_content=primary"
+    },
     {
       "id": "534a30e321758975a2c2",
       "title": "The Toronto Maple Leafs acquire Kirill Marchenko, Elvis Merzlikins (18% retained) and Miles Wood from the Columbus Blue Jackets for Matthew Knies, Emil Andrae, Steven Lorentz and a",
@@ -204,13 +211,6 @@
       "publishedAt": "2026-09-14T17:03:09.000Z",
       "category": "Contract",
       "url": "https://puckpedia.com/signing/10804?utm_source=email&utm_medium=email&utm_campaign=signing&utm_content=primary"
-    },
-    {
-      "id": "16035c3fea9d6010ac5c",
-      "title": "Noah ?stlund Signs an 8-Year, $52.80M Contract with the Buffalo Sabres",
-      "publishedAt": "2026-09-14T15:46:10.000Z",
-      "category": "Contract",
-      "url": "https://puckpedia.com/signing/10803?utm_source=email&utm_medium=email&utm_campaign=signing&utm_content=primary"
     }
   ]
 }
