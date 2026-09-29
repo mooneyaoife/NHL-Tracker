@@ -1,7 +1,7 @@
 {
   "schema": 3,
-  "sourceCommit": "235ff7fc542727270369f5c6807f173fd00c79b7",
-  "dataGeneratedAt": "2026-09-28T20:36:19.470105+00:00",
+  "sourceCommit": "48e300f02d328a32b6563ef2e9c8dca3c73ff71b",
+  "dataGeneratedAt": "2026-09-29T02:03:41.106042+00:00",
   "season": "20262027",
   "version": "5.74.0",
   "trackedTeams": [
@@ -395,8 +395,8 @@
   },
   "freshness": {
     "status": "fresh",
-    "checkedAt": "2026-09-28T20:36:19.470117+00:00",
-    "lastSuccessfulAt": "2026-09-28T20:36:19.470120+00:00",
+    "checkedAt": "2026-09-29T02:03:41.106053+00:00",
+    "lastSuccessfulAt": "2026-09-29T02:03:41.106055+00:00",
     "ageSeconds": 0,
     "failedTeams": [],
     "schedule": {
@@ -546,7 +546,7 @@
     "recent-form": "<p class=\"notice\">2026–27 form begins after completed games.</p>",
     "home-saved-players": "<div class=\"home-empty-state\"><strong>Saved players are ready</strong><span>Open player analysis to view and manage your watchlist.</span></div>",
     "home-pinned-analytics": "<button type=\"button\" class=\"home-pin\" data-shell-page=\"league\"><span>Team Rankings</span><small>League-wide performance categories</small><b>→</b></button><button type=\"button\" class=\"home-pin\" data-shell-page=\"playoffs\"><span>Playoff Path</span><small>Forecasts and postseason routes</small><b>→</b></button><button type=\"button\" class=\"home-pin\" data-shell-page=\"schedule\"><span>Season Shape</span><small>Density, rest and difficulty</small><b>→</b></button>",
-    "today-games": "<article class=\"watch-next-hero\" data-watch-mode=\"league\"><header><div><span class=\"section-kicker\">League watch</span><h3>Florida Panthers at Carolina Hurricanes</h3><p>Tue 29 Sep · 22:00 UK · Lenovo Center</p></div><b class=\"watch-next-state state-scheduled\">Scheduled</b></header><div class=\"watch-next-signals\" aria-label=\"Three things to know\"><div class=\"watch-next-signal\"><span>Opponent baseline</span><strong>51.2% PTS</strong><small>Opponent points percentage in 2025–26; context, not a prediction</small></div><div class=\"watch-next-signal\"><span>Setting</span><strong>Home</strong><small>Lenovo Center</small></div></div><footer><a class=\"watch-next-open\" href=\"?game=2026020001#games\" data-watch-game=\"2026020001\">Open Game Centre →</a><span>2025–26 opponent evidence · updated 28 Sep · UK time</span></footer><details class=\"watch-next-method\"><summary>How to read this brief</summary><p>Official NHL schedule, prior-season opponent points percentage, travel, rest, congestion, road sequence, time-zone and event flags. Does not include injuries, projected goalies, current form or lineup changes.</p><small>Schedule burden is context, not a result or win-probability forecast.</small></details></article><div class=\"watch-next-support\" aria-label=\"More games to watch\"><a class=\"watch-next-row\" href=\"?game=2026020002#games\" data-watch-game=\"2026020002\"><span>Scheduled · Wed 30 Sep · 00:00 UK</span><strong>Montréal Canadiens at Toronto Maple Leafs</strong><small>64.6% PTS</small><b>→</b></a><a class=\"watch-next-row\" href=\"?game=2026020003#games\" data-watch-game=\"2026020003\"><span>Scheduled · Wed 30 Sep · 01:00 UK</span><strong>New York Rangers at Boston Bruins</strong><small>47.0% PTS</small><b>→</b></a></div>"
+    "today-games": "<article class=\"watch-next-hero\" data-watch-mode=\"league\"><header><div><span class=\"section-kicker\">League watch</span><h3>Florida Panthers at Carolina Hurricanes</h3><p>Tue 29 Sep · 22:00 UK · Lenovo Center</p></div><b class=\"watch-next-state state-scheduled\">Scheduled</b></header><div class=\"watch-next-signals\" aria-label=\"Three things to know\"><div class=\"watch-next-signal\"><span>Opponent baseline</span><strong>51.2% PTS</strong><small>Opponent points percentage in 2025–26; context, not a prediction</small></div><div class=\"watch-next-signal\"><span>Setting</span><strong>Home</strong><small>Lenovo Center</small></div></div><footer><a class=\"watch-next-open\" href=\"?game=2026020001#games\" data-watch-game=\"2026020001\">Open Game Centre →</a><span>2025–26 opponent evidence · updated 29 Sep · UK time</span></footer><details class=\"watch-next-method\"><summary>How to read this brief</summary><p>Official NHL schedule, prior-season opponent points percentage, travel, rest, congestion, road sequence, time-zone and event flags. Does not include injuries, projected goalies, current form or lineup changes.</p><small>Schedule burden is context, not a result or win-probability forecast.</small></details></article><div class=\"watch-next-support\" aria-label=\"More games to watch\"><a class=\"watch-next-row\" href=\"?game=2026020002#games\" data-watch-game=\"2026020002\"><span>Scheduled · Wed 30 Sep · 00:00 UK</span><strong>Montréal Canadiens at Toronto Maple Leafs</strong><small>64.6% PTS</small><b>→</b></a><a class=\"watch-next-row\" href=\"?game=2026020003#games\" data-watch-game=\"2026020003\"><span>Scheduled · Wed 30 Sep · 01:00 UK</span><strong>New York Rangers at Boston Bruins</strong><small>47.0% PTS</small><b>→</b></a></div>"
   },
   "watchNext": {
     "schema": 1,
@@ -1671,8 +1671,8 @@
   "continuity": {
     "schema": 3,
     "season": "20262027",
-    "capturedAt": "2026-09-28T20:36:19.470105+00:00",
-    "updatedAt": "2026-09-28T20:36:19.470105+00:00",
+    "capturedAt": "2026-09-29T02:03:41.106042+00:00",
+    "updatedAt": "2026-09-29T02:03:41.106042+00:00",
     "finished": {},
     "upcoming": {
       "2026020001": {
@@ -2181,6 +2181,181 @@
       }
     },
     "roster": {
+      "FLA|Departed|8478043|2026-09-29T02:03:41.101901+00:00": {
+        "key": "FLA|Departed|8478043|2026-09-29T02:03:41.101901+00:00",
+        "team": "FLA",
+        "direction": "Departed",
+        "name": "Sam Lafferty",
+        "detectedAt": "2026-09-29T02:03:41.101901+00:00"
+      },
+      "FLA|Departed|8483878|2026-09-29T02:03:41.101901+00:00": {
+        "key": "FLA|Departed|8483878|2026-09-29T02:03:41.101901+00:00",
+        "team": "FLA",
+        "direction": "Departed",
+        "name": "Kai Schwindt",
+        "detectedAt": "2026-09-29T02:03:41.101901+00:00"
+      },
+      "FLA|Departed|8482131|2026-09-29T02:03:41.101901+00:00": {
+        "key": "FLA|Departed|8482131|2026-09-29T02:03:41.101901+00:00",
+        "team": "FLA",
+        "direction": "Departed",
+        "name": "Donovan Sebrango",
+        "detectedAt": "2026-09-29T02:03:41.101901+00:00"
+      },
+      "FLA|Departed|8481556|2026-09-29T02:03:41.101901+00:00": {
+        "key": "FLA|Departed|8481556|2026-09-29T02:03:41.101901+00:00",
+        "team": "FLA",
+        "direction": "Departed",
+        "name": "John Beecher",
+        "detectedAt": "2026-09-29T02:03:41.101901+00:00"
+      },
+      "FLA|Departed|8475755|2026-09-29T02:03:41.101901+00:00": {
+        "key": "FLA|Departed|8475755|2026-09-29T02:03:41.101901+00:00",
+        "team": "FLA",
+        "direction": "Departed",
+        "name": "Alexander Petrovic",
+        "detectedAt": "2026-09-29T02:03:41.101901+00:00"
+      },
+      "FLA|Departed|8481655|2026-09-29T02:03:41.101901+00:00": {
+        "key": "FLA|Departed|8481655|2026-09-29T02:03:41.101901+00:00",
+        "team": "FLA",
+        "direction": "Departed",
+        "name": "Cole Schwindt",
+        "detectedAt": "2026-09-29T02:03:41.101901+00:00"
+      },
+      "FLA|Departed|8481133|2026-09-29T02:03:41.101901+00:00": {
+        "key": "FLA|Departed|8481133|2026-09-29T02:03:41.101901+00:00",
+        "team": "FLA",
+        "direction": "Departed",
+        "name": "Cole Reinhardt",
+        "detectedAt": "2026-09-29T02:03:41.101901+00:00"
+      },
+      "FLA|Departed|8479414|2026-09-29T02:03:41.101901+00:00": {
+        "key": "FLA|Departed|8479414|2026-09-29T02:03:41.101901+00:00",
+        "team": "FLA",
+        "direction": "Departed",
+        "name": "Nathan Bastian",
+        "detectedAt": "2026-09-29T02:03:41.101901+00:00"
+      },
+      "NJD|Departed|8479362|2026-09-29T02:03:41.101901+00:00": {
+        "key": "NJD|Departed|8479362|2026-09-29T02:03:41.101901+00:00",
+        "team": "NJD",
+        "direction": "Departed",
+        "name": "Riley Tufte",
+        "detectedAt": "2026-09-29T02:03:41.101901+00:00"
+      },
+      "NJD|Departed|8483397|2026-09-29T02:03:41.101901+00:00": {
+        "key": "NJD|Departed|8483397|2026-09-29T02:03:41.101901+00:00",
+        "team": "NJD",
+        "direction": "Departed",
+        "name": "Marc McLaughlin",
+        "detectedAt": "2026-09-29T02:03:41.101901+00:00"
+      },
+      "NJD|Departed|8479496|2026-09-29T02:03:41.101901+00:00": {
+        "key": "NJD|Departed|8479496|2026-09-29T02:03:41.101901+00:00",
+        "team": "NJD",
+        "direction": "Departed",
+        "name": "David Rittich",
+        "detectedAt": "2026-09-29T02:03:41.101901+00:00"
+      },
+      "NJD|Departed|8478400|2026-09-29T02:03:41.101901+00:00": {
+        "key": "NJD|Departed|8478400|2026-09-29T02:03:41.101901+00:00",
+        "team": "NJD",
+        "direction": "Departed",
+        "name": "Colin White",
+        "detectedAt": "2026-09-29T02:03:41.101901+00:00"
+      },
+      "NJD|Departed|8481609|2026-09-29T02:03:41.101901+00:00": {
+        "key": "NJD|Departed|8481609|2026-09-29T02:03:41.101901+00:00",
+        "team": "NJD",
+        "direction": "Departed",
+        "name": "Vladislav Kolyachonok",
+        "detectedAt": "2026-09-29T02:03:41.101901+00:00"
+      },
+      "NJD|Departed|8482873|2026-09-29T02:03:41.101901+00:00": {
+        "key": "NJD|Departed|8482873|2026-09-29T02:03:41.101901+00:00",
+        "team": "NJD",
+        "direction": "Departed",
+        "name": "Topias Vilen",
+        "detectedAt": "2026-09-29T02:03:41.101901+00:00"
+      },
+      "NYR|Added|8482666|2026-09-29T02:03:41.101901+00:00": {
+        "key": "NYR|Added|8482666|2026-09-29T02:03:41.101901+00:00",
+        "team": "NYR",
+        "direction": "Added",
+        "name": "Scott Morrow",
+        "detectedAt": "2026-09-29T02:03:41.101901+00:00"
+      },
+      "NYR|Added|8485957|2026-09-29T02:03:41.101901+00:00": {
+        "key": "NYR|Added|8485957|2026-09-29T02:03:41.101901+00:00",
+        "team": "NYR",
+        "direction": "Added",
+        "name": "Alberts Smits",
+        "detectedAt": "2026-09-29T02:03:41.101901+00:00"
+      },
+      "NYR|Departed|8482193|2026-09-29T02:03:41.101901+00:00": {
+        "key": "NYR|Departed|8482193|2026-09-29T02:03:41.101901+00:00",
+        "team": "NYR",
+        "direction": "Departed",
+        "name": "Dylan Garand",
+        "detectedAt": "2026-09-29T02:03:41.101901+00:00"
+      },
+      "NYR|Departed|8479390|2026-09-29T02:03:41.101901+00:00": {
+        "key": "NYR|Departed|8479390|2026-09-29T02:03:41.101901+00:00",
+        "team": "NYR",
+        "direction": "Departed",
+        "name": "Taylor Raddysh",
+        "detectedAt": "2026-09-29T02:03:41.101901+00:00"
+      },
+      "NYR|Departed|8480001|2026-09-29T02:03:41.101901+00:00": {
+        "key": "NYR|Departed|8480001|2026-09-29T02:03:41.101901+00:00",
+        "team": "NYR",
+        "direction": "Departed",
+        "name": "Urho Vaakanainen",
+        "detectedAt": "2026-09-29T02:03:41.101901+00:00"
+      },
+      "VGK|Departed|8479550|2026-09-29T02:03:41.101901+00:00": {
+        "key": "VGK|Departed|8479550|2026-09-29T02:03:41.101901+00:00",
+        "team": "VGK",
+        "direction": "Departed",
+        "name": "Tanner Laczynski",
+        "detectedAt": "2026-09-29T02:03:41.101901+00:00"
+      },
+      "VGK|Departed|8481572|2026-09-29T02:03:41.101901+00:00": {
+        "key": "VGK|Departed|8481572|2026-09-29T02:03:41.101901+00:00",
+        "team": "VGK",
+        "direction": "Departed",
+        "name": "Ville Heinola",
+        "detectedAt": "2026-09-29T02:03:41.101901+00:00"
+      },
+      "VGK|Departed|8482125|2026-09-29T02:03:41.101901+00:00": {
+        "key": "VGK|Departed|8482125|2026-09-29T02:03:41.101901+00:00",
+        "team": "VGK",
+        "direction": "Departed",
+        "name": "Alexander Holtz",
+        "detectedAt": "2026-09-29T02:03:41.101901+00:00"
+      },
+      "VGK|Departed|8481587|2026-09-29T02:03:41.101901+00:00": {
+        "key": "VGK|Departed|8481587|2026-09-29T02:03:41.101901+00:00",
+        "team": "VGK",
+        "direction": "Departed",
+        "name": "Antti Tuomisto",
+        "detectedAt": "2026-09-29T02:03:41.101901+00:00"
+      },
+      "VGK|Departed|8480007|2026-09-29T02:03:41.101901+00:00": {
+        "key": "VGK|Departed|8480007|2026-09-29T02:03:41.101901+00:00",
+        "team": "VGK",
+        "direction": "Departed",
+        "name": "Jonas Rondbjerg",
+        "detectedAt": "2026-09-29T02:03:41.101901+00:00"
+      },
+      "WSH|Departed|8483532|2026-09-29T02:03:41.101901+00:00": {
+        "key": "WSH|Departed|8483532|2026-09-29T02:03:41.101901+00:00",
+        "team": "WSH",
+        "direction": "Departed",
+        "name": "Clay Stevenson",
+        "detectedAt": "2026-09-29T02:03:41.101901+00:00"
+      },
       "EDM|Departed|8485484|2026-09-28T20:36:19.466164+00:00": {
         "key": "EDM|Departed|8485484|2026-09-28T20:36:19.466164+00:00",
         "team": "EDM",
@@ -2341,181 +2516,6 @@
         "direction": "Departed",
         "name": "Kaiden Guhle",
         "detectedAt": "2026-09-27T23:07:45.071540+00:00"
-      },
-      "MTL|Departed|8483549|2026-09-27T23:07:45.071540+00:00": {
-        "key": "MTL|Departed|8483549|2026-09-27T23:07:45.071540+00:00",
-        "team": "MTL",
-        "direction": "Departed",
-        "name": "Lucas Condotta",
-        "detectedAt": "2026-09-27T23:07:45.071540+00:00"
-      },
-      "MTL|Departed|8485008|2026-09-27T23:07:45.071540+00:00": {
-        "key": "MTL|Departed|8485008|2026-09-27T23:07:45.071540+00:00",
-        "team": "MTL",
-        "direction": "Departed",
-        "name": "Owen Protz",
-        "detectedAt": "2026-09-27T23:07:45.071540+00:00"
-      },
-      "NYI|Departed|8478445|2026-09-27T23:07:45.071540+00:00": {
-        "key": "NYI|Departed|8478445|2026-09-27T23:07:45.071540+00:00",
-        "team": "NYI",
-        "direction": "Departed",
-        "name": "Mathew Barzal",
-        "detectedAt": "2026-09-27T23:07:45.071540+00:00"
-      },
-      "ANA|Departed|8483521|2026-09-27T23:07:45.071540+00:00": {
-        "key": "ANA|Departed|8483521|2026-09-27T23:07:45.071540+00:00",
-        "team": "ANA",
-        "direction": "Departed",
-        "name": "Noah Warren",
-        "detectedAt": "2026-09-27T23:07:45.071540+00:00"
-      },
-      "ANA|Departed|8484201|2026-09-27T23:07:45.071540+00:00": {
-        "key": "ANA|Departed|8484201|2026-09-27T23:07:45.071540+00:00",
-        "team": "ANA",
-        "direction": "Departed",
-        "name": "Nico Myatovic",
-        "detectedAt": "2026-09-27T23:07:45.071540+00:00"
-      },
-      "STL|Added|8484790|2026-09-27T23:07:45.071540+00:00": {
-        "key": "STL|Added|8484790|2026-09-27T23:07:45.071540+00:00",
-        "team": "STL",
-        "direction": "Added",
-        "name": "Adam Jiricek",
-        "detectedAt": "2026-09-27T23:07:45.071540+00:00"
-      },
-      "LAK|Departed|8481059|2026-09-27T23:07:45.071540+00:00": {
-        "key": "LAK|Departed|8481059|2026-09-27T23:07:45.071540+00:00",
-        "team": "LAK",
-        "direction": "Departed",
-        "name": "Scott Perunovich",
-        "detectedAt": "2026-09-27T23:07:45.071540+00:00"
-      },
-      "LAK|Departed|8483406|2026-09-27T23:07:45.071540+00:00": {
-        "key": "LAK|Departed|8483406|2026-09-27T23:07:45.071540+00:00",
-        "team": "LAK",
-        "direction": "Departed",
-        "name": "Taylor Ward",
-        "detectedAt": "2026-09-27T23:07:45.071540+00:00"
-      },
-      "SEA|Added|8482866|2026-09-27T23:07:45.071540+00:00": {
-        "key": "SEA|Added|8482866|2026-09-27T23:07:45.071540+00:00",
-        "team": "SEA",
-        "direction": "Added",
-        "name": "Ville Ottavainen",
-        "detectedAt": "2026-09-27T23:07:45.071540+00:00"
-      },
-      "SEA|Added|8485383|2026-09-27T23:07:45.071540+00:00": {
-        "key": "SEA|Added|8485383|2026-09-27T23:07:45.071540+00:00",
-        "team": "SEA",
-        "direction": "Added",
-        "name": "Jake O'Brien",
-        "detectedAt": "2026-09-27T23:07:45.071540+00:00"
-      },
-      "FLA|Departed|8484224|2026-09-27T23:07:45.071540+00:00": {
-        "key": "FLA|Departed|8484224|2026-09-27T23:07:45.071540+00:00",
-        "team": "FLA",
-        "direction": "Departed",
-        "name": "Gracyn Sawchyn",
-        "detectedAt": "2026-09-27T23:07:45.071540+00:00"
-      },
-      "FLA|Departed|8482760|2026-09-27T23:07:45.071540+00:00": {
-        "key": "FLA|Departed|8482760|2026-09-27T23:07:45.071540+00:00",
-        "team": "FLA",
-        "direction": "Departed",
-        "name": "Samu Salminen",
-        "detectedAt": "2026-09-27T23:07:45.071540+00:00"
-      },
-      "FLA|Departed|8485004|2026-09-27T23:07:45.071540+00:00": {
-        "key": "FLA|Departed|8485004|2026-09-27T23:07:45.071540+00:00",
-        "team": "FLA",
-        "direction": "Departed",
-        "name": "Matvei Shuravin",
-        "detectedAt": "2026-09-27T23:07:45.071540+00:00"
-      },
-      "FLA|Departed|8484900|2026-09-27T23:07:45.071540+00:00": {
-        "key": "FLA|Departed|8484900|2026-09-27T23:07:45.071540+00:00",
-        "team": "FLA",
-        "direction": "Departed",
-        "name": "Cooper Black",
-        "detectedAt": "2026-09-27T23:07:45.071540+00:00"
-      },
-      "FLA|Departed|8479578|2026-09-27T23:07:45.071540+00:00": {
-        "key": "FLA|Departed|8479578|2026-09-27T23:07:45.071540+00:00",
-        "team": "FLA",
-        "direction": "Departed",
-        "name": "Casey Fitzgerald",
-        "detectedAt": "2026-09-27T23:07:45.071540+00:00"
-      },
-      "FLA|Departed|8484933|2026-09-27T23:07:45.071540+00:00": {
-        "key": "FLA|Departed|8484933|2026-09-27T23:07:45.071540+00:00",
-        "team": "FLA",
-        "direction": "Departed",
-        "name": "Mikulas Hovorka",
-        "detectedAt": "2026-09-27T23:07:45.071540+00:00"
-      },
-      "FLA|Departed|8483433|2026-09-27T23:07:45.071540+00:00": {
-        "key": "FLA|Departed|8483433|2026-09-27T23:07:45.071540+00:00",
-        "team": "FLA",
-        "direction": "Departed",
-        "name": "Jack Devine",
-        "detectedAt": "2026-09-27T23:07:45.071540+00:00"
-      },
-      "FLA|Departed|8485071|2026-09-27T23:07:45.071540+00:00": {
-        "key": "FLA|Departed|8485071|2026-09-27T23:07:45.071540+00:00",
-        "team": "FLA",
-        "direction": "Departed",
-        "name": "Hunter St. Martin",
-        "detectedAt": "2026-09-27T23:07:45.071540+00:00"
-      },
-      "FLA|Departed|8481065|2026-09-27T23:07:45.071540+00:00": {
-        "key": "FLA|Departed|8481065|2026-09-27T23:07:45.071540+00:00",
-        "team": "FLA",
-        "direction": "Departed",
-        "name": "Angus Crookshank",
-        "detectedAt": "2026-09-27T23:07:45.071540+00:00"
-      },
-      "FLA|Departed|8483687|2026-09-27T23:07:45.071540+00:00": {
-        "key": "FLA|Departed|8483687|2026-09-27T23:07:45.071540+00:00",
-        "team": "FLA",
-        "direction": "Departed",
-        "name": "Marek Alscher",
-        "detectedAt": "2026-09-27T23:07:45.071540+00:00"
-      },
-      "MIN|Departed|8482781|2026-09-27T18:29:47.422235+00:00": {
-        "key": "MIN|Departed|8482781|2026-09-27T18:29:47.422235+00:00",
-        "team": "MIN",
-        "direction": "Departed",
-        "name": "Carson Lambos",
-        "detectedAt": "2026-09-27T18:29:47.422235+00:00"
-      },
-      "TBL|Departed|8482663|2026-09-27T18:29:47.422235+00:00": {
-        "key": "TBL|Departed|8482663|2026-09-27T18:29:47.422235+00:00",
-        "team": "TBL",
-        "direction": "Departed",
-        "name": "Dylan Duke",
-        "detectedAt": "2026-09-27T18:29:47.422235+00:00"
-      },
-      "TBL|Departed|8484770|2026-09-27T18:29:47.422235+00:00": {
-        "key": "TBL|Departed|8484770|2026-09-27T18:29:47.422235+00:00",
-        "team": "TBL",
-        "direction": "Departed",
-        "name": "Sam O'Reilly",
-        "detectedAt": "2026-09-27T18:29:47.422235+00:00"
-      },
-      "TBL|Departed|8485091|2026-09-27T18:29:47.422235+00:00": {
-        "key": "TBL|Departed|8485091|2026-09-27T18:29:47.422235+00:00",
-        "team": "TBL",
-        "direction": "Departed",
-        "name": "Noah Steen",
-        "detectedAt": "2026-09-27T18:29:47.422235+00:00"
-      },
-      "TBL|Departed|8482518|2026-09-27T18:29:47.422235+00:00": {
-        "key": "TBL|Departed|8482518|2026-09-27T18:29:47.422235+00:00",
-        "team": "TBL",
-        "direction": "Departed",
-        "name": "Lucas Mercuri",
-        "detectedAt": "2026-09-27T18:29:47.422235+00:00"
       }
     },
     "schedule": {
