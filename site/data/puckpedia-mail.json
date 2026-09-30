@@ -1,7 +1,14 @@
 {
   "schema": 1,
-  "updatedAt": "2026-09-29T23:40:10.424Z",
+  "updatedAt": "2026-09-30T05:40:50.352Z",
   "items": [
+    {
+      "id": "d4cffb6835b9a86b7c93",
+      "title": "Chase Harrington Signs a 3-Year, $3.23M Contract with the Calgary Flames",
+      "publishedAt": "2026-09-30T00:10:14.000Z",
+      "category": "Contract",
+      "url": "https://puckpedia.com/signing/10832?utm_source=email&utm_medium=email&utm_campaign=signing&utm_content=primary"
+    },
     {
       "id": "54d5fbfa2a3f0bb0d298",
       "title": "Carson Soucy Signs a 1-Year, $1.15M Contract with the Columbus Blue Jackets",
@@ -204,13 +211,6 @@
       "publishedAt": "2026-09-15T12:13:10.000Z",
       "category": "Contract",
       "url": "https://puckpedia.com/signing/10805?utm_source=email&utm_medium=email&utm_campaign=signing&utm_content=primary"
-    },
-    {
-      "id": "b9e5c3da8f84d956baa1",
-      "title": "Cam Talbot Signs a 1-Year, $950K Contract with the Columbus Blue Jackets",
-      "publishedAt": "2026-09-14T17:03:09.000Z",
-      "category": "Contract",
-      "url": "https://puckpedia.com/signing/10804?utm_source=email&utm_medium=email&utm_campaign=signing&utm_content=primary"
     }
   ]
 }
