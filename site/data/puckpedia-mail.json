@@ -1,7 +1,14 @@
 {
   "schema": 1,
-  "updatedAt": "2026-09-30T17:40:11.537Z",
+  "updatedAt": "2026-09-30T23:40:13.585Z",
   "items": [
+    {
+      "id": "47a8bc12aad54322fc8e",
+      "title": "William Karlsson Signs a 2-Year, $13.50M Contract with the Vegas Golden Knights",
+      "publishedAt": "2026-09-30T20:04:09.000Z",
+      "category": "Contract",
+      "url": "https://puckpedia.com/signing/10834?utm_source=email&utm_medium=email&utm_campaign=signing&utm_content=primary"
+    },
     {
       "id": "2916e1330cca6d244f29",
       "title": "Casey DeSmith Signs a 2-Year, $5.00M Contract with the Dallas Stars",
@@ -204,13 +211,6 @@
       "publishedAt": "2026-09-15T17:50:11.000Z",
       "category": "Contract",
       "url": "https://puckpedia.com/signing/10807?utm_source=email&utm_medium=email&utm_campaign=signing&utm_content=primary"
-    },
-    {
-      "id": "5952d37e5b2a67ab8e5d",
-      "title": "Ryan Leonard Signs an 8-Year, $84.00M Contract with the Washington Capitals",
-      "publishedAt": "2026-09-15T13:19:10.000Z",
-      "category": "Contract",
-      "url": "https://puckpedia.com/signing/10806?utm_source=email&utm_medium=email&utm_campaign=signing&utm_content=primary"
     }
   ]
 }
