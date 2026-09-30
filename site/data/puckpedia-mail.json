@@ -1,7 +1,14 @@
 {
   "schema": 1,
-  "updatedAt": "2026-09-30T05:40:50.352Z",
+  "updatedAt": "2026-09-30T17:40:11.537Z",
   "items": [
+    {
+      "id": "2916e1330cca6d244f29",
+      "title": "Casey DeSmith Signs a 2-Year, $5.00M Contract with the Dallas Stars",
+      "publishedAt": "2026-09-30T14:39:11.000Z",
+      "category": "Contract",
+      "url": "https://puckpedia.com/signing/10833?utm_source=email&utm_medium=email&utm_campaign=signing&utm_content=primary"
+    },
     {
       "id": "d4cffb6835b9a86b7c93",
       "title": "Chase Harrington Signs a 3-Year, $3.23M Contract with the Calgary Flames",
@@ -204,13 +211,6 @@
       "publishedAt": "2026-09-15T13:19:10.000Z",
       "category": "Contract",
       "url": "https://puckpedia.com/signing/10806?utm_source=email&utm_medium=email&utm_campaign=signing&utm_content=primary"
-    },
-    {
-      "id": "b1126fa5a7b0121d8c74",
-      "title": "Drake Batherson Signs an 8-Year, $86.00M Contract with the Ottawa Senators",
-      "publishedAt": "2026-09-15T12:13:10.000Z",
-      "category": "Contract",
-      "url": "https://puckpedia.com/signing/10805?utm_source=email&utm_medium=email&utm_campaign=signing&utm_content=primary"
     }
   ]
 }
