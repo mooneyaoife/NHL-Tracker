@@ -1,7 +1,21 @@
 {
   "schema": 1,
-  "updatedAt": "2026-10-01T17:40:22.233Z",
+  "updatedAt": "2026-10-01T23:40:12.771Z",
   "items": [
+    {
+      "id": "9768c31272e02577ff7d",
+      "title": "The Philadelphia Flyers acquire David Goyette from the Seattle Kraken for Devin Kaplan",
+      "publishedAt": "2026-10-01T20:37:15.000Z",
+      "category": "Trade",
+      "url": "https://puckpedia.com/trade/1207?utm_source=email&utm_medium=email&utm_campaign=trade&utm_content=primary"
+    },
+    {
+      "id": "a1b186cff2e1115894e6",
+      "title": "Tristan Luneau Signs a 6-Year, $43.20M Contract with the Anaheim Ducks",
+      "publishedAt": "2026-10-01T18:58:12.000Z",
+      "category": "Contract",
+      "url": "https://puckpedia.com/signing/10836?utm_source=email&utm_medium=email&utm_campaign=signing&utm_content=primary"
+    },
     {
       "id": "0279420d8a8f2c8cb447",
       "title": "Louis Crevier Signs a 4-Year, $16.00M Contract with the Buffalo Sabres",
@@ -197,20 +211,6 @@
       "publishedAt": "2026-09-16T01:37:08.000Z",
       "category": "Contract",
       "url": "https://puckpedia.com/signing/10810?utm_source=email&utm_medium=email&utm_campaign=signing&utm_content=primary"
-    },
-    {
-      "id": "70b19679f100695f94a0",
-      "title": "Alex Newhook Signs a 4-Year, $22.20M Contract with the Montreal Canadiens",
-      "publishedAt": "2026-09-15T21:22:09.000Z",
-      "category": "Contract",
-      "url": "https://puckpedia.com/signing/10809?utm_source=email&utm_medium=email&utm_campaign=signing&utm_content=primary"
-    },
-    {
-      "id": "b41f806af1e906bc0bd3",
-      "title": "Arber Xhekaj Signs a 1-Year, $1.50M Contract with the Montreal Canadiens",
-      "publishedAt": "2026-09-15T21:05:11.000Z",
-      "category": "Contract",
-      "url": "https://puckpedia.com/signing/10808?utm_source=email&utm_medium=email&utm_campaign=signing&utm_content=primary"
     }
   ]
 }
