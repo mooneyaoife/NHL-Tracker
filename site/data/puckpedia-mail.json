@@ -1,7 +1,14 @@
 {
   "schema": 1,
-  "updatedAt": "2026-10-01T23:40:12.771Z",
+  "updatedAt": "2026-10-06T23:40:12.629Z",
   "items": [
+    {
+      "id": "a101f871157b6b3ed706",
+      "title": "Michael Bunting Signs a 1-Year, $1.20M Contract with the Philadelphia Flyers",
+      "publishedAt": "2026-10-06T17:59:10.000Z",
+      "category": "Contract",
+      "url": "https://puckpedia.com/signing/10837?utm_source=email&utm_medium=email&utm_campaign=signing&utm_content=primary"
+    },
     {
       "id": "9768c31272e02577ff7d",
       "title": "The Philadelphia Flyers acquire David Goyette from the Seattle Kraken for Devin Kaplan",
@@ -204,13 +211,6 @@
       "publishedAt": "2026-09-16T01:56:10.000Z",
       "category": "Contract",
       "url": "https://puckpedia.com/signing/10811?utm_source=email&utm_medium=email&utm_campaign=signing&utm_content=primary"
-    },
-    {
-      "id": "70297697feb572d9ecff",
-      "title": "Justin Sourdif Signs an 8-Year, $50.80M Contract with the Washington Capitals",
-      "publishedAt": "2026-09-16T01:37:08.000Z",
-      "category": "Contract",
-      "url": "https://puckpedia.com/signing/10810?utm_source=email&utm_medium=email&utm_campaign=signing&utm_content=primary"
     }
   ]
 }
