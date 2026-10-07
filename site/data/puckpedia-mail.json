@@ -1,7 +1,21 @@
 {
   "schema": 1,
-  "updatedAt": "2026-10-06T23:40:12.629Z",
+  "updatedAt": "2026-10-07T17:40:11.752Z",
   "items": [
+    {
+      "id": "4d4b65a0168a83a5ca03",
+      "title": "The Edmonton Oilers acquire Filip Hallander from the Pittsburgh Penguins for Spencer Stastney",
+      "publishedAt": "2026-10-07T16:39:16.000Z",
+      "category": "Trade",
+      "url": "https://puckpedia.com/trade/1208?utm_source=email&utm_medium=email&utm_campaign=trade&utm_content=primary"
+    },
+    {
+      "id": "09e67c89992b2449973f",
+      "title": "Vladim?r Draveck? Signs a 3-Year, $3.02M Contract with the New York Islanders",
+      "publishedAt": "2026-10-07T15:31:10.000Z",
+      "category": "Contract",
+      "url": "https://puckpedia.com/signing/10838?utm_source=email&utm_medium=email&utm_campaign=signing&utm_content=primary"
+    },
     {
       "id": "a101f871157b6b3ed706",
       "title": "Michael Bunting Signs a 1-Year, $1.20M Contract with the Philadelphia Flyers",
@@ -197,20 +211,6 @@
       "publishedAt": "2026-09-16T03:26:09.000Z",
       "category": "Contract",
       "url": "https://puckpedia.com/signing/10813?utm_source=email&utm_medium=email&utm_campaign=signing&utm_content=primary"
-    },
-    {
-      "id": "6d654357fab7fd0a2616",
-      "title": "Jordan Staal Signs a 1-Year, $4.90M Contract with the Carolina Hurricanes",
-      "publishedAt": "2026-09-16T03:09:10.000Z",
-      "category": "Contract",
-      "url": "https://puckpedia.com/signing/10812?utm_source=email&utm_medium=email&utm_campaign=signing&utm_content=primary"
-    },
-    {
-      "id": "edbe1a9bf5f7ef760e1f",
-      "title": "Cutter Gauthier Signs a 6-Year, $81.00M Contract with the Anaheim Ducks",
-      "publishedAt": "2026-09-16T01:56:10.000Z",
-      "category": "Contract",
-      "url": "https://puckpedia.com/signing/10811?utm_source=email&utm_medium=email&utm_campaign=signing&utm_content=primary"
     }
   ]
 }
