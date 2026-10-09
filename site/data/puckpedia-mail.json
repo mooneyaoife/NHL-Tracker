@@ -1,7 +1,14 @@
 {
   "schema": 1,
-  "updatedAt": "2026-10-09T17:40:21.428Z",
+  "updatedAt": "2026-10-09T23:40:11.899Z",
   "items": [
+    {
+      "id": "5c57e39e42e5364d5b9e",
+      "title": "The Nashville Predators acquire Jayden Struble from the Montreal Canadiens for a 2027 2nd round pick (VGK)",
+      "publishedAt": "2026-10-09T23:10:17.000Z",
+      "category": "Trade",
+      "url": "https://puckpedia.com/trade/1209?utm_source=email&utm_medium=email&utm_campaign=trade&utm_content=primary"
+    },
     {
       "id": "4d4b65a0168a83a5ca03",
       "title": "The Edmonton Oilers acquire Filip Hallander from the Pittsburgh Penguins for Spencer Stastney",
@@ -204,13 +211,6 @@
       "publishedAt": "2026-09-16T13:35:11.000Z",
       "category": "Contract",
       "url": "https://puckpedia.com/signing/10814?utm_source=email&utm_medium=email&utm_campaign=signing&utm_content=primary"
-    },
-    {
-      "id": "b4716524417d3f0b0ab5",
-      "title": "Luke Evangelista Signs a 5-Year, $36.25M Contract with the New Jersey Devils",
-      "publishedAt": "2026-09-16T03:26:09.000Z",
-      "category": "Contract",
-      "url": "https://puckpedia.com/signing/10813?utm_source=email&utm_medium=email&utm_campaign=signing&utm_content=primary"
     }
   ]
 }
