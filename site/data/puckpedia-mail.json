@@ -1,7 +1,14 @@
 {
   "schema": 1,
-  "updatedAt": "2026-10-13T23:40:12.678Z",
+  "updatedAt": "2026-10-14T05:40:11.045Z",
   "items": [
+    {
+      "id": "745a8fa887814029d3d0",
+      "title": "Alex Debrincat Signs a 7-Year, $91.00M Contract with the Detroit Red Wings",
+      "publishedAt": "2026-10-14T01:02:10.000Z",
+      "category": "Contract",
+      "url": "https://puckpedia.com/signing/10840?utm_source=email&utm_medium=email&utm_campaign=signing&utm_content=primary"
+    },
     {
       "id": "f56e6bd3895451196c74",
       "title": "The Pittsburgh Penguins acquire Ryan Johnson from the Buffalo Sabres for Caleb Jones and Daniel Laatsch",
@@ -204,13 +211,6 @@
       "publishedAt": "2026-09-19T21:18:10.000Z",
       "category": "Contract",
       "url": "https://puckpedia.com/signing/10817?utm_source=email&utm_medium=email&utm_campaign=signing&utm_content=primary"
-    },
-    {
-      "id": "5ba9e7061b25abe16f17",
-      "title": "Brennan Othmann Signs a 1-Year, $975K Contract with the Calgary Flames",
-      "publishedAt": "2026-09-18T18:26:12.000Z",
-      "category": "Contract",
-      "url": "https://puckpedia.com/signing/10816?utm_source=email&utm_medium=email&utm_campaign=signing&utm_content=primary"
     }
   ]
 }
