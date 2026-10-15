@@ -1,7 +1,14 @@
 {
   "schema": 1,
-  "updatedAt": "2026-10-15T17:40:09.923Z",
+  "updatedAt": "2026-10-15T23:40:17.411Z",
   "items": [
+    {
+      "id": "e589711bc0e6c29fa08b",
+      "title": "The Toronto Maple Leafs acquire Aatu R?ty from the Vancouver Canucks for Jacob Quillan and Brandon Buhr",
+      "publishedAt": "2026-10-15T22:06:17.000Z",
+      "category": "Trade",
+      "url": "https://puckpedia.com/trade/1211?utm_source=email&utm_medium=email&utm_campaign=trade&utm_content=primary"
+    },
     {
       "id": "745a8fa887814029d3d0",
       "title": "Alex Debrincat Signs a 7-Year, $91.00M Contract with the Detroit Red Wings",
@@ -204,13 +211,6 @@
       "publishedAt": "2026-09-20T17:01:10.000Z",
       "category": "Contract",
       "url": "https://puckpedia.com/signing/10818?utm_source=email&utm_medium=email&utm_campaign=signing&utm_content=primary"
-    },
-    {
-      "id": "c7fe3b87221dc187c665",
-      "title": "Tim Washe Signs a 4-Year, $9.00M Contract with the Anaheim Ducks",
-      "publishedAt": "2026-09-19T21:18:10.000Z",
-      "category": "Contract",
-      "url": "https://puckpedia.com/signing/10817?utm_source=email&utm_medium=email&utm_campaign=signing&utm_content=primary"
     }
   ]
 }
