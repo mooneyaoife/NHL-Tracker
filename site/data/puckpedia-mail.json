@@ -1,7 +1,14 @@
 {
   "schema": 1,
-  "updatedAt": "2026-10-15T23:40:17.411Z",
+  "updatedAt": "2026-10-16T05:40:13.741Z",
   "items": [
+    {
+      "id": "531c209c01f338111377",
+      "title": "David Perron Signs a 1-Year, $850K Contract with the Dallas Stars",
+      "publishedAt": "2026-10-16T01:21:13.000Z",
+      "category": "Contract",
+      "url": "https://puckpedia.com/signing/10841?utm_source=email&utm_medium=email&utm_campaign=signing&utm_content=primary"
+    },
     {
       "id": "e589711bc0e6c29fa08b",
       "title": "The Toronto Maple Leafs acquire Aatu R?ty from the Vancouver Canucks for Jacob Quillan and Brandon Buhr",
@@ -204,13 +211,6 @@
       "publishedAt": "2026-09-21T16:34:09.000Z",
       "category": "Contract",
       "url": "https://puckpedia.com/signing/10819?utm_source=email&utm_medium=email&utm_campaign=signing&utm_content=primary"
-    },
-    {
-      "id": "4b811fb398d86c32794b",
-      "title": "Samu Salminen Signs a 2-Year, $1.96M Contract with the Florida Panthers",
-      "publishedAt": "2026-09-20T17:01:10.000Z",
-      "category": "Contract",
-      "url": "https://puckpedia.com/signing/10818?utm_source=email&utm_medium=email&utm_campaign=signing&utm_content=primary"
     }
   ]
 }
