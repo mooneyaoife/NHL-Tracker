@@ -1,7 +1,14 @@
 {
   "schema": 1,
-  "updatedAt": "2026-10-21T11:40:11.226Z",
+  "updatedAt": "2026-10-21T17:40:10.709Z",
   "items": [
+    {
+      "id": "c844b4b6733a75ae0c95",
+      "title": "Marat Khusnutdinov Signs a 3-Year, $11.85M Contract with the Boston Bruins",
+      "publishedAt": "2026-10-21T17:22:12.000Z",
+      "category": "Contract",
+      "url": "https://puckpedia.com/signing/10842?utm_source=email&utm_medium=email&utm_campaign=signing&utm_content=primary"
+    },
     {
       "id": "531c209c01f338111377",
       "title": "David Perron Signs a 1-Year, $850K Contract with the Dallas Stars",
@@ -204,13 +211,6 @@
       "publishedAt": "2026-09-24T15:28:10.000Z",
       "category": "Contract",
       "url": "https://puckpedia.com/signing/10820?utm_source=email&utm_medium=email&utm_campaign=signing&utm_content=primary"
-    },
-    {
-      "id": "053ac34fbd315c459eed",
-      "title": "Sam Steel Signs a 4-Year, $14.80M Contract with the Dallas Stars",
-      "publishedAt": "2026-09-21T16:34:09.000Z",
-      "category": "Contract",
-      "url": "https://puckpedia.com/signing/10819?utm_source=email&utm_medium=email&utm_campaign=signing&utm_content=primary"
     }
   ]
 }
