@@ -1,7 +1,14 @@
 {
   "schema": 1,
-  "updatedAt": "2026-10-22T17:40:14.764Z",
+  "updatedAt": "2026-10-22T23:40:13.187Z",
   "items": [
+    {
+      "id": "913362bd9fdc0cc3c250",
+      "title": "Luke Glendening signs a 1-year, $850K contract with the Rangers",
+      "publishedAt": "2026-10-22T22:17:07.000Z",
+      "category": "Contract",
+      "url": "https://puckpedia.com/team/new-york-rangers?utm_source=email&utm_medium=email&utm_campaign=signing&utm_content=team_logo"
+    },
     {
       "id": "c844b4b6733a75ae0c95",
       "title": "Marat Khusnutdinov Signs a 3-Year, $11.85M Contract with the Boston Bruins",
@@ -204,13 +211,6 @@
       "publishedAt": "2026-09-24T19:07:11.000Z",
       "category": "Contract",
       "url": "https://puckpedia.com/signing/10821?utm_source=email&utm_medium=email&utm_campaign=signing&utm_content=primary"
-    },
-    {
-      "id": "afd8179e32f44f33357a",
-      "title": "Oliver Moore Signs a 5-Year, $21.25M Contract with the Chicago Blackhawks",
-      "publishedAt": "2026-09-24T15:28:10.000Z",
-      "category": "Contract",
-      "url": "https://puckpedia.com/signing/10820?utm_source=email&utm_medium=email&utm_campaign=signing&utm_content=primary"
     }
   ]
 }
