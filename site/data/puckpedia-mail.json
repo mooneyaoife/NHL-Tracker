@@ -1,7 +1,14 @@
 {
   "schema": 1,
-  "updatedAt": "2026-10-23T17:40:17.261Z",
+  "updatedAt": "2026-10-23T23:40:36.274Z",
   "items": [
+    {
+      "id": "dcafbe0b9b57f30e6fa0",
+      "title": "Artyom Duda signs a 2-year, $1.85M contract with the Mammoth",
+      "publishedAt": "2026-10-23T22:40:08.000Z",
+      "category": "Contract",
+      "url": "https://puckpedia.com/player/artyom-duda?utm_source=email&utm_medium=email&utm_campaign=signing&utm_content=headshot"
+    },
     {
       "id": "faf997febb772d4b8fe1",
       "title": "Devils acquire Hellebuyck from the Jets",
@@ -204,13 +211,6 @@
       "publishedAt": "2026-09-25T15:57:10.000Z",
       "category": "Contract",
       "url": "https://puckpedia.com/signing/10823?utm_source=email&utm_medium=email&utm_campaign=signing&utm_content=primary"
-    },
-    {
-      "id": "80912aa9aae10a6d9883",
-      "title": "Matt Grzelcyk Signs a 1-Year, $850K Contract with the Buffalo Sabres",
-      "publishedAt": "2026-09-25T14:35:12.000Z",
-      "category": "Contract",
-      "url": "https://puckpedia.com/signing/10822?utm_source=email&utm_medium=email&utm_campaign=signing&utm_content=primary"
     }
   ]
 }
