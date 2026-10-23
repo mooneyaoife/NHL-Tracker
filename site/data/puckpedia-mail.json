@@ -1,7 +1,14 @@
 {
   "schema": 1,
-  "updatedAt": "2026-10-23T11:40:18.053Z",
+  "updatedAt": "2026-10-23T17:40:17.261Z",
   "items": [
+    {
+      "id": "faf997febb772d4b8fe1",
+      "title": "Devils acquire Hellebuyck from the Jets",
+      "publishedAt": "2026-10-23T16:34:11.000Z",
+      "category": "Trade",
+      "url": "https://puckpedia.com/team/new-jersey-devils?utm_source=email&utm_medium=email&utm_campaign=trade&utm_content=team_logo"
+    },
     {
       "id": "913362bd9fdc0cc3c250",
       "title": "Luke Glendening signs a 1-year, $850K contract with the Rangers",
@@ -204,13 +211,6 @@
       "publishedAt": "2026-09-25T14:35:12.000Z",
       "category": "Contract",
       "url": "https://puckpedia.com/signing/10822?utm_source=email&utm_medium=email&utm_campaign=signing&utm_content=primary"
-    },
-    {
-      "id": "7b52d5587bcac53a7cd4",
-      "title": "Adam Fantilli Signs a 6-Year, $82.50M Contract with the Columbus Blue Jackets",
-      "publishedAt": "2026-09-24T19:07:11.000Z",
-      "category": "Contract",
-      "url": "https://puckpedia.com/signing/10821?utm_source=email&utm_medium=email&utm_campaign=signing&utm_content=primary"
     }
   ]
 }
