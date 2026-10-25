@@ -1,7 +1,14 @@
 {
   "schema": 1,
-  "updatedAt": "2026-10-25T12:40:10.065Z",
+  "updatedAt": "2026-10-25T18:40:16.034Z",
   "items": [
+    {
+      "id": "1e3a9d1cc5a034db17c3",
+      "title": "James Reimer signs a 1-year, $850K contract with the Rangers",
+      "publishedAt": "2026-10-25T16:57:09.000Z",
+      "category": "Contract",
+      "url": "https://puckpedia.com/player/james-reimer?utm_source=email&utm_medium=email&utm_campaign=signing&utm_content=headshot"
+    },
     {
       "id": "dcafbe0b9b57f30e6fa0",
       "title": "Artyom Duda signs a 2-year, $1.85M contract with the Mammoth",
@@ -204,13 +211,6 @@
       "publishedAt": "2026-09-25T21:46:12.000Z",
       "category": "Contract",
       "url": "https://puckpedia.com/signing/10824?utm_source=email&utm_medium=email&utm_campaign=signing&utm_content=primary"
-    },
-    {
-      "id": "3afa2a399dd210261c7f",
-      "title": "Pyotr Kochetkov Signs a 2-Year, $7.90M Contract with the Carolina Hurricanes",
-      "publishedAt": "2026-09-25T15:57:10.000Z",
-      "category": "Contract",
-      "url": "https://puckpedia.com/signing/10823?utm_source=email&utm_medium=email&utm_campaign=signing&utm_content=primary"
     }
   ]
 }
