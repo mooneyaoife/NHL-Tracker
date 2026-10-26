@@ -1,7 +1,14 @@
 {
   "schema": 1,
-  "updatedAt": "2026-10-25T18:40:16.034Z",
+  "updatedAt": "2026-10-26T00:40:13.459Z",
   "items": [
+    {
+      "id": "047b48c2f35e6ed193cf",
+      "title": "Alexander Nikishin signs a 1-year, $3M contract with the Hurricanes",
+      "publishedAt": "2026-10-25T21:11:08.000Z",
+      "category": "Contract",
+      "url": "https://puckpedia.com/player/alexander-nikishin?utm_source=email&utm_medium=email&utm_campaign=signing&utm_content=headshot"
+    },
     {
       "id": "1e3a9d1cc5a034db17c3",
       "title": "James Reimer signs a 1-year, $850K contract with the Rangers",
@@ -204,13 +211,6 @@
       "publishedAt": "2026-09-25T23:34:13.000Z",
       "category": "Trade",
       "url": "https://puckpedia.com/trade/1205?utm_source=email&utm_medium=email&utm_campaign=trade&utm_content=primary"
-    },
-    {
-      "id": "fd0c051691c385cff307",
-      "title": "Alexander Nylander Signs a 1-Year, $850K Contract with the Calgary Flames",
-      "publishedAt": "2026-09-25T21:46:12.000Z",
-      "category": "Contract",
-      "url": "https://puckpedia.com/signing/10824?utm_source=email&utm_medium=email&utm_campaign=signing&utm_content=primary"
     }
   ]
 }
