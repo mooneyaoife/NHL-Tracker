@@ -1,7 +1,14 @@
 {
   "schema": 1,
-  "updatedAt": "2026-11-01T12:40:10.703Z",
+  "updatedAt": "2026-11-01T18:40:10.218Z",
   "items": [
+    {
+      "id": "662d85bbd310a8f71667",
+      "title": "Capitals acquire Poirier from the Devils",
+      "publishedAt": "2026-11-01T16:08:09.000Z",
+      "category": "Trade",
+      "url": "https://puckpedia.com/team/washington-capitals?utm_source=email&utm_medium=email&utm_campaign=trade&utm_content=team_logo"
+    },
     {
       "id": "047b48c2f35e6ed193cf",
       "title": "Alexander Nikishin signs a 1-year, $3M contract with the Hurricanes",
@@ -204,13 +211,6 @@
       "publishedAt": "2026-09-27T13:43:12.000Z",
       "category": "Contract",
       "url": "https://puckpedia.com/signing/10825?utm_source=email&utm_medium=email&utm_campaign=signing&utm_content=primary"
-    },
-    {
-      "id": "0798cc8b440960e4bdbb",
-      "title": "The Tampa Bay Lightning trade Jonas Johansson to the Ottawa Senators for future considerations",
-      "publishedAt": "2026-09-25T23:34:13.000Z",
-      "category": "Trade",
-      "url": "https://puckpedia.com/trade/1205?utm_source=email&utm_medium=email&utm_campaign=trade&utm_content=primary"
     }
   ]
 }
