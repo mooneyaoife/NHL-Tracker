@@ -1,7 +1,14 @@
 {
   "schema": 1,
-  "updatedAt": "2026-11-01T18:40:10.218Z",
+  "updatedAt": "2026-11-02T00:40:11.486Z",
   "items": [
+    {
+      "id": "7b3f99e6535c170f2139",
+      "title": "Kraken acquire Wood from the Predators",
+      "publishedAt": "2026-11-01T22:26:09.000Z",
+      "category": "Trade",
+      "url": "https://puckpedia.com/team/seattle-kraken?utm_source=email&utm_medium=email&utm_campaign=trade&utm_content=team_logo"
+    },
     {
       "id": "662d85bbd310a8f71667",
       "title": "Capitals acquire Poirier from the Devils",
@@ -204,13 +211,6 @@
       "publishedAt": "2026-09-27T17:33:10.000Z",
       "category": "Contract",
       "url": "https://puckpedia.com/signing/10826?utm_source=email&utm_medium=email&utm_campaign=signing&utm_content=primary"
-    },
-    {
-      "id": "ec4e806e7dce785c077c",
-      "title": "Logan Stanley Signs a 1-Year, $1.50M Contract with the New York Islanders",
-      "publishedAt": "2026-09-27T13:43:12.000Z",
-      "category": "Contract",
-      "url": "https://puckpedia.com/signing/10825?utm_source=email&utm_medium=email&utm_campaign=signing&utm_content=primary"
     }
   ]
 }
