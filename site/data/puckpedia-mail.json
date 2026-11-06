@@ -1,7 +1,14 @@
 {
   "schema": 1,
-  "updatedAt": "2026-11-05T18:40:12.133Z",
+  "updatedAt": "2026-11-06T00:40:12.804Z",
   "items": [
+    {
+      "id": "689d921852af022a78e9",
+      "title": "Ben Hutton signs a 1-year, $900K contract with the Islanders",
+      "publishedAt": "2026-11-05T22:26:07.000Z",
+      "category": "Contract",
+      "url": "https://puckpedia.com/player/ben-hutton?utm_source=email&utm_medium=email&utm_campaign=signing&utm_content=headshot"
+    },
     {
       "id": "7b3f99e6535c170f2139",
       "title": "Kraken acquire Wood from the Predators",
@@ -204,13 +211,6 @@
       "publishedAt": "2026-09-27T18:21:09.000Z",
       "category": "Contract",
       "url": "https://puckpedia.com/signing/10827?utm_source=email&utm_medium=email&utm_campaign=signing&utm_content=primary"
-    },
-    {
-      "id": "611250b6dda75f7a57aa",
-      "title": "Nick Blankenburg Signs a 1-Year, $1.40M Contract with the Toronto Maple Leafs",
-      "publishedAt": "2026-09-27T17:33:10.000Z",
-      "category": "Contract",
-      "url": "https://puckpedia.com/signing/10826?utm_source=email&utm_medium=email&utm_campaign=signing&utm_content=primary"
     }
   ]
 }
