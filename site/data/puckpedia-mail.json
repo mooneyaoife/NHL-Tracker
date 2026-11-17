@@ -1,7 +1,14 @@
 {
   "schema": 1,
-  "updatedAt": "2026-11-17T00:40:21.887Z",
+  "updatedAt": "2026-11-17T06:40:20.921Z",
   "items": [
+    {
+      "id": "378cbe36c25fc8fff5c6",
+      "title": "Wild acquire Davies from the Golden Knights",
+      "publishedAt": "2026-11-17T01:17:09.000Z",
+      "category": "Trade",
+      "url": "https://puckpedia.com/team/vegas-golden-knights?utm_source=email&utm_medium=email&utm_campaign=trade&utm_content=team_logo"
+    },
     {
       "id": "b66e41263495d3039ca7",
       "title": "Rangers acquire Soderblom from the Blackhawks",
@@ -204,13 +211,6 @@
       "publishedAt": "2026-09-28T17:59:11.000Z",
       "category": "Contract",
       "url": "https://puckpedia.com/signing/10829?utm_source=email&utm_medium=email&utm_campaign=signing&utm_content=primary"
-    },
-    {
-      "id": "85a3d03364fad43e0e15",
-      "title": "Garrett Wilson Signs a 1-Year, $850K Contract with the Philadelphia Flyers",
-      "publishedAt": "2026-09-27T23:51:11.000Z",
-      "category": "Contract",
-      "url": "https://puckpedia.com/signing/10828?utm_source=email&utm_medium=email&utm_campaign=signing&utm_content=primary"
     }
   ]
 }
