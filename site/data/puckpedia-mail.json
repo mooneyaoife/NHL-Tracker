@@ -1,7 +1,14 @@
 {
   "schema": 1,
-  "updatedAt": "2026-11-20T18:40:10.511Z",
+  "updatedAt": "2026-11-21T00:40:14.365Z",
   "items": [
+    {
+      "id": "8340e348ff0dd1fdcf24",
+      "title": "Rangers acquire Sasson from the Canucks",
+      "publishedAt": "2026-11-20T23:19:11.000Z",
+      "category": "Trade",
+      "url": "https://puckpedia.com/team/new-york-rangers?utm_source=email&utm_medium=email&utm_campaign=trade&utm_content=team_logo"
+    },
     {
       "id": "378cbe36c25fc8fff5c6",
       "title": "Wild acquire Davies from the Golden Knights",
@@ -204,13 +211,6 @@
       "publishedAt": "2026-09-28T21:06:10.000Z",
       "category": "Contract",
       "url": "https://puckpedia.com/signing/10830?utm_source=email&utm_medium=email&utm_campaign=signing&utm_content=primary"
-    },
-    {
-      "id": "32bf987611ea1d981fa6",
-      "title": "Tyson Jost Signs a 1-Year, $850K Contract with the Nashville Predators",
-      "publishedAt": "2026-09-28T17:59:11.000Z",
-      "category": "Contract",
-      "url": "https://puckpedia.com/signing/10829?utm_source=email&utm_medium=email&utm_campaign=signing&utm_content=primary"
     }
   ]
 }
