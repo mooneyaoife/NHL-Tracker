@@ -1,7 +1,21 @@
 {
   "schema": 1,
-  "updatedAt": "2026-11-23T00:40:11.315Z",
+  "updatedAt": "2026-11-23T06:40:20.763Z",
   "items": [
+    {
+      "id": "3acc2276416fe0c1ca87",
+      "title": "Ducks acquire a 2028 2nd round pick from the Canadiens",
+      "publishedAt": "2026-11-23T03:31:12.000Z",
+      "category": "Trade",
+      "url": "https://puckpedia.com/team/anaheim-ducks?utm_source=email&utm_medium=email&utm_campaign=trade&utm_content=team_logo"
+    },
+    {
+      "id": "f17bad9ae81b111e30f5",
+      "title": "Canadiens acquire Larkin from the Red Wings",
+      "publishedAt": "2026-11-23T01:56:11.000Z",
+      "category": "Trade",
+      "url": "https://puckpedia.com/team/montreal-canadiens?utm_source=email&utm_medium=email&utm_campaign=trade&utm_content=team_logo"
+    },
     {
       "id": "8340e348ff0dd1fdcf24",
       "title": "Rangers acquire Sasson from the Canucks",
@@ -197,20 +211,6 @@
       "publishedAt": "2026-09-29T18:33:09.000Z",
       "category": "Contract",
       "url": "https://puckpedia.com/signing/10831?utm_source=email&utm_medium=email&utm_campaign=signing&utm_content=primary"
-    },
-    {
-      "id": "534a30e321758975a2c2",
-      "title": "The Toronto Maple Leafs acquire Kirill Marchenko, Elvis Merzlikins (18% retained) and Miles Wood from the Columbus Blue Jackets for Matthew Knies, Emil Andrae, Steven Lorentz and a",
-      "publishedAt": "2026-09-28T21:37:15.000Z",
-      "category": "Trade",
-      "url": "https://puckpedia.com/trade/1206?utm_source=email&utm_medium=email&utm_campaign=trade&utm_content=primary"
-    },
-    {
-      "id": "0feaffa5018138447acf",
-      "title": "Kirill Marchenko Signs a 6-Year, $75.00M Contract with the Toronto Maple Leafs",
-      "publishedAt": "2026-09-28T21:06:10.000Z",
-      "category": "Contract",
-      "url": "https://puckpedia.com/signing/10830?utm_source=email&utm_medium=email&utm_campaign=signing&utm_content=primary"
     }
   ]
 }
