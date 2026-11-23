@@ -1,7 +1,14 @@
 {
   "schema": 1,
-  "updatedAt": "2026-11-23T12:40:11.828Z",
+  "updatedAt": "2026-11-23T18:40:10.677Z",
   "items": [
+    {
+      "id": "721ba17af2d919e59331",
+      "title": "Jack St. Ivany signs a 2-year, $2.35M contract with the Capitals",
+      "publishedAt": "2026-11-23T15:53:07.000Z",
+      "category": "Contract",
+      "url": "https://puckpedia.com/player/john-st-ivany?utm_source=email&utm_medium=email&utm_campaign=signing&utm_content=headshot"
+    },
     {
       "id": "3acc2276416fe0c1ca87",
       "title": "Ducks acquire a 2028 2nd round pick from the Canadiens",
@@ -204,13 +211,6 @@
       "publishedAt": "2026-09-30T00:10:14.000Z",
       "category": "Contract",
       "url": "https://puckpedia.com/signing/10832?utm_source=email&utm_medium=email&utm_campaign=signing&utm_content=primary"
-    },
-    {
-      "id": "54d5fbfa2a3f0bb0d298",
-      "title": "Carson Soucy Signs a 1-Year, $1.15M Contract with the Columbus Blue Jackets",
-      "publishedAt": "2026-09-29T18:33:09.000Z",
-      "category": "Contract",
-      "url": "https://puckpedia.com/signing/10831?utm_source=email&utm_medium=email&utm_campaign=signing&utm_content=primary"
     }
   ]
 }
