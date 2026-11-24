@@ -1,7 +1,14 @@
 {
   "schema": 1,
-  "updatedAt": "2026-11-23T18:40:10.677Z",
+  "updatedAt": "2026-11-24T00:40:17.309Z",
   "items": [
+    {
+      "id": "db33b09c86dd53468ec5",
+      "title": "Oilers acquire Roest from the Predators",
+      "publishedAt": "2026-11-24T00:34:10.000Z",
+      "category": "Trade",
+      "url": "https://puckpedia.com/team/edmonton-oilers?utm_source=email&utm_medium=email&utm_campaign=trade&utm_content=team_logo"
+    },
     {
       "id": "721ba17af2d919e59331",
       "title": "Jack St. Ivany signs a 2-year, $2.35M contract with the Capitals",
@@ -204,13 +211,6 @@
       "publishedAt": "2026-09-30T14:39:11.000Z",
       "category": "Contract",
       "url": "https://puckpedia.com/signing/10833?utm_source=email&utm_medium=email&utm_campaign=signing&utm_content=primary"
-    },
-    {
-      "id": "d4cffb6835b9a86b7c93",
-      "title": "Chase Harrington Signs a 3-Year, $3.23M Contract with the Calgary Flames",
-      "publishedAt": "2026-09-30T00:10:14.000Z",
-      "category": "Contract",
-      "url": "https://puckpedia.com/signing/10832?utm_source=email&utm_medium=email&utm_campaign=signing&utm_content=primary"
     }
   ]
 }
