@@ -1,7 +1,14 @@
 {
   "schema": 1,
-  "updatedAt": "2026-11-27T18:40:11.698Z",
+  "updatedAt": "2026-11-28T00:40:11.432Z",
   "items": [
+    {
+      "id": "fd9ff484c3798459d54c",
+      "title": "Alexander Bilecki signs a 3-year, $3.02M entry-level contract with the Maple Leafs",
+      "publishedAt": "2026-11-27T21:31:06.000Z",
+      "category": "Contract",
+      "url": "https://puckpedia.com/player/alexander-bilecki?utm_source=email&utm_medium=email&utm_campaign=signing&utm_content=headshot"
+    },
     {
       "id": "db33b09c86dd53468ec5",
       "title": "Oilers acquire Roest from the Predators",
@@ -204,13 +211,6 @@
       "publishedAt": "2026-09-30T20:04:09.000Z",
       "category": "Contract",
       "url": "https://puckpedia.com/signing/10834?utm_source=email&utm_medium=email&utm_campaign=signing&utm_content=primary"
-    },
-    {
-      "id": "2916e1330cca6d244f29",
-      "title": "Casey DeSmith Signs a 2-Year, $5.00M Contract with the Dallas Stars",
-      "publishedAt": "2026-09-30T14:39:11.000Z",
-      "category": "Contract",
-      "url": "https://puckpedia.com/signing/10833?utm_source=email&utm_medium=email&utm_campaign=signing&utm_content=primary"
     }
   ]
 }
